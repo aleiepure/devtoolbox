@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/me/iepure/devtoolbox">
+    <file preprocess="xml-stripblanks">ui/main.ui</file>
+    <file >css/main.css</file>
+    <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+  </gresource>
+</gresources>

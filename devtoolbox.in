@@ -1,0 +1,24 @@
+#!@PYTHON@
+
+import os
+import sys
+import signal
+import gettext
+
+VERSION = '@VERSION@'
+pkgdatadir = '@DATA_DIR@'
+localedir = '@LOCALE_DIR@'
+
+signal.signal(signal.SIGINT, signal.SIG_DFL)
+gettext.install('devtoolbox', localedir)
+
+if __name__ == '__main__':
+    import gi
+
+    from gi.repository import Gio
+    resource = Gio.Resource.load(os.path.join(pkgdatadir, 'devtoolbox.gresource'))
+    resource._register()
+
+    from devtoolbox.application import main
+    sys.exit(main(VERSION))
+

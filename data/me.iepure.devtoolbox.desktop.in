@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Dev Toolbox
+Exec=devtoolbox
+Icon=org.example.App
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
