@@ -1,6 +1,6 @@
-# main.py
+# application.py
 #
-# Copyright 2021 Tim Lauridsen
+# Copyright 2022 Alessandro Iepure
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,26 +17,21 @@
 
 import sys
 import gi
-from devtoolbox.about_dialog import AboutDialog
-
-from devtoolbox.const import Constants
 
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, GLib, Adw
+from gi.repository import Gtk, Gio, Adw
 
 from devtoolbox.window import MainWindow
-
-APP_ID = 'me.iepure.devtoolbox'
 
 
 class Application(Adw.Application):
     def __init__(self):
-        Adw.Application.__init__(self, application_id=APP_ID,
+        Adw.Application.__init__(self, application_id='me.iepure.devtoolbox',
                                  flags=Gio.ApplicationFlags.FLAGS_NONE)
         self.create_action('quit', self.on_quit_action, ['<primary>q'])
-        self.create_action('about', self.on_about_action)
+        self.create_action('about', self.show_about_dialog)
 
     def on_quit_action(self, widget, _):
         self.quit()
@@ -47,11 +42,6 @@ class Application(Adw.Application):
             win = MainWindow(application=self)
         win.present()
 
-    def on_about_action(self, widget, _):
-        """Callback for the app.about action."""
-        about = AboutDialog(self.props.active_window)
-        about.present()
-
     def create_action(self, name, callback, shortcuts=None):
         """ Add an Action and connect to a callback """
         action = Gio.SimpleAction.new(name, None)
@@ -59,6 +49,12 @@ class Application(Adw.Application):
         self.add_action(action)
         if shortcuts:
             self.set_accels_for_action(f"app.{name}", shortcuts)
+
+    def show_about_dialog(self, widget, _):
+        builder = Gtk.Builder.new_from_resource("/me/iepure/devtoolbox/ui/about.ui")
+        about_window = builder.get_object("about_window")
+        about_window.set_transient_for(_)
+        about_window.present()
 
 
 

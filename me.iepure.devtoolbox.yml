@@ -1,6 +1,6 @@
 app-id: me.iepure.devtoolbox
 runtime: org.gnome.Platform
-runtime-version: "42"
+runtime-version: "master"
 sdk: org.gnome.Sdk
 command: devtoolbox
 finish-args:

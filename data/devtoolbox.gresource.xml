@@ -2,7 +2,14 @@
 <gresources>
   <gresource prefix="/me/iepure/devtoolbox">
     <file preprocess="xml-stripblanks">ui/main.ui</file>
+    <file preprocess="xml-stripblanks">ui/about.ui</file>
     <file >css/main.css</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+  </gresource>
+  <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
+    <file preprocess="xml-stripblanks" alias="horizontal-arrows-symbolic.svg">icons/horizontal-arrows-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="text-indent-more-symbolic.svg">icons/text-indent-more-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="plus-symbolic.svg">icons/plus-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="text-symbolic.svg">icons/text-symbolic.svg</file>
   </gresource>
 </gresources>

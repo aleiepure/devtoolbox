@@ -1,5 +1,5 @@
 project('devtoolbox',  
-          version: '0.2.0',
+          version: '0.1.0',
     meson_version: '>= 0.50.0'
 )
 
@@ -15,6 +15,8 @@ if not py_installation.found()
 else
     message('Found python3 binary')
 endif
+dependency('gtk4', version :'>=4.3.1')
+dependency('libadwaita-1', version :'>=1.2.alpha')
 
 python_dir = join_paths(get_option('prefix'), py_installation.get_install_dir())
 DATA_DIR = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())

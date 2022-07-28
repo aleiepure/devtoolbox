@@ -3,33 +3,147 @@
   <requires lib="gtk" version="4.0" />
   <requires lib="libadwaita" version="1.0" />
   <template class="MainWindow" parent="AdwApplicationWindow">
-    <property name="title" translatable="yes">Hello world</property>
-    <property name="default_width">600</property>
-    <property name="default_height">300</property>
-    <child>
+    
+    <property name="default_width">1200</property>
+    <property name="default_height">850</property>
+    <property name="content">
       <object class="GtkBox" id="main_content">
         <property name="orientation">vertical</property>
+        
+        <!-- Header bar -->
         <child>
           <object class="AdwHeaderBar">
+            <child type="title">
+              <object class="AdwViewSwitcherTitle" id="title">
+                <property name="title">Dev Toolbox</property>
+                <property name="stack">stack</property>
+              </object>
+            </child>
             <child type="end">
-              <object class="GtkMenuButton" id="app_button">
-                <property name="menu-model">app_menu</property>
+              <object class="GtkMenuButton">
                 <property name="icon-name">open-menu-symbolic</property>
+                <property name="menu-model">app_menu</property>
               </object>
             </child>
           </object>
         </child>
+
+        <!-- Window content -->
         <child>
-          <object class="GtkLabel" id="label">
-            <property name="label">Hello, World!</property>
-            <attributes>
-              <attribute name="weight" value="bold"/>
-              <attribute name="scale" value="2"/>
-            </attributes>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            
+            <!-- ViewStack -->
+            <child>
+              <object class="AdwViewStack" id="stack">
+                
+                <!-- ViewStackPage: favorites -->
+                <child>
+                  <object class="AdwViewStackPage">
+                    <property name="name">favoritesPage</property>
+                    <property name="title">Favorites</property>
+                    <property name="icon-name">starred</property>
+                    <property name="child">
+                      <object class="AdwStatusPage">
+                        <property name="title">Favorites!</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+
+                <!-- ViewStackPage: converters -->
+                <child>
+                  <object class="AdwViewStackPage">
+                    <property name="name">convertersPage</property>
+                    <property name="title">Converters</property>
+                    <property name="icon-name">horizontal-arrows-symbolic</property>
+                    <property name="child">
+                      <object class="AdwStatusPage">
+                        <property name="title">Converters!</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+
+                <!-- ViewStackPage: encoders -->
+                <child>
+                  <object class="AdwViewStackPage">
+                    <property name="name">encodersPage</property>
+                    <property name="title">Encoders</property>
+                    <property name="icon-name">folder-templates-symbolic</property>
+                    <property name="child">
+                      <object class="AdwStatusPage">
+                        <property name="title">Encoders &amp; Decoders!</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+
+                <!-- ViewStackPage: formatters -->
+                <child>
+                  <object class="AdwViewStackPage">
+                    <property name="name">formattersPage</property>
+                    <property name="title">Formatters</property>
+                    <property name="icon-name">text-indent-more-symbolic</property>
+                    <property name="child">
+                      <object class="AdwStatusPage">
+                        <property name="title">Formatters!</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+
+                <!-- ViewStackPage: generators -->
+                <child>
+                  <object class="AdwViewStackPage">
+                    <property name="name">generatorsPage</property>
+                    <property name="title">Generators</property>
+                    <property name="icon-name">plus-symbolic</property>
+                    <property name="child">
+                      <object class="AdwStatusPage">
+                        <property name="title">Generators!</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+
+                <!-- ViewStackPage: text -->
+                <child>
+                  <object class="AdwViewStackPage">
+                    <property name="name">textPage</property>
+                    <property name="title">Text</property>
+                    <property name="icon-name">text-symbolic</property>
+                    <property name="child">
+                      <object class="AdwStatusPage">
+                        <property name="title">Text!</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+
+                <!-- ViewStackPage: graphics -->
+                <child>
+                  <object class="AdwViewStackPage">
+                    <property name="name">graphicsPage</property>
+                    <property name="title">Graphics</property>
+                    <property name="icon-name">applications-graphics-symbolic</property>
+                    <property name="child">
+                      <object class="AdwStatusPage">
+                        <property name="title">Graphics!</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+
+              </object>
+            </child>
+
           </object>
         </child>
+
       </object>
-    </child>
+    </property>
+
     <style>
       <class name="devel" />
     </style>
@@ -55,4 +169,5 @@
       </item>
     </section>
   </menu>
+
 </interface>
