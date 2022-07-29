@@ -15,23 +15,83 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import gi
-gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1')
-
+from gettext import gettext as _
 from gi.repository import Gtk, Adw
 
-@Gtk.Template(resource_path=f'/me/iepure/devtoolbox/ui/main.ui')
+from devtoolbox.views.utilities_view import UtilitiesView
+
+
+@Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/main.ui")
 class MainWindow(Adw.ApplicationWindow):
     __gtype_name__ = "MainWindow"
 
     main_content = Gtk.Template.Child()
-    stack = Gtk.Template.Child()
+    tab_stack = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         Adw.ApplicationWindow.__init__(self, **kwargs)
-        self.stack.set_visible_child_name('convertersPage')
 
-        
+        # Populate stack
+        CONVERTERS_UTILITIES = {
+            "json2yaml": {
+                "title": _("JSON - YAML"),
+                "icon-name": "right-left-symbolic"
+            },
+            "timestamp": {
+                "title": _("Timestamp"),
+                "icon-name": "clock-rotate-symbolic"
+            },
+            "baseconverter": {
+                "title": _("Number Base"),
+                "icon-name": "hashtag-symbolic"
+            },
+            "cronparser": {
+                "title": _("Cron Parser"),
+                "icon-name": "hourglass-half-symbolic"
+            }
+        }
+        TABS = {
+            "favorites": {
+                "title": _("Favorites"),
+                "icon-name": "starred",
+                "child": Gtk.Label(label="Favorites")
+            },
+            "converters": {
+                "title": _("Converters"),
+                "icon-name": "right-left-symbolic",
+                "child": UtilitiesView(CONVERTERS_UTILITIES)
+            },
+            "encoders": {
+                "title": _("Encoders"),
+                "icon-name": "folder-templates-symbolic",
+                "child": Gtk.Label(label="Encoders")
+            },
+            "formatters": {
+                "title": _("Formatters"),
+                "icon-name": "text-indent-more-symbolic",
+                "child": Gtk.Label(label="Formatters")
+            },
+            "generators": {
+                "title": _("Generators"),
+                "icon-name": "plus-symbolic",
+                "child": Gtk.Label(label="Generators")
+            },
+            "text": {
+                "title": _("Text"),
+                "icon-name": "text-symbolic",
+                "child": Gtk.Label(label="Text")
+            },
+            "graphics": {
+                "title": _("Graphics"),
+                "icon-name": "applications-graphics-symbolic",
+                "child": Gtk.Label(label="Graphics")
+            }
+        }
+        for t in TABS:
+            self.tab_stack.add_named(TABS[t]["child"], t)
+            page = self.tab_stack.get_page(TABS[t]["child"])
+            page.set_title(TABS[t]["title"])
+            page.set_icon_name(TABS[t]["icon-name"])
 
-    
+        # set first selected tab
+        self.tab_stack.set_visible_child_name("converters")

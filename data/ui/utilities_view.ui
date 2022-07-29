@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="UtilitiesView" parent="AdwBin">
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="AdwFlap" id="flap">
+            <property name="locked">True</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+
+            <child type="content">
+              <object class="GtkStack" id="sidebar_stack" />
+            </child>
+
+            <child type="separator">
+              <object class="GtkSeparator" />
+            </child>
+
+            <child type="flap">
+              <object class="GtkListBox" id="sidebar">
+                <property name="selection-mode">single</property>
+                <property name="vexpand">true</property>
+                <property name="width-request">220</property>
+                <style>
+                  <class name="background" />
+                </style>
+              </object>
+            </child>
+
+            <style>
+              <class name="navigation-sidebar" />
+            </style>
+
+          </object>
+        </child>
+      </object>
+
+    </child>
+  </template>
+</interface>

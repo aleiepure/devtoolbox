@@ -15,12 +15,12 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
 import sys
 import gi
 
-gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1')
-
+gi.require_version("Gtk", "4.0")
+gi.require_version("Adw", "1")
 from gi.repository import Gtk, Gio, Adw
 
 from devtoolbox.window import MainWindow
@@ -28,10 +28,12 @@ from devtoolbox.window import MainWindow
 
 class Application(Adw.Application):
     def __init__(self):
-        Adw.Application.__init__(self, application_id='me.iepure.devtoolbox',
+        Adw.Application.__init__(self, application_id="me.iepure.devtoolbox",
                                  flags=Gio.ApplicationFlags.FLAGS_NONE)
-        self.create_action('quit', self.on_quit_action, ['<primary>q'])
-        self.create_action('about', self.show_about_dialog)
+
+        # Actions
+        self.create_action("quit", self.on_quit_action, ["<primary>q"])
+        self.create_action("about", self.show_about_dialog)
 
     def on_quit_action(self, widget, _):
         self.quit()
@@ -51,11 +53,11 @@ class Application(Adw.Application):
             self.set_accels_for_action(f"app.{name}", shortcuts)
 
     def show_about_dialog(self, widget, _):
-        builder = Gtk.Builder.new_from_resource("/me/iepure/devtoolbox/ui/about.ui")
+        builder = Gtk.Builder.new_from_resource(
+            f"{PATH_ID}/ui/about_window.ui")
         about_window = builder.get_object("about_window")
         about_window.set_transient_for(_)
         about_window.present()
-
 
 
 def main(version):
