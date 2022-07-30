@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/me/iepure/devtoolbox">
-    <file>css/main.css</file>
+    <file alias="style.css">css/style.css</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
     <file preprocess="xml-stripblanks">ui/main.ui</file>
     <file preprocess="xml-stripblanks">ui/about_window.ui</file>
     <file preprocess="xml-stripblanks">ui/utilities_view.ui</file>
+    <file preprocess="xml-stripblanks">ui/json2yaml_utility.ui</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="horizontal-arrows-symbolic.svg">icons/symbolic/horizontal-arrows-symbolic.svg</file>
@@ -16,5 +17,7 @@
     <file preprocess="xml-stripblanks" alias="hashtag-symbolic.svg">icons/symbolic/hashtag-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="hourglass-half-symbolic.svg">icons/symbolic/hourglass-half-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="right-left-symbolic.svg">icons/symbolic/right-left-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="paper-filled-symbolic.svg">icons/symbolic/paper-filled-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="spacebar-symbolic.svg">icons/symbolic/spacebar-symbolic.svg</file>
   </gresource>
 </gresources>

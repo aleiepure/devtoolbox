@@ -19,6 +19,7 @@ from gettext import gettext as _
 from gi.repository import Gtk, Adw
 
 from devtoolbox.views.utilities_view import UtilitiesView
+from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/main.ui")
@@ -35,19 +36,23 @@ class MainWindow(Adw.ApplicationWindow):
         CONVERTERS_UTILITIES = {
             "json2yaml": {
                 "title": _("JSON - YAML"),
-                "icon-name": "right-left-symbolic"
+                "icon-name": "right-left-symbolic",
+                "child": Json2YamlUtility()
             },
             "timestamp": {
                 "title": _("Timestamp"),
-                "icon-name": "clock-rotate-symbolic"
+                "icon-name": "clock-rotate-symbolic",
+                "child": Gtk.Label(label="Timestamp")
             },
             "baseconverter": {
                 "title": _("Number Base"),
-                "icon-name": "hashtag-symbolic"
+                "icon-name": "hashtag-symbolic",
+                "child": Gtk.Label(label="Number base")
             },
             "cronparser": {
                 "title": _("Cron Parser"),
-                "icon-name": "hourglass-half-symbolic"
+                "icon-name": "hourglass-half-symbolic",
+                "child": Gtk.Label(label="Cron parser")
             }
         }
         TABS = {

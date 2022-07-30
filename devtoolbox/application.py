@@ -54,7 +54,7 @@ class Application(Adw.Application):
 
     def show_about_dialog(self, widget, _):
         builder = Gtk.Builder.new_from_resource(
-            f"{PATH_ID}/ui/about_window.ui")
+            "/me/iepure/devtoolbox/ui/about_window.ui")
         about_window = builder.get_object("about_window")
         about_window.set_transient_for(_)
         about_window.present()

@@ -1,4 +1,4 @@
-# converters_page.py
+# utilities_view.py
 #
 # Copyright 2022 Alessandro Iepure
 #
@@ -20,7 +20,6 @@ from gettext import gettext as _
 from gi.repository import Gtk, Adw
 
 from devtoolbox.widgets.sidebar_element import SidebarElement
-import devtoolbox.params as params
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/utilities_view.ui")
@@ -37,8 +36,7 @@ class UtilitiesView(Adw.Bin):
         for u in utilities:
             self.sidebar.append(
                 SidebarElement(u, utilities[u]["title"], utilities[u]["icon-name"]))
-            self.sidebar_stack.add_named(
-                Gtk.Label(label=utilities[u]["title"]), u)
+            self.sidebar_stack.add_named(utilities[u]["child"], u)
         self.sidebar.select_row(self.sidebar.get_first_child())
 
         # Signals

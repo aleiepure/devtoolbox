@@ -26,14 +26,10 @@
                 <property name="vexpand">true</property>
                 <property name="width-request">220</property>
                 <style>
-                  <class name="background" />
+                  <class name="navigation-sidebar" />
                 </style>
               </object>
             </child>
-
-            <style>
-              <class name="navigation-sidebar" />
-            </style>
 
           </object>
         </child>

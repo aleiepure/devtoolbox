@@ -8,6 +8,7 @@ finish-args:
     - --share=ipc
     - --socket=fallback-x11
     - --socket=wayland
+    - --env=PYTHONPATH=/app/plugins/site-packages
 cleanup:
     - "/include"
     - "/lib/pkgconfig"
@@ -22,10 +23,22 @@ build-options:
     build-args:
     - --share=network
 modules:
+    - name: python-yaml
+      buildsystem: simple
+      build-commands: 
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "ruamel.yaml" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/8b/25/08e5ad2431a028d0723ca5540b3af6a32f58f25e83c6dda4d0fcef7288a3/ruamel.yaml.clib-0.2.6.tar.gz
+          sha256: 4ff604ce439abb20794f05613c374759ce10e3595d1867764dd1ae675b85acbd
+        - type: file
+          url: https://files.pythonhosted.org/packages/9e/cb/938214ac358fbef7058343b3765c79a1b7ed0c366f7f992ce7ff38335652/ruamel.yaml-0.17.21-py3-none-any.whl
+          sha256: 742b35d3d665023981bd6d16b3d24248ce5df75fdb4e2924e93a05c1f8b61ca7
+          
     - name: devtoolbox
       builddir: true
       buildsystem: meson
-      sources:
-          - type: git
-            branch: main
-            url: file:///home/ale/Dev/devtoolbox
+      source:
+        - type: git
+          branch: main
+          url: file:///home/ale/Dev/devtoolbox
