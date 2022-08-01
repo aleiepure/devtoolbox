@@ -34,7 +34,17 @@ modules:
         - type: file
           url: https://files.pythonhosted.org/packages/9e/cb/938214ac358fbef7058343b3765c79a1b7ed0c366f7f992ce7ff38335652/ruamel.yaml-0.17.21-py3-none-any.whl
           sha256: 742b35d3d665023981bd6d16b3d24248ce5df75fdb4e2924e93a05c1f8b61ca7
-          
+
+    - name: python3-pytz
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "pytz" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/60/2e/dec1cc18c51b8df33c7c4d0a321b084cf38e1733b98f9d15018880fb4970/pytz-2022.1-py2.py3-none-any.whl
+          sha256: e68985985296d9a66a881eb3193b0906246245294a881e7c8afe623866ac6a5c
+
+
     - name: devtoolbox
       builddir: true
       buildsystem: meson

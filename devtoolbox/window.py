@@ -20,6 +20,7 @@ from gi.repository import Gtk, Adw
 
 from devtoolbox.views.utilities_view import UtilitiesView
 from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
+from devtoolbox.widgets.timestamp_utility import TimestampUtility
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/main.ui")
@@ -42,7 +43,7 @@ class MainWindow(Adw.ApplicationWindow):
             "timestamp": {
                 "title": _("Timestamp"),
                 "icon-name": "clock-rotate-symbolic",
-                "child": Gtk.Label(label="Timestamp")
+                "child": TimestampUtility()
             },
             "baseconverter": {
                 "title": _("Number Base"),

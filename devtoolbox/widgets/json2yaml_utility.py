@@ -1,4 +1,4 @@
-# utilities_view.py
+# json2yaml_utility.py
 #
 # Copyright 2022 Alessandro Iepure
 #
@@ -51,13 +51,13 @@ class Json2YamlUtility(Adw.Bin):
             self.indents_combo_items.append(f"{i} {_('Spaces')}")
 
         # Connect button signals
-        self.convert_btn.connect("clicked", self.on_convert_activate)
-        self.open_btn.connect("clicked", self.on_open_activate)
-        self.paste_btn.connect("clicked", self.on_paste_activate)
-        self.clear_btn.connect("clicked", self.on_clear_activate)
-        self.copy_btn.connect("clicked", self.on_copy_activate)
+        self.convert_btn.connect("clicked", self.on_convert_clicked)
+        self.open_btn.connect("clicked", self.on_open_clicked)
+        self.paste_btn.connect("clicked", self.on_paste_clicked)
+        self.clear_btn.connect("clicked", self.on_clear_clicked)
+        self.copy_btn.connect("clicked", self.on_copy_clicked)
 
-    def on_convert_activate(self, widget):
+    def on_convert_clicked(self, widget):
         input_buffer = self.input_textview.get_buffer()
         output_buffer = self.output_textview.get_buffer()
         input_text = input_buffer.get_text(
@@ -83,7 +83,7 @@ class Json2YamlUtility(Adw.Bin):
                 except:
                     self.toast.add_toast(Adw.Toast(title=_("Input is not a valid YAML file")))
 
-    def on_open_activate(self, widget):
+    def on_open_clicked(self, widget):
 
         self._native = Gtk.FileChooserNative(
             title="Open File",
@@ -132,19 +132,19 @@ class Json2YamlUtility(Adw.Bin):
         buffer.set_text(text)
         buffer.place_cursor(buffer.get_start_iter())
 
-    def on_paste_activate(self, widget):
+    def on_paste_clicked(self, widget):
         buffer = self.input_textview.get_buffer()
         display = Gdk.Display.get_default()
         clipboard = Gdk.Display.get_clipboard(display)
         buffer.paste_clipboard(clipboard, None, True)
 
-    def on_clear_activate(self, widget):
+    def on_clear_clicked(self, widget):
         buffer = self.input_textview.get_buffer()
         buffer.set_text("")
         buffer = self.output_textview.get_buffer()
         buffer.set_text("")
 
-    def on_copy_activate(self, widget):
+    def on_copy_clicked(self, widget):
         buffer = self.output_textview.get_buffer()
         start = buffer.get_start_iter()
         end = buffer.get_end_iter()

@@ -17,7 +17,7 @@
 
                                         <!-- Title bar -->
                                         <child>
-                                            <object class="GtkGrid" id="utility_titlebar">
+                                            <object class="GtkGrid">
                                                 <child>
                                                     <object class="GtkButton" id="starred_btn">
                                                         <property name="icon-name">non-starred</property>

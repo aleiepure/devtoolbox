@@ -1,0 +1,15 @@
+data/me.iepure.devtoolbox.desktop.in
+data/me.iepure.devtoolbox.appdata.xml.in
+data/me.iepure.devtoolbox.gschema.xml
+data/ui/main.ui
+data/ui/about_window.ui
+data/ui/json2yaml_utility.ui
+data/ui/utilities_view.ui
+data/gtk/help-overlay.ui
+data/ui/timestamp_utility.ui
+devtoolbox/views/utilities_view.py
+devtoolbox/widgets/json2yaml_utility.py
+devtoolbox/widgets/sidebar_element.py
+devtoolbox/application.py
+devtoolbox/window.py
+devtoolbox/widgets/timestamp_utility.py
