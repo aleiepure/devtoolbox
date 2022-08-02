@@ -20,6 +20,7 @@
                                                     <object class="GtkButton" id="starred_btn">
                                                         <property name="icon-name">non-starred</property>
                                                         <property name="valign">center</property>
+                                                        <property name="margin-top">10</property>
                                                         <style>
                                                             <class name="circular" />
                                                         </style>
@@ -34,11 +35,8 @@
                                                     <object class="GtkLabel">
                                                         <property name="label" translatable="yes">Timestamp Converter</property>
                                                         <property name="halign">start</property>
-                                                        <property name="valign">center</property>
-                                                        <property name="margin-bottom">7</property>
-                                                        <property name="margin-top">7</property>
-                                                        <property name="margin-start">27</property>
-                                                        <property name="margin-end">27</property>
+                                                        <property name="margin-top">10</property>
+                                                        <property name="margin-start">10</property>
                                                         <style>
                                                             <class name="title-1" />
                                                         </style>
@@ -52,11 +50,7 @@
                                                     <object class="GtkLabel">
                                                         <property name="label" translatable="yes">Convert UNIX timestamps to and from plain dates</property>
                                                         <property name="halign">start</property>
-                                                        <property name="valign">center</property>
-                                                        <property name="margin-bottom">7</property>
-                                                        <property name="margin-top">7</property>
-                                                        <property name="margin-start">27</property>
-                                                        <property name="margin-end">27</property>
+                                                        <property name="margin-start">10</property>
                                                         <style>
                                                             <class name="caption-heading" />
                                                         </style>
@@ -112,10 +106,9 @@
                                                                         <child>
                                                                             <object class="GtkLabel">
                                                                                 <property name="label" translatable="yes">Timestamp</property>
-                                                                                <property name="margin-bottom">7</property>
-                                                                                <property name="margin-top">7</property>
-                                                                                <property name="margin-start">17</property>
-                                                                                <property name="margin-end">17</property>
+                                                                                <property name="margin-bottom">8</property>
+                                                                                <property name="margin-top">8</property>
+                                                                                <property name="margin-start">8</property>
                                                                                 <style>
                                                                                     <class name="label" />
                                                                                 </style>
@@ -215,10 +208,9 @@
                                                                         <child>
                                                                             <object class="GtkLabel">
                                                                                 <property name="label" translatable="yes">Date</property>
-                                                                                <property name="margin-bottom">7</property>
-                                                                                <property name="margin-top">7</property>
-                                                                                <property name="margin-start">17</property>
-                                                                                <property name="margin-end">17</property>
+                                                                                <property name="margin-bottom">8</property>
+                                                                                <property name="margin-top">8</property>
+                                                                                <property name="margin-start">8</property>
                                                                                 <style>
                                                                                     <class name="label" />
                                                                                 </style>

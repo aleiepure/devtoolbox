@@ -20,6 +20,7 @@ from gi.repository import Gtk, Adw
 
 from devtoolbox.views.utilities_view import UtilitiesView
 from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
+from devtoolbox.widgets.number_base_utility import NumberBaseUtility
 from devtoolbox.widgets.timestamp_utility import TimestampUtility
 
 
@@ -48,7 +49,7 @@ class MainWindow(Adw.ApplicationWindow):
             "baseconverter": {
                 "title": _("Number Base"),
                 "icon-name": "hashtag-symbolic",
-                "child": Gtk.Label(label="Number base")
+                "child": NumberBaseUtility()
             },
             "cronparser": {
                 "title": _("Cron Parser"),
