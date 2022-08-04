@@ -1,6 +1,6 @@
 app-id: me.iepure.devtoolbox
 runtime: org.gnome.Platform
-runtime-version: "master"
+runtime-version: "42"
 sdk: org.gnome.Sdk
 command: devtoolbox
 finish-args:
@@ -23,6 +23,13 @@ build-options:
     build-args:
     - --share=network
 modules:
+    - name: libadwaita
+      buildsystem: meson
+      sources:
+        - type: git
+          branch: 1.2.alpha
+          url: https://gitlab.gnome.org/GNOME/libadwaita.git
+
     - name: python-yaml
       buildsystem: simple
       build-commands: 
@@ -44,6 +51,32 @@ modules:
           url: https://files.pythonhosted.org/packages/60/2e/dec1cc18c51b8df33c7c4d0a321b084cf38e1733b98f9d15018880fb4970/pytz-2022.1-py2.py3-none-any.whl
           sha256: e68985985296d9a66a881eb3193b0906246245294a881e7c8afe623866ac6a5c
 
+    - name: python-dateutil
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "python-dateutil" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl
+          sha256: 961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9
+
+    - name: python-crontab
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "python-crontab" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/06/b0/c270a1b5c83d9e0f83ab654d3153c39d80f61ba49fefde50fd23ab351381/python-crontab-2.6.0.tar.gz
+          sha256: 1e35ed7a3cdc3100545b43e196d34754e6551e7f95e4caebbe0e1c0ca41c2f1b
+
+    - name: croniter
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "croniter" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/dd/be/6a103f9dce27a824231215085c7000899d5f051fbd9e4cf2ed9a2fba7701/croniter-1.3.5-py2.py3-none-any.whl
+          sha256: 4f72faca42c00beb6e30907f1315145f43dfbe5ec0ad4ada24b4c0d57b86a33a
 
     - name: devtoolbox
       builddir: true

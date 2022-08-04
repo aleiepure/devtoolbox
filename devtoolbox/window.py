@@ -19,6 +19,7 @@ from gettext import gettext as _
 from gi.repository import Gtk, Adw
 
 from devtoolbox.views.utilities_view import UtilitiesView
+from devtoolbox.widgets.cron_parser_utility import CronParserUtility
 from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
 from devtoolbox.widgets.number_base_utility import NumberBaseUtility
 from devtoolbox.widgets.timestamp_utility import TimestampUtility
@@ -54,7 +55,7 @@ class MainWindow(Adw.ApplicationWindow):
             "cronparser": {
                 "title": _("Cron Parser"),
                 "icon-name": "hourglass-half-symbolic",
-                "child": Gtk.Label(label="Cron parser")
+                "child": CronParserUtility()
             }
         }
         TABS = {

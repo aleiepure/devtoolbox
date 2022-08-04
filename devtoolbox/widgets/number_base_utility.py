@@ -65,34 +65,33 @@ class NumberBaseUtility(Adw.Bin):
         self.decimal.remove_css_class("border-red")
         self.hex.remove_css_class("border-red")
 
-        match input_base:
-            case Bases.BINARY:
+        if input_base == Bases.BINARY:
                 try:
                     decimal_num = int(
                         binary_buffer.get_text(), Bases.BINARY.value)
                 except:
                     self.binary.add_css_class("border-red")
                     return
-            case Bases.OCTAL:
-                try:
-                    decimal_num = int(
-                        octal_buffer.get_text(), Bases.OCTAL.value)
-                except:
-                    self.octal.add_css_class("border-red")
-                    return
-            case Bases.DECIMAL:
-                try:
-                    decimal_num = int(
-                        decimal_buffer.get_text(), Bases.DECIMAL.value)
-                except:
-                    self.decimal.add_css_class("border-red")
-                    return
-            case Bases.HEX:
-                try:
-                    decimal_num = int(hex_buffer.get_text(), Bases.HEX.value)
-                except:
-                    self.hex.add_css_class("border-red")
-                    return
+        if input_base ==Bases.OCTAL:
+            try:
+                decimal_num = int(
+                    octal_buffer.get_text(), Bases.OCTAL.value)
+            except:
+                self.octal.add_css_class("border-red")
+                return
+        if input_base ==Bases.DECIMAL:
+            try:
+                decimal_num = int(
+                    decimal_buffer.get_text(), Bases.DECIMAL.value)
+            except:
+                self.decimal.add_css_class("border-red")
+                return
+        if input_base ==Bases.HEX:
+            try:
+                decimal_num = int(hex_buffer.get_text(), Bases.HEX.value)
+            except:
+                self.hex.add_css_class("border-red")
+                return
 
         octal_num = oct(decimal_num).replace("0o", "")
         hex_num = hex(decimal_num).replace("0x", "").upper()

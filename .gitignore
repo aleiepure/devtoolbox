@@ -2,3 +2,5 @@
 .flatpak*
 _build
 devtoolbox/timezone.py
+sonar*
+.scannerwork

@@ -2,9 +2,8 @@
 <interface>
     <requires lib="gtk" version="4.0" />
     <requires lib="libadwaita" version="1.0" />
-    <template class="Json2YamlUtility" parent="AdwBin">
+    <template class="CronParserUtility" parent="AdwBin">
         <child>
-
             <object class="AdwToastOverlay" id="toast">
                 <property name="child">
                     <object class="GtkScrolledWindow">
@@ -35,7 +34,7 @@
                                                 </child>
                                                 <child>
                                                     <object class="GtkLabel">
-                                                        <property name="label" translatable="yes">JSON - YAML Converter</property>
+                                                        <property name="label" translatable="yes">Cron parser</property>
                                                         <property name="halign">start</property>
                                                         <property name="margin-top">10</property>
                                                         <property name="margin-start">10</property>
@@ -50,7 +49,7 @@
                                                 </child>
                                                 <child>
                                                     <object class="GtkLabel">
-                                                        <property name="label" translatable="yes">Convert JSON files to YAML and viceversa</property>
+                                                        <property name="label" translatable="yes">Interpret cron expression to get the next date of execution</property>
                                                         <property name="halign">start</property>
                                                         <property name="margin-start">10</property>
                                                         <style>
@@ -78,38 +77,52 @@
                                         <child>
                                             <object class="AdwPreferencesGroup">
                                                 <child>
-                                                    <object class="AdwComboRow" id="direction_combo">
-                                                        <property name="title" translatable="yes">Direction</property>
-                                                        <property name="subtitle" translatable="yes">Specify what format is the input and the output</property>
-                                                        <property name="icon-name">right-left-symbolic</property>
-                                                        <property name="model">
-                                                            <object class="GtkStringList" id="direction_combo_items">
-                                                                <items>
-                                                                    <item translatable="no">JSON ⟶ YAML</item>
-                                                                    <item translatable="no">YAML ⟶ JSON</item>
-                                                                </items>
+                                                    <object class="AdwActionRow">
+                                                        <property name="title" translatable="yes">Scheduled dates</property>
+                                                        <property name="subtitle" translatable="yes">Number of dates to be generated (up to 16)</property>
+                                                        <property name="icon-name">today-alt-symbolic</property>
+                                                        <child type="suffix">
+                                                            <object class="GtkSpinButton" id="dates_spinner">
+                                                                <property name="valign">center</property>
+                                                                <property name="adjustment">
+                                                                    <object class="GtkAdjustment">
+                                                                        <property name="lower">1</property>
+                                                                        <property name="upper">16</property>
+                                                                        <property name="step-increment">1</property>
+                                                                        <property name="value">5</property>
+                                                                    </object>
+                                                                </property>
                                                             </object>
-                                                        </property>
+                                                        </child>
                                                     </object>
                                                 </child>
                                                 <child>
-                                                    <object class="AdwComboRow" id="indents_combo">
-                                                        <property name="title" translatable="yes">Indentations</property>
-                                                        <property name="subtitle" translatable="yes">Number of spaces used for indenting the code</property>
-                                                        <property name="icon-name">spacebar-symbolic</property>
-                                                        <property name="model">
-                                                            <object class="GtkStringList" id="indents_combo_items" />
-                                                        </property>
+                                                    <object class="AdwActionRow">
+                                                        <property name="title" translatable="yes">Output format</property>
+                                                        <property name="subtitle" translatable="yes">Format used to display generated dates (&lt;a href="https://strftime.org/"&gt;python syntax&lt;/a&gt;)</property>
+                                                        <property name="icon-name">format-text-rich-symbolic</property>
+                                                        <child type="suffix">
+                                                            <object class="GtkText" id="format_text">
+                                                                <property name="valign">center</property>
+                                                                <property name="width-request">250</property>
+                                                                <property name="height-request">30</property>
+                                                                <property name="text">%c</property>
+                                                                <style>
+                                                                    <class name="view" />
+                                                                    <class name="frame" />
+                                                                    <class name="rounded-border" />
+                                                                    <class name="padding-left-8" />
+                                                                </style>
+                                                            </object>
+                                                        </child>
                                                     </object>
                                                 </child>
                                             </object>
                                         </child>
-
                                         <child>
                                             <object class="AdwPreferencesGroup">
                                                 <property name="margin-top">10</property>
                                                 <child>
-
                                                     <object class="AdwPreferencesRow">
                                                         <child>
                                                             <object class="GtkBox">
@@ -126,7 +139,7 @@
                                                                         </style>
                                                                         <child>
                                                                             <object class="GtkLabel">
-                                                                                <property name="label" translatable="yes">Input</property>
+                                                                                <property name="label" translatable="yes">Cron expression</property>
                                                                                 <property name="margin-bottom">8</property>
                                                                                 <property name="margin-top">8</property>
                                                                                 <property name="margin-start">8</property>
@@ -141,51 +154,23 @@
                                                                                 <property name="halign">end</property>
                                                                                 <property name="hexpand">true</property>
                                                                                 <child>
-                                                                                    <object class="GtkButton" id="convert_btn">
-                                                                                        <property name="label" translatable="yes">Convert</property>
-                                                                                        <property name="valign">center</property>
-                                                                                        <style>
-                                                                                            <class name="suggested-action" />
-                                                                                        </style>
-                                                                                    </object>
-                                                                                </child>
-                                                                                <child>
-                                                                                    <object class="GtkSeparator">
-                                                                                        <style>
-                                                                                            <class name="spacer" />
-                                                                                        </style>
-                                                                                    </object>
-                                                                                </child>
-                                                                                <child>
                                                                                     <object class="GtkBox">
                                                                                         <property name="orientation">horizontal</property>
                                                                                         <style>
                                                                                             <class name="linked" />
                                                                                         </style>
                                                                                         <child>
-                                                                                            <object class="GtkButton" id="open_btn">
-                                                                                                <property name="valign">center</property>
-                                                                                                <property name="child">
-                                                                                                    <object class="AdwButtonContent">
-                                                                                                        <property name="icon-name">document-open-symbolic</property>
-                                                                                                        <property name="label" translatable="yes">Open</property>
-                                                                                                        <property name="use-underline">True</property>
-                                                                                                    </object>
-                                                                                                </property>
-                                                                                            </object>
-                                                                                        </child>
-                                                                                        <child>
                                                                                             <object class="GtkButton" id="paste_btn">
                                                                                                 <property name="valign">center</property>
                                                                                                 <property name="icon-name">edit-paste-symbolic</property>
-                                                                                                <property name="tooltip-text" translatable="yes">Paste clipboard</property>
+                                                                                                <property name="tooltip-text" translatable="yes">Paste from clipboard</property>
                                                                                             </object>
                                                                                         </child>
                                                                                         <child>
                                                                                             <object class="GtkButton" id="clear_btn">
                                                                                                 <property name="valign">center</property>
                                                                                                 <property name="icon-name">edit-clear-symbolic</property>
-                                                                                                <property name="tooltip-text" translatable="yes">Clear all fields</property>
+                                                                                                <property name="tooltip-text" translatable="yes">Clear expression</property>
                                                                                             </object>
                                                                                         </child>
                                                                                     </object>
@@ -198,16 +183,14 @@
 
                                                                 <!-- Text Area -->
                                                                 <child>
-                                                                    <object class="GtkTextView" id="input_textview">
-                                                                        <property name="monospace">true</property>
-                                                                        <property name="wrap-mode">word</property>
-                                                                        <property name="height-request">200</property>
-                                                                        <property name="top-margin">12</property>
-                                                                        <property name="left-margin">12</property>
-                                                                        <property name="right-margin">12</property>
-                                                                        <property name="bottom-margin">12</property>
+                                                                    <object class="GtkText" id="expression_text">
+                                                                        <property name="width-request">200</property>
+                                                                        <property name="height-request">30</property>
                                                                         <style>
+                                                                            <class name="view" />
+                                                                            <class name="frame" />
                                                                             <class name="rounded-border" />
+                                                                            <class name="padding-left-8" />
                                                                         </style>
                                                                     </object>
                                                                 </child>
@@ -215,16 +198,13 @@
                                                             </object>
                                                         </child>
                                                     </object>
-
                                                 </child>
                                             </object>
                                         </child>
-
                                         <child>
                                             <object class="AdwPreferencesGroup">
                                                 <property name="margin-top">10</property>
                                                 <child>
-
                                                     <object class="AdwPreferencesRow">
                                                         <child>
                                                             <object class="GtkBox">
@@ -241,7 +221,7 @@
                                                                         </style>
                                                                         <child>
                                                                             <object class="GtkLabel">
-                                                                                <property name="label" translatable="yes">Output</property>
+                                                                                <property name="label" translatable="yes">Next dates</property>
                                                                                 <property name="margin-bottom">8</property>
                                                                                 <property name="margin-top">8</property>
                                                                                 <property name="margin-start">8</property>
@@ -259,7 +239,7 @@
                                                                                     <object class="GtkButton" id="copy_btn">
                                                                                         <property name="valign">center</property>
                                                                                         <property name="icon-name">edit-copy-symbolic</property>
-                                                                                        <property name="tooltip-text" translatable="yes">Copy output</property>
+                                                                                        <property name="tooltip-text" translatable="yes">Copy to clipboard</property>
                                                                                         <style>
                                                                                             <class name="raised" />
                                                                                         </style>
@@ -273,7 +253,7 @@
 
                                                                 <!-- Text Area -->
                                                                 <child>
-                                                                    <object class="GtkTextView" id="output_textview">
+                                                                    <object class="GtkTextView" id="dates_text">
                                                                         <property name="monospace">true</property>
                                                                         <property name="wrap-mode">word</property>
                                                                         <property name="height-request">200</property>
@@ -291,14 +271,12 @@
                                                             </object>
                                                         </child>
                                                     </object>
-
                                                 </child>
                                             </object>
                                         </child>
                                     </object>
                                 </property>
                             </object>
-
                         </property>
                     </object>
                 </property>
