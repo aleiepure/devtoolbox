@@ -13,5 +13,11 @@
 		<key name="favorites" type="as">
 			<default>[]</default>
 		</key>
+		<key name="last-tab" type="s">
+			<default>"converters"</default>
+		</key>
+		<key name="last-utility" type="s">
+			<default>"json2yaml"</default>
+		</key>
 	</schema>
 </schemalist>

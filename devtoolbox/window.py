@@ -33,6 +33,8 @@ class MainWindow(Adw.ApplicationWindow):
     main_content = Gtk.Template.Child()
     tab_stack = Gtk.Template.Child()
 
+    settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
+
     def __init__(self, **kwargs):
         Adw.ApplicationWindow.__init__(self, **kwargs)
 
@@ -102,12 +104,34 @@ class MainWindow(Adw.ApplicationWindow):
             page.set_title(TABS[t]["title"])
             page.set_icon_name(TABS[t]["icon-name"])
 
-        # set first selected tab
-        self.tab_stack.set_visible_child_name("converters")
-        self.settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
+        # Restore last state
+        # Tab
+        self.tab_stack.set_visible_child_name(
+            self.settings.get_string("last-tab"))
+
+        # Utility, favorites: start always first utility
+        if self.tab_stack.get_visible_child_name() != "favorites":
+            self.tab_stack.get_visible_child().sidebar_stack.set_visible_child_name(
+                self.settings.get_string("last-utility"))
+            for i in range(0, 10):
+                    row = self.tab_stack.get_visible_child().sidebar.get_row_at_index(i)
+                    if row != None and row.get_page_name() == self.settings.get_string("last-utility"):
+                        self.tab_stack.get_visible_child().sidebar.select_row(row)
+
+        # Window size
         self.settings.bind("window-width", self, "default-width",
                            Gio.SettingsBindFlags.DEFAULT)
         self.settings.bind("window-height", self, "default-height",
                            Gio.SettingsBindFlags.DEFAULT)
         self.settings.bind("window-maximized", self, "maximized",
                            Gio.SettingsBindFlags.DEFAULT)
+
+        # Signals
+        self.connect("close-request", self.on_close_request)
+
+    def on_close_request(self, data):
+        tab = self.tab_stack.get_visible_child_name()
+        if tab != "favorites":
+            utility = self.tab_stack.get_visible_child().sidebar_stack.get_visible_child_name()
+            self.settings.set_string("last-utility", utility)
+        self.settings.set_string("last-tab", tab)

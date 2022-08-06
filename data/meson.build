@@ -1,6 +1,4 @@
-
 pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
-schemas_dir = join_paths(get_option('prefix'), get_option('datadir'), 'glib-2.0/schemas')
 
 gnome.compile_resources('devtoolbox',
   'devtoolbox.gresource.xml',
@@ -49,8 +47,8 @@ if compile_schemas.found()
   test('Validate schema file', compile_schemas,
     args: ['--strict', '--dry-run', meson.current_source_dir()]
   )
+else
+  message('not found')
 endif
 
 subdir('icons')
-
-meson.add_install_script('glib-compile-schemas', schemas_dir)

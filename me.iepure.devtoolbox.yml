@@ -101,6 +101,8 @@ modules:
     - name: devtoolbox
       builddir: true
       buildsystem: meson
+      config-opts:
+        - -Dcompile-schemas=enabled
       source:
         - type: git
           branch: main

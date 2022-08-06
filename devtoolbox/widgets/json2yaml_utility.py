@@ -17,10 +17,10 @@
 
 
 import json
-from gettext import gettext as _
 import warnings
-from gi.repository import Gtk, Adw, Gdk, Gio
 from ruamel import yaml
+from gettext import gettext as _
+from gi.repository import Gtk, Adw, Gdk, Gio
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/json2yaml_utility.ui")

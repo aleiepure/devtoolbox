@@ -57,3 +57,5 @@ configure_file(
 
 subdir('data')
 subdir('po')
+
+meson.add_install_script('meson/postinstall.py')
