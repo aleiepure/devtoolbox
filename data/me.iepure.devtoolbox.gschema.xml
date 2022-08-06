@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="testt">
 	<schema id="me.iepure.devtoolbox" path="/me/iepure/devtoolbox/">
+		<key name="window-width" type="i">
+			<default>1200</default>
+		</key>
+		<key name="window-height" type="i">
+			<default>850</default>
+		</key>
+		<key name="window-maximized" type="b">
+			<default>false</default>
+		</key>
+		<key name="favorites" type="as">
+			<default>[]</default>
+		</key>
 	</schema>
 </schemalist>

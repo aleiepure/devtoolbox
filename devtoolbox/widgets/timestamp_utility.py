@@ -17,13 +17,14 @@
 
 from datetime import datetime
 from gettext import gettext as _
-from gi.repository import Gtk, Adw
+from gi.repository import Gtk, Adw, Gio
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/timestamp_utility.ui")
 class TimestampUtility(Adw.Bin):
     __gtype_name__ = "TimestampUtility"
 
+    toast = Gtk.Template.Child()
     starred_btn = Gtk.Template.Child()
     convert_btn = Gtk.Template.Child()
     now_btn = Gtk.Template.Child()
@@ -42,11 +43,18 @@ class TimestampUtility(Adw.Bin):
     #timezone_combo_model = Gtk.Template.Child()
     #action_row = Gtk.Template.Child()
 
+    settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
+
     def __init__(self):
         super().__init__()
 
-        # TODO: add favorites logic to button
-        # self.starred_btn.set_icon_name("non-starred")
+        # Favorites button icon
+        fav_list = self.settings.get_strv("favorites")
+        try:
+            fav_list.index("timestamp")  # check if present, throws error if not
+            self.starred_btn.set_icon_name("starred-symbolic")
+        except ValueError:
+            self.starred_btn.set_icon_name("non-starred-symbolic")
 
         # Populate timezone list
         #model = Gtk.StringList()
@@ -73,6 +81,31 @@ class TimestampUtility(Adw.Bin):
         self.convertDate_btn.connect("clicked", self.on_convertDate_clicked)
         self.nowDate_btn.connect("clicked", self.on_nowDate_clicked)
         self.clearDate_btn.connect("clicked", self.on_clearDate_clicked)
+        self.starred_btn.connect("clicked", self.on_star_clicked)
+        self.settings.connect("changed", self.on_settings_changed)
+
+    def on_settings_changed(self, key, data):
+        # Favorites button icon
+        fav_list = self.settings.get_strv("favorites")
+        try:
+            fav_list.index("timestamp") # check if present, throws error if not
+            self.starred_btn.set_icon_name("starred-symbolic")
+        except ValueError:
+            self.starred_btn.set_icon_name("non-starred-symbolic")
+
+    def on_star_clicked(self, data):
+        fav_list = self.settings.get_strv("favorites")
+        try:
+            fav_list.index("timestamp")  # check if present, throws error if not
+            self.starred_btn.set_icon_name("non-starred-symbolic")
+            fav_list.remove("timestamp")
+            self.settings.set_strv("favorites", fav_list)
+            self.toast.add_toast(Adw.Toast(title=_("Removed from favorites!")))
+        except ValueError:
+            self.starred_btn.set_icon_name("starred-symbolic")
+            fav_list.append("timestamp")
+            self.settings.set_strv("favorites", fav_list)
+            self.toast.add_toast(Adw.Toast(title=_("Added to favorites!")))
 
     def on_convert_clicked(self, widget):
         time = datetime.fromtimestamp(self.timestamp_spinner.get_value())
@@ -88,7 +121,6 @@ class TimestampUtility(Adw.Bin):
 
     def on_now_clicked(self, widget):
         self.timestamp_spinner.set_value(datetime.now().timestamp())
-        pass
 
     def on_convertDate_clicked(self, widget):
         year = int(self.year_spinner.get_value())

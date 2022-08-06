@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from gettext import gettext as _
-from gi.repository import Gtk, Adw
+from gi.repository import Gtk, Adw, Gio
 from enum import Enum
 
 
@@ -25,13 +25,24 @@ class NumberBaseUtility(Adw.Bin):
     __gtype_name__ = "NumberBaseUtility"
 
     toast = Gtk.Template.Child()
+    starred_btn = Gtk.Template.Child()
     decimal = Gtk.Template.Child()
     octal = Gtk.Template.Child()
     hex = Gtk.Template.Child()
     binary = Gtk.Template.Child()
 
+    settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
+
     def __init__(self):
         super().__init__()
+
+        # Favorites button icon
+        fav_list = self.settings.get_strv("favorites")
+        try:
+            fav_list.index("baseconverter")  # check if present, throws error if not
+            self.starred_btn.set_icon_name("starred-symbolic")
+        except ValueError:
+            self.starred_btn.set_icon_name("non-starred-symbolic")
 
         # Signals
         self.decimal_handler_id = self.decimal.connect(
@@ -41,6 +52,31 @@ class NumberBaseUtility(Adw.Bin):
         self.hex_handler_id = self.hex.connect("changed", self.on_hex_change)
         self.binary_handler_id = self.binary.connect(
             "changed", self.on_binary_change)
+        self.starred_btn.connect("clicked", self.on_star_clicked)
+        self.settings.connect("changed", self.on_settings_changed)
+
+    def on_settings_changed(self, key, data):
+        # Favorites button icon
+        fav_list = self.settings.get_strv("favorites")
+        try:
+            fav_list.index("baseconverter") # check if present, throws error if not
+            self.starred_btn.set_icon_name("starred-symbolic")
+        except ValueError:
+            self.starred_btn.set_icon_name("non-starred-symbolic")
+
+    def on_star_clicked(self, data):
+        fav_list = self.settings.get_strv("favorites")
+        try:
+            fav_list.index("baseconverter")  # check if present, throws error if not
+            self.starred_btn.set_icon_name("non-starred-symbolic")
+            fav_list.remove("baseconverter")
+            self.settings.set_strv("favorites", fav_list)
+            self.toast.add_toast(Adw.Toast(title=_("Removed from favorites!")))
+        except ValueError:
+            self.starred_btn.set_icon_name("starred-symbolic")
+            fav_list.append("baseconverter")
+            self.settings.set_strv("favorites", fav_list)
+            self.toast.add_toast(Adw.Toast(title=_("Added to favorites!")))
 
     def on_decimal_change(self, text):
         self._convert(Bases.DECIMAL)
@@ -66,30 +102,30 @@ class NumberBaseUtility(Adw.Bin):
         self.hex.remove_css_class("border-red")
 
         if input_base == Bases.BINARY:
-                try:
-                    decimal_num = int(
-                        binary_buffer.get_text(), Bases.BINARY.value)
-                except:
-                    self.binary.add_css_class("border-red")
-                    return
-        if input_base ==Bases.OCTAL:
+            try:
+                decimal_num = int(
+                    binary_buffer.get_text(), Bases.BINARY.value)
+            except ValueError:
+                self.binary.add_css_class("border-red")
+                return
+        if input_base == Bases.OCTAL:
             try:
                 decimal_num = int(
                     octal_buffer.get_text(), Bases.OCTAL.value)
-            except:
+            except ValueError:
                 self.octal.add_css_class("border-red")
                 return
-        if input_base ==Bases.DECIMAL:
+        if input_base == Bases.DECIMAL:
             try:
                 decimal_num = int(
                     decimal_buffer.get_text(), Bases.DECIMAL.value)
-            except:
+            except ValueError:
                 self.decimal.add_css_class("border-red")
                 return
-        if input_base ==Bases.HEX:
+        if input_base == Bases.HEX:
             try:
                 decimal_num = int(hex_buffer.get_text(), Bases.HEX.value)
-            except:
+            except ValueError:
                 self.hex.add_css_class("border-red")
                 return
 
@@ -107,7 +143,7 @@ class NumberBaseUtility(Adw.Bin):
         octal_buffer.set_text(octal_num, len(octal_num))
         hex_buffer.set_text(hex_num, len(hex_num))
         binary_buffer.set_text(binary_num, len(binary_num))
-        
+
         # Move cursor at the end
         self.decimal.set_position(-1)
         self.octal.set_position(-1)

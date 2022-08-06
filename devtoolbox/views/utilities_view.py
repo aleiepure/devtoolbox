@@ -33,17 +33,15 @@ class UtilitiesView(Adw.Bin):
         super().__init__()
 
         # Populate sidebar with pages
-        for u in utilities:
-            self.sidebar.append(
-                SidebarElement(u, utilities[u]["title"], utilities[u]["icon-name"]))
-            self.sidebar_stack.add_named(utilities[u]["child"], u)
-        self.sidebar.select_row(self.sidebar.get_first_child())
+        if len(utilities) != 0:
+            for u in utilities:
+                self.sidebar.append(
+                    SidebarElement(u, utilities[u]["title"], utilities[u]["icon-name"]))
+                self.sidebar_stack.add_named(utilities[u]["child"], u)
+            self.sidebar.select_row(self.sidebar.get_first_child())
 
         # Signals
-        self.sidebar.connect("row-activated", self.__change_page)
+        self.sidebar.connect("row-activated", self.on_change_page)
 
-    def __change_page(self, widget, row):
-        try:
-            self.sidebar_stack.set_visible_child_name(row.get_page_name())
-        except:
-            pass
+    def on_change_page(self, widget, row):
+        self.sidebar_stack.set_visible_child_name(row.get_page_name())

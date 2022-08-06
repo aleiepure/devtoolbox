@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from gi.repository import Gtk, Adw, Gdk
+from gi.repository import Gtk, Adw, Gdk, Gio
 from datetime import datetime
 from dateutil import parser
 from crontab import CronTab, CronSlices
@@ -33,10 +33,21 @@ class CronParserUtility(Adw.Bin):
     paste_btn = Gtk.Template.Child()
     clear_btn = Gtk.Template.Child()
     copy_btn = Gtk.Template.Child()
+    starred_btn = Gtk.Template.Child()
     toast = Gtk.Template.Child()
+
+    settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
 
     def __init__(self):
         super().__init__()
+
+        # Favorites button icon
+        fav_list = self.settings.get_strv("favorites")
+        try:
+            fav_list.index("cronparser")  # check if present, throws error if not
+            self.starred_btn.set_icon_name("starred-symbolic")
+        except ValueError:
+            self.starred_btn.set_icon_name("non-starred-symbolic")
 
         # Signals
         self.paste_btn.connect("clicked", self.on_paste_btn_clicked)
@@ -46,6 +57,31 @@ class CronParserUtility(Adw.Bin):
             "value-changed", self.on_dates_spinner_value_changed)
         self.format_text.connect("changed", self.on_format_change)
         self.expression_text.connect("changed", self.on_expression_change)
+        self.starred_btn.connect("clicked", self.on_star_clicked)
+        self.settings.connect("changed", self.on_settings_changed)
+
+    def on_settings_changed(self, key, data):
+        # Favorites button icon
+        fav_list = self.settings.get_strv("favorites")
+        try:
+            fav_list.index("cronparser") # check if present, throws error if not
+            self.starred_btn.set_icon_name("starred-symbolic")
+        except ValueError:
+            self.starred_btn.set_icon_name("non-starred-symbolic")
+
+    def on_star_clicked(self, data):
+        fav_list = self.settings.get_strv("favorites")
+        try:
+            fav_list.index("cronparser")  # check if present, throws error if not
+            self.starred_btn.set_icon_name("non-starred-symbolic")
+            fav_list.remove("cronparser")
+            self.settings.set_strv("favorites", fav_list)
+            self.toast.add_toast(Adw.Toast(title=_("Removed from favorites!")))
+        except ValueError:
+            self.starred_btn.set_icon_name("starred-symbolic")
+            fav_list.append("cronparser")
+            self.settings.set_strv("favorites", fav_list)
+            self.toast.add_toast(Adw.Toast(title=_("Added to favorites!")))
 
     def on_dates_spinner_value_changed(self, data):
         self._generate_dates()

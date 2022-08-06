@@ -19,7 +19,7 @@
 import json
 from gettext import gettext as _
 import warnings
-from gi.repository import Gtk, Adw, Gdk
+from gi.repository import Gtk, Adw, Gdk, Gio
 from ruamel import yaml
 
 
@@ -41,10 +41,18 @@ class Json2YamlUtility(Adw.Bin):
     output_textview = Gtk.Template.Child()
     toast = Gtk.Template.Child()
 
+    settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
+
     def __init__(self):
         super().__init__()
-        # TODO: add favorites logic to button
-        # self.starred_btn.set_icon_name("non-starred")
+        
+        # Favorites button icon
+        fav_list = self.settings.get_strv("favorites")
+        try:
+            fav_list.index("json2yaml") # check if present, throws error if not
+            self.starred_btn.set_icon_name("starred-symbolic")
+        except ValueError:
+            self.starred_btn.set_icon_name("non-starred-symbolic")
 
         # Populate indents combo box
         for i in range(2, 10, 2):
@@ -56,6 +64,31 @@ class Json2YamlUtility(Adw.Bin):
         self.paste_btn.connect("clicked", self.on_paste_clicked)
         self.clear_btn.connect("clicked", self.on_clear_clicked)
         self.copy_btn.connect("clicked", self.on_copy_clicked)
+        self.starred_btn.connect("clicked", self.on_star_clicked)
+        self.settings.connect("changed", self.on_settings_changed)
+
+    def on_settings_changed(self, key, data):
+        # Favorites button icon
+        fav_list = self.settings.get_strv("favorites")
+        try:
+            fav_list.index("json2yaml") # check if present, throws error if not
+            self.starred_btn.set_icon_name("starred-symbolic")
+        except ValueError:
+            self.starred_btn.set_icon_name("non-starred-symbolic")
+
+    def on_star_clicked(self, data):
+        fav_list = self.settings.get_strv("favorites")
+        try:
+            fav_list.index("json2yaml") # check if present, throws error if not
+            self.starred_btn.set_icon_name("non-starred-symbolic")
+            fav_list.remove("json2yaml")
+            self.settings.set_strv("favorites", fav_list)
+            self.toast.add_toast(Adw.Toast(title=_("Removed from favorites!")))
+        except ValueError:
+            self.starred_btn.set_icon_name("starred-symbolic")
+            fav_list.append("json2yaml")
+            self.settings.set_strv("favorites", fav_list)
+            self.toast.add_toast(Adw.Toast(title=_("Added to favorites!")))
 
     def on_convert_clicked(self, widget):
         input_buffer = self.input_textview.get_buffer()
@@ -69,18 +102,18 @@ class Json2YamlUtility(Adw.Bin):
                     json.loads(input_text),
                     indent=2*self.indents_combo.get_selected()+2
                 ))
-            except:
+            except json.JSONDecodeError :
                 self.toast.add_toast(Adw.Toast(title=_("Input is not a valid JSON file")))
         else:
             with warnings.catch_warnings():
-                warnings.simplefilter("error")
+                warnings.simplefilter("error", yaml.error.UnsafeLoaderWarning)
                 try:
                     output_buffer.set_text(json.dumps(
                         yaml.load(input_text),
                         indent=2*self.indents_combo.get_selected()+2,
                         ensure_ascii=False
                     ))
-                except:
+                except yaml.error.UnsafeLoaderWarning:
                     self.toast.add_toast(Adw.Toast(title=_("Input is not a valid YAML file")))
 
     def on_open_clicked(self, widget):
@@ -93,11 +126,11 @@ class Json2YamlUtility(Adw.Bin):
         )
 
         extensions = ["json", "yaml", "yml"]
-        filter = Gtk.FileFilter()
+        file_filter = Gtk.FileFilter()
         for f in extensions:
-            filter.add_suffix(f)
+            file_filter.add_suffix(f)
         filter.set_name(f"{_('JSON & YAML Files')}")
-        self._native.add_filter(filter)
+        self._native.add_filter(file_filter)
 
         # Connect the "response" signal
         self._native.connect("response", self.on_open_response)
@@ -122,7 +155,7 @@ class Json2YamlUtility(Adw.Bin):
 
         try:
             text = contents[1].decode('utf-8')
-        except UnicodeError as err:
+        except UnicodeError:
             path = file.peek_path()
             print(
                 f"Unable to load the contents of {path}: the file is not encoded with UTF-8")
@@ -134,8 +167,7 @@ class Json2YamlUtility(Adw.Bin):
 
     def on_paste_clicked(self, widget):
         buffer = self.input_textview.get_buffer()
-        display = Gdk.Display.get_default()
-        clipboard = Gdk.Display.get_clipboard(display)
+        clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         buffer.paste_clipboard(clipboard, None, True)
 
     def on_clear_clicked(self, widget):
@@ -149,6 +181,5 @@ class Json2YamlUtility(Adw.Bin):
         start = buffer.get_start_iter()
         end = buffer.get_end_iter()
         text = buffer.get_text(start, end, False)
-        display = Gdk.Display.get_default()
-        clipboard = Gdk.Display.get_clipboard(display)
+        clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         clipboard.set(text)

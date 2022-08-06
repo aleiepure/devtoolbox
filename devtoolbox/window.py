@@ -16,7 +16,8 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from gettext import gettext as _
-from gi.repository import Gtk, Adw
+from gi.repository import Gtk, Adw, Gio
+from devtoolbox.views.favorites_view import FavoritesView
 
 from devtoolbox.views.utilities_view import UtilitiesView
 from devtoolbox.widgets.cron_parser_utility import CronParserUtility
@@ -62,7 +63,7 @@ class MainWindow(Adw.ApplicationWindow):
             "favorites": {
                 "title": _("Favorites"),
                 "icon-name": "starred",
-                "child": Gtk.Label(label="Favorites")
+                "child": FavoritesView()
             },
             "converters": {
                 "title": _("Converters"),
@@ -103,3 +104,10 @@ class MainWindow(Adw.ApplicationWindow):
 
         # set first selected tab
         self.tab_stack.set_visible_child_name("converters")
+        self.settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
+        self.settings.bind("window-width", self, "default-width",
+                           Gio.SettingsBindFlags.DEFAULT)
+        self.settings.bind("window-height", self, "default-height",
+                           Gio.SettingsBindFlags.DEFAULT)
+        self.settings.bind("window-maximized", self, "maximized",
+                           Gio.SettingsBindFlags.DEFAULT)
