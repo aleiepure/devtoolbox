@@ -18,6 +18,7 @@
 from gettext import gettext as _
 from gi.repository import Gtk, Adw, Gio
 from devtoolbox.views.utilities_view import UtilitiesView
+from devtoolbox.widgets.html_encoder_utility import HtmlEncoderUtility
 from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
 from devtoolbox.widgets.timestamp_utility import TimestampUtility
 from devtoolbox.widgets.number_base_utility import NumberBaseUtility
@@ -87,7 +88,12 @@ class FavoritesView(Adw.Bin):
                 "title": _("Cron Parser"),
                 "icon-name": "hourglass-half-symbolic",
                 "child": CronParserUtility()
-            }
+            },
+            "htmlencoder": {
+                "title": _("HTML"),
+                "icon-name": "code-symbolic",
+                "child": HtmlEncoderUtility()
+            },
         }
 
         fav_str_list = self.settings.get_strv("favorites")

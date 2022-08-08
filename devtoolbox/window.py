@@ -21,6 +21,7 @@ from devtoolbox.views.favorites_view import FavoritesView
 
 from devtoolbox.views.utilities_view import UtilitiesView
 from devtoolbox.widgets.cron_parser_utility import CronParserUtility
+from devtoolbox.widgets.html_encoder_utility import HtmlEncoderUtility
 from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
 from devtoolbox.widgets.number_base_utility import NumberBaseUtility
 from devtoolbox.widgets.timestamp_utility import TimestampUtility
@@ -61,6 +62,33 @@ class MainWindow(Adw.ApplicationWindow):
                 "child": CronParserUtility()
             }
         }
+        ENCODERS_UTILITIES = {
+            "htmlencoder": {
+                "title": _("HTML"),
+                "icon-name": "code-symbolic",
+                "child": HtmlEncoderUtility()
+            },
+            "urlencoder": {
+                "title": _("URL"),
+                "icon-name": "link-symbolic",
+                "child": Gtk.Label(label="url")
+            },
+            "base64encoder": {
+                "title": _("Base64"),
+                "icon-name": "base64-symbolic",
+                "child": Gtk.Label(label="base64")
+            },
+            "gzipencoder": {
+                "title": _("GZip"),
+                "icon-name": "file-zip-symbolic",
+                "child": Gtk.Label(label="gzip")
+            },
+            "jwtencoder": {
+                "title": _("JWT"),
+                "icon-name": "key-symbolic",
+                "child": Gtk.Label(label="jwt")
+            }
+        }
         TABS = {
             "favorites": {
                 "title": _("Favorites"),
@@ -75,7 +103,7 @@ class MainWindow(Adw.ApplicationWindow):
             "encoders": {
                 "title": _("Encoders"),
                 "icon-name": "folder-templates-symbolic",
-                "child": Gtk.Label(label="Encoders")
+                "child": UtilitiesView(ENCODERS_UTILITIES)
             },
             "formatters": {
                 "title": _("Formatters"),
@@ -109,7 +137,7 @@ class MainWindow(Adw.ApplicationWindow):
         self.tab_stack.set_visible_child_name(
             self.settings.get_string("last-tab"))
 
-        # Utility, favorites: start always first utility
+        # Utility, favorites start always with first utility
         if self.tab_stack.get_visible_child_name() != "favorites":
             self.tab_stack.get_visible_child().sidebar_stack.set_visible_child_name(
                 self.settings.get_string("last-utility"))
