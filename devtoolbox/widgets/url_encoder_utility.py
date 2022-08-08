@@ -15,24 +15,26 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+from urllib import parse
 from gettext import gettext as _
-from html import escape, unescape
 from gi.repository import Adw, Gtk, Gio, Gdk
 
 
-@Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/html_encoder_utility.ui")
-class HtmlEncoderUtility(Adw.Bin):
-    __gtype_name__ = "HtmlEncoderUtility"
+@Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/url_encoder_utility.ui")
+class UrlEncoderUtility(Adw.Bin):
+    __gtype_name__ = "UrlEncoderUtility"
 
     toast = Gtk.Template.Child()
     starred_btn = Gtk.Template.Child()
-    encode_direction_toggle = Gtk.Template.Child()
+    direction_encode = Gtk.Template.Child()
+    direction_decode = Gtk.Template.Child()
     input_textview = Gtk.Template.Child()
     output_textview = Gtk.Template.Child()
     open_btn = Gtk.Template.Child()
     paste_btn = Gtk.Template.Child()
     copy_btn = Gtk.Template.Child()
     clear_btn = Gtk.Template.Child()
+    space_as_plus_toggle = Gtk.Template.Child()
 
     settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
 
@@ -43,13 +45,16 @@ class HtmlEncoderUtility(Adw.Bin):
         fav_list = self.settings.get_strv("favorites")
         try:
             # check if present, throws error if not
-            fav_list.index("htmlencoder")
+            fav_list.index("urlencoder")
             self.starred_btn.set_icon_name("starred-symbolic")
         except ValueError:
             self.starred_btn.set_icon_name("non-starred-symbolic")
 
         # True: encode, False: decode
         self.direction = True
+
+        # True: space as '+', False: space as '%20'
+        self.space_as_plus = False
 
         # Signals
         self.open_btn.connect("clicked", self.on_open_clicked)
@@ -59,7 +64,9 @@ class HtmlEncoderUtility(Adw.Bin):
         self.starred_btn.connect("clicked", self.on_star_clicked)
         self.settings.connect("changed", self.on_settings_changed)
         self.input_textview.get_buffer().connect("changed", self.on_text_changed)
-        self.encode_direction_toggle.connect("toggled", self.on_direction_changed)
+        self.direction_encode.connect("toggled", self.on_direction_changed)
+        self.space_as_plus_toggle.connect(
+            "toggled", self.on_space_encoding_changed)
 
     def on_open_clicked(self, data):
         self._native = Gtk.FileChooserNative(
@@ -68,13 +75,6 @@ class HtmlEncoderUtility(Adw.Bin):
             accept_label="_Open",
             cancel_label="_Cancel"
         )
-
-        extensions = ["html", "htm"]
-        file_filter = Gtk.FileFilter()
-        for f in extensions:
-            file_filter.add_suffix(f)
-        file_filter.set_name(_("HTML Files"))
-        self._native.add_filter(file_filter)
 
         # Connect the "response" signal
         self._native.connect("response", self.on_open_response)
@@ -132,14 +132,14 @@ class HtmlEncoderUtility(Adw.Bin):
         fav_list = self.settings.get_strv("favorites")
         try:
             # check if present, throws error if not
-            fav_list.index("htmlencoder")
+            fav_list.index("urlencoder")
             self.starred_btn.set_icon_name("non-starred-symbolic")
-            fav_list.remove("htmlencoder")
+            fav_list.remove("urlencoder")
             self.settings.set_strv("favorites", fav_list)
             self.toast.add_toast(Adw.Toast(title=_("Removed from favorites!")))
         except ValueError:
             self.starred_btn.set_icon_name("starred-symbolic")
-            fav_list.append("htmlencoder")
+            fav_list.append("urlencoder")
             self.settings.set_strv("favorites", fav_list)
             self.toast.add_toast(Adw.Toast(title=_("Added to favorites!")))
 
@@ -148,7 +148,7 @@ class HtmlEncoderUtility(Adw.Bin):
         fav_list = self.settings.get_strv("favorites")
         try:
             # check if present, throws error if not
-            fav_list.index("htmlencoder")
+            fav_list.index("urlencoder")
             self.starred_btn.set_icon_name("starred-symbolic")
         except ValueError:
             self.starred_btn.set_icon_name("non-starred-symbolic")
@@ -157,7 +157,11 @@ class HtmlEncoderUtility(Adw.Bin):
         self.convert()
 
     def on_direction_changed(self, data):
-        self.direction = self.encode_direction_toggle.get_active()
+        self.direction = self.direction_encode.get_active()
+        self.convert()
+
+    def on_space_encoding_changed(self, data):
+        self.space_as_plus = self.space_as_plus_toggle.get_active()
         self.convert()
 
     def convert(self):
@@ -167,6 +171,10 @@ class HtmlEncoderUtility(Adw.Bin):
             input_buffer.get_start_iter(), input_buffer.get_end_iter(), False)
         # True: encode, False: decode
         if self.direction:
-            output_buffer.set_text(escape(input_text, quote=True))
+            # True: space as '+', False: space as '%20'
+            if self.space_as_plus:
+                output_buffer.set_text(parse.quote_plus(input_text))
+            else:
+                output_buffer.set_text(parse.quote(input_text))
         else:
-            output_buffer.set_text(unescape(input_text))
+            output_buffer.set_text(parse.unquote_plus(input_text))

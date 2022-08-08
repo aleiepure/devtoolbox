@@ -25,6 +25,7 @@ from devtoolbox.widgets.html_encoder_utility import HtmlEncoderUtility
 from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
 from devtoolbox.widgets.number_base_utility import NumberBaseUtility
 from devtoolbox.widgets.timestamp_utility import TimestampUtility
+from devtoolbox.widgets.url_encoder_utility import UrlEncoderUtility
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/main.ui")
@@ -71,7 +72,7 @@ class MainWindow(Adw.ApplicationWindow):
             "urlencoder": {
                 "title": _("URL"),
                 "icon-name": "link-symbolic",
-                "child": Gtk.Label(label="url")
+                "child": UrlEncoderUtility()
             },
             "base64encoder": {
                 "title": _("Base64"),

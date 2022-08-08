@@ -2,9 +2,8 @@
 <interface>
     <requires lib="gtk" version="4.0" />
     <requires lib="libadwaita" version="1.0" />
-    <template class="HtmlEncoderUtility" parent="AdwBin">
+    <template class="UrlEncoderUtility" parent="AdwBin">
         <child>
-
             <object class="AdwToastOverlay" id="toast">
                 <property name="child">
                     <object class="GtkScrolledWindow">
@@ -35,7 +34,7 @@
                                                 </child>
                                                 <child>
                                                     <object class="GtkLabel">
-                                                        <property name="label" translatable="yes">HTML Encoder &amp; Decoder</property>
+                                                        <property name="label" translatable="yes">URL Encoder &amp; Decoder</property>
                                                         <property name="halign">start</property>
                                                         <property name="margin-top">10</property>
                                                         <property name="margin-start">10</property>
@@ -50,7 +49,7 @@
                                                 </child>
                                                 <child>
                                                     <object class="GtkLabel">
-                                                        <property name="label" translatable="yes">Encode and decode special characters in HTML format</property>
+                                                        <property name="label" translatable="yes">Encode and decode special characters inside URLs</property>
                                                         <property name="halign">start</property>
                                                         <property name="margin-start">10</property>
                                                         <style>
@@ -90,16 +89,46 @@
                                                                 <property name="orientation">horizontal</property>
                                                                 <property name="valign">center</property>
                                                                 <child>
-                                                                    <object class="GtkToggleButton" id="encode_direction_toggle">
+                                                                    <object class="GtkToggleButton" id="direction_encode">
                                                                         <property name="active">true</property>
                                                                         <property name="label" translatable="yes">Encode</property>
                                                                     </object>
                                                                 </child>
                                                                 <child>
-                                                                    <object class="GtkToggleButton">
+                                                                    <object class="GtkToggleButton" id="direction_decode">
                                                                         <property name="active">false</property>
-                                                                        <property name="group">encode_direction_toggle</property>
+                                                                        <property name="group">direction_encode</property>
                                                                         <property name="label" translatable="yes">Decode</property>
+                                                                    </object>
+                                                                </child>
+                                                            </object>
+                                                        </child>
+                                                        
+                                                    </object>
+                                                </child>
+                                                <child>
+                                                    <object class="AdwActionRow">
+                                                        <property name="title" translatable="yes">Space encoding</property>
+                                                        <property name="subtitle" translatable="yes">Select the desired encoding for the space character (decoding not affected)</property>
+                                                        <property name="icon-name">spacebar-symbolic</property>
+                                                        <child>
+                                                            <object class="GtkBox">
+                                                                <style>
+                                                                    <class name="linked" />
+                                                                </style>
+                                                                <property name="orientation">horizontal</property>
+                                                                <property name="valign">center</property>
+                                                                <child>
+                                                                    <object class="GtkToggleButton" id="space_as_plus_toggle">
+                                                                        <property name="active">false</property>
+                                                                        <property name="label">+</property>
+                                                                    </object>
+                                                                </child>
+                                                                <child>
+                                                                    <object class="GtkToggleButton">
+                                                                        <property name="active">true</property>
+                                                                        <property name="group">space_as_plus_toggle</property>
+                                                                        <property name="label">%20</property>
                                                                     </object>
                                                                 </child>
                                                             </object>

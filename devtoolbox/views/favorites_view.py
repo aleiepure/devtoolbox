@@ -23,6 +23,7 @@ from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
 from devtoolbox.widgets.timestamp_utility import TimestampUtility
 from devtoolbox.widgets.number_base_utility import NumberBaseUtility
 from devtoolbox.widgets.cron_parser_utility import CronParserUtility
+from devtoolbox.widgets.url_encoder_utility import UrlEncoderUtility
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/empty_favorites.ui")
@@ -93,6 +94,11 @@ class FavoritesView(Adw.Bin):
                 "title": _("HTML"),
                 "icon-name": "code-symbolic",
                 "child": HtmlEncoderUtility()
+            },
+            "urlencoder": {
+                "title": _("URL"),
+                "icon-name": "link-symbolic",
+                "child": UrlEncoderUtility()
             },
         }
 
