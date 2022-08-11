@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Dev Toolbox
 Exec=devtoolbox
-Icon=org.example.App
+Icon=@icon@
 Terminal=false
 Type=Application
 Categories=GTK;

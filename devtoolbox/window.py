@@ -20,6 +20,7 @@ from gi.repository import Gtk, Adw, Gio
 from devtoolbox.views.favorites_view import FavoritesView
 
 from devtoolbox.views.utilities_view import UtilitiesView
+from devtoolbox.widgets.base64_encoder_utility import Base64EncoderUtility
 from devtoolbox.widgets.cron_parser_utility import CronParserUtility
 from devtoolbox.widgets.html_encoder_utility import HtmlEncoderUtility
 from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
@@ -77,7 +78,7 @@ class MainWindow(Adw.ApplicationWindow):
             "base64encoder": {
                 "title": _("Base64"),
                 "icon-name": "base64-symbolic",
-                "child": Gtk.Label(label="base64")
+                "child": Base64EncoderUtility()
             },
             "gzipencoder": {
                 "title": _("GZip"),

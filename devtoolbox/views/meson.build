@@ -3,7 +3,8 @@ pagesdir = join_paths(pkgdatadir, 'devtoolbox/pages')
 
 sources = [
   '__init__.py',
-  'utilities_view.py'
+  'utilities_view.py',
+  'favorites_view.py'
 ]
 
 install_data(sources, install_dir: pagesdir)

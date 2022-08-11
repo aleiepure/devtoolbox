@@ -10,8 +10,18 @@ python = import('python')
 gnome = import('gnome')
 i18n = import('i18n')
 
+# NAME_SUFFIX is used in the about dialog
+if get_option('profile') == 'development'
+  PROFILE = '.Devel'
+  NAME_SUFFIX = ' (Development)'
+else
+  PROFILE = ''
+  NAME_SUFFIX = ''
+endif
+
 # Constants
-project_id = 'me.iepure.devtoolbox'
+project_id = 'me.iepure.devtoolbox'.format(PROFILE)
+project_rdnn_name = 'me.iepure.devtoolbox'
 
 # Python installed and found
 message('Looking for python3...')
@@ -27,7 +37,7 @@ message('Looking for dependencies...')
 dependency('gtk4', version :'>=4.3.1')
 dependency('libadwaita-1', version :'>=1.2.alpha')
 
-
+# Paths
 python_dir = join_paths(get_option('prefix'), py_installation.get_install_dir())
 data_dir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
 bindir = join_paths(get_option('prefix'), get_option('bindir'))
@@ -58,4 +68,11 @@ configure_file(
 subdir('data')
 subdir('po')
 
-meson.add_install_script('meson/postinstall.py')
+
+gnome.post_install(
+    glib_compile_schemas: true,
+    gtk_update_icon_cache: true,
+    update_desktop_database: true
+)
+
+#meson.add_install_script('meson/postinstall.py')

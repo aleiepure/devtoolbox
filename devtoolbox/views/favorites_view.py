@@ -18,6 +18,7 @@
 from gettext import gettext as _
 from gi.repository import Gtk, Adw, Gio
 from devtoolbox.views.utilities_view import UtilitiesView
+from devtoolbox.widgets.base64_encoder_utility import Base64EncoderUtility
 from devtoolbox.widgets.html_encoder_utility import HtmlEncoderUtility
 from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
 from devtoolbox.widgets.timestamp_utility import TimestampUtility
@@ -99,6 +100,11 @@ class FavoritesView(Adw.Bin):
                 "title": _("URL"),
                 "icon-name": "link-symbolic",
                 "child": UrlEncoderUtility()
+            },
+            "base64encoder": {
+                "title": _("Base64"),
+                "icon-name": "base64-symbolic",
+                "child": Base64EncoderUtility()
             },
         }
 
