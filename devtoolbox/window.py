@@ -22,6 +22,7 @@ from devtoolbox.views.favorites_view import FavoritesView
 from devtoolbox.views.utilities_view import UtilitiesView
 from devtoolbox.widgets.base64_encoder_utility import Base64EncoderUtility
 from devtoolbox.widgets.cron_parser_utility import CronParserUtility
+from .widgets.gzip_encoder_utility import GZipEncoderUtility
 from devtoolbox.widgets.html_encoder_utility import HtmlEncoderUtility
 from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
 from devtoolbox.widgets.number_base_utility import NumberBaseUtility
@@ -83,7 +84,7 @@ class MainWindow(Adw.ApplicationWindow):
             "gzipencoder": {
                 "title": _("GZip"),
                 "icon-name": "file-zip-symbolic",
-                "child": Gtk.Label(label="gzip")
+                "child": GZipEncoderUtility()
             },
             "jwtencoder": {
                 "title": _("JWT"),
