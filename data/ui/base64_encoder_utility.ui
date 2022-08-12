@@ -293,7 +293,7 @@
                                                                                     <object class="GtkTextView" id="output_textview">
                                                                                         <property name="monospace">true</property>
                                                                                         <property name="editable">false</property>
-                                                                                        <property name="wrap-mode">word</property>
+                                                                                        <property name="wrap-mode">char</property>
                                                                                         <property name="height-request">200</property>
                                                                                         <property name="top-margin">12</property>
                                                                                         <property name="left-margin">12</property>

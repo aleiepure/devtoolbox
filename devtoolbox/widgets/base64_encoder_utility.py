@@ -107,6 +107,19 @@ class Base64EncoderUtility(Adw.Bin):
             cancel_label="_Cancel"
         )
 
+        all_file_filter = Gtk.FileFilter()
+        all_file_filter.add_pattern("*")
+        all_file_filter.set_name(_("All supported files"))
+        text_file_filter = Gtk.FileFilter()
+        text_file_filter.add_mime_type("text/*")
+        text_file_filter.set_name(_("Text files"))
+        image_file_filter = Gtk.FileFilter()
+        image_file_filter.add_pixbuf_formats()
+        image_file_filter.set_name(_("Image files"))
+        self._native.add_filter(all_file_filter)
+        self._native.add_filter(text_file_filter)
+        self._native.add_filter(image_file_filter)
+
         # Connect the "response" signal
         self._native.connect("response", self.on_open_response)
         self._native.show()
