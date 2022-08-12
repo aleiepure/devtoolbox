@@ -22,6 +22,7 @@ from devtoolbox.views.favorites_view import FavoritesView
 from devtoolbox.views.utilities_view import UtilitiesView
 from devtoolbox.widgets.base64_encoder_utility import Base64EncoderUtility
 from devtoolbox.widgets.cron_parser_utility import CronParserUtility
+from .widgets.jwt_decoder_utility import JWTDecoderUtility
 from .widgets.gzip_encoder_utility import GZipEncoderUtility
 from devtoolbox.widgets.html_encoder_utility import HtmlEncoderUtility
 from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
@@ -86,10 +87,10 @@ class MainWindow(Adw.ApplicationWindow):
                 "icon-name": "file-zip-symbolic",
                 "child": GZipEncoderUtility()
             },
-            "jwtencoder": {
+            "jwtdecoder": {
                 "title": _("JWT"),
                 "icon-name": "key-symbolic",
-                "child": Gtk.Label(label="jwt")
+                "child": JWTDecoderUtility()
             }
         }
         TABS = {

@@ -22,6 +22,7 @@ from devtoolbox.widgets.base64_encoder_utility import Base64EncoderUtility
 from devtoolbox.widgets.gzip_encoder_utility import GZipEncoderUtility
 from devtoolbox.widgets.html_encoder_utility import HtmlEncoderUtility
 from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
+from devtoolbox.widgets.jwt_decoder_utility import JWTDecoderUtility
 from devtoolbox.widgets.timestamp_utility import TimestampUtility
 from devtoolbox.widgets.number_base_utility import NumberBaseUtility
 from devtoolbox.widgets.cron_parser_utility import CronParserUtility
@@ -111,6 +112,11 @@ class FavoritesView(Adw.Bin):
                 "title": _("GZip"),
                 "icon-name": "file-zip-symbolic",
                 "child": GZipEncoderUtility()
+            },
+            "jwtdecoder": {
+                "title": _("JWT"),
+                "icon-name": "key-symbolic",
+                "child": JWTDecoderUtility()
             },
         }
 

@@ -98,6 +98,15 @@ modules:
           url: https://files.pythonhosted.org/packages/dd/be/6a103f9dce27a824231215085c7000899d5f051fbd9e4cf2ed9a2fba7701/croniter-1.3.5-py2.py3-none-any.whl
           sha256: 4f72faca42c00beb6e30907f1315145f43dfbe5ec0ad4ada24b4c0d57b86a33a
 
+    - name: python3-pyjwt
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "pyjwt" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/1c/fb/b82e9601b00d88cf8bbee1f39b855ae773f9d5bcbcedb3801b2f72460696/PyJWT-2.4.0-py3-none-any.whl
+          sha256: 72d1d253f32dbd4f5c88eaf1fdc62f3a19f676ccbadb9dbc5d07e951b2b26daf
+
     - name: devtoolbox
       builddir: true
       buildsystem: meson

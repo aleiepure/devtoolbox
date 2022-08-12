@@ -1,4 +1,4 @@
-# base64_utility.py
+# gzip_encoder_utility.py
 #
 # Copyright 2022 Alessandro Iepure
 #
@@ -18,7 +18,6 @@
 import base64
 from gettext import gettext as _
 import gzip
-import zlib
 from gi.repository import Gtk, Adw, Gdk, Gio, GLib
 
 
