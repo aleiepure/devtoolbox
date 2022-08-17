@@ -26,10 +26,8 @@ class TimestampUtility(Adw.Bin):
 
     toast = Gtk.Template.Child()
     starred_btn = Gtk.Template.Child()
-    convert_btn = Gtk.Template.Child()
     now_btn = Gtk.Template.Child()
     clear_btn = Gtk.Template.Child()
-    convertDate_btn = Gtk.Template.Child()
     nowDate_btn = Gtk.Template.Child()
     clearDate_btn = Gtk.Template.Child()
     timestamp_spinner = Gtk.Template.Child()
@@ -75,14 +73,20 @@ class TimestampUtility(Adw.Bin):
         # self.action_row.add_suffix(dropdown)
 
         # Connect button signals
-        self.convert_btn.connect("clicked", self.on_convert_clicked)
         self.clear_btn.connect("clicked", self.on_clear_clicked)
         self.now_btn.connect("clicked", self.on_now_clicked)
-        self.convertDate_btn.connect("clicked", self.on_convertDate_clicked)
         self.nowDate_btn.connect("clicked", self.on_nowDate_clicked)
         self.clearDate_btn.connect("clicked", self.on_clearDate_clicked)
         self.starred_btn.connect("clicked", self.on_star_clicked)
         self.settings.connect("changed", self.on_settings_changed)
+        self.timestamp_spinner.connect("value-changed", self.on_timestamp_changed)
+        self.year_spinner.connect("value-changed", self.on_date_changed)
+        self.month_spinner.connect("value-changed", self.on_date_changed)
+        self.day_spinner.connect("value-changed", self.on_date_changed)
+        self.hours_spinner.connect("value-changed", self.on_date_changed)        
+        self.minutes_spinner.connect("value-changed", self.on_date_changed)        
+        self.seconds_spinner.connect("value-changed", self.on_date_changed)        
+        
 
     def on_settings_changed(self, key, data):
         # Favorites button icon
@@ -107,7 +111,7 @@ class TimestampUtility(Adw.Bin):
             self.settings.set_strv("favorites", fav_list)
             self.toast.add_toast(Adw.Toast(title=_("Added to favorites!")))
 
-    def on_convert_clicked(self, widget):
+    def on_timestamp_changed(self, data):
         time = datetime.fromtimestamp(self.timestamp_spinner.get_value())
         self.year_spinner.set_value(time.year)
         self.month_spinner.set_value(time.month)
@@ -116,13 +120,13 @@ class TimestampUtility(Adw.Bin):
         self.minutes_spinner.set_value(time.minute)
         self.seconds_spinner.set_value(time.second)
 
-    def on_clear_clicked(self, widget):
+    def on_clear_clicked(self, data):
         self.timestamp_spinner.set_value(0)
 
-    def on_now_clicked(self, widget):
+    def on_now_clicked(self, data):
         self.timestamp_spinner.set_value(datetime.now().timestamp())
 
-    def on_convertDate_clicked(self, widget):
+    def on_date_changed(self, data):
         year = int(self.year_spinner.get_value())
         month = int(self.month_spinner.get_value())
         day = int(self.day_spinner.get_value())
@@ -131,7 +135,7 @@ class TimestampUtility(Adw.Bin):
         second = int(self.seconds_spinner.get_value())
         self.timestamp_spinner.set_value(datetime(year, month, day, hour, minute, second).timestamp())
 
-    def on_clearDate_clicked(self, widget):
+    def on_clearDate_clicked(self, data):
         self.year_spinner.set_value(1970)
         self.month_spinner.set_value(1)
         self.day_spinner.set_value(1)
@@ -139,7 +143,7 @@ class TimestampUtility(Adw.Bin):
         self.minutes_spinner.set_value(0)
         self.seconds_spinner.set_value(0)
 
-    def on_nowDate_clicked(self, widget):
+    def on_nowDate_clicked(self, data):
         current_time = datetime.now()
         self.year_spinner.set_value(current_time.year)
         self.month_spinner.set_value(current_time.month)

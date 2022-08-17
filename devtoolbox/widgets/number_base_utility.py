@@ -19,6 +19,8 @@ from gettext import gettext as _
 from gi.repository import Gtk, Adw, Gio
 from enum import Enum
 
+from devtoolbox.service.number_base import Bases, NumberBase
+
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/number_base_utility.ui")
 class NumberBaseUtility(Adw.Bin):
@@ -91,58 +93,59 @@ class NumberBaseUtility(Adw.Bin):
         self._convert(Bases.BINARY)
 
     def _convert(self, input_base):
-        decimal_buffer = self.decimal.get_buffer()
-        octal_buffer = self.octal.get_buffer()
-        hex_buffer = self.hex.get_buffer()
-        binary_buffer = self.binary.get_buffer()
-
         self.binary.remove_css_class("border-red")
         self.octal.remove_css_class("border-red")
         self.decimal.remove_css_class("border-red")
         self.hex.remove_css_class("border-red")
 
+        decimal_buffer = self.decimal.get_buffer()
+        octal_buffer = self.octal.get_buffer()
+        hex_buffer = self.hex.get_buffer()
+        binary_buffer = self.binary.get_buffer()
+
+        result = False
+        numbers = []
+
         if input_base == Bases.BINARY:
-            try:
-                decimal_num = int(
-                    binary_buffer.get_text(), Bases.BINARY.value)
-            except ValueError:
+            if NumberBase.is_binary(binary_buffer.get_text()):
+                result, *numbers = NumberBase.convert(binary_buffer.get_text(), input_base)
+            else:
                 self.binary.add_css_class("border-red")
                 return
+
         if input_base == Bases.OCTAL:
-            try:
-                decimal_num = int(
-                    octal_buffer.get_text(), Bases.OCTAL.value)
-            except ValueError:
+            if NumberBase.is_octal(octal_buffer.get_text()):
+                result, *numbers = NumberBase.convert(octal_buffer.get_text(), input_base)
+            else:
                 self.octal.add_css_class("border-red")
                 return
+
         if input_base == Bases.DECIMAL:
-            try:
-                decimal_num = int(
-                    decimal_buffer.get_text(), Bases.DECIMAL.value)
-            except ValueError:
+            if NumberBase.is_decimal(decimal_buffer.get_text()):
+                result, *numbers = NumberBase.convert(decimal_buffer.get_text(), input_base)
+            else:
                 self.decimal.add_css_class("border-red")
                 return
+
         if input_base == Bases.HEX:
-            try:
-                decimal_num = int(hex_buffer.get_text(), Bases.HEX.value)
-            except ValueError:
+            if NumberBase.is_hexadecimal(hex_buffer.get_text()):
+                result, *numbers = NumberBase.convert(hex_buffer.get_text(), input_base)
+            else:
                 self.hex.add_css_class("border-red")
                 return
-
-        octal_num = oct(decimal_num).replace("0o", "")
-        hex_num = hex(decimal_num).replace("0x", "").upper()
-        binary_num = bin(decimal_num).replace("0b", "")
 
         # Block signal to prevent infinite recursion
         self.decimal.handler_block(self.decimal_handler_id)
         self.octal.handler_block(self.octal_handler_id)
         self.hex.handler_block(self.hex_handler_id)
         self.binary.handler_block(self.binary_handler_id)
-
-        decimal_buffer.set_text(str(decimal_num), len(str(decimal_num)))
-        octal_buffer.set_text(octal_num, len(octal_num))
-        hex_buffer.set_text(hex_num, len(hex_num))
-        binary_buffer.set_text(binary_num, len(binary_num))
+        
+        # Display result
+        if result:
+            binary_buffer.set_text(numbers[0], -1)
+            octal_buffer.set_text(numbers[1], -1)
+            decimal_buffer.set_text(numbers[2], -1)
+            hex_buffer.set_text(numbers[3], -1)
 
         # Move cursor at the end
         self.decimal.set_position(-1)
@@ -155,10 +158,3 @@ class NumberBaseUtility(Adw.Bin):
         self.octal.handler_unblock(self.octal_handler_id)
         self.hex.handler_unblock(self.hex_handler_id)
         self.binary.handler_unblock(self.binary_handler_id)
-
-
-class Bases(Enum):
-    BINARY = 2
-    OCTAL = 8
-    DECIMAL = 10
-    HEX = 16

@@ -3,6 +3,7 @@ moduledir = join_paths(pkgdatadir, 'devtoolbox')
 
 subdir('views')
 subdir('widgets')
+subdir('service')
 
 sources = [
   '__init__.py',

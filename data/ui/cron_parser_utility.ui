@@ -109,7 +109,6 @@
                                                                 <property name="text">%c</property>
                                                                 <style>
                                                                     <class name="view" />
-                                                                    <class name="frame" />
                                                                     <class name="rounded-border" />
                                                                     <class name="padding-left-8" />
                                                                 </style>
@@ -188,7 +187,6 @@
                                                                         <property name="height-request">30</property>
                                                                         <style>
                                                                             <class name="view" />
-                                                                            <class name="frame" />
                                                                             <class name="rounded-border" />
                                                                             <class name="padding-left-8" />
                                                                         </style>

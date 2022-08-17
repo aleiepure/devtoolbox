@@ -78,28 +78,52 @@
                                         <child>
                                             <object class="AdwPreferencesGroup">
                                                 <child>
-                                                    <object class="AdwComboRow" id="direction_combo">
+                                                    <object class="AdwActionRow">
                                                         <property name="title" translatable="yes">Direction</property>
                                                         <property name="subtitle" translatable="yes">Specify what format is the input and the output</property>
                                                         <property name="icon-name">right-left-symbolic</property>
-                                                        <property name="model">
-                                                            <object class="GtkStringList" id="direction_combo_items">
-                                                                <items>
-                                                                    <item translatable="no">JSON ⟶ YAML</item>
-                                                                    <item translatable="no">YAML ⟶ JSON</item>
-                                                                </items>
+                                                        <child type="suffix">
+                                                            <object class="GtkBox">
+                                                                <style>
+                                                                    <class name="linked" />
+                                                                </style>
+                                                                <property name="orientation">horizontal</property>
+                                                                <property name="valign">center</property>
+                                                                <child>
+                                                                    <object class="GtkToggleButton" id="direction_toggle">
+                                                                        <property name="active">true</property>
+                                                                        <property name="label">JSON → YAML</property>
+                                                                    </object>
+                                                                </child>
+                                                                <child>
+                                                                    <object class="GtkToggleButton">
+                                                                        <property name="active">false</property>
+                                                                        <property name="group">direction_toggle</property>
+                                                                        <property name="label" translatable="yes">YAML → JSON</property>
+                                                                    </object>
+                                                                </child>
                                                             </object>
-                                                        </property>
+                                                        </child>
                                                     </object>
                                                 </child>
                                                 <child>
-                                                    <object class="AdwComboRow" id="indents_combo">
+                                                    <object class="AdwActionRow">
                                                         <property name="title" translatable="yes">Indentations</property>
                                                         <property name="subtitle" translatable="yes">Number of spaces used for indenting the code</property>
                                                         <property name="icon-name">spacebar-symbolic</property>
-                                                        <property name="model">
-                                                            <object class="GtkStringList" id="indents_combo_items" />
-                                                        </property>
+                                                        <child type="suffix">
+                                                            <object class="GtkSpinButton" id="indents_spinner">
+                                                                <property name="valign">center</property>
+                                                                <property name="adjustment">
+                                                                    <object class="GtkAdjustment">
+                                                                        <property name="lower">2</property>
+                                                                        <property name="upper">8</property>
+                                                                        <property name="step-increment">2</property>
+                                                                        <property name="value">4</property>
+                                                                    </object>
+                                                                </property>
+                                                            </object>
+                                                        </child>
                                                     </object>
                                                 </child>
                                             </object>
@@ -140,22 +164,6 @@
                                                                                 <property name="orientation">horizontal</property>
                                                                                 <property name="halign">end</property>
                                                                                 <property name="hexpand">true</property>
-                                                                                <child>
-                                                                                    <object class="GtkButton" id="convert_btn">
-                                                                                        <property name="label" translatable="yes">Convert</property>
-                                                                                        <property name="valign">center</property>
-                                                                                        <style>
-                                                                                            <class name="suggested-action" />
-                                                                                        </style>
-                                                                                    </object>
-                                                                                </child>
-                                                                                <child>
-                                                                                    <object class="GtkSeparator">
-                                                                                        <style>
-                                                                                            <class name="spacer" />
-                                                                                        </style>
-                                                                                    </object>
-                                                                                </child>
                                                                                 <child>
                                                                                     <object class="GtkBox">
                                                                                         <property name="orientation">horizontal</property>

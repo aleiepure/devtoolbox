@@ -119,22 +119,6 @@
                                                                                 <property name="halign">end</property>
                                                                                 <property name="hexpand">true</property>
                                                                                 <child>
-                                                                                    <object class="GtkButton" id="convert_btn">
-                                                                                        <property name="label" translatable="yes">Convert</property>
-                                                                                        <property name="valign">center</property>
-                                                                                        <style>
-                                                                                            <class name="suggested-action" />
-                                                                                        </style>
-                                                                                    </object>
-                                                                                </child>
-                                                                                <child>
-                                                                                    <object class="GtkSeparator">
-                                                                                        <style>
-                                                                                            <class name="spacer" />
-                                                                                        </style>
-                                                                                    </object>
-                                                                                </child>
-                                                                                <child>
                                                                                     <object class="GtkBox">
                                                                                         <property name="orientation">horizontal</property>
                                                                                         <style>
@@ -220,22 +204,6 @@
                                                                                 <property name="orientation">horizontal</property>
                                                                                 <property name="halign">end</property>
                                                                                 <property name="hexpand">true</property>
-                                                                                <child>
-                                                                                    <object class="GtkButton" id="convertDate_btn">
-                                                                                        <property name="label" translatable="yes">Convert</property>
-                                                                                        <property name="valign">center</property>
-                                                                                        <style>
-                                                                                            <class name="suggested-action" />
-                                                                                        </style>
-                                                                                    </object>
-                                                                                </child>
-                                                                                <child>
-                                                                                    <object class="GtkSeparator">
-                                                                                        <style>
-                                                                                            <class name="spacer" />
-                                                                                        </style>
-                                                                                    </object>
-                                                                                </child>
                                                                                 <child>
                                                                                     <object class="GtkBox">
                                                                                         <property name="orientation">horizontal</property>

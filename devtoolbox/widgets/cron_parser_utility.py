@@ -16,9 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from gi.repository import Gtk, Adw, Gdk, Gio
-from datetime import datetime
-from dateutil import parser
-from crontab import CronTab, CronSlices
+from ..service.cron_parser import CronParser
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/cron_parser_utility.ui")
@@ -44,7 +42,8 @@ class CronParserUtility(Adw.Bin):
         # Favorites button icon
         fav_list = self.settings.get_strv("favorites")
         try:
-            fav_list.index("cronparser")  # check if present, throws error if not
+            # check if present, throws error if not
+            fav_list.index("cronparser")
             self.starred_btn.set_icon_name("starred-symbolic")
         except ValueError:
             self.starred_btn.set_icon_name("non-starred-symbolic")
@@ -64,7 +63,8 @@ class CronParserUtility(Adw.Bin):
         # Favorites button icon
         fav_list = self.settings.get_strv("favorites")
         try:
-            fav_list.index("cronparser") # check if present, throws error if not
+            # check if present, throws error if not
+            fav_list.index("cronparser")
             self.starred_btn.set_icon_name("starred-symbolic")
         except ValueError:
             self.starred_btn.set_icon_name("non-starred-symbolic")
@@ -72,7 +72,8 @@ class CronParserUtility(Adw.Bin):
     def on_star_clicked(self, data):
         fav_list = self.settings.get_strv("favorites")
         try:
-            fav_list.index("cronparser")  # check if present, throws error if not
+            # check if present, throws error if not
+            fav_list.index("cronparser")
             self.starred_btn.set_icon_name("non-starred-symbolic")
             fav_list.remove("cronparser")
             self.settings.set_strv("favorites", fav_list)
@@ -88,18 +89,21 @@ class CronParserUtility(Adw.Bin):
 
     def on_format_change(self, data):
         self.format_text.remove_css_class("border-red")
-        try:
-            parser.parse(datetime.now().strftime(self.format_text.get_text()))
+        if CronParser.is_date_format_valid(self.format_text.get_text()):
             self._generate_dates()
-        except parser._parser.ParserError:
+        else:
             self.format_text.add_css_class("border-red")
 
     def on_expression_change(self, data):
         self.expression_text.remove_css_class("border-red")
-        if not CronSlices.is_valid(self.expression_text.get_text()):
-            self.expression_text.add_css_class("border-red")
-        self._generate_dates()
 
+        expression = self.expression_text.get_text()
+        if len(expression) > 0:
+            if CronParser.is_expression_valid(expression):
+                self._generate_dates()
+            else:
+                self.expression_text.add_css_class("border-red")
+        
     def on_paste_btn_clicked(self, data):
         self.expression_text.emit("paste-clipboard")
 
@@ -118,10 +122,10 @@ class CronParserUtility(Adw.Bin):
         clipboard.set(text)
 
     def _generate_dates(self):
-        cron = CronTab()
-        job = cron.new(command='/usr/bin/echo')
-        schedule = job.schedule()
-        string = ""
-        for _ in range(0, int(self.dates_spinner.get_value())):
-            string += schedule.get_next().strftime(self.format_text.get_text()) + "\n"
-        self.dates_text.get_buffer().set_text(string)
+        self.dates_text.get_buffer().set_text(
+            CronParser.generate_dates(
+                self.expression_text.get_text(),
+                self.format_text.get_text(),
+                int(self.dates_spinner.get_value())
+            )
+        )

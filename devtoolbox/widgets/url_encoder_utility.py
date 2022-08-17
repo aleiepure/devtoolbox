@@ -1,4 +1,4 @@
-# window.py
+# url_encoder_utility.py
 #
 # Copyright 2022 Alessandro Iepure
 #
@@ -15,9 +15,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from urllib import parse
 from gettext import gettext as _
 from gi.repository import Adw, Gtk, Gio, Gdk
+
+from ..service.url_encoder import URLEncoder
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/url_encoder_utility.ui")
@@ -76,6 +77,12 @@ class UrlEncoderUtility(Adw.Bin):
             cancel_label="_Cancel"
         )
 
+        # File filters
+        file_filter = Gtk.FileFilter()
+        file_filter.add_mime_type("text/*")
+        file_filter.set_name(_("Text files"))
+        self._native.add_filter(file_filter)
+
         # Connect the "response" signal
         self._native.connect("response", self.on_open_response)
         self._native.show()
@@ -92,22 +99,30 @@ class UrlEncoderUtility(Adw.Bin):
 
     def open_file_complete(self, file, result):
         contents = file.load_contents_finish(result)
+
+        # Check if file is valid
         if not contents[0]:
             path = file.peek_path()
-            print(f"Unable to open {path}: {contents[1]}")
+            self.toast.add_toast(
+                Adw.Toast(title=_(f"Error opening file {path}")))
             return
 
-        try:
-            text = contents[1].decode('utf-8')
-        except UnicodeError:
+        # Determine if file is text
+        if URLEncoder.is_text(contents[1]):
+            text = contents[1].decode("utf-8")
+        else:
             path = file.peek_path()
-            print(
-                f"Unable to load the contents of {path}: the file is not encoded with UTF-8")
+            self.toast.add_toast(
+                Adw.Toast(title=_(f"{path}: Not a supported text file")))
             return
 
+        # Insert in textview
         buffer = self.input_textview.get_buffer()
         buffer.set_text(text)
         buffer.place_cursor(buffer.get_end_iter())
+
+        # Call convertion function
+        self._convert()
 
     def on_paste_clicked(self, widget):
         buffer = self.input_textview.get_buffer()
@@ -154,27 +169,24 @@ class UrlEncoderUtility(Adw.Bin):
             self.starred_btn.set_icon_name("non-starred-symbolic")
 
     def on_text_changed(self, data):
-        self.convert()
+        self._convert()
 
     def on_direction_changed(self, data):
         self.direction = self.direction_encode.get_active()
-        self.convert()
+        self._convert()
 
     def on_space_encoding_changed(self, data):
         self.space_as_plus = self.space_as_plus_toggle.get_active()
-        self.convert()
+        self._convert()
 
-    def convert(self):
+    def _convert(self):
         input_buffer = self.input_textview.get_buffer()
         output_buffer = self.output_textview.get_buffer()
         input_text = input_buffer.get_text(
             input_buffer.get_start_iter(), input_buffer.get_end_iter(), False)
         # True: encode, False: decode
         if self.direction:
-            # True: space as '+', False: space as '%20'
-            if self.space_as_plus:
-                output_buffer.set_text(parse.quote_plus(input_text))
-            else:
-                output_buffer.set_text(parse.quote(input_text))
+            output_buffer.set_text(URLEncoder.encode(
+                input_text, self.space_as_plus))
         else:
-            output_buffer.set_text(parse.unquote_plus(input_text))
+            output_buffer.set_text(URLEncoder.decode(input_text))

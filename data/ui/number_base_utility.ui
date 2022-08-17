@@ -89,7 +89,6 @@
                                                                             <class name="view" />
                                                                             <class name="rounded-border"/>
                                                                             <class name="padding-left-8"/>
-                                                                            <class name="frame"/>
                                                                         </style>
                                                                     </object>
                                                                 </child>
@@ -113,7 +112,6 @@
                                                                             <class name="view" />
                                                                             <class name="rounded-border"/>
                                                                             <class name="padding-left-8"/>
-                                                                            <class name="frame"/>
                                                                         </style>
                                                                     </object>
                                                                 </child>
@@ -137,7 +135,6 @@
                                                                             <class name="view" />
                                                                             <class name="rounded-border"/>
                                                                             <class name="padding-left-8"/>
-                                                                            <class name="frame"/>
                                                                         </style>
                                                                     </object>
                                                                 </child>
@@ -161,7 +158,6 @@
                                                                             <class name="view" />
                                                                             <class name="rounded-border"/>
                                                                             <class name="padding-left-8"/>
-                                                                            <class name="frame"/>
                                                                         </style>
                                                                     </object>
                                                                 </child>

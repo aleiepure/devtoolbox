@@ -1,4 +1,4 @@
-# window.py
+# html_encoder_utility.py
 #
 # Copyright 2022 Alessandro Iepure
 #
@@ -16,8 +16,9 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from gettext import gettext as _
-from html import escape, unescape
 from gi.repository import Adw, Gtk, Gio, Gdk
+
+from ..service.html_encoder import HTMLEncoder
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/html_encoder_utility.ui")
@@ -68,12 +69,11 @@ class HtmlEncoderUtility(Adw.Bin):
             accept_label="_Open",
             cancel_label="_Cancel"
         )
-
-        extensions = ["html", "htm"]
+        
+        # File filters
         file_filter = Gtk.FileFilter()
-        for f in extensions:
-            file_filter.add_suffix(f)
-        file_filter.set_name(_("HTML Files"))
+        file_filter.add_mime_type("text/*")
+        file_filter.set_name(_("Text files"))
         self._native.add_filter(file_filter)
 
         # Connect the "response" signal
@@ -92,22 +92,30 @@ class HtmlEncoderUtility(Adw.Bin):
 
     def open_file_complete(self, file, result):
         contents = file.load_contents_finish(result)
+        
+        # Check if file is valid
         if not contents[0]:
             path = file.peek_path()
-            print(f"Unable to open {path}: {contents[1]}")
+            self.toast.add_toast(
+                Adw.Toast(title=_(f"Error opening file {path}")))
             return
 
-        try:
-            text = contents[1].decode('utf-8')
-        except UnicodeError:
+        # Determine if file is text
+        if HTMLEncoder.is_text(contents[1]):
+            text = contents[1].decode("utf-8")
+        else:
             path = file.peek_path()
-            print(
-                f"Unable to load the contents of {path}: the file is not encoded with UTF-8")
+            self.toast.add_toast(
+                Adw.Toast(title=_(f"{path}: Not a supported text file")))
             return
 
+        # Insert in textview
         buffer = self.input_textview.get_buffer()
         buffer.set_text(text)
         buffer.place_cursor(buffer.get_end_iter())
+
+        # Call convertion function
+        self._convert()
 
     def on_paste_clicked(self, widget):
         buffer = self.input_textview.get_buffer()
@@ -165,8 +173,9 @@ class HtmlEncoderUtility(Adw.Bin):
         output_buffer = self.output_textview.get_buffer()
         input_text = input_buffer.get_text(
             input_buffer.get_start_iter(), input_buffer.get_end_iter(), False)
+        
         # True: encode, False: decode
         if self.direction:
-            output_buffer.set_text(escape(input_text, quote=True))
+            output_buffer.set_text(HTMLEncoder.escape(input_text))
         else:
-            output_buffer.set_text(unescape(input_text))
+            output_buffer.set_text(HTMLEncoder.unescape(input_text))

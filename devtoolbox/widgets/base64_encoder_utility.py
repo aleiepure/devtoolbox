@@ -1,4 +1,4 @@
-# base64_utility.py
+# base64_encoder_utility.py
 #
 # Copyright 2022 Alessandro Iepure
 #
@@ -17,9 +17,10 @@
 
 import base64
 import binascii
-from curses.textpad import Textbox
 from gettext import gettext as _
 from gi.repository import Gtk, Adw, Gdk, Gio, GLib
+
+from ..service.base64_encoder import Base64Encoder
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/base64_encoder_utility.ui")
@@ -107,15 +108,20 @@ class Base64EncoderUtility(Adw.Bin):
             cancel_label="_Cancel"
         )
 
+        # File filters
         all_file_filter = Gtk.FileFilter()
-        all_file_filter.add_pattern("*")
+        all_file_filter.add_mime_type("text/*")
+        all_file_filter.add_pixbuf_formats()
         all_file_filter.set_name(_("All supported files"))
+
         text_file_filter = Gtk.FileFilter()
         text_file_filter.add_mime_type("text/*")
         text_file_filter.set_name(_("Text files"))
+
         image_file_filter = Gtk.FileFilter()
         image_file_filter.add_pixbuf_formats()
         image_file_filter.set_name(_("Image files"))
+
         self._native.add_filter(all_file_filter)
         self._native.add_filter(text_file_filter)
         self._native.add_filter(image_file_filter)
@@ -137,19 +143,27 @@ class Base64EncoderUtility(Adw.Bin):
     def open_file_complete(self, file, result):
         contents = file.load_contents_finish(result)
 
+        # Check if file is valid
         if not contents[0]:
             path = file.peek_path()
             print(f"Unable to open {path}: {contents[1]}")
             return
 
-        try:
-            text = contents[1].decode('utf-8')
+        # Determine file type
+        if Base64Encoder.is_text(contents[1]):
             self.input_is_text = True
-        except UnicodeError:
-            texture = Gdk.Texture.new_from_bytes(GLib.Bytes(contents[1]))
-            self.image_bytes = contents[1]
+            text = contents[1].decode('utf-8')
+        elif Base64Encoder.is_image(contents[1]):
             self.input_is_text = False
+            self.image_bytes = contents[1]
+            texture = Gdk.Texture.new_from_bytes(GLib.Bytes(contents[1]))
+        else:
+            path = file.peek_path()
+            self.toast.add_toast(
+                Adw.Toast(title=_(f"{path}: Not a supported text file")))
+            return
 
+        # Display file as text or image
         if self.input_is_text:
             self.input_type_stack.set_visible_child_name("text")
             buffer = self.input_textview.get_buffer()
@@ -159,6 +173,7 @@ class Base64EncoderUtility(Adw.Bin):
             self.input_type_stack.set_visible_child_name("image")
             self.input_image.set_paintable(texture)
 
+        # Call convertion
         self._convert()
 
     def on_paste_clicked(self, widget):
@@ -170,11 +185,16 @@ class Base64EncoderUtility(Adw.Bin):
     def on_clear_clicked(self, widget):
         self.input_type_stack.set_visible_child_name("text")
         self.output_type_stack.set_visible_child_name("text")
+
         buffer = self.input_textview.get_buffer()
         buffer.set_text("")
         buffer = self.output_textview.get_buffer()
         buffer.set_text("")
+        
+        self.image_bytes = []
+
         self.input_is_text = True
+        
         self.input_image.remove_css_class("border-red")
         self.input_textview.remove_css_class("border-red")
         self.copy_btn.set_sensitive(True)
@@ -193,37 +213,37 @@ class Base64EncoderUtility(Adw.Bin):
     def _convert(self):
         self.input_image.remove_css_class("border-red")
         self.copy_btn.set_sensitive(True)
+
+        input_buffer = self.input_textview.get_buffer()
+        input_text = input_buffer.get_text(
+            input_buffer.get_start_iter(), input_buffer.get_end_iter(), False)
+        output_buffer = self.output_textview.get_buffer()
+
         # True: encode, False: decode
         if self.encode_direction:
-            output_buffer = self.output_textview.get_buffer()
-            if self.input_is_text:
-                input_buffer = self.input_textview.get_buffer()
-                input_text = input_buffer.get_text(
-                    input_buffer.get_start_iter(), input_buffer.get_end_iter(), False)
-                output_buffer.set_text(base64.b64encode(
-                    input_text.encode("utf-8")).decode("utf-8"))
+            if len(input_text) > 0 and self.input_is_text:
+                output_buffer.set_text(Base64Encoder.encode_text(input_text))
             else:
-                output_buffer.set_text(base64.b64encode(
-                    self.image_bytes).decode("utf-8"))
+                if len(self.image_bytes) > 0:
+                    output_buffer.set_text(
+                        Base64Encoder.encode_image(self.image_bytes))
         else:
             if self.input_is_text:
-                input_buffer = self.input_textview.get_buffer()
-                input_text = input_buffer.get_text(
-                    input_buffer.get_start_iter(), input_buffer.get_end_iter(), False)
-                output_buffer = self.output_textview.get_buffer()
-                try: 
-                    decoded_data = base64.b64decode(input_text.encode("utf-8")).decode("utf-8")
-                    output_buffer.set_text(decoded_data)
-                    self.output_type_stack.set_visible_child_name("text")
-                except UnicodeDecodeError:
-                    decoded_data = base64.b64decode(input_text.encode("utf-8"))
-                    texture = Gdk.Texture.new_from_bytes(GLib.Bytes(decoded_data))
-                    self.output_image.set_paintable(texture)
-                    self.output_type_stack.set_visible_child_name("image")
-                    self.copy_btn.set_sensitive(False)
-                except binascii.Error:
+                result, decoded_data = Base64Encoder.decode(input_text)
+                if result:
+                    if Base64Encoder.is_text(decoded_data):
+                        output_buffer.set_text(decoded_data.decode("utf-8"))
+                        self.output_type_stack.set_visible_child_name("text")
+                    elif Base64Encoder.is_image(decoded_data):
+                        texture = Gdk.Texture.new_from_bytes(
+                            GLib.Bytes(decoded_data))
+                        self.output_image.set_paintable(texture)
+                        self.output_type_stack.set_visible_child_name("image")
+                        self.copy_btn.set_sensitive(False)
+                else:
                     self.input_textview.add_css_class("border-red")
+
             else:
-                self.toast.add_toast(Adw.Toast(title=_("Cannot decode from an image")))
+                self.toast.add_toast(
+                    Adw.Toast(title=_("Cannot decode from an image")))
                 self.input_image.add_css_class("border-red")
-                
