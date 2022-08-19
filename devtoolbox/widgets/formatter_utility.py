@@ -1,4 +1,4 @@
-# json2yaml_utility.py
+# formatter_utility.py
 #
 # Copyright 2022 Alessandro Iepure
 #
@@ -15,70 +15,64 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from ..service.json2yaml import JSON2YAML
 from gettext import gettext as _
-from gi.repository import Gtk, Adw, Gdk, Gio
+from gi.repository import Gtk, Adw, Gio, Gdk
 
 
-@Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/json2yaml_utility.ui")
-class Json2YamlUtility(Adw.Bin):
-    __gtype_name__ = "Json2YamlUtility"
+@Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/formatter_utility.ui")
+class FormatterUtility(Adw.Bin):
+    __gtype_name__ = "FormatterUtility"
 
+    title = Gtk.Template.Child()
+    subtitle = Gtk.Template.Child()
     starred_btn = Gtk.Template.Child()
+    toast = Gtk.Template.Child()
+    indents_spinner = Gtk.Template.Child()
+    format_btn = Gtk.Template.Child()
     open_btn = Gtk.Template.Child()
+    copy_btn = Gtk.Template.Child()
     paste_btn = Gtk.Template.Child()
     clear_btn = Gtk.Template.Child()
-    copy_btn = Gtk.Template.Child()
     input_textview = Gtk.Template.Child()
-    output_textview = Gtk.Template.Child()
-    toast = Gtk.Template.Child()
-    direction_toggle = Gtk.Template.Child()
-    indents_spinner = Gtk.Template.Child()
 
     settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
 
-    # True: JSON to YAML, False: YAML to JSON
-    direction = True
-
-    def __init__(self):
+    def __init__(self, formatter):
         super().__init__()
+
+        self.formatter = formatter
+
+        # Set titles
+        self.title.set_label(self.title.get_label().replace(
+            "Placeholder", self.formatter.get_name()))
+        self.subtitle.set_label(self.subtitle.get_label().replace(
+            "Placeholder", self.formatter.get_name()))
 
         # Favorites button icon
         fav_list = self.settings.get_strv("favorites")
         try:
             # check if present, throws error if not
-            fav_list.index("json2yaml")
+            fav_list.index(self.formatter.get_settings_name())
             self.starred_btn.set_icon_name("starred-symbolic")
         except ValueError:
             self.starred_btn.set_icon_name("non-starred-symbolic")
 
         # Signals
         self.open_btn.connect("clicked", self.on_open_clicked)
+        self.copy_btn.connect("clicked", self.on_copy_clicked)
         self.paste_btn.connect("clicked", self.on_paste_clicked)
         self.clear_btn.connect("clicked", self.on_clear_clicked)
-        self.copy_btn.connect("clicked", self.on_copy_clicked)
         self.starred_btn.connect("clicked", self.on_star_clicked)
         self.settings.connect("changed", self.on_settings_changed)
-        self.direction_toggle.connect("toggled", self.on_direction_toggled)
-        self.indents_spinner.connect("value-changed", self.on_indents_changed)
-        self.input_textview.get_buffer().connect("changed", self.on_input_changed)
-
-    def on_direction_toggled(self, data):
-        self.direction = self.direction_toggle.get_active()
-        self._convert()
-
-    def on_indents_changed(self, data):
-        self._convert()
-
-    def on_input_changed(self, data):
-        self._convert()
-
+        self.format_btn.connect("clicked", self.on_format_clicked)
+        self.input_textview.get_buffer().connect("changed", self.on_text_changed)
+    
     def on_settings_changed(self, key, data):
         # Favorites button icon
         fav_list = self.settings.get_strv("favorites")
         try:
             # check if present, throws error if not
-            fav_list.index("json2yaml")
+            fav_list.index(self.formatter.get_settings_name())
             self.starred_btn.set_icon_name("starred-symbolic")
         except ValueError:
             self.starred_btn.set_icon_name("non-starred-symbolic")
@@ -87,14 +81,14 @@ class Json2YamlUtility(Adw.Bin):
         fav_list = self.settings.get_strv("favorites")
         try:
             # check if present, throws error if not
-            fav_list.index("json2yaml")
+            fav_list.index(self.formatter.get_settings_name())
             self.starred_btn.set_icon_name("non-starred-symbolic")
-            fav_list.remove("json2yaml")
+            fav_list.remove(self.formatter.get_settings_name())
             self.settings.set_strv("favorites", fav_list)
             self.toast.add_toast(Adw.Toast(title=_("Removed from favorites!")))
         except ValueError:
             self.starred_btn.set_icon_name("starred-symbolic")
-            fav_list.append("json2yaml")
+            fav_list.append(self.formatter.get_settings_name())
             self.settings.set_strv("favorites", fav_list)
             self.toast.add_toast(Adw.Toast(title=_("Added to favorites!")))
 
@@ -107,11 +101,11 @@ class Json2YamlUtility(Adw.Bin):
             cancel_label="_Cancel"
         )
 
-        extensions = ["json", "yaml", "yml"]
+        # File filter
         file_filter = Gtk.FileFilter()
-        for f in extensions:
-            file_filter.add_suffix(f)
-        file_filter.set_name(_('JSON & YAML Files'))
+        for s in self.formatter.get_file_extensions():
+            file_filter.add_suffix(s)
+        file_filter.set_name(self.formatter.get_name() + " Files")
         self._native.add_filter(file_filter)
 
         # Connect the "response" signal
@@ -139,21 +133,18 @@ class Json2YamlUtility(Adw.Bin):
             return
 
         # Determine if file is text
-        if JSON2YAML.is_text(contents[1]):
+        if self.formatter.is_text(contents[1]):
             text = contents[1].decode("utf-8")
         else:
             path = file.peek_path()
             self.toast.add_toast(
-                Adw.Toast(title=_(f"{path}: Not a supported text file")))
+                Adw.Toast(title=_(f"{path}: Not a supported json file")))
             return
 
         # Insert in textview
         buffer = self.input_textview.get_buffer()
         buffer.set_text(text)
         buffer.place_cursor(buffer.get_end_iter())
-
-        # Call convertion function
-        self._convert()
 
     def on_paste_clicked(self, data):
         buffer = self.input_textview.get_buffer()
@@ -163,36 +154,26 @@ class Json2YamlUtility(Adw.Bin):
     def on_clear_clicked(self, data):
         buffer = self.input_textview.get_buffer()
         buffer.set_text("")
-        buffer = self.output_textview.get_buffer()
-        buffer.set_text("")
-        self.input_textview.remove_css_class("border-red")
 
     def on_copy_clicked(self, data):
-        buffer = self.output_textview.get_buffer()
-        start = buffer.get_start_iter()
-        end = buffer.get_end_iter()
-        text = buffer.get_text(start, end, False)
+        buffer = self.input_textview.get_buffer()
+        text = buffer.get_text(buffer.get_start_iter(), buffer.get_end_iter(), False)
         clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         clipboard.set(text)
 
-    def _convert(self):
-
+    def on_text_changed(self, data):
         self.input_textview.remove_css_class("border-red")
 
-        input_buffer = self.input_textview.get_buffer()
-        output_buffer = self.output_textview.get_buffer()
-        input_text = input_buffer.get_text(
-            input_buffer.get_start_iter(), input_buffer.get_end_iter(), False)
+    def on_format_clicked(self, data):
+
+        buffer = self.input_textview.get_buffer()
+        text = buffer.get_text(buffer.get_start_iter(), buffer.get_end_iter(), False)
         indents = int(self.indents_spinner.get_value())
 
-        # True: JSON to YAML, False: YAML to JSON
-        if self.direction:
-            if len(input_text) > 0 and JSON2YAML.is_json(input_text):
-                output_buffer.set_text(JSON2YAML.to_yaml(input_text, indents))
-            else:
-                self.input_textview.add_css_class("border-red")
+        result, formated_text = self.formatter.indent(text, indents)
+        if result:
+            buffer.set_text(formated_text)
         else:
-            if len(input_text) > 0 and JSON2YAML.is_yaml(input_text):
-                output_buffer.set_text(JSON2YAML.to_json(input_text, indents))
-            else:
-                self.input_textview.add_css_class("border-red")
+            self.input_textview.add_css_class("border-red")
+            self.toast.add_toast(
+                Adw.Toast(title=_("Text cannot be formatted: invalid " + self.formatter.get_name() + " syntax")))

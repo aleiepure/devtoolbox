@@ -17,8 +17,12 @@
 
 from gettext import gettext as _
 from gi.repository import Gtk, Adw, Gio
+from devtoolbox.service.json_formatter import JsonFormatter
+from devtoolbox.service.sql_formatter import SqlFormatter
+from devtoolbox.service.xml_formatter import XmlFormatter
 from devtoolbox.views.utilities_view import UtilitiesView
 from devtoolbox.widgets.base64_encoder_utility import Base64EncoderUtility
+from devtoolbox.widgets.formatter_utility import FormatterUtility
 from devtoolbox.widgets.gzip_encoder_utility import GZipEncoderUtility
 from devtoolbox.widgets.html_encoder_utility import HtmlEncoderUtility
 from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
@@ -118,6 +122,21 @@ class FavoritesView(Adw.Bin):
                 "icon-name": "key-symbolic",
                 "child": JWTDecoderUtility()
             },
+            "jsonformatter": {
+                "title": "JSON",
+                "icon-name": "right-left-symbolic",
+                "child": FormatterUtility(JsonFormatter())
+            },
+            "sqlformatter": {
+                "title": "SQL",
+                "icon-name": "clock-rotate-symbolic",
+                "child": FormatterUtility(SqlFormatter())
+            },
+            "xmlformatter": {
+                "title": "XML",
+                "icon-name": "hashtag-symbolic",
+                "child": FormatterUtility(XmlFormatter())
+            }
         }
 
         fav_str_list = self.settings.get_strv("favorites")

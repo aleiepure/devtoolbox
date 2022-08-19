@@ -107,6 +107,24 @@ modules:
           url: https://files.pythonhosted.org/packages/1c/fb/b82e9601b00d88cf8bbee1f39b855ae773f9d5bcbcedb3801b2f72460696/PyJWT-2.4.0-py3-none-any.whl
           sha256: 72d1d253f32dbd4f5c88eaf1fdc62f3a19f676ccbadb9dbc5d07e951b2b26daf
 
+    - name: python3-sqlparse
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "sqlparse" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/05/40/d836d55fb3f467243ee839ab7b814822fda522cd395fa41e282684e71ee5/sqlparse-0.4.2-py3-none-any.whl
+          sha256: 48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d
+
+    - name: python3-lxml
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "lxml" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/70/bb/7a2c7b4f8f434aa1ee801704bf08f1e53d7b5feba3d5313ab17003477808/lxml-4.9.1.tar.gz
+          sha256: fe749b052bb7233fe5d072fcb549221a8cb1a16725c47c37e42b0b9cb3ff2c3f
+
     - name: devtoolbox
       builddir: true
       buildsystem: meson

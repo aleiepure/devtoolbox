@@ -17,11 +17,15 @@
 
 from gettext import gettext as _
 from gi.repository import Gtk, Adw, Gio
+from devtoolbox.service.json_formatter import JsonFormatter
+from devtoolbox.service.sql_formatter import SqlFormatter
+from devtoolbox.service.xml_formatter import XmlFormatter
 from devtoolbox.views.favorites_view import FavoritesView
 
 from devtoolbox.views.utilities_view import UtilitiesView
 from devtoolbox.widgets.base64_encoder_utility import Base64EncoderUtility
 from devtoolbox.widgets.cron_parser_utility import CronParserUtility
+from devtoolbox.widgets.formatter_utility import FormatterUtility
 from .widgets.jwt_decoder_utility import JWTDecoderUtility
 from .widgets.gzip_encoder_utility import GZipEncoderUtility
 from devtoolbox.widgets.html_encoder_utility import HtmlEncoderUtility
@@ -93,6 +97,23 @@ class MainWindow(Adw.ApplicationWindow):
                 "child": JWTDecoderUtility()
             }
         }
+        FORMATTERS_UTILITIES = {
+            "jsonformatter": {
+                "title": "JSON",
+                "icon-name": "right-left-symbolic",
+                "child": FormatterUtility(JsonFormatter())
+            },
+            "sqlformatter": {
+                "title": "SQL",
+                "icon-name": "db-symbolic",
+                "child": FormatterUtility(SqlFormatter())
+            },
+            "xmlformatter": {
+                "title": "XML",
+                "icon-name": "code-symbolic",
+                "child": FormatterUtility(XmlFormatter())
+            }
+        }
         TABS = {
             "favorites": {
                 "title": _("Favorites"),
@@ -112,7 +133,7 @@ class MainWindow(Adw.ApplicationWindow):
             "formatters": {
                 "title": _("Formatters"),
                 "icon-name": "text-indent-more-symbolic",
-                "child": Gtk.Label(label="Formatters")
+                "child": UtilitiesView(FORMATTERS_UTILITIES)
             },
             "generators": {
                 "title": _("Generators"),
