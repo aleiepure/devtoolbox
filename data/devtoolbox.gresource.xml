@@ -17,6 +17,7 @@
     <file preprocess="xml-stripblanks">ui/html_encoder_utility.ui</file>
     <file preprocess="xml-stripblanks">ui/gzip_encoder_utility.ui</file>
     <file preprocess="xml-stripblanks">ui/base64_encoder_utility.ui</file>
+    <file preprocess="xml-stripblanks">ui/lorem_ipsum_generator.ui</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="db-symbolic.svg">icons/symbolic/db-symbolic.svg</file>
@@ -37,5 +38,7 @@
     <file preprocess="xml-stripblanks" alias="hourglass-half-symbolic.svg">icons/symbolic/hourglass-half-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="text-indent-more-symbolic.svg">icons/symbolic/text-indent-more-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="horizontal-arrows-symbolic.svg">icons/symbolic/horizontal-arrows-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="grid-filled-symbolic.svg">icons/symbolic/grid-filled-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="paragraph-symbolic.svg">icons/symbolic/paragraph-symbolic.svg</file>
   </gresource>
 </gresources>

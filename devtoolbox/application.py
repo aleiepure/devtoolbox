@@ -27,9 +27,11 @@ from devtoolbox.window import MainWindow
 
 
 class Application(Adw.Application):
-    def __init__(self):
+    def __init__(self, version):
         Adw.Application.__init__(self, application_id="me.iepure.devtoolbox",
                                  flags=Gio.ApplicationFlags.FLAGS_NONE)
+
+        self.version = version
 
         # Actions
         self.create_action("quit", self.on_quit_action, ["<primary>q"])
@@ -42,6 +44,7 @@ class Application(Adw.Application):
         win = self.props.active_window
         if not win:
             win = MainWindow(application=self)
+        win.set_title("Dev Toolbox")
         win.present()
 
     def create_action(self, name, callback, shortcuts=None):
@@ -56,11 +59,12 @@ class Application(Adw.Application):
         builder = Gtk.Builder.new_from_resource(
             "/me/iepure/devtoolbox/ui/about_window.ui")
         about_window = builder.get_object("about_window")
+        about_window.set_version(self.version)
         about_window.set_transient_for(_)
         about_window.present()
 
 
 def main(version):
     """The application's entry point."""
-    app = Application()
+    app = Application(version)
     return app.run(sys.argv)

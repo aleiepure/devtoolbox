@@ -27,6 +27,7 @@ from devtoolbox.widgets.gzip_encoder_utility import GZipEncoderUtility
 from devtoolbox.widgets.html_encoder_utility import HtmlEncoderUtility
 from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
 from devtoolbox.widgets.jwt_decoder_utility import JWTDecoderUtility
+from devtoolbox.widgets.lorem_ipsum_utility import LoremIpsumGenerator, LoremIpsumUtility
 from devtoolbox.widgets.timestamp_utility import TimestampUtility
 from devtoolbox.widgets.number_base_utility import NumberBaseUtility
 from devtoolbox.widgets.cron_parser_utility import CronParserUtility
@@ -136,6 +137,11 @@ class FavoritesView(Adw.Bin):
                 "title": "XML",
                 "icon-name": "hashtag-symbolic",
                 "child": FormatterUtility(XmlFormatter())
+            },
+            "loremipsum": {
+                "title": "Lorem Ipsum",
+                "icon-name": "paragraph-symbolic",
+                "child": LoremIpsumUtility()
             }
         }
 

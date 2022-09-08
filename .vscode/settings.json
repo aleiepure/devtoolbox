@@ -9,5 +9,5 @@
     },
     "mesonbuild.configureOnOpen": false,
     "mesonbuild.buildFolder": "_build",
-    "mesonbuild.mesonPath": "/home/ale/git/2/devtoolbox/.flatpak/meson.sh"
+    "mesonbuild.mesonPath": "/home/ale/Git/devtoolbox/.flatpak/meson.sh"
 }

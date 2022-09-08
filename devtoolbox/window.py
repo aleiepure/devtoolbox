@@ -26,6 +26,7 @@ from devtoolbox.views.utilities_view import UtilitiesView
 from devtoolbox.widgets.base64_encoder_utility import Base64EncoderUtility
 from devtoolbox.widgets.cron_parser_utility import CronParserUtility
 from devtoolbox.widgets.formatter_utility import FormatterUtility
+from devtoolbox.widgets.lorem_ipsum_utility import LoremIpsumGenerator, LoremIpsumUtility
 from .widgets.jwt_decoder_utility import JWTDecoderUtility
 from .widgets.gzip_encoder_utility import GZipEncoderUtility
 from devtoolbox.widgets.html_encoder_utility import HtmlEncoderUtility
@@ -114,6 +115,13 @@ class MainWindow(Adw.ApplicationWindow):
                 "child": FormatterUtility(XmlFormatter())
             }
         }
+        GENERATORS_UTILITIES = {
+            "loremipsum": {
+                "title": "Lorem Ipsum",
+                "icon-name": "paragraph-symbolic",
+                "child": LoremIpsumUtility()
+            },
+        }
         TABS = {
             "favorites": {
                 "title": _("Favorites"),
@@ -138,7 +146,7 @@ class MainWindow(Adw.ApplicationWindow):
             "generators": {
                 "title": _("Generators"),
                 "icon-name": "plus-symbolic",
-                "child": Gtk.Label(label="Generators")
+                "child": UtilitiesView(GENERATORS_UTILITIES)
             },
             "text": {
                 "title": _("Text"),

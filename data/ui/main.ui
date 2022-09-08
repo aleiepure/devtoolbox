@@ -6,6 +6,7 @@
 
     <property name="default_width">1200</property>
     <property name="default_height">850</property>
+   
     <property name="content">
       <object class="GtkBox" id="main_content">
         <property name="orientation">vertical</property>
