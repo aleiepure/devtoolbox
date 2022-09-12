@@ -8,9 +8,13 @@ sources = [
   'timestamp_utility.py',
   'number_base_utility.py',
   'cron_parser_utility.py',
-  'html_encode_utility.py',
+  'html_encoder_utility.py',
   'url_encoder_utility.py',
-  'base64_utility.py'
+  'base64_encode_utility.py',
+  'formatter_utility.py',
+  'gzip_encoder_utility.py',
+  'jwt_decoder_utility.py',
+  'lorem_ipsum_utility.py'
 ]
 
 install_data(sources, install_dir: widgetsdir)

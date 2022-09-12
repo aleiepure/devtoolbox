@@ -24,6 +24,7 @@ from devtoolbox.views.utilities_view import UtilitiesView
 from devtoolbox.widgets.base64_encoder_utility import Base64EncoderUtility
 from devtoolbox.widgets.formatter_utility import FormatterUtility
 from devtoolbox.widgets.gzip_encoder_utility import GZipEncoderUtility
+from devtoolbox.widgets.hash_generator_utility import HashGeneratorUtility
 from devtoolbox.widgets.html_encoder_utility import HtmlEncoderUtility
 from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
 from devtoolbox.widgets.jwt_decoder_utility import JWTDecoderUtility
@@ -137,6 +138,11 @@ class FavoritesView(Adw.Bin):
                 "title": "XML",
                 "icon-name": "hashtag-symbolic",
                 "child": FormatterUtility(XmlFormatter())
+            },
+            "hashgen": {
+                "title": "Hash generator",
+                "icon-name": "hashtag-symbolic",
+                "child": HashGeneratorUtility()
             },
             "loremipsum": {
                 "title": "Lorem Ipsum",

@@ -26,6 +26,7 @@ from devtoolbox.views.utilities_view import UtilitiesView
 from devtoolbox.widgets.base64_encoder_utility import Base64EncoderUtility
 from devtoolbox.widgets.cron_parser_utility import CronParserUtility
 from devtoolbox.widgets.formatter_utility import FormatterUtility
+from devtoolbox.widgets.hash_generator_utility import HashGeneratorUtility
 from devtoolbox.widgets.lorem_ipsum_utility import LoremIpsumGenerator, LoremIpsumUtility
 from .widgets.jwt_decoder_utility import JWTDecoderUtility
 from .widgets.gzip_encoder_utility import GZipEncoderUtility
@@ -116,6 +117,11 @@ class MainWindow(Adw.ApplicationWindow):
             }
         }
         GENERATORS_UTILITIES = {
+            "hashgen": {
+                "title": "Hash Generator",
+                "icon-name": "hashtag-symbolic",
+                "child": HashGeneratorUtility()
+            },
             "loremipsum": {
                 "title": "Lorem Ipsum",
                 "icon-name": "paragraph-symbolic",
