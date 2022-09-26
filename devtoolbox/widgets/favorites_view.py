@@ -17,22 +17,22 @@
 
 from gettext import gettext as _
 from gi.repository import Gtk, Adw, Gio
-from devtoolbox.service.json_formatter import JsonFormatter
-from devtoolbox.service.sql_formatter import SqlFormatter
-from devtoolbox.service.xml_formatter import XmlFormatter
-from devtoolbox.views.utilities_view import UtilitiesView
-from devtoolbox.widgets.base64_encoder_utility import Base64EncoderUtility
-from devtoolbox.widgets.formatter_utility import FormatterUtility
-from devtoolbox.widgets.gzip_encoder_utility import GZipEncoderUtility
-from devtoolbox.widgets.hash_generator_utility import HashGeneratorUtility
-from devtoolbox.widgets.html_encoder_utility import HtmlEncoderUtility
-from devtoolbox.widgets.json2yaml_utility import Json2YamlUtility
-from devtoolbox.widgets.jwt_decoder_utility import JWTDecoderUtility
-from devtoolbox.widgets.lorem_ipsum_utility import LoremIpsumGenerator, LoremIpsumUtility
-from devtoolbox.widgets.timestamp_utility import TimestampUtility
-from devtoolbox.widgets.number_base_utility import NumberBaseUtility
-from devtoolbox.widgets.cron_parser_utility import CronParserUtility
-from devtoolbox.widgets.url_encoder_utility import UrlEncoderUtility
+from devtoolbox.services.json_formatter import JsonFormatter
+from devtoolbox.services.sql_formatter import SqlFormatter
+from devtoolbox.services.xml_formatter import XmlFormatter
+from devtoolbox.widgets.utilities_view import UtilitiesView
+from devtoolbox.views.base64_encoder_utility import Base64EncoderUtility
+from devtoolbox.views.formatter_utility import FormatterUtility
+from devtoolbox.views.gzip_encoder_utility import GZipEncoderUtility
+from devtoolbox.views.hash_generator_utility import HashGeneratorUtility
+from devtoolbox.views.html_encoder_utility import HtmlEncoderUtility
+from devtoolbox.views.json2yaml_utility import Json2YamlUtility
+from devtoolbox.views.jwt_decoder_utility import JWTDecoderUtility
+from devtoolbox.views.lorem_ipsum_utility import LoremIpsumGenerator, LoremIpsumUtility
+from devtoolbox.views.timestamp_utility import TimestampUtility
+from devtoolbox.views.number_base_utility import NumberBaseUtility
+from devtoolbox.views.cron_parser_utility import CronParserUtility
+from devtoolbox.views.url_encoder_utility import UrlEncoderUtility
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/empty_favorites.ui")

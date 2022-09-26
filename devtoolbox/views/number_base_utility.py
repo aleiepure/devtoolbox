@@ -19,7 +19,7 @@ from gettext import gettext as _
 from gi.repository import Gtk, Adw, Gio
 from enum import Enum
 
-from devtoolbox.service.number_base import Bases, NumberBase
+from devtoolbox.services.number_base import Bases, NumberBase
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/number_base_utility.ui")
@@ -27,7 +27,7 @@ class NumberBaseUtility(Adw.Bin):
     __gtype_name__ = "NumberBaseUtility"
 
     toast = Gtk.Template.Child()
-    starred_btn = Gtk.Template.Child()
+    #starred_btn = Gtk.Template.Child()
     decimal = Gtk.Template.Child()
     octal = Gtk.Template.Child()
     hex = Gtk.Template.Child()
@@ -39,12 +39,13 @@ class NumberBaseUtility(Adw.Bin):
         super().__init__()
 
         # Favorites button icon
-        fav_list = self.settings.get_strv("favorites")
-        try:
-            fav_list.index("baseconverter")  # check if present, throws error if not
-            self.starred_btn.set_icon_name("starred-symbolic")
-        except ValueError:
-            self.starred_btn.set_icon_name("non-starred-symbolic")
+        #fav_list = self.settings.get_strv("favorites")
+        #try:
+        #    fav_list.index("baseconverter")  # check if present, throws error if not
+            #self.starred_btn.set_icon_name("starred-symbolic")
+        #except ValueError:
+            #self.starred_btn.set_icon_name("non-starred-symbolic")
+        #    pass
 
         # Signals
         self.decimal_handler_id = self.decimal.connect(
@@ -54,28 +55,29 @@ class NumberBaseUtility(Adw.Bin):
         self.hex_handler_id = self.hex.connect("changed", self.on_hex_change)
         self.binary_handler_id = self.binary.connect(
             "changed", self.on_binary_change)
-        self.starred_btn.connect("clicked", self.on_star_clicked)
-        self.settings.connect("changed", self.on_settings_changed)
+        #self.starred_btn.connect("clicked", self.on_star_clicked)
+        #self.settings.connect("changed", self.on_settings_changed)
 
     def on_settings_changed(self, key, data):
         # Favorites button icon
         fav_list = self.settings.get_strv("favorites")
         try:
             fav_list.index("baseconverter") # check if present, throws error if not
-            self.starred_btn.set_icon_name("starred-symbolic")
+            #self.starred_btn.set_icon_name("starred-symbolic")
         except ValueError:
-            self.starred_btn.set_icon_name("non-starred-symbolic")
+            #self.starred_btn.set_icon_name("non-starred-symbolic")
+            pass
 
     def on_star_clicked(self, data):
         fav_list = self.settings.get_strv("favorites")
         try:
             fav_list.index("baseconverter")  # check if present, throws error if not
-            self.starred_btn.set_icon_name("non-starred-symbolic")
+            #self.starred_btn.set_icon_name("non-starred-symbolic")
             fav_list.remove("baseconverter")
             self.settings.set_strv("favorites", fav_list)
             self.toast.add_toast(Adw.Toast(title=_("Removed from favorites!")))
         except ValueError:
-            self.starred_btn.set_icon_name("starred-symbolic")
+            #self.starred_btn.set_icon_name("starred-symbolic")
             fav_list.append("baseconverter")
             self.settings.set_strv("favorites", fav_list)
             self.toast.add_toast(Adw.Toast(title=_("Added to favorites!")))

@@ -16,7 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from gi.repository import Gtk, Adw, Gdk, Gio
-from ..service.cron_parser import CronParser
+from ..services.cron_parser import CronParser
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/cron_parser_utility.ui")

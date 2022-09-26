@@ -14,6 +14,13 @@
                                         <property name="orientation">vertical</property>
                                         <!-- Title bar -->
                                         <child>
+                                            <object class="UtilityTitle">
+                                                <property name="title">Title</property>
+                                                <property name="description">Description</property>
+                                                <property name="utility-name">baseconverter</property>
+                                            </object>
+                                        </child>
+                                        <!-- <child>
                                             <object class="GtkGrid">
                                                 <child>
                                                     <object class="GtkButton" id="starred_btn">
@@ -61,7 +68,7 @@
                                                 </child>
 
                                             </object>
-                                        </child>
+                                        </child> -->
                                         <!-- Divider -->
                                         <child>
                                             <object class="GtkSeparator">

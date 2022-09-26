@@ -18,8 +18,8 @@
 from gi.repository import Adw, Gtk, Gio, Gdk, GLib
 from gettext import gettext as _
 
-from devtoolbox.service.hash_generator import HashGenerator
-from devtoolbox.service.number_base import Bases, NumberBase
+from devtoolbox.services.hash_generator import HashGenerator
+from devtoolbox.services.number_base import Bases, NumberBase
 from devtoolbox.utils import Utils
 
 

@@ -24,7 +24,7 @@ class XmlFormatter():
     def get_name(self):
         return "XML"
 
-    def get_settings_name(self):
+    def get_utility_name(self):
         return "xmlformatter"
 
     def get_file_extensions(self):

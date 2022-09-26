@@ -18,7 +18,7 @@
 from gettext import gettext as _
 from gi.repository import Adw, Gtk, Gio, Gdk
 
-from ..service.html_encoder import HTMLEncoder
+from ..services.html_encoder import HTMLEncoder
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/html_encoder_utility.ui")

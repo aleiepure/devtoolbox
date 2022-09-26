@@ -1,4 +1,4 @@
-# sql_formater.py
+# json_formater.py
 #
 # Copyright 2022 Alessandro Iepure
 #
@@ -16,19 +16,19 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-import sqlparse
+import json
 
 
-class SqlFormatter():
+class JsonFormatter():
 
     def get_name(self):
-        return "SQL"
-
-    def get_settings_name(self):
-        return "sqlformatter"
+        return "JSON"
+    
+    def get_utility_name(self):
+        return "jsonformatter"
 
     def get_file_extensions(self):
-        return ["sql"]
+        return ["json"]
 
     def is_text(self, input):
         try:
@@ -39,12 +39,6 @@ class SqlFormatter():
 
     def indent(self, input, indents):
         try:
-            return True, sqlparse.format(
-                input,
-                indent_width=indents,
-                keyword_case="upper",
-                identifier_case="lower",
-                reindent=True
-            )
-        except sqlparse.exceptions.SQLParseError:
+            return True, json.dumps(json.loads(input), indent=indents)
+        except json.JSONDecodeError:
             return False, ""

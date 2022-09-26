@@ -3,13 +3,13 @@ moduledir = join_paths(pkgdatadir, 'devtoolbox')
 
 subdir('views')
 subdir('widgets')
-subdir('service')
+subdir('services')
 
 sources = [
   '__init__.py',
   'application.py',
   'window.py',
-  'params.py'
+  'utils.py',
 ]
 
 install_data(sources, install_dir: moduledir)

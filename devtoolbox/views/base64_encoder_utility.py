@@ -20,7 +20,7 @@ import binascii
 from gettext import gettext as _
 from gi.repository import Gtk, Adw, Gdk, Gio, GLib
 
-from ..service.base64_encoder import Base64Encoder
+from ..services.base64_encoder import Base64Encoder
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/base64_encoder_utility.ui")

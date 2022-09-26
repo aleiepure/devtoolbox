@@ -18,7 +18,7 @@
 from gi.repository import Adw, Gtk, Gio, Gdk
 from gettext import gettext as _
 
-from devtoolbox.service.lorem_ipsum_generator import LoremIpsumGenerator
+from devtoolbox.services.lorem_ipsum_generator import LoremIpsumGenerator
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/lorem_ipsum_generator.ui")

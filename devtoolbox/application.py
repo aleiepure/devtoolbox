@@ -21,17 +21,29 @@ import gi
 
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
-from gi.repository import Gtk, Gio, Adw
+from gi.repository import Gtk, Gio, Adw, GObject
 
 from devtoolbox.window import MainWindow
+from devtoolbox.widgets.utility_title import UtilityTitle
+from devtoolbox.widgets.textarea import TextArea
 
 
 class Application(Adw.Application):
+
+    custom_widgets = [
+        UtilityTitle,
+        TextArea
+    ]
+
     def __init__(self, version):
         Adw.Application.__init__(self, application_id="me.iepure.devtoolbox",
                                  flags=Gio.ApplicationFlags.FLAGS_NONE)
 
         self.version = version
+
+        # Register custom types
+        for i in self.custom_widgets:
+            GObject.type_ensure(i)
 
         # Actions
         self.create_action("quit", self.on_quit_action, ["<primary>q"])

@@ -18,7 +18,7 @@
 from gettext import gettext as _
 from gi.repository import Gtk, Adw, Gdk, Gio, GLib
 
-from ..service.gzip_encoder import GZipEncoder
+from ..services.gzip_encoder import GZipEncoder
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/gzip_encoder_utility.ui")
