@@ -25,14 +25,16 @@ from gi.repository import Gtk, Gio, Adw, GObject
 
 from devtoolbox.window import MainWindow
 from devtoolbox.widgets.utility_title import UtilityTitle
-from devtoolbox.widgets.textarea import TextArea
+from devtoolbox.widgets.text_area import TextArea
+from devtoolbox.widgets.text_image_area import TextImageArea
 
 
 class Application(Adw.Application):
 
     custom_widgets = [
         UtilityTitle,
-        TextArea
+        TextArea,
+        TextImageArea,
     ]
 
     def __init__(self, version):

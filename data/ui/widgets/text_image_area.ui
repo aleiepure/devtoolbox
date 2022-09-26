@@ -3,8 +3,7 @@
     <requires lib="gtk" version="4.0" />
     <requires lib="libadwaita" version="1.0" />
 
-    <template class="TextArea" parent="AdwBin">
-        
+    <template class="TextImageArea" parent="AdwBin">
         <child>
             <object class="AdwPreferencesGroup">
                 <property name="margin-top">10</property>
@@ -73,14 +72,14 @@
                                                             <object class="GtkButton" id="_copy_btn">
                                                                 <property name="valign">center</property>
                                                                 <property name="icon-name">edit-copy-symbolic</property>
-                                                                <property name="tooltip-text" translatable="yes">Copy to clipboard</property>
+                                                                <property name="tooltip-text" translatable="yes">Copy to clipboard (only text)</property>
                                                             </object>
                                                         </child>
                                                         <child>
                                                             <object class="GtkButton" id="_paste_btn">
                                                                 <property name="valign">center</property>
                                                                 <property name="icon-name">edit-paste-symbolic</property>
-                                                                <property name="tooltip-text" translatable="yes">Paste clipboard</property>
+                                                                <property name="tooltip-text" translatable="yes">Paste clipboard (only text)</property>
                                                             </object>
                                                         </child>
                                                         <child>
@@ -94,31 +93,52 @@
                                                 </child>
                                             </object>
                                         </child>
-
                                     </object>
                                 </child>
 
-                                <!-- Text Area -->
+                                <!-- Text and image area -->
                                 <child>
-                                    <object class="GtkTextView" id="_textview">
-                                        <property name="monospace">true</property>
-                                        <property name="wrap-mode">word</property>
-                                        <property name="top-margin">12</property>
-                                        <property name="left-margin">12</property>
-                                        <property name="right-margin">12</property>
-                                        <property name="bottom-margin">12</property>
-                                        <style>
-                                            <class name="rounded-border" />
-                                        </style>
+                                    <object class="AdwViewStack" id="_stack">
+                                        <child>
+                                            <object class="AdwViewStackPage">
+                                                <property name="name">text</property>
+                                                <property name="child">
+                                                    <object class="GtkTextView" id="_textview">
+                                                        <property name="monospace">true</property>
+                                                        <property name="wrap-mode">word</property>
+                                                        <property name="top-margin">12</property>
+                                                        <property name="left-margin">12</property>
+                                                        <property name="right-margin">12</property>
+                                                        <property name="bottom-margin">12</property>
+                                                        <style>
+                                                            <class name="rounded-border" />
+                                                        </style>
+                                                    </object>
+                                                </property>
+                                            </object>
+                                        </child>
+                                        <child>
+                                            <object class="AdwViewStackPage">
+                                                <property name="name">image</property>
+                                                <property name="child">
+                                                    <object class="GtkPicture" id="_imageview">
+                                                        <property name="can-shrink">true</property>
+                                                        <property name="keep-aspect-ratio">true</property>
+                                                        <style>
+                                                            <class name="rounded-border" />
+                                                            <class name="view"/>
+                                                        </style>
+                                                    </object>
+                                                </property>
+                                            </object>
+                                        </child>
                                     </object>
                                 </child>
-
                             </object>
                         </child>
                     </object>
                 </child>
             </object>
         </child>
-
     </template>
 </interface>

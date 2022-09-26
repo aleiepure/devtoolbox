@@ -20,7 +20,7 @@ from gi.repository import Gtk, Adw, GObject, Gio
 from gettext import gettext as _
 
 
-@Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/utility_title.ui')
+@Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/widgets/utility_title.ui')
 class UtilityTitle(Adw.Bin):
     __gtype_name__ = "UtilityTitle"
 
