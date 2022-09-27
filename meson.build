@@ -34,8 +34,9 @@ endif
 
 # Dependencies
 message('Looking for dependencies...')
-dependency('gtk4', version :'>=4.3.1')
-dependency('libadwaita-1', version :'>=1.2.alpha')
+dependency('gtk4', version: '>=4.3.1')
+dependency('libadwaita-1', version: '>=1.2')
+dependency('gtksourceview-5', version: '>=5.6')
 
 # Paths
 python_dir = join_paths(get_option('prefix'), py_installation.get_install_dir())

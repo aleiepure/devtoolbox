@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from gi.repository import Gtk, Adw, GObject, Gdk, GLib
+from gi.repository import Gtk, Adw, GObject, Gdk, GLib, GtkSource
 from gettext import gettext as _
 
 from devtoolbox.utils import Utils
@@ -51,6 +51,7 @@ class TextImageArea(Adw.Bin):
     action_name = GObject.Property(type=str, default="")
 
     text_editable = GObject.Property(type=bool, default=True)
+    text_language_highlight = GObject.Property(type=str, default="")
 
     area_height = GObject.Property(type=int, default=200)
 
@@ -71,6 +72,14 @@ class TextImageArea(Adw.Bin):
 
     def __init__(self):
         super().__init__()
+
+        # Set syntax highlighting
+        self._textview.get_buffer().set_language(
+            GtkSource.LanguageManager.get_default().get_language(self.text_language_highlight))
+        self._textview.get_buffer().set_highlight_matching_brackets(True)
+        self._textview.get_buffer().set_highlight_syntax(True)
+        self._textview.get_buffer().set_style_scheme(
+            GtkSource.StyleSchemeManager().get_default().get_scheme("Adwaita-dark"))
 
         # Bind properties
         self.bind_property("name", self._name, "label",
@@ -244,4 +253,6 @@ class TextImageArea(Adw.Bin):
     def enable_copy(self, enabled):
         self._copy_btn.set_sensitive(enabled)
 
-    
+    def set_text_language_highlight(self, language):
+        self._textview.get_buffer().set_language(
+            GtkSource.LanguageManager.get_default().get_language(language))

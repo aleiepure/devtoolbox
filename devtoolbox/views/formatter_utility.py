@@ -33,6 +33,9 @@ class FormatterUtility(Adw.Bin):
 
         self.formatter = formatter
 
+        # Set syntax higlight
+        self.textarea.set_text_language_highlight(self.formatter.get_name().lower())
+
         # Set titles
         self.titlebar.set_title(self.titlebar.get_title().replace(
             "Placeholder", self.formatter.get_name()))

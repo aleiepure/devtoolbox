@@ -4,7 +4,7 @@
     <requires lib="libadwaita" version="1.0" />
 
     <template class="TextArea" parent="AdwBin">
-        
+
         <child>
             <object class="AdwPreferencesGroup">
                 <property name="margin-top">10</property>
@@ -99,9 +99,14 @@
 
                                 <!-- Text Area -->
                                 <child>
-                                    <object class="GtkTextView" id="_textview">
+                                    <object class="GtkSourceView" id="_textview">
+                                        <property name="auto-indent">true</property>
+                                        <property name="tab-width">4</property>
+                                        <property name="highlight_current_line">true</property>
+                                        <property name="show-line-numbers">true</property>
+                                        <property name="smart-backspace">true</property>
+                                        <property name="insert-spaces-instead-of-tabs">true</property>
                                         <property name="monospace">true</property>
-                                        <property name="wrap-mode">word</property>
                                         <property name="top-margin">12</property>
                                         <property name="left-margin">12</property>
                                         <property name="right-margin">12</property>

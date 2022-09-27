@@ -21,7 +21,8 @@ import gi
 
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
-from gi.repository import Gtk, Gio, Adw, GObject
+gi.require_version('GtkSource', '5')
+from gi.repository import Gtk, Gio, Adw, GObject, GtkSource
 
 from devtoolbox.window import MainWindow
 from devtoolbox.widgets.utility_title import UtilityTitle
@@ -32,6 +33,10 @@ from devtoolbox.widgets.text_image_area import TextImageArea
 class Application(Adw.Application):
 
     custom_widgets = [
+        GtkSource.View,
+        GtkSource.Buffer,
+        GtkSource.Completion,
+        GtkSource.StyleScheme,
         UtilityTitle,
         TextArea,
         TextImageArea,
@@ -42,6 +47,7 @@ class Application(Adw.Application):
                                  flags=Gio.ApplicationFlags.FLAGS_NONE)
 
         self.version = version
+        Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK)
 
         # Register custom types
         for i in self.custom_widgets:
