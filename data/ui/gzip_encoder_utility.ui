@@ -16,52 +16,10 @@
 
                                         <!-- Title bar -->
                                         <child>
-                                            <object class="GtkGrid">
-                                                <child>
-                                                    <object class="GtkButton" id="starred_btn">
-                                                        <property name="icon-name">non-starred</property>
-                                                        <property name="valign">center</property>
-                                                        <property name="margin-top">10</property>
-                                                        <style>
-                                                            <class name="circular" />
-                                                        </style>
-                                                        <layout>
-                                                            <property name="column">0</property>
-                                                            <property name="row">0</property>
-                                                            <property name="row-span">2</property>
-                                                        </layout>
-                                                    </object>
-                                                </child>
-                                                <child>
-                                                    <object class="GtkLabel">
-                                                        <property name="label" translatable="yes">GZip Compress &amp; Decompress</property>
-                                                        <property name="halign">start</property>
-                                                        <property name="margin-top">10</property>
-                                                        <property name="margin-start">10</property>
-                                                        <style>
-                                                            <class name="title-1" />
-                                                        </style>
-                                                        <layout>
-                                                            <property name="column">1</property>
-                                                            <property name="row">0</property>
-                                                        </layout>
-                                                    </object>
-                                                </child>
-                                                <child>
-                                                    <object class="GtkLabel">
-                                                        <property name="label" translatable="yes">Compress and decompress texts and images</property>
-                                                        <property name="halign">start</property>
-                                                        <property name="margin-start">10</property>
-                                                        <style>
-                                                            <class name="caption-heading" />
-                                                        </style>
-                                                        <layout>
-                                                            <property name="column">1</property>
-                                                            <property name="row">1</property>
-                                                        </layout>
-                                                    </object>
-                                                </child>
-
+                                            <object class="UtilityTitle">
+                                                <property name="title">GZip Compress &amp; Decompress</property>
+                                                <property name="description">Compress and decompress texts and images</property>
+                                                <property name="utility-name">gzipencoder</property>
                                             </object>
                                         </child>
 

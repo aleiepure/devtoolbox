@@ -115,6 +115,15 @@ modules:
           url: https://files.pythonhosted.org/packages/ea/bf/e5a08f019fe821e2c77c542be35e90efffae49359b48b7dd3ca9e638c0db/python_lorem-1.1.2-py3-none-any.whl
           sha256: 7fee2289b7f034653034a7ef2f1bde860346ccc99748c852a25f596de12d9ccb
 
+    - name: python3-humanize
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "humanize" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/9d/fc/28d2b631c5220b2a594d5d13b6ad79ee60d50688f1cd43f6707c06fb0db4/humanize-4.4.0-py3-none-any.whl
+          sha256: 8830ebf2d65d0395c1bd4c79189ad71e023f277c2c7ae00f263124432e6f2ffa
+
     - name: devtoolbox
       builddir: true
       buildsystem: meson

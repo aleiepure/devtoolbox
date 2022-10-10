@@ -22,6 +22,7 @@
     <file preprocess="xml-stripblanks">ui/widgets/text_area.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/utility_title.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/text_image_area.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/text_image_file_area.ui</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="db-symbolic.svg">icons/symbolic/db-symbolic.svg</file>

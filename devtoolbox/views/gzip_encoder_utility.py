@@ -26,7 +26,6 @@ class GZipEncoderUtility(Adw.Bin):
     __gtype_name__ = "GZipEncoderUtility"
 
     toast = Gtk.Template.Child()
-    starred_btn = Gtk.Template.Child()
     compress_direction_toggle = Gtk.Template.Child()
     open_btn = Gtk.Template.Child()
     paste_btn = Gtk.Template.Child()
@@ -39,8 +38,6 @@ class GZipEncoderUtility(Adw.Bin):
     output_textview = Gtk.Template.Child()
     output_image = Gtk.Template.Child()
 
-    settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
-
     compress_direction = True  # True: compress, False: decompress
     input_is_text = True
     image_bytes = []
@@ -48,20 +45,10 @@ class GZipEncoderUtility(Adw.Bin):
     def __init__(self):
         super().__init__()
 
-        # Favorites button icon
-        fav_list = self.settings.get_strv("favorites")
-        try:
-            # check if present, throws error if not
-            fav_list.index("gzipencoder")
-            self.starred_btn.set_icon_name("starred-symbolic")
-        except ValueError:
-            self.starred_btn.set_icon_name("non-starred-symbolic")
 
         # Signals
         self.compress_direction_toggle.connect(
             "toggled", self.on_compress_direction_toggled)
-        self.starred_btn.connect("clicked", self.on_star_clicked)
-        self.settings.connect("changed", self.on_settings_changed)
         self.open_btn.connect("clicked", self.on_open_clicked)
         self.paste_btn.connect("clicked", self.on_paste_clicked)
         self.clear_btn.connect("clicked", self.on_clear_clicked)
@@ -72,32 +59,7 @@ class GZipEncoderUtility(Adw.Bin):
         self.compress_direction = self.compress_direction_toggle.get_active()
         self.output_type_stack.set_visible_child_name("text")
         self._convert()
-
-    def on_star_clicked(self, data):
-        fav_list = self.settings.get_strv("favorites")
-        try:
-            # check if present, throws error if not
-            fav_list.index("gzipencoder")
-            self.starred_btn.set_icon_name("non-starred-symbolic")
-            fav_list.remove("gzipencoder")
-            self.settings.set_strv("favorites", fav_list)
-            self.toast.add_toast(Adw.Toast(title=_("Removed from favorites!")))
-        except ValueError:
-            self.starred_btn.set_icon_name("starred-symbolic")
-            fav_list.append("gzipencoder")
-            self.settings.set_strv("favorites", fav_list)
-            self.toast.add_toast(Adw.Toast(title=_("Added to favorites!")))
-
-    def on_settings_changed(self, key, data):
-        # Favorites button icon
-        fav_list = self.settings.get_strv("favorites")
-        try:
-            # check if present, throws error if not
-            fav_list.index("gzipencoder")
-            self.starred_btn.set_icon_name("starred-symbolic")
-        except ValueError:
-            self.starred_btn.set_icon_name("non-starred-symbolic")
-
+        
     def on_open_clicked(self, data):
         self._native = Gtk.FileChooserNative(
             title="Open File",
