@@ -28,108 +28,76 @@ from devtoolbox.utils import Utils
 class HashGeneratorUtility(Adw.Bin):
     __gtype_name__ = "HashGeneratorUtility"
 
-    toast = Gtk.Template.Child()
-    uppercase_switch = Gtk.Template.Child()
-    text_image_file_area = Gtk.Template.Child()
-
-    md5_text = Gtk.Template.Child()
-    md5_copy_btn = Gtk.Template.Child()
-    sha1_text = Gtk.Template.Child()
-    sha1_copy_btn = Gtk.Template.Child()
-    sha256_text = Gtk.Template.Child()
-    sha256_copy_btn = Gtk.Template.Child()
-    sha512_text = Gtk.Template.Child()
-    sha512_copy_btn = Gtk.Template.Child()
+    _toast = Gtk.Template.Child()
+    _uppercase_switch = Gtk.Template.Child()
+    _text_image_file_area = Gtk.Template.Child()
+    _md5 = Gtk.Template.Child()
+    _sha1 = Gtk.Template.Child()
+    _sha256 = Gtk.Template.Child()
+    _sha512 = Gtk.Template.Child()
 
     def __init__(self):
         super().__init__()
 
         # Signals
-        self.uppercase_switch.connect(
-            "notify::active", self.on_uppercase_state_changed)
-        self.text_image_file_area.connect("error", self.on_error)
-        self.text_image_file_area.connect("text-changed", self.on_input_changed)
-        self.text_image_file_area.connect("image-loaded", self.on_input_changed)
-        self.text_image_file_area.connect("file-loaded", self.on_input_changed)
-        self.text_image_file_area.connect("view-cleared", self.on_view_cleared)
-        self.md5_copy_btn.connect("clicked", self.on_md5_copy_clicked)
-        self.sha1_copy_btn.connect("clicked", self.on_sha1_copy_clicked)
-        self.sha256_copy_btn.connect("clicked", self.on_sha256_copy_clicked)
-        self.sha512_copy_btn.connect("clicked", self.on_sha512_copy_clicked)
+        self._uppercase_switch.connect("notify::active", self._on_uppercase_state_changed)
+        self._text_image_file_area.connect("error", self._on_error)
+        self._text_image_file_area.connect("text-changed", self._on_input_changed)
+        self._text_image_file_area.connect("image-loaded", self._on_input_changed)
+        self._text_image_file_area.connect("file-loaded", self._on_input_changed)
+        self._text_image_file_area.connect("view-cleared", self._on_view_cleared)
 
-    def on_uppercase_state_changed(self, state, data):
-        self.generate_hash_async(self.done_hashing)
+    def _on_uppercase_state_changed(self, state, data):
+        self.generate_hash_async(self._done_hashing)
 
-    def on_big_file(self, widget, size):
-        self.toast.add_toast(Adw.Toast(
-            title=f"File too large to show contents ({str(round(size / (1024 * 1024 * 1024), 2))} GB)"))
+    def _on_input_changed(self, widget):
+        self.generate_hash_async(self._done_hashing)
 
-    def on_error(self, error):
-        self.toast.add_toast(Adw.Toast(title=f"Error: {error}"))
-    
-    def on_input_changed(self, widget):
-        self.generate_hash_async(self.done_hashing)
+    def _on_error(self, error):
+        self._toast.add_toast(Adw.Toast(title=f"Error: {error}"))
 
-    def done_hashing(self, return_val):
+    def _done_hashing(self, return_val):
         md5, sha1, sha256, sha512 = return_val
-        self.md5_text.get_buffer().set_text(md5, -1)
-        self.sha1_text.get_buffer().set_text(sha1, -1)
-        self.sha256_text.get_buffer().set_text(sha256, -1)
-        self.sha512_text.get_buffer().set_text(sha512, -1)
+        self._md5.set_text(md5)
+        self._sha1.set_text(sha1)
+        self._sha256.set_text(sha256)
+        self._sha512.set_text(sha512)
     
-    def on_view_cleared(self, widget):
-        self.md5_text.set_text("")
-        self.sha1_text.set_text("")
-        self.sha256_text.set_text("")
-        self.sha512_text.set_text("")
-
-    def on_md5_copy_clicked(self, data):
-        text = self.md5_text.get_buffer().get_text()
-        clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
-        clipboard.set(text)
-
-    def on_sha1_copy_clicked(self, data):
-        text = self.sha1_text.get_buffer().get_text()
-        clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
-        clipboard.set(text)
-
-    def on_sha256_copy_clicked(self, data):
-        text = self.sha256_text.get_buffer().get_text()
-        clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
-        clipboard.set(text)
-
-    def on_sha512_copy_clicked(self, data):
-        text = self.sha512_text.get_buffer().get_text()
-        clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
-        clipboard.set(text)
+    def _on_view_cleared(self, widget):
+        self._md5.set_text("")
+        self._sha1.set_text("")
+        self._sha256.set_text("")
+        self._sha512.set_text("")
 
     def generate_hash_async(self, callback):
-        self.text_image_file_area.set_loading_visible(True)
+        self._text_image_file_area.set_loading_visible(True)
 
-        def thread_run():
-            hashes = self.generate_hash()
-            GObject.idle_add(cleanup, hashes)
+        def _thread_run():
+            hashes = self._get_hashes()
+            GObject.idle_add(_cleanup, hashes)
         
-        def cleanup(return_val):
-            self.text_image_file_area.set_loading_visible(False)
+        def _cleanup(return_val):
+            self._text_image_file_area.set_loading_visible(False)
             t.join()
             callback(return_val)
 
-        t = threading.Thread(group=None, target=thread_run)
+        t = threading.Thread(group=None, target=_thread_run)
         t.start()
         
+    def _get_hashes(self):        
+        uppercase = self._uppercase_switch.get_active()
 
-    def generate_hash(self):        
-        uppercase = self.uppercase_switch.get_active()
-
-        if self.text_image_file_area.get_visible_view() == "text":
-            text = self.text_image_file_area.get_text()
-            md5 = HashGenerator.to_md5(text)
-            sha1 = HashGenerator.to_sha1(text)
-            sha256 = HashGenerator.to_sha256(text)
-            sha512 = HashGenerator.to_sha512(text)
+        if self._text_image_file_area.get_visible_view() == "text":
+            text = self._text_image_file_area.get_text()
+            if len(text)>0:
+                md5 = HashGenerator.to_md5(text)
+                sha1 = HashGenerator.to_sha1(text)
+                sha256 = HashGenerator.to_sha256(text)
+                sha512 = HashGenerator.to_sha512(text)
+            else:
+                return "", "", "", ""
         else:
-            file_path = self.text_image_file_area.get_file_path()
+            file_path = self._text_image_file_area.get_file_path()
             md5 = HashGenerator.file_to_md5(file_path)
             sha1 = HashGenerator.file_to_sha1(file_path)
             sha256 = HashGenerator.file_to_sha256(file_path)

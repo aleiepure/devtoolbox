@@ -44,6 +44,7 @@ class TextImageFileArea(Adw.Bin):
 
     _image = []
     _file_path = ""
+    input_type = "text"
 
     # Custom properties
     name = GObject.Property(type=str, default="")
@@ -141,12 +142,14 @@ class TextImageFileArea(Adw.Bin):
         self.emit("action-clicked", data)
 
     def _on_clear_clicked(self, data):
-        self.clear()
         self.emit("view-cleared")
+        self.clear()
 
     def clear(self):
+        self.input_type = "text"
         self._textview.get_buffer().set_text("")
         self._image = []
+        self._file_path = ""
         self._stack.set_visible_child_name("text")
         self._textview.remove_css_class("border-red")
 
@@ -157,6 +160,7 @@ class TextImageFileArea(Adw.Bin):
         clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         clipboard.set(text)
         self._image = []
+        self._file_path = ""
         self._stack.set_visible_child_name("text")
 
     def _on_paste_clicked(self, data):
@@ -167,6 +171,8 @@ class TextImageFileArea(Adw.Bin):
         self._stack.set_visible_child_name("text")
 
     def _on_open_clicked(self, data):
+
+        self._stack.set_visible_child_name("loading")
 
         self._native = Gtk.FileChooserNative(
             title="Open File",
@@ -207,8 +213,6 @@ class TextImageFileArea(Adw.Bin):
         self._native.show()
 
     def _on_open_response(self, dialog, response):
-
-        self._stack.set_visible_child_name("loading")
 
         if response == Gtk.ResponseType.ACCEPT:
             self._open_file(dialog.get_file())

@@ -58,7 +58,7 @@ class TextArea(Adw.Bin):
         "action-clicked": (GObject.SIGNAL_RUN_LAST, None, (GObject.TYPE_PYOBJECT,)),
         "text-changed": (GObject.SIGNAL_RUN_LAST, None, ()),
         "text-loaded": (GObject.SIGNAL_RUN_LAST, None, ()),
-        "error": (GObject.SIGNAL_RUN_LAST, None, (str,))
+        "error": (GObject.SIGNAL_RUN_LAST, None, (str,)),
     }
 
     def __init__(self):

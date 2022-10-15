@@ -4,7 +4,7 @@
     <requires lib="libadwaita" version="1.0" />
     <template class="HashGeneratorUtility" parent="AdwBin">
         <child>
-            <object class="AdwToastOverlay" id="toast">
+            <object class="AdwToastOverlay" id="_toast">
                 <property name="child">
                     <object class="GtkScrolledWindow">
                         <property name="child">
@@ -40,7 +40,7 @@
                                                         <property name="title" translatable="yes">Uppercase</property>
                                                         <property name="icon-name">format-text-rich-symbolic</property>
                                                         <child type="suffix">
-                                                            <object class="GtkSwitch" id="uppercase_switch">
+                                                            <object class="GtkSwitch" id="_uppercase_switch">
                                                                 <property name="valign">center</property>
                                                                 <property name="active">false</property>
                                                             </object>
@@ -52,7 +52,7 @@
 
                                         <!-- Input area -->
                                         <child>
-                                            <object class="TextImageFileArea" id="text_image_file_area">
+                                            <object class="TextImageFileArea" id="_text_image_file_area">
                                                 <property name="name">Input</property>
                                                 <property name="show-open-btn">true</property>
                                                 <property name="show-paste-btn">true</property>
@@ -67,180 +67,33 @@
                                         <child>
                                             <object class="AdwPreferencesGroup">
                                                 <property name="margin-top">10</property>
+                                                
                                                 <child>
-                                                    <object class="AdwPreferencesRow">
-                                                        <child>
-                                                            <object class="AdwActionRow">
-                                                                <property name="title" translatable="yes">MD5</property>
-                                                                <child>
-                                                                    <object class="GtkBox">
-                                                                        <property name="orientation">horizontal</property>
-                                                                        <property name="valign">center</property>
-                                                                        <child>
-                                                                            <object class="GtkText" id="md5_text">
-                                                                                <property name="width-request">400</property>
-                                                                                <property name="height-request">35</property>
-                                                                                <property name="valign">center</property>
-                                                                                <property name="editable">false</property>
-                                                                                <style>
-                                                                                    <class name="view" />
-                                                                                    <class name="rounded-border" />
-                                                                                    <class name="padding-left-8" />
-                                                                                </style>
-                                                                            </object>
-                                                                        </child>
-                                                                        <child>
-                                                                            <object class="GtkSeparator">
-                                                                                <style>
-                                                                                    <class name="spacer" />
-                                                                                </style>
-                                                                            </object>
-                                                                        </child>
-                                                                        <child>
-                                                                            <object class="GtkButton" id="md5_copy_btn">
-                                                                                <style>
-                                                                                    <class name="raised" />
-                                                                                </style>
-                                                                                <property name="icon-name">edit-copy</property>
-                                                                            </object>
-                                                                        </child>
-                                                                    </object>
-
-                                                                </child>
-                                                            </object>
-                                                        </child>
+                                                    <object class="TextfieldActionRow" id="_md5">
+                                                        <property name="title">MD5</property>
+                                                        <property name="editable">false</property>
+                                                        <property name="show-copy-btn">true</property>
                                                     </object>
                                                 </child>
                                                 <child>
-                                                    <object class="AdwPreferencesRow">
-                                                        <child>
-                                                            <object class="AdwActionRow">
-                                                                <property name="title" translatable="yes">SHA1</property>
-                                                                <child>
-                                                                    <object class="GtkBox">
-                                                                        <property name="orientation">horizontal</property>
-                                                                        <property name="valign">center</property>
-                                                                        <child>
-                                                                            <object class="GtkText" id="sha1_text">
-                                                                                <property name="width-request">400</property>
-                                                                                <property name="height-request">35</property>
-                                                                                <property name="valign">center</property>
-                                                                                <property name="editable">false</property>
-                                                                                <style>
-                                                                                    <class name="view" />
-                                                                                    <class name="rounded-border" />
-                                                                                    <class name="padding-left-8" />
-                                                                                </style>
-                                                                            </object>
-                                                                        </child>
-                                                                        <child>
-                                                                            <object class="GtkSeparator">
-                                                                                <style>
-                                                                                    <class name="spacer" />
-                                                                                </style>
-                                                                            </object>
-                                                                        </child>
-                                                                        <child>
-                                                                            <object class="GtkButton" id="sha1_copy_btn">
-                                                                                <style>
-                                                                                    <class name="raised" />
-                                                                                </style>
-                                                                                <property name="icon-name">edit-copy</property>
-                                                                            </object>
-                                                                        </child>
-                                                                    </object>
-
-                                                                </child>
-                                                            </object>
-                                                        </child>
+                                                    <object class="TextfieldActionRow" id="_sha1">
+                                                        <property name="title">SHA1</property>
+                                                        <property name="editable">false</property>
+                                                        <property name="show-copy-btn">true</property>
                                                     </object>
                                                 </child>
                                                 <child>
-                                                    <object class="AdwPreferencesRow">
-                                                        <child>
-                                                            <object class="AdwActionRow">
-                                                                <property name="title" translatable="yes">SHA256</property>
-                                                                <child>
-                                                                    <object class="GtkBox">
-                                                                        <property name="orientation">horizontal</property>
-                                                                        <property name="valign">center</property>
-                                                                        <child>
-                                                                            <object class="GtkText" id="sha256_text">
-                                                                                <property name="width-request">400</property>
-                                                                                <property name="height-request">35</property>
-                                                                                <property name="valign">center</property>
-                                                                                <property name="editable">false</property>
-                                                                                <style>
-                                                                                    <class name="view" />
-                                                                                    <class name="rounded-border" />
-                                                                                    <class name="padding-left-8" />
-                                                                                </style>
-                                                                            </object>
-                                                                        </child>
-                                                                        <child>
-                                                                            <object class="GtkSeparator">
-                                                                                <style>
-                                                                                    <class name="spacer" />
-                                                                                </style>
-                                                                            </object>
-                                                                        </child>
-                                                                        <child>
-                                                                            <object class="GtkButton" id="sha256_copy_btn">
-                                                                                <style>
-                                                                                    <class name="raised" />
-                                                                                </style>
-                                                                                <property name="icon-name">edit-copy</property>
-                                                                            </object>
-                                                                        </child>
-                                                                    </object>
-
-                                                                </child>
-                                                            </object>
-                                                        </child>
+                                                    <object class="TextfieldActionRow" id="_sha256">
+                                                        <property name="title">SHA256</property>
+                                                        <property name="editable">false</property>
+                                                        <property name="show-copy-btn">true</property>
                                                     </object>
                                                 </child>
                                                 <child>
-                                                    <object class="AdwPreferencesRow">
-                                                        <child>
-                                                            <object class="AdwActionRow">
-                                                                <property name="title" translatable="yes">SHA512</property>
-                                                                <child>
-                                                                    <object class="GtkBox">
-                                                                        <property name="orientation">horizontal</property>
-                                                                        <property name="valign">center</property>
-                                                                        <child>
-                                                                            <object class="GtkText" id="sha512_text">
-                                                                                <property name="width-request">400</property>
-                                                                                <property name="height-request">35</property>
-                                                                                <property name="valign">center</property>
-                                                                                <property name="editable">false</property>
-                                                                                <style>
-                                                                                    <class name="view" />
-                                                                                    <class name="rounded-border" />
-                                                                                    <class name="padding-left-8" />
-                                                                                </style>
-                                                                            </object>
-                                                                        </child>
-                                                                        <child>
-                                                                            <object class="GtkSeparator">
-                                                                                <style>
-                                                                                    <class name="spacer" />
-                                                                                </style>
-                                                                            </object>
-                                                                        </child>
-                                                                        <child>
-                                                                            <object class="GtkButton" id="sha512_copy_btn">
-                                                                                <style>
-                                                                                    <class name="raised" />
-                                                                                </style>
-                                                                                <property name="icon-name">edit-copy</property>
-                                                                            </object>
-                                                                        </child>
-                                                                    </object>
-
-                                                                </child>
-                                                            </object>
-                                                        </child>
+                                                    <object class="TextfieldActionRow" id="_sha512">
+                                                        <property name="title">SHA512</property>
+                                                        <property name="editable">false</property>
+                                                        <property name="show-copy-btn">true</property>
                                                     </object>
                                                 </child>
                                             </object>

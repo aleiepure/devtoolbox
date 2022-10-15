@@ -29,6 +29,7 @@ from devtoolbox.widgets.utility_title import UtilityTitle
 from devtoolbox.widgets.text_area import TextArea
 from devtoolbox.widgets.text_image_area import TextImageArea
 from devtoolbox.widgets.text_image_file_area import TextImageFileArea
+from devtoolbox.widgets.textfield_action_row import TextFieldActionRow
 
 
 class Application(Adw.Application):
@@ -42,6 +43,7 @@ class Application(Adw.Application):
         TextArea,
         TextImageArea,
         TextImageFileArea,
+        TextFieldActionRow,
     ]
 
     def __init__(self, version):
