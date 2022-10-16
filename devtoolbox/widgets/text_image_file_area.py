@@ -75,7 +75,7 @@ class TextImageFileArea(Adw.Bin):
 
     # Custom signals
     __gsignals__ = {
-        "action-clicked": (GObject.SIGNAL_RUN_LAST, None, (GObject.TYPE_PYOBJECT,)),
+        "action-clicked": (GObject.SIGNAL_RUN_LAST, None, ()),
         "text-changed": (GObject.SIGNAL_RUN_LAST, None, ()),
         "view-cleared": (GObject.SIGNAL_RUN_LAST, None, ()),
         "text-loaded": (GObject.SIGNAL_RUN_LAST, None, ()),
@@ -139,7 +139,7 @@ class TextImageFileArea(Adw.Bin):
         self._textview.get_buffer().connect("changed", self._on_text_changed)
 
     def _on_action_clicked(self, data):
-        self.emit("action-clicked", data)
+        self.emit("action-clicked")
 
     def _on_clear_clicked(self, data):
         self.emit("view-cleared")
@@ -205,7 +205,7 @@ class TextImageFileArea(Adw.Bin):
         if self.use_custom_file_extensions:
             custom_file_filter = Gtk.FileFilter()
             for extension in self.custom_file_extensions:
-                custom_file_filter.add_suffix(extension)
+                custom_file_filter.add_suffix(extension.lstrip().rstrip())
             custom_file_filter.set_name(_("Accepted files"))
             self._native.add_filter(custom_file_filter)
 
@@ -307,7 +307,7 @@ class TextImageFileArea(Adw.Bin):
         self._stack.set_visible_child_name("image")
         self._imageview.set_paintable(texture)
 
-    def enable_copy(self, enabled):
+    def enable_copy_btn(self, enabled):
         self._copy_btn.set_sensitive(enabled)
 
     def set_text_language_highlight(self, language):

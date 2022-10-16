@@ -26,6 +26,7 @@ class HashGeneratorUtility(Adw.Bin):
     __gtype_name__ = "HashGeneratorUtility"
 
     _toast = Gtk.Template.Child()
+    _title = Gtk.Template.Child()
     _uppercase_switch = Gtk.Template.Child()
     _text_image_file_area = Gtk.Template.Child()
     _md5 = Gtk.Template.Child()
@@ -37,12 +38,21 @@ class HashGeneratorUtility(Adw.Bin):
         super().__init__()
 
         # Signals
+        self._title.connect("added-favorite", self._on_added_favorite)
+        self._title.connect("removed-favorite", self._on_removed_favorite)
         self._uppercase_switch.connect("notify::active", self._on_uppercase_state_changed)
         self._text_image_file_area.connect("error", self._on_error)
         self._text_image_file_area.connect("text-changed", self._on_input_changed)
         self._text_image_file_area.connect("image-loaded", self._on_input_changed)
         self._text_image_file_area.connect("file-loaded", self._on_input_changed)
         self._text_image_file_area.connect("view-cleared", self._on_view_cleared)
+
+    def _on_added_favorite(self, widget):
+        self._toast.add_toast(Adw.Toast(title="Added to favorites!"))
+
+    def _on_removed_favorite(self, widget):
+        self._toast.add_toast(Adw.Toast(title="Removed from favorites!"))
+
 
     def _on_uppercase_state_changed(self, state, data):
         self.generate_hash_async(self._done_hashing)

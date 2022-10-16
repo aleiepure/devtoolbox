@@ -1,0 +1,229 @@
+# Devtoolbox documentation - TextImageFileArea widget
+
+### Contents
+ - [Description](#description)
+ - [GtkBuildable](#gtkbuildable)
+ - [Properties](#properties)
+ - [Signals](#signals)
+ - [Methods](#methods)
+---
+## Description
+The element where text can be directly inserted with options to open a file (see below), copy all the text, paste from the clipboard, clear the entry and execute a custom action. All buttons are individually showable using the relative property.
+Loaded files are automatically checked for their content and properly shown as plain text, as an image, or as a generic file.
+All text is syntax highlighted if the property `text-syntax-highlight` is set and the correct language is selected in `text_language_highlight`.
+
+---
+
+## GtkBuildable
+```xml
+<object class="TextImageFileArea" id="_text_image_file_area">
+    <property name="name">Input</property>
+    <property name="show-open-btn">true</property>
+    <property name="show-paste-btn">true</property>
+    <property name="show-clear-btn">true</property>
+    <property name="use-all-files-extensions">true</property>
+    <property name="use-default-text-extensions">true</property>
+    <property name="use-default-image-extensions">true</property>
+    <property name="loading-label">This might take a while...</property>
+</object>
+```
+---
+## Properties
+  - [name](#name)
+  - [show-clear-btn](#show-clear-btn)
+  - [show-copy-btn](#show-copy-btn)
+  - [show-open-btn](#show-open-btn)
+  - [show-paste-btn](#show-paste-btn)
+  - [show-action-btn](#show-action-btn)
+  - [action-name](#action-name)
+  - [text-editable](#text-editable)
+  - [text-show-line-numbers](#text-show-line-numbers)
+  - [text-highlight-current-line](#text-highlight-current-line)
+  - [text-syntax-highlighting](#text-syntax-highlighting)
+  - [text-language-highlight](#text-language-highlight)
+  - [area-height](#area-height)
+  - [use-default-text-extensions](#use-default-text-extensions)
+  - [use-default-image-extensions](#use-default-image-extensions)
+  - [use-all-files-extensions](#use-all-files-extensions)
+  - [use-custom-file-extensions](#use-custom-file-extensions)
+  - [custom-file-extensions](#custom-file-extensions)
+  - [loading-label](#loadind-label)
+
+### **name**
+```
+property name: string
+```
+Label used as the title of the section. Default is `""`.\
+[↩️ to properties](#properties)
+
+### **show-clear-btn**
+```
+property show-clear-btn: bool
+```
+Shows or hides the clear button. Default is `False`.\
+[↩️ to properties](#properties)
+
+### **show-copy-btn**
+```
+property show-copy-btn: bool
+```
+Shows or hides the copy button. Default is `False`.\
+[↩️ to properties](#properties)
+
+### **show-open-btn**
+```
+property show-open-btn: bool
+```
+Shows or hides the open button. Default is `False`.\
+[↩️ to properties](#properties)
+
+### **show-paste-btn**
+```
+property show-paste-btn: bool
+```
+Shows or hides the paste button. Default is `False`.\
+[↩️ to properties](#properties)
+
+### **show-action-btn**
+```
+property show-action-btn: bool
+```
+Shows or hides the action button. Set this property to be able to invoke a custom function on the input. Default is `False`.\
+[↩️ to properties](#properties)
+
+### **action-name**
+```
+property action-name: string
+```
+Label used for the action button. Dependes on `show-action-btn` set as `TRUE`.  Default is `""`.\
+[↩️ to properties](#properties)
+
+### **text-editable**
+```
+property text-editable: bool
+```
+Makes the textbox responsive to keyboard inputs.  Default is `True`.\
+[↩️ to properties](#properties)
+
+### **text-show-line-numbers**
+```
+property text-show-line-numbers: bool
+```
+Shows or hides the left gutter with line numbers.  Default is `False`.\
+[↩️ to properties](#properties)
+
+### **text-highlight-current-line**
+```
+property text-highlight-current-line: bool
+```
+Highlights the line where the cursor is located.  Default is `False`.\
+[↩️ to properties](#properties)
+
+### **text-syntax-highlighting**
+```
+property text-syntax-highlighting: bool
+```
+Highlights the text with the syntax specified in `text-language-syntax`. Default is `False`.\
+[↩️ to properties](#properties)
+
+### **text-language-highlight**
+```
+property text-language-highlight: string
+```
+Specifies the language used to highlight keywords in the text. The expected result works only if `text-syntax-highlighting` is set to `TRUE`. Default is `""`.\
+[↩️ to properties](#properties)
+
+### **area-height**
+```
+property area-height: int
+```
+Specifies the height in pixels of the input area when is empty. If the text overflows the available space, the input area grown to contain it all. Default is `200`.\
+[↩️ to properties](#properties)
+
+### **use-default-text-extensions**
+```
+property use-default-text-extensions: bool
+```
+Specifies if the file dialog should show or not text files as an available format to open. Default is `False`.\
+[↩️ to properties](#properties)
+
+### **use-default-image-extensions**
+```
+property use-default-image-extensions: bool
+```
+Specifies if the file dialog should show or not image files as an available format to open. Default is `False`.\
+[↩️ to properties](#properties)
+
+### **use-all-files-extensions**
+```
+property use-all-files-extensions: bool
+```
+Specifies if the file dialog should show or not all available files to open. Default is `False`.\
+[↩️ to properties](#properties)
+
+### **custom-file-extensions**
+```
+property custom-file-extensions: string[]
+```
+List of file extension that the file dialog shows to open. As a GtkBuildable, the array items are specified as a newline-separated list:
+```xml
+<property name="custom-file-extensions">mp3
+    mp4
+    mkv
+</property>
+```
+[↩️ to properties](#properties)
+
+### **loading-label**
+```
+property loading-label: str
+```
+Label displayed when a file or image is loaded and `set_loading_visible(True)` is called. The label is dismissed with `set_loading_visible(False)`
+. Default is `""`.\
+[↩️ to properties](#properties)
+
+---
+## Signals
+  - [action-clicked](#action-clicked)
+  - [text-changed](#text-changed)
+  - [view-cleared](#view-cleared)
+  - [text-loaded](#text-loaded)
+  - [image-loaded](#image-loaded)
+  - [file-loaded](#file-loaded)
+  - [big-file](#big-file)
+  - [error](#error)
+  
+### **action-clicked**
+```
+signal action-clicked(source_widget, user_data)
+```
+Emited when the user clicks the action button.\
+[↩️ to signals](#signals)
+
+### **text-changed**
+```
+signal text-changed(source_widget, user_data)
+```
+Emited when the user causes a visible change of the text (i.e. types, pastes, deletes, etc.).\
+[↩️ to signals](#signals)
+
+### **view-cleared**
+```
+signal view-cleared(source_widget, user_data)
+```
+Emited when the user clicks the clear button.\
+[↩️ to signals](#signals)
+
+### **text-loaded**
+```
+signal text-loaded(source_widget, user_data)
+```
+Emited when the file chosen with the open file dialog is recognized as text and is finished loading.\
+[↩️ to signals](#signals)
+
+### **image-loaded**
+```
+signal image-loaded(source_widget, user_data)
+```
+Emited when the file chosen with the open file dialog is recognizes as image and is finished loading.\
+[↩️ to signals](#signals)

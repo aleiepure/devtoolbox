@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- TEMPLATE ONLY, NOT TO BE USED -->
 <interface>
     <requires lib="gtk" version="4.0" />
     <requires lib="libadwaita" version="1.0" />
-    <template class="HashGeneratorUtility" parent="AdwBin">
+    <template class="BlankView" parent="AdwBin">
         <child>
             <object class="AdwToastOverlay" id="_toast">
                 <property name="child">
                     <object class="GtkScrolledWindow">
                         <property name="child">
-
                             <object class="AdwClamp">
                                 <property name="child">
                                     <object class="GtkBox">
@@ -17,11 +17,12 @@
                                         <!-- Title bar -->
                                         <child>
                                             <object class="UtilityTitle" id="_title">
-                                                <property name="title">Hash generator</property>
-                                                <property name="description">Calculate hash strings from texts, images and files</property>
-                                                <property name="utility-name">hashgen</property>
+                                                <property name="title" translatable="yes">Blank view</property>
+                                                <property name="description" translatable="yes">blank view</property>
+                                                <property name="utility-name" translatable="yes">blankview</property>
                                             </object>
                                         </child>
+                                        <!-- end Title bar -->
 
                                         <!-- Divider -->
                                         <child>
@@ -30,6 +31,7 @@
                                                 <property name="margin-bottom">10</property>
                                             </object>
                                         </child>
+                                        <!-- end Divider -->
 
                                         <!-- Content -->
                                         <!-- Options -->
@@ -37,7 +39,7 @@
                                             <object class="AdwPreferencesGroup">
                                                 <child>
                                                     <object class="AdwActionRow">
-                                                        <property name="title" translatable="yes">Uppercase</property>
+                                                        <property name="title" translatable="yes">Option</property>
                                                         <property name="icon-name">format-text-rich-symbolic</property>
                                                         <child type="suffix">
                                                             <object class="GtkSwitch" id="_uppercase_switch">
@@ -49,6 +51,7 @@
                                                 </child>
                                             </object>
                                         </child>
+                                        <!-- end Options -->
 
                                         <!-- Input area -->
                                         <child>
@@ -63,41 +66,17 @@
                                                 <property name="loading-label">Hashing, this might take a while...</property>
                                             </object>
                                         </child>
+                                        <!-- end Input area -->
 
+                                        <!-- Output area -->
                                         <child>
                                             <object class="AdwPreferencesGroup">
                                                 <property name="margin-top">10</property>
-                                                
-                                                <child>
-                                                    <object class="TextfieldActionRow" id="_md5">
-                                                        <property name="title">MD5</property>
-                                                        <property name="editable">false</property>
-                                                        <property name="show-copy-btn">true</property>
-                                                    </object>
-                                                </child>
-                                                <child>
-                                                    <object class="TextfieldActionRow" id="_sha1">
-                                                        <property name="title">SHA1</property>
-                                                        <property name="editable">false</property>
-                                                        <property name="show-copy-btn">true</property>
-                                                    </object>
-                                                </child>
-                                                <child>
-                                                    <object class="TextfieldActionRow" id="_sha256">
-                                                        <property name="title">SHA256</property>
-                                                        <property name="editable">false</property>
-                                                        <property name="show-copy-btn">true</property>
-                                                    </object>
-                                                </child>
-                                                <child>
-                                                    <object class="TextfieldActionRow" id="_sha512">
-                                                        <property name="title">SHA512</property>
-                                                        <property name="editable">false</property>
-                                                        <property name="show-copy-btn">true</property>
-                                                    </object>
-                                                </child>
                                             </object>
                                         </child>
+                                        <!-- end Output area -->
+                                        <!-- end Content -->
+
                                     </object>
                                 </property>
                             </object>

@@ -27,7 +27,7 @@ class UtilityTitle(Adw.Bin):
     _title = Gtk.Template.Child()
     _description = Gtk.Template.Child()
     _starred_btn = Gtk.Template.Child()
-
+   
     _settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
 
     title = GObject.Property(type=str, default="",
@@ -36,6 +36,11 @@ class UtilityTitle(Adw.Bin):
                                    flags=GObject.ParamFlags.READWRITE)
     utility_name = GObject.Property(
         type=str, default="", flags=GObject.ParamFlags.READWRITE)
+
+    __gsignals__ = {
+        "added-favorite": (GObject.SIGNAL_RUN_LAST, None, ()),
+        "removed-favorite": (GObject.SIGNAL_RUN_LAST, None, ()),
+    }
 
     def __init__(self):
         super().__init__()
@@ -77,11 +82,13 @@ class UtilityTitle(Adw.Bin):
             self._starred_btn.set_icon_name("non-starred-symbolic")
             fav_list.remove(self.utility_name)
             self._settings.set_strv("favorites", fav_list)
+            self.emit("removed-favorite")
             # self.toast.add_toast(Adw.Toast(title=_("Removed from favorites!")))
         except ValueError:
             self._starred_btn.set_icon_name("starred-symbolic")
             fav_list.append(self.utility_name)
             self._settings.set_strv("favorites", fav_list)
+            self.emit("added-favorite")
             # self.toast.add_toast(Adw.Toast(title=_("Added to favorites!")))
 
     def set_title(self, title):
