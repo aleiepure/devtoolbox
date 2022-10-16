@@ -15,13 +15,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import threading
-from gi.repository import Adw, Gtk, Gio, Gdk, GLib, GObject
+from gi.repository import Adw, Gtk, Gio
 from gettext import gettext as _
 
 from devtoolbox.services.hash_generator import HashGenerator
-from devtoolbox.services.number_base import Bases, NumberBase
-from devtoolbox.utils import Utils
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/hash_generator_utility.ui")
@@ -56,14 +53,18 @@ class HashGeneratorUtility(Adw.Bin):
     def _on_error(self, error):
         self._toast.add_toast(Adw.Toast(title=f"Error: {error}"))
 
-    def _done_hashing(self, return_val):
-        md5, sha1, sha256, sha512 = return_val
-        self._md5.set_text(md5)
-        self._sha1.set_text(sha1)
-        self._sha256.set_text(sha256)
-        self._sha512.set_text(sha512)
+    def _done_hashing(self, source_object, result, data):
+        outcome = self._generate_hash_finish(result)
+        md5, sha1, sha256, sha512 = outcome
+        if not self.cancellable.is_cancelled() and outcome != -1:
+            self._md5.set_text(md5)
+            self._sha1.set_text(sha1)
+            self._sha256.set_text(sha256)
+            self._sha512.set_text(sha512)
+        self._text_image_file_area.set_loading_visible(False)
     
     def _on_view_cleared(self, widget):
+        self.cancellable.cancel()
         self._md5.set_text("")
         self._sha1.set_text("")
         self._sha256.set_text("")
@@ -71,18 +72,21 @@ class HashGeneratorUtility(Adw.Bin):
 
     def generate_hash_async(self, callback):
         self._text_image_file_area.set_loading_visible(True)
+        self.cancellable = Gio.Cancellable()
+        self.task = Gio.Task.new(self, None, callback, self.cancellable)
+        self.task.set_return_on_cancel(True)
+        self.task.run_in_thread(self._generate_hash_thread_callback)
 
-        def _thread_run():
-            hashes = self._get_hashes()
-            GObject.idle_add(_cleanup, hashes)
-        
-        def _cleanup(return_val):
-            self._text_image_file_area.set_loading_visible(False)
-            t.join()
-            callback(return_val)
-
-        t = threading.Thread(group=None, target=_thread_run)
-        t.start()
+    def _generate_hash_finish(self, result):
+        if not Gio.Task.is_valid(result, self):
+            return -1
+        return result.propagate_value().value
+    
+    def _generate_hash_thread_callback(self, task, source_objcet, task_data, cancelable):
+        if task.return_error_if_cancelled():
+            return
+        outcome = self._get_hashes()
+        task.return_value(outcome)
         
     def _get_hashes(self):        
         uppercase = self._uppercase_switch.get_active()
