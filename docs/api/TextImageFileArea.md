@@ -1,5 +1,6 @@
 # Devtoolbox documentation - TextImageFileArea widget
 
+[Home](../readme.md) / TextImageFileArea
 ### Contents
  - [Description](#description)
  - [GtkBuildable](#gtkbuildable)
@@ -8,9 +9,11 @@
  - [Methods](#methods)
 ---
 ## Description
-The element where text can be directly inserted with options to open a file (see below), copy all the text, paste from the clipboard, clear the entry and execute a custom action. All buttons are individually showable using the relative property.
+A widget where text can be directly inserted with options to open a file (see below), copy all the text, paste from the clipboard, clear the entry and execute a custom action. All buttons are individually showable using the relatives property.
 Loaded files are automatically checked for their content and properly shown as plain text, as an image, or as a generic file.
 All text is syntax highlighted if the property `text-syntax-highlight` is set and the correct language is selected in `text_language_highlight`.
+
+[↩️ to top](#)
 
 ---
 
@@ -27,6 +30,8 @@ All text is syntax highlighted if the property `text-syntax-highlight` is set an
     <property name="loading-label">This might take a while...</property>
 </object>
 ```
+[↩️ to top](#)
+
 ---
 ## Properties
   - [name](#name)
@@ -48,6 +53,8 @@ All text is syntax highlighted if the property `text-syntax-highlight` is set an
   - [use-custom-file-extensions](#use-custom-file-extensions)
   - [custom-file-extensions](#custom-file-extensions)
   - [loading-label](#loadind-label)
+
+[↩️ to top](#)
 
 ### **name**
 ```
@@ -130,7 +137,7 @@ Highlights the text with the syntax specified in `text-language-syntax`. Default
 ```
 property text-language-highlight: string
 ```
-Specifies the language used to highlight keywords in the text. The expected result works only if `text-syntax-highlighting` is set to `TRUE`. Default is `""`.\
+Specifies the language used to highlight keywords in the text. The expected result works only if `text-syntax-highlighting` is set to `True`. Default is `""`.\
 [↩️ to properties](#properties)
 
 ### **area-height**
@@ -193,6 +200,10 @@ Label displayed when a file or image is loaded and `set_loading_visible(True)` i
   - [big-file](#big-file)
   - [error](#error)
   
+
+[↩️ to top](#)
+
+
 ### **action-clicked**
 ```
 signal action-clicked(source_widget, user_data)
@@ -227,3 +238,126 @@ signal image-loaded(source_widget, user_data)
 ```
 Emited when the file chosen with the open file dialog is recognizes as image and is finished loading.\
 [↩️ to signals](#signals)
+
+### **file-loaded**
+```
+signal file-loaded(source-widget, user_data)
+```
+Emited when the file chosen with the open file dialog is not recognized either as text or image and is finished loading.\
+[↩️ to signals](#signals)
+
+### **big-file**
+```
+signal big-file(source-widget, user_data)
+```
+Emited when the file chosen with the open file dialog is larger than 1GB.\
+[↩️ to signals](#signals)
+
+### **error**
+```
+signal error(source_widget, error, user_data)
+```
+Emited when an error occurs inside the widget. The error description is contained in `error` as a `string`.\
+[↩️ to signals](#signals)
+
+---
+## Methods
+  - [get_text](#get_text)
+  - [get_buffer](#get_buffer)
+  - [get_visible_view](#get_visible_view)
+  - [get_image](#get_image)
+  - [get_file_path](#get_file_path)
+  - [set_visible_view](#set_visible_view)
+  - [set_image](#set_image)
+  - [set_text_language_highlight](#set_text_language_highlight)
+  - [set_loading_visible](#set_loading_visible)
+  - [add_css_class](#add_css_class)
+  - [remove_css_class](#remove_css_class)
+  - [enable_copy_btn](#enable_copy_btn)
+  
+[↩️ to top](#)
+
+
+### **get_text**
+```
+string get_text()
+```
+Returns the text currently present in the widget.\
+[↩️ to methods](#methods)
+
+### **get_buffer**
+```
+GtkTextBuffer get_buffer()
+```
+Returns the `GtkTextBuffer` associated with the widget.\
+[↩️ to methods](#methods)
+
+### **get_visible_view**
+```
+string get_visible_view()
+```
+Returns the type of view currently visible in the widget as a string. Note that the only possible values are `text`, `image` and `file`.\
+[↩️ to methods](#methods)
+
+### **get_image**
+```
+bytes[] get_image()
+```
+Returns the currently loaded imagea as a bytes array.\
+[↩️ to methods](#methods)
+
+### **get_file_path**
+```
+string get_file_path()
+```
+Returns the path on the filesystem for the currently loaded file or image.\
+[↩️ to methods](#methods)
+
+### **set_visible_view**
+```
+void set_visible_view(string view_name)
+```
+Sets the type of view currently visible in the widget. Note that the only possible values for the parameter are `text`, `image` and `file`.\
+[↩️ to methods](#methods)
+
+### **set_image**
+```
+void set_image(GdkPaintable paintable)
+```
+Sets the image shown in the widget.\
+[↩️ to methods](#methods)
+
+### **set_text_language_highlight**
+```
+void set_text_language_highlight(string language)
+```
+Sets the language used for syntax highlighting in the widget.\
+[↩️ to methods](#methods)
+
+### **set_loading_visible**
+```
+void set_loading_visible(bool enabled)
+```
+Sets whether or not to show the loading animation in the file view.\
+[↩️ to methods](#methods)
+
+### **add_css_class**
+```
+void add_css_class(string class)
+```
+Wrapper around `GtkWidget::add_css_class()` to apply css classes to the widget.\
+[↩️ to methods](#methods)
+
+### **remove_css_class**
+```
+void remove_css_class(string class)
+```
+Wrapper around `GtkWidget::remove_css_class()` to remove css classes from the widget.\
+[↩️ to methods](#methods)
+
+### **enable_copy_btn**
+```
+void enable _copy_btn(bool enabled)
+```
+Sets whether or not the copy button (if shown with `show-copy-btn`) is clickable.\
+[↩️ to methods](#methods)
