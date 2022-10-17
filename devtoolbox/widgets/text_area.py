@@ -46,8 +46,12 @@ class TextArea(Adw.Bin):
     action_name = GObject.Property(type=str, default="")
 
     text_editable = GObject.Property(type=bool, default=True)
-    text_height = GObject.Property(type=int, default=200)
+    text_show_line_numbers = GObject.Property(type=bool, default=False)
+    text_highlight_current_line = GObject.Property(type=bool, default=False)
+    text_syntax_highlighting = GObject.Property(type=bool, default=False)
     text_language_highlight = GObject.Property(type=str, default="")
+
+    area_height = GObject.Property(type=int, default=200)
 
     use_default_text_extensions = GObject.Property(type=bool, default=False)
     use_custom_file_extensions = GObject.Property(type=bool, default=False)
@@ -55,20 +59,20 @@ class TextArea(Adw.Bin):
 
     # Custom signals
     __gsignals__ = {
-        "action-clicked": (GObject.SIGNAL_RUN_LAST, None, (GObject.TYPE_PYOBJECT,)),
+        "action-clicked": (GObject.SIGNAL_RUN_LAST, None, ()),
         "text-changed": (GObject.SIGNAL_RUN_LAST, None, ()),
+        "view-cleared": (GObject.SIGNAL_RUN_LAST, None, ()),
         "text-loaded": (GObject.SIGNAL_RUN_LAST, None, ()),
+        "big-file": (GObject.SIGNAL_RUN_LAST, None, (GObject.TYPE_PYOBJECT,)),
         "error": (GObject.SIGNAL_RUN_LAST, None, (str,)),
     }
 
     def __init__(self):
         super().__init__()
 
-        # Set syntax highlighting
+       # Set syntax highlighting
         self._textview.get_buffer().set_language(
             GtkSource.LanguageManager.get_default().get_language(self.text_language_highlight))
-        self._textview.get_buffer().set_highlight_matching_brackets(True)
-        self._textview.get_buffer().set_highlight_syntax(True)
         self._textview.get_buffer().set_style_scheme(
             GtkSource.StyleSchemeManager().get_default().get_scheme("Adwaita-dark"))
 
@@ -94,7 +98,16 @@ class TextArea(Adw.Bin):
 
         self.bind_property("text-editable", self._textview,
                            "editable", GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("text-height", self._textview,
+        self.bind_property("text-syntax-highlighting", self._textview.get_buffer(),
+                           "highlight-syntax", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("text-syntax-highlighting", self._textview.get_buffer(),
+                           "highlight-matching-brackets", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("text-show-line-numbers", self._textview,
+                           "show-line-numbers", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("text-highlight-current-line", self._textview,
+                           "highlight-current-line", GObject.BindingFlags.SYNC_CREATE)
+
+        self.bind_property("area-height", self._textview,
                            "height-request", GObject.BindingFlags.SYNC_CREATE)
 
         # Signals
@@ -106,7 +119,7 @@ class TextArea(Adw.Bin):
         self._textview.get_buffer().connect("changed", self._on_text_changed)
 
     def _on_action_clicked(self, data):
-        self.emit("action-clicked", data)
+        self.emit("action-clicked")
 
     def _on_clear_clicked(self, data):
         self._textview.get_buffer().set_text("")
@@ -143,14 +156,6 @@ class TextArea(Adw.Bin):
                 file_filter.add_suffix(extension)
             file_filter.set_name(_("Accepted files"))
             self._native.add_filter(file_filter)
-        # if self.use_default_image_extensions:
-        #    file_filter.add_pixbuf_formats()
-        #    file_filter.set_name(_("Image files"))
-        #    self._native.add_filter(file_filter)
-        # if self.use_all_file_extentions:
-        #     file_filter.add_pattern("*")
-        #     file_filter.set_name(_("All files"))
-        #     self._native.add_filter(file_filter)
 
         self._native.connect("response", self._on_open_response)
         self._native.show()
@@ -162,6 +167,11 @@ class TextArea(Adw.Bin):
         self._native = None
 
     def _open_file(self, file):
+        file_size = file.query_info("*", 0, None).get_size()
+
+        if file_size > 1000000000:
+            self.emit("big-file", file_size)
+        
         file.load_contents_async(None, self._open_file_complete)
 
     def _open_file_complete(self, file, result):
@@ -195,12 +205,15 @@ class TextArea(Adw.Bin):
     def get_buffer(self):
         return self._textview.get_buffer()
 
+    def set_text_language_highlight(self, language):
+        self._textview.get_buffer().set_language(
+            GtkSource.LanguageManager.get_default().get_language(language))
+
     def add_css_class(self, css_class):
         self._textview.add_css_class(css_class)
 
     def remove_css_class(self, css_class):
         self._textview.remove_css_class(css_class)
 
-    def set_text_language_highlight(self, language):
-        self._textview.get_buffer().set_language(
-            GtkSource.LanguageManager.get_default().get_language(language))
+    def enable_copy_btn(self, enabled):
+        self._copy_btn.set_sensitive(enabled)

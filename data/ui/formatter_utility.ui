@@ -64,8 +64,11 @@
                                                 <property name="show-copy-btn">true</property>
                                                 <property name="show-paste-btn">true</property>
                                                 <property name="show-open-btn">true</property>
-                                                <property name="action-name">Format</property>
-                                                <property name="text-height">500</property>
+                                                <property name="action-name" translatable="yes">Format</property>
+                                                <property name="text-show-line-numbers">true</property>
+                                                <property name="text-highlight-current-line">true</property>
+                                                <property name="text-syntax-highlighting">true</property>
+                                                <property name="area-height">500</property>
                                                 <property name="use-custom-file-extensions">true</property>
                                             </object>
                                         </child>

@@ -102,10 +102,9 @@
                                     <object class="GtkSourceView" id="_textview">
                                         <property name="auto-indent">true</property>
                                         <property name="tab-width">4</property>
-                                        <property name="highlight_current_line">true</property>
-                                        <property name="show-line-numbers">true</property>
                                         <property name="smart-backspace">true</property>
                                         <property name="insert-spaces-instead-of-tabs">true</property>
+                                        <property name="wrap-mode">char</property>
                                         <property name="monospace">true</property>
                                         <property name="top-margin">12</property>
                                         <property name="left-margin">12</property>

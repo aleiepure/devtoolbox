@@ -230,9 +230,9 @@ Emited when the file chosen with the open file dialog is recognizes as image and
 
 ### **big-file**
 ```
-signal big-file(source-widget, user_data)
+signal big-file(source-widget, file_size, user_data)
 ```
-Emited when the file chosen with the open file dialog is larger than 1GB.\
+Emited when the file chosen with the open file dialog is larger than 1GB. The actual size is contained in the integer `file_size` expressed as bytes .\
 [↩️ to signals](#signals)
 
 ### **error**

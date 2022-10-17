@@ -91,8 +91,6 @@ class TextImageFileArea(Adw.Bin):
         # Set syntax highlighting
         self._textview.get_buffer().set_language(
             GtkSource.LanguageManager.get_default().get_language(self.text_language_highlight))
-        self._textview.get_buffer().set_highlight_matching_brackets(True)
-        # self._textview.get_buffer().set_highlight_syntax(True)
         self._textview.get_buffer().set_style_scheme(
             GtkSource.StyleSchemeManager().get_default().get_scheme("Adwaita-dark"))
 
@@ -120,6 +118,8 @@ class TextImageFileArea(Adw.Bin):
                            "editable", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("text-syntax-highlighting", self._textview.get_buffer(),
                            "highlight-syntax", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("text-syntax-highlighting", self._textview.get_buffer(),
+                           "highlight-matching-brackets", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("text-show-line-numbers", self._textview,
                            "show-line-numbers", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("text-highlight-current-line", self._textview,
@@ -128,7 +128,8 @@ class TextImageFileArea(Adw.Bin):
         self.bind_property("area-height", self._textview,
                            "height-request", GObject.BindingFlags.SYNC_CREATE)
 
-        self.bind_property("loading-label", self._loading_label, "label", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("loading-label", self._loading_label,
+                           "label", GObject.BindingFlags.SYNC_CREATE)
 
         # Signals
         self._action_btn.connect("clicked", self._on_action_clicked)

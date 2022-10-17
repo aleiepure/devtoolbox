@@ -40,6 +40,7 @@ class TextImageArea(Adw.Bin):
     _image = []
 
     # Custom properties
+    # Custom properties
     name = GObject.Property(type=str, default="")
 
     show_clear_btn = GObject.Property(type=bool, default=False)
@@ -51,6 +52,9 @@ class TextImageArea(Adw.Bin):
     action_name = GObject.Property(type=str, default="")
 
     text_editable = GObject.Property(type=bool, default=True)
+    text_show_line_numbers = GObject.Property(type=bool, default=False)
+    text_highlight_current_line = GObject.Property(type=bool, default=False)
+    text_syntax_highlighting = GObject.Property(type=bool, default=False)
     text_language_highlight = GObject.Property(type=str, default="")
 
     area_height = GObject.Property(type=int, default=200)
@@ -62,11 +66,12 @@ class TextImageArea(Adw.Bin):
 
     # Custom signals
     __gsignals__ = {
-        "action-clicked": (GObject.SIGNAL_RUN_LAST, None, (GObject.TYPE_PYOBJECT,)),
+        "action-clicked": (GObject.SIGNAL_RUN_LAST, None, ()),
         "text-changed": (GObject.SIGNAL_RUN_LAST, None, ()),
         "view-cleared": (GObject.SIGNAL_RUN_LAST, None, ()),
         "text-loaded": (GObject.SIGNAL_RUN_LAST, None, ()),
         "image-loaded": (GObject.SIGNAL_RUN_LAST, None, ()),
+        "big-file": (GObject.SIGNAL_RUN_LAST, None, (GObject.TYPE_PYOBJECT,)),
         "error": (GObject.SIGNAL_RUN_LAST, None, (str,))
     }
 
@@ -76,8 +81,6 @@ class TextImageArea(Adw.Bin):
         # Set syntax highlighting
         self._textview.get_buffer().set_language(
             GtkSource.LanguageManager.get_default().get_language(self.text_language_highlight))
-        self._textview.get_buffer().set_highlight_matching_brackets(True)
-        self._textview.get_buffer().set_highlight_syntax(True)
         self._textview.get_buffer().set_style_scheme(
             GtkSource.StyleSchemeManager().get_default().get_scheme("Adwaita-dark"))
 
@@ -103,6 +106,15 @@ class TextImageArea(Adw.Bin):
 
         self.bind_property("text-editable", self._textview,
                            "editable", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("text-syntax-highlighting", self._textview.get_buffer(),
+                           "highlight-syntax", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("text-syntax-highlighting", self._textview.get_buffer(),
+                           "highlight-matching-brackets", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("text-show-line-numbers", self._textview,
+                           "show-line-numbers", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("text-highlight-current-line", self._textview,
+                           "highlight-current-line", GObject.BindingFlags.SYNC_CREATE)
+
         self.bind_property("area-height", self._textview,
                            "height-request", GObject.BindingFlags.SYNC_CREATE)
 
@@ -120,12 +132,6 @@ class TextImageArea(Adw.Bin):
     def _on_clear_clicked(self, data):
         self.clear()
         self.emit("view-cleared")
-
-    def clear(self):
-        self._textview.get_buffer().set_text("")
-        self._image = []
-        self._stack.set_visible_child_name("text")
-        self._textview.remove_css_class("border-red")
 
     def _on_copy_clicked(self, data):
         text_buffer = self._textview.get_buffer()
@@ -220,6 +226,12 @@ class TextImageArea(Adw.Bin):
 
     def _on_text_changed(self, data):
         self.emit("text-changed")
+
+    def clear(self):
+        self._textview.get_buffer().set_text("")
+        self._image = []
+        self._stack.set_visible_child_name("text")
+        self._textview.remove_css_class("border-red")
 
     def get_text(self):
         text_buffer = self._textview.get_buffer()

@@ -62,7 +62,7 @@ class FormatterUtility(Adw.Bin):
     def on_text_changed(self, data):
        self.textarea.remove_css_class("border-red")
 
-    def on_format_clicked(self, widget, data):
+    def on_format_clicked(self, widget):
         self._format()
 
     def _format(self):
