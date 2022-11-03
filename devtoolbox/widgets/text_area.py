@@ -124,6 +124,7 @@ class TextArea(Adw.Bin):
     def _on_clear_clicked(self, data):
         self._textview.get_buffer().set_text("")
         self._textview.remove_css_class("border-red")
+        self.emit("view-cleared")
 
     def _on_copy_clicked(self, data):
         text_buffer = self._textview.get_buffer()
@@ -171,7 +172,7 @@ class TextArea(Adw.Bin):
 
         if file_size > 1000000000:
             self.emit("big-file", file_size)
-        
+
         file.load_contents_async(None, self._open_file_complete)
 
     def _open_file_complete(self, file, result):
@@ -201,6 +202,10 @@ class TextArea(Adw.Bin):
         text_buffer = self._textview.get_buffer()
         return text_buffer.get_text(text_buffer.get_start_iter(),
                                     text_buffer.get_end_iter(), False)
+
+    def set_text(self, text):
+        text_buffer = self._textview.get_buffer()
+        text_buffer.set_text(text, -1)
 
     def get_buffer(self):
         return self._textview.get_buffer()

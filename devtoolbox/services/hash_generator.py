@@ -23,13 +23,6 @@ class HashGenerator():
     @staticmethod
     def file_to_md5(file_path):
         md5 = hashlib.md5()
-        # with open(file_path, "rb") as f:
-        #     while True:
-        #         data = f.read(65536) # 64kb chunks
-        #         print(".", end="")
-        #         if not data:
-        #             break
-        #         md5.update(data)
         with io.open(file_path, mode="rb") as fd:
             for chunk in iter(lambda: fd.read(io.DEFAULT_BUFFER_SIZE), b''):
                 md5.update(chunk)
