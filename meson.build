@@ -52,7 +52,6 @@ conf.set('APPID', project_id)
 conf.set('PYTHON', python.find_installation('python3').path())
 conf.set('LOCALE_DIR', join_paths(get_option('prefix'), get_option('localedir')))
 
-
 install_subdir(
   'devtoolbox',
   install_dir: python_dir

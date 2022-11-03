@@ -143,8 +143,8 @@ class TextImageFileArea(Adw.Bin):
         self.emit("action-clicked")
 
     def _on_clear_clicked(self, data):
-        self.emit("view-cleared")
         self.clear()
+        self.emit("view-cleared")
 
     def clear(self):
         self.input_type = "text"

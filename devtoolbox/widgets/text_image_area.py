@@ -38,8 +38,8 @@ class TextImageArea(Adw.Bin):
     _stack = Gtk.Template.Child()
 
     _image = []
+    _is_text = True
 
-    # Custom properties
     # Custom properties
     name = GObject.Property(type=str, default="")
 
@@ -118,6 +118,7 @@ class TextImageArea(Adw.Bin):
         self.bind_property("area-height", self._textview,
                            "height-request", GObject.BindingFlags.SYNC_CREATE)
 
+
         # Signals
         self._action_btn.connect("clicked", self._on_action_clicked)
         self._clear_btn.connect("clicked", self._on_clear_clicked)
@@ -150,6 +151,9 @@ class TextImageArea(Adw.Bin):
         self._stack.set_visible_child_name("text")
 
     def _on_open_clicked(self, data):
+
+        self._stack.set_visible_child_name("loading")
+
         self._native = Gtk.FileChooserNative(
             title="Open File",
             action=Gtk.FileChooserAction.OPEN,
@@ -184,8 +188,14 @@ class TextImageArea(Adw.Bin):
         self._native.show()
 
     def _on_open_response(self, dialog, response):
+        
         if response == Gtk.ResponseType.ACCEPT:
             self._open_file(dialog.get_file())
+        else:
+            if self._is_text:
+                self._stack.set_visible_child_name("text")
+            else:
+                self._stack.set_visible_child_name("image")
 
         self._native = None
 
@@ -194,7 +204,6 @@ class TextImageArea(Adw.Bin):
 
     def _open_file_complete(self, file, result):
         contents = file.load_contents_finish(result)
-        is_text = True
 
         if not contents[0]:
             self.emit(
@@ -203,17 +212,17 @@ class TextImageArea(Adw.Bin):
 
         if Utils.is_text(contents[1]):
             text = contents[1].decode("utf-8")
-            is_text = True
+            self._is_text = True
         elif Utils.is_image(contents[1]):
             self._image = contents[1]
             texture = Gdk.Texture.new_from_bytes(GLib.Bytes(contents[1]))
-            is_text = False
+            self._is_text = False
         else:
             self.emit(
                 "error", f"Unable to open {file.peek_path()}: content is not a supported file type")
             return
 
-        if is_text:
+        if self._is_text:
             self._stack.set_visible_child_name("text")
             text_buffer = self._textview.get_buffer()
             text_buffer.set_text(text)

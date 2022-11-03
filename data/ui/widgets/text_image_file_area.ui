@@ -96,7 +96,6 @@
                                     </object>
                                 </child>
 
-                                <!-- Text and image area -->
                                 <child>
                                     <object class="AdwViewStack" id="_stack">
                                         <child>
