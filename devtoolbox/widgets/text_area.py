@@ -122,9 +122,12 @@ class TextArea(Adw.Bin):
         self.emit("action-clicked")
 
     def _on_clear_clicked(self, data):
+        self.clear()
+        self.emit("view-cleared")
+
+    def clear(self):
         self._textview.get_buffer().set_text("")
         self._textview.remove_css_class("border-red")
-        self.emit("view-cleared")
 
     def _on_copy_clicked(self, data):
         text_buffer = self._textview.get_buffer()

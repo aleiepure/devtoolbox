@@ -23,66 +23,29 @@ from ..services.cron_parser import CronParser
 class CronParserUtility(Adw.Bin):
     __gtype_name__ = "CronParserUtility"
 
-    # star button logic
+    toast = Gtk.Template.Child()
     dates_spinner = Gtk.Template.Child()
     format_text = Gtk.Template.Child()
-    expression_text = Gtk.Template.Child()
-    dates_text = Gtk.Template.Child()
-    paste_btn = Gtk.Template.Child()
-    clear_btn = Gtk.Template.Child()
-    copy_btn = Gtk.Template.Child()
-    starred_btn = Gtk.Template.Child()
-    toast = Gtk.Template.Child()
-
-    settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
+    input_area = Gtk.Template.Child()
+    output_area = Gtk.Template.Child()
 
     def __init__(self):
         super().__init__()
 
-        # Favorites button icon
-        fav_list = self.settings.get_strv("favorites")
-        try:
-            # check if present, throws error if not
-            fav_list.index("cronparser")
-            self.starred_btn.set_icon_name("starred-symbolic")
-        except ValueError:
-            self.starred_btn.set_icon_name("non-starred-symbolic")
-
         # Signals
-        self.paste_btn.connect("clicked", self.on_paste_btn_clicked)
-        self.clear_btn.connect("clicked", self.on_clear_btn_clicked)
-        self.copy_btn.connect("clicked", self.on_copy_btn_clicked)
+        self.input_area.connect("text-changed", self.on_input_changed)
+        self.input_area.connect("view-cleared", self.on_view_cleared)
+        self.input_area.connect("error", self.on_error)
+        self.output_area.connect("error", self.on_error)
         self.dates_spinner.connect(
             "value-changed", self.on_dates_spinner_value_changed)
         self.format_text.connect("changed", self.on_format_change)
-        self.expression_text.connect("changed", self.on_expression_change)
-        self.starred_btn.connect("clicked", self.on_star_clicked)
-        self.settings.connect("changed", self.on_settings_changed)
 
-    def on_settings_changed(self, key, data):
-        # Favorites button icon
-        fav_list = self.settings.get_strv("favorites")
-        try:
-            # check if present, throws error if not
-            fav_list.index("cronparser")
-            self.starred_btn.set_icon_name("starred-symbolic")
-        except ValueError:
-            self.starred_btn.set_icon_name("non-starred-symbolic")
+    def on_error(self, error):
+        self.toast.add_toast(Adw.Toast(title=f"Error: {error}"))
 
-    def on_star_clicked(self, data):
-        fav_list = self.settings.get_strv("favorites")
-        try:
-            # check if present, throws error if not
-            fav_list.index("cronparser")
-            self.starred_btn.set_icon_name("non-starred-symbolic")
-            fav_list.remove("cronparser")
-            self.settings.set_strv("favorites", fav_list)
-            self.toast.add_toast(Adw.Toast(title=_("Removed from favorites!")))
-        except ValueError:
-            self.starred_btn.set_icon_name("starred-symbolic")
-            fav_list.append("cronparser")
-            self.settings.set_strv("favorites", fav_list)
-            self.toast.add_toast(Adw.Toast(title=_("Added to favorites!")))
+    def on_view_cleared(self, data):
+        self.output_area.clear()
 
     def on_dates_spinner_value_changed(self, data):
         self._generate_dates()
@@ -94,37 +57,20 @@ class CronParserUtility(Adw.Bin):
         else:
             self.format_text.add_css_class("border-red")
 
-    def on_expression_change(self, data):
-        self.expression_text.remove_css_class("border-red")
+    def on_input_changed(self, data):
+        self.input_area.remove_css_class("border-red")
 
-        expression = self.expression_text.get_text()
+        expression = self.input_area.get_text()
         if len(expression) > 0:
             if CronParser.is_expression_valid(expression):
                 self._generate_dates()
             else:
-                self.expression_text.add_css_class("border-red")
-        
-    def on_paste_btn_clicked(self, data):
-        self.expression_text.emit("paste-clipboard")
-
-    def on_clear_btn_clicked(self, data):
-        buffer = self.expression_text.get_buffer()
-        buffer.set_text("", -1)
-        buffer = self.dates_text.get_buffer()
-        buffer.set_text("", -1)
-
-    def on_copy_btn_clicked(self, data):
-        buffer = self.dates_text.get_buffer()
-        start = buffer.get_start_iter()
-        end = buffer.get_end_iter()
-        text = buffer.get_text(start, end, False)
-        clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
-        clipboard.set(text)
+                self.input_area.add_css_class("border-red")
 
     def _generate_dates(self):
-        self.dates_text.get_buffer().set_text(
+        self.output_area.set_text(
             CronParser.generate_dates(
-                self.expression_text.get_text(),
+                self.input_area.get_text(),
                 self.format_text.get_text(),
                 int(self.dates_spinner.get_value())
             )
