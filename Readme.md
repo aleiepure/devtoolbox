@@ -1,3 +1,9 @@
+<!--
+Copyright (C) 2022 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
 <div align="center">
   <h1><img src="./data/icons/hicolor/scalable/apps/me.iepure.devtoolbox.svg" height="64"/><br>Dev Toolbox</h1>
   <h4>All your development tools in one place</h4>
@@ -9,6 +15,9 @@
     </a>
     <a href="https://stopthemingmy.app" title="Please do not theme this app">
         <img src="https://stopthemingmy.app/badge.svg" />
+    </a>
+    <a href="https://api.reuse.software/info/github.com/aleiepure/devtoolbox" title="REUSE compliance">
+        <img src="https://api.reuse.software/badge/github.com/aleiepure/devtoolbox" />
     </a>
     <br />
     <a href="#features">Features</a> ·

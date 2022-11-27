@@ -1,3 +1,7 @@
+# Copyright (C) 2022 Alessandro Iepure
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 project(
   'devtoolbox',  
   version: '0.1.0',
@@ -66,7 +70,7 @@ configure_file(
 )
 
 subdir('data')
-subdir('po')
+#subdir('po')
 
 gnome.post_install(
     glib_compile_schemas: true,

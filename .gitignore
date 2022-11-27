@@ -1,8 +1,9 @@
-**/__pycache__/
-.flatpak*
-_build
-devtoolbox/timezone.py
-sonar*
-.scannerwork
-.vscode
-data/icons/hicolor/me.iepure.devtoolbox.Source.svg
+# Copyright (C) 2022 Alessandro Iepure
+#
+# SPDX-License-Identifier: CC0-1.0
+
+.flatpak*/
+_build/
+.vscode/
+.reuse/
+po/
