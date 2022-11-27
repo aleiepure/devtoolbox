@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+    <requires lib="gtk" version="4.0" />
+    <requires lib="libadwaita" version="1.0" />
+    <template class="Json2YamlUtility" parent="AdwBin">
+        <child>
+
+            <object class="AdwToastOverlay" id="toast">
+                <property name="child">
+                    <object class="GtkScrolledWindow">
+                        <property name="child">
+
+                            <object class="AdwClamp">
+                                <property name="child">
+                                    <object class="GtkBox">
+                                        <property name="orientation">vertical</property>
+
+                                        <!-- Title bar -->
+                                        <child>
+                                            <object class="UtilityTitle" id="titlebar">
+                                                <property name="title" translatable="yes">JSON - YAML converter</property>
+                                                <property name="description">Convert JSON documnets to YAML and viceversa</property>
+                                                <property name="utility-name">json2yaml</property>
+                                            </object>
+                                        </child>
+
+                                        <!-- Divider -->
+                                        <child>
+                                            <object class="GtkSeparator">
+                                                <property name="margin-top">10</property>
+                                                <property name="margin-bottom">10</property>
+                                            </object>
+                                        </child>
+
+                                        <!-- Content -->
+                                        <child>
+                                            <object class="AdwPreferencesGroup">
+                                                <child>
+                                                    <object class="AdwActionRow">
+                                                        <property name="title" translatable="yes">Direction</property>
+                                                        <property name="subtitle" translatable="yes">Specify what format is the input and the output</property>
+                                                        <property name="icon-name">right-left-symbolic</property>
+                                                        <child type="suffix">
+                                                            <object class="GtkBox">
+                                                                <style>
+                                                                    <class name="linked" />
+                                                                </style>
+                                                                <property name="orientation">horizontal</property>
+                                                                <property name="valign">center</property>
+                                                                <child>
+                                                                    <object class="GtkToggleButton" id="direction_toggle">
+                                                                        <property name="active">true</property>
+                                                                        <property name="label">JSON → YAML</property>
+                                                                    </object>
+                                                                </child>
+                                                                <child>
+                                                                    <object class="GtkToggleButton">
+                                                                        <property name="active">false</property>
+                                                                        <property name="group">direction_toggle</property>
+                                                                        <property name="label" translatable="yes">YAML → JSON</property>
+                                                                    </object>
+                                                                </child>
+                                                            </object>
+                                                        </child>
+                                                    </object>
+                                                </child>
+                                                <child>
+                                                    <object class="AdwActionRow">
+                                                        <property name="title" translatable="yes">Indentations</property>
+                                                        <property name="subtitle" translatable="yes">Number of spaces used for indenting the code</property>
+                                                        <property name="icon-name">spacebar-symbolic</property>
+                                                        <child type="suffix">
+                                                            <object class="GtkSpinButton" id="indents_spinner">
+                                                                <property name="valign">center</property>
+                                                                <property name="adjustment">
+                                                                    <object class="GtkAdjustment">
+                                                                        <property name="lower">2</property>
+                                                                        <property name="upper">8</property>
+                                                                        <property name="step-increment">2</property>
+                                                                        <property name="value">4</property>
+                                                                    </object>
+                                                                </property>
+                                                            </object>
+                                                        </child>
+                                                    </object>
+                                                </child>
+                                            </object>
+                                        </child>
+
+                                        <child>
+                                            <object class="TextArea" id="input_area">
+                                                <property name="name">Input</property>
+                                                <property name="show-clear-btn">true</property>
+                                                <property name="show-paste-btn">true</property>
+                                                <property name="show-open-btn">true</property>
+                                                <property name="use-default-text-extensions">true</property>
+                                            </object>
+                                        </child>
+                                        <child>
+                                            <object class="TextArea" id="output_area">
+                                                <property name="name">Output</property>
+                                                <property name="show-copy-btn">true</property>
+                                                <property name="show-clear-btn">false</property>
+                                                <property name="show-paste-btn">false</property>
+                                                <property name="show-open-btn">false</property>
+                                                <property name="text-editable">false</property>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </property>
+                            </object>
+                        </property>
+                    </object>
+                </property>
+            </object>
+        </child>
+    </template>
+</interface>

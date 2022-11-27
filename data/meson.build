@@ -1,3 +1,6 @@
+# Copyright (C) 2022 Alessandro Iepure
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
 
@@ -8,21 +11,31 @@ gnome.compile_resources('devtoolbox',
   install_dir: pkgdatadir,
 )
 
-desktop_file = i18n.merge_file(
-  input: 'me.iepure.devtoolbox.desktop.in',
-  output: 'me.iepure.devtoolbox.desktop',
+# Merging the translations with the desktop file
+desktop_conf = configuration_data()
+desktop_conf.set('icon', project_id)
+i18n.merge_file(
   type: 'desktop',
-  po_dir: '../po',
+  input: configure_file(
+    output: project_rdnn_name + '.desktop.in',
+    input: project_rdnn_name + '.desktop.in.in',
+    configuration: desktop_conf),
+  output: project_id + '.desktop',
+  po_dir: join_paths(meson.project_source_root(), 'po'),
   install: true,
-  install_dir: join_paths(get_option('datadir'), 'applications')
+  install_dir: join_paths(get_option('prefix'), get_option('datadir'), 'applications')
 )
 
-desktop_utils = find_program('desktop-file-validate', required: false)
-if desktop_utils.found()
-  test('Validate desktop file', desktop_utils,
-    args: [desktop_file]
+# Validating the desktop file
+desktop_file_validate = find_program('desktop-file-validate', required:false)
+if desktop_file_validate.found()
+  test (
+    'Validate desktop file',
+    desktop_file_validate,
+    args: join_paths(meson.current_build_dir (), project_id + '.desktop')
   )
 endif
+
 
 appstream_file = i18n.merge_file(
   input: 'me.iepure.devtoolbox.appdata.xml.in',
@@ -48,6 +61,8 @@ if compile_schemas.found()
   test('Validate schema file', compile_schemas,
     args: ['--strict', '--dry-run', meson.current_source_dir()]
   )
+else
+  message('not found')
 endif
 
 subdir('icons')

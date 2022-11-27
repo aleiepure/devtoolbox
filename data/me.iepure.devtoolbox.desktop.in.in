@@ -1,0 +1,12 @@
+# Copyright (C) 2022 Alessandro Iepure
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+[Desktop Entry]
+Name=Dev Toolbox
+Exec=devtoolbox
+Icon=@icon@
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

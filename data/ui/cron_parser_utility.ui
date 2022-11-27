@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+    <requires lib="gtk" version="4.0" />
+    <requires lib="libadwaita" version="1.0" />
+    <template class="CronParserUtility" parent="AdwBin">
+        <child>
+            <object class="AdwToastOverlay" id="toast">
+                <property name="child">
+                    <object class="GtkScrolledWindow">
+                        <property name="child">
+
+                            <object class="AdwClamp">
+                                <property name="child">
+                                    <object class="GtkBox">
+                                        <property name="orientation">vertical</property>
+
+                                        <!-- Title bar -->
+                                        <child>
+                                            <object class="UtilityTitle">
+                                                <property name="title">Cron parser</property>
+                                                <property name="description">Interpret cron expressions to get the next dates of execution</property>
+                                                <property name="utility-name">cronparser</property>
+                                            </object>
+                                        </child>
+
+                                        <!-- Divider -->
+                                        <child>
+                                            <object class="GtkSeparator">
+                                                <property name="margin-top">10</property>
+                                                <property name="margin-bottom">10</property>
+                                            </object>
+                                        </child>
+
+                                        <!-- Content -->
+                                        <child>
+                                            <object class="AdwPreferencesGroup">
+                                                <child>
+                                                    <object class="AdwActionRow">
+                                                        <property name="title" translatable="yes">Scheduled dates</property>
+                                                        <property name="subtitle" translatable="yes">Number of dates to be generated (up to 16)</property>
+                                                        <property name="icon-name">today-alt-symbolic</property>
+                                                        <child type="suffix">
+                                                            <object class="GtkSpinButton" id="dates_spinner">
+                                                                <property name="valign">center</property>
+                                                                <property name="adjustment">
+                                                                    <object class="GtkAdjustment">
+                                                                        <property name="lower">1</property>
+                                                                        <property name="upper">16</property>
+                                                                        <property name="step-increment">1</property>
+                                                                        <property name="value">5</property>
+                                                                    </object>
+                                                                </property>
+                                                            </object>
+                                                        </child>
+                                                    </object>
+                                                </child>
+                                                <child>
+                                                    <object class="AdwActionRow">
+                                                        <property name="title" translatable="yes">Output format</property>
+                                                        <property name="subtitle" translatable="yes">Format used to display generated dates (&lt;a href="https://strftime.org/"&gt;python syntax&lt;/a&gt;)</property>
+                                                        <property name="icon-name">format-text-rich-symbolic</property>
+                                                        <child type="suffix">
+                                                            <object class="GtkText" id="format_text">
+                                                                <property name="valign">center</property>
+                                                                <property name="width-request">250</property>
+                                                                <property name="height-request">30</property>
+                                                                <property name="text">%c</property>
+                                                                <style>
+                                                                    <class name="view" />
+                                                                    <class name="rounded-border" />
+                                                                    <class name="padding-left-8" />
+                                                                </style>
+                                                            </object>
+                                                        </child>
+                                                    </object>
+                                                </child>
+                                            </object>
+                                        </child>
+                                        <child>
+                                            <object class="TextArea" id="input_area">
+                                                <property name="area-height">40</property>
+                                                <property name="name">Expression</property>
+                                                <property name="show-copy-btn">true</property>
+                                                <property name="show-paste-btn">true</property>
+                                                <property name="show-clear-btn">true</property>
+                                            </object>
+                                        </child>
+                                        <child>
+                                            <object class="TextArea" id="output_area">
+                                                <property name="name">Dates</property>
+                                                <property name="show-copy-btn">true</property>
+                                                <property name="text-editable">false</property>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </property>
+                            </object>
+                        </property>
+                    </object>
+                </property>
+            </object>
+
+        </child>
+    </template>
+</interface>

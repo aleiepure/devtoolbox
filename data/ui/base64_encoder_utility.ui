@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+    <requires lib="gtk" version="4.0" />
+    <requires lib="libadwaita" version="1.0" />
+    <template class="Base64EncoderUtility" parent="AdwBin">
+        <child>
+            <object class="AdwToastOverlay" id="toast">
+                <property name="child">
+                    <object class="GtkScrolledWindow">
+                        <property name="child">
+                            <object class="AdwClamp">
+                                <property name="child">
+                                    <object class="GtkBox">
+                                        <property name="orientation">vertical</property>
+
+                                        <!-- Title bar -->
+                                        <child>
+                                            <object class="UtilityTitle" id="titlebar">
+                                                <property name="title" translatable="yes">Base64 Encoder &amp; Decoder</property>
+                                                <property name="description">Encode and decode text and images to and from base64</property>
+                                                <property name="utility-name">base64encoder</property>
+                                            </object>    
+                                        </child>
+
+                                        <!-- Divider -->
+                                        <child>
+                                            <object class="GtkSeparator">
+                                                <property name="margin-top">10</property>
+                                                <property name="margin-bottom">10</property>
+                                            </object>
+                                        </child>
+
+                                        <!-- Content -->
+                                        <child>
+                                            <object class="AdwPreferencesGroup">
+                                                <child>
+                                                    <object class="AdwActionRow">
+                                                        <property name="title" translatable="yes">Direction</property>
+                                                        <property name="subtitle" translatable="yes">Select the desired conversion direction</property>
+                                                        <property name="icon-name">right-left-symbolic</property>
+                                                        <child>
+                                                            <object class="GtkBox">
+                                                                <style>
+                                                                    <class name="linked" />
+                                                                </style>
+                                                                <property name="orientation">horizontal</property>
+                                                                <property name="valign">center</property>
+                                                                <child>
+                                                                    <object class="GtkToggleButton" id="encode_direction_toggle">
+                                                                        <property name="active">true</property>
+                                                                        <property name="label" translatable="yes">Encode</property>
+                                                                    </object>
+                                                                </child>
+                                                                <child>
+                                                                    <object class="GtkToggleButton">
+                                                                        <property name="active">false</property>
+                                                                        <property name="group">encode_direction_toggle</property>
+                                                                        <property name="label" translatable="yes">Decode</property>
+                                                                    </object>
+                                                                </child>
+                                                            </object>
+                                                        </child>
+                                                    </object>
+                                                </child>
+                                            </object>
+                                        </child>
+                                        <child>
+                                            <object class="TextImageArea" id="input_area">
+                                                <property name="name">Input</property>
+                                                <property name="show-clear-btn">true</property>
+                                                <property name="show-paste-btn">true</property>
+                                                <property name="show-open-btn">true</property>
+                                                <property name="use-default-text-extensions">true</property>
+                                                <property name="use-default-image-extensions">true</property>
+                                            </object>
+                                        </child>
+                                        <child>
+                                            <object class="TextImageArea" id="output_area">
+                                                <property name="name">Output</property>
+                                                <property name="show-copy-btn">true</property>
+                                                <property name="show-clear-btn">false</property>
+                                                <property name="show-paste-btn">false</property>
+                                                <property name="show-open-btn">false</property>
+                                                <property name="text-editable">false</property>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </property>
+                            </object>
+                        </property>
+                    </object>
+                </property>
+            </object>
+        </child>
+
+    </template>
+</interface>

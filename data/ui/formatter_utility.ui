@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+    <requires lib="gtk" version="4.0" />
+    <requires lib="libadwaita" version="1.0" />
+    <template class="FormatterUtility" parent="AdwBin">
+        <child>
+            <object class="AdwToastOverlay" id="toast">
+                <property name="child">
+                    <object class="GtkScrolledWindow">
+                        <property name="child">
+                            <object class="AdwClamp">
+                                <property name="child">
+                                    <object class="GtkBox">
+                                        <property name="orientation">vertical</property>
+
+                                        <!-- Title bar -->
+                                        <child>
+                                            <object class="UtilityTitle" id="titlebar">
+                                                <property name="title">Placeholder</property>
+                                                <property name="description">Format Placeholder documents</property>
+                                                <property name="utility-name">Placeholder</property>
+                                            </object>    
+                                        </child>
+
+                                        <!-- Divider -->
+                                        <child>
+                                            <object class="GtkSeparator">
+                                                <property name="margin-top">10</property>
+                                                <property name="margin-bottom">10</property>
+                                            </object>
+                                        </child>
+
+                                        <!-- Content -->
+                                        <child>
+                                            <object class="AdwPreferencesGroup">
+                                                <property name="margin-top">10</property>
+                                                <child>
+                                                    <object class="AdwActionRow">
+                                                        <property name="title" translatable="yes">Indentations</property>
+                                                        <property name="subtitle" translatable="yes">Number of spaces used for indenting</property>
+                                                        <property name="icon-name">spacebar-symbolic</property>
+                                                        <child type="suffix">
+                                                            <object class="GtkSpinButton" id="indents_spinner">
+                                                                <property name="valign">center</property>
+                                                                <property name="adjustment">
+                                                                    <object class="GtkAdjustment">
+                                                                        <property name="lower">2</property>
+                                                                        <property name="upper">8</property>
+                                                                        <property name="step-increment">2</property>
+                                                                        <property name="value">4</property>
+                                                                    </object>
+                                                                </property>
+                                                            </object>
+                                                        </child>
+                                                    </object>
+                                                </child>
+                                            </object>
+                                        </child>
+                                        <child>
+                                            <object class="TextArea" id="textarea">
+                                                <property name="name" translatable="yes">Type here</property>
+                                                <property name="show-action-btn">true</property>
+                                                <property name="show-clear-btn">true</property>
+                                                <property name="show-copy-btn">true</property>
+                                                <property name="show-paste-btn">true</property>
+                                                <property name="show-open-btn">true</property>
+                                                <property name="action-name" translatable="yes">Format</property>
+                                                <property name="text-show-line-numbers">true</property>
+                                                <property name="text-highlight-current-line">true</property>
+                                                <property name="text-syntax-highlighting">true</property>
+                                                <property name="area-height">500</property>
+                                                <property name="use-custom-file-extensions">true</property>
+                                            </object>
+                                        </child>
+                                    </object>
+                                </property>
+                            </object>
+                        </property>
+                    </object>
+                </property>
+            </object>
+        </child>
+    </template>
+</interface>

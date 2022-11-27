@@ -1,35 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
 <interface>
   <requires lib="gtk" version="4.0" />
   <requires lib="libadwaita" version="1.0" />
   <template class="MainWindow" parent="AdwApplicationWindow">
-    <property name="title" translatable="yes">Hello world</property>
-    <property name="default_width">600</property>
-    <property name="default_height">300</property>
-    <child>
+
+    <property name="default_width">1200</property>
+    <property name="default_height">850</property>
+   
+    <property name="content">
       <object class="GtkBox" id="main_content">
         <property name="orientation">vertical</property>
+
+        <!-- Header bar -->
         <child>
           <object class="AdwHeaderBar">
+            <child type="title">
+              <object class="AdwViewSwitcherTitle" id="title">
+                <property name="title">Dev Toolbox</property>
+                <property name="stack">tab_stack</property>
+              </object>
+            </child>
             <child type="end">
-              <object class="GtkMenuButton" id="app_button">
-                <property name="menu-model">app_menu</property>
+              <object class="GtkMenuButton">
                 <property name="icon-name">open-menu-symbolic</property>
+                <property name="menu-model">app_menu</property>
               </object>
             </child>
           </object>
         </child>
+
+        <!-- Window content -->
         <child>
-          <object class="GtkLabel" id="label">
-            <property name="label">Hello, World!</property>
-            <attributes>
-              <attribute name="weight" value="bold"/>
-              <attribute name="scale" value="2"/>
-            </attributes>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+
+            <!-- ViewStack -->
+            <child>
+              <object class="AdwViewStack" id="tab_stack"/>
+            </child>
+
           </object>
         </child>
+
       </object>
-    </child>
+    </property>
+
     <style>
       <class name="devel" />
     </style>
@@ -55,4 +77,5 @@
       </item>
     </section>
   </menu>
+
 </interface>

@@ -1,8 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
 <gresources>
   <gresource prefix="/me/iepure/devtoolbox">
+    <file alias="style.css">css/style.css</file>
     <file preprocess="xml-stripblanks">ui/main.ui</file>
-    <file >css/main.css</file>
+    <file preprocess="xml-stripblanks">ui/about_window.ui</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+    <file preprocess="xml-stripblanks">ui/utilities_view.ui</file>
+    <file preprocess="xml-stripblanks">ui/empty_favorites.ui</file>
+    <file preprocess="xml-stripblanks">ui/json2yaml_utility.ui</file>
+    <file preprocess="xml-stripblanks">ui/timestamp_utility.ui</file>
+    <file preprocess="xml-stripblanks">ui/formatter_utility.ui</file>
+    <file preprocess="xml-stripblanks">ui/number_base_utility.ui</file>
+    <file preprocess="xml-stripblanks">ui/cron_parser_utility.ui</file>
+    <file preprocess="xml-stripblanks">ui/url_encoder_utility.ui</file>
+    <file preprocess="xml-stripblanks">ui/jwt_decoder_utility.ui</file>
+    <file preprocess="xml-stripblanks">ui/html_encoder_utility.ui</file>
+    <file preprocess="xml-stripblanks">ui/gzip_encoder_utility.ui</file>
+    <file preprocess="xml-stripblanks">ui/base64_encoder_utility.ui</file>
+    <file preprocess="xml-stripblanks">ui/lorem_ipsum_generator.ui</file>
+    <file preprocess="xml-stripblanks">ui/hash_generator_utility.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/text_area.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/utility_title.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/text_image_area.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/text_image_file_area.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/textfield_action_row.ui</file>
+  </gresource>
+  <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
+    <file preprocess="xml-stripblanks" alias="db-symbolic.svg">icons/symbolic/db-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="key-symbolic.svg">icons/symbolic/key-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="plus-symbolic.svg">icons/symbolic/plus-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="text-symbolic.svg">icons/symbolic/text-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="code-symbolic.svg">icons/symbolic/code-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="link-symbolic.svg">icons/symbolic/link-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="globe-symbolic.svg">icons/symbolic/globe-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="base64-symbolic.svg">icons/symbolic/base64-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="hashtag-symbolic.svg">icons/symbolic/hashtag-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="spacebar-symbolic.svg">icons/symbolic/spacebar-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="file-zip-symbolic.svg">icons/symbolic/file-zip-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="today-alt-symbolic.svg">icons/symbolic/today-alt-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="right-left-symbolic.svg">icons/symbolic/right-left-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="paper-filled-symbolic.svg">icons/symbolic/paper-filled-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="clock-rotate-symbolic.svg">icons/symbolic/clock-rotate-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="hourglass-half-symbolic.svg">icons/symbolic/hourglass-half-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="text-indent-more-symbolic.svg">icons/symbolic/text-indent-more-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="horizontal-arrows-symbolic.svg">icons/symbolic/horizontal-arrows-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="grid-filled-symbolic.svg">icons/symbolic/grid-filled-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="paragraph-symbolic.svg">icons/symbolic/paragraph-symbolic.svg</file>
   </gresource>
 </gresources>

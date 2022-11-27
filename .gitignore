@@ -1,3 +1,9 @@
-**/__pycache__/
-.flatpak*
-_build
+# Copyright (C) 2022 Alessandro Iepure
+#
+# SPDX-License-Identifier: CC0-1.0
+
+.flatpak*/
+_build/
+.vscode/
+.reuse/
+po/

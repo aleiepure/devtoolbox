@@ -1,6 +1,10 @@
+# Copyright (C) 2022 Alessandro Iepure
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 app-id: me.iepure.devtoolbox
 runtime: org.gnome.Platform
-runtime-version: "42"
+runtime-version: "43"
 sdk: org.gnome.Sdk
 command: devtoolbox
 finish-args:
@@ -8,6 +12,7 @@ finish-args:
     - --share=ipc
     - --socket=fallback-x11
     - --socket=wayland
+    - --env=PYTHONPATH=/app/plugins/site-packages
 cleanup:
     - "/include"
     - "/lib/pkgconfig"
@@ -22,10 +27,111 @@ build-options:
     build-args:
     - --share=network
 modules:
+
+    - name: gtksourceview
+      buildsystem: meson
+      sources:
+        - type: archive
+          url: https://download.gnome.org/sources/gtksourceview/5.6/gtksourceview-5.6.1.tar.xz
+          sha256: 659d9cc9d034a114f07e7e134ee80d77dec0497cb1516ae5369119c2fcb9da16
+
+    - name: python-yaml
+      buildsystem: simple
+      build-commands: 
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "ruamel.yaml" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/8b/25/08e5ad2431a028d0723ca5540b3af6a32f58f25e83c6dda4d0fcef7288a3/ruamel.yaml.clib-0.2.6.tar.gz
+          sha256: 4ff604ce439abb20794f05613c374759ce10e3595d1867764dd1ae675b85acbd
+        - type: file
+          url: https://files.pythonhosted.org/packages/9e/cb/938214ac358fbef7058343b3765c79a1b7ed0c366f7f992ce7ff38335652/ruamel.yaml-0.17.21-py3-none-any.whl
+          sha256: 742b35d3d665023981bd6d16b3d24248ce5df75fdb4e2924e93a05c1f8b61ca7
+
+    - name: python3-pytz
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "pytz" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/60/2e/dec1cc18c51b8df33c7c4d0a321b084cf38e1733b98f9d15018880fb4970/pytz-2022.1-py2.py3-none-any.whl
+          sha256: e68985985296d9a66a881eb3193b0906246245294a881e7c8afe623866ac6a5c
+
+    - name: python-dateutil
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "python-dateutil" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl
+          sha256: 961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9
+
+    - name: python-crontab
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "python-crontab" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/06/b0/c270a1b5c83d9e0f83ab654d3153c39d80f61ba49fefde50fd23ab351381/python-crontab-2.6.0.tar.gz
+          sha256: 1e35ed7a3cdc3100545b43e196d34754e6551e7f95e4caebbe0e1c0ca41c2f1b
+
+    - name: croniter
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "croniter" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/dd/be/6a103f9dce27a824231215085c7000899d5f051fbd9e4cf2ed9a2fba7701/croniter-1.3.5-py2.py3-none-any.whl
+          sha256: 4f72faca42c00beb6e30907f1315145f43dfbe5ec0ad4ada24b4c0d57b86a33a
+
+    - name: python3-pyjwt
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "pyjwt" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/1c/fb/b82e9601b00d88cf8bbee1f39b855ae773f9d5bcbcedb3801b2f72460696/PyJWT-2.4.0-py3-none-any.whl
+          sha256: 72d1d253f32dbd4f5c88eaf1fdc62f3a19f676ccbadb9dbc5d07e951b2b26daf
+
+    - name: python3-sqlparse
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "sqlparse" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/05/40/d836d55fb3f467243ee839ab7b814822fda522cd395fa41e282684e71ee5/sqlparse-0.4.2-py3-none-any.whl
+          sha256: 48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d
+
+    - name: python3-lxml
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "lxml" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/70/bb/7a2c7b4f8f434aa1ee801704bf08f1e53d7b5feba3d5313ab17003477808/lxml-4.9.1.tar.gz
+          sha256: fe749b052bb7233fe5d072fcb549221a8cb1a16725c47c37e42b0b9cb3ff2c3f
+
+    - name: python3-python-lorem
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "python-lorem" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/ea/bf/e5a08f019fe821e2c77c542be35e90efffae49359b48b7dd3ca9e638c0db/python_lorem-1.1.2-py3-none-any.whl
+          sha256: 7fee2289b7f034653034a7ef2f1bde860346ccc99748c852a25f596de12d9ccb
+
+    - name: python3-humanize
+      buildsystem: simple
+      build-commands:
+        - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "humanize" --no-build-isolation
+      sources:
+        - type: file
+          url: https://files.pythonhosted.org/packages/9d/fc/28d2b631c5220b2a594d5d13b6ad79ee60d50688f1cd43f6707c06fb0db4/humanize-4.4.0-py3-none-any.whl
+          sha256: 8830ebf2d65d0395c1bd4c79189ad71e023f277c2c7ae00f263124432e6f2ffa
+
     - name: devtoolbox
       builddir: true
       buildsystem: meson
-      sources:
-          - type: git
-            branch: main
-            url: file:///home/ale/Dev/devtoolbox
+      source:
+        - type: git
+          branch: main
+          url: file:///home/ale/Dev/devtoolbox
