@@ -1,0 +1,6 @@
+data/me.iepure.devtoolbox.desktop.in
+data/me.iepure.devtoolbox.appdata.xml.in
+data/me.iepure.devtoolbox.gschema.xml
+src/main.py
+src/window.py
+src/window.ui

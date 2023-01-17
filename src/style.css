@@ -1,0 +1,26 @@
+/*
+ * Copyright (C) 2022-2023 Alessandro Iepure
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/* Main CSS for application */
+
+.rounded-border {
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.padding-left-8 {
+  padding-left: 8px;
+}
+
+.border-red {
+  border: 1px solid red;
+}
+
+.view {
+	background-color: #252525;
+}

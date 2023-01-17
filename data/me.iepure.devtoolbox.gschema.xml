@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<schemalist gettext-domain="devtoolbox">
+	<schema id="me.iepure.devtoolbox" path="/me/iepure/devtoolbox/">
+		<key name="window-width" type="i">
+			<default>1200</default>
+		</key>
+		<key name="window-height" type="i">
+			<default>850</default>
+		</key>
+		<key name="window-maximized" type="b">
+			<default>false</default>
+		</key>
+		<key name="favorites" type="as">
+			<default>[]</default>
+		</key>
+		<key name="last-tab" type="s">
+			<default>"converters"</default>
+		</key>
+		<key name="last-utility" type="s">
+			<default>"json-yaml"</default>
+		</key>
+	  <key name="style-scheme" type="s">
+	    <default>"Adwaita-dark"</default>
+	  </key>
+	</schema>
+</schemalist>
+
