@@ -133,7 +133,8 @@ class TextFileArea(Adw.Bin):
 
     def _on_open_clicked(self, data):
 
-        # Start loading animation
+        # Start loading animation and disable open button
+        self._open_btn.set_sensitive(False)
         self._stack.set_visible_child_name("loading")
 
         # Create a file chooser
@@ -179,6 +180,7 @@ class TextFileArea(Adw.Bin):
         if response == Gtk.ResponseType.ACCEPT:
             self._open_file(dialog.get_file())
         else:
+            self._open_btn.set_sensitive(True)
             self._stack.set_visible_child_name("text-area")
 
         self._native = None
@@ -207,12 +209,14 @@ class TextFileArea(Adw.Bin):
             text_buffer = self._textview.get_buffer()
             text_buffer.set_text(text)
             text_buffer.place_cursor(text_buffer.get_end_iter())
+            self._open_btn.set_sensitive(True)
             self._stack.set_visible_child_name("text-area")
             self.emit("text-loaded")
         elif Utils.is_image(contents[1]):
             texture = Gdk.Texture.new_from_bytes(GLib.Bytes(contents[1]))
             self._fileview.set_file_path(file.peek_path())
             self._imageview.set_paintable(texture)
+            self._open_btn.set_sensitive(True)
             self._stack.set_visible_child_name("image-area")
             self.emit("image-loaded")
         else:
@@ -220,6 +224,7 @@ class TextFileArea(Adw.Bin):
             file_size = file.query_info("*", 0, None).get_size()
             self._fileview.set_file_path(file_path)
             self._fileview.set_file_size(humanize.naturalsize(file_size))
+            self._open_btn.set_sensitive(True)
             self._stack.set_visible_child_name("file-area")
             self.emit("file-loaded")
 

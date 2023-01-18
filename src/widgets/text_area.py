@@ -24,9 +24,6 @@ class TextArea(Adw.Bin):
     _stack       = Gtk.Template.Child()
     _loading_lbl = Gtk.Template.Child()
 
-    # GSettings
-    _settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
-
     # Properties
     name                        = GObject.Property(type=str, default="")
     show_clear_btn              = GObject.Property(type=bool, default=False)
@@ -126,7 +123,8 @@ class TextArea(Adw.Bin):
 
     def _on_open_clicked(self, data):
 
-        # Start loading animation
+        # Start loading animation and disable button
+        self._open_btn.set_sensitive(False)
         self._stack.set_visible_child_name("loading")
 
         # Create a file chooser
@@ -159,6 +157,7 @@ class TextArea(Adw.Bin):
         if response == Gtk.ResponseType.ACCEPT:
             self._open_file(dialog.get_file())
         else:
+            self._open_btn.set_sensitive(True)
             self._stack.set_visible_child_name("text-area")
 
         self._native = None
@@ -184,10 +183,12 @@ class TextArea(Adw.Bin):
             text_buffer = self._textview.get_buffer()
             text_buffer.set_text(text)
             text_buffer.place_cursor(text_buffer.get_end_iter())
+            self._open_btn.set_sensitive(True)
             self._stack.set_visible_child_name("text-area")
             self.emit("text-loaded")
         else:
             self._textview.get_buffer().set_text("")
+            self._open_btn.set_sensitive(True)
             self._stack.set_visible_child_name("text-area")
             self.emit("error", "File is not UTF-8 encoded.")
 

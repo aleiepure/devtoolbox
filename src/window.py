@@ -17,45 +17,95 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Adw, Gtk
+from gi.repository import Adw, Gtk, Gio
 
 
 @Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/window.ui')
 class DevtoolboxWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'DevtoolboxWindow'
 
-    _textarea = Gtk.Template.Child()
+    # Template elements
+    _flap_btn = Gtk.Template.Child()
+    _flap     = Gtk.Template.Child()
+    _stack    = Gtk.Template.Child()
+
+    # GSettings
+    _settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-        self._textarea.custom_file_extensions = ["iso"]
+        categories = {
+            "favorites": {
+                "title": _("Favorites"),
+                "icon-name": "starred",
+                "child": Gtk.Label(label="Favorites")
+            },
+            "converters": {
+                "title": _("Converters"),
+                "icon-name": "horizontal-arrows-symbolic",
+                "child": Gtk.Label(label="Converters")
+            },
+            "encoders": {
+                "title": _("Encoders"),
+                "icon-name": "folder-templates-symbolic",
+                "child": Gtk.Label(label="Encoders")
+            },
+            "formatters": {
+                "title": _("Formatters"),
+                "icon-name": "text-indent-symbolic",
+                "child": Gtk.Label(label="Formatters")
+            },
+            "generators": {
+                "title": _("Generators"),
+                "icon-name": "plus-symbolic",
+                "child": Gtk.Label(label="Generators")
+            },
+            "text": {
+                "title": _("Text"),
+                "icon-name": "text-ab-symbolic",
+                "child": Gtk.Label(label="Text")
+            },
+            "graphics": {
+                "title": _("Graphics"),
+                "icon-name": "brush-symbolic",
+                "child": Gtk.Label(label="Graphics")
+            }
+        }
 
-        self._textarea.connect("action-clicked", self._on_action_clicked),
-        self._textarea.connect("text-changed", self._on_text_changed)
-        self._textarea.connect("view-cleared", self._on_view_cleared)
-        self._textarea.connect("text-loaded", self._on_text_loaded)
-        self._textarea.connect("big-file", self._on_big_file)
-        self._textarea.connect("error", self._on_error)
+        # Setup tabs
+        for t in categories:
+            self._stack.add_named(categories[t]["child"], t)
+            page = self._stack.get_page(categories[t]["child"])
+            page.set_title(categories[t]["title"])
+            page.set_icon_name(categories[t]["icon-name"])
 
-    def _on_action_clicked(self, data):
-        print("Action!")
+        # Signals
+        self._flap_btn.connect("toggled", self._on_flap_btn_clicked)
+        self.connect("close-request", self._on_close_request)
 
-    def _on_text_changed(self, data):
-        print("change")
-
-    def _on_view_cleared(self, data):
-        print("clear")
-
-    def _on_text_loaded(self, data):
-        print("loaded")
-
-    def _on_big_file(self, data):
-        print("big file")
-
-    def _on_error(self, data, error):
-        print(f"error: {error}")
+        # Restore last state
+        self._settings.bind("window-width",     self, "default-width",  Gio.SettingsBindFlags.DEFAULT)
+        self._settings.bind("window-height",    self, "default-height", Gio.SettingsBindFlags.DEFAULT)
+        self._settings.bind("window-maximized", self, "maximized",      Gio.SettingsBindFlags.DEFAULT)
+        self._stack.set_visible_child_name(self._settings.get_string("last-tab"))
+        # if self._stack.get_visible_child_name() != "favorites":
+        #     self._stack.get_visible_child()._sidebar_stack.set_visible_child_name(
+        #         self._settings.get_string("last-utility"))
+        #     for i in range(0, 10):
+        #             row = self._stack.get_visible_child()._sidebar.get_row_at_index(i)
+        #             if row != None and row.get_page_name() == self._settings.get_string("last-utility"):
+        #                 self._stack.get_visible_child().sidebar.select_row(row)
 
 
+    def _on_flap_btn_clicked(self, data):
+        self._flap.set_reveal_flap(self._flap_btn.get_active())
+
+    def _on_close_request(self, data):
+        tab = self._stack.get_visible_child_name()
+        # if tab != "favorites":
+        #     utility = self.tab_stack.get_visible_child().sidebar_stack.get_visible_child_name()
+        #     self.settings.set_string("last-utility", utility)
+        self._settings.set_string("last-tab", tab)
 
     

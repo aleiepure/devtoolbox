@@ -3,13 +3,27 @@
   <requires lib="gtk" version="4.0"/>
   <requires lib="Adw" version="1.0"/>
   <template class="DevtoolboxWindow" parent="AdwApplicationWindow">
-    <property name="default-width">600</property>
-    <property name="default-height">300</property>
+    <property name="default-width">1200</property>
+    <property name="default-height">850</property>
     <child>
       <object class="GtkBox">
         <property name="orientation">vertical</property>
+
+        <!-- Header bar -->
         <child>
-          <object class="GtkHeaderBar" id="header_bar">
+          <object class="AdwHeaderBar" id="_header_bar">
+            <child type="title">
+              <object class="AdwViewSwitcherTitle" id="_title">
+                <property name="title">Dev Toolbox</property>
+                <property name="stack">_stack</property>
+              </object>
+            </child>
+            <child type="start">
+              <object class="GtkToggleButton" id="_flap_btn">
+                <property name="icon-name">sidebar</property>
+                <property name="active">true</property>
+              </object>
+            </child>
             <child type="end">
               <object class="GtkMenuButton">
                 <property name="icon-name">open-menu-symbolic</property>
@@ -18,32 +32,53 @@
             </child>
           </object>
         </child>
+
+        <!-- Window content -->
         <child>
+          <object class="AdwFlap" id="_flap">
+            <property name="vexpand">true</property>
+            <property name="fold-policy">auto</property>
+            <property name="modal">true</property>
+            <property name="reveal-flap">true</property>
+            <property name="locked">true</property>
 
-          <!-- Change here -->
-          <object class="TextFileArea" id="_textarea">
-            <property name="name">Input Area</property>
-            <property name="show-action-btn">true</property>
-            <property name="show-copy-btn">true</property>
-            <property name="show-paste-btn">true</property>
-            <property name="show-open-btn">true</property>
-            <property name="show-clear-btn">true</property>
-            <property name="action-name">Action!</property>
-            <property name="text-show-line-numbers">true</property>
-            <property name="text-highlight-current-line">true</property>
-            <property name="text-syntax-highlighting">true</property>
-            <property name="text_language_highlight">python</property>
-            <property name="area-height">500</property>
-            <property name="use_default_text_extensions">true</property>
-            <property name="use_default_image_extensions">true</property>
-            <property name="use_custom_file_extensions">true</property>
+            <!-- Sidebar -->
+            <child type="flap">
+              <object class="GtkLabel">
+                <property name="label">Flap</property>
+              </object>
+            </child>
+
+            <child type="separator">
+              <object class="GtkSeparator" />
+            </child>
+
+            <!-- Window content -->
+            <child type="content">
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="AdwViewStack" id="_stack">
+                  </object>
+                </child>
+              </object>
+            </child>
+
           </object>
-          <!-- Change here -->
-
+        </child>
+        <child>
+          <object class="AdwViewSwitcherBar">
+            <property name="stack">_stack</property>
+            <binding name="reveal">
+              <lookup name="title-visible">_title</lookup>
+            </binding>
+          </object>
         </child>
       </object>
     </child>
   </template>
+
+  <!-- Menu -->
   <menu id="primary_menu">
     <section>
       <item>
@@ -60,4 +95,5 @@
       </item>
     </section>
   </menu>
+
 </interface>

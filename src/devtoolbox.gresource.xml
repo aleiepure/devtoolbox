@@ -8,5 +8,18 @@
     <file preprocess="xml-stripblanks">ui/widgets/text_area.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/text_file_area.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/file_viewer.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/text_field_action_row.ui</file>
+  </gresource>
+  <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
+    <file preprocess="xml-stripblanks" alias="non-starred-symbolic.svg">../data/icons/symbolic/non-starred-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="starred-symbolic.svg">../data/icons/symbolic/starred-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="paper-filled-symbolic.svg">../data/icons/symbolic/paper-filled-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="sidebar-symbolic.svg">../data/icons/symbolic/sidebar-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="brush-symbolic.svg">../data/icons/symbolic/brush-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="folder-templates-symbolic.svg">../data/icons/symbolic/folder-templates-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="horizontal-arrows-symbolic.svg">../data/icons/symbolic/horizontal-arrows-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="plus-symbolic.svg">../data/icons/symbolic/plus-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="text-ab-symbolic.svg">../data/icons/symbolic/text-ab-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="text-indent-symbolic.svg">../data/icons/symbolic/text-indent-symbolic.svg</file>
   </gresource>
 </gresources>

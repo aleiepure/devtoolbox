@@ -6,7 +6,8 @@ sources = [
   'utility_title.py',
   'text_area.py',
   'file_viewer.py',
-  'text_file_area.py'
+  'text_file_area.py',
+  'text_field_action_row.py'
 ]
 
 install_data(sources, install_dir: widgetsdir)
