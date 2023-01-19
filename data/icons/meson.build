@@ -1,3 +1,7 @@
+# Copyright (C) 2022 - 2023 Alessandro Iepure
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 application_id = 'me.iepure.devtoolbox'
 
 scalable_dir = join_paths('hicolor', 'scalable', 'apps')

@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 - 2023 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
 <gresources>
   <gresource prefix="/me/iepure/devtoolbox">
     <file alias="style.css">css/style.css</file>
@@ -10,7 +17,7 @@
     <file preprocess="xml-stripblanks">ui/widgets/file_viewer.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/text_field_action_row.ui</file>
     <file preprocess="xml-stripblanks">ui/views/tab_content.ui</file>
-    <file preprocess="xml-stripblanks">ui/views/empty-favorites.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/empty_favorites.ui</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="non-starred-symbolic.svg">../data/icons/symbolic/non-starred-symbolic.svg</file>

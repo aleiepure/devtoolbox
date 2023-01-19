@@ -1,3 +1,7 @@
+# Copyright (C) 2022 - 2023 Alessandro Iepure
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 project('devtoolbox',
           version: '1.0.0',
     meson_version: '>= 0.59.0',

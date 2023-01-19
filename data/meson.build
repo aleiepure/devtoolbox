@@ -1,3 +1,7 @@
+# Copyright (C) 2022 - 2023 Alessandro Iepure
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 desktop_file = i18n.merge_file(
         input: 'me.iepure.devtoolbox.desktop.in',
        output: 'me.iepure.devtoolbox.desktop',

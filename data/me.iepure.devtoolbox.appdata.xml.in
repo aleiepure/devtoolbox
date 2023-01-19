@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 - 2023 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
 <component type="desktop">
 	<id>me.iepure.devtoolbox.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>

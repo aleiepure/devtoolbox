@@ -1,0 +1,24 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: devtoolbox
+Upstream-Contact: Alessandro Iepure <alessandro@iepure.me>
+Source: https://github.com/aleiepure/devtoolbox
+
+Files: data/icons/symbolic/*
+Copyright: GNOME Project
+License: LGPL-3.0-only
+
+Files: data/icons/hicolor/scalable/apps/*
+Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
+License: GPL-3.0-or-later
+
+Files: data/icons/hicolor/symbolic/apps/*
+Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
+License: GPL-3.0-or-later
+
+Files: me.iepure.devtoolbox.json
+Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
+License: GPL-3.0-or-later
+
+Files: po/LINGUAS, po/POTFILES
+Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
+License: GPL-3.0-or-later

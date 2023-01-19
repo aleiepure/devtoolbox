@@ -1,4 +1,4 @@
-# Copyright (C) 2022-2023 Alessandro Iepure
+# Copyright (C) 2022 - 2023 Alessandro Iepure
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -7,7 +7,7 @@ from gettext import gettext as _
 from .tab_content import TabContent
 
 
-@Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/views/empty-favorites.ui')
+@Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/views/empty_favorites.ui')
 class EmptyFavorites(Adw.Bin):
     __gtype_name__ = "EmptyFavorites"
 
