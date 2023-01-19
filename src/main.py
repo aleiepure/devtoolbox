@@ -31,6 +31,8 @@ from .widgets.text_area import TextArea
 from .widgets.file_viewer import FileViewer
 from .widgets.text_file_area import TextFileArea
 from .widgets.text_field_action_row import TextFieldActionRow
+from .widgets.sidebar_item import SidebarItem
+
 
 class DevtoolboxApplication(Adw.Application):
     """The main application singleton class."""
@@ -44,7 +46,8 @@ class DevtoolboxApplication(Adw.Application):
         TextArea,
         FileViewer,
         TextFileArea,
-        TextFieldActionRow
+        TextFieldActionRow,
+        SidebarItem,
     ]
 
     def __init__(self):

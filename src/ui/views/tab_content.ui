@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="TabContent" parent="AdwBin">
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="AdwFlap" id="_flap">
+            <property name="vexpand">true</property>
+            <!-- <property name="fold-policy">auto</property> -->
+            <!-- <property name="modal">true</property> -->
+            <!-- <property name="locked">true</property> -->
+
+            <!-- Sidebar -->
+            <child type="flap">
+              <object class="GtkListBox" id="_sidebar">
+                <property name="selection-mode">single</property>
+                <property name="vexpand">true</property>
+                <property name="width-request">220</property>
+                <style>
+                  <class name="navigation-sidebar" />
+                </style>
+              </object>
+            </child>
+            <child type="separator">
+              <object class="GtkSeparator" />
+            </child>
+
+            <!-- Content -->
+            <child type="content">
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="AdwViewStack" id="_content_stack" />
+                </child>
+              </object>
+            </child>
+
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

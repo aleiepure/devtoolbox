@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022-2023 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+    <requires lib="gtk" version="4.0" />
+    <requires lib="libadwaita" version="1.0" />
+    <template class="EmptyFavorites" parent="AdwBin">
+        <child>
+            <object class="AdwFlap" id="_flap">
+              <property name="vexpand">true</property>
+              <property name="fold-policy">auto</property>
+              <property name="modal">true</property>
+              <property name="locked">true</property>
+
+              <!-- Sidebar -->
+              <child type="flap">
+                <object class="GtkListBox" id="_sidebar">
+                  <property name="selection-mode">single</property>
+                  <property name="vexpand">true</property>
+                  <property name="width-request">220</property>
+                  <style>
+                    <class name="navigation-sidebar" />
+                  </style>
+                </object>
+              </child>
+              <child type="separator">
+                <object class="GtkSeparator" />
+              </child>
+
+              <!-- Content -->
+              <child type="content">
+                <object class="GtkBox">
+                  <property name="orientation">vertical</property>
+                  <property name="vexpand">true</property>
+                  <property name="valign">center</property>
+                  <child>
+                      <object class="GtkImage">
+                          <property name="icon-name">starred</property>
+                          <property name="pixel-size">120</property>
+                      </object>
+                  </child>
+                  <child>
+                      <object class="GtkLabel">
+                          <style>
+                              <class name="title-1" />
+                          </style>
+                          <property name="label" translatable="yes">Favorites</property>
+                      </object>
+                  </child>
+                  <child>
+                      <object class="GtkLabel">
+                          <style>
+                              <class name="title3" />
+                          </style>
+                          <property name="label" translatable="yes">Click the star button on your favorite utility to quickly find it in this tab</property>
+                      </object>
+                  </child>
+              </object>
+              </child>
+
+          </object>
+        </child>
+    </template>
+</interface>

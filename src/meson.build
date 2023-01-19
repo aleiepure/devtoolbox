@@ -26,6 +26,7 @@ configure_file(
 )
 
 subdir('widgets')
+subdir('views')
 
 devtoolbox_sources = [
   '__init__.py',

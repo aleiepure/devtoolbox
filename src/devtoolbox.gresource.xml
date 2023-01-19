@@ -9,6 +9,8 @@
     <file preprocess="xml-stripblanks">ui/widgets/text_file_area.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/file_viewer.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/text_field_action_row.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/tab_content.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/empty-favorites.ui</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="non-starred-symbolic.svg">../data/icons/symbolic/non-starred-symbolic.svg</file>
@@ -21,5 +23,6 @@
     <file preprocess="xml-stripblanks" alias="plus-symbolic.svg">../data/icons/symbolic/plus-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="text-ab-symbolic.svg">../data/icons/symbolic/text-ab-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="text-indent-symbolic.svg">../data/icons/symbolic/text-indent-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="hourglass-symbolic.svg">../data/icons/symbolic/hourglass-symbolic.svg</file>
   </gresource>
 </gresources>

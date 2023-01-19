@@ -15,13 +15,12 @@
             <child type="title">
               <object class="AdwViewSwitcherTitle" id="_title">
                 <property name="title">Dev Toolbox</property>
-                <property name="stack">_stack</property>
+                <property name="stack">_tabs_stack</property>
               </object>
             </child>
             <child type="start">
               <object class="GtkToggleButton" id="_flap_btn">
                 <property name="icon-name">sidebar</property>
-                <property name="active">true</property>
               </object>
             </child>
             <child type="end">
@@ -35,40 +34,21 @@
 
         <!-- Window content -->
         <child>
-          <object class="AdwFlap" id="_flap">
-            <property name="vexpand">true</property>
-            <property name="fold-policy">auto</property>
-            <property name="modal">true</property>
-            <property name="reveal-flap">true</property>
-            <property name="locked">true</property>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
 
-            <!-- Sidebar -->
-            <child type="flap">
-              <object class="GtkLabel">
-                <property name="label">Flap</property>
-              </object>
-            </child>
-
-            <child type="separator">
-              <object class="GtkSeparator" />
-            </child>
-
-            <!-- Window content -->
-            <child type="content">
-              <object class="GtkBox">
-                <property name="orientation">vertical</property>
-                <child>
-                  <object class="AdwViewStack" id="_stack">
-                  </object>
-                </child>
-              </object>
+            <!-- ViewStack -->
+            <child>
+              <object class="AdwViewStack" id="_tabs_stack"/>
             </child>
 
           </object>
         </child>
+
+        <!-- Bottom tab bar -->
         <child>
           <object class="AdwViewSwitcherBar">
-            <property name="stack">_stack</property>
+            <property name="stack">_tabs_stack</property>
             <binding name="reveal">
               <lookup name="title-visible">_title</lookup>
             </binding>
