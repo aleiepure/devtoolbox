@@ -33,5 +33,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="text-ab-symbolic.svg">../data/icons/symbolic/text-ab-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="text-indent-symbolic.svg">../data/icons/symbolic/text-indent-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="hourglass-symbolic.svg">../data/icons/symbolic/hourglass-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="spacebar-symbolic.svg">../data/icons/symbolic/spacebar-symbolic.svg</file>
   </gresource>
 </gresources>

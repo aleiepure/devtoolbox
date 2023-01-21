@@ -46,7 +46,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                           <object class="AdwActionRow">
                             <property name="title" translatable="yes">Direction</property>
                             <property name="subtitle" translatable="yes">Specify what format is the input and the desired output</property>
-                            <property name="icon-name">right-left-symbolic</property>
+                            <property name="icon-name">horizontal-arrows-symbolic</property>
                             <child type="suffix">
                               <object class="BinarySelector" id="_direction_selector">
                                 <property name="left-label">JSON → YAML</property>
