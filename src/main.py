@@ -17,6 +17,7 @@ from .widgets.file_viewer import FileViewer
 from .widgets.text_file_area import TextFileArea
 from .widgets.text_field_action_row import TextFieldActionRow
 from .widgets.sidebar_item import SidebarItem
+from .widgets.binary_selector import BinarySelector
 
 
 class DevtoolboxApplication(Adw.Application):
@@ -33,6 +34,7 @@ class DevtoolboxApplication(Adw.Application):
         TextFileArea,
         TextFieldActionRow,
         SidebarItem,
+        BinarySelector,
     ]
 
     def __init__(self):

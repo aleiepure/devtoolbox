@@ -3,6 +3,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gdk, GLib
+import json
+from ruamel import yaml
 
 
 class Utils():
@@ -23,3 +25,18 @@ class Utils():
         except GLib.GError:
             return False
 
+    @staticmethod
+    def is_json(input):
+        try:
+            json.loads(input)
+            return True
+        except json.JSONDecodeError:
+            return False
+
+    @staticmethod
+    def is_yaml(input):
+        try:
+            yaml.load(input, Loader=yaml.Loader)
+            return True
+        except yaml.YAMLError:
+            return False

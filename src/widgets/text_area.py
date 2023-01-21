@@ -13,19 +13,25 @@ class TextArea(Adw.Bin):
     __gtype_name__ = 'TextArea'
 
     # Template elements
-    _name_lbl    = Gtk.Template.Child()
-    _action_btn  = Gtk.Template.Child()
-    _separator   = Gtk.Template.Child()
-    _open_btn    = Gtk.Template.Child()
-    _copy_btn    = Gtk.Template.Child()
-    _paste_btn   = Gtk.Template.Child()
-    _clear_btn   = Gtk.Template.Child()
-    _textview    = Gtk.Template.Child()
-    _stack       = Gtk.Template.Child()
-    _loading_lbl = Gtk.Template.Child()
+    _name_lbl             = Gtk.Template.Child()
+    _spinner              = Gtk.Template.Child()
+    _spinner_separator    = Gtk.Template.Child()
+    _action_btn           = Gtk.Template.Child()
+    _action_btn_separator = Gtk.Template.Child()
+    _open_btn             = Gtk.Template.Child()
+    _copy_btn             = Gtk.Template.Child()
+    _paste_btn            = Gtk.Template.Child()
+    _clear_btn            = Gtk.Template.Child()
+    _textview             = Gtk.Template.Child()
+    _stack                = Gtk.Template.Child()
+    _loading_lbl          = Gtk.Template.Child()
+
+    # GSettings
+    _settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
 
     # Properties
     name                        = GObject.Property(type=str, default="")
+    show_spinner                = GObject.Property(type=bool, default=False)
     show_clear_btn              = GObject.Property(type=bool, default=False)
     show_copy_btn               = GObject.Property(type=bool, default=False)
     show_open_btn               = GObject.Property(type=bool, default=False)
@@ -42,6 +48,7 @@ class TextArea(Adw.Bin):
     use_custom_file_extensions  = GObject.Property(type=bool, default=False)
     custom_file_extensions      = GObject.Property(type=GObject.TYPE_STRV)
     loading_label               = GObject.Property(type=str, default="Opening file...")
+    allow_drag_and_drop         = GObject.Property(type=bool, default=True)
 
     # Custom signals
     __gsignals__ = {
@@ -66,17 +73,19 @@ class TextArea(Adw.Bin):
         # Drag and drop
         content = Gdk.ContentFormats.new_for_gtype(Gdk.FileList)
         target  = Gtk.DropTarget(formats=content, actions=Gdk.DragAction.COPY)
-        target.connect('drop', self._on_dnd_drop)
+        target.connect("drop", self._on_dnd_drop)
         self._textview.add_controller(target)
 
         # Property binding
         self.bind_property("name",                        self._name_lbl,              "label",                       GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-spinner",                self._spinner,               "visible",                     GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-spinner",                self._spinner_separator,     "visible",                     GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-clear-btn",              self._clear_btn,             "visible",                     GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-copy-btn",               self._copy_btn,              "visible",                     GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-open-btn",               self._open_btn,              "visible",                     GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-paste-btn",              self._paste_btn,             "visible",                     GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-action-btn",             self._action_btn,            "visible",                     GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-action-btn",             self._separator,             "visible",                     GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-action-btn",             self._action_btn_separator,  "visible",                     GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("action-name",                 self._action_btn,            "label",                       GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("text-editable",               self._textview,              "editable",                    GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("text-syntax-highlighting",    self._textview.get_buffer(), "highlight-syntax",            GObject.BindingFlags.SYNC_CREATE)
@@ -85,6 +94,9 @@ class TextArea(Adw.Bin):
         self.bind_property("text-highlight-current-line", self._textview,              "highlight-current-line",      GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("area-height",                 self._textview,              "height-request",              GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("loading-label",               self._loading_lbl,           "label",                       GObject.BindingFlags.SYNC_CREATE)
+        self._spinner.bind_property("spinning", self._spinner,           "visible", GObject.BindingFlags.BIDIRECTIONAL)
+        self._spinner.bind_property("visible",  self._spinner_separator, "visible", GObject.BindingFlags.BIDIRECTIONAL)
+        self._action_btn.bind_property("visible", self._action_btn_separator, "visible", GObject.BindingFlags.BIDIRECTIONAL)
 
         # Signal connection
         self._action_btn.connect("clicked", self._on_action_clicked)
@@ -95,11 +107,13 @@ class TextArea(Adw.Bin):
         self._textview.get_buffer().connect("changed", self._on_text_changed)
 
     def _on_dnd_drop(self, drop_target, value: Gdk.FileList, x, y, user_data=None):
+        self._spinner.set_visible(True)
         files: List[Gio.File] = value.get_files()
         if len(files) != 1:
             self.emit("error", "Cannot open more than one file")
             return
         self._open_file(files[0])
+        self._spinner.set_visible(False)
 
     def _on_action_clicked(self, data):
         self.emit("action-clicked")
@@ -178,7 +192,7 @@ class TextArea(Adw.Bin):
            self.emit("error", f"Unable to open {file.peek_path()}: {contents[1]}.")
            return
 
-        if Utils.is_text(contents[1]):
+        if Utils.is_text(contents[1]) and self.allow_drag_and_drop:
             text = contents[1].decode("utf-8")
             text_buffer = self._textview.get_buffer()
             text_buffer.set_text(text)
@@ -186,7 +200,7 @@ class TextArea(Adw.Bin):
             self._open_btn.set_sensitive(True)
             self._stack.set_visible_child_name("text-area")
             self.emit("text-loaded")
-        else:
+        elif self.allow_drag_and_drop:
             self._textview.get_buffer().set_text("")
             self._open_btn.set_sensitive(True)
             self._stack.set_visible_child_name("text-area")
@@ -199,11 +213,15 @@ class TextArea(Adw.Bin):
         self._textview.get_buffer().set_text("")
         self._textview.remove_css_class("border-red")
         self._stack.set_visible_child_name("text-area")
+        self._spinner.set_visible(False)
 
     def get_text(self) -> str:
         buffer    = self._textview.get_buffer()
         text      = buffer.get_text(buffer.get_start_iter(), buffer.get_end_iter(), False)
         return text
+
+    def set_text(self, text:str):
+        self._textview.get_buffer().set_text(text)
 
     def get_buffer(self) -> GtkSource.Buffer:
         return self._textview.get_buffer()
@@ -229,3 +247,9 @@ class TextArea(Adw.Bin):
             self._stack.set_visible_child_name("loading")
         else:
             self._stack.set_visible_child_name("text-area")
+
+    def set_spinner_spin(self, enabled:bool):
+        self._spinner.set_visible(enabled)
+
+    def clear(self):
+        self._clear()

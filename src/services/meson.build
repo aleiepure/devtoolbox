@@ -7,7 +7,7 @@ servicesdir = join_paths(pkgdatadir, 'devtoolbox/services')
 
 sources = [
   '__init__.py',
-  'json-yaml.py',
+  'json_yaml.py',
 ]
 
 install_data(sources, install_dir: servicesdir)

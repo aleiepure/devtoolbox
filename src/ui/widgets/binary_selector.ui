@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 - 2020 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="BinarySelector" parent="AdwBin">
+    <child>
+      <object class="GtkBox">
+        <style>
+          <class name="linked" />
+        </style>
+        <property name="orientation">horizontal</property>
+        <property name="valign">center</property>
+        <child>
+          <object class="GtkToggleButton" id="_left_btn" />
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="_right_btn">
+            <property name="group">_left_btn</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

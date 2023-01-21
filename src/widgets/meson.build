@@ -12,7 +12,8 @@ sources = [
   'file_viewer.py',
   'text_file_area.py',
   'text_field_action_row.py',
-  'sidebar_item.py'
+  'sidebar_item.py',
+  'binary_selector.py',
 ]
 
 install_data(sources, install_dir: widgetsdir)

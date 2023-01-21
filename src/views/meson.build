@@ -9,6 +9,7 @@ sources = [
   '__init__.py',
   'tab_content.py',
   'favorites.py',
+  'json_yaml.py',
 ]
 
 install_data(sources, install_dir: viewsdir)

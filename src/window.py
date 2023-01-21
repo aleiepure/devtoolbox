@@ -5,7 +5,8 @@
 from gi.repository import Adw, Gtk, Gio, GObject
 from .widgets.sidebar_item import SidebarItem
 from .views.tab_content import TabContent
-from .views.favorites import Favorites
+from .views.favorites import FavoritesView
+from .views.json_yaml import JsonYamlView
 
 
 @Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/window.ui')
@@ -27,7 +28,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "title": _("JSON - YAML"),
                 "category": "converter",
                 "icon-name": "horizontal-arrows-symbolic",
-                "child": Gtk.Label(label="Json - yaml")
+                "child": JsonYamlView()
             },
             "timestamp": {
                 "title": _("Timestamp"),
@@ -71,7 +72,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             "favorite": {
                 "title": _("Favorites"),
                 "icon-name": "starred",
-                "child": Favorites(tools)
+                "child": FavoritesView()
             },
             "converter": {
                 "title": _("Converters"),
@@ -111,15 +112,32 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             page = self._tabs_stack.get_page(categories[c]["child"])
             page.set_title(categories[c]["title"])
             page.set_icon_name(categories[c]["icon-name"])
-            self._flap_btn.bind_property("active", page.get_child().get_flap(), "reveal_flap", GObject.BindingFlags.SYNC_CREATE)
-            page.get_child().get_flap().bind_property("reveal_flap", self._flap_btn, "active", GObject.BindingFlags.SYNC_CREATE)
+            if c != "favorite":
+                self._flap_btn.bind_property("active", page.get_child().get_flap(), "reveal-flap", GObject.BindingFlags.SYNC_CREATE)
+                page.get_child().get_flap().bind_property("reveal-flap", self._flap_btn, "active", GObject.BindingFlags.SYNC_CREATE)
+
+        # Bind flap button to favorites view
+        filled_view_flap = self._tabs_stack.get_child_by_name("favorite").get_filled_view_flap()
+        empty_view_flap  = self._tabs_stack.get_child_by_name("favorite").get_empty_view_flap()
+        self._flap_btn.bind_property("active", filled_view_flap, "reveal-flap", GObject.BindingFlags.SYNC_CREATE)
+        self._flap_btn.bind_property("active", empty_view_flap, "reveal-flap", GObject.BindingFlags.SYNC_CREATE)
+        filled_view_flap.bind_property("reveal-flap", self._flap_btn, "active", GObject.BindingFlags.SYNC_CREATE)
+        empty_view_flap.bind_property("reveal-flap", self._flap_btn, "active", GObject.BindingFlags.SYNC_CREATE)
 
         # Restore last state
-        self._settings.bind("window-width",     self, "default-width",  Gio.SettingsBindFlags.DEFAULT)
-        self._settings.bind("window-height",    self, "default-height", Gio.SettingsBindFlags.DEFAULT)
-        self._settings.bind("window-maximized", self, "maximized",      Gio.SettingsBindFlags.DEFAULT)
-        self._tabs_stack.set_visible_child_name(self._settings.get_string("last-tab"))
-        self._flap_btn.set_active(self._settings.get_boolean("sidebar-open"))
+        self._settings.bind("window-width",     self,           "default-width",  Gio.SettingsBindFlags.DEFAULT)
+        self._settings.bind("window-height",    self,           "default-height", Gio.SettingsBindFlags.DEFAULT)
+        self._settings.bind("window-maximized", self,           "maximized",      Gio.SettingsBindFlags.DEFAULT)
+        self._settings.bind("sidebar-open",     self._flap_btn, "active",         Gio.SettingsBindFlags.DEFAULT)
+        self._settings.bind("last-tab",         self._tabs_stack, "visible-child-name", Gio.SettingsBindFlags.DEFAULT)
+
+        content_stack = self._tabs_stack.get_visible_child().get_content_stack()
+        self._settings.bind("last-tool", content_stack, "visible-child-name", Gio.SettingsBindFlags.DEFAULT)
+
+         #if self._settings.get_string("last-tab") != "favorite":
+         #   content_view.get_content_stack().set_visible_child_name(self._settings.get_string("last-tool"))
+
+        # self._tabs_stack.get_visible_child().get_sidebar().get_selected_row().get_name() # last-utility
 
 
         # Signals
@@ -139,12 +157,21 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
         self._flap.set_reveal_flap(self._flap_btn.get_active())
 
     def _on_close_request(self, data):
-        tab = self._tabs_stack.get_visible_child_name()
+        pass
+
+        # Save tab
+        #tab  = self._tabs_stack.get_visible_child_name()
+        #self._settings.set_string("last-tab", tab)
+        #print(tab)
+
+        # Save tool
+        #tool = self._tabs_stack.get_visible_child().get_content_stack().get_visible_child_name()
         # if tab != "favorites":
         #     utility = self.tab_stack.get_visible_child().sidebar_stack.get_visible_child_name()
         #     self.settings.set_string("last-utility", utility)
-        self._settings.set_string("last-tab", tab)
-        self._settings.set_boolean("sidebar-open", self._flap_btn.get_active())
+
+        #self._settings.set_string("last-tool", tool)
+        #self._settings.set_boolean("sidebar-open", self._flap_btn.get_active())
 
     def _get_tools(self, tools: dict, category: str):
         tools_in_category = {}

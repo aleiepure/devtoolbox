@@ -16,8 +16,10 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/widgets/text_file_area.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/file_viewer.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/text_field_action_row.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/binary_selector.ui</file>
     <file preprocess="xml-stripblanks">ui/views/tab_content.ui</file>
     <file preprocess="xml-stripblanks">ui/views/empty_favorites.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/json_yaml.ui</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="non-starred-symbolic.svg">../data/icons/symbolic/non-starred-symbolic.svg</file>

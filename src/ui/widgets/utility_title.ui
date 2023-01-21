@@ -15,7 +15,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <object class="GtkGrid">
                 <child>
                     <object class="GtkButton" id="_star_btn">
-                        <property name="icon-name">non-starred</property>
                         <property name="valign">center</property>
                         <property name="margin-top">10</property>
                         <style>

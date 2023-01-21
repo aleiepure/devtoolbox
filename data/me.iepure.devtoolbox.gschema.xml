@@ -22,7 +22,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
 		<key name="last-tab" type="s">
 			<default>"converters"</default>
 		</key>
-		<key name="last-utility" type="s">
+		<key name="last-tool" type="s">
 			<default>"json-yaml"</default>
 		</key>
 	  <key name="sidebar-open" type="b">
