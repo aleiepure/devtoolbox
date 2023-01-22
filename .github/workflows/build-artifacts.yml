@@ -1,0 +1,19 @@
+on:
+  push:
+    branches: [main]
+  pull_request:
+name: build-artifacts
+jobs:
+  flatpak:
+    name: "Flatpak"
+    runs-on: ubuntu-latest
+    container:
+      image: bilelmoussaoui/flatpak-github-actions:gnome-43
+      options: --privileged
+    steps:
+    - uses: actions/checkout@v2
+    - uses: flatpak/flatpak-github-actions/flatpak-builder@v4
+      with:
+        bundle: devtoolbox-devel.flatpak
+        manifest-path: me.iepure.devtoolbox.json
+        cache-key: flatpak-builder-${{ github.sha }}
