@@ -20,6 +20,12 @@ conf.set('PYTHON', python.find_installation('python3').path())
 conf.set('VERSION', meson.project_version())
 conf.set('localedir', join_paths(get_option('prefix'), get_option('localedir')))
 conf.set('pkgdatadir', pkgdatadir)
+conf.set('debug', get_option('debug'))
+if get_option('debug')
+  conf.set('app-name', 'Dev toolbox (Devel)')
+else
+  conf.set('app-name', 'Dev toolbox')
+endif
 
 configure_file(
   input: 'devtoolbox.in',

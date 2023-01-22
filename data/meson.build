@@ -2,8 +2,18 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+desktop_conf = configuration_data()
+if get_option('debug')
+  desktop_conf.set('app-name', 'Dev toolbox (Devel)')
+else
+  desktop_conf.set('app-name', 'Dev toolbox')
+endif
 desktop_file = i18n.merge_file(
-        input: 'me.iepure.devtoolbox.desktop.in',
+        input: configure_file(
+		    output: 'me.iepure.devtoolbox.desktop.in',
+		     input: 'me.iepure.devtoolbox.desktop.in.in',
+	     configuration: desktop_conf
+	),
        output: 'me.iepure.devtoolbox.desktop',
          type: 'desktop',
        po_dir: '../po',

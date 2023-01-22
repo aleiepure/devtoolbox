@@ -20,8 +20,12 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
     # GSettings
     _settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
 
-    def __init__(self, **kwargs):
+    def __init__(self, debug, **kwargs):
         super().__init__(**kwargs)
+
+        # Theme headerbar
+        if debug == "False":
+            self.remove_css_class("devel")
 
         tools = {
             "json-yaml": {
@@ -121,44 +125,9 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
         content_stack = self._tabs_stack.get_visible_child().get_content_stack()
         self._settings.bind("last-tool", content_stack, "visible-child-name", Gio.SettingsBindFlags.DEFAULT)
 
-         #if self._settings.get_string("last-tab") != "favorite":
-         #   content_view.get_content_stack().set_visible_child_name(self._settings.get_string("last-tool"))
-
-        # self._tabs_stack.get_visible_child().get_sidebar().get_selected_row().get_name() # last-utility
-
-
-        # Signals
-        # self._flap_btn.connect("toggled", self._on_flap_btn_clicked)
-        self.connect("close-request", self._on_close_request)
-
-        # if self._stack.get_visible_child_name() != "favorites":
-        #     self._stack.get_visible_child()._sidebar_stack.set_visible_child_name(
-        #         self._settings.get_string("last-utility"))
-        #     for i in range(0, 10):
-        #             row = self._stack.get_visible_child()._sidebar.get_row_at_index(i)
-        #             if row != None and row.get_page_name() == self._settings.get_string("last-utility"):
-        #                 self._stack.get_visible_child().sidebar.select_row(row)
-
 
     def _on_flap_btn_clicked(self, data):
         self._flap.set_reveal_flap(self._flap_btn.get_active())
-
-    def _on_close_request(self, data):
-        pass
-
-        # Save tab
-        #tab  = self._tabs_stack.get_visible_child_name()
-        #self._settings.set_string("last-tab", tab)
-        #print(tab)
-
-        # Save tool
-        #tool = self._tabs_stack.get_visible_child().get_content_stack().get_visible_child_name()
-        # if tab != "favorites":
-        #     utility = self.tab_stack.get_visible_child().sidebar_stack.get_visible_child_name()
-        #     self.settings.set_string("last-utility", utility)
-
-        #self._settings.set_string("last-tool", tool)
-        #self._settings.set_boolean("sidebar-open", self._flap_btn.get_active())
 
     def _get_tools(self, tools: dict, category: str):
         tools_in_category = {}

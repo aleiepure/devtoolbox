@@ -10,6 +10,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
   <requires lib="gtk" version="4.0"/>
   <requires lib="Adw" version="1.0"/>
   <template class="DevtoolboxWindow" parent="AdwApplicationWindow">
+    <style>
+      <class name="devel" />
+    </style>
     <property name="default-width">1200</property>
     <property name="default-height">850</property>
     <child>

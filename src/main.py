@@ -41,10 +41,11 @@ class DevtoolboxApplication(Adw.Application):
         DateArea,
     ]
 
-    def __init__(self, version):
+    def __init__(self, version, debug):
         super().__init__(application_id='me.iepure.devtoolbox', flags=Gio.ApplicationFlags.FLAGS_NONE)
 
         self.version = version
+        self.debug = debug
         Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK)
 
         self.create_action('quit', self.quit, ['<primary>q'])
@@ -63,13 +64,15 @@ class DevtoolboxApplication(Adw.Application):
         """
         win = self.props.active_window
         if not win:
-            win = DevtoolboxWindow(application=self)
+            win = DevtoolboxWindow(self.debug, application=self)
         win.present()
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
         builder = Gtk.Builder.new_from_resource("/me/iepure/devtoolbox/ui/about_window.ui")
         about_window = builder.get_object("about_window")
+        if self.debug == "True":
+            about_window.set_application_name(f"{about_window.get_application_name()} (Devel)")
         about_window.set_version(self.version)
         about_window.set_transient_for(self.props.active_window)
         about_window.present()
@@ -94,7 +97,7 @@ class DevtoolboxApplication(Adw.Application):
             self.set_accels_for_action(f"app.{name}", shortcuts)
 
 
-def main(version):
+def main(version, debug):
     """The application's entry point."""
-    app = DevtoolboxApplication(version)
+    app = DevtoolboxApplication(version, debug)
     return app.run(sys.argv)
