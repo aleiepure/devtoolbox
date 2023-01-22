@@ -8,8 +8,8 @@ viewsdir = join_paths(pkgdatadir, 'devtoolbox/views')
 sources = [
   '__init__.py',
   'tab_content.py',
-  'favorites.py',
   'json_yaml.py',
+  'timestamp.py',
 ]
 
 install_data(sources, install_dir: viewsdir)

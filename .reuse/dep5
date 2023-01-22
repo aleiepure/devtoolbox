@@ -9,7 +9,7 @@ License: LGPL-3.0-only
 
 Files: data/icons/symbolic/spacebar-symbolic.svg
 Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
-License: GPL-3.0-or-laterre
+License: GPL-3.0-or-later
 
 Files: data/icons/hicolor/scalable/apps/*
 Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>

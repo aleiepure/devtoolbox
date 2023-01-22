@@ -44,31 +44,6 @@ class TabContent(Adw.Bin):
     def _on_sidebar_change(self, widget, row):
         self._content_stack.set_visible_child_name(row.get_name())
 
-    def _set_sidebar_content(self, tools):
-
-        # Clear
-        self._sidebar.bind_model(None, None)
-        for page in self._content_stack.get_pages():
-            self._content_stack.remove(page.get_child())
-
-        # Populate sidebar
-        for t in tools:
-            self._sidebar.append(SidebarItem(name=t, title=tools[t]["title"], icon_name=tools[t]["icon-name"]))
-            self._content_stack.add_named(tools[t]["child"], t)
-
-        # Select the correct row
-        try:
-            if len(tools) != 0:
-                list(tools.keys())
-                index = list(tools.keys()).index(self._settings.get_string("last-tool"))
-                if index == 0:
-                    self._sidebar.select_row(self._sidebar.get_first_child())
-                else:
-                    self._sidebar.select_row(self._sidebar.get_row_at_index(index))
-        except ValueError:
-            pass
-
-
     def get_flap(self) -> Adw.Flap:
         return self._flap
 

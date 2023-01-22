@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 - 2023 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="SpinArea" parent="AdwBin">
+    <child>
+      <object class="AdwPreferencesGroup">
+        <property name="margin-top">10</property>
+        <child>
+          <object class="AdwPreferencesRow">
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+
+                <!-- Header -->
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">horizontal</property>
+                    <property name="halign">fill</property>
+                    <property name="hexpand">true</property>
+                    <style>
+                      <class name="toolbar" />
+                    </style>
+                    <child>
+                      <object class="GtkLabel" id="_name_lbl">
+                        <property name="margin-bottom">8</property>
+                        <property name="margin-top">8</property>
+                        <property name="margin-start">8</property>
+                        <style>
+                          <class name="label" />
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">horizontal</property>
+                        <property name="halign">end</property>
+                        <property name="hexpand">true</property>
+                        <child>
+                          <object class="GtkSpinner" id="_spinner">
+                            <property name="width-request">16</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkSeparator" id="_spinner_separator">
+                            <style>
+                              <class name="spacer" />
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="_action_btn">
+                            <style>
+                              <class name="suggested-action" />
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkSeparator" id="_action_btn_separator">
+                            <style>
+                              <class name="spacer" />
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">horizontal</property>
+                            <style>
+                              <class name="linked" />
+                            </style>
+                            <child>
+                              <object class="GtkButton" id="_copy_btn">
+                                <property name="valign">center</property>
+                                <property name="icon-name">edit-copy-symbolic</property>
+                                <property name="tooltip-text" translatable="yes">Copy to clipboard</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="_paste_btn">
+                                <property name="valign">center</property>
+                                <property name="icon-name">edit-paste-symbolic</property>
+                                <property name="tooltip-text" translatable="yes">Paste clipboard</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+
+                <!-- Content -->
+                <child>
+                  <object class="GtkSpinButton" id="_spin_btn">
+                    <style>
+                      <class name="rounded-border" />
+                      <class name="view" />
+                    </style>
+                    <property name="numeric">true</property>
+                    <property name="update-policy">GTK_UPDATE_IF_VALID</property>
+                    <property name="adjustment">
+                      <object class="GtkAdjustment">
+                        <property name="lower">0</property>
+                        <property name="upper">99999999999</property>
+                        <property name="step-increment">1</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

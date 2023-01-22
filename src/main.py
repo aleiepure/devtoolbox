@@ -18,6 +18,8 @@ from .widgets.text_file_area import TextFileArea
 from .widgets.text_field_action_row import TextFieldActionRow
 from .widgets.sidebar_item import SidebarItem
 from .widgets.binary_selector import BinarySelector
+from .widgets.spin_area import SpinArea
+from .widgets.date_area import DateArea
 
 
 class DevtoolboxApplication(Adw.Application):
@@ -35,10 +37,15 @@ class DevtoolboxApplication(Adw.Application):
         TextFieldActionRow,
         SidebarItem,
         BinarySelector,
+        SpinArea,
+        DateArea,
     ]
 
-    def __init__(self):
+    def __init__(self, version):
         super().__init__(application_id='me.iepure.devtoolbox', flags=Gio.ApplicationFlags.FLAGS_NONE)
+
+        self.version = version
+        Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK)
 
         self.create_action('quit', self.quit, ['<primary>q'])
         self.create_action('about', self.on_about_action)
@@ -61,14 +68,11 @@ class DevtoolboxApplication(Adw.Application):
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
-        about = Adw.AboutWindow(transient_for=self.props.active_window,
-                                application_name='devtoolbox',
-                                application_icon='me.iepure.devtoolbox',
-                                developer_name='Alessandro',
-                                version='0.1.0',
-                                developers=['Alessandro'],
-                                copyright='© 2023 Alessandro')
-        about.present()
+        builder = Gtk.Builder.new_from_resource("/me/iepure/devtoolbox/ui/about_window.ui")
+        about_window = builder.get_object("about_window")
+        about_window.set_version(self.version)
+        about_window.set_transient_for(self.props.active_window)
+        about_window.present()
 
     def on_preferences_action(self, widget, _):
         """Callback for the app.preferences action."""
@@ -92,5 +96,5 @@ class DevtoolboxApplication(Adw.Application):
 
 def main(version):
     """The application's entry point."""
-    app = DevtoolboxApplication()
+    app = DevtoolboxApplication(version)
     return app.run(sys.argv)

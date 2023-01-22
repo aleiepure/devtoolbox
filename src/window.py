@@ -5,8 +5,8 @@
 from gi.repository import Adw, Gtk, Gio, GObject
 from .widgets.sidebar_item import SidebarItem
 from .views.tab_content import TabContent
-from .views.favorites import FavoritesView
 from .views.json_yaml import JsonYamlView
+from .views.timestamp import TimestampView
 
 
 @Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/window.ui')
@@ -34,7 +34,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "title": _("Timestamp"),
                 "category": "converter",
                 "icon-name": "hourglass-symbolic",
-                "child": Gtk.Label(label="Timestamp")
+                "child": TimestampView()
             },
             "encoder": {
                 "title": _("Encoder"),
@@ -69,11 +69,6 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
         }
 
         categories = {
-            "favorite": {
-                "title": _("Favorites"),
-                "icon-name": "starred",
-                "child": FavoritesView()
-            },
             "converter": {
                 "title": _("Converters"),
                 "icon-name": "horizontal-arrows-symbolic",
@@ -115,14 +110,6 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             if c != "favorite":
                 self._flap_btn.bind_property("active", page.get_child().get_flap(), "reveal-flap", GObject.BindingFlags.SYNC_CREATE)
                 page.get_child().get_flap().bind_property("reveal-flap", self._flap_btn, "active", GObject.BindingFlags.SYNC_CREATE)
-
-        # Bind flap button to favorites view
-        filled_view_flap = self._tabs_stack.get_child_by_name("favorite").get_filled_view_flap()
-        empty_view_flap  = self._tabs_stack.get_child_by_name("favorite").get_empty_view_flap()
-        self._flap_btn.bind_property("active", filled_view_flap, "reveal-flap", GObject.BindingFlags.SYNC_CREATE)
-        self._flap_btn.bind_property("active", empty_view_flap, "reveal-flap", GObject.BindingFlags.SYNC_CREATE)
-        filled_view_flap.bind_property("reveal-flap", self._flap_btn, "active", GObject.BindingFlags.SYNC_CREATE)
-        empty_view_flap.bind_property("reveal-flap", self._flap_btn, "active", GObject.BindingFlags.SYNC_CREATE)
 
         # Restore last state
         self._settings.bind("window-width",     self,           "default-width",  Gio.SettingsBindFlags.DEFAULT)

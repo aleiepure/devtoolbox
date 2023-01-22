@@ -14,6 +14,8 @@ sources = [
   'text_field_action_row.py',
   'sidebar_item.py',
   'binary_selector.py',
+  'spin_area.py',
+  'date_area.py',
 ]
 
 install_data(sources, install_dir: widgetsdir)
