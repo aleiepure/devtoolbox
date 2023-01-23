@@ -10,6 +10,7 @@ sources = [
   'tab_content.py',
   'json_yaml.py',
   'timestamp.py',
+  'base_converter.py',
 ]
 
 install_data(sources, install_dir: viewsdir)

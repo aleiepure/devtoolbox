@@ -7,14 +7,15 @@ from .widgets.sidebar_item import SidebarItem
 from .views.tab_content import TabContent
 from .views.json_yaml import JsonYamlView
 from .views.timestamp import TimestampView
+from .views.base_converter import BaseConverterView
 
 
-@Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/window.ui')
+@Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
 class DevtoolboxWindow(Adw.ApplicationWindow):
-    __gtype_name__ = 'DevtoolboxWindow'
+    __gtype_name__ = "DevtoolboxWindow"
 
     # Template elements
-    _flap_btn   = Gtk.Template.Child()
+    _flap_btn = Gtk.Template.Child()
     _tabs_stack = Gtk.Template.Child()
 
     # GSettings
@@ -32,77 +33,83 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "title": _("JSON - YAML"),
                 "category": "converter",
                 "icon-name": "horizontal-arrows-symbolic",
-                "child": JsonYamlView()
+                "child": JsonYamlView(),
             },
             "timestamp": {
                 "title": _("Timestamp"),
                 "category": "converter",
                 "icon-name": "hourglass-symbolic",
-                "child": TimestampView()
+                "child": TimestampView(),
             },
-            "encoder": {
-                "title": _("Encoder"),
+            "placeholder1": {
+                "title": _("placeholder1"),
                 "category": "encoder",
                 "icon-name": "clock-rotate-symbolic",
-                "child": Gtk.Label(label="Encoder")
+                "child": Gtk.Label(label="Encoder"),
             },
-            "formatter": {
-                "title": _("formatter"),
+            "placeholder2": {
+                "title": _("placeholder2"),
                 "category": "formatter",
                 "icon-name": "clock-rotate-symbolic",
-                "child": Gtk.Label(label="formatter")
+                "child": Gtk.Label(label="formatter"),
             },
-            "generator": {
-                "title": _("generator"),
+            "placeholder3": {
+                "title": _("placeholder3"),
                 "category": "generator",
                 "icon-name": "clock-rotate-symbolic",
-                "child": Gtk.Label(label="generator")
+                "child": Gtk.Label(label="generator"),
             },
-            "text": {
-                "title": _("text"),
+            "placeholder4": {
+                "title": _("placeholder4"),
                 "category": "text",
                 "icon-name": "clock-rotate-symbolic",
-                "child": Gtk.Label(label="text")
+                "child": Gtk.Label(label="text"),
             },
-            "graphic": {
-                "title": _("graphic"),
+            "placeholder5": {
+                "title": _("placeholder5"),
                 "category": "graphic",
                 "icon-name": "clock-rotate-symbolic",
-                "child": Gtk.Label(label="graphic")
-            }
+                "child": Gtk.Label(label="graphic"),
+            },
+            "base-converter": {
+                "title": _("Base converter"),
+                "category": "converter",
+                "icon-name": "hashtag-symbolic",
+                "child": BaseConverterView(),
+            },
         }
 
         categories = {
             "converter": {
                 "title": _("Converters"),
                 "icon-name": "horizontal-arrows-symbolic",
-                "child": TabContent(self._get_tools(tools, "converter"))
+                "child": TabContent(self._get_tools(tools, "converter")),
             },
             "encoder": {
                 "title": _("Encoders"),
                 "icon-name": "folder-templates-symbolic",
-                "child": TabContent(self._get_tools(tools, "encoder"))
+                "child": TabContent(self._get_tools(tools, "encoder")),
             },
             "formatter": {
                 "title": _("Formatters"),
                 "icon-name": "text-indent-symbolic",
-                "child": TabContent(self._get_tools(tools, "formatter"))
+                "child": TabContent(self._get_tools(tools, "formatter")),
             },
             "generator": {
                 "title": _("Generators"),
                 "icon-name": "plus-symbolic",
-                "child": TabContent(self._get_tools(tools, "generator"))
+                "child": TabContent(self._get_tools(tools, "generator")),
             },
             "text": {
                 "title": _("Text"),
                 "icon-name": "text-ab-symbolic",
-                "child": TabContent(self._get_tools(tools, "text"))
+                "child": TabContent(self._get_tools(tools, "text")),
             },
             "graphic": {
                 "title": _("Graphics"),
                 "icon-name": "brush-symbolic",
-                "child": TabContent(self._get_tools(tools, "graphic"))
-            }
+                "child": TabContent(self._get_tools(tools, "graphic")),
+            },
         }
 
         # Setup tabs
@@ -112,19 +119,46 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             page.set_title(categories[c]["title"])
             page.set_icon_name(categories[c]["icon-name"])
             if c != "favorite":
-                self._flap_btn.bind_property("active", page.get_child().get_flap(), "reveal-flap", GObject.BindingFlags.SYNC_CREATE)
-                page.get_child().get_flap().bind_property("reveal-flap", self._flap_btn, "active", GObject.BindingFlags.SYNC_CREATE)
+                self._flap_btn.bind_property(
+                    "active",
+                    page.get_child().get_flap(),
+                    "reveal-flap",
+                    GObject.BindingFlags.SYNC_CREATE,
+                )
+                page.get_child().get_flap().bind_property(
+                    "reveal-flap",
+                    self._flap_btn,
+                    "active",
+                    GObject.BindingFlags.SYNC_CREATE,
+                )
 
         # Restore last state
-        self._settings.bind("window-width",     self,           "default-width",  Gio.SettingsBindFlags.DEFAULT)
-        self._settings.bind("window-height",    self,           "default-height", Gio.SettingsBindFlags.DEFAULT)
-        self._settings.bind("window-maximized", self,           "maximized",      Gio.SettingsBindFlags.DEFAULT)
-        self._settings.bind("sidebar-open",     self._flap_btn, "active",         Gio.SettingsBindFlags.DEFAULT)
-        self._settings.bind("last-tab",         self._tabs_stack, "visible-child-name", Gio.SettingsBindFlags.DEFAULT)
+        self._settings.bind(
+            "window-width", self, "default-width", Gio.SettingsBindFlags.DEFAULT
+        )
+        self._settings.bind(
+            "window-height", self, "default-height", Gio.SettingsBindFlags.DEFAULT
+        )
+        self._settings.bind(
+            "window-maximized", self, "maximized", Gio.SettingsBindFlags.DEFAULT
+        )
+        self._settings.bind(
+            "sidebar-open", self._flap_btn, "active", Gio.SettingsBindFlags.DEFAULT
+        )
+        self._settings.bind(
+            "last-tab",
+            self._tabs_stack,
+            "visible-child-name",
+            Gio.SettingsBindFlags.DEFAULT,
+        )
 
         content_stack = self._tabs_stack.get_visible_child().get_content_stack()
-        self._settings.bind("last-tool", content_stack, "visible-child-name", Gio.SettingsBindFlags.DEFAULT)
-
+        self._settings.bind(
+            "last-tool",
+            content_stack,
+            "visible-child-name",
+            Gio.SettingsBindFlags.DEFAULT,
+        )
 
     def _on_flap_btn_clicked(self, data):
         self._flap.set_reveal_flap(self._flap_btn.get_active())
@@ -135,5 +169,3 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             if tools[t]["category"] == category:
                 tools_in_category[t] = tools[t]
         return tools_in_category
-
-    
