@@ -58,7 +58,7 @@
             "sources" : [
                 {
                     "type" : "dir",
-                    "url" : "../../"
+                    "url" : "."
                 }
             ],
             "config-opts" : [
