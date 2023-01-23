@@ -58,7 +58,8 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://github.com/aleiepure/devtoolbox"
+                    "url" : "https://github.com/aleiepure/devtoolbox",
+                    "branch": "main"
                 }
             ],
             "config-opts" : [
