@@ -5,9 +5,9 @@
 import sys
 import gi
 
-gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1')
-gi.require_version('GtkSource', '5')
+gi.require_version("Gtk", "4.0")
+gi.require_version("Adw", "1")
+gi.require_version("GtkSource", "5")
 
 from gi.repository import Gtk, Gio, Adw, GObject, GtkSource
 from .window import DevtoolboxWindow
@@ -42,15 +42,17 @@ class DevtoolboxApplication(Adw.Application):
     ]
 
     def __init__(self, version, debug):
-        super().__init__(application_id='me.iepure.devtoolbox', flags=Gio.ApplicationFlags.FLAGS_NONE)
+        super().__init__(
+            application_id="me.iepure.devtoolbox", flags=Gio.ApplicationFlags.FLAGS_NONE
+        )
 
         self.version = version
         self.debug = debug
         Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK)
 
-        self.create_action('quit', self.quit, ['<primary>q'])
-        self.create_action('about', self.on_about_action)
-        self.create_action('preferences', self.on_preferences_action)
+        self.create_action("quit", self.quit, ["<primary>q"])
+        self.create_action("about", self.on_about_action)
+        self.create_action("preferences", self.on_preferences_action)
 
         # Register custom types
         for i in self._custom_widgets:
@@ -69,17 +71,22 @@ class DevtoolboxApplication(Adw.Application):
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
-        builder = Gtk.Builder.new_from_resource("/me/iepure/devtoolbox/ui/about_window.ui")
+        builder = Gtk.Builder.new_from_resource(
+            "/me/iepure/devtoolbox/ui/about_window.ui"
+        )
         about_window = builder.get_object("about_window")
         if self.debug == "True":
-            about_window.set_application_name(f"{about_window.get_application_name()} (Devel)")
+            about_window.set_application_name(
+                f"{about_window.get_application_name()}\n(Development snapshot)"
+            )
+            about_window.set_icon_name("me.iepure.devtoolbox.Devel")
         about_window.set_version(self.version)
         about_window.set_transient_for(self.props.active_window)
         about_window.present()
 
     def on_preferences_action(self, widget, _):
         """Callback for the app.preferences action."""
-        print('app.preferences action activated')
+        print("app.preferences action activated")
 
     def create_action(self, name, callback, shortcuts=None):
         """Add an application action.

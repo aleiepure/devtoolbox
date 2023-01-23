@@ -22,7 +22,7 @@ conf.set('localedir', join_paths(get_option('prefix'), get_option('localedir')))
 conf.set('pkgdatadir', pkgdatadir)
 conf.set('debug', get_option('debug'))
 if get_option('debug')
-  conf.set('app-name', 'Dev toolbox (Devel)')
+  conf.set('app-name', 'Dev toolbox (Development snapshot)')
 else
   conf.set('app-name', 'Dev toolbox')
 endif

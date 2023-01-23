@@ -19,10 +19,30 @@ Files: data/icons/hicolor/symbolic/apps/*
 Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
 License: GPL-3.0-or-later
 
+Files: pypi-dependencies.json
+Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
+License: GPL-3.0-or-later
+
 Files: me.iepure.devtoolbox.json
 Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
 License: GPL-3.0-or-later
 
+Files: me.iepure.devtoolbox-release.json
+Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
+License: GPL-3.0-or-later
+
+Files: requirements.txt
+Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
+License: GPL-3.0-or-later
+
+Files: .pre-commit-config.yaml
+Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
+License: GPL-3.0-or-later
+
 Files: po/LINGUAS, po/POTFILES
+Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
+License: GPL-3.0-or-later
+
+Files: .github/*
 Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
 License: GPL-3.0-or-later

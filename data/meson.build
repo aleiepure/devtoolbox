@@ -4,7 +4,7 @@
 
 desktop_conf = configuration_data()
 if get_option('debug')
-  desktop_conf.set('app-name', 'Dev toolbox (Devel)')
+  desktop_conf.set('app-name', 'Dev toolbox (Development snapshot)')
 else
   desktop_conf.set('app-name', 'Dev toolbox')
 endif
