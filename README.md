@@ -19,7 +19,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <a href="https://stopthemingmy.app" title="Please do not theme this app">
         <img src="https://stopthemingmy.app/badge.svg" />
     </a>
-    ![Build Flatpak](https://github.com/aleiepure/devtoolbox/actions/workflows/main.yml/badge.svg)
+    <a href="https://github.com/aleiepure/devtoolbox/actions/workflows/main.yml" title="Build flatpak action">
+        <img src="https://github.com/aleiepure/devtoolbox/actions/workflows/main.yml/badge.svg"/>
+    </a>
     <br />
     <a href="#features">Features</a> ·
     <a href="#install">Install</a> ·
