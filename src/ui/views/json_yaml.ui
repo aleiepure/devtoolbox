@@ -26,7 +26,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     <!-- Title -->
                     <child>
                       <object class="UtilityTitle" id="_title">
-                        <property name="title" translatable="yes">JSON - YAML converter</property>
+                        <property name="title" translatable="yes">JSON - YAML Converter</property>
                         <property name="description" translatable="yes">Convert JSON documents to YAML and vice-versa</property>
                         <property name="tool-name">json-yaml</property>
                       </object>

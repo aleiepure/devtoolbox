@@ -5,6 +5,7 @@
 from gi.repository import Gdk, GLib
 from ruamel import yaml
 from enum import Enum
+from crontab import CronTab, CronSlices
 import json
 
 
@@ -79,3 +80,7 @@ class Utils:
             return True
         except ValueError:
             return False
+
+    @staticmethod
+    def is_cron_expression_valid(expression: str):
+        return CronSlices.is_valid(expression)

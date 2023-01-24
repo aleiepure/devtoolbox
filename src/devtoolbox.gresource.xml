@@ -25,6 +25,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/views/json_yaml.ui</file>
     <file preprocess="xml-stripblanks">ui/views/timestamp.ui</file>
     <file preprocess="xml-stripblanks">ui/views/base_converter.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/cron_converter.ui</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="non-starred-symbolic.svg">../data/icons/symbolic/non-starred-symbolic.svg</file>
@@ -41,5 +42,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="spacebar-symbolic.svg">../data/icons/symbolic/spacebar-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="earth-symbolic.svg">../data/icons/symbolic/earth-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="hashtag-symbolic.svg">../data/icons/symbolic/hashtag-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="calendar-symbolic.svg">../data/icons/symbolic/calendar-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="today-alt-symbolic.svg">../data/icons/symbolic/today-alt-symbolic.svg</file>
   </gresource>
 </gresources>

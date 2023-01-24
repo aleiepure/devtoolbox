@@ -8,6 +8,7 @@ from .views.tab_content import TabContent
 from .views.json_yaml import JsonYamlView
 from .views.timestamp import TimestampView
 from .views.base_converter import BaseConverterView
+from .views.cron_converter import CronConverterView
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
@@ -38,7 +39,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             "timestamp": {
                 "title": _("Timestamp"),
                 "category": "converter",
-                "icon-name": "hourglass-symbolic",
+                "icon-name": "calendar-symbolic",
                 "child": TimestampView(),
             },
             "placeholder1": {
@@ -76,6 +77,12 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "category": "converter",
                 "icon-name": "hashtag-symbolic",
                 "child": BaseConverterView(),
+            },
+            "cron": {
+                "title": _("Cron converter"),
+                "category": "converter",
+                "icon-name": "hourglass-symbolic",
+                "child": CronConverterView(),
             },
         }
 

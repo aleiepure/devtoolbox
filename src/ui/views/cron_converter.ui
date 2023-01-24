@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 - 2020 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="CronConverterView" parent="AdwBin">
+    <child>
+
+      <object class="AdwToastOverlay" id="_toast">
+        <property name="child">
+          <object class="GtkScrolledWindow">
+            <property name="child">
+
+              <object class="AdwClamp">
+                <property name="vexpand">true</property>
+                  <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+
+                    <!-- Title -->
+                    <child>
+                      <object class="UtilityTitle" id="_title">
+                        <property name="title" translatable="yes">Cron Parser</property>
+                        <property name="description" translatable="yes">Interpret cron expressions to plain dates</property>
+                        <property name="tool-name">cron</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="margin-top">10</property>
+                        <property name="margin-bottom">10</property>
+                      </object>
+                    </child>
+
+                    <!-- Options -->
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="title" translatable="yes">Tool options</property>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="yes">Number of dates</property>
+                            <property name="subtitle" translatable="yes">Number of date to be generated (up to 20)</property>
+                            <property name="icon-name">today-alt-symbolic</property>
+                            <child type="suffix">
+                              <object class="GtkSpinButton" id="_dates_spinner">
+                                <property name="valign">center</property>
+                                <property name="adjustment">
+                                  <object class="GtkAdjustment">
+                                    <property name="lower">1</property>
+                                    <property name="upper">20</property>
+                                    <property name="step-increment">1</property>
+                                    <property name="value">5</property>
+                                  </object>
+                                </property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+													<object class="AdwActionRow">
+														<property name="title" translatable="yes">Output format</property>
+														<property name="subtitle" translatable="yes">Format used to display generated dates (&lt;a href="https://strftime.org/"&gt;python syntax&lt;/a&gt;)</property>
+														<property name="icon-name">format-text-rich-symbolic</property>
+														<child type="suffix">
+															<object class="GtkText" id="_format_text">
+																<property name="valign">center</property>
+																<property name="width-request">250</property>
+																<property name="height-request">30</property>
+																<property name="text">%c</property>
+																<style>
+																	<class name="view" />
+																	<class name="rounded-border" />
+																	<class name="padding-left-8" />
+																</style>
+															</object>
+														</child>
+													</object>
+												</child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="margin-top">10</property>
+                        <property name="margin-bottom">10</property>
+                      </object>
+                    </child>
+
+                    <!-- Input -->
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <child>
+                          <object class="AdwEntryRow" id="_expression">
+                            <property name="title" translatable="yes">Cron expression</property>
+                            <property name="text">* * * * *</property>
+                            <child type="suffix">
+                              <object class="GtkBox">
+                                <property name="orientation">horizontal</property>
+                                <style>
+                                  <class name="linked" />
+                                </style>
+                                <child>
+                                  <object class="GtkButton" id="_copy_btn">
+                                    <property name="icon-name">edit-copy</property>
+                                    <property name="valign">center</property>
+                                    <property name="tooltip-text" translatable="yes">Copy to clipboard</property>
+                                    <style>
+                                      <class name="flat" />
+                                    </style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="_paste_btn">
+                                    <property name="icon-name">edit-paste</property>
+                                    <property name="valign">center</property>
+                                    <property name="tooltip-text" translatable="yes">Paste clipboard</property>
+                                    <style>
+                                      <class name="flat" />
+                                    </style>
+                                  </object>
+                                </child>
+                                <child type="suffix">
+                                  <object class="GtkButton" id="_clear_btn">
+                                    <property name="icon-name">edit-clear</property>
+                                    <property name="valign">center</property>
+                                     <property name="tooltip-text" translatable="yes">Clear input</property>
+                                    <style>
+                                      <class name="flat" />
+                                    </style>
+                                  </object>
+                                </child>
+
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <!-- Output -->
+                    <child>
+                      <object class="TextArea" id="_output_area">
+                        <property name="name" translatable="yes">Dates</property>
+                        <property name="show-copy-btn">true</property>
+                        <property name="show-clear-btn">false</property>
+                        <property name="show-paste-btn">false</property>
+                        <property name="show-open-btn">false</property>
+                        <property name="text-editable">false</property>
+                        <property name="allow-drag-and-drop">false</property>
+                      </object>
+                    </child>
+
+                  </object>
+                </property>
+              </object>
+
+            </property>
+          </object>
+        </property>
+      </object>
+
+    </child>
+  </template>
+</interface>

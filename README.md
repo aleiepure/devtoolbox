@@ -19,6 +19,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <a href="https://stopthemingmy.app" title="Please do not theme this app">
         <img src="https://stopthemingmy.app/badge.svg" />
     </a>
+    ![Build Flatpak](https://github.com/aleiepure/devtoolbox/actions/workflows/main.yml/badge.svg)
     <br />
     <a href="#features">Features</a> ·
     <a href="#install">Install</a> ·
@@ -27,7 +28,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 </div>
 
 ## Features
-Coming soon
+### Known issues
+- Pasting inside text field via the provided button doesn't work, workaround: use `CTRL+V` shortcut.
 
 ## Install
 Soon available on flathub.

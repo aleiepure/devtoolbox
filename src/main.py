@@ -79,7 +79,7 @@ class DevtoolboxApplication(Adw.Application):
             about_window.set_application_name(
                 f"{about_window.get_application_name()}\n(Development snapshot)"
             )
-            about_window.set_icon_name("me.iepure.devtoolbox.Devel")
+            about_window.set_icon_name("me.iepure.devtoolbox")
         about_window.set_version(self.version)
         about_window.set_transient_for(self.props.active_window)
         about_window.present()

@@ -11,6 +11,7 @@ sources = [
   'json_yaml.py',
   'timestamp.py',
   'base_converter.py',
+  'cron_converter.py',
 ]
 
 install_data(sources, install_dir: viewsdir)
