@@ -42,35 +42,52 @@ SPDX-License-Identifier: GPL-3.0-or-later
                       <object class="AdwPreferencesGroup">
                         <property name="title" translatable="yes">Input numbers</property>
                         <child>
-                          <object class="AdwEntryRow" id="_decimal">
+                          <object class="EntryRow" id="_decimal">
                             <property name="title" translatable="yes">Decimal</property>
                             <property name="input-purpose">number</property>
                             <property name="text">0</property>
+                            <property name="show-copy-btn">true</property>
+                            <property name="show-clear-btn">true</property>
                           </object>
                         </child>
                         <child>
-                          <object class="AdwEntryRow" id="_binary">
+                          <object class="EntryRow" id="_binary">
                             <property name="title" translatable="yes">Binary</property>
                             <property name="input-purpose">number</property>
                             <property name="text">0</property>
+                            <property name="show-copy-btn">true</property>
+                            <property name="show-clear-btn">true</property>
                           </object>
                         </child>
                         <child>
-                          <object class="AdwEntryRow" id="_octal">
+                          <object class="EntryRow" id="_octal">
                             <property name="title" translatable="yes">Octal</property>
                             <property name="input-purpose">number</property>
                             <property name="text">0</property>
+                            <property name="show-copy-btn">true</property>
+                            <property name="show-clear-btn">true</property>
                           </object>
                         </child>
                         <child>
-                          <object class="AdwEntryRow" id="_hex">
+                          <object class="EntryRow" id="_hex">
                             <property name="title" translatable="yes">Hexadecimal</property>
                             <property name="input-purpose">number</property>
                             <property name="text">0</property>
+                            <property name="show-copy-btn">true</property>
+                            <property name="show-clear-btn">true</property>
                           </object>
                         </child>
                       </object>
                     </child>
+
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="margin-top">20</property>
+                        <property name="margin-start">20</property>
+                        <property name="margin-end">20</property>
+                        <property name="description" translatable="yes">🛈 Typing an unaccepted character (i.e. A in the decimal field) will cause all the fields to reset to 0.</property>
+                      </object>
+                  </child>
 
                   </object>
                 </property>

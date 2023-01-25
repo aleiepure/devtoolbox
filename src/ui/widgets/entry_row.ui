@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 - 2020 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="EntryRow" parent="AdwEntryRow">
+    <child type="suffix">
+      <object class="GtkBox">
+        <property name="orientation">horizontal</property>
+        <style>
+          <class name="linked" />
+        </style>
+        <child>
+          <object class="GtkButton" id="_copy_btn">
+            <property name="icon-name">edit-copy</property>
+            <property name="valign">center</property>
+            <property name="tooltip-text" translatable="yes">Copy to clipboard</property>
+            <style>
+              <class name="flat" />
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="_paste_btn">
+            <property name="icon-name">edit-paste</property>
+            <property name="valign">center</property>
+            <property name="tooltip-text" translatable="yes">Paste clipboard</property>
+            <style>
+              <class name="flat" />
+            </style>
+          </object>
+        </child>
+        <child type="suffix">
+          <object class="GtkButton" id="_clear_btn">
+            <property name="icon-name">edit-clear</property>
+            <property name="valign">center</property>
+             <property name="tooltip-text" translatable="yes">Clear input</property>
+            <style>
+              <class name="flat" />
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

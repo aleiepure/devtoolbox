@@ -16,6 +16,7 @@ sources = [
   'binary_selector.py',
   'spin_area.py',
   'date_area.py',
+  'entry_row.py',
 ]
 
 install_data(sources, install_dir: widgetsdir)

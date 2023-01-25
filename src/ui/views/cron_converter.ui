@@ -95,48 +95,12 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     <child>
                       <object class="AdwPreferencesGroup">
                         <child>
-                          <object class="AdwEntryRow" id="_expression">
+                          <object class="EntryRow" id="_expression">
                             <property name="title" translatable="yes">Cron expression</property>
                             <property name="text">* * * * *</property>
-                            <child type="suffix">
-                              <object class="GtkBox">
-                                <property name="orientation">horizontal</property>
-                                <style>
-                                  <class name="linked" />
-                                </style>
-                                <child>
-                                  <object class="GtkButton" id="_copy_btn">
-                                    <property name="icon-name">edit-copy</property>
-                                    <property name="valign">center</property>
-                                    <property name="tooltip-text" translatable="yes">Copy to clipboard</property>
-                                    <style>
-                                      <class name="flat" />
-                                    </style>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkButton" id="_paste_btn">
-                                    <property name="icon-name">edit-paste</property>
-                                    <property name="valign">center</property>
-                                    <property name="tooltip-text" translatable="yes">Paste clipboard</property>
-                                    <style>
-                                      <class name="flat" />
-                                    </style>
-                                  </object>
-                                </child>
-                                <child type="suffix">
-                                  <object class="GtkButton" id="_clear_btn">
-                                    <property name="icon-name">edit-clear</property>
-                                    <property name="valign">center</property>
-                                     <property name="tooltip-text" translatable="yes">Clear input</property>
-                                    <style>
-                                      <class name="flat" />
-                                    </style>
-                                  </object>
-                                </child>
-
-                              </object>
-                            </child>
+                            <property name="show-copy-btn">true</property>
+                            <property name="show-paste-btn">true</property>
+                            <property name="show-clear-btn">true</property>
                           </object>
                         </child>
                       </object>

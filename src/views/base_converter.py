@@ -66,8 +66,6 @@ class BaseConverterView(Adw.Bin):
                     except ValueError:
                         self._binary.add_css_class("border-red")
                         return
-                else:
-                    self._binary.add_css_class("border-red")
             case Bases.OCTAL:
                 if Utils.is_octal(self._octal.get_text()):
                     try:
@@ -75,8 +73,6 @@ class BaseConverterView(Adw.Bin):
                     except ValueError:
                         self._octal.add_css_class("border-red")
                         return
-                else:
-                    self._octal.add_css_class("border-red")
             case Bases.DECIMAL:
                 if Utils.is_decimal(self._decimal.get_text()):
                     try:
@@ -84,8 +80,6 @@ class BaseConverterView(Adw.Bin):
                     except ValueError:
                         self._decimal.add_css_class("border-red")
                         return
-                else:
-                    self._decimal.add_css_class("border-red")
             case Bases.HEX:
                 if Utils.is_hex(self._hex.get_text()):
                     try:
@@ -93,8 +87,6 @@ class BaseConverterView(Adw.Bin):
                     except ValueError:
                         self._hex.add_css_class("border-red")
                         return
-                else:
-                    self._hex.add_css_class("border-red")
 
         octal_num = oct(decimal_num).replace("0o", "")
         hex_num = hex(decimal_num).replace("0x", "").upper()

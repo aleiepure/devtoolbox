@@ -20,6 +20,7 @@ from .widgets.sidebar_item import SidebarItem
 from .widgets.binary_selector import BinarySelector
 from .widgets.spin_area import SpinArea
 from .widgets.date_area import DateArea
+from .widgets.entry_row import EntryRow
 
 
 class DevtoolboxApplication(Adw.Application):
@@ -39,6 +40,7 @@ class DevtoolboxApplication(Adw.Application):
         BinarySelector,
         SpinArea,
         DateArea,
+        EntryRow,
     ]
 
     def __init__(self, version, debug):

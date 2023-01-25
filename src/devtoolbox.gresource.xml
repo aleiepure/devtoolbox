@@ -20,6 +20,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/widgets/binary_selector.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/spin_area.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/date_area.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/entry_row.ui</file>
     <file preprocess="xml-stripblanks">ui/views/tab_content.ui</file>
     <file preprocess="xml-stripblanks">ui/views/empty_favorites.ui</file>
     <file preprocess="xml-stripblanks">ui/views/json_yaml.ui</file>
