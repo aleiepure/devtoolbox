@@ -8,17 +8,17 @@ from ..services.json_yaml import JsonYamlService
 from ..utils import Utils
 
 
-@Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/views/json_yaml.ui')
+@Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/views/json_yaml.ui")
 class JsonYamlView(Adw.Bin):
     __gtype_name__ = "JsonYamlView"
 
     # Template Elements
-    _toast              = Gtk.Template.Child()
-    _title              = Gtk.Template.Child()
+    _toast = Gtk.Template.Child()
+    _title = Gtk.Template.Child()
     _direction_selector = Gtk.Template.Child()
-    _indents_spinner    = Gtk.Template.Child()
-    _input_area         = Gtk.Template.Child()
-    _output_area        = Gtk.Template.Child()
+    _indents_spinner = Gtk.Template.Child()
+    _input_area = Gtk.Template.Child()
+    _output_area = Gtk.Template.Child()
 
     # Service
     _service = JsonYamlService()
@@ -26,13 +26,26 @@ class JsonYamlView(Adw.Bin):
     def __init__(self):
         super().__init__()
 
+        # Language highlight
+        self._input_area.set_text_language_highlight("json")
+        self._output_area.set_text_language_highlight("yaml")
+
         # Signals
-        self._direction_selector.connect("toggled", self._convert)
+        self._direction_selector.connect("toggled", self._on_direction_toggled)
         self._indents_spinner.connect("value-changed", self._convert)
         self._input_area.connect("text-changed", self._convert)
         self._input_area.connect("error", self._on_error)
         self._input_area.connect("view-cleared", self._on_view_cleared)
         self._output_area.connect("error", self._on_error)
+
+    def _on_direction_toggled(self, data):
+        if self._direction_selector.get_left_active() == True:
+            self._input_area.set_text_language_highlight("json")
+            self._output_area.set_text_language_highlight("yaml")
+        else:
+            self._input_area.set_text_language_highlight("yaml")
+            self._output_area.set_text_language_highlight("json")
+        self._convert(self)
 
     def _on_error(self, data, error):
         error_str = _("Error")
@@ -50,9 +63,9 @@ class JsonYamlView(Adw.Bin):
         self._input_area.remove_css_class("border-red")
 
         # Setup task
-        direction = self._direction_selector.get_left_active() # True: Json to yaml, False: Yaml to Json
-        indents   = int(self._indents_spinner.get_value())
-        text      = self._input_area.get_text()
+        direction = (self._direction_selector.get_left_active())  # True: Json to yaml, False: Yaml to Json
+        indents = int(self._indents_spinner.get_value())
+        text = self._input_area.get_text()
         self._service.set_input_string(text)
         self._service.set_input_indents(indents)
         if direction:

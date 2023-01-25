@@ -91,6 +91,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="show-paste-btn">true</property>
                         <property name="show-open-btn">true</property>
                         <property name="use-default-text-extensions">true</property>
+                        <property name="text-show-line-numbers">true</property>
+                        <property name="text-syntax-highlighting">true</property>
                       </object>
                     </child>
 
@@ -104,6 +106,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="show-open-btn">false</property>
                         <property name="text-editable">false</property>
                         <property name="allow-drag-and-drop">false</property>
+                        <property name="text-show-line-numbers">true</property>
+                        <property name="text-syntax-highlighting">true</property>
                       </object>
                     </child>
 
