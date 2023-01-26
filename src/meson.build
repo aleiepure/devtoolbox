@@ -15,17 +15,30 @@ gnome.compile_resources('devtoolbox',
 
 python = import('python')
 
+if get_option('debug')
+  name_suffix = ' (Development snapshot)'
+
+  git = find_program('git', required : false)
+  if git.found()
+    git_commit = run_command('git', 'rev-parse', '--short', 'HEAD').stdout().strip()
+  endif
+  if git_commit == ''
+    version_number = '-Devel'
+  else
+    version_number = 'Git-@0@'.format(git_commit)
+  endif
+else
+  name_suffix = ''
+  version_number = meson.project_version()
+endif
+
 conf = configuration_data()
 conf.set('PYTHON', python.find_installation('python3').path())
-conf.set('VERSION', meson.project_version())
+conf.set('VERSION', version_number)
 conf.set('localedir', join_paths(get_option('prefix'), get_option('localedir')))
 conf.set('pkgdatadir', pkgdatadir)
 conf.set('debug', get_option('debug'))
-if get_option('debug')
-  conf.set('app-name', 'Dev toolbox (Development snapshot)')
-else
-  conf.set('app-name', 'Dev toolbox')
-endif
+conf.set('app-name', 'Dev toolbox@0@'.format(name_suffix))
 
 configure_file(
   input: 'devtoolbox.in',
