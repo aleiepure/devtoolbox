@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gtk, Adw, Gdk
-from crontab import CronTab, CronSlices
+from ..services.cron_converter import CronConverterService
 from ..utils import Utils
 
 
@@ -18,6 +18,9 @@ class CronConverterView(Adw.Bin):
     _format_text = Gtk.Template.Child()
     _expression = Gtk.Template.Child()
     _output_area = Gtk.Template.Child()
+
+    # Service
+    _service = CronConverterService()
 
     def __init__(self):
         super().__init__()
@@ -49,15 +52,21 @@ class CronConverterView(Adw.Bin):
         format_str = self._format_text.get_text()
         number = int(self._dates_spinner.get_value())
 
+        # Setup task
+        self._service.set_expression(expression)
+        self._service.set_format_str(format_str)
+        self._service.set_quantity(number)
+
         if Utils.is_cron_expression_valid(expression):
-            cron = CronTab()
-            job = cron.new(command="/usr/bin/echo")
-            job.setall(expression)
-            schedule = job.schedule()
-            string = ""
-            for _ in range(0, number):
-                string += schedule.get_next().strftime(format_str) + "\n"
-            self._output_area.set_text(string)
+            self._output_area.set_spinner_spin(True)
+            self._service.generate_dates_async(self, self._on_generate_done)
+
         else:
+            self._output_area.set_spinner_spin(False)
             if len(expression) != 0:
                 self._expression.add_css_class("border-red")
+
+    def _on_generate_done(self, source_object, result, data):
+        self._output_area.set_spinner_spin(False)
+        outcome = self._service.generate_dates_async_finish(result, self)
+        self._output_area.set_text(outcome)

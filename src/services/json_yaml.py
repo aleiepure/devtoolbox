@@ -12,13 +12,13 @@ class JsonYamlService():
     def __init__(self):
         self._cancellable = Gio.Cancellable()
 
-    def _convert_json_to_yaml_thread(self, task, source_objcet, task_data, cancelable):
+    def _convert_json_to_yaml_thread(self, task, source_object, task_data, cancelable):
         if task.return_error_if_cancelled():
             return
         outcome = self._convert_json_to_yaml(self._input_string, self._input_indents)
         task.return_value(outcome)
 
-    def _convert_yaml_to_json_thread(self, task, source_objcet, task_data, cancelable):
+    def _convert_yaml_to_json_thread(self, task, source_object, task_data, cancelable):
         if task.return_error_if_cancelled():
             return
         outcome = self._convert_yaml_to_json(self._input_string, self._input_indents)
@@ -44,35 +44,16 @@ class JsonYamlService():
         )
 
     def convert_json_to_yaml_async(self, caller: GObject.Object, callback: callable):
-        """Asynchronous function to convert json to yaml
-
-        Keyword arguments:
-        json     -- json string to be converted
-        indents  -- number of spaces used for indentation (default 4 spaces)
-        callback -- function to call when done converting
-        """
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._convert_json_to_yaml_thread)
 
     def convert_yaml_to_json_async(self, caller: GObject.Object, callback: callable):
-        """Asynchronous function to convert yaml to json
-
-        Keyword arguments:
-        yaml     -- yaml string to be converted
-        indents  -- number of spaces used for indentation (default 4 spaces)
-        callback -- function to call when done converting
-        """
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._convert_yaml_to_json_thread)
 
     def convert_async_finish(self, result, caller: GObject.Object):
-        """Retrieves the result from the asynchronous function
-
-        Keyword arguments:
-        result -- returned value from the async caller
-        """
         if not Gio.Task.is_valid(result, caller):
             return -1
         return result.propagate_value().value
