@@ -12,6 +12,7 @@ sources = [
   'timestamp.py',
   'base_converter.py',
   'cron_converter.py',
+  'html_encoder.py',
 ]
 
 install_data(sources, install_dir: viewsdir)

@@ -20,7 +20,7 @@ if get_option('debug')
 
   git = find_program('git', required : false)
   if git.found()
-    git_commit = run_command('git', 'rev-parse', '--short', 'HEAD').stdout().strip()
+    git_commit = run_command('git', 'rev-parse', '--short', 'HEAD', check:true).stdout().strip()
   endif
   if git_commit == ''
     version_number = '-Devel'

@@ -9,6 +9,7 @@ sources = [
   '__init__.py',
   'json_yaml.py',
   'cron_converter.py',
+  'html_encoder.py',
 ]
 
 install_data(sources, install_dir: servicesdir)

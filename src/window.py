@@ -9,6 +9,7 @@ from .views.json_yaml import JsonYamlView
 from .views.timestamp import TimestampView
 from .views.base_converter import BaseConverterView
 from .views.cron_converter import CronConverterView
+from .views.html_encoder import HtmlEncoderView
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
@@ -16,6 +17,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
     __gtype_name__ = "DevtoolboxWindow"
 
     # Template elements
+    _title = Gtk.Template.Child()
     _flap_btn = Gtk.Template.Child()
     _tabs_stack = Gtk.Template.Child()
 
@@ -41,12 +43,6 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "category": "converter",
                 "icon-name": "calendar-symbolic",
                 "child": TimestampView(),
-            },
-            "placeholder1": {
-                "title": _("placeholder1"),
-                "category": "encoder",
-                "icon-name": "clock-rotate-symbolic",
-                "child": Gtk.Label(label="Encoder"),
             },
             "placeholder2": {
                 "title": _("placeholder2"),
@@ -84,38 +80,50 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "hourglass-symbolic",
                 "child": CronConverterView(),
             },
+            "html-encoder": {
+                "title": _("HTML"),
+                "category": "encoder",
+                "icon-name": "code-symbolic",
+                "child": HtmlEncoderView(),
+            },
+            "placeholder123": {
+                "title": _("placeholder123"),
+                "category": "encoder",
+                "icon-name": "clock-rotate-symbolic",
+                "child": Gtk.Label(label="text"),
+            },
         }
 
         categories = {
             "converter": {
                 "title": _("Converters"),
                 "icon-name": "horizontal-arrows-symbolic",
-                "child": TabContent(self._get_tools(tools, "converter")),
+                "child": TabContent(self._get_tools(tools, "converter"), "converter"),
             },
             "encoder": {
                 "title": _("Encoders"),
                 "icon-name": "folder-templates-symbolic",
-                "child": TabContent(self._get_tools(tools, "encoder")),
+                "child": TabContent(self._get_tools(tools, "encoder"), "encoder"),
             },
             "formatter": {
                 "title": _("Formatters"),
                 "icon-name": "text-indent-symbolic",
-                "child": TabContent(self._get_tools(tools, "formatter")),
+                "child": TabContent(self._get_tools(tools, "formatter"), "formatter"),
             },
             "generator": {
                 "title": _("Generators"),
                 "icon-name": "plus-symbolic",
-                "child": TabContent(self._get_tools(tools, "generator")),
+                "child": TabContent(self._get_tools(tools, "generator"), "generator"),
             },
             "text": {
                 "title": _("Text"),
                 "icon-name": "text-ab-symbolic",
-                "child": TabContent(self._get_tools(tools, "text")),
+                "child": TabContent(self._get_tools(tools, "text"), "text"),
             },
             "graphic": {
                 "title": _("Graphics"),
                 "icon-name": "brush-symbolic",
-                "child": TabContent(self._get_tools(tools, "graphic")),
+                "child": TabContent(self._get_tools(tools, "graphic"), "graphic"),
             },
         }
 
@@ -126,46 +134,21 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             page.set_title(categories[c]["title"])
             page.set_icon_name(categories[c]["icon-name"])
             if c != "favorite":
-                self._flap_btn.bind_property(
-                    "active",
-                    page.get_child().get_flap(),
-                    "reveal-flap",
-                    GObject.BindingFlags.SYNC_CREATE,
-                )
-                page.get_child().get_flap().bind_property(
-                    "reveal-flap",
-                    self._flap_btn,
-                    "active",
-                    GObject.BindingFlags.SYNC_CREATE,
-                )
+                self._flap_btn.bind_property("active", page.get_child().get_flap(), "reveal-flap", GObject.BindingFlags.SYNC_CREATE)
+                page.get_child().get_flap().bind_property("reveal-flap", self._flap_btn, "active", GObject.BindingFlags.SYNC_CREATE)
 
         # Restore last state
-        self._settings.bind(
-            "window-width", self, "default-width", Gio.SettingsBindFlags.DEFAULT
-        )
-        self._settings.bind(
-            "window-height", self, "default-height", Gio.SettingsBindFlags.DEFAULT
-        )
-        self._settings.bind(
-            "window-maximized", self, "maximized", Gio.SettingsBindFlags.DEFAULT
-        )
-        self._settings.bind(
-            "sidebar-open", self._flap_btn, "active", Gio.SettingsBindFlags.DEFAULT
-        )
-        self._settings.bind(
-            "last-tab",
-            self._tabs_stack,
-            "visible-child-name",
-            Gio.SettingsBindFlags.DEFAULT,
-        )
+        self._settings.bind("window-width", self, "default-width", Gio.SettingsBindFlags.DEFAULT)
+        self._settings.bind("window-height", self, "default-height", Gio.SettingsBindFlags.DEFAULT)
+        self._settings.bind("window-maximized", self, "maximized", Gio.SettingsBindFlags.DEFAULT)
+        self._settings.bind("sidebar-open", self._flap_btn, "active", Gio.SettingsBindFlags.DEFAULT)
+        self._settings.bind("last-tab", self._tabs_stack, "visible-child-name", Gio.SettingsBindFlags.DEFAULT)
 
+        self.connect("close-request", self._on_close_request)
+
+    def _on_close_request(self, data):
         content_stack = self._tabs_stack.get_visible_child().get_content_stack()
-        self._settings.bind(
-            "last-tool",
-            content_stack,
-            "visible-child-name",
-            Gio.SettingsBindFlags.DEFAULT,
-        )
+        self._settings.set_string("last-tool", content_stack.get_visible_child_name())
 
     def _on_flap_btn_clicked(self, data):
         self._flap.set_reveal_flap(self._flap_btn.get_active())

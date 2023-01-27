@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 - 2020 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="HtmlEncoderView" parent="AdwBin">
+    <child>
+      <object class="AdwToastOverlay" id="_toast">
+        <property name="child">
+          <object class="GtkScrolledWindow">
+            <property name="child">
+
+              <object class="AdwClamp">
+                <property name="vexpand">true</property>
+                  <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+
+                    <!-- Title -->
+                    <child>
+                      <object class="UtilityTitle" id="_title">
+                        <property name="title" translatable="yes">HTML Encoder &amp; Decoder</property>
+                        <property name="description" translatable="yes">Encode and decode special characters using the HTML format</property>
+                        <property name="tool-name">base-converter</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="margin-top">10</property>
+                        <property name="margin-bottom">10</property>
+                      </object>
+                    </child>
+
+                    <!-- Options -->
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="title" translatable="yes">Tool options</property>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="yes">Direction</property>
+                            <property name="subtitle" translatable="yes">Select the desired encoding direction</property>
+                            <property name="icon-name">horizontal-arrows-symbolic</property>
+                            <child type="suffix">
+                              <object class="BinarySelector" id="_direction_selector">
+                                <property name="left-label">Encode</property>
+                                <property name="right-label">Decode</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="margin-top">10</property>
+                      </object>
+                    </child>
+
+                    <!-- Input -->
+                    <child>
+                      <object class="TextArea" id="_input_area">
+                        <property name="name" translatable="yes">Input</property>
+                        <property name="show-clear-btn">true</property>
+                        <property name="show-paste-btn">true</property>
+                        <property name="show-open-btn">true</property>
+                        <property name="use-default-text-extensions">true</property>
+                        <property name="text-show-line-numbers">true</property>
+                        <property name="text-syntax-highlighting">true</property>
+                        <property name="text-language-highlight">html</property>
+                      </object>
+                    </child>
+
+                    <!-- Output -->
+                    <child>
+                      <object class="TextArea" id="_output_area">
+                        <property name="name" translatable="yes">Output</property>
+                        <property name="show-copy-btn">true</property>
+                        <property name="show-clear-btn">false</property>
+                        <property name="show-paste-btn">false</property>
+                        <property name="show-open-btn">false</property>
+                        <property name="text-editable">false</property>
+                        <property name="allow-drag-and-drop">false</property>
+                        <property name="text-show-line-numbers">true</property>
+                        <property name="text-syntax-highlighting">true</property>
+                        <property name="text-language-highlight">html</property>
+                      </object>
+                    </child>
+
+                  </object>
+                </property>
+              </object>
+
+            </property>
+          </object>
+        </property>
+      </object>
+    </child>
+  </template>
+</interface>

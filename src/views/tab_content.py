@@ -18,7 +18,7 @@ class TabContent(Adw.Bin):
     # GSettings
     _settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
 
-    def __init__(self, tools):
+    def __init__(self, tools, category):
         super().__init__()
 
         # Populate sidebar
@@ -28,15 +28,20 @@ class TabContent(Adw.Bin):
 
         # Select the correct row
         try:
-            if len(tools) != 0:
-                list(tools.keys())
+            if self._settings.get_string("last-tab") == category and len(tools) != 0:
                 index = list(tools.keys()).index(self._settings.get_string("last-tool"))
                 if index == 0:
                     self._sidebar.select_row(self._sidebar.get_first_child())
                 else:
                     self._sidebar.select_row(self._sidebar.get_row_at_index(index))
+            else:
+                self._sidebar.select_row(self._sidebar.get_first_child())
         except ValueError:
-            pass
+            self._sidebar.select_row(self._sidebar.get_first_child())
+
+        self._content_stack.set_visible_child_name(self._sidebar.get_selected_row().get_name())
+
+        #self._settings.bind("last-tool", self._content_stack, "visible-child-name", Gio.SettingsBindFlags.DEFAULT)
 
         # Signals
         self._sidebar.connect("row-activated", self._on_sidebar_change)
