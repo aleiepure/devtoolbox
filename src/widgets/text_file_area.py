@@ -119,8 +119,8 @@ class TextFileArea(Adw.Bin):
         self.emit("view-cleared")
 
     def _on_copy_clicked(self, data):
-        buffer    = self._textview.get_buffer()
-        text      = buffer.get_text(buffer.get_start_iter(), buffer.get_end_iter(), False)
+        text_buffer = self._textview.get_buffer()
+        text = text_buffer.get_text(text_buffer.get_start_iter(), text_buffer.get_end_iter(), False)
         clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         clipboard.set(text)
         self._stack.set_visible_child_name("text-area")
@@ -239,8 +239,8 @@ class TextFileArea(Adw.Bin):
         self._stack.set_visible_child_name("text-area")
 
     def get_text(self) -> str:
-        buffer    = self._textview.get_buffer()
-        text      = buffer.get_text(buffer.get_start_iter(), buffer.get_end_iter(), False)
+        text_buffer = self._textview.get_buffer()
+        text = text_buffer.get_text(text_buffer.get_start_iter(), text_buffer.get_end_iter(), False)
         return text
 
     def get_buffer(self) -> GtkSource.Buffer:

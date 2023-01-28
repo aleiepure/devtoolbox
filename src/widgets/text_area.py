@@ -123,8 +123,8 @@ class TextArea(Adw.Bin):
         self.emit("view-cleared")
 
     def _on_copy_clicked(self, data):
-        buffer = self._textview.get_buffer()
-        text = buffer.get_text(buffer.get_start_iter(), buffer.get_end_iter(), False)
+        text_buffer = self._textview.get_buffer()
+        text = text_buffer.get_text(text_buffer.get_start_iter(), text_buffer.get_end_iter(), False)
         clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         clipboard.set(text)
         self._stack.set_visible_child_name("text-area")
@@ -177,7 +177,6 @@ class TextArea(Adw.Bin):
         self._native = None
 
     def _open_file(self, file):
-        file_path = file.peek_path()
         file_size = file.query_info("*", 0, None).get_size()
 
         if file_size > 1000000000:
@@ -216,8 +215,8 @@ class TextArea(Adw.Bin):
         self._spinner.set_visible(False)
 
     def get_text(self) -> str:
-        buffer = self._textview.get_buffer()
-        text = buffer.get_text(buffer.get_start_iter(), buffer.get_end_iter(), False)
+        text_buffer = self._textview.get_buffer()
+        text = text_buffer.get_text(text_buffer.get_start_iter(), text_buffer.get_end_iter(), False)
         return text
 
     def set_text(self, text: str):

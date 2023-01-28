@@ -53,7 +53,7 @@ class EntryRow(Adw.EntryRow):
         clipboard.set(text)
 
     def _on_paste_clicked(self, widget):
-        pass
+        pass # pasting via the provided button doesn't work. See project README
 
     def _on_clear_clicked(self, widget):
         self.remove_css_class("border-red")

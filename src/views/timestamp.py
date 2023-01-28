@@ -15,7 +15,6 @@ class TimestampView(Adw.Bin):
     # Template elements
     _toast               = Gtk.Template.Child()
     _title               = Gtk.Template.Child()
-    #_timezone_action_row = Gtk.Template.Child()
     _timestamp_spin_area = Gtk.Template.Child()
     _date_area           = Gtk.Template.Child()
 
@@ -26,8 +25,6 @@ class TimestampView(Adw.Bin):
         time = datetime.now(tz = tz.tzlocal())
         self._timestamp_spin_area.set_value(time.timestamp())
         self._date_area.set_date(time.year, time.month, time.day, time.hour, time.minute, time.second)
-
-
 
         # Signals
         self._timestamp_spin_area.connect("action-clicked", self._on_timestamp_now_clicked)
