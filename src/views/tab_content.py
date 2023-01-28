@@ -23,7 +23,7 @@ class TabContent(Adw.Bin):
 
         # Populate sidebar
         for t in tools:
-            self._sidebar.append(SidebarItem(name=t, title=tools[t]["title"], icon_name=tools[t]["icon-name"]))
+            self._sidebar.append(SidebarItem(name=t, title=tools[t]["title"], icon_name=tools[t]["icon-name"], tooltip=tools[t]["tooltip"]))
             self._content_stack.add_named(tools[t]["child"], t)
 
         # Select the correct row
