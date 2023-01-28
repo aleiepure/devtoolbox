@@ -9,7 +9,7 @@ gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 gi.require_version("GtkSource", "5")
 
-from gi.repository import Gtk, Gio, Adw, GObject, GtkSource
+from gi.repository import Gtk, Gio, Adw, GObject, GtkSource, Gdk
 from .window import DevtoolboxWindow
 from .widgets.utility_title import UtilityTitle
 from .widgets.text_area import TextArea
@@ -44,9 +44,7 @@ class DevtoolboxApplication(Adw.Application):
     ]
 
     def __init__(self, version, debug):
-        super().__init__(
-            application_id="me.iepure.devtoolbox", flags=Gio.ApplicationFlags.FLAGS_NONE
-        )
+        super().__init__(application_id="me.iepure.devtoolbox", flags=Gio.ApplicationFlags.FLAGS_NONE)
 
         self.version = version
         self.debug = debug

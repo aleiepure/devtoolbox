@@ -9,9 +9,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 <interface>
   <requires lib="gtk" version="4.0" />
   <requires lib="libadwaita" version="1.0" />
-  <template class="JsonYamlView" parent="AdwBin">
+  <template class="UrlEncoderView" parent="AdwBin">
     <child>
-
       <object class="AdwToastOverlay" id="_toast">
         <property name="child">
           <object class="GtkScrolledWindow">
@@ -26,9 +25,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     <!-- Title -->
                     <child>
                       <object class="UtilityTitle" id="_title">
-                        <property name="title" translatable="yes">JSON - YAML Converter</property>
-                        <property name="description" translatable="yes">Convert JSON documents to YAML and vice-versa</property>
-                        <property name="tool-name">json-yaml</property>
+                        <property name="title" translatable="yes">URL Encoder &amp; Decoder</property>
+                        <property name="description" translatable="yes">Encode and decode special characters inside URLs</property>
+                        <property name="tool-name">url-encoder</property>
                       </object>
                     </child>
                     <child>
@@ -40,37 +39,38 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
                     <!-- Options -->
                     <child>
-                      <object class="AdwPreferencesGroup">
+                      <object class="AdwPreferencesGroup" id="_preference_group">
                         <property name="title" translatable="yes">Tool options</property>
                         <child>
                           <object class="AdwActionRow">
                             <property name="title" translatable="yes">Direction</property>
-                            <property name="subtitle" translatable="yes">Specify what format is the input and the desired output</property>
+                            <property name="subtitle" translatable="yes">Select the desired encoding direction</property>
                             <property name="icon-name">horizontal-arrows-symbolic</property>
                             <child type="suffix">
                               <object class="BinarySelector" id="_direction_selector">
-                                <property name="left-label">JSON → YAML</property>
-                                <property name="right-label">YAML → JSON</property>
+                                <property name="left-label">Encode</property>
+                                <property name="right-label">Decode</property>
                               </object>
                             </child>
                           </object>
                         </child>
                         <child>
-                          <object class="AdwActionRow">
-                            <property name="title" translatable="yes">Indentations</property>
-                            <property name="subtitle" translatable="yes">Number of spaces used for indentation</property>
-                            <property name="icon-name">format-indent-more-symbolic</property>
-                            <child type="suffix">
-                              <object class="GtkSpinButton" id="_indents_spinner">
-                                <property name="valign">center</property>
-                                <property name="adjustment">
-                                  <object class="GtkAdjustment">
-                                    <property name="lower">2</property>
-                                    <property name="upper">8</property>
-                                    <property name="step-increment">1</property>
-                                    <property name="value">4</property>
+                          <object class="GtkRevealer" id="_revealer">
+                            <property name="reveal-child">false</property>
+                            <child>
+                              <object class="AdwActionRow">
+                                <style>
+                                  <class name="fake-action-row-bottom" />
+                                </style>
+                                <property name="title" translatable="yes">Space encoding</property>
+                                <property name="subtitle" translatable="yes">Select the desired encoding for the space character</property>
+                                <property name="icon-name">spacebar-symbolic</property>
+                                <child type="suffix">
+                                  <object class="BinarySelector" id="_space_encoding_selector">
+                                    <property name="left-label">+</property>
+                                    <property name="right-label">%20</property>
                                   </object>
-                                </property>
+                                </child>
                               </object>
                             </child>
                           </object>
@@ -119,7 +119,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
           </object>
         </property>
       </object>
-
     </child>
   </template>
 </interface>

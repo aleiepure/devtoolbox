@@ -46,3 +46,9 @@ class BinarySelector(Adw.Bin):
 
     def get_right_active(self) -> bool:
         return self._right_btn.get_active()
+
+    def get_left_button(self) -> Gtk.Button:
+        return self._left_btn
+
+    def get_right_button(self) -> Gtk.Button:
+        return self._right_btn

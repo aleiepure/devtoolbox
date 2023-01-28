@@ -10,6 +10,7 @@ from .views.timestamp import TimestampView
 from .views.base_converter import BaseConverterView
 from .views.cron_converter import CronConverterView
 from .views.html_encoder import HtmlEncoderView
+from .views.url_encoder import UrlEncoderView
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
@@ -86,11 +87,11 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "code-symbolic",
                 "child": HtmlEncoderView(),
             },
-            "placeholder123": {
-                "title": _("placeholder123"),
+            "url-encoder": {
+                "title": _("URL"),
                 "category": "encoder",
-                "icon-name": "clock-rotate-symbolic",
-                "child": Gtk.Label(label="text"),
+                "icon-name": "chain-link-symbolic",
+                "child": UrlEncoderView(),
             },
         }
 
