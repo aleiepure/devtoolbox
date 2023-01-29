@@ -11,6 +11,7 @@ from .views.base_converter import BaseConverterView
 from .views.cron_converter import CronConverterView
 from .views.html_encoder import HtmlEncoderView
 from .views.url_encoder import UrlEncoderView
+from .views.base64_encoder import Base64EncoderView
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
@@ -102,6 +103,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "chain-link-symbolic",
                 "tooltip": "Encode and decode special characters inside URLs",
                 "child": UrlEncoderView(),
+            },
+            "base64-encoder": {
+                "title": _("Base64"),
+                "category": "encoder",
+                "icon-name": "base64-symbolic",
+                "tooltip": "Encode and decode files and texts using base64",
+                "child": Base64EncoderView(),
             },
         }
 

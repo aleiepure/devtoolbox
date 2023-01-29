@@ -11,12 +11,12 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <requires lib="libadwaita" version="1.0" />
 
     <template class="FileViewer" parent="AdwBin">
+      <style>
+        <class name="rounded-border" />
+        <class name="view" />
+      </style>
       <child>
         <object class="GtkBox">
-            <style>
-                <class name="rounded-border" />
-                <class name="view" />
-            </style>
             <property name="orientation">vertical</property>
             <child>
                 <object class="GtkBox">
@@ -43,4 +43,3 @@ SPDX-License-Identifier: GPL-3.0-or-later
       </child>
     </template>
 </interface>
-

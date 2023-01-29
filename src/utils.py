@@ -7,6 +7,8 @@ from ruamel import yaml
 from enum import Enum
 from crontab import CronTab, CronSlices
 import json
+import base64
+import binascii
 
 
 class Bases(Enum):
@@ -19,11 +21,14 @@ class Bases(Enum):
 class Utils:
     @staticmethod
     def is_text(input):
-        try:
-            input.decode("utf-8")
+        if isinstance(input, str):
             return True
-        except UnicodeError:
-            return False
+        else:
+            try:
+                input.decode("utf-8")
+                return True
+            except UnicodeError:
+                return False
 
     @staticmethod
     def is_image(input):
@@ -84,3 +89,11 @@ class Utils:
     @staticmethod
     def is_cron_expression_valid(expression: str):
         return CronSlices.is_valid(expression)
+
+    @staticmethod
+    def is_base64(text: str):
+        try:
+            base64.b64decode(text)
+            return True
+        except Exception:
+            return False

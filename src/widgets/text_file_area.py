@@ -4,6 +4,7 @@
 
 from gi.repository import Gtk, Adw, GObject, Gio, GtkSource, Gdk, GLib
 from gettext import gettext as _
+from typing import List
 from devtoolbox.utils import Utils
 import humanize
 
@@ -13,41 +14,48 @@ class TextFileArea(Adw.Bin):
     __gtype_name__ = "TextFileArea"
 
     # Template elements
-    _name_lbl    = Gtk.Template.Child()
-    _action_btn  = Gtk.Template.Child()
-    _separator   = Gtk.Template.Child()
-    _open_btn    = Gtk.Template.Child()
-    _copy_btn    = Gtk.Template.Child()
-    _paste_btn   = Gtk.Template.Child()
-    _clear_btn   = Gtk.Template.Child()
-    _stack       = Gtk.Template.Child()
-    _textview    = Gtk.Template.Child()
-    _imageview   = Gtk.Template.Child()
-    _fileview    = Gtk.Template.Child()
+    _name_lbl = Gtk.Template.Child()
+    _spinner = Gtk.Template.Child()
+    _spinner_separator = Gtk.Template.Child()
+    _action_btn = Gtk.Template.Child()
+    _action_btn_separator = Gtk.Template.Child()
+    _open_btn = Gtk.Template.Child()
+    _save_btn = Gtk.Template.Child()
+    _copy_btn = Gtk.Template.Child()
+    _paste_btn = Gtk.Template.Child()
+    _clear_btn = Gtk.Template.Child()
+    _stack = Gtk.Template.Child()
+    _textview = Gtk.Template.Child()
+    _imageview = Gtk.Template.Child()
+    _fileview = Gtk.Template.Child()
     _loading_lbl = Gtk.Template.Child()
 
     # GSettings
     _settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
 
     # Properties
-    name                         = GObject.Property(type=str, default="")
-    show_clear_btn               = GObject.Property(type=bool, default=False)
-    show_copy_btn                = GObject.Property(type=bool, default=False)
-    show_open_btn                = GObject.Property(type=bool, default=False)
-    show_paste_btn               = GObject.Property(type=bool, default=False)
-    show_action_btn              = GObject.Property(type=bool, default=False)
-    action_name                  = GObject.Property(type=str, default="")
-    text_editable                = GObject.Property(type=bool, default=True)
-    text_show_line_numbers       = GObject.Property(type=bool, default=False)
-    text_highlight_current_line  = GObject.Property(type=bool, default=False)
-    text_syntax_highlighting     = GObject.Property(type=bool, default=False)
-    text_language_highlight      = GObject.Property(type=str, default="")
-    area_height                  = GObject.Property(type=int, default=200)
-    use_default_text_extensions  = GObject.Property(type=bool, default=False)
+    name = GObject.Property(type=str, default="")
+    show_spinner = GObject.Property(type=bool, default=False)
+    show_clear_btn = GObject.Property(type=bool, default=False)
+    show_save_btn = GObject.Property(type=bool, default=False)
+    show_copy_btn = GObject.Property(type=bool, default=False)
+    show_open_btn = GObject.Property(type=bool, default=False)
+    show_paste_btn = GObject.Property(type=bool, default=False)
+    show_action_btn = GObject.Property(type=bool, default=False)
+    action_name = GObject.Property(type=str, default="")
+    text_editable = GObject.Property(type=bool, default=True)
+    text_show_line_numbers = GObject.Property(type=bool, default=False)
+    text_highlight_current_line = GObject.Property(type=bool, default=False)
+    text_syntax_highlighting = GObject.Property(type=bool, default=False)
+    text_language_highlight = GObject.Property(type=str, default="")
+    area_height = GObject.Property(type=int, default=200)
+    use_default_text_extensions = GObject.Property(type=bool, default=False)
+    use_all_files_extensions = GObject.Property(type=bool, default=False)
     use_default_image_extensions = GObject.Property(type=bool, default=False)
-    use_custom_file_extensions   = GObject.Property(type=bool, default=False)
-    custom_file_extensions       = GObject.Property(type=GObject.TYPE_STRV)
-    loading_label                = GObject.Property(type=str, default="Opening file...")
+    use_custom_file_extensions = GObject.Property(type=bool, default=False)
+    custom_file_extensions = GObject.Property(type=GObject.TYPE_STRV)
+    loading_label = GObject.Property(type=str, default="Opening file...")
+    allow_drag_and_drop = GObject.Property(type=bool, default=True)
 
     # Custom signals
     __gsignals__ = {
@@ -59,6 +67,7 @@ class TextFileArea(Adw.Bin):
         "file-loaded":    (GObject.SIGNAL_RUN_LAST, None, ()),
         "big-file":       (GObject.SIGNAL_RUN_LAST, None, ()),
         "error":          (GObject.SIGNAL_RUN_LAST, None, (str,)),
+        "saved":          (GObject.SIGNAL_RUN_LAST, None, (str,)),
     }
 
     def __init__(self):
@@ -78,21 +87,23 @@ class TextFileArea(Adw.Bin):
         self._textview.add_controller(target)
 
         # Property binding
-        self.bind_property("name",                        self._name_lbl,              "label",                       GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-clear-btn",              self._clear_btn,             "visible",                     GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-copy-btn",               self._copy_btn,              "visible",                     GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-open-btn",               self._open_btn,              "visible",                     GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-paste-btn",              self._paste_btn,             "visible",                     GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-action-btn",             self._action_btn,            "visible",                     GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-action-btn",             self._separator,             "visible",                     GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("action-name",                 self._action_btn,            "label",                       GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("text-editable",               self._textview,              "editable",                    GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("text-syntax-highlighting",    self._textview.get_buffer(), "highlight-syntax",            GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("text-syntax-highlighting",    self._textview.get_buffer(), "highlight-matching-brackets", GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("text-show-line-numbers",      self._textview,              "show-line-numbers",           GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("text-highlight-current-line", self._textview,              "highlight-current-line",      GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("area-height",                 self._textview,              "height-request",              GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("loading-label",               self._loading_lbl,           "label",                       GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("name", self._name_lbl, "label", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-spinner", self._spinner, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-spinner", self._spinner_separator, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-clear-btn", self._clear_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-copy-btn", self._copy_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-open-btn", self._open_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-save-btn", self._save_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-paste-btn", self._paste_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-action-btn", self._action_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-action-btn", self._action_btn_separator, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("text-editable", self._textview, "editable", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("text-syntax-highlighting", self._textview.get_buffer(), "highlight-syntax", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("text-syntax-highlighting", self._textview.get_buffer(), "highlight-matching-brackets", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("text-show-line-numbers", self._textview, "show-line-numbers", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("text-highlight-current-line", self._textview, "highlight-current-line", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("area-height", self._textview, "height-request", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("loading-label", self._loading_lbl,  "label", GObject.BindingFlags.SYNC_CREATE)
 
         # Signal connection
         self._action_btn.connect("clicked", self._on_action_clicked)
@@ -100,6 +111,7 @@ class TextFileArea(Adw.Bin):
         self._copy_btn.connect("clicked", self._on_copy_clicked)
         self._paste_btn.connect("clicked", self._on_paste_clicked)
         self._open_btn.connect("clicked", self._on_open_clicked)
+        self._save_btn.connect("clicked", self._on_save_clicked)
         self._textview.get_buffer().connect("changed", self._on_text_changed)
 
     def _on_dnd_drop(self, drop_target, value: Gdk.FileList, x, y, user_data=None):
@@ -123,29 +135,36 @@ class TextFileArea(Adw.Bin):
         text = text_buffer.get_text(text_buffer.get_start_iter(), text_buffer.get_end_iter(), False)
         clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         clipboard.set(text)
-        self._stack.set_visible_child_name("text-area")
+        self.set_visible_view("text-area")
 
     def _on_paste_clicked(self, data):
         text_buffer = self._textview.get_buffer()
         clipboard   = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         text_buffer.paste_clipboard(clipboard, None, True)
-        self._stack.set_visible_child_name("text-area")
+        self.set_visible_view("text-area")
 
     def _on_open_clicked(self, data):
 
         # Start loading animation and disable open button
         self._open_btn.set_sensitive(False)
-        self._stack.set_visible_child_name("loading")
+        self.set_visible_view("loading")
+        self.loading_lbl = _("Opening file...")
 
         # Create a file chooser
         self._native = Gtk.FileChooserNative(
-            title="Open File",
+            title=_("Open File"),
             action=Gtk.FileChooserAction.OPEN,
-            accept_label="_Open",
-            cancel_label="_Cancel"
+            accept_label=_("Open"),
+            cancel_label=_("Cancel")
         )
 
         # File filters
+        if self.use_all_files_extensions:
+            all_files_filter = Gtk.FileFilter()
+            all_files_filter.add_pattern("*")
+            all_files_filter.set_name(_("All files"))
+            self._native.add_filter(all_files_filter)
+
         if self.use_default_text_extensions and self.use_default_image_extensions:
             text_image_filter = Gtk.FileFilter()
             text_image_filter.add_mime_type("text/*")
@@ -181,7 +200,7 @@ class TextFileArea(Adw.Bin):
             self._open_file(dialog.get_file())
         else:
             self._open_btn.set_sensitive(True)
-            self._stack.set_visible_child_name("text-area")
+            self.set_visible_view("text-area")
 
         self._native = None
 
@@ -192,7 +211,7 @@ class TextFileArea(Adw.Bin):
         if file_size > 1000000000:
             self._fileview.set_file_path(file_path)
             self._fileview.set_file_size(humanize.naturalsize(file_size))
-            self._stack.set_visible_child_name("file_area")
+            self.set_visible_view("file_area")
             self.emit("big-file")
             self.emit("file-loaded")
         else:
@@ -204,29 +223,78 @@ class TextFileArea(Adw.Bin):
            self.emit("error", f"Unable to open {file.peek_path()}: {contents[1]}.")
            return
 
-        if Utils.is_text(contents[1]):
+        if Utils.is_text(contents[1]) and self.allow_drag_and_drop:
             text = contents[1].decode("utf-8")
             text_buffer = self._textview.get_buffer()
             text_buffer.set_text(text)
             text_buffer.place_cursor(text_buffer.get_end_iter())
             self._open_btn.set_sensitive(True)
-            self._stack.set_visible_child_name("text-area")
+            self.set_visible_view("text-area")
             self.emit("text-loaded")
-        elif Utils.is_image(contents[1]):
-            texture = Gdk.Texture.new_from_bytes(GLib.Bytes(contents[1]))
+        elif Utils.is_image(contents[1]) and self.allow_drag_and_drop:
+            image_bytes = GLib.Bytes(contents[1])
+            texture = Gdk.Texture.new_from_bytes(image_bytes)
+            self._file_bytes = image_bytes
             self._fileview.set_file_path(file.peek_path())
             self._imageview.set_paintable(texture)
             self._open_btn.set_sensitive(True)
-            self._stack.set_visible_child_name("image-area")
+            self.set_visible_view("image-area")
             self.emit("image-loaded")
-        else:
+        elif self.allow_drag_and_drop:
+            self._file_bytes = contents[1]
             file_path = file.peek_path()
             file_size = file.query_info("*", 0, None).get_size()
             self._fileview.set_file_path(file_path)
             self._fileview.set_file_size(humanize.naturalsize(file_size))
             self._open_btn.set_sensitive(True)
-            self._stack.set_visible_child_name("file-area")
+            self.set_visible_view("file-area")
             self.emit("file-loaded")
+
+    def _on_save_clicked(self, data):
+
+        # Start loading animation and disable save button
+        self._save_btn.set_sensitive(False)
+        self._loading_lbl.set_label(_("Saving file..."))
+        self.set_visible_view("loading")
+
+        self._native = Gtk.FileChooserNative(
+            title=_("Save file as"),
+            action=Gtk.FileChooserAction.SAVE,
+            accept_label=_("Save"),
+            cancel_label=_("Cancel"),
+        )
+        self._native.connect("response", self._on_save_response)
+        self._native.show()
+
+    def _on_save_response(self, native, response):
+        if response == Gtk.ResponseType.ACCEPT:
+            self._save_file(native.get_file())
+        else:
+            self._save_btn.set_sensitive(True)
+            self._stack.set_visible_child_name(self._previous_view)
+
+        self._native = None
+
+    def _save_file(self, file):
+
+        # If there is nothing to save, return early
+        if not self._file_bytes:
+            return
+
+        # Start the asynchronous operation to save the data into the file
+        file.replace_contents_bytes_async(self._file_bytes, None, False, Gio.FileCreateFlags.NONE, None, self._on_save_file_complete)
+
+    def _on_save_file_complete(self, file, result):
+        res = file.replace_contents_finish(result)
+        file_path = file.peek_path()
+
+        self._save_btn.set_sensitive(True)
+        self.set_visible_view(self._previous_view)
+        if not res:
+            self.emit("error", f"Unable to save {file_path}")
+            return
+        self.emit("saved", file_path)
+
 
     def _on_text_changed(self, data):
         self.emit("text-changed")
@@ -236,12 +304,30 @@ class TextFileArea(Adw.Bin):
         self._textview.remove_css_class("border-red")
         self._fileview.set_file_path("")
         self._fileview.set_file_size("")
-        self._stack.set_visible_child_name("text-area")
+        self.set_visible_view("text-area")
 
     def get_text(self) -> str:
         text_buffer = self._textview.get_buffer()
         text = text_buffer.get_text(text_buffer.get_start_iter(), text_buffer.get_end_iter(), False)
         return text
+
+    def set_text(self, text:str):
+        self._textview.get_buffer().set_text(text)
+
+    def set_image(self, image_bytes):
+        self._imageview.set_paintable(Gdk.Texture.new_from_bytes(image_bytes))
+        self._file_bytes = image_bytes
+
+    def get_file_contents(self):
+        file = Gio.File.new_for_path(self._fileview.get_file_path())
+        return file.load_contents(None)
+
+    def set_file(self, file_bytes, file_path:str):
+        self._file_bytes = file_bytes
+        self._fileview.set_file_path(file_path)
+
+    def set_file_path(self, file_path:str):
+        self._fileview.set_file_path(file_path)
 
     def get_buffer(self) -> GtkSource.Buffer:
         return self._textview.get_buffer()
@@ -254,16 +340,20 @@ class TextFileArea(Adw.Bin):
 
     def add_css_class(self, css_class:str):
         self._textview.add_css_class(css_class)
+        self._imageview.add_css_class(css_class)
+        self._fileview.add_css_class(css_class)
 
     def remove_css_class(self, css_class:str):
         self._textview.remove_css_class(css_class)
+        self._imageview.remove_css_class(css_class)
+        self._fileview.remove_css_class(css_class)
 
     def get_visible_view(self) -> str:
         return self._stack.get_visible_child_name()
 
-    def set_visible_view(self, child:str):
+    def set_visible_view(self, child_name:str):
         self._previous_view = self._stack.get_visible_child_name()
-        self._stack.set_visible_child_name(child)
+        self._stack.set_visible_child_name(child_name)
 
     def set_text_language_highlight(self, language:str):
         self._textview.get_buffer().set_language(GtkSource.LanguageManager.get_default().get_language(language))
@@ -274,3 +364,15 @@ class TextFileArea(Adw.Bin):
             self._stack.set_visible_child_name("loading")
         else:
             self._stack.set_visible_child_name(self._previous_view)
+
+    def set_save_btn_visible(self, enabled:bool):
+        self._save_btn.set_visible(enabled)
+
+    def set_copy_btn_visible(self, enabled:bool):
+        self._copy_btn.set_visible(enabled)
+
+    def set_spinner_spin(self, enabled: bool):
+        self._spinner.set_visible(enabled)
+
+    def clear(self):
+        self._clear()

@@ -46,6 +46,18 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                                 <property name="halign">end</property>
                                                 <property name="hexpand">true</property>
                                                 <child>
+                                                    <object class="GtkSpinner" id="_spinner">
+                                                        <property name="width-request">16</property>
+                                                    </object>
+                                                </child>
+                                                <child>
+                                                    <object class="GtkSeparator" id="_spinner_separator">
+                                                        <style>
+                                                            <class name="spacer" />
+                                                        </style>
+                                                    </object>
+                                                </child>
+                                                <child>
                                                     <object class="GtkButton" id="_action_btn">
                                                         <style>
                                                             <class name="suggested-action" />
@@ -53,7 +65,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                                     </object>
                                                 </child>
                                                 <child>
-                                                    <object class="GtkSeparator" id="_separator">
+                                                    <object class="GtkSeparator" id="_action_btn_separator">
                                                         <style>
                                                             <class name="spacer" />
                                                         </style>
@@ -74,6 +86,13 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                                                         <property name="label" translatable="yes">Open</property>
                                                                     </object>
                                                                 </property>
+                                                            </object>
+                                                        </child>
+                                                        <child>
+                                                            <object class="GtkButton" id="_save_btn">
+                                                                <property name="valign">center</property>
+                                                                <property name="icon-name">floppy-symbolic</property>
+                                                                <property name="tooltip-text" translatable="yes">Save to file</property>
                                                             </object>
                                                         </child>
                                                         <child>
