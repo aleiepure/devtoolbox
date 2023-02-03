@@ -13,7 +13,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
   <a href="https://github.com/aleiepure/devtoolbox/actions/workflows/main.yml" title="Build flatpak action">
     <img src="https://github.com/aleiepure/devtoolbox/actions/workflows/main.yml/badge.svg"/>
   </a>
-  <a href="https://github.com/aleiepure/devtoolbox/blob/main/LICENSE.md">
+  <a href="https://github.com/aleiepure/devtoolbox/blob/main/LICENSES/GPL-3.0-or-later.txt">
     <img src="https://img.shields.io/badge/License-GPL--3.0-blue.svg">
   </a>
   <a href="https://api.reuse.software/info/github.com/aleiepure/devtoolbox" title="REUSE compliance">
