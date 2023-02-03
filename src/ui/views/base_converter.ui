@@ -85,7 +85,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="margin-top">20</property>
                         <property name="margin-start">20</property>
                         <property name="margin-end">20</property>
-                        <property name="description" translatable="yes">🛈 Typing an unaccepted character (i.e. A in the decimal field) will cause all the fields to reset to 0.</property>
+                        <property name="description" translatable="yes">🛈 Typing an unaccepted character (i.e. 'A' in the decimal field) will cause all the fields to reset to 0.</property>
                       </object>
                   </child>
 

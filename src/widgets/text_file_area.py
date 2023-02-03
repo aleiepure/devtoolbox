@@ -319,8 +319,8 @@ class TextFileArea(Adw.Bin):
         self._file_bytes = image_bytes
 
     def get_file_contents(self):
-        file = Gio.File.new_for_path(self._fileview.get_file_path())
-        return file.load_contents(None)
+        f = Gio.File.new_for_path(self._fileview.get_file_path())
+        return f.load_contents(None)
 
     def set_file(self, file_bytes, file_path:str):
         self._file_bytes = file_bytes

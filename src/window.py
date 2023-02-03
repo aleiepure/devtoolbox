@@ -12,6 +12,7 @@ from .views.cron_converter import CronConverterView
 from .views.html_encoder import HtmlEncoderView
 from .views.url_encoder import UrlEncoderView
 from .views.base64_encoder import Base64EncoderView
+from .views.gzip_compressor import GzipCompressorView
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
@@ -110,6 +111,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "base64-symbolic",
                 "tooltip": "Encode and decode files and texts using base64",
                 "child": Base64EncoderView(),
+            },
+            "gzip-compressor": {
+                "title": _("GZip"),
+                "category": "encoder",
+                "icon-name": "shoe-box-symbolic",
+                "tooltip": "Compress and decompress files and texts using gzip",
+                "child": GzipCompressorView(),
             },
         }
 
