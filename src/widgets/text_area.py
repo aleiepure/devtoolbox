@@ -142,11 +142,14 @@ class TextArea(Adw.Bin):
         self._stack.set_visible_child_name("loading")
 
         # Create a file chooser
+        app = Gio.Application.get_default()
+        window = app.get_active_window()
         self._native = Gtk.FileChooserNative(
-            title="Open File",
+            transient_for=window,
+            title=_("Open File"),
             action=Gtk.FileChooserAction.OPEN,
-            accept_label="_Open",
-            cancel_label="_Cancel",
+            accept_label=_("Open"),
+            cancel_label=_("Cancel")
         )
 
         # File filters

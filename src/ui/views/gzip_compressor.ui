@@ -83,15 +83,16 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="show-open-btn">false</property>
                         <property name="text-editable">false</property>
                         <property name="allow-drag-and-drop">false</property>
-                        <property name="margin-bottom">10</property>
                       </object>
                     </child>
 
                     <child>
                       <object class="AdwPreferencesGroup">
+                        <property name="margin-bottom">10</property>
                         <property name="margin-top">20</property>
-                        <property name="margin-start">100</property>
-                        <property name="description" translatable="yes">🛈 The compression result and the expected input are base64 encoded.</property>
+                        <property name="margin-start">50</property>
+                        <property name="margin-end">50</property>
+                        <property name="description" translatable="yes">🛈 The compression result and the expected decompression input are base64 encoded.</property>
                       </object>
                     </child>
 

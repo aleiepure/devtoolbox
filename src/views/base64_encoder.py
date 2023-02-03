@@ -21,6 +21,11 @@ class Base64EncoderView(Adw.Bin):
     # Service
     _service = Base64EncoderService()
 
+    # Toast messages
+    _file_saved_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH, button_label=_("Open"))
+    _error_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH)
+    _cannot_convert_toast = Adw.Toast(title=_("Cannot decompress from an image or a file"), priority=Adw.ToastPriority.HIGH)
+
     def __init__(self):
         super().__init__()
 
@@ -33,10 +38,20 @@ class Base64EncoderView(Adw.Bin):
         self._input_area.connect("view-cleared", self._on_view_cleared)
         self._output_area.connect("error", self._on_error)
         self._output_area.connect("saved", self._on_saved)
+        self._file_saved_toast.connect("button-clicked", self._on_toast_button_clicked)
+
+    def _on_toast_button_clicked(self, data):
+        app = Gio.Application.get_default()
+        window = app.get_active_window()
+        full_msg = self._file_saved_toast.get_title()
+        full_path = full_msg[full_msg.index("/"):len(full_msg)]
+        folder_path = full_path[:full_path.rindex("/")]
+        Gtk.show_uri(window, "file://" + folder_path, Gdk.CURRENT_TIME)
 
     def _on_saved(self, data, file_name):
         self._output_area.set_file_path(file_name)
-        self._toast.add_toast(Adw.Toast(title=f'{_("Successfully saved as")} {file_name}', priority=Adw.ToastPriority.HIGH))
+        self._file_saved_toast.set_title(f'{_("Successfully saved as")} {file_name}')
+        self._toast.add_toast(self._file_saved_toast)
 
     def _on_view_cleared(self, data):
         self._output_area.set_save_btn_visible(False)
@@ -45,7 +60,8 @@ class Base64EncoderView(Adw.Bin):
 
     def _on_error(self, data, error):
         error_str = _("Error")
-        self._toast.add_toast(Adw.Toast(title=f"{error_str}: {error}", priority=Adw.ToastPriority.HIGH))
+        self._error_toast.set_title(f"{error_str}: {error}")
+        self._toast.add_toast(self._error_toast)
 
     def _convert(self, data):
 
@@ -82,7 +98,7 @@ class Base64EncoderView(Adw.Bin):
             else:
                 self._output_area.clear()
                 self._input_area.add_css_class("border-red")
-                self._toast.add_toast(Adw.Toast(title=_("Cannot decode from image or file"), priority=Adw.ToastPriority.HIGH))
+                self._toast.add_toast(self._cannot_convert_toast)
 
     def _on_async_done(self, source_object, result, data):
         self._output_area.set_spinner_spin(False)

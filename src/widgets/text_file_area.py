@@ -151,7 +151,10 @@ class TextFileArea(Adw.Bin):
         self.loading_lbl = _("Opening file...")
 
         # Create a file chooser
+        app = Gio.Application.get_default()
+        window = app.get_active_window()
         self._native = Gtk.FileChooserNative(
+            transient_for=window,
             title=_("Open File"),
             action=Gtk.FileChooserAction.OPEN,
             accept_label=_("Open"),
@@ -257,7 +260,10 @@ class TextFileArea(Adw.Bin):
         self._loading_lbl.set_label(_("Saving file..."))
         self.set_visible_view("loading")
 
+        app = Gio.Application.get_default()
+        window = app.get_active_window()
         self._native = Gtk.FileChooserNative(
+            transient_for=window,
             title=_("Save file as"),
             action=Gtk.FileChooserAction.SAVE,
             accept_label=_("Save"),
