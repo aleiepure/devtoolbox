@@ -45,8 +45,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9d/fc/28d2b631c5220b2a594d5d13b6ad79ee60d50688f1cd43f6707c06fb0db4/humanize-4.4.0-py3-none-any.whl",
-                    "sha256": "8830ebf2d65d0395c1bd4c79189ad71e023f277c2c7ae00f263124432e6f2ffa"
+                    "url": "https://files.pythonhosted.org/packages/22/2b/30e8725481b071ca53984742a443f944f9c74fb72f509a40b746912645e1/humanize-4.6.0-py3-none-any.whl",
+                    "sha256": "401201aca462749773f02920139f302450cb548b70489b9b4b92be39fe3c3c50"
                 }
             ]
         },
@@ -85,6 +85,20 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/0f/4d/0cc5a7f4bdcefecebdf8a95c8372606c13d3355e8536d9cd3e7070e94269/croniter-1.3.8-py2.py3-none-any.whl",
                     "sha256": "d6ed8386d5f4bbb29419dc1b65c4909c04a2322bd15ec0dc5b2877bfa1b75c7a"
+                }
+            ]
+        },
+        {
+            "name": "python3-pyjwt",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyjwt\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/40/46/505f0dd53c14096f01922bf93a7abb4e40e29a06f858abbaa791e6954324/PyJWT-2.6.0-py3-none-any.whl",
+                    "sha256": "d83c3d892a77bbb74d3e1a2cfa90afaadb60945205d1095d9221f04466f64c14"
                 }
             ]
         }

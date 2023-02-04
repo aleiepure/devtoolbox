@@ -9,6 +9,7 @@ from crontab import CronTab, CronSlices
 import json
 import base64
 import binascii
+import jwt
 
 
 class Bases(Enum):
@@ -94,6 +95,14 @@ class Utils:
     def is_base64(text: str):
         try:
             base64.b64decode(text)
+            return True
+        except Exception:
+            return False
+
+    @staticmethod
+    def is_jwt_token(token: str):
+        try:
+            jwt.decode(token, options={"verify_signature": False})
             return True
         except Exception:
             return False

@@ -13,6 +13,7 @@ from .views.html_encoder import HtmlEncoderView
 from .views.url_encoder import UrlEncoderView
 from .views.base64_encoder import Base64EncoderView
 from .views.gzip_compressor import GzipCompressorView
+from .views.jwt_decoder import JwtDecoderView
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
@@ -92,32 +93,39 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "child": CronConverterView(),
             },
             "html-encoder": {
-                "title": _("HTML"),
+                "title": "HTML",
                 "category": "encoder",
                 "icon-name": "code-symbolic",
                 "tooltip": "Encode and decode special characters using the HTML format",
                 "child": HtmlEncoderView(),
             },
             "url-encoder": {
-                "title": _("URL"),
+                "title": "URL",
                 "category": "encoder",
                 "icon-name": "chain-link-symbolic",
                 "tooltip": "Encode and decode special characters inside URLs",
                 "child": UrlEncoderView(),
             },
             "base64-encoder": {
-                "title": _("Base64"),
+                "title": "Base64",
                 "category": "encoder",
                 "icon-name": "base64-symbolic",
                 "tooltip": "Encode and decode files and texts using base64",
                 "child": Base64EncoderView(),
             },
             "gzip-compressor": {
-                "title": _("GZip"),
+                "title": "GZip",
                 "category": "encoder",
                 "icon-name": "shoe-box-symbolic",
                 "tooltip": "Compress and decompress files and texts using gzip",
                 "child": GzipCompressorView(),
+            },
+            "jwt-decoder": {
+                "title": "JWT",
+                "category": "encoder",
+                "icon-name": "key-symbolic",
+                "tooltip": "Decode JWT tokens with ease",
+                "child": JwtDecoderView(),
             },
         }
 

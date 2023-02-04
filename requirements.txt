@@ -3,3 +3,4 @@ python-dateutil
 humanize
 python-crontab
 croniter
+pyjwt
