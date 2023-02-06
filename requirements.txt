@@ -4,3 +4,5 @@ humanize
 python-crontab
 croniter
 pyjwt
+sqlparse
+lxml

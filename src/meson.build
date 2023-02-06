@@ -51,6 +51,7 @@ configure_file(
 subdir('widgets')
 subdir('views')
 subdir('services')
+subdir('formatters')
 
 devtoolbox_sources = [
   '__init__.py',

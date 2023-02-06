@@ -3,7 +3,10 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Adw, Gtk, Gio, GObject
+from gettext import gettext as _
+
 from .widgets.sidebar_item import SidebarItem
+
 from .views.tab_content import TabContent
 from .views.json_yaml import JsonYamlView
 from .views.timestamp import TimestampView
@@ -14,6 +17,11 @@ from .views.url_encoder import UrlEncoderView
 from .views.base64_encoder import Base64EncoderView
 from .views.gzip_compressor import GzipCompressorView
 from .views.jwt_decoder import JwtDecoderView
+from .views.formatter import FormatterView
+
+from .formatters.json import JsonFormatter
+from .formatters.sql import SqlFormatter
+from .formatters.xml import XmlFormatter
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
@@ -49,13 +57,6 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "calendar-symbolic",
                 "tooltip": "Convert UNIX timestamps to and from plain dates",
                 "child": TimestampView(),
-            },
-            "placeholder2": {
-                "title": _("placeholder2"),
-                "category": "formatter",
-                "icon-name": "clock-rotate-symbolic",
-                "tooltip": "Placeholder",
-                "child": Gtk.Label(label="formatter"),
             },
             "placeholder3": {
                 "title": _("placeholder3"),
@@ -127,6 +128,27 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "tooltip": "Decode JWT tokens with ease",
                 "child": JwtDecoderView(),
             },
+            "json-formatter": {
+                "title": "JSON",
+                "category": "formatter",
+                "icon-name": "json-symbolic",
+                "tooltip": _("Format JSON documents"),
+                "child": FormatterView(JsonFormatter()),
+            },
+            "sql-formatter": {
+                "title": "SQL",
+                "category": "formatter",
+                "icon-name": "database-symbolic",
+                "tooltip": _("Format SQL documents"),
+                "child": FormatterView(SqlFormatter()),
+            },
+            "xml-formatter": {
+                "title": "XML",
+                "category": "formatter",
+                "icon-name": "code-symbolic",
+                "tooltip": _("Format XML documents"),
+                "child": FormatterView(XmlFormatter()),
+            },
         }
 
         categories = {
@@ -137,7 +159,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             },
             "encoder": {
                 "title": _("Encoders"),
-                "icon-name": "folder-templates-symbolic",
+                "icon-name": "encode-symbolic",
                 "child": TabContent(self._get_tools(tools, "encoder"), "encoder"),
             },
             "formatter": {

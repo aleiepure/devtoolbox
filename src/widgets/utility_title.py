@@ -68,25 +68,20 @@ class UtilityTitle(Adw.Bin):
         except ValueError:
             self._star_btn.set_icon_name("non-starred-symbolic")
 
-    def set_title(self, title):
+    def set_title(self, title:str):
         self._title_lbl = title
 
     def get_title(self) -> str:
         return self.title
 
-    def set_description(self, description):
+    def set_description(self, description:str):
         self._description_lbl = description
 
     def get_description(self) -> str:
         return self.description
 
+    def set_utility_name(self, name:str):
+        self._utility_name = name
+
     def get_utility_name(self) -> str:
         return self.utility_name
-
-
-
-
-
-
-
-                   

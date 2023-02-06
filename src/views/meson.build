@@ -17,6 +17,7 @@ sources = [
   'base64_encoder.py',
   'gzip_compressor.py',
   'jwt_decoder.py',
+  'formatter.py',
 ]
 
 install_data(sources, install_dir: viewsdir)
