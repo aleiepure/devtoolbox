@@ -18,6 +18,7 @@ from .views.base64_encoder import Base64EncoderView
 from .views.gzip_compressor import GzipCompressorView
 from .views.jwt_decoder import JwtDecoderView
 from .views.formatter import FormatterView
+from .views.hash_generator import HashGeneratorView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -57,13 +58,6 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "calendar-symbolic",
                 "tooltip": "Convert UNIX timestamps to and from plain dates",
                 "child": TimestampView(),
-            },
-            "placeholder3": {
-                "title": _("placeholder3"),
-                "category": "generator",
-                "icon-name": "clock-rotate-symbolic",
-                "tooltip": "Placeholder",
-                "child": Gtk.Label(label="generator"),
             },
             "placeholder4": {
                 "title": _("placeholder4"),
@@ -148,6 +142,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "code-symbolic",
                 "tooltip": _("Format XML documents"),
                 "child": FormatterView(XmlFormatter()),
+            },
+            "hash-generator": {
+                "title": "Hash",
+                "category": "generator",
+                "icon-name": "fingerprint-symbolic",
+                "tooltip": _("Calculate MD5, SHA1, SHA256 and SHA512 hashes and check for integrity"),
+                "child": HashGeneratorView(),
             },
         }
 

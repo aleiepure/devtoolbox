@@ -33,6 +33,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/views/gzip_compressor.ui</file>
     <file preprocess="xml-stripblanks">ui/views/jwt_decoder.ui</file>
     <file preprocess="xml-stripblanks">ui/views/formatter.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/hash_generator.ui</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="non-starred-symbolic.svg">../data/icons/symbolic/non-starred-symbolic.svg</file>
@@ -61,5 +62,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="encode-symbolic.svg">../data/icons/symbolic/encode-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="json-symbolic.svg">../data/icons/symbolic/json-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="database-symbolic.svg">../data/icons/symbolic/database-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="fingerprint-symbolic.svg">../data/icons/symbolic/fingerprint-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="check-plain-symbolic.svg">../data/icons/symbolic/check-plain-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="check-round-outline-symbolic.svg">../data/icons/symbolic/check-round-outline-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="warning-symbolic.svg">../data/icons/symbolic/warning-symbolic.svg</file>
   </gresource>
 </gresources>

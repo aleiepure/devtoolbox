@@ -14,6 +14,7 @@ sources = [
   'base64_encoder.py',
   'gzip_compressor.py',
   'jwt_decoder.py',
+  'hash_generator.py',
 ]
 
 install_data(sources, install_dir: servicesdir)

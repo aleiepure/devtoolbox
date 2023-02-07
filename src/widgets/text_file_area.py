@@ -128,6 +128,7 @@ class TextFileArea(Adw.Bin):
 
     def _on_clear_clicked(self, data):
         self._clear()
+        self._open_btn.set_sensitive(True)
         self.emit("view-cleared")
 
     def _on_copy_clicked(self, data):
@@ -211,12 +212,14 @@ class TextFileArea(Adw.Bin):
         file_path = file.peek_path()
         file_size = file.query_info("*", 0, None).get_size()
 
-        if file_size > 1000000000:
+        if file_size > 536870912: # 512 Mb
             self._fileview.set_file_path(file_path)
             self._fileview.set_file_size(humanize.naturalsize(file_size))
-            self.set_visible_view("file_area")
+            self.set_visible_view("file-area")
             self.emit("big-file")
             self.emit("file-loaded")
+            self._open_btn.set_sensitive(True)
+            return
         else:
             file.load_contents_async(None, self._open_file_async_complete)
 
@@ -300,7 +303,6 @@ class TextFileArea(Adw.Bin):
             self.emit("error", f"Unable to save {file_path}")
             return
         self.emit("saved", file_path)
-
 
     def _on_text_changed(self, data):
         self.emit("text-changed")

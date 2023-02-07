@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 - 2023 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="HashGeneratorView" parent="AdwBin">
+    <child>
+      <object class="AdwToastOverlay" id="_toast">
+        <property name="child">
+          <object class="GtkScrolledWindow">
+            <property name="child">
+
+              <object class="AdwClamp">
+                <property name="vexpand">true</property>
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+
+                    <!-- Title -->
+                    <child>
+                      <object class="UtilityTitle" id="_title">
+                        <property name="title" translatable="yes">Hash generator and checker</property>
+                        <property name="description" translatable="yes">Calculate MD5, SHA1, SHA256 and SHA512 hashes and check for integrity</property>
+                        <property name="tool-name">hash-generator</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="margin-top">10</property>
+                        <property name="margin-bottom">10</property>
+                      </object>
+                    </child>
+
+                    <!-- Options -->
+                    <child>
+                      <object class="AdwPreferencesGroup" id="_preference_group">
+                        <property name="title" translatable="yes">Tool options</property>
+                        <child>
+                          <object class="AdwComboRow" id="_type_dropdown">
+                            <property name="title" translatable="yes">Hash to calculate</property>
+                            <property name="subtitle" translatable="yes">Choose the hash type to use from the dropdown</property>
+                            <property name="icon-name">fingerprint</property>
+                            <property name="model">
+                              <object class="GtkStringList">
+                                <items>
+                                  <item translatable="yes">MD5</item>
+                                  <item translatable="yes">SHA1</item>
+                                  <item translatable="yes">SHA256</item>
+                                  <item translatable="yes">SHA512</item>
+                                </items>
+                              </object>
+                            </property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="yes">Check for integrity</property>
+                            <property name="subtitle" translatable="yes">If enabled the calculated hash will be checked against another provided hash to verify integrity</property>
+                            <property name="icon-name">check-plain</property>
+                            <property name="activatable-widget">_check_switch</property>
+                            <child>
+                              <object class="GtkSwitch" id="_check_switch" >
+                                <property name="valign">center</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkRevealer" id="_revealer">
+                            <property name="reveal-child">true</property>
+                            <child>
+                              <object class="EntryRow" id="_check_entryrow">
+                                <style>
+                                  <class name="fake-action-row-bottom" />
+                                </style>
+                                <property name="show-clear-btn">true</property>
+                                <property name="show-paste-btn">true</property>
+                                <property name="title">Type the hash to check against</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="margin-top">10</property>
+                      </object>
+                    </child>
+
+                    <!-- Input -->
+                    <child>
+                      <object class="TextFileArea" id="_input_area">
+                        <property name="name" translatable="yes">Input</property>
+                        <property name="show-clear-btn">true</property>
+                        <property name="show-paste-btn">true</property>
+                        <property name="show-open-btn">true</property>
+                        <property name="use-all-files-extensions">true</property>
+                      </object>
+                    </child>
+
+                    <!-- Output -->
+                    <child>
+                      <object class="TextArea" id="_output_area">
+                        <property name="name" translatable="yes">Output</property>
+                        <property name="show-copy-btn">true</property>
+                        <property name="text-editable">false</property>
+                        <property name="allow-drag-and-drop">false</property>
+                        <property name="area-height">100</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkBox" id="_check_box">
+                        <property name="orientation">horizontal</property>
+                        <property name="halign">center</property>
+
+                        <property name="margin-top">32</property>
+                        <property name="margin-bottom">10</property>
+                        <child>
+                          <object class="GtkImage" id="_check_icon">
+                            <property name="pixel-size">56</property>
+                            <property name="margin-end">20</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="valign">center</property>
+                            <child>
+                              <object class="GtkLabel" id="_check_title_lbl">
+                                <style>
+                                  <class name="heading" />
+                                </style>
+                                <property name="margin-bottom">5</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="_check_lbl">
+                                <property name="width-request">100</property>
+                                <property name="wrap">true</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                  </object>
+                </property>
+              </object>
+            </property>
+          </object>
+        </property>
+      </object>
+    </child>
+  </template>
+</interface>
