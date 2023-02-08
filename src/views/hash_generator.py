@@ -88,12 +88,11 @@ class HashGeneratorView(Adw.Bin):
         if self._input_area.get_visible_view() == "text-area":
             self._service.set_input(text)
         else:
-            file_contents = self._input_area.get_file_contents()
             self._service.set_input(self._input_area.get_open_file_path())
 
         # Call task
-        type = self._type_dropdown.get_selected()
-        match type:
+        hash_type = self._type_dropdown.get_selected()
+        match hash_type:
             case 0: # MD5
                 self._calculate_md5(text)
             case 1: # SHA1

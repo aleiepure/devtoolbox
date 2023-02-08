@@ -6,3 +6,4 @@ croniter
 pyjwt
 sqlparse
 lxml
+python-lorem

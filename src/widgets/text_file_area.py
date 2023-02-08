@@ -219,7 +219,6 @@ class TextFileArea(Adw.Bin):
             self.emit("big-file")
             self.emit("file-loaded")
             self._open_btn.set_sensitive(True)
-            return
         else:
             file.load_contents_async(None, self._open_file_async_complete)
 

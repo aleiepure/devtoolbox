@@ -129,6 +129,20 @@
                     "sha256": "2455cfaeb7ac70338b3257f41e21f0724f4b5b0c0e7702da67ee6c3640835b67"
                 }
             ]
+        },
+        {
+            "name": "python3-python-lorem",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"python-lorem\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/13/78/4cc1f402939662746cfe1a4a500923fc271164070d805cad87e58f4fed25/python_lorem-1.2.0-py3-none-any.whl",
+                    "sha256": "10524c0c8fb029dc8ab794aeb98debe42fdc90415b6f1c1a4c52343c2d84f9dd"
+                }
+            ]
         }
     ]
 }

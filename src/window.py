@@ -19,6 +19,7 @@ from .views.gzip_compressor import GzipCompressorView
 from .views.jwt_decoder import JwtDecoderView
 from .views.formatter import FormatterView
 from .views.hash_generator import HashGeneratorView
+from .views.lorem_generator import LoremGeneratorView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -149,6 +150,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "fingerprint-symbolic",
                 "tooltip": _("Calculate MD5, SHA1, SHA256 and SHA512 hashes and check for integrity"),
                 "child": HashGeneratorView(),
+            },
+            "lorem-generator": {
+                "title": "Lorem Ipsum",
+                "category": "generator",
+                "icon-name": "newspaper-symbolic",
+                "tooltip": _("Generate lorem ipsum placeholder text"),
+                "child": LoremGeneratorView(),
             },
         }
 
