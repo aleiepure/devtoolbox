@@ -53,10 +53,10 @@ you can download the latest build artifact from the repository's [Actions page](
 Contributions are and will always be welcome.\
 If you have an idea and you are able to make it happen by yourself, feel free to fork the repo, code it and open a PR.
 Also, if you know another language, you can help by translating the app.
-In the wiki you can find information about contributing.
+In the [wiki](wiki/Contributing.md) you can find more information.
 
 ## License
-Copyright (C) 2022 - 2023 Devtoolbox Developers
+Copyright (C) 2022 - 2023 Devtoolbox Developers\
 This application comes with absolutely no warranty. See the GNU General Public License, version 3 or later for details. A [copy of the license](./LICENSES/GPL-3.0-or-later.txt)
 can be found in the [LICENSES](./LICENSES/) folder.
 
