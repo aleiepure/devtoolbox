@@ -43,7 +43,7 @@ This is a collection of powerful yet simple to use tools and utilities to solve 
 ### Known issues
 This app is currently under development with potential bugs and issues. If you are testing it and find some, please create an issue and describe the problem and how to reproduce it.
 Please remember that I'm working on this in my spare time, and fixes might not come very quickly.\
-In the wiki you can find a updated list of known problems and how to fix them temporarily.
+In the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Known-issues) you can find a updated list of known problems and how to fix them temporarily.
 
 ## Install
 Once version 1.0 will be done, it will be available on [Flathub](https://flathub.org/home). In the mean time, to test the current version,
@@ -51,14 +51,14 @@ you can download the latest build artifact from the repository's [Actions page](
 
 ## Contribute
 Contributions are and will always be welcome.\
-If you have an idea and you are able to make it happen by yourself, feel free to fork the repo, code it and open a PR.
-Also, if you know another language, you can help by translating the app.
-In the [wiki](wiki/Contributing.md) you can find more information.
+If you have an idea and you are able to make it happen by yourself, feel free to fork the repo, code it and open a PR.\
+Also, if you know another language, you can help by translating the app.\
+In the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Contributing) you can find more information.
 
 ## License
 Copyright (C) 2022 - 2023 Devtoolbox Developers\
 This application comes with absolutely no warranty. See the GNU General Public License, version 3 or later for details. A [copy of the license](./LICENSES/GPL-3.0-or-later.txt)
-can be found in the [LICENSES](./LICENSES/) folder.
+can be found in the [LICENSES/](./LICENSES/) folder.
 
 Most of the symbolic icons are copyright of the GNOME Project.\
 The libraries used are copyright of the respective copyright holders.\
