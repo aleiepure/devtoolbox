@@ -2,10 +2,12 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw
+from gi.repository import Gtk, Adw, Gio, GObject
 from gettext import gettext as _
+
 from ..utils import Utils
 from ..services.html_encoder import HtmlEncoderService
+
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/views/html_encoder.ui")
 class HtmlEncoderView(Adw.Bin):
@@ -28,20 +30,23 @@ class HtmlEncoderView(Adw.Bin):
         self._output_area.set_text_language_highlight("html")
 
         # Signals
-        self._direction_selector.connect("toggled", self._convert)
-        self._input_area.connect("text-changed", self._convert)
+        self._direction_selector.connect("toggled", self._on_input_changed)
+        self._input_area.connect("text-changed", self._on_input_changed)
         self._input_area.connect("error", self._on_error)
         self._input_area.connect("view-cleared", self._on_view_cleared)
         self._output_area.connect("error", self._on_error)
 
-    def _on_view_cleared(self, data):
+    def _on_input_changed(self, source_widget:GObject.Object):
+        self._convert()
+
+    def _on_view_cleared(self, source_widget:GObject.Object):
         self._output_area.clear()
 
-    def _on_error(self, data, error):
+    def _on_error(self, source_widget:GObject.Object, error:str):
         error_str = _("Error")
         self._toast.add_toast(Adw.Toast(title=f"{error_str}: {error}", priority=Adw.ToastPriority.HIGH))
 
-    def _convert(self, data):
+    def _convert(self):
 
         # Stop previous tasks
         self._service.get_cancellable().cancel()
@@ -53,14 +58,14 @@ class HtmlEncoderView(Adw.Bin):
         self._service.set_input(text)
 
         # Call task
-        if self._direction_selector.get_left_active(): # True: encode, False: decode
+        if self._direction_selector.get_left_btn_active(): # True: encode, False: decode
             self._output_area.set_spinner_spin(True)
             self._service.encode_async(self, self._on_async_done)
         else:
             self._output_area.set_spinner_spin(True)
             self._service.decode_async(self, self._on_async_done)
 
-    def _on_async_done(self, source_object, result, data):
+    def _on_async_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
         self._output_area.set_spinner_spin(False)
         outcome = self._service.async_finish(result, self)
         self._output_area.set_text(outcome)

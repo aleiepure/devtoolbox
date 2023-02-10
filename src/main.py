@@ -13,9 +13,8 @@ from gi.repository import Gtk, Gio, Adw, GObject, GtkSource, Gdk
 from .window import DevtoolboxWindow
 from .widgets.utility_title import UtilityTitle
 from .widgets.text_area import TextArea
-from .widgets.file_viewer import FileViewer
+from .widgets.file_view import FileView
 from .widgets.text_file_area import TextFileArea
-from .widgets.text_field_action_row import TextFieldActionRow
 from .widgets.sidebar_item import SidebarItem
 from .widgets.binary_selector import BinarySelector
 from .widgets.spin_area import SpinArea
@@ -33,9 +32,8 @@ class DevtoolboxApplication(Adw.Application):
         GtkSource.StyleScheme,
         UtilityTitle,
         TextArea,
-        FileViewer,
+        FileView,
         TextFileArea,
-        TextFieldActionRow,
         SidebarItem,
         BinarySelector,
         SpinArea,

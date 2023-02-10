@@ -32,11 +32,6 @@ class JsonYamlService():
         )
 
     def _convert_yaml_to_json(self, yaml_str:str, indents: int) -> str:
-        print(json.dumps(
-            yaml.load(yaml_str, Loader=yaml.Loader),
-            indent=indents,
-            ensure_ascii=False
-        ))
         return json.dumps(
             yaml.load(yaml_str, Loader=yaml.Loader),
             indent=indents,

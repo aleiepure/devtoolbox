@@ -10,7 +10,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <requires lib="gtk" version="4.0" />
     <requires lib="libadwaita" version="1.0" />
 
-    <template class="FileViewer" parent="AdwBin">
+    <template class="FileView" parent="AdwBin">
       <style>
         <class name="rounded-border" />
         <class name="view" />

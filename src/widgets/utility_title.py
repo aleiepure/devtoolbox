@@ -12,21 +12,23 @@ class UtilityTitle(Adw.Bin):
     # Template elements
     _title_lbl       = Gtk.Template.Child()
     _description_lbl = Gtk.Template.Child()
-    _star_btn        = Gtk.Template.Child()
+    # _star_btn        = Gtk.Template.Child()
 
     # GSettings
-    _settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
+    # Feature not implemented
+    # _settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
 
     # Properties
-    title       = GObject.Property(type=str, default="", flags=GObject.ParamFlags.READWRITE)
-    description = GObject.Property(type=str, default="", flags=GObject.ParamFlags.READWRITE)
-    tool_name   = GObject.Property(type=str, default="", flags=GObject.ParamFlags.READWRITE)
+    title = GObject.Property(type=str, default="")
+    description = GObject.Property(type=str, default="")
+    tool_name = GObject.Property(type=str, default="")
 
     # Custom signals
-    __gsignals__ = {
-        "added-favorite":   (GObject.SIGNAL_RUN_LAST, None, ()),
-        "removed-favorite": (GObject.SIGNAL_RUN_LAST, None, ()),
-    }
+    # Feature not implemented
+    # __gsignals__ = {
+    #     "added-favorite":   (GObject.SIGNAL_RUN_LAST, None, ()),
+    #     "removed-favorite": (GObject.SIGNAL_RUN_LAST, None, ()),
+    # }
 
     def __init__(self):
         super().__init__()
@@ -36,52 +38,57 @@ class UtilityTitle(Adw.Bin):
         self.bind_property("description", self._description_lbl, "label", GObject.BindingFlags.BIDIRECTIONAL)
 
         # Signal connection
-        self._star_btn.connect("clicked", self._on_star_btn_clicked)
-        self._settings.connect("changed::favorites", self._on_settings_changed)
-        self.connect("map", self._on_map)
+        # Feature not implemented
+        # self._star_btn.connect("clicked", self._on_star_btn_clicked)
+        # self._settings.connect("changed::favorites", self._on_settings_changed)
+        # self.connect("map", self._on_map)
 
-    def _on_map(self, data):
-        self._set_star_btn_icon()
+    # Feature not implemented
+    # def _on_map(self, data):
+    #     self._set_star_btn_icon()
 
-    def _on_star_btn_clicked(self, data):
-        fav_list = self._settings.get_strv("favorites")
-        try:
-            fav_list.index(self.tool_name)
-            self._star_btn.set_icon_name("non-starred-symbolic")
-            fav_list.remove(self.tool_name)
-            self._settings.set_strv("favorites", fav_list)
-            self.emit("removed-favorite")
-        except ValueError:
-            self._star_btn.set_icon_name("starred-symbolic")
-            fav_list.append(self.tool_name)
-            self._settings.set_strv("favorites", fav_list)
-            self.emit("added-favorite")
+    # Feature not implemented
+    # def _on_star_btn_clicked(self, data):
+    #     fav_list = self._settings.get_strv("favorites")
+    #     try:
+    #         fav_list.index(self.tool_name)
+    #         self._star_btn.set_icon_name("non-starred-symbolic")
+    #         fav_list.remove(self.tool_name)
+    #         self._settings.set_strv("favorites", fav_list)
+    #         self.emit("removed-favorite")
+    #     except ValueError:
+    #         self._star_btn.set_icon_name("starred-symbolic")
+    #         fav_list.append(self.tool_name)
+    #         self._settings.set_strv("favorites", fav_list)
+    #         self.emit("added-favorite")
 
-    def _on_settings_changed(self, key, data):
-        self._set_star_btn_icon()
+    # Feature not implemented
+    # def _on_settings_changed(self, key, data):
+    #     self._set_star_btn_icon()
 
-    def _set_star_btn_icon(self):
-        fav_list = self._settings.get_strv("favorites")
-        try:
-            fav_list.index(self.tool_name)
-            self._star_btn.set_icon_name("starred-symbolic")
-        except ValueError:
-            self._star_btn.set_icon_name("non-starred-symbolic")
+    # Feature not implemented
+    # def _set_star_btn_icon(self):
+    #     fav_list = self._settings.get_strv("favorites")
+    #     try:
+    #         fav_list.index(self.tool_name)
+    #         self._star_btn.set_icon_name("starred-symbolic")
+    #     except ValueError:
+    #         self._star_btn.set_icon_name("non-starred-symbolic")
 
     def set_title(self, title:str):
-        self._title_lbl = title
+        self.title = title
 
     def get_title(self) -> str:
         return self.title
 
     def set_description(self, description:str):
-        self._description_lbl = description
+        self.description = description
 
     def get_description(self) -> str:
         return self.description
 
-    def set_utility_name(self, name:str):
-        self._utility_name = name
+    def set_tool_name(self, tool_name:str):
+        self.tool_name = tool_name
 
-    def get_utility_name(self) -> str:
-        return self.utility_name
+    def get_tool_name(self) -> str:
+        return self.tool_name

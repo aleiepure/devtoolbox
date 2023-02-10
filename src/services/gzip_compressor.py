@@ -32,15 +32,15 @@ class GzipCompressorService():
         outcome = self._decompress(self._input)
         task.return_value(outcome)
 
-    def _compress_text(self, input:str):
-        return base64.b64encode(gzip.compress(input.encode("utf-8"))).decode("utf-8")
+    def _compress_text(self, input_str:str):
+        return base64.b64encode(gzip.compress(input_str.encode("utf-8"))).decode("utf-8")
 
-    def _compress_bytes(self, input:List[bytes]):
-        return base64.b64encode(gzip.compress(input)).decode("utf-8")
+    def _compress_bytes(self, input_bytes:List[bytes]):
+        return base64.b64encode(gzip.compress(input_bytes)).decode("utf-8")
 
-    def _decompress(self, input:str):
+    def _decompress(self, input_str:str):
         try:
-            return gzip.decompress(base64.b64decode(input))
+            return gzip.decompress(base64.b64decode(input_str))
         except binascii.Error:
             return ""
 

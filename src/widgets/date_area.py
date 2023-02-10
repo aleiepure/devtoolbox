@@ -13,13 +13,13 @@ class DateArea(Adw.Bin):
     __gtype_name__ = 'DateArea'
 
     # Template elements
-    _name_lbl        = Gtk.Template.Child()
-    _now_btn         = Gtk.Template.Child()
-    _copy_btn        = Gtk.Template.Child()
-    _year_spinner    = Gtk.Template.Child()
-    _month_spinner   = Gtk.Template.Child()
-    _day_spinner     = Gtk.Template.Child()
-    _hours_spinner   = Gtk.Template.Child()
+    _name_lbl = Gtk.Template.Child()
+    _now_btn = Gtk.Template.Child()
+    _copy_btn = Gtk.Template.Child()
+    _year_spinner = Gtk.Template.Child()
+    _month_spinner = Gtk.Template.Child()
+    _day_spinner = Gtk.Template.Child()
+    _hours_spinner = Gtk.Template.Child()
     _minutes_spinner = Gtk.Template.Child()
     _seconds_spinner = Gtk.Template.Child()
 
@@ -48,7 +48,7 @@ class DateArea(Adw.Bin):
         self._minutes_spinner.connect("value-changed", self._on_value_changed)
         self._seconds_spinner.connect("value-changed", self._on_value_changed)
 
-    def _on_now_clicked(self, data):
+    def _on_now_clicked(self, user_data:GObject.GPointer):
         date = datetime.now(tz = tz.tzlocal())
         self._year_spinner.set_value(date.year)
         self._month_spinner.set_value(date.month)
@@ -57,7 +57,7 @@ class DateArea(Adw.Bin):
         self._minutes_spinner.set_value(date.minute)
         self._seconds_spinner.set_value(date.second)
 
-    def _on_copy_clicked(self, data):
+    def _on_copy_clicked(self, user_data:GObject.GPointer):
         year = int(self._year_spinner.get_value())
         month = int(self._month_spinner.get_value())
         day = int(self._day_spinner.get_value())
@@ -67,7 +67,7 @@ class DateArea(Adw.Bin):
         clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         clipboard.set(str(datetime(year, month, day, hour=hours, minute=minutes, second=seconds)))
 
-    def _on_value_changed(self, data):
+    def _on_value_changed(self,  user_data:GObject.GPointer):
         self.emit("value-changed")
 
     def get_date(self):
@@ -86,5 +86,3 @@ class DateArea(Adw.Bin):
         self._hours_spinner.set_value(hours)
         self._minutes_spinner.set_value(minutes)
         self._seconds_spinner.set_value(seconds)
-
-        

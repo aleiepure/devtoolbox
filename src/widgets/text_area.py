@@ -4,8 +4,9 @@
 
 from gi.repository import Gtk, Adw, GObject, Gio, GtkSource, Gdk
 from gettext import gettext as _
-from devtoolbox.utils import Utils
 import humanize
+
+from devtoolbox.utils import Utils
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/widgets/text_area.ui")
@@ -37,7 +38,7 @@ class TextArea(Adw.Bin):
     show_open_btn = GObject.Property(type=bool, default=False)
     show_paste_btn = GObject.Property(type=bool, default=False)
     show_action_btn = GObject.Property(type=bool, default=False)
-    action_name = GObject.Property(type=str, default="")
+    action_btn_name = GObject.Property(type=str, default="")
     text_editable = GObject.Property(type=bool, default=True)
     text_show_line_numbers = GObject.Property(type=bool, default=False)
     text_highlight_current_line = GObject.Property(type=bool, default=False)
@@ -86,7 +87,7 @@ class TextArea(Adw.Bin):
         self.bind_property("show-paste-btn", self._paste_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-action-btn", self._action_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-action-btn", self._action_btn_separator, "visible", GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("action-name", self._action_btn, "label", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("action-btn-name", self._action_btn, "label", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("text-editable", self._textview, "editable", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("text-syntax-highlighting", self._textview.get_buffer(), "highlight-syntax", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("text-syntax-highlighting", self._textview.get_buffer(), "highlight-matching-brackets", GObject.BindingFlags.SYNC_CREATE)
@@ -106,7 +107,7 @@ class TextArea(Adw.Bin):
         self._open_btn.connect("clicked", self._on_open_clicked)
         self._textview.get_buffer().connect("changed", self._on_text_changed)
 
-    def _on_dnd_drop(self, drop_target, value: Gdk.FileList, x, y, user_data=None):
+    def _on_dnd_drop(self, drop_target:Gtk.DropTarget, value: Gdk.FileList, x:float, y:float, user_data:GObject.Object=None):
         self._spinner.set_visible(True)
         files: List[Gio.File] = value.get_files()
         if len(files) != 1:
@@ -115,27 +116,27 @@ class TextArea(Adw.Bin):
         self._open_file(files[0])
         self._spinner.set_visible(False)
 
-    def _on_action_clicked(self, data):
+    def _on_action_clicked(self, user_data:GObject.GPointer):
         self.emit("action-clicked")
 
-    def _on_clear_clicked(self, data):
+    def _on_clear_clicked(self, user_data:GObject.GPointer):
         self._clear()
         self.emit("view-cleared")
 
-    def _on_copy_clicked(self, data):
+    def _on_copy_clicked(self, user_data:GObject.GPointer):
         text_buffer = self._textview.get_buffer()
         text = text_buffer.get_text(text_buffer.get_start_iter(), text_buffer.get_end_iter(), False)
         clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         clipboard.set(text)
         self._stack.set_visible_child_name("text-area")
 
-    def _on_paste_clicked(self, data):
+    def _on_paste_clicked(self, user_data:GObject.GPointer):
         text_buffer = self._textview.get_buffer()
         clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         text_buffer.paste_clipboard(clipboard, None, True)
         self._stack.set_visible_child_name("text-area")
 
-    def _on_open_clicked(self, data):
+    def _on_open_clicked(self, user_data:GObject.GPointer):
 
         # Start loading animation and disable button
         self._open_btn.set_sensitive(False)
@@ -170,7 +171,7 @@ class TextArea(Adw.Bin):
         self._native.connect("response", self._on_open_response)
         self._native.show()
 
-    def _on_open_response(self, dialog, response):
+    def _on_open_response(self, dialog:Gtk.NativeDialog, response:int):
         if response == Gtk.ResponseType.ACCEPT:
             self._open_file(dialog.get_file())
         else:
@@ -179,19 +180,19 @@ class TextArea(Adw.Bin):
 
         self._native = None
 
-    def _open_file(self, file):
+    def _open_file(self, file:Gio.File):
         file_size = file.query_info("*", 0, None).get_size()
 
-        if file_size > 1000000000:
+        if file_size > 536870912: # 512 Mb
             self._stack.set_visible_child_name("loading")
             self.loading_label = f"Loading a large file ({humanize.naturalsize(file_size)})\nMight take a while, please wait..."
             self.emit("big-file")
         file.load_contents_async(None, self._open_file_async_complete)
 
-    def _open_file_async_complete(self, file, result):
-        contents = file.load_contents_finish(result)
+    def _open_file_async_complete(self, source_file:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer=None):
+        contents = source_file.load_contents_finish(result)
         if not contents[0]:
-            self.emit("error", f"Unable to open {file.peek_path()}: {contents[1]}.")
+            self.emit("error", f"Unable to open {source_file.peek_path()}: {contents[1]}.")
             return
 
         if Utils.is_text(contents[1]) and self.allow_drag_and_drop:
@@ -208,7 +209,7 @@ class TextArea(Adw.Bin):
             self._stack.set_visible_child_name("text-area")
             self.emit("error", "File is not UTF-8 encoded.")
 
-    def _on_text_changed(self, data):
+    def _on_text_changed(self, user_data:GObject.GPointer):
         self.emit("text-changed")
 
     def _clear(self):
@@ -222,28 +223,30 @@ class TextArea(Adw.Bin):
         text = text_buffer.get_text(text_buffer.get_start_iter(), text_buffer.get_end_iter(), False)
         return text
 
-    def set_text(self, text: str):
+    def set_text(self, text:str):
         self._textview.get_buffer().set_text(text)
 
     def get_buffer(self) -> GtkSource.Buffer:
         return self._textview.get_buffer()
 
-    def add_css_class(self, css_class: str):
-        self._textview.add_css_class(css_class)
+    def add_css_class(self, css_class_name:str):
+        self._textview.add_css_class(css_class_name)
 
-    def remove_css_class(self, css_class: str):
-        self._textview.remove_css_class(css_class)
+    def remove_css_class(self, css_class_name:str):
+        self._textview.remove_css_class(css_class_name)
 
     def get_visible_view(self) -> str:
         return self._stack.get_visible_child_name()
 
-    def set_visible_view(self, child: str):
-        self._stack.set_visible_child_name(child)
+    def set_visible_view(self, view_name:str):
+        self._previous_view = self._stack.get_visible_child_name()
+        self._stack.set_visible_child_name(view_name)
 
-    def set_text_language_highlight(self, language: str):
-        self._textview.get_buffer().set_language(GtkSource.LanguageManager.get_default().get_language(language))
+    def set_text_language_highlight(self, language:str):
+        self.text_language_highlight = language
+        self._textview.get_buffer().set_language(GtkSource.LanguageManager.get_default().get_language(self.text_language_highlight))
 
-    def set_loading_visible(self, enabled: bool, label: str):
+    def set_loading_visible(self, enabled:bool, label:str):
         if enabled:
             self.loading_lbl = label
             self._stack.set_visible_child_name("loading")
@@ -251,7 +254,7 @@ class TextArea(Adw.Bin):
             self._stack.set_visible_child_name("text-area")
 
     def set_spinner_spin(self, enabled: bool):
-        self._spinner.set_visible(enabled)
+        self.show_spinner = enabled
 
     def clear(self):
         self._clear()

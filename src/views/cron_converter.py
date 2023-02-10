@@ -2,7 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, Gdk
+from gi.repository import Gtk, Adw, Gdk, GObject, Gio
+
 from ..services.cron_converter import CronConverterService
 from ..utils import Utils
 
@@ -33,16 +34,16 @@ class CronConverterView(Adw.Bin):
         self._expression.connect("changed", self._on_expression_changed)
         self._expression.connect("cleared", self._on_expression_cleared)
 
-    def _on_dates_value_changed(self, widget):
+    def _on_dates_value_changed(self, user_data:GObject.GPointer):
         self._generate_dates()
 
-    def _on_format_changed(self, widget):
+    def _on_format_changed(self, source_widget:GObject.Object):
         self._generate_dates()
 
-    def _on_expression_changed(self, widget):
+    def _on_expression_changed(self, user_data:GObject.GPointer):
         self._generate_dates()
 
-    def _on_expression_cleared(self, widget):
+    def _on_expression_cleared(self, source_widget:GObject.Object):
         self._output_area.clear()
 
     def _generate_dates(self):
@@ -66,7 +67,7 @@ class CronConverterView(Adw.Bin):
             if len(expression) != 0:
                 self._expression.add_css_class("border-red")
 
-    def _on_generate_done(self, source_object, result, data):
+    def _on_generate_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
         self._output_area.set_spinner_spin(False)
         outcome = self._service.generate_dates_async_finish(result, self)
         self._output_area.set_text(outcome)

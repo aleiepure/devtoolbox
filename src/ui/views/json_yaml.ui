@@ -49,8 +49,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="icon-name">horizontal-arrows-symbolic</property>
                             <child type="suffix">
                               <object class="BinarySelector" id="_direction_selector">
-                                <property name="left-label">JSON → YAML</property>
-                                <property name="right-label">YAML → JSON</property>
+                                <property name="left-lbl">JSON → YAML</property>
+                                <property name="right-lbl">YAML → JSON</property>
+                                <property name="left-btn-active">true</property>
                               </object>
                             </child>
                           </object>

@@ -2,10 +2,11 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, GObject, Gio, GtkSource, Gdk
+from gi.repository import Gtk, Adw, GObject, Gdk
 from gettext import gettext as _
-from devtoolbox.utils import Utils
 import humanize
+
+from devtoolbox.utils import Utils
 
 
 @Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/widgets/spin_area.ui')
@@ -23,13 +24,13 @@ class SpinArea(Adw.Bin):
     _spin_btn             = Gtk.Template.Child()
 
     # Properties
-    name                        = GObject.Property(type=str, default="")
-    show_spinner                = GObject.Property(type=bool, default=False)
-    show_copy_btn               = GObject.Property(type=bool, default=False)
-    show_paste_btn              = GObject.Property(type=bool, default=False)
-    show_action_btn             = GObject.Property(type=bool, default=False)
-    action_btn_name             = GObject.Property(type=str, default="")
-    action_btn_tooltip          = GObject.Property(type=str, default="")
+    name = GObject.Property(type=str, default="")
+    show_spinner = GObject.Property(type=bool, default=False)
+    show_copy_btn = GObject.Property(type=bool, default=False)
+    show_paste_btn = GObject.Property(type=bool, default=False)
+    show_action_btn = GObject.Property(type=bool, default=False)
+    action_btn_name = GObject.Property(type=str, default="")
+    action_btn_tooltip = GObject.Property(type=str, default="")
 
     # Custom signals
     __gsignals__ = {
@@ -41,18 +42,18 @@ class SpinArea(Adw.Bin):
         super().__init__()
 
         # Property binding
-        self.bind_property("name",                        self._name_lbl,              "label",                       GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-spinner",                self._spinner,               "visible",                     GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-spinner",                self._spinner_separator,     "visible",                     GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-copy-btn",               self._copy_btn,              "visible",                     GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-paste-btn",              self._paste_btn,             "visible",                     GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-action-btn",             self._action_btn,            "visible",                     GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-action-btn",             self._action_btn_separator,  "visible",                     GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("action-btn-name",             self._action_btn,            "label",                       GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("action-btn-tooltip",          self._action_btn,            "tooltip-text",                GObject.BindingFlags.SYNC_CREATE)
-        self._spinner.bind_property("spinning",   self._spinner,                "visible", GObject.BindingFlags.BIDIRECTIONAL)
-        self._spinner.bind_property("visible",    self._spinner_separator,      "visible", GObject.BindingFlags.BIDIRECTIONAL)
-        self._action_btn.bind_property("visible", self._action_btn_separator,   "visible", GObject.BindingFlags.BIDIRECTIONAL)
+        self.bind_property("name", self._name_lbl, "label", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-spinner", self._spinner, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-spinner", self._spinner_separator, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-copy-btn", self._copy_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-paste-btn", self._paste_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-action-btn", self._action_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-action-btn", self._action_btn_separator, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("action-btn-name", self._action_btn, "label", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("action-btn-tooltip", self._action_btn, "tooltip-text", GObject.BindingFlags.SYNC_CREATE)
+        self._spinner.bind_property("spinning", self._spinner, "visible", GObject.BindingFlags.BIDIRECTIONAL)
+        self._spinner.bind_property("visible", self._spinner_separator, "visible", GObject.BindingFlags.BIDIRECTIONAL)
+        self._action_btn.bind_property("visible", self._action_btn_separator, "visible", GObject.BindingFlags.BIDIRECTIONAL)
 
         # Signal connection
         self._action_btn.connect("clicked", self._on_action_clicked)
@@ -60,19 +61,19 @@ class SpinArea(Adw.Bin):
         self._paste_btn.connect("clicked", self._on_paste_clicked)
         self._spin_btn.connect("value-changed", self._on_value_changed)
 
-    def _on_action_clicked(self, data):
+    def _on_action_clicked(self, user_data:GObject.GPointer):
         self.emit("action-clicked")
 
-    def _on_copy_clicked(self, data):
+    def _on_copy_clicked(self, user_data:GObject.GPointer):
         text      = str(self._spin_btn.get_value_as_int())
         clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         clipboard.set(text)
 
-    def _on_paste_clicked(self, data):
+    def _on_paste_clicked(self, user_data:GObject.GPointer):
         clipboard   = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         self._spin_btn.set_value(clipboard.get_content().get_value())
 
-    def _on_value_changed(self, data):
+    def _on_value_changed(self, user_data:GObject.GPointer):
         self.emit("value-changed")
 
     def get_value(self) -> int:

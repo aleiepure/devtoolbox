@@ -48,8 +48,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="icon-name">horizontal-arrows-symbolic</property>
                             <child type="suffix">
                               <object class="BinarySelector" id="_direction_selector">
-                                <property name="left-label">Encode</property>
-                                <property name="right-label">Decode</property>
+                                <property name="left-lbl">Encode</property>
+                                <property name="right-lbl">Decode</property>
+                                <property name="left-btn-active">true</property>
                               </object>
                             </child>
                           </object>

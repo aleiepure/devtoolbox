@@ -2,7 +2,9 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, GObject, Adw, Gio
+from gi.repository import Gtk, Adw, Gio
+from typing import Dict
+
 from ..widgets.sidebar_item import SidebarItem
 
 
@@ -11,19 +13,19 @@ class TabContent(Adw.Bin):
     __gtype_name__ = "TabContent"
 
     # Template elements
-    _flap          = Gtk.Template.Child()
-    _sidebar       = Gtk.Template.Child()
+    _flap = Gtk.Template.Child()
+    _sidebar = Gtk.Template.Child()
     _content_stack = Gtk.Template.Child()
 
     # GSettings
     _settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
 
-    def __init__(self, tools, category):
+    def __init__(self, tools:Dict, category:str):
         super().__init__()
 
         # Populate sidebar
         for t in tools:
-            self._sidebar.append(SidebarItem(name=t, title=tools[t]["title"], icon_name=tools[t]["icon-name"], tooltip=tools[t]["tooltip"]))
+            self._sidebar.append(SidebarItem(tool_name=t, title=tools[t]["title"], icon_name=tools[t]["icon-name"], tool_tip=tools[t]["tooltip"]))
             self._content_stack.add_named(tools[t]["child"], t)
 
         # Select the correct row
@@ -39,21 +41,16 @@ class TabContent(Adw.Bin):
         except ValueError:
             self._sidebar.select_row(self._sidebar.get_first_child())
 
-        self._content_stack.set_visible_child_name(self._sidebar.get_selected_row().get_name())
-
-        #self._settings.bind("last-tool", self._content_stack, "visible-child-name", Gio.SettingsBindFlags.DEFAULT)
+        self._content_stack.set_visible_child_name(self._sidebar.get_selected_row().get_tool_name())
 
         # Signals
         self._sidebar.connect("row-activated", self._on_sidebar_change)
 
-    def _on_sidebar_change(self, widget, row):
-        self._content_stack.set_visible_child_name(row.get_name())
+    def _on_sidebar_change(self, list_box:Gtk.ListBox, row:Gtk.ListBoxRow):
+        self._content_stack.set_visible_child_name(row.get_tool_name())
 
     def get_flap(self) -> Adw.Flap:
         return self._flap
 
     def get_content_stack(self) -> Adw.ViewStack:
         return self._content_stack
-
-    def set_sidebar_content(self, tools):
-        self._set_sidebar_content(tools)

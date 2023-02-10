@@ -74,7 +74,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="show-copy-btn">true</property>
                         <property name="show-paste-btn">true</property>
                         <property name="show-open-btn">true</property>
-                        <property name="action-name" translatable="yes">Format</property>
+                        <property name="action-btn-name" translatable="yes">Format</property>
                         <property name="text-show-line-numbers">true</property>
                         <property name="text-highlight-current-line">true</property>
                         <property name="text-syntax-highlighting">true</property>

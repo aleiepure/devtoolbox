@@ -2,13 +2,13 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, GObject, Gio, GtkSource, Gdk
+from gi.repository import Gtk, Adw, GObject
 from gettext import gettext as _
 
 
-@Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/widgets/file_viewer.ui')
-class FileViewer(Adw.Bin):
-    __gtype_name__ = 'FileViewer'
+@Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/widgets/file_view.ui')
+class FileView(Adw.Bin):
+    __gtype_name__ = 'FileView'
 
     # Template elements
     _file_path_lbl = Gtk.Template.Child()

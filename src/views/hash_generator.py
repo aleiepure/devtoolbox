@@ -2,8 +2,9 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, GObject
+from gi.repository import Gtk, Adw, GObject, Gio
 from gettext import gettext as _
+
 from ..services.hash_generator import HashGeneratorService
 
 
@@ -44,7 +45,7 @@ class HashGeneratorView(Adw.Bin):
         self._input_area.connect("view-cleared", self._on_view_cleared)
         self._input_area.connect("error", self._on_error)
 
-    def _on_check_switch_changed(self, pspec, data):
+    def _on_check_switch_changed(self, source_widget:GObject.Object, pspec:GObject.ParamSpec):
         if self._check_switch.get_active():
             self._preference_group.get_first_child().get_last_child().get_first_child().remove_css_class("boxed-list")
             self._preference_group.get_first_child().get_last_child().get_first_child().get_row_at_index(0).add_css_class("fake-action-row-top")
@@ -56,22 +57,22 @@ class HashGeneratorView(Adw.Bin):
             self._preference_group.get_first_child().get_last_child().get_first_child().get_row_at_index(1).remove_css_class("fake-action-row-middle")
             self._check_box.set_visible(False)
 
-    def _on_type_changed(self, pspec, data):
+    def _on_type_changed(self, source_widget:GObject.Object, pspec:GObject.ParamSpec):
         self._calculate_hash()
 
-    def _on_input_changed(self, data):
+    def _on_input_changed(self, source_widget:GObject.Object):
         self._calculate_hash()
 
-    def _on_check_hash_changed(self, data):
+    def _on_check_hash_changed(self, source_widget:GObject.Object):
         self._check_hash()
 
-    def _on_view_cleared(self, data):
+    def _on_view_cleared(self, source_widget:GObject.Object):
         self._service.get_cancellable().cancel()
         self._output_area.set_spinner_spin(False)
         self._output_area.clear()
         self._check_box.set_visible(False)
 
-    def _on_error(self, data, error):
+    def _on_error(self, source_widget:GObject.Object, error:str):
         error_str = _("Error")
         self._toast.add_toast(Adw.Toast(title=f"{error_str}: {error}", priority=Adw.ToastPriority.HIGH))
 
@@ -88,7 +89,7 @@ class HashGeneratorView(Adw.Bin):
         if self._input_area.get_visible_view() == "text-area":
             self._service.set_input(text)
         else:
-            self._service.set_input(self._input_area.get_open_file_path())
+            self._service.set_input(self._input_area.get_opened_file_path())
 
         # Call task
         hash_type = self._type_dropdown.get_selected()
@@ -151,7 +152,7 @@ class HashGeneratorView(Adw.Bin):
             self._check_lbl.set_wrap(True)
             self._check_lbl.set_text(_("The calculated hash and the provided one do not match. Check again and if this is a file you downloaded from the internet re-download it."))
 
-    def _on_async_done(self, source_object, result, data):
+    def _on_async_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
         self._output_area.set_spinner_spin(False)
         outcome = self._service.async_finish(result, self)
 

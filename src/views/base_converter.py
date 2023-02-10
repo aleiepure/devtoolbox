@@ -2,10 +2,11 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw
+from gi.repository import Gtk, Adw, GObject
 from gettext import gettext as _
-from ..utils import Utils
 from enum import Enum
+
+from ..utils import Utils
 
 
 class Bases(Enum):
@@ -31,26 +32,24 @@ class BaseConverterView(Adw.Bin):
         super().__init__()
 
         # Signals
-        self._decimal_handler = self._decimal.connect(
-            "changed", self._on_decimal_change
-        )
+        self._decimal_handler = self._decimal.connect("changed", self._on_decimal_change)
         self._octal_handler = self._octal.connect("changed", self._on_octal_change)
         self._hex_handler = self._hex.connect("changed", self._on_hex_change)
         self._binary_handler = self._binary.connect("changed", self._on_binary_change)
 
-    def _on_decimal_change(self, text):
+    def _on_decimal_change(self, user_data:GObject.GPointer):
         self._convert(Bases.DECIMAL)
 
-    def _on_octal_change(self, text):
+    def _on_octal_change(self, user_data:GObject.GPointer):
         self._convert(Bases.OCTAL)
 
-    def _on_hex_change(self, text):
+    def _on_hex_change(self, user_data:GObject.GPointer):
         self._convert(Bases.HEX)
 
-    def _on_binary_change(self, text):
+    def _on_binary_change(self, user_data:GObject.GPointer):
         self._convert(Bases.BINARY)
 
-    def _convert(self, starting_base):
+    def _convert(self, starting_base:Bases):
         self._binary.remove_css_class("border-red")
         self._octal.remove_css_class("border-red")
         self._decimal.remove_css_class("border-red")

@@ -170,8 +170,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                           <object class="AdwViewStackPage">
                                             <property name="name">file-area</property>
                                             <property name="child">
-                                                <object class="FileViewer" id="_fileview">
-                                                </object>
+                                                <object class="FileView" id="_fileview" />
                                             </property>
                                           </object>
                                         </child>
