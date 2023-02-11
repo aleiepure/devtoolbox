@@ -18,6 +18,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
               <object class="AdwClamp">
                 <property name="vexpand">true</property>
+                <property name="maximum-size">1200</property>
+                <property name="tightening-threshold">600</property>
                 <property name="child">
                   <object class="GtkBox">
                     <property name="orientation">vertical</property>
@@ -94,34 +96,47 @@ SPDX-License-Identifier: GPL-3.0-or-later
                       </object>
                     </child>
 
-                    <!-- Input -->
+
+                    <!-- Content -->
                     <child>
-                      <object class="TextFileArea" id="_input_area">
-                        <property name="name" translatable="yes">Input</property>
-                        <property name="show-clear-btn">true</property>
-                        <property name="show-paste-btn">true</property>
-                        <property name="show-open-btn">true</property>
-                        <property name="use-all-files-extensions">true</property>
+                      <object class="GtkBox">
+                        <property name="orientation">horizontal</property>
+                        <property name="homogeneous">true</property>
+                        <property name="spacing">10</property>
+                        <property name="margin-bottom">10</property>
+
+                        <!-- Input -->
+                        <child>
+                          <object class="TextFileArea" id="_input_area">
+                            <property name="name" translatable="yes">Input</property>
+                            <property name="show-clear-btn">true</property>
+                            <property name="show-paste-btn">true</property>
+                            <property name="show-open-btn">true</property>
+                            <property name="use-all-files-extensions">true</property>
+                          </object>
+                        </child>
+
+                        <!-- Output -->
+                        <child>
+                          <object class="TextArea" id="_output_area">
+                            <property name="name" translatable="yes">Output</property>
+                            <property name="show-copy-btn">true</property>
+                            <property name="text-editable">false</property>
+                            <property name="allow-drag-and-drop">false</property>
+                            <property name="area-height">100</property>
+                          </object>
+                        </child>
                       </object>
                     </child>
 
-                    <!-- Output -->
-                    <child>
-                      <object class="TextArea" id="_output_area">
-                        <property name="name" translatable="yes">Output</property>
-                        <property name="show-copy-btn">true</property>
-                        <property name="text-editable">false</property>
-                        <property name="allow-drag-and-drop">false</property>
-                        <property name="area-height">100</property>
-                      </object>
-                    </child>
                     <child>
                       <object class="GtkBox" id="_check_box">
+                        <property name="visible">false</property>
                         <property name="orientation">horizontal</property>
                         <property name="halign">center</property>
+                        <property name="margin-bottom">15</property>
+                        <property name="margin-top">5</property>
 
-                        <property name="margin-top">32</property>
-                        <property name="margin-bottom">10</property>
                         <child>
                           <object class="GtkImage" id="_check_icon">
                             <property name="pixel-size">56</property>

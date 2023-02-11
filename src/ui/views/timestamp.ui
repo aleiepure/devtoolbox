@@ -19,6 +19,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
               <object class="AdwClamp">
                 <property name="vexpand">true</property>
+                <property name="maximum-size">1200</property>
+                <property name="tightening-threshold">600</property>
                   <property name="child">
                   <object class="GtkBox">
                     <property name="orientation">vertical</property>

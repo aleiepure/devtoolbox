@@ -9,208 +9,210 @@ SPDX-License-Identifier: GPL-3.0-or-later
 <interface>
     <requires lib="gtk" version="4.0" />
     <requires lib="libadwaita" version="1.0" />
-
     <template class="TextFileArea" parent="AdwBin">
-
         <child>
-            <object class="AdwPreferencesGroup">
-                <property name="margin-top">10</property>
-                <child>
-                    <object class="AdwPreferencesRow">
-                        <child>
-                            <object class="GtkBox">
-                                <property name="orientation">vertical</property>
+            <object class="GtkBox">
+              <property name="margin-top">10</property>
+              <property name="orientation">vertical</property>
+              <style>
+                <class name="card" />
+                <class name="activatable" />
+              </style>
 
-                                <!-- Header -->
-                                <child>
-                                    <object class="GtkBox">
-                                        <property name="orientation">horizontal</property>
-                                        <property name="halign">fill</property>
-                                        <property name="hexpand">true</property>
-                                        <style>
-                                            <class name="toolbar" />
-                                        </style>
-                                        <child>
-                                            <object class="GtkLabel" id="_name_lbl">
-                                                <property name="margin-bottom">8</property>
-                                                <property name="margin-top">8</property>
-                                                <property name="margin-start">8</property>
-                                                <style>
-                                                    <class name="label" />
-                                                </style>
-                                            </object>
-                                        </child>
-                                        <child>
-                                            <object class="GtkBox">
-                                                <property name="orientation">horizontal</property>
-                                                <property name="halign">end</property>
-                                                <property name="hexpand">true</property>
-                                                <child>
-                                                    <object class="GtkSpinner" id="_spinner">
-                                                        <property name="width-request">16</property>
-                                                    </object>
-                                                </child>
-                                                <child>
-                                                    <object class="GtkSeparator" id="_spinner_separator">
-                                                        <style>
-                                                            <class name="spacer" />
-                                                        </style>
-                                                    </object>
-                                                </child>
-                                                <child>
-                                                    <object class="GtkButton" id="_action_btn">
-                                                        <style>
-                                                            <class name="suggested-action" />
-                                                        </style>
-                                                    </object>
-                                                </child>
-                                                <child>
-                                                    <object class="GtkSeparator" id="_action_btn_separator">
-                                                        <style>
-                                                            <class name="spacer" />
-                                                        </style>
-                                                    </object>
-                                                </child>
-                                                <child>
-                                                    <object class="GtkBox">
-                                                        <property name="orientation">horizontal</property>
-                                                        <style>
-                                                            <class name="linked" />
-                                                        </style>
-                                                        <child>
-                                                            <object class="GtkButton" id="_open_btn">
-                                                                <property name="valign">center</property>
-                                                                <property name="child">
-                                                                    <object class="AdwButtonContent">
-                                                                        <property name="icon-name">document-open-symbolic</property>
-                                                                        <property name="label" translatable="yes">Open</property>
-                                                                    </object>
-                                                                </property>
-                                                            </object>
-                                                        </child>
-                                                        <child>
-                                                            <object class="GtkButton" id="_save_btn">
-                                                                <property name="valign">center</property>
-                                                                <property name="child">
-                                                                    <object class="AdwButtonContent">
-                                                                        <property name="icon-name">floppy-symbolic</property>
-                                                                        <property name="label" translatable="yes">Save</property>
-                                                                    </object>
-                                                                </property>
-                                                            </object>
-                                                        </child>
-                                                        <child>
-                                                            <object class="GtkButton" id="_copy_btn">
-                                                                <property name="valign">center</property>
-                                                                <property name="icon-name">edit-copy-symbolic</property>
-                                                                <property name="tooltip-text" translatable="yes">Copy to clipboard</property>
-                                                            </object>
-                                                        </child>
-                                                        <child>
-                                                            <object class="GtkButton" id="_paste_btn">
-                                                                <property name="valign">center</property>
-                                                                <property name="icon-name">edit-paste-symbolic</property>
-                                                                <property name="tooltip-text" translatable="yes">Paste clipboard</property>
-                                                            </object>
-                                                        </child>
-                                                        <child>
-                                                            <object class="GtkButton" id="_clear_btn">
-                                                                <property name="valign">center</property>
-                                                                <property name="icon-name">edit-clear-symbolic</property>
-                                                                <property name="tooltip-text" translatable="yes">Clear input</property>
-                                                            </object>
-                                                        </child>
-                                                    </object>
-                                                </child>
-                                            </object>
-                                        </child>
-                                    </object>
-                                </child>
+              <!-- Header -->
+              <child>
+                  <object class="GtkBox">
+                      <property name="orientation">horizontal</property>
+                      <property name="halign">fill</property>
+                      <property name="hexpand">true</property>
+                      <style>
+                          <class name="toolbar" />
+                      </style>
+                      <child>
+                          <object class="GtkLabel" id="_name_lbl">
+                              <property name="margin-bottom">8</property>
+                              <property name="margin-top">8</property>
+                              <property name="margin-start">8</property>
+                              <style>
+                                  <class name="label" />
+                              </style>
+                          </object>
+                      </child>
+                      <child>
+                          <object class="GtkBox">
+                              <property name="orientation">horizontal</property>
+                              <property name="halign">end</property>
+                              <property name="hexpand">true</property>
+                              <child>
+                                  <object class="GtkSpinner" id="_spinner">
+                                      <property name="width-request">16</property>
+                                  </object>
+                              </child>
+                              <child>
+                                  <object class="GtkSeparator" id="_spinner_separator">
+                                      <style>
+                                          <class name="spacer" />
+                                      </style>
+                                  </object>
+                              </child>
+                              <child>
+                                  <object class="GtkButton" id="_action_btn">
+                                      <style>
+                                          <class name="suggested-action" />
+                                      </style>
+                                  </object>
+                              </child>
+                              <child>
+                                  <object class="GtkSeparator" id="_action_btn_separator">
+                                      <style>
+                                          <class name="spacer" />
+                                      </style>
+                                  </object>
+                              </child>
+                              <child>
+                                  <object class="GtkBox">
+                                      <property name="orientation">horizontal</property>
+                                      <style>
+                                          <class name="linked" />
+                                      </style>
+                                      <child>
+                                          <object class="GtkButton" id="_open_btn">
+                                              <property name="valign">center</property>
+                                              <property name="child">
+                                                  <object class="AdwButtonContent">
+                                                      <property name="icon-name">document-open-symbolic</property>
+                                                      <property name="label" translatable="yes">Open</property>
+                                                  </object>
+                                              </property>
+                                          </object>
+                                      </child>
+                                      <child>
+                                          <object class="GtkButton" id="_save_btn">
+                                              <property name="valign">center</property>
+                                              <property name="child">
+                                                  <object class="AdwButtonContent">
+                                                      <property name="icon-name">floppy-symbolic</property>
+                                                      <property name="label" translatable="yes">Save</property>
+                                                  </object>
+                                              </property>
+                                          </object>
+                                      </child>
+                                      <child>
+                                          <object class="GtkButton" id="_copy_btn">
+                                              <property name="valign">center</property>
+                                              <property name="icon-name">edit-copy-symbolic</property>
+                                              <property name="tooltip-text" translatable="yes">Copy to clipboard</property>
+                                          </object>
+                                      </child>
+                                      <child>
+                                          <object class="GtkButton" id="_paste_btn">
+                                              <property name="valign">center</property>
+                                              <property name="icon-name">edit-paste-symbolic</property>
+                                              <property name="tooltip-text" translatable="yes">Paste clipboard</property>
+                                          </object>
+                                      </child>
+                                      <child>
+                                          <object class="GtkButton" id="_clear_btn">
+                                              <property name="valign">center</property>
+                                              <property name="icon-name">edit-clear-symbolic</property>
+                                              <property name="tooltip-text" translatable="yes">Clear input</property>
+                                          </object>
+                                      </child>
+                                  </object>
+                              </child>
+                          </object>
+                      </child>
+                  </object>
+              </child>
 
-                                <child>
-                                    <object class="AdwViewStack" id="_stack">
-                                        <child>
-                                            <object class="AdwViewStackPage">
-                                                <property name="name">text-area</property>
-                                                <property name="child">
-                                                    <object class="GtkSourceView" id="_textview">
-                                                        <property name="auto-indent">true</property>
-                                                        <property name="tab-width">4</property>
-                                                        <property name="smart-backspace">true</property>
-                                                        <property name="insert-spaces-instead-of-tabs">true</property>
-                                                        <property name="wrap-mode">char</property>
-                                                        <property name="monospace">true</property>
-                                                        <property name="top-margin">12</property>
-                                                        <property name="left-margin">12</property>
-                                                        <property name="right-margin">12</property>
-                                                        <property name="bottom-margin">12</property>
-                                                        <style>
-                                                            <class name="rounded-border" />
-                                                        </style>
-                                                    </object>
-                                                </property>
-                                            </object>
-                                        </child>
-                                        <child>
-                                          <object class="AdwViewStackPage">
-                                            <property name="name">image-area</property>
-                                            <property name="child">
-                                                <object class="GtkPicture" id="_imageview">
-                                                    <property name="can-shrink">true</property>
-                                                    <property name="keep-aspect-ratio">true</property>
-                                                    <style>
-                                                        <class name="rounded-border" />
-                                                        <class name="view" />
-                                                    </style>
-                                                </object>
-                                            </property>
+              <child>
+                  <object class="AdwViewStack" id="_stack">
+                      <child>
+                          <object class="AdwViewStackPage">
+                              <property name="name">text-area</property>
+                              <property name="child">
+                                  <object class="GtkScrolledWindow">
+                                    <property name="margin-top">0</property>
+                                    <property name="margin-bottom">3</property>
+                                    <property name="margin-start">3</property>
+                                    <property name="margin-end">3</property>
+                                    <property name="child">
+                                      <object class="GtkSourceView" id="_textview">
+                                          <property name="auto-indent">true</property>
+                                          <property name="tab-width">4</property>
+                                          <property name="smart-backspace">true</property>
+                                          <property name="insert-spaces-instead-of-tabs">true</property>
+                                          <property name="wrap-mode">char</property>
+                                          <property name="monospace">true</property>
+                                          <property name="top-margin">12</property>
+                                          <property name="left-margin">12</property>
+                                          <property name="right-margin">12</property>
+                                          <property name="bottom-margin">12</property>
+                                          <style>
+                                              <class name="rounded-border" />
+                                          </style>
+                                      </object>
+                                    </property>
+                                  </object>
+                              </property>
+                          </object>
+                      </child>
+                      <child>
+                        <object class="AdwViewStackPage">
+                          <property name="name">image-area</property>
+                          <property name="child">
+                              <object class="GtkPicture" id="_imageview">
+                                  <property name="can-shrink">true</property>
+                                  <property name="keep-aspect-ratio">true</property>
+                                  <style>
+                                      <class name="rounded-border" />
+                                      <class name="view" />
+                                  </style>
+                              </object>
+                          </property>
+                        </object>
+                      </child>
+                      <child>
+                        <object class="AdwViewStackPage">
+                          <property name="name">file-area</property>
+                          <property name="child">
+                              <object class="FileView" id="_fileview" />
+                          </property>
+                        </object>
+                      </child>
+                      <child>
+                          <object class="AdwViewStackPage">
+                              <property name="name">loading</property>
+                              <property name="child">
+                                  <object class="GtkBox">
+                                      <style>
+                                          <class name="rounded-border" />
+                                          <class name="view" />
+                                      </style>
+                                      <property name="orientation">vertical</property>
+                                      <child>
+                                          <object class="GtkBox">
+                                              <property name="orientation">vertical</property>
+                                              <property name="valign">center</property>
+                                              <property name="vexpand">true</property>
+                                              <property name="spacing">10</property>
+                                              <child>
+                                                  <object class="GtkSpinner">
+                                                      <property name="spinning">true</property>
+                                                  </object>
+                                              </child>
+                                              <child>
+                                                  <object class="GtkLabel" id="_loading_lbl" />
+                                              </child>
                                           </object>
-                                        </child>
-                                        <child>
-                                          <object class="AdwViewStackPage">
-                                            <property name="name">file-area</property>
-                                            <property name="child">
-                                                <object class="FileView" id="_fileview" />
-                                            </property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                            <object class="AdwViewStackPage">
-                                                <property name="name">loading</property>
-                                                <property name="child">
-                                                    <object class="GtkBox">
-                                                        <style>
-                                                            <class name="rounded-border" />
-                                                            <class name="view" />
-                                                        </style>
-                                                        <property name="orientation">vertical</property>
-                                                        <child>
-                                                            <object class="GtkBox">
-                                                                <property name="orientation">vertical</property>
-                                                                <property name="valign">center</property>
-                                                                <property name="vexpand">true</property>
-                                                                <property name="spacing">10</property>
-                                                                <child>
-                                                                    <object class="GtkSpinner">
-                                                                        <property name="spinning">true</property>
-                                                                    </object>
-                                                                </child>
-                                                                <child>
-                                                                    <object class="GtkLabel" id="_loading_lbl" />
-                                                                </child>
-                                                            </object>
-                                                        </child>
-                                                    </object>
-                                                </property>
-                                            </object>
-                                        </child>
-                                    </object>
-                                </child>
-                            </object>
-                        </child>
-                    </object>
-                </child>
-            </object>
+                                      </child>
+                                  </object>
+                              </property>
+                          </object>
+                      </child>
+                  </object>
+              </child>
+          </object>
         </child>
     </template>
 </interface>

@@ -50,7 +50,6 @@ class HashGeneratorView(Adw.Bin):
             self._preference_group.get_first_child().get_last_child().get_first_child().remove_css_class("boxed-list")
             self._preference_group.get_first_child().get_last_child().get_first_child().get_row_at_index(0).add_css_class("fake-action-row-top")
             self._preference_group.get_first_child().get_last_child().get_first_child().get_row_at_index(1).add_css_class("fake-action-row-middle")
-            self._check_box.set_visible(True)
         else:
             self._preference_group.get_first_child().get_last_child().get_first_child().add_css_class("boxed-list")
             self._preference_group.get_first_child().get_last_child().get_first_child().get_row_at_index(0).remove_css_class("fake-action-row-top")
@@ -136,8 +135,8 @@ class HashGeneratorView(Adw.Bin):
             self._service.hash_file_with_sha512_async(self, self._on_async_done)
 
     def _check_hash(self):
-        if len(self._output_area.get_text()) == 0:
-            self._calculate_hash()
+        # if len(self._output_area.get_text()) == 0:
+        #     self._calculate_hash()
 
         if self._check_entryrow.get_text() == self._output_area.get_text():
             self._check_box.set_visible(True)

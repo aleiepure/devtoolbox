@@ -22,6 +22,12 @@ class JwtDecoderView(Adw.Bin):
     def __init__(self):
         super().__init__()
 
+        # Fix layout
+        self._token_area.get_child().set_size_request(-1, 200)
+        self._token_area.get_child().set_vexpand(False)
+        self._token_area.get_child().set_vexpand_set(True)
+
+        # Signals
         self._token_area.connect("view-cleared", self._on_view_cleared)
         self._token_area.connect("text-changed", self._on_token_changed)
 

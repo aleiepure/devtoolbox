@@ -18,6 +18,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
               <object class="AdwClamp">
                 <property name="vexpand">true</property>
+                <property name="maximum-size">1200</property>
+                <property name="tightening-threshold">600</property>
                   <property name="child">
                   <object class="GtkBox">
                     <property name="orientation">vertical</property>
@@ -63,27 +65,38 @@ SPDX-License-Identifier: GPL-3.0-or-later
                       </object>
                     </child>
 
-                    <!-- Input -->
+                    <!-- Content -->
                     <child>
-                      <object class="TextFileArea" id="_input_area">
-                        <property name="name" translatable="yes">Input</property>
-                        <property name="show-clear-btn">true</property>
-                        <property name="show-paste-btn">true</property>
-                        <property name="show-open-btn">true</property>
-                        <property name="use-all-files-extensions">true</property>
-                      </object>
-                    </child>
+                      <object class="GtkBox">
+                        <property name="orientation">horizontal</property>
+                        <property name="homogeneous">true</property>
+                        <property name="spacing">10</property>
+                        <property name="margin-bottom">10</property>
 
-                    <!-- Output -->
-                    <child>
-                      <object class="TextFileArea" id="_output_area">
-                        <property name="name" translatable="yes">Output</property>
-                        <property name="show-copy-btn">true</property>
-                        <property name="show-clear-btn">false</property>
-                        <property name="show-paste-btn">false</property>
-                        <property name="show-open-btn">false</property>
-                        <property name="text-editable">false</property>
-                        <property name="allow-drag-and-drop">false</property>
+                        <!-- Input -->
+                        <child>
+                          <object class="TextFileArea" id="_input_area">
+                            <property name="name" translatable="yes">Input</property>
+                            <property name="show-clear-btn">true</property>
+                            <property name="show-paste-btn">true</property>
+                            <property name="show-open-btn">true</property>
+                            <property name="use-all-files-extensions">true</property>
+                          </object>
+                        </child>
+
+                        <!-- Output -->
+                        <child>
+                          <object class="TextFileArea" id="_output_area">
+                            <property name="name" translatable="yes">Output</property>
+                            <property name="show-copy-btn">true</property>
+                            <property name="show-clear-btn">false</property>
+                            <property name="show-paste-btn">false</property>
+                            <property name="show-open-btn">false</property>
+                            <property name="text-editable">false</property>
+                            <property name="allow-drag-and-drop">false</property>
+                          </object>
+                        </child>
+
                       </object>
                     </child>
 

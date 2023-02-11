@@ -16,7 +16,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <child>
           <object class="AdwFlap" id="_flap">
             <property name="vexpand">true</property>
-            <!-- <property name="fold-policy">auto</property> -->
+            <property name="fold-policy">auto</property>
             <!-- <property name="modal">true</property> -->
             <!-- <property name="locked">true</property> -->
 

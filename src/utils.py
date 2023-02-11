@@ -21,36 +21,36 @@ class Bases(Enum):
 
 class Utils:
     @staticmethod
-    def is_text(input):
-        if isinstance(input, str):
+    def is_text(test_input):
+        if isinstance(test_input, str):
             return True
         else:
             try:
-                input.decode("utf-8")
+                test_input.decode("utf-8")
                 return True
             except UnicodeError:
                 return False
 
     @staticmethod
-    def is_image(input):
+    def is_image(test_input):
         try:
-            Gdk.Texture.new_from_bytes(GLib.Bytes(input))
+            Gdk.Texture.new_from_bytes(GLib.Bytes(test_input))
             return True
         except GLib.GError:
             return False
 
     @staticmethod
-    def is_json(input):
+    def is_json(test_input):
         try:
-            json.loads(input)
+            json.loads(test_input)
             return True
         except json.JSONDecodeError:
             return False
 
     @staticmethod
-    def is_yaml(input):
+    def is_yaml(test_input):
         try:
-            yaml.load(input, Loader=yaml.Loader)
+            yaml.load(test_input, Loader=yaml.Loader)
             return True
         except yaml.YAMLError:
             return False

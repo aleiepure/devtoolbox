@@ -18,6 +18,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
               <object class="AdwClamp">
                 <property name="vexpand">true</property>
+                <property name="maximum-size">1200</property>
+                <property name="tightening-threshold">600</property>
                 <property name="child">
                   <object class="GtkBox">
                     <property name="orientation">vertical</property>
@@ -36,6 +38,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                       </object>
                     </child>
 
+                    <!-- Input -->
                     <child>
                       <object class="TextArea" id="_token_area">
                         <property name="name" translatable="yes">Token</property>
@@ -50,17 +53,28 @@ SPDX-License-Identifier: GPL-3.0-or-later
                       </object>
                     </child>
 
+                    <!-- Content -->
                     <child>
-                      <object class="TextArea" id="_header_area">
-                        <property name="name" translatable="yes">Header</property>
-                        <property name="show-copy-btn">true</property>
-                      </object>
-                    </child>
+                      <object class="GtkBox">
+                        <property name="orientation">horizontal</property>
+                        <property name="homogeneous">true</property>
+                        <property name="spacing">10</property>
+                        <property name="margin-bottom">10</property>
 
-                    <child>
-                      <object class="TextArea" id="_payload_area">
-                        <property name="name" translatable="yes">Payload</property>
-                        <property name="show-copy-btn">true</property>
+                        <child>
+                          <object class="TextArea" id="_header_area">
+                            <property name="name" translatable="yes">Header</property>
+                            <property name="show-copy-btn">true</property>
+                          </object>
+                        </child>
+
+                        <child>
+                          <object class="TextArea" id="_payload_area">
+                            <property name="name" translatable="yes">Payload</property>
+                            <property name="show-copy-btn">true</property>
+                          </object>
+                        </child>
+
                       </object>
                     </child>
 
