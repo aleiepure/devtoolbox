@@ -34,7 +34,7 @@ class HashGeneratorService():
         outcome = self._hash_text_with_md5(self._input)
         task.return_value(outcome)
 
-    def _hash_text_with_md5(self, text:str):
+    def _hash_text_with_md5(self, text:str) -> str:
         return hashlib.md5(text.encode("utf-8")).hexdigest()
 
     def hash_file_with_md5_async(self, caller: GObject.Object, callback: callable):

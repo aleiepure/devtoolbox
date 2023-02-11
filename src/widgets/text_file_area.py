@@ -20,6 +20,7 @@ class TextFileArea(Adw.Bin):
     _spinner_separator = Gtk.Template.Child()
     _action_btn = Gtk.Template.Child()
     _action_btn_separator = Gtk.Template.Child()
+    _view_btn = Gtk.Template.Child()
     _open_btn = Gtk.Template.Child()
     _save_btn = Gtk.Template.Child()
     _copy_btn = Gtk.Template.Child()
@@ -37,6 +38,7 @@ class TextFileArea(Adw.Bin):
     # Properties
     name = GObject.Property(type=str, default="")
     show_spinner = GObject.Property(type=bool, default=False)
+    show_view_btn = GObject.Property(type=bool, default=False)
     show_clear_btn = GObject.Property(type=bool, default=False)
     show_save_btn = GObject.Property(type=bool, default=False)
     show_copy_btn = GObject.Property(type=bool, default=False)
@@ -91,6 +93,7 @@ class TextFileArea(Adw.Bin):
         self.bind_property("name", self._name_lbl, "label", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-spinner", self._spinner, "visible", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-spinner", self._spinner_separator, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-view-btn", self._view_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-clear-btn", self._clear_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-copy-btn", self._copy_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-open-btn", self._open_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
@@ -112,6 +115,7 @@ class TextFileArea(Adw.Bin):
 
         # Signal connection
         self._action_btn.connect("clicked", self._on_action_clicked)
+        self._view_btn.connect("clicked", self._on_view_clicked)
         self._clear_btn.connect("clicked", self._on_clear_clicked)
         self._copy_btn.connect("clicked", self._on_copy_clicked)
         self._paste_btn.connect("clicked", self._on_paste_clicked)
@@ -127,6 +131,11 @@ class TextFileArea(Adw.Bin):
             return
         self._open_file(files[0])
         self._spinner.set_visible(False)
+
+    def _on_view_clicked(self, user_data:GObject.GPointer):
+        app = Gio.Application.get_default()
+        window = app.get_active_window()
+        Gtk.show_uri(window, "file://" + self._fileview.get_file_path(), Gdk.CURRENT_TIME)
 
     def _on_action_clicked(self, user_data:GObject.GPointer):
         self.emit("action-clicked")
@@ -153,7 +162,7 @@ class TextFileArea(Adw.Bin):
 
         # Start loading animation and disable open button
         self._open_btn.set_sensitive(False)
-        self.set_visible_view("loading")
+        self.set_visible_view("loading") # change view and save previous
         self.loading_lbl = _("Opening file...")
 
         # Create a file chooser
@@ -209,7 +218,7 @@ class TextFileArea(Adw.Bin):
             self._open_file(dialog.get_file())
         else:
             self._open_btn.set_sensitive(True)
-            self.set_visible_view("text-area")
+            self._stack.set_visible_child_name(self._previous_view) # Restore previous view
 
         self._native = None
 
@@ -220,18 +229,20 @@ class TextFileArea(Adw.Bin):
         if file_size > 536870912: # 512 Mb
             self._fileview.set_file_path(file_path)
             self._fileview.set_file_size(humanize.naturalsize(file_size))
-            self.set_visible_view("file-area")
+            self._stack.set_visible_child_name("file-area") # Set view without saving the previous
             self.emit("big-file")
             self.emit("file-loaded")
             self._open_btn.set_sensitive(True)
+            self._view_btn.set_visible(False)
         else:
             file.load_contents_async(None, self._open_file_async_complete)
 
     def _open_file_async_complete(self, source_file:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer=None):
         contents = source_file.load_contents_finish(result)
         if not contents[0]:
-           self.emit("error", f"Unable to open {source_file.peek_path()}: {contents[1]}.")
-           return
+            self._stack.set_visible_child_name(self._previous_view)
+            self.emit("error", f"Unable to open {source_file.peek_path()}: {contents[1]}.")
+            return
 
         if Utils.is_text(contents[1]) and self.allow_drag_and_drop:
             text = contents[1].decode("utf-8")
@@ -239,8 +250,9 @@ class TextFileArea(Adw.Bin):
             text_buffer.set_text(text)
             text_buffer.place_cursor(text_buffer.get_end_iter())
             self._open_btn.set_sensitive(True)
-            self.set_visible_view("text-area")
-            self.emit("text-loaded")
+            self._view_btn.set_visible(False)
+            self._stack.set_visible_child_name("text-area") # Set view without saving the previous
+            self.emit("text-changed")
         elif Utils.is_image(contents[1]) and self.allow_drag_and_drop:
             image_bytes = GLib.Bytes(contents[1])
             texture = Gdk.Texture.new_from_bytes(image_bytes)
@@ -248,7 +260,8 @@ class TextFileArea(Adw.Bin):
             self._fileview.set_file_path(source_file.peek_path())
             self._imageview.set_paintable(texture)
             self._open_btn.set_sensitive(True)
-            self.set_visible_view("image-area")
+            self._view_btn.set_visible(True)
+            self._stack.set_visible_child_name("image-area") # Set view without saving the previous
             self.emit("image-loaded")
         elif self.allow_drag_and_drop:
             self._file_bytes = contents[1]
@@ -257,7 +270,8 @@ class TextFileArea(Adw.Bin):
             self._fileview.set_file_path(file_path)
             self._fileview.set_file_size(humanize.naturalsize(file_size))
             self._open_btn.set_sensitive(True)
-            self.set_visible_view("file-area")
+            self._view_btn.set_visible(False)
+            self._stack.set_visible_child_name("file-area") # Set view without saving the previous
             self.emit("file-loaded")
 
     def _on_save_clicked(self, user_data:GObject.GPointer):
@@ -301,7 +315,7 @@ class TextFileArea(Adw.Bin):
         file_path = source_file.peek_path()
 
         self._save_btn.set_sensitive(True)
-        self.set_visible_view(self._previous_view)
+        self._stack.set_visible_child_name(self._previous_view)
         if not res:
             self.emit("error", f"Unable to save {file_path}")
             return
@@ -312,11 +326,12 @@ class TextFileArea(Adw.Bin):
         self.emit("text-changed")
 
     def _clear(self):
+        self._view_btn.set_visible(False)
         self._textview.get_buffer().set_text("")
         self._textview.remove_css_class("border-red")
         self._fileview.set_file_path("")
         self._fileview.set_file_size("")
-        self.set_visible_view("text-area")
+        self._stack.set_visible_child_name("text-area")
 
     def get_text(self) -> str:
         text_buffer = self._textview.get_buffer()

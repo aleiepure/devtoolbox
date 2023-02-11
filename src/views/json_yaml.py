@@ -67,7 +67,7 @@ class JsonYamlView(Adw.Bin):
         self._input_area.remove_css_class("border-red")
 
         # Setup task
-        direction = (self._direction_selector.get_left_btn_active())  # True: Json to yaml, False: Yaml to Json
+        direction = self._direction_selector.get_left_btn_active()  # True: Json to yaml, False: Yaml to Json
         indents = int(self._indents_spinner.get_value())
         text = self._input_area.get_text()
         self._service.set_input_string(text)

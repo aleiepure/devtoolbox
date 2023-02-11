@@ -30,14 +30,14 @@ class Base64EncoderService():
         outcome = self._decode(self._input)
         task.return_value(outcome)
 
-    def _encode_text(self, text:str):
-        return "text", base64.b64encode(text.encode("utf-8")).decode("utf-8")
+    def _encode_text(self, text:str) -> str:
+        return base64.b64encode(text.encode("utf-8")).decode("utf-8")
 
-    def _encode_file(self, file_path:str):
+    def _encode_file(self, file_path:str) -> str:
         file_content = Gio.File.new_for_path(file_path).load_contents(None)
         return base64.b64encode(file_content[1]).decode("utf-8")
 
-    def _decode(self, text:str):
+    def _decode(self, text):
         try:
             return base64.b64decode(text)
         except binascii.Error:

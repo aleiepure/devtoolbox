@@ -31,7 +31,7 @@ class Base64EncoderView(Adw.Bin):
         super().__init__()
 
         # Signals
-        self._direction_selector.connect("toggled", self._on_input_changed)
+        self._direction_selector.connect("toggled", self._on_direction_toggled)
         self._input_area.connect("text-changed", self._on_input_changed)
         self._input_area.connect("image-loaded", self._on_input_changed)
         self._input_area.connect("file-loaded", self._on_input_changed)
@@ -42,6 +42,9 @@ class Base64EncoderView(Adw.Bin):
         self._file_saved_toast.connect("button-clicked", self._on_toast_button_clicked)
 
     def _on_input_changed(self, source_widget:GObject.Object):
+        self._convert()
+
+    def _on_direction_toggled(self, source_widget:GObject.Object):
         self._convert()
 
     def _on_toast_button_clicked(self, user_data:GObject.GPointer):
@@ -58,9 +61,11 @@ class Base64EncoderView(Adw.Bin):
         self._toast.add_toast(self._file_saved_toast)
 
     def _on_view_cleared(self, source_widget:GObject.Object):
+        self._output_area.clear()
+        self._service.get_cancellable().cancel()
+        self._output_area.set_spinner_spin(False)
         self._output_area.set_property("show-copy-btn" , True)
         self._output_area.set_property("show-save-btn" , False)
-        self._output_area.clear()
 
     def _on_error(self, source_widget:GObject.Object, error:str):
         error_str = _("Error")
@@ -83,12 +88,14 @@ class Base64EncoderView(Adw.Bin):
             self._service.set_input(self._input_area.get_opened_file_path())
 
         # Call task
-        if self._direction_selector.get_left_btn_active():
+        direction = self._direction_selector.get_left_btn_active() # True: Encode, False: Decode
+        if direction:
             if self._input_area.get_visible_view() == "text-area" and len(text) > 0:
                 self._service.encode_text_async(self, self._on_async_done)
             elif self._input_area.get_visible_view() == "text-area" and len(text) == 0:
                 self._output_area.clear()
-            else:
+                self._output_area.set_spinner_spin(False)
+            elif self._input_area.get_visible_view() == "image-area" or self._input_area.get_visible_view() == "file-area":
                 self._service.encode_file_async(self, self._on_async_done)
         else:
             if self._input_area.get_visible_view() == "text-area" and len(text) > 0 and Utils.is_base64(text):
@@ -96,10 +103,13 @@ class Base64EncoderView(Adw.Bin):
             elif self._input_area.get_visible_view() == "text-area" and len(text) > 0 and (not Utils.is_base64(text)):
                 self._input_area.add_css_class("border-red")
                 self._output_area.clear()
+                self._output_area.set_spinner_spin(False)
             elif self._input_area.get_visible_view() == "text-area" and len(text) == 0:
                 self._output_area.clear()
-            else:
+                self._output_area.set_spinner_spin(False)
+            elif self._input_area.get_visible_view() == "image-area" or self._input_area.get_visible_view() == "file-area":
                 self._output_area.clear()
+                self._output_area.set_spinner_spin(False)
                 self._input_area.add_css_class("border-red")
                 self._toast.add_toast(self._cannot_convert_toast)
 
@@ -108,7 +118,10 @@ class Base64EncoderView(Adw.Bin):
         outcome = self._service.async_finish(result, self)
 
         if len(outcome)>0 and Utils.is_text(outcome):
-            self._output_area.set_text(outcome)
+            if isinstance(outcome, str):
+                self._output_area.set_text(outcome)
+            else:
+                self._output_area.set_text(outcome.decode("utf-8"))
             self._output_area.set_visible_view("text-area")
             self._output_area.set_property("show-copy-btn" , True)
             self._output_area.set_property("show-save-btn" , False)

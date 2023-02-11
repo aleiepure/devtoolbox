@@ -40,6 +40,7 @@ class HashGeneratorView(Adw.Bin):
         self._check_switch.connect("notify::active", self._on_check_switch_changed)
         self._check_entryrow.connect("changed", self._on_check_hash_changed)
         self._input_area.connect("text-changed", self._on_input_changed)
+        self._input_area.connect("text-loaded", self._on_input_changed)
         self._input_area.connect("file-loaded", self._on_input_changed)
         self._input_area.connect("image-loaded", self._on_input_changed)
         self._input_area.connect("view-cleared", self._on_view_cleared)
@@ -107,7 +108,7 @@ class HashGeneratorView(Adw.Bin):
             self._service.hash_text_with_md5_async(self, self._on_async_done)
         elif self._input_area.get_visible_view() == "text-area" and len(text) == 0:
             self._output_area.clear()
-        else:
+        elif self._input_area.get_visible_view() == "image-area" or self._input_area.get_visible_view() == "file-area":
             self._service.hash_file_with_md5_async(self, self._on_async_done)
 
     def _calculate_sha1(self, text:str):
@@ -115,7 +116,7 @@ class HashGeneratorView(Adw.Bin):
             self._service.hash_text_with_sha1_async(self, self._on_async_done)
         elif self._input_area.get_visible_view() == "text-area" and len(text) == 0:
             self._output_area.clear()
-        else:
+        elif self._input_area.get_visible_view() == "image-area" or self._input_area.get_visible_view() == "file-area":
             self._service.hash_file_with_sha1_async(self, self._on_async_done)
 
     def _calculate_sha256(self, text:str):
@@ -123,7 +124,7 @@ class HashGeneratorView(Adw.Bin):
             self._service.hash_text_with_sha256_async(self, self._on_async_done)
         elif self._input_area.get_visible_view() == "text-area" and len(text) == 0:
             self._output_area.clear()
-        else:
+        elif self._input_area.get_visible_view() == "image-area" or self._input_area.get_visible_view() == "file-area":
             self._service.hash_file_with_sha256_async(self, self._on_async_done)
 
     def _calculate_sha512(self, text:str):
@@ -131,13 +132,10 @@ class HashGeneratorView(Adw.Bin):
             self._service.hash_text_with_sha512_async(self, self._on_async_done)
         elif self._input_area.get_visible_view() == "text-area" and len(text) == 0:
             self._output_area.clear()
-        else:
+        elif self._input_area.get_visible_view() == "image-area" or self._input_area.get_visible_view() == "file-area":
             self._service.hash_file_with_sha512_async(self, self._on_async_done)
 
     def _check_hash(self):
-        # if len(self._output_area.get_text()) == 0:
-        #     self._calculate_hash()
-
         if self._check_entryrow.get_text() == self._output_area.get_text():
             self._check_box.set_visible(True)
             self._check_icon.set_from_icon_name("check-round-outline")

@@ -30,15 +30,15 @@ class BinarySelector(Adw.Bin):
         # Property binding
         self.bind_property("left-lbl",   self._left_btn,  "label",  GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("right-lbl",  self._right_btn, "label",  GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("left-btn-active",  self._left_btn,  "active", GObject.BindingFlags.BIDIRECTIONAL)
-        self.bind_property("right-btn-active", self._right_btn, "active", GObject.BindingFlags.BIDIRECTIONAL)
-        self._left_btn.bind_property("active", self._right_btn, "active", GObject.BindingFlags.INVERT_BOOLEAN)
-        self._right_btn.bind_property("active", self._left_btn, "active", GObject.BindingFlags.INVERT_BOOLEAN)
+        self.bind_property("left-btn-active",  self._left_btn,  "active", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("right-btn-active", self._right_btn, "active", GObject.BindingFlags.SYNC_CREATE)
 
         # Signals
         self._left_btn.connect("toggled", self._on_toggled)
 
-    def _on_toggled(self, user_data):
+    def _on_toggled(self, user_data:GObject.GPointer):
+        self.set_property("left-btn-active", self._left_btn.get_active())
+        self.set_property("right-btn-active", not self._left_btn.get_active())
         self.emit("toggled")
 
     def get_left_btn_active(self) -> bool:

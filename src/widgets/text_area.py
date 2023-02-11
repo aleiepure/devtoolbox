@@ -105,7 +105,7 @@ class TextArea(Adw.Bin):
         self._copy_btn.connect("clicked", self._on_copy_clicked)
         self._paste_btn.connect("clicked", self._on_paste_clicked)
         self._open_btn.connect("clicked", self._on_open_clicked)
-        self._textview.get_buffer().connect("changed", self._on_text_changed)
+        self._text_changed_handler = self._textview.get_buffer().connect("changed", self._on_text_changed)
 
     def _on_dnd_drop(self, drop_target:Gtk.DropTarget, value: Gdk.FileList, x:float, y:float, user_data:GObject.Object=None):
         self._spinner.set_visible(True)
