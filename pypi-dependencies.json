@@ -157,6 +157,20 @@
                     "sha256": "e9a6c9f470e34f8debaad26134bcf3f0bcbf677dac73e32295cfb2915d30815b"
                 }
             ]
+        },
+        {
+            "name": "python3-uuid6",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"uuid6\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/ed/f0/c3be0d8de7a38daeb20d83833ec5078006dfb93b7595e55db7fa49b985c1/uuid6-2022.10.25-py3-none-any.whl",
+                    "sha256": "bd9b874081968c5f24af7ec7a3f48175197806224cc6f4833914f671854c6266"
+                }
+            ]
         }
     ]
 }

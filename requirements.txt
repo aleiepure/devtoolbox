@@ -8,3 +8,4 @@ sqlparse
 lxml
 python-lorem
 base64io
+uuid6

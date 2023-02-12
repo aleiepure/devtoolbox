@@ -20,6 +20,7 @@ from .views.jwt_decoder import JwtDecoderView
 from .views.formatter import FormatterView
 from .views.hash_generator import HashGeneratorView
 from .views.lorem_generator import LoremGeneratorView
+from .views.uuid_generator import UuidGeneratorView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -147,7 +148,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             "hash-generator": {
                 "title": "Hash",
                 "category": "generator",
-                "icon-name": "fingerprint-symbolic",
+                "icon-name": "hash-symbolic",
                 "tooltip": _("Calculate MD5, SHA1, SHA256 and SHA512 hashes and check for integrity"),
                 "child": HashGeneratorView(),
             },
@@ -157,6 +158,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "newspaper-symbolic",
                 "tooltip": _("Generate lorem ipsum placeholder text"),
                 "child": LoremGeneratorView(),
+            },
+            "uuid-generator": {
+                "title": "UUID",
+                "category": "generator",
+                "icon-name": "fingerprint-symbolic",
+                "tooltip": _("Generate Universally Unique IDs (UUID)"),
+                "child": UuidGeneratorView(),
             },
         }
 

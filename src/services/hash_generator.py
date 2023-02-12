@@ -12,7 +12,7 @@ class HashGeneratorService():
     def __init__(self):
         self._cancellable = Gio.Cancellable()
 
-    def set_input(self, input_text_or_file_path: str):
+    def set_input(self, input_text_or_file_path:str):
         self._input = input_text_or_file_path
 
     def get_cancellable(self) -> Gio.Cancellable:

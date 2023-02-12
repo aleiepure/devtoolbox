@@ -35,6 +35,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/views/formatter.ui</file>
     <file preprocess="xml-stripblanks">ui/views/hash_generator.ui</file>
     <file preprocess="xml-stripblanks">ui/views/lorem_generator.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/uuid_generator.ui</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="non-starred-symbolic.svg">../data/icons/symbolic/non-starred-symbolic.svg</file>
@@ -71,5 +72,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="text-direction-ltr-symbolic.svg">../data/icons/symbolic/text-direction-ltr-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="stacked-plates-symbolic.svg">../data/icons/symbolic/stacked-plates-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="eye-open-symbolic.svg">../data/icons/symbolic/eye-open-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="list-large-symbolic.svg">../data/icons/symbolic/list-large-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="hash-symbolic.svg">../data/icons/symbolic/hash-symbolic.svg</file>
   </gresource>
 </gresources>

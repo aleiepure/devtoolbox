@@ -20,6 +20,7 @@ sources = [
   'formatter.py',
   'hash_generator.py',
   'lorem_generator.py',
+  'uuid_generator.py',
 ]
 
 install_data(sources, install_dir: viewsdir)
