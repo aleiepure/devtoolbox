@@ -339,7 +339,7 @@ class TextFileArea(Adw.Bin):
         return text
 
     def set_text(self, text:str):
-        self._textview.get_buffer().set_text(text)
+        self._textview.get_buffer().set_text(text, -1)
 
     def get_buffer(self) -> GtkSource.Buffer:
         return self._textview.get_buffer()

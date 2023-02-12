@@ -4,8 +4,11 @@
 
 from gi.repository import Gio, GObject, Gtk, Gdk
 from typing import List
+from base64io import Base64IO
+from pathlib import Path
 import base64
 import binascii
+
 
 class Base64EncoderService():
 
@@ -33,11 +36,25 @@ class Base64EncoderService():
     def _encode_text(self, text:str) -> str:
         return base64.b64encode(text.encode("utf-8")).decode("utf-8")
 
-    def _encode_file(self, file_path:str) -> str:
-        file_content = Gio.File.new_for_path(file_path).load_contents(None)
-        return base64.b64encode(file_content[1]).decode("utf-8")
+    def _encode_file(self, input_file_path:str) -> str:
+        output_file_path = Gio.File.new_tmp("me.iepure.devtoolbox.XXXXXX")[0].get_path()
+        print(output_file_path)
+
+        with open(input_file_path, "rb") as source, open(output_file_path, "wb") as target:
+            with Base64IO(target) as encoded_target:
+                for line in source:
+                    encoded_target.write(line)
+                    print(".", end="")
+
+        txt = Path(output_file_path).read_text()
+        if txt[len(txt)-1] != '\x00':
+            txt += '\x00'
+
+        return txt
 
     def _decode(self, text):
+
+
         try:
             return base64.b64decode(text)
         except binascii.Error:

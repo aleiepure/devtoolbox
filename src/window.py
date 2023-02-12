@@ -102,13 +102,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "tooltip": "Encode and decode special characters inside URLs",
                 "child": UrlEncoderView(),
             },
-            "base64-encoder": {
-                "title": "Base64",
-                "category": "encoder",
-                "icon-name": "base64-symbolic",
-                "tooltip": "Encode and decode files and texts using base64",
-                "child": Base64EncoderView(),
-            },
+            # "base64-encoder": {
+            #     "title": "Base64",
+            #     "category": "encoder",
+            #     "icon-name": "base64-symbolic",
+            #     "tooltip": "Encode and decode files and texts using base64",
+            #     "child": Base64EncoderView(),
+            # },
             "gzip-compressor": {
                 "title": "GZip",
                 "category": "encoder",

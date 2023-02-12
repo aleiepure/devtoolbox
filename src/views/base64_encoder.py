@@ -62,10 +62,10 @@ class Base64EncoderView(Adw.Bin):
 
     def _on_view_cleared(self, source_widget:GObject.Object):
         self._output_area.clear()
-        self._service.get_cancellable().cancel()
         self._output_area.set_spinner_spin(False)
         self._output_area.set_property("show-copy-btn" , True)
         self._output_area.set_property("show-save-btn" , False)
+        self._service.get_cancellable().cancel()
 
     def _on_error(self, source_widget:GObject.Object, error:str):
         error_str = _("Error")
@@ -114,11 +114,12 @@ class Base64EncoderView(Adw.Bin):
                 self._toast.add_toast(self._cannot_convert_toast)
 
     def _on_async_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
-        self._output_area.set_spinner_spin(False)
         outcome = self._service.async_finish(result, self)
 
         if len(outcome)>0 and Utils.is_text(outcome):
             if isinstance(outcome, str):
+                print("string")
+                self._output_area.clear()
                 self._output_area.set_text(outcome)
             else:
                 self._output_area.set_text(outcome.decode("utf-8"))
@@ -131,7 +132,9 @@ class Base64EncoderView(Adw.Bin):
             self._output_area.set_property("show-copy-btn" , False)
             self._output_area.set_property("show-save-btn" , True)
         elif len(outcome)>0:
-            self._output_area.set_file(GLib.Bytes(outcome), _("Please save this file to view its contents"))
+            self._output_area.set_opened_file_path(_("Please save this file to view its contents"))
             self._output_area.set_visible_view("file-area")
             self._output_area.set_property("show-copy-btn" , False)
             self._output_area.set_property("show-save-btn" , True)
+
+        self._output_area.set_spinner_spin(False)

@@ -7,3 +7,4 @@ pyjwt
 sqlparse
 lxml
 python-lorem
+base64io

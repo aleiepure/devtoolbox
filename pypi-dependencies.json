@@ -143,6 +143,20 @@
                     "sha256": "10524c0c8fb029dc8ab794aeb98debe42fdc90415b6f1c1a4c52343c2d84f9dd"
                 }
             ]
+        },
+        {
+            "name": "python3-base64io",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"base64io\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/c7/9c/401865bd07802b916c327342ed609f9ac0aa8c6c48bea1a32b7eabc17229/base64io-1.0.3-py2.py3-none-any.whl",
+                    "sha256": "e9a6c9f470e34f8debaad26134bcf3f0bcbf677dac73e32295cfb2915d30815b"
+                }
+            ]
         }
     ]
 }
