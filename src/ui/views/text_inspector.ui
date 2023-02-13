@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 - 2023 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="TextInspectorView" parent="AdwBin">
+    <child>
+
+      <object class="AdwToastOverlay" id="_toast">
+        <property name="child">
+          <object class="GtkScrolledWindow">
+            <property name="child">
+
+              <object class="AdwClamp">
+                <property name="vexpand">true</property>
+                <property name="maximum-size">1200</property>
+                <property name="tightening-threshold">600</property>
+                  <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+
+                    <!-- Title -->
+                    <child>
+                      <object class="UtilityTitle" id="_title">
+                        <property name="title" translatable="yes">Text Inspector &amp; case converter</property>
+                        <property name="description" translatable="yes">View statistics about the typed text and change cases</property>
+                        <property name="tool-name">text-inspector</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="margin-top">10</property>
+                        <property name="margin-bottom">10</property>
+                      </object>
+                    </child>
+
+                    <!-- Options -->
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="title" translatable="yes">Tool options</property>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="yes">Change case</property>
+                            <property name="subtitle" translatable="yes">Choose a case to apply to the text</property>
+                            <property name="icon-name">list-large</property>
+                            <child type="suffix">
+                              <object class="GtkBox">
+                                <property name="valign">center</property>
+                                <property name="orientation">vertical</property>
+                                <property name="spacing">5</property>
+                                <property name="margin-top">5</property>
+                                <property name="margin-bottom">5</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <style>
+                                      <class name="linked" />
+                                    </style>
+                                    <property name="orientation">horizontal</property>
+                                    <property name="homogeneous">true</property>
+                                    <child>
+                                      <object class="GtkToggleButton" id="_original_case_btn">
+                                        <property name="label" translatable="yes">Original</property>
+                                        <property name="active">true</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkToggleButton" id="_sentence_case_btn">
+                                        <property name="label" translatable="yes">Sentence case</property>
+                                        <property name="group">_original_case_btn</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkToggleButton" id="_lower_case_btn">
+                                        <property name="label" translatable="yes">lower case</property>
+                                        <property name="group">_original_case_btn</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkToggleButton" id="_upper_case_btn">
+                                        <property name="label" translatable="yes">UPPER CASE</property>
+                                        <property name="group">_original_case_btn</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkToggleButton" id="_title_case_btn">
+                                        <property name="label" translatable="yes">Title Case</property>
+                                        <property name="group">_original_case_btn</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkToggleButton" id="_camel_case_btn">
+                                        <property name="label" translatable="yes">camelCase</property>
+                                        <property name="group">_original_case_btn</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkToggleButton" id="_pascal_case_btn">
+                                        <property name="label" translatable="yes">PascalCase</property>
+                                        <property name="group">_original_case_btn</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <style>
+                                      <class name="linked" />
+                                    </style>
+                                    <property name="orientation">horizontal</property>
+                                    <child>
+                                      <object class="GtkToggleButton" id="_snake_case_btn">
+                                        <property name="label" translatable="yes">snake_case</property>
+                                        <property name="group">_original_case_btn</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkToggleButton" id="_constant_case_btn">
+                                        <property name="label" translatable="yes">CONSTANT_CASE</property>
+                                        <property name="group">_original_case_btn</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkToggleButton" id="_kebab_case_btn">
+                                        <property name="label" translatable="yes">kebab-case</property>
+                                        <property name="group">_original_case_btn</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkToggleButton" id="_cobol_case_btn">
+                                        <property name="label" translatable="yes">COBOL-CASE</property>
+                                        <property name="group">_original_case_btn</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkToggleButton" id="_train_case_btn">
+                                        <property name="label" translatable="yes">Train-Case</property>
+                                        <property name="group">_original_case_btn</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkToggleButton" id="_alternating_case_btn">
+                                        <property name="label" translatable="yes">aLtErNaTiNg CaSe</property>
+                                        <property name="group">_original_case_btn</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkToggleButton" id="_reverse_alternating_case_btn">
+                                        <property name="label" translatable="yes">ReVeRsE aLtErNaTiNg CaSe</property>
+                                        <property name="group">_original_case_btn</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="margin-top">10</property>
+                        <property name="margin-bottom">10</property>
+                      </object>
+                    </child>
+
+                    <!-- Stats -->
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="title" translatable="yes">Information</property>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="yes">Cursor</property>
+                            <property name="icon-name">select-mode-symbolic</property>
+                            <child type="suffix">
+                              <object class="GtkBox">
+                                <property name="orientation">horizontal</property>
+                                <property name="spacing">50</property>
+                                <property name="margin-end">10</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">horizontal</property>
+                                    <property name="spacing">5</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Line:</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="_line_lbl">
+                                        <property name="label" translatable="yes">1</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">horizontal</property>
+                                    <property name="spacing">5</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Column:</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="_column_lbl">
+                                        <property name="label" translatable="yes">1</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="yes">Text</property>
+                            <property name="icon-name">text-symbolic</property>
+                            <child type="suffix">
+                              <object class="GtkBox">
+                                <property name="orientation">horizontal</property>
+                                <property name="spacing">50</property>
+                                <property name="margin-end">10</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">horizontal</property>
+                                    <property name="spacing">5</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Characters:</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="_chars_lbl">
+                                        <property name="label" translatable="yes">0</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">horizontal</property>
+                                    <property name="spacing">5</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Words:</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="_words_lbl">
+                                        <property name="label" translatable="yes">0</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">horizontal</property>
+                                    <property name="spacing">5</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Lines:</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="_lines_lbl">
+                                        <property name="label" translatable="yes">1</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="margin-top">10</property>
+                      </object>
+                    </child>
+
+
+                    <!-- Input -->
+                    <child>
+                      <object class="TextArea" id="_textarea">
+                        <property name="name" translatable="yes">Text</property>
+                        <property name="show-copy-btn">true</property>
+                        <property name="show-clear-btn">true</property>
+                        <property name="show-paste-btn">true</property>
+                        <property name="show-open-btn">true</property>
+                        <property name="use-default-text-extensions">true</property>
+                        <property name="margin-bottom">10</property>
+                      </object>
+                    </child>
+
+                  </object>
+                </property>
+              </object>
+
+            </property>
+          </object>
+        </property>
+      </object>
+
+    </child>
+  </template>
+</interface>

@@ -58,6 +58,7 @@ class TextArea(Adw.Bin):
         "view-cleared": (GObject.SIGNAL_RUN_LAST, None, ()),
         "text-loaded": (GObject.SIGNAL_RUN_LAST, None, ()),
         "big-file": (GObject.SIGNAL_RUN_LAST, None, ()),
+        "cursor-moved": (GObject.SIGNAL_RUN_LAST, None, ()),
         "error": (GObject.SIGNAL_RUN_LAST, None, (str,)),
     }
 
@@ -106,6 +107,7 @@ class TextArea(Adw.Bin):
         self._paste_btn.connect("clicked", self._on_paste_clicked)
         self._open_btn.connect("clicked", self._on_open_clicked)
         self._text_changed_handler = self._textview.get_buffer().connect("changed", self._on_text_changed)
+        self._textview.get_buffer().connect("cursor-moved", self._on_cursor_moved)
 
     def _on_dnd_drop(self, drop_target:Gtk.DropTarget, value: Gdk.FileList, x:float, y:float, user_data:GObject.Object=None):
         self._spinner.set_visible(True)
@@ -217,6 +219,9 @@ class TextArea(Adw.Bin):
         self._textview.remove_css_class("border-red")
         self._stack.set_visible_child_name("text-area")
         self._spinner.set_visible(False)
+
+    def _on_cursor_moved(self, user_data:GObject.GPointer):
+        self.emit("cursor-moved")
 
     def get_text(self) -> str:
         text_buffer = self._textview.get_buffer()

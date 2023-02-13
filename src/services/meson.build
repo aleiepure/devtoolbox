@@ -17,6 +17,7 @@ sources = [
   'hash_generator.py',
   'lorem_generator.py',
   'uuid_generator.py',
+  'text_inspector.py',
 ]
 
 install_data(sources, install_dir: servicesdir)

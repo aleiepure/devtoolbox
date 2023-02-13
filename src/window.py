@@ -21,6 +21,7 @@ from .views.formatter import FormatterView
 from .views.hash_generator import HashGeneratorView
 from .views.lorem_generator import LoremGeneratorView
 from .views.uuid_generator import UuidGeneratorView
+from .views.text_inspector import TextInspectorView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -60,13 +61,6 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "calendar-symbolic",
                 "tooltip": "Convert UNIX timestamps to and from plain dates",
                 "child": TimestampView(),
-            },
-            "placeholder4": {
-                "title": _("placeholder4"),
-                "category": "text",
-                "icon-name": "clock-rotate-symbolic",
-                "tooltip": "Placeholder",
-                "child": Gtk.Label(label="text"),
             },
             "placeholder5": {
                 "title": _("placeholder5"),
@@ -165,6 +159,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "fingerprint-symbolic",
                 "tooltip": _("Generate Universally Unique IDs (UUID)"),
                 "child": UuidGeneratorView(),
+            },
+            "text-inspector": {
+                "title": "Inspector & Case Converter",
+                "category": "text",
+                "icon-name": "text-inspector-symbolic",
+                "tooltip": _("View statistics about the typed text and change cases"),
+                "child": TextInspectorView(),
             },
         }
 

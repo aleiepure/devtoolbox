@@ -120,7 +120,7 @@
             "name": "python3-lxml",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --ignore-installed --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --ignore-installed --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -169,6 +169,25 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/ed/f0/c3be0d8de7a38daeb20d83833ec5078006dfb93b7595e55db7fa49b985c1/uuid6-2022.10.25-py3-none-any.whl",
                     "sha256": "bd9b874081968c5f24af7ec7a3f48175197806224cc6f4833914f671854c6266"
+                }
+            ]
+        },
+        {
+            "name": "python3-textstat",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"textstat\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/b2/2f/e4434084c12549a2aa015a8ba007722e6b4e0e7b0855baa915120271a8df/pyphen-0.13.2-py3-none-any.whl",
+                    "sha256": "e88cfb46aed61f4c7fe49592ff322e6266485fd2447c818a9123485cd92b7ef4"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/d8/33/302083f47386d651e4b42923f5206eeb9ee0545ea94bb506324d05fd2274/textstat-0.7.3-py3-none-any.whl",
+                    "sha256": "cbd9d641aa5abff0852638f0489913f31ea52fe597ccbaa337b4fc2a44efd15e"
                 }
             ]
         }
