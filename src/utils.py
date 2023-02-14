@@ -10,6 +10,7 @@ import json
 import base64
 import binascii
 import jwt
+import re
 
 
 class Bases(Enum):
@@ -105,4 +106,12 @@ class Utils:
             jwt.decode(token, options={"verify_signature": False})
             return True
         except Exception:
+            return False
+
+    @staticmethod
+    def is_regex(regex:str):
+        try:
+            re.compile(r"{}".format(regex))
+            return True
+        except re.error:
             return False

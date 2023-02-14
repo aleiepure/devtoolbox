@@ -234,6 +234,9 @@ class TextArea(Adw.Bin):
     def get_buffer(self) -> GtkSource.Buffer:
         return self._textview.get_buffer()
 
+    def set_buffer(self, buffer:GtkSource.Buffer):
+        return self._textview.set_buffer(buffer)
+
     def add_css_class(self, css_class_name:str):
         self._textview.add_css_class(css_class_name)
 
@@ -263,3 +266,9 @@ class TextArea(Adw.Bin):
 
     def clear(self):
         self._clear()
+
+    def scroll_mark_onscreen(self, mark:Gtk.TextMark):
+        self._textview.scroll_mark_onscreen(mark)
+
+    def get_iter_at_location(self, x, y):
+        return self._textview.get_iter_at_location(x,y)

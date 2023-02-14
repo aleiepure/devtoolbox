@@ -22,6 +22,7 @@ from .views.hash_generator import HashGeneratorView
 from .views.lorem_generator import LoremGeneratorView
 from .views.uuid_generator import UuidGeneratorView
 from .views.text_inspector import TextInspectorView
+from .views.regex_tester import RegexTesterView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -166,6 +167,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "text-inspector-symbolic",
                 "tooltip": _("View statistics about the typed text and change cases"),
                 "child": TextInspectorView(),
+            },
+            "regex-tester": {
+                "title": "Regex Tester",
+                "category": "text",
+                "icon-name": "regex-symbolic",
+                "tooltip": _("Find all matching strings inside a text"),
+                "child": RegexTesterView(),
             },
         }
 
