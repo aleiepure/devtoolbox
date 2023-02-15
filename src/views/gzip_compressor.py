@@ -81,8 +81,7 @@ class GzipCompressorView(Adw.Bin):
         if self._input_area.get_visible_view() == "text-area":
             self._service.set_input(text)
         else:
-            file_contents = self._input_area.get_opened_file_contents()
-            self._service.set_input(file_contents[1])
+            self._service.set_input(self._input_area.get_opened_file_path())
 
         # Call task
         if self._direction_selector.get_left_btn_active(): # Compress

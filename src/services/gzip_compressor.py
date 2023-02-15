@@ -35,8 +35,13 @@ class GzipCompressorService():
     def _compress_text(self, input_str:str):
         return base64.b64encode(gzip.compress(input_str.encode("utf-8"))).decode("utf-8")
 
-    def _compress_bytes(self, input_bytes:List[bytes]):
-        return base64.b64encode(gzip.compress(input_bytes)).decode("utf-8")
+    def _compress_bytes(self, input_file_path:str):
+        output_file_path = Gio.File.new_tmp("me.iepure.devtoolbox.XXXXXX")[0].get_path()
+        with gzip.open(output_file_path, 'wb') as zip_file, open(input_file_path, "rb") as input_file:
+            zip_file.write(input_file.read())
+
+        with gzip.open(output_file_path, 'rb') as zip_file:
+            return base64.b64encode(zip_file.read()).decode("utf-8")
 
     def _decompress(self, input_str:str):
         try:
