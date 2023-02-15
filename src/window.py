@@ -23,6 +23,7 @@ from .views.lorem_generator import LoremGeneratorView
 from .views.uuid_generator import UuidGeneratorView
 from .views.text_inspector import TextInspectorView
 from .views.regex_tester import RegexTesterView
+from .views.text_diff import TextDiffView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -174,6 +175,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "regex-symbolic",
                 "tooltip": _("Find all matching strings inside a text"),
                 "child": RegexTesterView(),
+            },
+            "text-diff": {
+                "title": "Text Diff",
+                "category": "text",
+                "icon-name": "open-book-symbolic",
+                "tooltip": _("Analyze two texts and find all the differences"),
+                "child": TextDiffView(),
             },
         }
 

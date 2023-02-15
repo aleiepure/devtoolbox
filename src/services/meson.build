@@ -19,6 +19,7 @@ sources = [
   'uuid_generator.py',
   'text_inspector.py',
   'regex_tester.py',
+  'text_diff.py',
 ]
 
 install_data(sources, install_dir: servicesdir)
