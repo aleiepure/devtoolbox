@@ -9,11 +9,6 @@ from typing import List, Dict
 
 class TextDiffService():
 
-    _tag_line_removed = None
-    _tag_line_added = None
-    _tag_removed = None
-    _tag_added = None
-
     def __init__(self):
         self._cancellable = Gio.Cancellable()
 
@@ -22,17 +17,6 @@ class TextDiffService():
 
     def set_text2(self, text2:str):
         self._text2 = text2
-
-    def set_buffer(self, buffer:Gtk.TextBuffer):
-        self._buffer = buffer
-        if not self._tag_line_removed:
-            self._tag_line_removed = self._buffer.create_tag("line-removed", background="#5d2a2a")
-        if not self._tag_line_added:
-            self._tag_line_added = self._buffer.create_tag("line-added", background="#494f3b")
-        if not self._tag_removed:
-            self._tag_removed = self._buffer.create_tag("removed", background="#7d2121")
-        if not self._tag_added:
-            self._tag_added = self._buffer.create_tag("added", background="#5b7822")
 
     def get_cancellable(self) -> Gio.Cancellable:
         return self._cancellable

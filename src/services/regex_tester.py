@@ -16,10 +16,8 @@ class RegexTesterService():
     def set_regex(self, regex:str):
         self._regex = regex
 
-    def set_buffer(self, buffer:Gtk.TextBuffer):
-        self._buffer = buffer
-        if not self._tag:
-            self._tag = self._buffer.create_tag("match", background="#005eff7F")
+    def set_text(self, text:str):
+        self._text = text
 
     def get_cancellable(self) -> Gio.Cancellable:
         return self._cancellable
@@ -27,6 +25,8 @@ class RegexTesterService():
     def async_finish(self, result, caller: GObject.Object):
         if not Gio.Task.is_valid(result, caller):
             return -1
+        self._text = None
+        self._regex = None
         return result.propagate_value().value
 
     def find_all_matches_async(self, caller: GObject.Object, callback: callable):
@@ -37,13 +37,9 @@ class RegexTesterService():
     def _find_all_matches_thread(self, task, source_object, task_data, cancelable):
         if task.return_error_if_cancelled():
             return
-        outcome = self._find_all_matches(self._regex, self._buffer)
+        outcome = self._find_all_matches(self._regex, self._text)
         task.return_value(outcome)
 
-    def _find_all_matches(self, regex:str, buffer:Gtk.TextBuffer):
+    def _find_all_matches(self, regex:str, text:str):
         p = re.compile(r"{}".format(regex))
-        matches = p.finditer(buffer.get_text(buffer.get_start_iter(), buffer.get_end_iter(), False))
-        for item in matches:
-            start_gtext_iter = buffer.get_iter_at_offset(item.start())
-            end_gtext_iter = buffer.get_iter_at_offset(item.end())
-            buffer.apply_tag(self._tag, start_gtext_iter, end_gtext_iter)
+        return p.finditer(text)

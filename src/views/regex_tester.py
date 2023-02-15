@@ -24,6 +24,8 @@ class RegexTesterView(Adw.Bin):
     def __init__(self):
         super().__init__()
 
+        self._tag = self._textarea.get_buffer().create_tag("match", background="#005eff7F")
+
         # Signals
         self._regex_entry.connect("changed", self._on_regex_changed)
         self._textarea.connect("text-changed", self._on_text_changed)
@@ -54,7 +56,7 @@ class RegexTesterView(Adw.Bin):
         # Setup task
         self._textarea.set_spinner_spin(True)
         self._service.set_regex(self._regex_entry.get_text())
-        self._service.set_buffer(buffer)
+        self._service.set_text(self._textarea.get_text())
 
         # Call task
         if len(self._regex_entry.get_text()) > 0 and Utils.is_regex(self._regex_entry.get_text()):
@@ -66,5 +68,12 @@ class RegexTesterView(Adw.Bin):
             self._textarea.set_spinner_spin(False)
 
     def _on_find_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
-        outcome = self._service.async_finish(result, self)
+        matches = self._service.async_finish(result, self)
+        self._tag_matches(matches)
         self._textarea.set_spinner_spin(False)
+
+    def _tag_matches(self, matches):
+        for item in matches:
+            start_gtext_iter = self._textarea.get_buffer().get_iter_at_offset(item.start())
+            end_gtext_iter = self._textarea.get_buffer().get_iter_at_offset(item.end())
+            self._textarea.get_buffer().apply_tag(self._tag, start_gtext_iter, end_gtext_iter)
