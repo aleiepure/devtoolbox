@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 - 2023 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="XmlValidatorView" parent="AdwBin">
+    <child>
+      <object class="AdwToastOverlay" id="_toast">
+        <property name="child">
+          <object class="GtkScrolledWindow">
+            <property name="child">
+
+              <object class="AdwClamp">
+                <property name="vexpand">true</property>
+                <property name="maximum-size">1200</property>
+                <property name="tightening-threshold">600</property>
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+
+                    <!-- Title -->
+                    <child>
+                      <object class="UtilityTitle" id="_title">
+                        <property name="title" translatable="yes">XML Schema Validator</property>
+                        <property name="description" translatable="yes">Check an XML file against a XSD schema</property>
+                        <property name="tool-name">xml-validator</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="margin-top">10</property>
+                        <property name="margin-bottom">10</property>
+                      </object>
+                    </child>
+
+                    <!-- Content -->
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">horizontal</property>
+                        <property name="homogeneous">true</property>
+                        <property name="spacing">10</property>
+                        <property name="margin-bottom">10</property>
+
+                        <!-- XML -->
+                        <child>
+                          <object class="TextArea" id="_xml_textarea">
+                            <property name="name">XML</property>
+                            <property name="show-clear-btn">true</property>
+                            <property name="show-paste-btn">true</property>
+                            <property name="show-open-btn">true</property>
+                            <property name="show-copy-btn">true</property>
+                            <property name="use-custom-file-extensions">true</property>
+                            <property name="custom-file-extensions">xml</property>
+                            <property name="text-show-line-numbers">true</property>
+                            <property name="text-syntax-highlighting">true</property>
+                          </object>
+                        </child>
+
+                        <!-- XSD -->
+                        <child>
+                          <object class="TextArea" id="_xsd_textarea">
+                            <property name="name">XSD</property>
+                            <property name="show-clear-btn">true</property>
+                            <property name="show-paste-btn">true</property>
+                            <property name="show-open-btn">true</property>
+                            <property name="show-copy-btn">true</property>
+                            <property name="use-custom-file-extensions">true</property>
+                            <property name="custom-file-extensions">xsd</property>
+                            <property name="text-show-line-numbers">true</property>
+                            <property name="text-syntax-highlighting">true</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <!-- Check box -->
+                    <child>
+                      <object class="GtkBox" id="_check_box">
+                        <property name="visible">false</property>
+                        <property name="orientation">horizontal</property>
+                        <property name="halign">center</property>
+                        <property name="margin-bottom">15</property>
+                        <property name="margin-top">5</property>
+
+                        <child>
+                          <object class="GtkImage" id="_check_icon">
+                            <property name="pixel-size">56</property>
+                            <property name="margin-end">20</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="valign">center</property>
+                            <child>
+                              <object class="GtkLabel" id="_check_title_lbl">
+                                <style>
+                                  <class name="heading" />
+                                </style>
+                                <property name="margin-bottom">5</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="_check_lbl">
+                                <property name="justify">center</property>
+                                <property name="width-request">100</property>
+                                <property name="wrap">true</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                  </object>
+                </property>
+              </object>
+
+            </property>
+          </object>
+        </property>
+      </object>
+    </child>
+  </template>
+</interface>

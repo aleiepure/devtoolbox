@@ -24,6 +24,7 @@ sources = [
   'text_inspector.py',
   'regex_tester.py',
   'text_diff.py',
+  'xml_validator.py',
 ]
 
 install_data(sources, install_dir: viewsdir)

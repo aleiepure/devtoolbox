@@ -39,6 +39,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/views/text_inspector.ui</file>
     <file preprocess="xml-stripblanks">ui/views/regex_tester.ui</file>
     <file preprocess="xml-stripblanks">ui/views/text_diff.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/xml_validator.ui</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="non-starred-symbolic.svg">../data/icons/symbolic/non-starred-symbolic.svg</file>
@@ -82,5 +83,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="text-inspector-symbolic.svg">../data/icons/symbolic/text-inspector-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="regex-symbolic.svg">../data/icons/symbolic/regex-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="open-book-symbolic.svg">../data/icons/symbolic/open-book-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="error-symbolic.svg">../data/icons/symbolic/error-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="xml-check-symbolic.svg">../data/icons/symbolic/xml-check-symbolic.svg</file>
   </gresource>
 </gresources>

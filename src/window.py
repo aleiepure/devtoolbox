@@ -24,6 +24,7 @@ from .views.uuid_generator import UuidGeneratorView
 from .views.text_inspector import TextInspectorView
 from .views.regex_tester import RegexTesterView
 from .views.text_diff import TextDiffView
+from .views.xml_validator import XmlValidatorView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -182,6 +183,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "open-book-symbolic",
                 "tooltip": _("Analyze two texts and find all the differences"),
                 "child": TextDiffView(),
+            },
+            "xml-validator": {
+                "title": "XML Schema Validator",
+                "category": "text",
+                "icon-name": "xml-check-symbolic",
+                "tooltip": _("Check an XML file against a XSD schema"),
+                "child": XmlValidatorView(),
             },
         }
 

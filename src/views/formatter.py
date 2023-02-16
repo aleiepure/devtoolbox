@@ -70,7 +70,7 @@ class FormatterView(Adw.Bin):
         elif len(text) > 0:
             self._textarea.set_spinner_spin(False)
             self._textarea.add_css_class("border-red")
-            self._toast.add_toast(Adw.Toast(title=_("Text is not in the correct format. Check if you misspelled something or if all the parenthesis are closed."), priority=Adw.ToastPriority.HIGH))
+            self._toast.add_toast(Adw.Toast(title=_("Text is not in the correct format. Check if you misspelled something or if all parenthesis are closed."), priority=Adw.ToastPriority.HIGH))
         else:
             self._textarea.set_spinner_spin(False)
 

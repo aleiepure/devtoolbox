@@ -11,6 +11,7 @@ import base64
 import binascii
 import jwt
 import re
+from lxml import etree
 
 
 class Bases(Enum):
@@ -114,4 +115,21 @@ class Utils:
             re.compile(r"{}".format(regex))
             return True
         except re.error:
+            return False
+
+    @staticmethod
+    def is_xml(text:str) -> bool:
+        try:
+            etree.fromstring(bytes(text, encoding="utf-8"))
+            return True
+        except etree.ParseError:
+            return False
+
+    def is_xsd(text:str) -> bool:
+        try:
+            parser = etree.XMLParser(no_network=False)
+            schema_root = etree.fromstring(bytes(text, encoding="utf-8"), parser=parser)
+            return True
+        except Exception as e:
+            print(e)
             return False
