@@ -3,14 +3,61 @@
 <!--
 Copyright (C) 2022 - 2023 Alessandro Iepure
 
-SPDX-License-Identifier: GPL-3.0-or-later
+SPDX-License-Identifier: CC0-1.0
 -->
 
 <component type="desktop">
 	<id>me.iepure.devtoolbox.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
-	<description>
-	  <p>No description</p>
-	</description>
+  <launchable type="desktop-id">me.iepure.devtoolbox.desktop</launchable>
+  <name>Dev Toolbox</name>
+  <summary>Development tools at your fingertips</summary>
+  <developer_name translatable="no">Alessandro Iepure</developer_name>
+  <description>
+    <p>If you're tired of endlessly looking online for the right tool, or to
+      find again that website of which you don't recall the name just for a quick
+      conversion, this is the right app for you.</p>
+
+    <p>This is a collection of powerful yet simple-to-use tools and utilities
+      to solve the most common daily development problems.</p>
+
+    <p>Includes:</p>
+    <ul>
+      <li>JSON to YAML converter and vice-versa</li>
+      <li>Cron expressions parser</li>
+      <li>GZip compressor and decompressor</li>
+      <li>Formatters for common programming languages</li>
+      <li>Hash generators</li>
+      <li>Regex tester</li>
+      <li>Markdown Previewer</li>
+      <li>Image converters and metadata removers</li>
+      <li>Much more...</li>
+    </ul>
+  </description>
+  <url type="homepage">https://github.com/aleiepure/devtoolbox</url>
+  <url type="bugtracker">https://github.com/aleiepure/devtoolbox/issues</url>
+  <url type="vcs-browser">https://github.com/aleiepure/devtoolbox</url>
+  <url type="contribute">https://github.com/aleiepure/devtoolbox/wiki/Contributing</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/aleiepure/devtoolbox/main/data/appstream/1.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/aleiepure/devtoolbox/main/data/appstream/2.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/aleiepure/devtoolbox/main/data/appstream/3.png</image>
+    </screenshot>
+  </screenshots>
+  <translation type="gettext">me.iepure.devtoolbox</translation>
+  <content_rating type="oars-1.1"/>
+  <recommends>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </recommends>
+  <requires>
+    <display_length compare="ge">800</display_length>
+    <display_width compare="ge">1200</display_width>
+  </requires>
 </component>

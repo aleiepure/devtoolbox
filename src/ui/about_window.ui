@@ -10,11 +10,11 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <requires lib="gtk" version="4.0"/>
     <requires lib="libadwaita" version="1.0" />
     <object class="AdwAboutWindow" id="about_window">
-        <property name="application-name">Dev-toolbox</property>
+        <property name="application-name">Dev Toolbox</property>
         <property name="modal">True</property>
         <property name="copyright">Copyright © 2022 - 2023 Dev-toolbox Developers
 Some of the icons are copyright of the GNOME Project</property>
-        <property name="comments" translatable="yes">All your developer utilities at your fingertips</property>
+        <property name="comments" translatable="yes">Development tools at your fingertips</property>
         <property name="website">https://github.com/aleiepure/devtoolbox</property>
         <property name="issue-url">https://github.com/aleiepure/devtoolbox/issues</property>
         <property name="application-icon">me.iepure.devtoolbox</property>
