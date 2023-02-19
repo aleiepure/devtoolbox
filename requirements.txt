@@ -10,3 +10,5 @@ python-lorem
 base64io
 uuid6
 textstat
+markdown2
+Pygments

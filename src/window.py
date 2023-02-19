@@ -25,6 +25,7 @@ from .views.text_inspector import TextInspectorView
 from .views.regex_tester import RegexTesterView
 from .views.text_diff import TextDiffView
 from .views.xml_validator import XmlValidatorView
+from .views.markdown_preview import MarkdownPreviewView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -190,6 +191,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "xml-check-symbolic",
                 "tooltip": _("Check an XML file against a XSD schema"),
                 "child": XmlValidatorView(),
+            },
+            "markdown-preview": {
+                "title": "Markdown Previewer",
+                "category": "text",
+                "icon-name": "markdown-symbolic",
+                "tooltip": _("Preview markdown code as you type"),
+                "child": MarkdownPreviewView(),
             },
         }
 

@@ -21,6 +21,7 @@ sources = [
   'regex_tester.py',
   'text_diff.py',
   'xml_validator.py',
+  'markdown_preview.py',
 ]
 
 install_data(sources, install_dir: servicesdir)

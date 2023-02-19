@@ -8,6 +8,7 @@ import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 gi.require_version("GtkSource", "5")
+gi.require_version('WebKit2', '5.0')
 
 from gi.repository import Gtk, Gio, Adw, GObject, GtkSource, Gdk
 from .window import DevtoolboxWindow
@@ -20,6 +21,7 @@ from .widgets.binary_selector import BinarySelector
 from .widgets.spin_area import SpinArea
 from .widgets.date_area import DateArea
 from .widgets.entry_row import EntryRow
+from .widgets.webview_area import WebviewArea
 
 
 class DevtoolboxApplication(Adw.Application):
@@ -39,6 +41,7 @@ class DevtoolboxApplication(Adw.Application):
         SpinArea,
         DateArea,
         EntryRow,
+        WebviewArea,
     ]
 
     def __init__(self, version, debug):

@@ -9,7 +9,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 <interface>
   <requires lib="gtk" version="4.0" />
   <requires lib="libadwaita" version="1.0" />
-  <template class="TextDiffView" parent="AdwBin">
+  <requires lib="webkit2" version="5.0" />
+  <template class="MarkdownPreviewView" parent="AdwBin">
     <child>
       <object class="AdwToastOverlay" id="_toast">
         <property name="child">
@@ -27,9 +28,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     <!-- Title -->
                     <child>
                       <object class="UtilityTitle" id="_title">
-                        <property name="title" translatable="yes">Text Diff</property>
-                        <property name="description" translatable="yes">Analyze two texts and find all the differences</property>
-                        <property name="tool-name">text-diff</property>
+                        <property name="title" translatable="yes">Markdown Previewer</property>
+                        <property name="description" translatable="yes">Preview markdown code as you type</property>
+                        <property name="tool-name">markdown-preview</property>
                       </object>
                     </child>
                     <child>
@@ -38,42 +39,35 @@ SPDX-License-Identifier: GPL-3.0-or-later
                       </object>
                     </child>
 
+                    <!-- Content -->
                     <child>
                       <object class="GtkBox">
                         <property name="orientation">horizontal</property>
+                        <property name="homogeneous">true</property>
                         <property name="spacing">10</property>
-                        <child>
-                          <object class="TextArea" id="_old_textarea">
-                            <property name="name" translatable="yes">Old Text</property>
-                            <property name="show-copy-btn">true</property>
-                            <property name="show-clear-btn">true</property>
-                            <property name="show-paste-btn">true</property>
-                            <property name="show-open-btn">true</property>
-                            <property name="text-show-line-numbers">true</property>
-                            <property name="use-default-text-extensions">true</property>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="TextArea" id="_new_textarea">
-                            <property name="name" translatable="yes">New Text</property>
-                            <property name="show-copy-btn">true</property>
-                            <property name="show-clear-btn">true</property>
-                            <property name="show-paste-btn">true</property>
-                            <property name="show-open-btn">true</property>
-                            <property name="text-show-line-numbers">true</property>
-                            <property name="use-default-text-extensions">true</property>
-                          </object>
-                        </child>
-                      </object>
-                    </child>
-
-                    <!-- Output -->
-                    <child>
-                      <object class="TextArea" id="_diff_textarea">
-                        <property name="name" translatable="yes">Differences</property>
-                        <property name="show-copy-btn">true</property>
-                        <property name="text-editable">false</property>
                         <property name="margin-bottom">10</property>
+
+                        <!-- Input -->
+                        <child>
+                          <object class="TextArea" id="_textarea">
+                            <property name="name" translatable="yes">Markdown</property>
+                            <property name="show-clear-btn">true</property>
+                            <property name="show-paste-btn">true</property>
+                            <property name="show-open-btn">true</property>
+                            <property name="show-copy-btn">true</property>
+                            <property name="use-custom-file-extensions">true</property>
+                            <property name="custom-file-extensions">md</property>
+                            <property name="text-show-line-numbers">true</property>
+                            <property name="text-syntax-highlighting">true</property>
+                          </object>
+                        </child>
+
+                        <!-- Output -->
+                        <child>
+                          <object class="WebviewArea" id="_webarea">
+                            <property name="name" translatable="yes">Preview</property>
+                          </object>
+                        </child>
                       </object>
                     </child>
 

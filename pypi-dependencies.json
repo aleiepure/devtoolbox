@@ -120,7 +120,7 @@
             "name": "python3-lxml",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --ignore-installed --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
+                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -188,6 +188,34 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/d8/33/302083f47386d651e4b42923f5206eeb9ee0545ea94bb506324d05fd2274/textstat-0.7.3-py3-none-any.whl",
                     "sha256": "cbd9d641aa5abff0852638f0489913f31ea52fe597ccbaa337b4fc2a44efd15e"
+                }
+            ]
+        },
+        {
+            "name": "python3-markdown2",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"markdown2\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/93/c7/6c3d46009f2f71f5283efd8c4c7272e4a13ef968ec9ff19d5c048c6d1b38/markdown2-2.4.8-py2.py3-none-any.whl",
+                    "sha256": "7d49ca871d3e0e412c65d7d21fcbc13ae897f7876f3e5f14dd4db3b7fbf27f10"
+                }
+            ]
+        },
+        {
+            "name": "python3-Pygments",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"Pygments\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/0b/42/d9d95cc461f098f204cd20c85642ae40fbff81f74c300341b8d0e0df14e0/Pygments-2.14.0-py3-none-any.whl",
+                    "sha256": "fa7bd7bd2771287c0de303af8bfdfc731f51bd2c6a47ab69d117138893b82717"
                 }
             ]
         }

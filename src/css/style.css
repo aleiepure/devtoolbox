@@ -17,6 +17,13 @@
   padding-left: 8px;
 }
 
+.padding-5 {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-top: 2px;
+}
+
 .border-red {
   border: 1px solid red;
 }
