@@ -142,12 +142,20 @@ class HashGeneratorView(Adw.Bin):
             self._check_title_lbl.set_text(_("Hashes match!"))
             self._check_lbl.set_wrap(False)
             self._check_lbl.set_text(_("The integrity is verified."))
+            self._check_icon.remove_css_class("warning")
+            self._check_title_lbl.remove_css_class("warning")
+            self._check_icon.add_css_class("success")
+            self._check_title_lbl.add_css_class("success")
         else:
             self._check_box.set_visible(True)
             self._check_icon.set_from_icon_name("warning")
             self._check_title_lbl.set_text(_("Warning, integrity cannot be verified!"))
             self._check_lbl.set_wrap(True)
             self._check_lbl.set_text(_("The calculated hash and the provided one do not match. Check again and if this is a file you downloaded from the internet re-download it."))
+            self._check_icon.remove_css_class("success")
+            self._check_title_lbl.remove_css_class("success")
+            self._check_icon.add_css_class("warning")
+            self._check_title_lbl.add_css_class("warning")
 
     def _on_async_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
         self._output_area.set_spinner_spin(False)

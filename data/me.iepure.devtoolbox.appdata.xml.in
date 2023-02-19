@@ -60,4 +60,7 @@ SPDX-License-Identifier: CC0-1.0
     <display_length compare="ge">800</display_length>
     <display_width compare="ge">1200</display_width>
   </requires>
+  <releases>
+    <release version="1.0" date="2014-04-12" />
+  </releases>
 </component>
