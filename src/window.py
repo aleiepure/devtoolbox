@@ -26,6 +26,7 @@ from .views.regex_tester import RegexTesterView
 from .views.text_diff import TextDiffView
 from .views.xml_validator import XmlValidatorView
 from .views.markdown_preview import MarkdownPreviewView
+from .views.contrast_checker import ContrastCheckerView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -65,13 +66,6 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "calendar-symbolic",
                 "tooltip": "Convert UNIX timestamps to and from plain dates",
                 "child": TimestampView(),
-            },
-            "placeholder5": {
-                "title": _("placeholder5"),
-                "category": "graphic",
-                "icon-name": "clock-rotate-symbolic",
-                "tooltip": "Placeholder",
-                "child": Gtk.Label(label="graphic"),
             },
             "base-converter": {
                 "title": _("Base converter"),
@@ -165,39 +159,46 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "child": UuidGeneratorView(),
             },
             "text-inspector": {
-                "title": "Inspector & Case Converter",
+                "title": _("Inspector & Case Converter"),
                 "category": "text",
                 "icon-name": "text-inspector-symbolic",
                 "tooltip": _("View statistics about the typed text and change cases"),
                 "child": TextInspectorView(),
             },
             "regex-tester": {
-                "title": "Regex Tester",
+                "title": _("Regex Tester"),
                 "category": "text",
                 "icon-name": "regex-symbolic",
                 "tooltip": _("Find all matching strings inside a text"),
                 "child": RegexTesterView(),
             },
             "text-diff": {
-                "title": "Text Diff",
+                "title": _("Text Diff"),
                 "category": "text",
                 "icon-name": "open-book-symbolic",
                 "tooltip": _("Analyze two texts and find all the differences"),
                 "child": TextDiffView(),
             },
             "xml-validator": {
-                "title": "XML Schema Validator",
+                "title": _("XML Schema Validator"),
                 "category": "text",
                 "icon-name": "xml-check-symbolic",
                 "tooltip": _("Check an XML file against a XSD schema"),
                 "child": XmlValidatorView(),
             },
             "markdown-preview": {
-                "title": "Markdown Previewer",
+                "title": _("Markdown Previewer"),
                 "category": "text",
                 "icon-name": "markdown-symbolic",
                 "tooltip": _("Preview markdown code as you type"),
                 "child": MarkdownPreviewView(),
+            },
+            "contrast-checker": {
+                "title": _("Contrast Checker"),
+                "category": "graphic",
+                "icon-name": "image-adjust-contrast-symbolic",
+                "tooltip": _("Check a color combination for WCAG compliance"),
+                "child": ContrastCheckerView(),
             },
         }
 

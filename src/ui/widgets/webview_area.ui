@@ -33,28 +33,29 @@ SPDX-License-Identifier: GPL-3.0-or-later
                 <property name="margin-top">8</property>
                 <property name="margin-start">14</property>
                 <property name="valign">center</property>
+                <property name="label">Label</property>
                 <style>
                   <class name="label" />
                 </style>
               </object>
             </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">horizontal</property>
+            <property name="halign">end</property>
+            <property name="hexpand">true</property>
             <child>
-              <object class="GtkBox">
-                <property name="orientation">horizontal</property>
-                <property name="halign">end</property>
-                <property name="hexpand">true</property>
-                <child>
-                  <object class="GtkSpinner" id="_spinner">
-                    <property name="width-request">16</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkSeparator" id="_spinner_separator">
-                    <style>
-                      <class name="spacer" />
-                    </style>
-                  </object>
-                </child>
+              <object class="GtkSpinner" id="_spinner">
+                <property name="width-request">16</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparator" id="_spinner_separator">
+                <style>
+                  <class name="spacer" />
+                </style>
               </object>
             </child>
           </object>

@@ -38,7 +38,7 @@ conf.set('VERSION', version_number)
 conf.set('localedir', join_paths(get_option('prefix'), get_option('localedir')))
 conf.set('pkgdatadir', pkgdatadir)
 conf.set('debug', get_option('debug'))
-conf.set('app-name', 'Dev-toolbox@0@'.format(name_suffix))
+conf.set('app-name', 'Dev Toolbox@0@'.format(name_suffix))
 
 configure_file(
   input: 'devtoolbox.in',

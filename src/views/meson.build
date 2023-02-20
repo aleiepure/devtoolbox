@@ -26,6 +26,7 @@ sources = [
   'text_diff.py',
   'xml_validator.py',
   'markdown_preview.py',
+  'contrast_checker.py',
 ]
 
 install_data(sources, install_dir: viewsdir)
