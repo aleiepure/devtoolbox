@@ -22,6 +22,7 @@ from .widgets.spin_area import SpinArea
 from .widgets.date_area import DateArea
 from .widgets.entry_row import EntryRow
 from .widgets.webview_area import WebviewArea
+from .widgets.image_area import ImageArea
 
 
 class DevtoolboxApplication(Adw.Application):
@@ -42,6 +43,7 @@ class DevtoolboxApplication(Adw.Application):
         DateArea,
         EntryRow,
         WebviewArea,
+        ImageArea,
     ]
 
     def __init__(self, version, debug):

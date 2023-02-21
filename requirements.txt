@@ -12,3 +12,6 @@ uuid6
 textstat
 markdown2
 Pygments
+numpy
+Pillow
+daltonlens

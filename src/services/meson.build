@@ -22,6 +22,7 @@ sources = [
   'text_diff.py',
   'xml_validator.py',
   'markdown_preview.py',
+  'colorblindness_simulator.py',
 ]
 
 install_data(sources, install_dir: servicesdir)

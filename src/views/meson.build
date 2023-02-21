@@ -27,6 +27,7 @@ sources = [
   'xml_validator.py',
   'markdown_preview.py',
   'contrast_checker.py',
+  'colorblindness_simulator.py',
 ]
 
 install_data(sources, install_dir: viewsdir)

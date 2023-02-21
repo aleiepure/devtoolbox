@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 - 2023 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="ColorblindnessSimulatorView" parent="AdwBin">
+    <child>
+      <object class="AdwToastOverlay" id="_toast">
+        <property name="child">
+          <object class="GtkScrolledWindow">
+            <property name="child">
+
+              <object class="AdwClamp">
+                <property name="vexpand">true</property>
+                <property name="maximum-size">1200</property>
+                <property name="tightening-threshold">600</property>
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+
+                    <!-- Title -->
+                    <child>
+                      <object class="UtilityTitle" id="_title">
+                        <property name="title" translatable="yes">Color Blindness Simulator</property>
+                        <property name="description" translatable="yes">Change image colors to simulate different types of color blindness</property>
+                        <property name="tool-name">colorblind-sim</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="margin-top">10</property>
+                        <property name="margin-bottom">10</property>
+                      </object>
+                    </child>
+
+                    <!-- Options -->
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="title" translatable="yes">Tool options</property>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="yes">Severity</property>
+                            <property name="subtitle" translatable="yes">Severity of the anomaly</property>
+                            <property name="icon-name">weight-symbolic</property>
+                            <child type="suffix">
+                              <object class="GtkScale" id="_severity_scale">
+                                <property name="hexpand">true</property>
+                                <property name="adjustment">
+                                  <object class="GtkAdjustment">
+                                    <property name="lower">0</property>
+                                    <property name="upper">1</property>
+                                    <property name="step-increment">0.01</property>
+                                    <property name="value">0.8</property>
+                                  </object>
+                                </property>
+                                <marks>
+                                  <mark value="0.8" position="GTK_POS_BOTTOM" />
+                                </marks>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="margin-top">10</property>
+                      </object>
+                    </child>
+
+                    <!-- Content -->
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <property name="homogeneous">true</property>
+                        <property name="margin-bottom">10</property>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">horizontal</property>
+                            <property name="homogeneous">true</property>
+                            <property name="spacing">10</property>
+                            <child>
+                              <object class="ImageArea" id="_original_imagearea">
+                                <property name="name" translatable="yes">Original</property>
+                                <property name="show-open-btn">true</property>
+                                <property name="show-clear-btn">true</property>
+                                <property name="allow_drag_and_drop">true</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ImageArea" id="_protanopia_imagearea">
+                                <property name="name" translatable="yes">Protanopia</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">horizontal</property>
+                            <property name="homogeneous">true</property>
+                            <property name="spacing">10</property>
+                            <child>
+                              <object class="ImageArea" id="_deutranopia_imagearea">
+                                <property name="name" translatable="yes">Deutranopia</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="ImageArea" id="_tritanopia_imagearea">
+                                <property name="name" translatable="yes">Tritanopia</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </property>
+          </object>
+        </property>
+      </object>
+    </child>
+  </template>
+</interface>

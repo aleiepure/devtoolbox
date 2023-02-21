@@ -17,6 +17,7 @@ sources = [
   'date_area.py',
   'entry_row.py',
   'webview_area.py',
+  'image_area.py',
 ]
 
 install_data(sources, install_dir: widgetsdir)
