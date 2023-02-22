@@ -28,6 +28,7 @@ from .views.xml_validator import XmlValidatorView
 from .views.markdown_preview import MarkdownPreviewView
 from .views.contrast_checker import ContrastCheckerView
 from .views.colorblindness_simulator import ColorblindnessSimulatorView
+from .views.image_converter import ImageConverterView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -207,6 +208,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "color-symbolic",
                 "tooltip": _("Simulate color blindness in images and compensate colors"),
                 "child": ColorblindnessSimulatorView(),
+            },
+            "image-converter": {
+                "title": _("Image Format Converter"),
+                "category": "graphic",
+                "icon-name": "image-symbolic",
+                "tooltip": _("Converter images to different formats"),
+                "child": ImageConverterView(),
             },
         }
 

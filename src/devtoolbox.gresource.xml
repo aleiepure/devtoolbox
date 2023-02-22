@@ -45,6 +45,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/views/markdown_preview.ui</file>
     <file preprocess="xml-stripblanks">ui/views/contrast_checker.ui</file>
     <file preprocess="xml-stripblanks">ui/views/colorblindness_simulator.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/image_converter.ui</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="non-starred-symbolic.svg">../data/icons/symbolic/non-starred-symbolic.svg</file>
@@ -95,5 +96,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="checkerboard-big-symbolic.svg">../data/icons/symbolic/checkerboard-big-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="color-symbolic.svg">../data/icons/symbolic/color-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="weight-symbolic.svg">../data/icons/symbolic/weight-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="image-symbolic.svg">../data/icons/symbolic/image-symbolic.svg</file>
   </gresource>
 </gresources>

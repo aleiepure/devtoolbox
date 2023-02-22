@@ -13,6 +13,8 @@ class ImageArea(Adw.Bin):
 
     # Template elements
     _name_lbl = Gtk.Template.Child()
+    _action_btn = Gtk.Template.Child()
+    _action_btn_separator = Gtk.Template.Child()
     _view_btn = Gtk.Template.Child()
     _open_btn = Gtk.Template.Child()
     _save_btn = Gtk.Template.Child()
@@ -23,6 +25,8 @@ class ImageArea(Adw.Bin):
 
     # Properties
     name = GObject.Property(type=str, default="Original")
+    show_action_btn = GObject.Property(type=bool, default=False)
+    action_btn_name = GObject.Property(type=str, default="")
     show_view_btn = GObject.Property(type=bool, default=False)
     show_clear_btn = GObject.Property(type=bool, default=False)
     show_save_btn = GObject.Property(type=bool, default=False)
@@ -32,6 +36,7 @@ class ImageArea(Adw.Bin):
 
     # Custom signals
     __gsignals__ = {
+        "action-clicked": (GObject.SIGNAL_RUN_LAST, None, ()),
         "view-cleared": (GObject.SIGNAL_RUN_LAST, None, ()),
         "image-loaded": (GObject.SIGNAL_RUN_LAST, None, ()),
         "error": (GObject.SIGNAL_RUN_LAST, None, (str,)),
@@ -49,17 +54,22 @@ class ImageArea(Adw.Bin):
 
         # Property binding
         self.bind_property("name", self._name_lbl, "label", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-action-btn", self._action_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-action-btn", self._action_btn_separator, "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("action-btn-name", self._action_btn, "label", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-view-btn", self._view_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-clear-btn", self._clear_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-open-btn", self._open_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-save-btn", self._save_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("loading-label", self._loading_lbl, "label", GObject.BindingFlags.SYNC_CREATE)
+        self._action_btn.bind_property("visible", self._action_btn_separator, "visible", GObject.BindingFlags.BIDIRECTIONAL)
 
         # Signals
         self._view_btn.connect("clicked", self._on_view_clicked)
         self._clear_btn.connect("clicked", self._on_clear_clicked)
         self._open_btn.connect("clicked", self._on_open_clicked)
         self._save_btn.connect("clicked", self._on_save_clicked)
+        self._action_btn.connect("clicked", self._on_action_clicked)
 
     def _on_dnd_drop(self, drop_target:Gtk.DropTarget, value: Gdk.FileList, x:float, y:float, user_data:GObject.Object=None):
         files: List[Gio.File] = value.get_files()
@@ -67,6 +77,9 @@ class ImageArea(Adw.Bin):
             self.emit("error", "Cannot open more than one file")
             return
         self._open_file(files[0])
+
+    def _on_action_clicked(self, user_data:GObject.GPointer):
+        self.emit("action-clicked")
 
     def _on_view_clicked(self, user_data:GObject.GPointer):
         app = Gio.Application.get_default()
@@ -98,7 +111,9 @@ class ImageArea(Adw.Bin):
 
         # File filters
         image_file_filter = Gtk.FileFilter()
-        image_file_filter.add_pixbuf_formats()
+        allowed_extensions = ["bmp", "gif", "jpg", "jpeg", "png", "tiff", "tif", "svg"]
+        for extension in allowed_extensions:
+            image_file_filter.add_suffix(extension)
         image_file_filter.set_name(_("Images"))
         self._native.add_filter(image_file_filter)
 
@@ -171,6 +186,7 @@ class ImageArea(Adw.Bin):
         self._save_btn.set_visible(False)
         self._stack.set_visible_child_name("image")
         self._imageview.set_file(None)
+        self._action_btn.set_sensitive(True)
 
     def set_file(self, file:Gio.File):
         self._imageview.set_file(file)
@@ -191,3 +207,6 @@ class ImageArea(Adw.Bin):
 
     def set_loading_lbl(self, loading_lbl:str):
         self.loading_label = loading_lbl
+
+    def set_action_btn_sensitive(self, sensitive:bool):
+        self._action_btn.set_sensitive(sensitive)

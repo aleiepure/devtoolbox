@@ -23,6 +23,7 @@ sources = [
   'xml_validator.py',
   'markdown_preview.py',
   'colorblindness_simulator.py',
+  'image_converter.py',
 ]
 
 install_data(sources, install_dir: servicesdir)

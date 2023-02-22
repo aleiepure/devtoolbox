@@ -28,6 +28,7 @@ sources = [
   'markdown_preview.py',
   'contrast_checker.py',
   'colorblindness_simulator.py',
+  'image_converter.py',
 ]
 
 install_data(sources, install_dir: viewsdir)

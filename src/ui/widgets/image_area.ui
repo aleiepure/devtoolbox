@@ -45,6 +45,20 @@ SPDX-License-Identifier: GPL-3.0-or-later
                               <property name="halign">end</property>
                               <property name="hexpand">true</property>
                               <child>
+                                  <object class="GtkButton" id="_action_btn">
+                                      <style>
+                                          <class name="suggested-action" />
+                                      </style>
+                                  </object>
+                              </child>
+                              <child>
+                                  <object class="GtkSeparator" id="_action_btn_separator">
+                                      <style>
+                                          <class name="spacer" />
+                                      </style>
+                                  </object>
+                              </child>
+                              <child>
                                   <object class="GtkBox">
                                       <property name="orientation">horizontal</property>
                                       <style>

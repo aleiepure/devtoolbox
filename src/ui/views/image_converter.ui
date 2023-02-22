@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright (C) 2022 - 2023 Alessandro Iepure
+
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="ImageConverterView" parent="AdwBin">
+    <child>
+      <object class="AdwToastOverlay" id="_toast">
+        <property name="child">
+          <object class="GtkScrolledWindow">
+            <property name="child">
+
+              <object class="AdwClamp">
+                <property name="vexpand">true</property>
+                <property name="maximum-size">1200</property>
+                <property name="tightening-threshold">600</property>
+                  <property name="child">
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <property name="margin-bottom">10</property>
+
+                    <!-- Title -->
+                    <child>
+                      <object class="UtilityTitle" id="_title">
+                        <property name="title" translatable="yes">Image Format Converter</property>
+                        <property name="description" translatable="yes">Convert images to different formats</property>
+                        <property name="tool-name">image-converter</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="margin-top">10</property>
+                        <property name="margin-bottom">10</property>
+                      </object>
+                    </child>
+
+                    <!-- Options -->
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="title" translatable="yes">Tool options</property>
+                        <child>
+                          <object class="AdwComboRow" id="_format_combo">
+                            <property name="title" translatable="yes">Format</property>
+                            <property name="subtitle" translatable="yes">Select the desired output format</property>
+                            <property name="icon-name">list-large-symbolic</property>
+                            <property name="model">
+                              <object class="GtkStringList">
+                                <items>
+                                  <item>BMP</item>
+                                  <item>GIF</item>
+                                  <item>ICNS</item>
+                                  <item>JPEG</item>
+                                  <item>PNG</item>
+                                  <item>TIFF</item>
+                                  <item>WEBP</item>
+                                </items>
+                              </object>
+                            </property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparator">
+                        <property name="margin-top">10</property>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="ImageArea" id="_imagearea">
+                        <property name="name" translatable="yes">Image</property>
+                        <property name="show-action-btn">true</property>
+                        <property name="action-btn-name" translatable="yes">Convert</property>
+                        <property name="show-open-btn">true</property>
+                        <property name="show-clear-btn">true</property>
+                        <property name="allow_drag_and_drop">true</property>
+                      </object>
+                    </child>
+
+                  </object>
+                </property>
+              </object>
+
+            </property>
+          </object>
+        </property>
+      </object>
+    </child>
+  </template>
+</interface>

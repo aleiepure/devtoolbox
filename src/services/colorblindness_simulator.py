@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gio, GObject, Gtk, Gdk
+from gi.repository import Gio, GObject
 from daltonlens import convert, simulate
 from PIL import Image
 import numpy as np
