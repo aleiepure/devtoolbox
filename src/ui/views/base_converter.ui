@@ -83,13 +83,28 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     </child>
 
                     <child>
-                      <object class="AdwPreferencesGroup">
-                        <property name="margin-top">20</property>
-                        <property name="margin-start">20</property>
-                        <property name="margin-end">20</property>
-                        <property name="description" translatable="yes">🛈 Typing an unaccepted character (i.e. 'A' in the decimal field) will cause all the fields to reset to 0.</property>
+                      <object class="GtkBox">
+                        <property name="orientation">horizontal</property>
+                        <property name="halign">center</property>
+                        <property name="margin-bottom">10</property>
+                        <property name="margin-top">10</property>
+                        <style>
+                          <class name="dim-label" />
+                        </style>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="margin-end">5</property>
+                            <property name="pixel-size">16</property>
+                            <property name="icon-name">info-symbolic</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="label" translatable="yes">Typing an unaccepted character (i.e. 'A' in the decimal field) will cause all the fields to reset to 0.</property>
+                          </object>
+                        </child>
                       </object>
-                  </child>
+                    </child>
 
                   </object>
                 </property>

@@ -25,13 +25,13 @@ SPDX-License-Identifier: CC0-1.0
     <p>Includes:</p>
     <ul>
       <li>JSON to YAML converter and vice-versa</li>
-      <li>Cron expressions parser</li>
+      <li>CRON expressions parser</li>
       <li>GZip compressor and decompressor</li>
       <li>Formatters for common programming languages</li>
       <li>Hash generators</li>
       <li>Regex tester</li>
       <li>Markdown Previewer</li>
-      <li>Image converters and metadata removers</li>
+      <li>Image converters</li>
       <li>Much more...</li>
     </ul>
   </description>

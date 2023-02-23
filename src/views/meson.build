@@ -14,7 +14,6 @@ sources = [
   'cron_converter.py',
   'html_encoder.py',
   'url_encoder.py',
-  'base64_encoder.py',
   'gzip_compressor.py',
   'jwt_decoder.py',
   'formatter.py',

@@ -33,13 +33,13 @@ SPDX-License-Identifier: GPL-3.0-or-later
 If you're tired of endlessly looking online for the right tool, or to find again that website of which you don't recall the name to do a quick conversion, this is the right app for you.
 This is a collection of powerful yet simple-to-use tools and utilities to solve the most common daily development problems:
  - JSON to YAML converter and vice-versa
- - Cron expressions parser
- - Base64 encoder and decoder
- - Formatters for common languages (more coming soon)
+ - CRON expressions parser
+ - Formatters for common languages
  - Hash generators
- - Regex checkers
- - Image converters and compressors
- - And much more
+ - Regex tester
+ - Markdown Previewer
+ - Image converters
+ - Much more...
 ### Known issues
 This app is currently under development with potential bugs and issues. If you are testing it and find some, please create an issue and describe the problem and how to reproduce it.
 Please remember that I'm working on this in my spare time, and fixes might not come very quickly.\
