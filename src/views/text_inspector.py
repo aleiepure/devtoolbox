@@ -102,7 +102,7 @@ class TextInspectorView(Adw.Bin):
         self._case_dropdown.set_selected(0)
         self._case_dropdown.handler_unblock(self._case_changed_handler)
 
-       text = self._textarea.get_text()
+        text = self._textarea.get_text()
         self._original_text = text
         self._calculate_stats()
 
