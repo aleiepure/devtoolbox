@@ -51,10 +51,10 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="model">
                               <object class="GtkStringList">
                                 <items>
-                                  <item translatable="yes">MD5</item>
-                                  <item translatable="yes">SHA1</item>
-                                  <item translatable="yes">SHA256</item>
-                                  <item translatable="yes">SHA512</item>
+                                  <item>MD5</item>
+                                  <item>SHA1</item>
+                                  <item>SHA256</item>
+                                  <item>SHA512</item>
                                 </items>
                               </object>
                             </property>
