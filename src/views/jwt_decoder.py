@@ -2,7 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Adw, Gtk
+from gi.repository import Adw, Gtk, GObject, Gio
+
 from ..utils import Utils
 from ..services.jwt_decoder import JwtDecoderService
 
@@ -31,11 +32,11 @@ class JwtDecoderView(Adw.Bin):
         self._token_area.connect("view-cleared", self._on_view_cleared)
         self._token_area.connect("text-changed", self._on_token_changed)
 
-    def _on_view_cleared(self, data):
+    def _on_view_cleared(self, source_widget:GObject.Object):
         self._header_area.clear()
         self._payload_area.clear()
 
-    def _on_token_changed(self, data):
+    def _on_token_changed(self, source_widget:GObject.Object):
         # Stop previous tasks
         self._service.get_cancellable().cancel()
         self._header_area.set_spinner_spin(False)
@@ -55,12 +56,12 @@ class JwtDecoderView(Adw.Bin):
             self._payload_area.set_spinner_spin(False)
             self._token_area.add_css_class("border-red")
 
-    def _on_header_decode_done(self, source_object, result, data):
+    def _on_header_decode_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
         outcome = self._service.decode_finish(result, self)
         self._header_area.set_spinner_spin(False)
         self._header_area.set_text(outcome)
 
-    def _on_payload_decode_done(self, source_object, result, data):
+    def _on_payload_decode_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
         outcome = self._service.decode_finish(result, self)
         self._payload_area.set_spinner_spin(False)
         self._payload_area.set_text(outcome)

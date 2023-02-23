@@ -4,7 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gtk, Adw, GObject, Gio
-from gettext import gettext as _
 
 from ..services.uuid_generator import UuidGeneratorService
 

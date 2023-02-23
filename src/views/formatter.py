@@ -3,7 +3,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gettext import gettext as _
-from gi.repository import Gtk, Adw, GObject, GtkSource
+from gi.repository import Gtk, Adw, GObject, Gio
+
 from ..formatters.formatter import Formatter
 
 
@@ -17,7 +18,7 @@ class FormatterView(Adw.Bin):
     _indents_spinner = Gtk.Template.Child()
     _textarea = Gtk.Template.Child()
 
-    def __init__(self, formatter: Formatter):
+    def __init__(self, formatter:Formatter):
         super().__init__()
 
         # Setup
@@ -36,18 +37,18 @@ class FormatterView(Adw.Bin):
         self._textarea.connect("error", self._on_error)
         self._textarea.connect("view-cleared", self._on_view_cleared)
 
-    def _on_view_cleared(self, data):
+    def _on_view_cleared(self, source_widget:GObject.Object):
         self._formatter.get_cancellable().cancel()
         self._textarea.set_spinner_spin(False)
 
-    def _on_error(self, data, error):
+    def _on_error(self, source_widget:GObject.Object, error:str):
         error_str = _("Error")
         self._toast.add_toast(Adw.Toast(title=f"{error_str}: {error}", priority=Adw.ToastPriority.HIGH))
 
-    def _on_indents_changed(self, data):
+    def _on_indents_changed(self, user_data:GObject.GPointer):
         self._format_text()
 
-    def _on_format_clicked(self, data):
+    def _on_format_clicked(self, source_widget:GObject.Object):
         self._format_text()
 
     def _format_text(self):
@@ -74,7 +75,7 @@ class FormatterView(Adw.Bin):
         else:
             self._textarea.set_spinner_spin(False)
 
-    def _on_format_done(self, source_object, result, data):
+    def _on_format_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
         self._textarea.set_spinner_spin(False)
         outcome = self._formatter.format_async_finish(result, self)
         self._textarea.set_text(outcome)

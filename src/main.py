@@ -11,7 +11,9 @@ gi.require_version("GtkSource", "5")
 gi.require_version('WebKit2', '5.0')
 
 from gi.repository import Gtk, Gio, Adw, GObject, GtkSource, Gdk
+
 from .window import DevtoolboxWindow
+
 from .widgets.utility_title import UtilityTitle
 from .widgets.text_area import TextArea
 from .widgets.file_view import FileView
@@ -26,7 +28,7 @@ from .widgets.image_area import ImageArea
 
 
 class DevtoolboxApplication(Adw.Application):
-    """The main application singleton class."""
+    """The main application class"""
 
     _custom_widgets = [
         GtkSource.View,
@@ -78,9 +80,7 @@ class DevtoolboxApplication(Adw.Application):
         )
         about_window = builder.get_object("about_window")
         if self.debug == "True":
-            about_window.set_application_name(
-                f"{about_window.get_application_name()}\n(Development snapshot)"
-            )
+            about_window.set_application_name(f"{about_window.get_application_name()}\n(Development snapshot)")
             about_window.set_icon_name("me.iepure.devtoolbox")
         about_window.set_version(self.version)
         about_window.set_transient_for(self.props.active_window)

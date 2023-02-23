@@ -20,19 +20,19 @@ class XmlValidatorService():
     def get_cancellable(self) -> Gio.Cancellable:
         return self._cancellable
 
-    def async_finish(self, result, caller: GObject.Object):
+    def async_finish(self, result:Gio.AsyncResult, caller:GObject.Object):
         if not Gio.Task.is_valid(result, caller):
             return -1
         self._xml = None
         self._xsd = None
         return result.propagate_value().value
 
-    def check_xml_async(self, caller: GObject.Object, callback: callable):
+    def check_xml_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._check_xml_thread)
 
-    def _check_xml_thread(self, task, source_object, task_data, cancelable):
+    def _check_xml_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._check_xml(self._xml, self._xsd)

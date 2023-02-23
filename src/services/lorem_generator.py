@@ -11,9 +11,12 @@ class LoremGeneratorService():
     def __init__(self):
         self._cancellable = Gio.Cancellable()
 
-    def async_finish(self, result, caller: GObject.Object):
+    def async_finish(self, result:Gio.AsyncResult, caller: GObject.Object):
         if not Gio.Task.is_valid(result, caller):
             return -1
+        self._begin_with_lorem_ipsum = None
+        self._unit = None
+        self._quantity = None
         return result.propagate_value().value
 
     def get_cancellable(self) -> Gio.Cancellable:
@@ -26,12 +29,12 @@ class LoremGeneratorService():
         self._unit = unit
         self._quantity = quantity
 
-    def generate_text_async(self, caller: GObject.Object, callback: callable):
+    def generate_text_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._generate_text_thread)
 
-    def _generate_text_thread(self, task, source_object, task_data, cancelable):
+    def _generate_text_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._generate_text(self._begin_with_lorem_ipsum, self._unit, self._quantity)
@@ -50,6 +53,5 @@ class LoremGeneratorService():
 
         if begin_with_lorem_ipsum:
             string = "Lorem ipsum dolor sit amet, " + string[0].lower() + string[1:]
-
 
         return string

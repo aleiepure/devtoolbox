@@ -2,8 +2,9 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Adw, Gtk
+from gi.repository import Adw, Gtk, GObject
 from gettext import gettext as _
+
 from ..services.lorem_generator import LoremGeneratorService
 
 
@@ -31,13 +32,13 @@ class LoremGeneratorView(Adw.Bin):
         self._quantity_combo.connect("notify::selected", self._on_quantity_combo_changed)
         self._quantity_spinner.connect("value-changed", self._on_quantity_spinner_changed)
 
-    def _on_begin_with_switch_changed(self, pspec, data):
+    def _on_begin_with_switch_changed(self, pspec:GObject.ParamSpec, user_data:GObject.GPointer):
         self._generate_text()
 
-    def _on_quantity_combo_changed(self, pspec, data):
+    def _on_quantity_combo_changed(self, pspec:GObject.ParamSpec, user_data:GObject.GPointer):
         self._generate_text()
 
-    def _on_quantity_spinner_changed(self, data):
+    def _on_quantity_spinner_changed(self, user_data:GObject.GPointer):
         self._generate_text()
 
     def _generate_text(self):

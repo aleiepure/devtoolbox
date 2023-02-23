@@ -262,14 +262,14 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
 
         self.connect("close-request", self._on_close_request)
 
-    def _on_close_request(self, data):
+    def _on_close_request(self, user_data:GObject.GPointer):
         content_stack = self._tabs_stack.get_visible_child().get_content_stack()
         self._settings.set_string("last-tool", content_stack.get_visible_child_name())
 
-    def _on_flap_btn_clicked(self, data):
+    def _on_flap_btn_clicked(self, user_data:GObject.GPointer):
         self._flap.set_reveal_flap(self._flap_btn.get_active())
 
-    def _get_tools(self, tools: dict, category: str):
+    def _get_tools(self, tools:dict, category:str):
         tools_in_category = {}
         for t in tools:
             if tools[t]["category"] == category:

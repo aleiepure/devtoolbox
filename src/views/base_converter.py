@@ -3,7 +3,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gtk, Adw, GObject
-from gettext import gettext as _
 from enum import Enum
 
 from ..utils import Utils

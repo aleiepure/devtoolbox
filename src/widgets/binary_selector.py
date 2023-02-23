@@ -30,9 +30,9 @@ class BinarySelector(Adw.Bin):
         self.set_property("css-name", "binaryselector")
 
         # Property binding
-        self.bind_property("left-lbl",   self._left_btn,  "label",  GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("right-lbl",  self._right_btn, "label",  GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("left-btn-active",  self._left_btn,  "active", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("left-lbl", self._left_btn, "label", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("right-lbl", self._right_btn, "label", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("left-btn-active", self._left_btn, "active", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("right-btn-active", self._right_btn, "active", GObject.BindingFlags.SYNC_CREATE)
 
         # Signals

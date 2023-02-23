@@ -3,10 +3,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gtk, Adw, GObject, Gdk
-from gettext import gettext as _
-import humanize
-
-from devtoolbox.utils import Utils
 
 
 @Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/widgets/spin_area.ui')
@@ -14,14 +10,14 @@ class SpinArea(Adw.Bin):
     __gtype_name__ = 'SpinArea'
 
     # Template elements
-    _name_lbl             = Gtk.Template.Child()
-    _spinner              = Gtk.Template.Child()
-    _spinner_separator    = Gtk.Template.Child()
-    _action_btn           = Gtk.Template.Child()
+    _name_lbl = Gtk.Template.Child()
+    _spinner = Gtk.Template.Child()
+    _spinner_separator = Gtk.Template.Child()
+    _action_btn = Gtk.Template.Child()
     _action_btn_separator = Gtk.Template.Child()
-    _copy_btn             = Gtk.Template.Child()
-    _paste_btn            = Gtk.Template.Child()
-    _spin_btn             = Gtk.Template.Child()
+    _copy_btn = Gtk.Template.Child()
+    _paste_btn = Gtk.Template.Child()
+    _spin_btn = Gtk.Template.Child()
 
     # Properties
     name = GObject.Property(type=str, default="")
@@ -35,7 +31,7 @@ class SpinArea(Adw.Bin):
     # Custom signals
     __gsignals__ = {
         "action-clicked": (GObject.SIGNAL_RUN_LAST, None, ()),
-        "value-changed":   (GObject.SIGNAL_RUN_LAST, None, ()),
+        "value-changed": (GObject.SIGNAL_RUN_LAST, None, ()),
     }
 
     def __init__(self):

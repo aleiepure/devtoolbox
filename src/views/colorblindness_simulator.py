@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, GObject, Gio, GtkSource, Gdk, GLib
+from gi.repository import Gtk, Adw, GObject, Gio, Gdk
 from gettext import gettext as _
 
 from ..services.colorblindness_simulator import ColorblindnessSimulatorService
@@ -23,6 +23,8 @@ class ColorblindnessSimulatorView(Adw.Bin):
 
     _service = ColorblindnessSimulatorService()
 
+    _saved_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH, button_label=_("Open folder"))
+
     def __init__(self):
         super().__init__()
 
@@ -32,6 +34,10 @@ class ColorblindnessSimulatorView(Adw.Bin):
         self._original_imagearea.connect("view-cleared", self._on_view_cleared)
         self._original_imagearea.connect("image-loaded", self._on_image_loaded)
         self._severity_scale.connect("notify::css-classes", self._on_severity_changed)
+        self._protanopia_imagearea.connect("saved", self._on_saved)
+        self._deutranopia_imagearea.connect("saved", self._on_saved)
+        self._tritanopia_imagearea.connect("saved", self._on_saved)
+        self._saved_toast.connect("button-clicked", self._on_toast_btn_clicked)
 
     def _on_view_cleared(self, source_widget:GObject.Object):
         self._protanopia_imagearea.clear()
@@ -46,6 +52,18 @@ class ColorblindnessSimulatorView(Adw.Bin):
 
     def _on_image_loaded(self, source_widget:GObject.Object):
         self._simulate()
+
+    def _on_saved(self, source_widget:GObject.Object, path:str):
+        self._saved_toast.set_title(f'{_("Successfully saved as")} {path}')
+        self._toast.add_toast(self._saved_toast)
+
+    def _on_toast_btn_clicked(self, user_data:GObject.GPointer):
+        app = Gio.Application.get_default()
+        window = app.get_active_window()
+        full_msg = self._saved_toast.get_title()
+        full_path = full_msg[full_msg.index("/"):len(full_msg)]
+        folder_path = full_path[:full_path.rindex("/")]
+        Gtk.show_uri(window, "file://" + folder_path, Gdk.CURRENT_TIME)
 
     def _simulate(self):
 

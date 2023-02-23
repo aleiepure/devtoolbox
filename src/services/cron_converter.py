@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gio, GObject
-from crontab import CronTab, CronSlices
+from crontab import CronTab
 
 
 class CronConverterService():
@@ -11,7 +11,7 @@ class CronConverterService():
     def __init__(self):
         self._cancellable = Gio.Cancellable()
 
-    def _generate_dates_thread(self, task, source_object, task_data, cancelable):
+    def _generate_dates_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._generate_dates(self._expression, self._format_str, self._quantity)
@@ -28,24 +28,27 @@ class CronConverterService():
             string += schedule.get_next().strftime(format_str) + "\n"
         return string
 
-    def generate_dates_async(self, caller: GObject.Object, callback: callable):
+    def generate_dates_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._generate_dates_thread)
 
-    def generate_dates_async_finish(self, result, caller: GObject.Object):
+    def generate_dates_async_finish(self, result:Gio.AsyncResult, caller:GObject.Object):
         if not Gio.Task.is_valid(result, caller):
             return -1
+        self._expression = None
+        self._format_str = None
+        self._quantity = None
         return result.propagate_value().value
 
     def get_cancellable(self) -> Gio.Cancellable:
         return self._cancellable
 
-    def set_expression(self, expression: str):
+    def set_expression(self, expression:str):
         self._expression = expression
 
-    def set_format_str(self, format_str: str):
+    def set_format_str(self, format_str:str):
         self._format_str = format_str
 
-    def set_quantity(self, quantity: int):
+    def set_quantity(self, quantity:int):
         self._quantity = quantity

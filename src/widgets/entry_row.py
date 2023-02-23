@@ -37,12 +37,12 @@ class EntryRow(Adw.EntryRow):
         self._paste_btn.connect("clicked", self._on_paste_clicked)
         self._clear_btn.connect("clicked", self._on_clear_clicked)
 
-    def _on_copy_clicked(self, user_data):
+    def _on_copy_clicked(self, user_data:GObject.GPointer):
         text = self.get_text()
         clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         clipboard.set(text)
 
-    def _on_paste_clicked(self, user_data):
+    def _on_paste_clicked(self, user_data:GObject.GPointer):
         self.clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         self.clipboard.read_text_async(None, self._on_clipboard_read_done, None)
 
@@ -50,7 +50,7 @@ class EntryRow(Adw.EntryRow):
         string = self.clipboard.read_text_finish(result)
         self.set_text(string)
 
-    def _on_clear_clicked(self, user_data):
+    def _on_clear_clicked(self, user_data:GObject.GPointer):
         self._clear()
 
     def _clear(self):

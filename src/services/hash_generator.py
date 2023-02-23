@@ -18,17 +18,18 @@ class HashGeneratorService():
     def get_cancellable(self) -> Gio.Cancellable:
         return self._cancellable
 
-    def async_finish(self, result, caller: GObject.Object):
+    def async_finish(self, result:Gio.AsyncResult, caller:GObject.Object):
         if not Gio.Task.is_valid(result, caller):
             return -1
+        self._input = None
         return result.propagate_value().value
 
-    def hash_text_with_md5_async(self, caller: GObject.Object, callback: callable):
+    def hash_text_with_md5_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._hash_text_with_md5_thread)
 
-    def _hash_text_with_md5_thread(self, task, source_object, task_data, cancelable):
+    def _hash_text_with_md5_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._hash_text_with_md5(self._input)
@@ -37,12 +38,12 @@ class HashGeneratorService():
     def _hash_text_with_md5(self, text:str) -> str:
         return hashlib.md5(text.encode("utf-8")).hexdigest()
 
-    def hash_file_with_md5_async(self, caller: GObject.Object, callback: callable):
+    def hash_file_with_md5_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._hash_file_with_md5_thread)
 
-    def _hash_file_with_md5_thread(self, task, source_object, task_data, cancelable):
+    def _hash_file_with_md5_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._hash_file_with_md5(self._input)
@@ -55,12 +56,12 @@ class HashGeneratorService():
                 md5.update(chunk)
         return md5.hexdigest()
 
-    def hash_text_with_sha1_async(self, caller: GObject.Object, callback: callable):
+    def hash_text_with_sha1_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._hash_text_with_sha1_thread)
 
-    def _hash_text_with_sha1_thread(self, task, source_object, task_data, cancelable):
+    def _hash_text_with_sha1_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._hash_text_with_sha1(self._input)
@@ -69,12 +70,12 @@ class HashGeneratorService():
     def _hash_text_with_sha1(self, text:str):
         return hashlib.sha1(text.encode("utf-8")).hexdigest()
 
-    def hash_file_with_sha1_async(self, caller: GObject.Object, callback: callable):
+    def hash_file_with_sha1_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._hash_file_with_sha1_thread)
 
-    def _hash_file_with_sha1_thread(self, task, source_object, task_data, cancelable):
+    def _hash_file_with_sha1_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._hash_file_with_sha1(self._input)
@@ -87,12 +88,12 @@ class HashGeneratorService():
                 sha1.update(chunk)
         return sha1.hexdigest()
 
-    def hash_text_with_sha256_async(self, caller: GObject.Object, callback: callable):
+    def hash_text_with_sha256_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._hash_text_with_sha256_thread)
 
-    def _hash_text_with_sha256_thread(self, task, source_object, task_data, cancelable):
+    def _hash_text_with_sha256_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._hash_text_with_sha256(self._input)
@@ -101,12 +102,12 @@ class HashGeneratorService():
     def _hash_text_with_sha256(self, text:str):
          return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
-    def hash_file_with_sha256_async(self, caller: GObject.Object, callback: callable):
+    def hash_file_with_sha256_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._hash_file_with_sha256_thread)
 
-    def _hash_file_with_sha256_thread(self, task, source_object, task_data, cancelable):
+    def _hash_file_with_sha256_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._hash_file_with_sha256(self._input)
@@ -119,12 +120,12 @@ class HashGeneratorService():
                 sha256.update(chunk)
         return sha256.hexdigest()
 
-    def hash_text_with_sha512_async(self, caller: GObject.Object, callback: callable):
+    def hash_text_with_sha512_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._hash_text_with_sha512_thread)
 
-    def _hash_text_with_sha512_thread(self, task, source_object, task_data, cancelable):
+    def _hash_text_with_sha512_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._hash_text_with_sha512(self._input)
@@ -133,12 +134,12 @@ class HashGeneratorService():
     def _hash_text_with_sha512(self, text:str):
          return hashlib.sha512(text.encode("utf-8")).hexdigest()
 
-    def hash_file_with_sha512_async(self, caller: GObject.Object, callback: callable):
+    def hash_file_with_sha512_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._hash_file_with_sha512_thread)
 
-    def _hash_file_with_sha512_thread(self, task, source_object, task_data, cancelable):
+    def _hash_file_with_sha512_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._hash_file_with_sha512(self._input)

@@ -20,7 +20,7 @@ class ImageConverterView(Adw.Bin):
 
     _service = ImageConverterService()
 
-    _saved_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH, button_label=_("Open"))
+    _saved_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH, button_label=_("Open folder"))
 
     def __init__(self):
         super().__init__()

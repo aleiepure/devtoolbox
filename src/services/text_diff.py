@@ -2,9 +2,9 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gio, GObject, Gtk, GLib
+from gi.repository import Gio, GObject
+from typing import List, Dict, Iterator
 import difflib
-from typing import List, Dict
 
 
 class TextDiffService():
@@ -21,20 +21,19 @@ class TextDiffService():
     def get_cancellable(self) -> Gio.Cancellable:
         return self._cancellable
 
-    def async_finish(self, result, caller: GObject.Object):
+    def async_finish(self, result:Gio.AsyncResult, caller:GObject.Object):
         if not Gio.Task.is_valid(result, caller):
             return -1
-        self._buffer = None
         self._text1 = None
         self._text2 = None
         return result.propagate_value().value
 
-    def find_diff_and_tag_async(self, caller: GObject.Object, callback: callable):
+    def find_diff_and_tag_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._find_diff_and_tag_thread)
 
-    def _find_diff_and_tag_thread(self, task, source_object, task_data, cancelable):
+    def _find_diff_and_tag_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._find_diff_and_tag(self._text1, self._text2)
@@ -44,7 +43,7 @@ class TextDiffService():
         diff = difflib.ndiff(text1.splitlines(), text2.splitlines())
         return self._get_output(diff)
 
-    def _get_output(self, diff):
+    def _get_output(self, diff:Iterator):
         output = ""
         items_to_tag = []
         items_to_tag_dict = {} # {line: xx, tag: +/-, length: xx, chars_to_tag: []}

@@ -23,7 +23,7 @@ class ImageConverterService():
     def get_cancellable(self) -> Gio.Cancellable:
         return self._cancellable
 
-    def async_finish(self, result, caller: GObject.Object):
+    def async_finish(self, result:Gio.AsyncResult, caller:GObject.Object):
         if not Gio.Task.is_valid(result, caller):
             return -1
         self._file = None
@@ -31,12 +31,12 @@ class ImageConverterService():
         self._destination_file = None
         return result.propagate_value().value
 
-    def convert_image_async(self, caller: GObject.Object, callback: callable):
+    def convert_image_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._convert_image_thread)
 
-    def _convert_image_thread(self, task, source_object, task_data, cancelable):
+    def _convert_image_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._convert_image(self._file, self._destination_format, self._destination_file)

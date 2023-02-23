@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, Gdk, GObject, Gio
+from gi.repository import Gtk, Adw, GObject, Gio
 
 from ..services.cron_converter import CronConverterService
 from ..utils import Utils

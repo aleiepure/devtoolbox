@@ -265,7 +265,7 @@ class TextArea(Adw.Bin):
         else:
             self._stack.set_visible_child_name("text-area")
 
-    def set_spinner_spin(self, enabled: bool):
+    def set_spinner_spin(self, enabled:bool):
         self.show_spinner = enabled
 
     def clear(self):
@@ -274,5 +274,5 @@ class TextArea(Adw.Bin):
     def scroll_mark_onscreen(self, mark:Gtk.TextMark):
         self._textview.scroll_mark_onscreen(mark)
 
-    def get_iter_at_location(self, x, y):
+    def get_iter_at_location(self, x:int, y:int):
         return self._textview.get_iter_at_location(x,y)

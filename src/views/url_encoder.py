@@ -7,6 +7,7 @@ from gettext import gettext as _
 
 from ..services.url_encoder import UrlEncoderService
 
+
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/views/url_encoder.ui")
 class UrlEncoderView(Adw.Bin):
     __gtype_name__ = "UrlEncoderView"

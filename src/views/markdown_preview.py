@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, Gio, WebKit2, GObject, Gdk
+from gi.repository import Gtk, Adw, Gio, GObject
 
 from ..services.markdown_preview import MarkdownPreviewService
 

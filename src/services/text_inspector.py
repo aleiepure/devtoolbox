@@ -17,17 +17,18 @@ class TextInspectorService():
     def get_cancellable(self) -> Gio.Cancellable:
         return self._cancellable
 
-    def async_finish(self, result, caller: GObject.Object):
+    def async_finish(self, result:Gio.AsyncResult, caller: GObject.Object):
         if not Gio.Task.is_valid(result, caller):
             return -1
+        self._text = None
         return result.propagate_value().value
 
-    def to_sentence_case_async(self, caller: GObject.Object, callback: callable):
+    def to_sentence_case_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._to_sentence_case_thread)
 
-    def _to_sentence_case_thread(self, task, source_object, task_data, cancelable):
+    def _to_sentence_case_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._to_sentence_case(self._text)
@@ -56,12 +57,12 @@ class TextInspectorService():
 
         return output
 
-    def to_lower_case_async(self, caller: GObject.Object, callback: callable):
+    def to_lower_case_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._to_lower_case_thread)
 
-    def _to_lower_case_thread(self, task, source_object, task_data, cancelable):
+    def _to_lower_case_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._to_lower_case(self._text)
@@ -76,12 +77,12 @@ class TextInspectorService():
 
         return output
 
-    def to_upper_case_async(self, caller: GObject.Object, callback: callable):
+    def to_upper_case_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._to_upper_case_thread)
 
-    def _to_upper_case_thread(self, task, source_object, task_data, cancelable):
+    def _to_upper_case_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._to_upper_case(self._text)
@@ -96,12 +97,12 @@ class TextInspectorService():
 
         return output
 
-    def to_title_case_async(self, caller: GObject.Object, callback: callable):
+    def to_title_case_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._to_title_case_thread)
 
-    def _to_title_case_thread(self, task, source_object, task_data, cancelable):
+    def _to_title_case_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._to_title_case(self._text)
@@ -119,12 +120,12 @@ class TextInspectorService():
 
         return output
 
-    def to_camel_case_async(self, caller: GObject.Object, callback: callable):
+    def to_camel_case_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._to_camel_case_thread)
 
-    def _to_camel_case_thread(self, task, source_object, task_data, cancelable):
+    def _to_camel_case_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._to_camel_case(self._text)
@@ -151,12 +152,12 @@ class TextInspectorService():
 
         return output
 
-    def to_pascal_case_async(self, caller: GObject.Object, callback: callable):
+    def to_pascal_case_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._to_pascal_case_thread)
 
-    def _to_pascal_case_thread(self, task, source_object, task_data, cancelable):
+    def _to_pascal_case_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._to_pascal_case(self._text)
@@ -181,12 +182,12 @@ class TextInspectorService():
 
         return output
 
-    def to_snake_case_async(self, caller: GObject.Object, callback: callable):
+    def to_snake_case_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._to_snake_case_thread)
 
-    def _to_snake_case_thread(self, task, source_object, task_data, cancelable):
+    def _to_snake_case_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._to_snake_case(self._text)
@@ -195,12 +196,12 @@ class TextInspectorService():
     def _to_snake_case(self, text:str) -> str:
         return self._snake_constant_kebab_cobol_converter(text, "_", False)
 
-    def to_constant_case_async(self, caller: GObject.Object, callback: callable):
+    def to_constant_case_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._to_constant_case_thread)
 
-    def _to_constant_case_thread(self, task, source_object, task_data, cancelable):
+    def _to_constant_case_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._to_constant_case(self._text)
@@ -209,12 +210,12 @@ class TextInspectorService():
     def _to_constant_case(self, text:str) -> str:
         return self._snake_constant_kebab_cobol_converter(text, "_", True)
 
-    def to_kebab_case_async(self, caller: GObject.Object, callback: callable):
+    def to_kebab_case_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._to_kebab_case_thread)
 
-    def _to_kebab_case_thread(self, task, source_object, task_data, cancelable):
+    def _to_kebab_case_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._to_kebab_case(self._text)
@@ -223,12 +224,12 @@ class TextInspectorService():
     def _to_kebab_case(self, text:str) -> str:
         return self._snake_constant_kebab_cobol_converter(text, "-", False)
 
-    def to_cobol_case_async(self, caller: GObject.Object, callback: callable):
+    def to_cobol_case_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._to_cobol_case_thread)
 
-    def _to_cobol_case_thread(self, task, source_object, task_data, cancelable):
+    def _to_cobol_case_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._to_cobol_case(self._text)
@@ -237,12 +238,12 @@ class TextInspectorService():
     def _to_cobol_case(self, text:str) -> str:
         return self._snake_constant_kebab_cobol_converter(text, "-", True)
 
-    def to_train_case_async(self, caller: GObject.Object, callback: callable):
+    def to_train_case_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._to_train_case_thread)
 
-    def _to_train_case_thread(self, task, source_object, task_data, cancelable):
+    def _to_train_case_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._to_train_case(self._text)
@@ -270,12 +271,12 @@ class TextInspectorService():
 
         return output
 
-    def to_alternating_case_async(self, caller: GObject.Object, callback: callable):
+    def to_alternating_case_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._to_alternating_case_thread)
 
-    def _to_alternating_case_thread(self, task, source_object, task_data, cancelable):
+    def _to_alternating_case_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._to_alternating_case(self._text)
@@ -284,12 +285,12 @@ class TextInspectorService():
     def _to_alternating_case(self, text:str) -> str:
         return self._alternated_case(text, True)
 
-    def to_reverse_alternating_case_async(self, caller: GObject.Object, callback: callable):
+    def to_reverse_alternating_case_async(self, caller:GObject.Object, callback:callable):
         task = Gio.Task.new(caller, None, callback, self._cancellable)
         task.set_return_on_cancel(True)
         task.run_in_thread(self._to_reverse_alternating_case_thread)
 
-    def _to_reverse_alternating_case_thread(self, task, source_object, task_data, cancelable):
+    def _to_reverse_alternating_case_thread(self, task:Gio.Task, source_object:GObject.Object, task_data:object, cancelable:Gio.Cancellable):
         if task.return_error_if_cancelled():
             return
         outcome = self._to_reverse_alternating_case(self._text)

@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, GObject, Gio, GtkSource, Gdk, GLib
+from gi.repository import Gtk, Adw, GObject, Gio, Gdk
 from gettext import gettext as _
 from typing import List
 
@@ -170,7 +170,7 @@ class ImageArea(Adw.Bin):
         self._native = None
 
     def _save_file(self, destination:Gio.File):
-        self._imageview.get_file().copy_async(destination, Gio.FileCopyFlags.NONE, 0, None, None, None, self._on_save_file_complete, None)
+        self._imageview.get_file().copy_async(destination, Gio.FileCopyFlags.OVERWRITE, 0, None, None, None, self._on_save_file_complete, None)
 
     def _on_save_file_complete(self, file:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer=None):
         res = file.copy_finish(result)

@@ -2,8 +2,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, Gdk, GObject, Gio, GLib, GtkSource
-from gettext import gettext as _
+from gi.repository import Gtk, Adw, GObject, Gio
+from typing import Iterator
 
 from ..utils import Utils
 from ..services.regex_tester import RegexTesterService
@@ -72,7 +72,7 @@ class RegexTesterView(Adw.Bin):
         self._tag_matches(matches)
         self._textarea.set_spinner_spin(False)
 
-    def _tag_matches(self, matches):
+    def _tag_matches(self, matches:Iterator):
         for item in matches:
             start_gtext_iter = self._textarea.get_buffer().get_iter_at_offset(item.start())
             end_gtext_iter = self._textarea.get_buffer().get_iter_at_offset(item.end())

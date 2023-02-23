@@ -3,7 +3,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gtk, Adw, GObject
-from gettext import gettext as _
 
 
 @Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/widgets/file_view.ui')

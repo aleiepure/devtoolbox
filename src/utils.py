@@ -5,13 +5,12 @@
 from gi.repository import Gdk, GLib
 from ruamel import yaml
 from enum import Enum
-from crontab import CronTab, CronSlices
+from lxml import etree
+from crontab import CronSlices
 import json
 import base64
-import binascii
 import jwt
 import re
-from lxml import etree
 
 
 class Bases(Enum):
@@ -23,7 +22,7 @@ class Bases(Enum):
 
 class Utils:
     @staticmethod
-    def is_text(test_input):
+    def is_text(test_input) -> bool:
         if isinstance(test_input, str):
             return True
         else:
@@ -34,7 +33,7 @@ class Utils:
                 return False
 
     @staticmethod
-    def is_image(test_input):
+    def is_image(test_input) -> bool:
         try:
             Gdk.Texture.new_from_bytes(GLib.Bytes(test_input))
             return True
@@ -42,7 +41,7 @@ class Utils:
             return False
 
     @staticmethod
-    def is_json(test_input):
+    def is_json(test_input) -> bool:
         try:
             json.loads(test_input)
             return True
@@ -50,7 +49,7 @@ class Utils:
             return False
 
     @staticmethod
-    def is_yaml(test_input):
+    def is_yaml(test_input) -> bool:
         try:
             yaml.load(test_input, Loader=yaml.Loader)
             return True
@@ -58,7 +57,7 @@ class Utils:
             return False
 
     @staticmethod
-    def is_binary(number):
+    def is_binary(number) -> bool:
         try:
             int(number, Bases.BINARY.value)
             return True
@@ -66,7 +65,7 @@ class Utils:
             return False
 
     @staticmethod
-    def is_octal(number):
+    def is_octal(number) -> bool:
         try:
             int(number, Bases.OCTAL.value)
             return True
@@ -74,7 +73,7 @@ class Utils:
             return False
 
     @staticmethod
-    def is_decimal(number):
+    def is_decimal(number) -> bool:
         try:
             int(number, Bases.DECIMAL.value)
             return True
@@ -82,7 +81,7 @@ class Utils:
             return False
 
     @staticmethod
-    def is_hex(number):
+    def is_hex(number) -> bool:
         try:
             int(number, Bases.HEX.value)
             return True
@@ -90,11 +89,11 @@ class Utils:
             return False
 
     @staticmethod
-    def is_cron_expression_valid(expression: str):
+    def is_cron_expression_valid(expression:str) -> bool:
         return CronSlices.is_valid(expression)
 
     @staticmethod
-    def is_base64(text: str):
+    def is_base64(text:str) -> bool:
         try:
             base64.b64decode(text)
             return True
@@ -102,7 +101,7 @@ class Utils:
             return False
 
     @staticmethod
-    def is_jwt_token(token: str):
+    def is_jwt_token(token:str) -> bool:
         try:
             jwt.decode(token, options={"verify_signature": False})
             return True
@@ -110,7 +109,7 @@ class Utils:
             return False
 
     @staticmethod
-    def is_regex(regex:str):
+    def is_regex(regex:str) -> bool:
         try:
             re.compile(r"{}".format(regex))
             return True

@@ -3,7 +3,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gtk, Adw, Gdk, GObject, Gio, GLib
-from gettext import gettext as _
 import textstat
 
 from ..services.text_inspector import TextInspectorService

@@ -2,9 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, Gdk, GObject, Gio, GLib, GtkSource
-from gettext import gettext as _
-import difflib
+from gi.repository import Gtk, Adw, GObject, Gio
 from typing import List, Dict
 
 from ..services.text_diff import TextDiffService
@@ -64,7 +62,7 @@ class TextDiffView(Adw.Bin):
         self._tag_text(items_to_tag)
         self._diff_textarea.set_spinner_spin(False)
 
-    def _tag_text(self, items_to_tag):
+    def _tag_text(self, items_to_tag:List[Dict]):
         for item in items_to_tag:
             if item["length"] != -1: # line
                 start_gtext_iter = self._diff_textarea.get_buffer().get_iter_at_line(item["line"])[1]
