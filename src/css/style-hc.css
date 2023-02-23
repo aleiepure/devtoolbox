@@ -1,0 +1,16 @@
+/*
+ * Copyright (C) 2022 - 2023 Alessandro Iepure
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/* High contrast CSS */
+
+textarea textview, textarea box.view,
+textfilearea textview, textfilearea box.view, textfilearea picture, textfilearea fileview,
+imagearea picture, imagearea box.view,
+webarea webkitwebview,
+.fake-action-row-bottom, .fake-action-row-top, .fake-action-row-middle
+{
+  border: 1px solid #9a9a9a;
+}

@@ -35,6 +35,8 @@ class DateArea(Adw.Bin):
     def __init__(self):
         super().__init__()
 
+        self.set_property("css-name", "datearea")
+
         # Property binding
         self.bind_property("name", self._name_lbl, "label", GObject.BindingFlags.SYNC_CREATE)
 

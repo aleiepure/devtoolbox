@@ -21,6 +21,8 @@ class FileView(Adw.Bin):
     def __init__(self):
         super().__init__()
 
+        self.set_property("css-name", "fileview")
+
         # Property binding
         self.bind_property("file_path", self._file_path_lbl, "label", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("file_size", self._file_size_lbl, "label", GObject.BindingFlags.SYNC_CREATE)

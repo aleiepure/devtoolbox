@@ -41,6 +41,8 @@ class SpinArea(Adw.Bin):
     def __init__(self):
         super().__init__()
 
+        self.set_property("css-name", "spinarea")
+
         # Property binding
         self.bind_property("name", self._name_lbl, "label", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-spinner", self._spinner, "visible", GObject.BindingFlags.SYNC_CREATE)

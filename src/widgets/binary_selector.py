@@ -27,6 +27,8 @@ class BinarySelector(Adw.Bin):
     def __init__(self):
         super().__init__()
 
+        self.set_property("css-name", "binaryselector")
+
         # Property binding
         self.bind_property("left-lbl",   self._left_btn,  "label",  GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("right-lbl",  self._right_btn, "label",  GObject.BindingFlags.SYNC_CREATE)

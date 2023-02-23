@@ -76,6 +76,8 @@ class TextFileArea(Adw.Bin):
     def __init__(self):
         super().__init__()
 
+        self.set_property("css-name", "textfilearea")
+
         # Set syntax highlighting
         language = GtkSource.LanguageManager.get_default().get_language(self.text_language_highlight)
         style_from_settings = self._settings.get_string("style-scheme")

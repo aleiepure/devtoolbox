@@ -33,6 +33,8 @@ class UtilityTitle(Adw.Bin):
     def __init__(self):
         super().__init__()
 
+        self.set_property("css-name", "utilitytitle")
+
         # Property binding
         self.bind_property("title", self._title_lbl, "label", GObject.BindingFlags.BIDIRECTIONAL)
         self.bind_property("description", self._description_lbl, "label", GObject.BindingFlags.BIDIRECTIONAL)
