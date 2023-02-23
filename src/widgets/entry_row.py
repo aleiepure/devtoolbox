@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, GObject, Gdk
+from gi.repository import Gtk, Adw, GObject, Gdk, Gio
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/widgets/entry_row.ui")
@@ -43,7 +43,12 @@ class EntryRow(Adw.EntryRow):
         clipboard.set(text)
 
     def _on_paste_clicked(self, user_data):
-        pass # pasting via the provided button doesn't work. See known issues.
+        self.clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
+        self.clipboard.read_text_async(None, self._on_clipboard_read_done, None)
+
+    def _on_clipboard_read_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
+        string = self.clipboard.read_text_finish(result)
+        self.set_text(string)
 
     def _on_clear_clicked(self, user_data):
         self._clear()
