@@ -17,15 +17,13 @@ SPDX-License-Identifier: GPL-3.0-or-later
           <object class="AdwFlap" id="_flap">
             <property name="vexpand">true</property>
             <property name="fold-policy">auto</property>
-            <!-- <property name="modal">true</property> -->
-            <!-- <property name="locked">true</property> -->
 
             <!-- Sidebar -->
             <child type="flap">
               <object class="GtkListBox" id="_sidebar">
                 <property name="selection-mode">single</property>
                 <property name="vexpand">true</property>
-                <property name="width-request">220</property>
+                <property name="width-request">256</property>
                 <style>
                   <class name="navigation-sidebar" />
                 </style>

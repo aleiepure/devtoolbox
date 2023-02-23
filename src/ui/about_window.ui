@@ -7,21 +7,21 @@ SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
 <interface>
-    <requires lib="gtk" version="4.0"/>
-    <requires lib="libadwaita" version="1.0" />
-    <object class="AdwAboutWindow" id="about_window">
-        <property name="application-name">Dev Toolbox</property>
-        <property name="modal">True</property>
-        <property name="copyright">Copyright © 2022 - 2023 Dev-toolbox Developers
-Some of the icons are copyright of the GNOME Project</property>
-        <property name="comments" translatable="yes">Development tools at your fingertips</property>
-        <property name="website">https://github.com/aleiepure/devtoolbox</property>
-        <property name="issue-url">https://github.com/aleiepure/devtoolbox/issues</property>
-        <property name="application-icon">me.iepure.devtoolbox</property>
-        <property name="license-type">gpl-3-0-only</property>
-        <property name="developer-name">Dev-toolbox Developers</property>
-        <property name="developers">Alessandro Iepure https://ale.iepure.me</property>
-        <property name="translator-credits"></property>
-        <property name="artists"></property>
-    </object>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <object class="AdwAboutWindow" id="about_window">
+    <property name="application-name">Dev Toolbox</property>
+    <property name="modal">True</property>
+    <property name="copyright">Copyright © 2022 - 2023 Alessandro Iepure
+Some icons are copyright of the GNOME Project</property>
+    <property name="comments" translatable="yes">Development tools at your fingertips</property>
+    <property name="website">https://github.com/aleiepure/devtoolbox</property>
+    <property name="issue-url">https://github.com/aleiepure/devtoolbox/issues</property>
+    <property name="application-icon">me.iepure.devtoolbox</property>
+    <property name="license-type">gpl-3-0</property>
+    <property name="developer-name">Alessandro Iepure</property>
+    <property name="developers">Alessandro Iepure https://ale.iepure.me</property>
+    <property name="translator-credits"></property>
+    <property name="artists"></property>
+  </object>
 </interface>

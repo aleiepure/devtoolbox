@@ -77,14 +77,13 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="text-wrap-mode">none</property>
                           </object>
                         </child>
-
                       </object>
                     </child>
-
 
                   </object>
                 </property>
               </object>
+
             </property>
           </object>
         </property>

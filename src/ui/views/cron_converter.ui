@@ -11,7 +11,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
   <requires lib="libadwaita" version="1.0" />
   <template class="CronConverterView" parent="AdwBin">
     <child>
-
       <object class="AdwToastOverlay" id="_toast">
         <property name="child">
           <object class="GtkScrolledWindow">
@@ -21,9 +20,10 @@ SPDX-License-Identifier: GPL-3.0-or-later
                 <property name="vexpand">true</property>
                 <property name="maximum-size">1200</property>
                 <property name="tightening-threshold">600</property>
-                  <property name="child">
+                <property name="child">
                   <object class="GtkBox">
                     <property name="orientation">vertical</property>
+                    <property name="margin-bottom">10</property>
 
                     <!-- Title -->
                     <child>
@@ -47,7 +47,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <child>
                           <object class="AdwActionRow">
                             <property name="title" translatable="yes">Number of dates</property>
-                            <property name="subtitle" translatable="yes">Number of date to be generated (up to 20)</property>
+                            <property name="subtitle" translatable="yes">Number of dates to be generated (up to 20)</property>
                             <property name="icon-name">today-alt-symbolic</property>
                             <child type="suffix">
                               <object class="GtkSpinButton" id="_dates_spinner">
@@ -65,26 +65,26 @@ SPDX-License-Identifier: GPL-3.0-or-later
                           </object>
                         </child>
                         <child>
-													<object class="AdwActionRow">
-														<property name="title" translatable="yes">Output format</property>
-														<property name="subtitle" translatable="yes">Format used to display generated dates (&lt;a href="https://strftime.org/"&gt;python syntax&lt;/a&gt;)</property>
-														<property name="icon-name">format-text-rich-symbolic</property>
-														<child type="suffix">
-															<object class="GtkText" id="_format_text">
-																<property name="valign">center</property>
-																<property name="width-request">250</property>
-																<property name="height-request">30</property>
-																<property name="text">%c</property>
-																<style>
-																	<class name="view" />
-																	<class name="rounded-border" />
-																	<class name="padding-left-8" />
-																	<class name="monospace" />
-																</style>
-															</object>
-														</child>
-													</object>
-												</child>
+                          <object class="AdwActionRow">
+                            <property name="title" translatable="yes">Output format</property>
+                            <property name="subtitle" translatable="yes">Format used to display generated dates (&lt;a href="https://strftime.org/"&gt;python syntax&lt;/a&gt;)</property>
+                            <property name="icon-name">format-text-rich-symbolic</property>
+                            <child type="suffix">
+                              <object class="GtkText" id="_format_text">
+                                <property name="valign">center</property>
+                                <property name="width-request">250</property>
+                                <property name="height-request">30</property>
+                                <property name="text">%c</property>
+                                <style>
+                                  <class name="view" />
+                                  <class name="rounded-border" />
+                                  <class name="padding-left-8" />
+                                  <class name="monospace" />
+                                </style>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
                       </object>
                     </child>
                     <child>
@@ -125,7 +125,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="text-wrap-mode">none</property>
                       </object>
                     </child>
-
                   </object>
                 </property>
               </object>
@@ -134,7 +133,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
           </object>
         </property>
       </object>
-
     </child>
   </template>
 </interface>

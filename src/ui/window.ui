@@ -7,8 +7,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
 <interface>
-  <requires lib="gtk" version="4.0"/>
-  <requires lib="Adw" version="1.0"/>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="Adw" version="1.0" />
   <template class="DevtoolboxWindow" parent="AdwApplicationWindow">
     <style>
       <class name="devel" />
@@ -52,7 +52,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
             <!-- ViewStack -->
             <child>
-              <object class="AdwViewStack" id="_tabs_stack"/>
+              <object class="AdwViewStack" id="_tabs_stack" />
             </child>
 
           </object>

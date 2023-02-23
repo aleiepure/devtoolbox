@@ -7,57 +7,54 @@ SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
 <interface>
-    <requires lib="gtk" version="4.0" />
-    <requires lib="libadwaita" version="1.0" />
-    <template class="UtilityTitle" parent="AdwBin">
-
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="UtilityTitle" parent="AdwBin">
+    <child>
+      <object class="GtkGrid">
         <child>
-            <object class="GtkGrid">
-                <child>
-                    <object class="GtkButton" id="_star_btn">
-                        <property name="visible">false</property>
-                        <property name="valign">center</property>
-                        <property name="margin-top">10</property>
-                        <style>
-                            <class name="circular" />
-                        </style>
-                        <layout>
-                            <property name="column">0</property>
-                            <property name="row">0</property>
-                            <property name="row-span">2</property>
-                        </layout>
-                    </object>
-                </child>
-                <child>
-                    <object class="GtkLabel" id="_title_lbl">
-                        <property name="halign">start</property>
-                        <property name="margin-top">10</property>
-                        <property name="margin-start">10</property>
-                        <style>
-                            <class name="title-1" />
-                        </style>
-                        <layout>
-                            <property name="column">1</property>
-                            <property name="row">0</property>
-                        </layout>
-                    </object>
-                </child>
-                <child>
-                    <object class="GtkLabel" id="_description_lbl">
-                        <property name="halign">start</property>
-                        <property name="margin-start">10</property>
-                        <style>
-                            <class name="caption-heading" />
-                        </style>
-                        <layout>
-                            <property name="column">1</property>
-                            <property name="row">1</property>
-                        </layout>
-                    </object>
-                </child>
-
-            </object>
+          <object class="GtkButton" id="_star_btn">
+            <property name="visible">false</property>
+            <property name="valign">center</property>
+            <property name="margin-top">10</property>
+            <style>
+              <class name="circular" />
+            </style>
+            <layout>
+              <property name="column">0</property>
+              <property name="row">0</property>
+              <property name="row-span">2</property>
+            </layout>
+          </object>
         </child>
-
-    </template>
+        <child>
+          <object class="GtkLabel" id="_title_lbl">
+            <property name="halign">start</property>
+            <property name="margin-top">10</property>
+            <property name="margin-start">10</property>
+            <style>
+              <class name="title-1" />
+            </style>
+            <layout>
+              <property name="column">1</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="_description_lbl">
+            <property name="halign">start</property>
+            <property name="margin-start">10</property>
+            <style>
+              <class name="caption-heading" />
+            </style>
+            <layout>
+              <property name="column">1</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
 </interface>

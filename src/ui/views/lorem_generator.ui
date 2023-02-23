@@ -15,6 +15,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="child">
           <object class="GtkScrolledWindow">
             <property name="child">
+
               <object class="AdwClamp">
                 <property name="vexpand">true</property>
                 <property name="maximum-size">1200</property>
@@ -107,6 +108,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                   </object>
                 </property>
               </object>
+
             </property>
           </object>
         </property>

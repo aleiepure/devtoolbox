@@ -25,7 +25,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/widgets/webview_area.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/image_area.ui</file>
     <file preprocess="xml-stripblanks">ui/views/tab_content.ui</file>
-    <file preprocess="xml-stripblanks">ui/views/empty_favorites.ui</file>
     <file preprocess="xml-stripblanks">ui/views/json_yaml.ui</file>
     <file preprocess="xml-stripblanks">ui/views/timestamp.ui</file>
     <file preprocess="xml-stripblanks">ui/views/base_converter.ui</file>

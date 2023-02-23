@@ -11,7 +11,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
   <requires lib="libadwaita" version="1.0" />
   <template class="TimestampView" parent="AdwBin">
     <child>
-
       <object class="AdwToastOverlay" id="_toast">
         <property name="child">
           <object class="GtkScrolledWindow">
@@ -21,7 +20,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                 <property name="vexpand">true</property>
                 <property name="maximum-size">1200</property>
                 <property name="tightening-threshold">600</property>
-                  <property name="child">
+                <property name="child">
                   <object class="GtkBox">
                     <property name="orientation">vertical</property>
 
@@ -39,25 +38,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="margin-bottom">10</property>
                       </object>
                     </child>
-
-                    <!-- Options -->
-                    <!-- <child> -->
-                    <!--   <object class="AdwPreferencesGroup"> -->
-                    <!--     <property name="title" translatable="yes">Tool options</property> -->
-                    <!--     <child> -->
-                    <!--       <object class="AdwActionRow" id="_timezone_action_row"> -->
-                    <!--         <property name="title" translatable="yes">Timezone</property> -->
-                    <!--         <property name="subtitle" translatable="yes">Select your timezone</property> -->
-                    <!--         <property name="icon-name">earth-symbolic</property> -->
-                    <!--       </object> -->
-                    <!--     </child> -->
-                    <!--   </object> -->
-                    <!-- </child> -->
-                    <!-- <child> -->
-                    <!--   <object class="GtkSeparator"> -->
-                    <!--     <property name="margin-top">10</property> -->
-                    <!--   </object> -->
-                    <!-- </child> -->
 
                     <!-- Timestamp -->
                     <child>
@@ -86,7 +66,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
           </object>
         </property>
       </object>
-
     </child>
   </template>
 </interface>

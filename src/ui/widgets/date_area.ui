@@ -84,7 +84,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                 <child>
                   <object class="GtkBox">
                     <property name="orientation">vertical</property>
-                        <style>
+                    <style>
                       <class name="view" />
                       <class name="rounded-border" />
                     </style>
@@ -321,7 +321,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
                 </child>
               </object>
-
             </child>
           </object>
         </child>

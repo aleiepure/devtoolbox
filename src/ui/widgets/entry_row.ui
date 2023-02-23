@@ -40,7 +40,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
           <object class="GtkButton" id="_clear_btn">
             <property name="icon-name">edit-clear</property>
             <property name="valign">center</property>
-             <property name="tooltip-text" translatable="yes">Clear input</property>
+            <property name="tooltip-text" translatable="yes">Clear input</property>
             <style>
               <class name="flat" />
             </style>

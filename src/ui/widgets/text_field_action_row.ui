@@ -7,104 +7,103 @@ SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
 <interface>
-    <requires lib="gtk" version="4.0" />
-    <requires lib="libadwaita" version="1.0" />
-
-    <template class="TextFieldActionRow" parent="AdwActionRow">
+  <requires lib="gtk" version="4.0" />
+  <requires lib="libadwaita" version="1.0" />
+  <template class="TextFieldActionRow" parent="AdwActionRow">
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">horizontal</property>
+        <property name="valign">center</property>
         <child>
-            <object class="GtkBox">
-                <property name="orientation">horizontal</property>
-                <property name="valign">center</property>
-                <child>
-                    <object class="AdwViewStack" id="_stack">
-                        <child>
-                            <object class="AdwViewStackPage">
-                                <property name="name">loading</property>
-                                <property name="child">
-                                    <object class="GtkBox">
-                                        <style>
-                                            <class name="rounded-border" />
-                                            <class name="view" />
-                                        </style>
-                                        <property name="orientation">vertical</property>
-                                        <child>
-                                            <object class="GtkBox">
-                                                <property name="orientation">horizontal</property>
-                                                <property name="valign">center</property>
-                                                <property name="vexpand">true</property>
-                                                <property name="spacing">10</property>
-                                                <child>
-                                                    <object class="GtkSpinner">
-                                                        <property name="spinning">true</property>
-                                                        <property name="width-request">36</property>
-                                                    </object>
-                                                </child>
-                                                <child>
-                                                    <object class="GtkLabel" id="_loading_lbl" />
-                                                </child>
-                                            </object>
-                                        </child>
-                                    </object>
-                                </property>
-                            </object>
-                        </child>
-                        <child>
-                            <object class="AdwViewStackPage">
-                                <property name="name">loading</property>
-                                <property name="child">
-                                    <object class="GtkText" id="_textfield">
-                                        <property name="width-request">300</property>
-                                        <property name="height-request">35</property>
-                                        <property name="valign">center</property>
-                                        <style>
-                                            <class name="view" />
-                                            <class name="rounded-border" />
-                                            <class name="padding-left-8" />
-                                        </style>
-                                    </object>
-                                </property>
-                            </object>
-                        </child>
-                    </object>
-                </child>
-                <child>
-                    <object class="GtkSeparator" id="_separator">
-                        <style>
-                            <class name="spacer" />
-                        </style>
-                        <property name="visible">true</property>
-                    </object>
-                </child>
-                <child>
-                    <object class="GtkBox">
+          <object class="AdwViewStack" id="_stack">
+            <child>
+              <object class="AdwViewStackPage">
+                <property name="name">loading</property>
+                <property name="child">
+                  <object class="GtkBox">
+                    <style>
+                      <class name="rounded-border" />
+                      <class name="view" />
+                    </style>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkBox">
                         <property name="orientation">horizontal</property>
-                        <style>
-                            <class name="linked" />
-                        </style>
+                        <property name="valign">center</property>
+                        <property name="vexpand">true</property>
+                        <property name="spacing">10</property>
                         <child>
-                            <object class="GtkButton" id="_copy_btn">
-                                <property name="valign">center</property>
-                                <property name="icon-name">edit-copy-symbolic</property>
-                                <property name="tooltip-text" translatable="yes">Copy to clipboard</property>
-                            </object>
+                          <object class="GtkSpinner">
+                            <property name="spinning">true</property>
+                            <property name="width-request">36</property>
+                          </object>
                         </child>
                         <child>
-                            <object class="GtkButton" id="_paste_btn">
-                                <property name="valign">center</property>
-                                <property name="icon-name">edit-paste-symbolic</property>
-                                <property name="tooltip-text" translatable="yes">Paste from clipboard</property>
-                            </object>
+                          <object class="GtkLabel" id="_loading_lbl" />
                         </child>
-                        <child>
-                            <object class="GtkButton" id="_clear_btn">
-                                <property name="valign">center</property>
-                                <property name="icon-name">edit-clear-symbolic</property>
-                                <property name="tooltip-text" translatable="yes">Clear field</property>
-                            </object>
-                        </child>
-                    </object>
-                </child>
-            </object>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwViewStackPage">
+                <property name="name">loading</property>
+                <property name="child">
+                  <object class="GtkText" id="_textfield">
+                    <property name="width-request">300</property>
+                    <property name="height-request">35</property>
+                    <property name="valign">center</property>
+                    <style>
+                      <class name="view" />
+                      <class name="rounded-border" />
+                      <class name="padding-left-8" />
+                    </style>
+                  </object>
+                </property>
+              </object>
+            </child>
+          </object>
         </child>
-    </template>
+        <child>
+          <object class="GtkSeparator" id="_separator">
+            <style>
+              <class name="spacer" />
+            </style>
+            <property name="visible">true</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">horizontal</property>
+            <style>
+              <class name="linked" />
+            </style>
+            <child>
+              <object class="GtkButton" id="_copy_btn">
+                <property name="valign">center</property>
+                <property name="icon-name">edit-copy-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Copy to clipboard</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="_paste_btn">
+                <property name="valign">center</property>
+                <property name="icon-name">edit-paste-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Paste from clipboard</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="_clear_btn">
+                <property name="valign">center</property>
+                <property name="icon-name">edit-clear-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Clear field</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
 </interface>

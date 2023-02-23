@@ -88,7 +88,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="halign">center</property>
                         <property name="margin-bottom">15</property>
                         <property name="margin-top">5</property>
-
                         <child>
                           <object class="GtkImage" id="_check_icon">
                             <property name="pixel-size">56</property>

@@ -67,7 +67,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="icon-name">check-plain</property>
                             <property name="activatable-widget">_check_switch</property>
                             <child>
-                              <object class="GtkSwitch" id="_check_switch" >
+                              <object class="GtkSwitch" id="_check_switch">
                                 <property name="valign">center</property>
                               </object>
                             </child>
@@ -95,7 +95,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="margin-top">10</property>
                       </object>
                     </child>
-
 
                     <!-- Content -->
                     <child>
@@ -171,6 +170,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                   </object>
                 </property>
               </object>
+
             </property>
           </object>
         </property>
