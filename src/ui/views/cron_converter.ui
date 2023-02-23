@@ -79,6 +79,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
 																	<class name="view" />
 																	<class name="rounded-border" />
 																	<class name="padding-left-8" />
+																	<class name="monospace" />
 																</style>
 															</object>
 														</child>
@@ -103,6 +104,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="show-copy-btn">true</property>
                             <property name="show-paste-btn">true</property>
                             <property name="show-clear-btn">true</property>
+                            <style>
+                              <class name="monospace" />
+                            </style>
                           </object>
                         </child>
                       </object>
@@ -118,6 +122,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="show-open-btn">false</property>
                         <property name="text-editable">false</property>
                         <property name="allow-drag-and-drop">false</property>
+                        <property name="text-wrap-mode">none</property>
                       </object>
                     </child>
 

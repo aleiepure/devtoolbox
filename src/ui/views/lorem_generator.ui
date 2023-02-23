@@ -100,6 +100,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="text-editable">false</property>
                         <property name="allow-drag-and-drop">false</property>
                         <property name="margin-bottom">10</property>
+                        <property name="text-wrap-mode">word</property>
                       </object>
                     </child>
 

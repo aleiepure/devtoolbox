@@ -59,6 +59,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="custom-file-extensions">md</property>
                             <property name="text-show-line-numbers">true</property>
                             <property name="text-syntax-highlighting">true</property>
+                            <property name="text-wrap-mode">word-char</property>
                           </object>
                         </child>
 

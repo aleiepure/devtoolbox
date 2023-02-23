@@ -113,6 +113,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="show-paste-btn">true</property>
                             <property name="show-open-btn">true</property>
                             <property name="use-all-files-extensions">true</property>
+                            <property name="text-wrap-mode">word-char</property>
                           </object>
                         </child>
 
@@ -124,6 +125,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="text-editable">false</property>
                             <property name="allow-drag-and-drop">false</property>
                             <property name="area-height">100</property>
+                            <property name="text-wrap-mode">char</property>
                           </object>
                         </child>
                       </object>

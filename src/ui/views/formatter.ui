@@ -83,6 +83,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="area-height">500</property>
                         <property name="use-custom-file-extensions">true</property>
                         <property name="margin-bottom">10</property>
+                        <property name="text-wrap-mode">none</property>
                       </object>
                     </child>
 

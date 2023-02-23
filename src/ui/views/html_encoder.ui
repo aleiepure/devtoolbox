@@ -84,6 +84,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="text-show-line-numbers">true</property>
                             <property name="text-syntax-highlighting">true</property>
                             <property name="text-language-highlight">html</property>
+                            <property name="text-wrap-mode">none</property>
                           </object>
                         </child>
 
@@ -100,6 +101,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="text-show-line-numbers">true</property>
                             <property name="text-syntax-highlighting">true</property>
                             <property name="text-language-highlight">html</property>
+                            <property name="text-wrap-mode">none</property>
                           </object>
                         </child>
 

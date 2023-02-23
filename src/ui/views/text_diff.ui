@@ -51,6 +51,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="show-open-btn">true</property>
                             <property name="text-show-line-numbers">true</property>
                             <property name="use-default-text-extensions">true</property>
+                            <property name="text-wrap-mode">word-char</property>
                           </object>
                         </child>
                         <child>
@@ -62,6 +63,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="show-open-btn">true</property>
                             <property name="text-show-line-numbers">true</property>
                             <property name="use-default-text-extensions">true</property>
+                            <property name="text-wrap-mode">word-char</property>
                           </object>
                         </child>
                       </object>
@@ -74,6 +76,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="show-copy-btn">true</property>
                         <property name="text-editable">false</property>
                         <property name="margin-bottom">10</property>
+                        <property name="text-wrap-mode">word-char</property>
                       </object>
                     </child>
 
