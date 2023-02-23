@@ -39,14 +39,18 @@ Files: .pre-commit-config.yaml
 Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
 License: GPL-3.0-or-later
 
-Files: po/LINGUAS, po/POTFILES
-Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
-License: GPL-3.0-or-later
-
 Files: .github/*
 Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
 License: GPL-3.0-or-later
 
 Files: data/appstream/*
+Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
+License: CC0-1.0
+
+Files: po/POTFILES
+Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
+License: CC0-1.0
+
+Files: po/LINGUAS
 Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
 License: CC0-1.0

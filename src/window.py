@@ -76,7 +76,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "child": BaseConverterView(),
             },
             "cron": {
-                "title": _("Cron Parser"),
+                "title": _("CRON Parser"),
                 "category": "converter",
                 "icon-name": "hourglass-symbolic",
                 "tooltip": _("Convert CRON expressions to time and date"),
