@@ -14,7 +14,6 @@ from .views.base_converter import BaseConverterView
 from .views.cron_converter import CronConverterView
 from .views.html_encoder import HtmlEncoderView
 from .views.url_encoder import UrlEncoderView
-from .views.base64_encoder import Base64EncoderView
 from .views.gzip_compressor import GzipCompressorView
 from .views.jwt_decoder import JwtDecoderView
 from .views.formatter import FormatterView
@@ -59,63 +58,56 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "title": _("JSON - YAML"),
                 "category": "converter",
                 "icon-name": "horizontal-arrows-symbolic",
-                "tooltip": "Convert JSON documents to YAML and vice-versa",
+                "tooltip": _("Convert JSON documents to YAML and vice-versa"),
                 "child": JsonYamlView(),
             },
             "timestamp": {
                 "title": _("Timestamp"),
                 "category": "converter",
                 "icon-name": "calendar-symbolic",
-                "tooltip": "Convert UNIX timestamps to and from plain dates",
+                "tooltip": _("Convert UNIX timestamps to and from plain dates"),
                 "child": TimestampView(),
             },
             "base-converter": {
-                "title": _("Base converter"),
+                "title": _("Number Bases"),
                 "category": "converter",
                 "icon-name": "hashtag-symbolic",
-                "tooltip": "Convert numbers between common bases",
+                "tooltip": "Convert numbers between bases",
                 "child": BaseConverterView(),
             },
             "cron": {
-                "title": _("Cron converter"),
+                "title": _("Cron Parser"),
                 "category": "converter",
                 "icon-name": "hourglass-symbolic",
-                "tooltip": "Interpret cron expressions to plain dates",
+                "tooltip": _("Convert CRON expressions to time and date"),
                 "child": CronConverterView(),
             },
             "html-encoder": {
                 "title": "HTML",
                 "category": "encoder",
                 "icon-name": "code-symbolic",
-                "tooltip": "Encode and decode special characters using the HTML format",
+                "tooltip": _("Encode and decode special characters using the HTML format"),
                 "child": HtmlEncoderView(),
             },
             "url-encoder": {
                 "title": "URL",
                 "category": "encoder",
                 "icon-name": "chain-link-symbolic",
-                "tooltip": "Encode and decode special characters inside URLs",
+                "tooltip": _("Encode and decode special characters inside URLs"),
                 "child": UrlEncoderView(),
             },
-            # "base64-encoder": {
-            #     "title": "Base64",
-            #     "category": "encoder",
-            #     "icon-name": "base64-symbolic",
-            #     "tooltip": "Encode and decode files and texts using base64",
-            #     "child": Base64EncoderView(),
-            # },
             "gzip-compressor": {
                 "title": "GZip",
                 "category": "encoder",
                 "icon-name": "shoe-box-symbolic",
-                "tooltip": "Compress and decompress files and texts using gzip",
+                "tooltip": _("Compress and decompress files and texts using gzip"),
                 "child": GzipCompressorView(),
             },
             "jwt-decoder": {
                 "title": "JWT",
                 "category": "encoder",
                 "icon-name": "key-symbolic",
-                "tooltip": "Decode JWT tokens with ease",
+                "tooltip": _("Decode JWT tokens to header and payload"),
                 "child": JwtDecoderView(),
             },
             "json-formatter": {
@@ -143,7 +135,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "title": "Hash",
                 "category": "generator",
                 "icon-name": "hash-symbolic",
-                "tooltip": _("Calculate MD5, SHA1, SHA256 and SHA512 hashes and check for integrity"),
+                "tooltip": _("Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"),
                 "child": HashGeneratorView(),
             },
             "lorem-generator": {
@@ -161,31 +153,31 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "child": UuidGeneratorView(),
             },
             "text-inspector": {
-                "title": _("Inspector & Case Converter"),
+                "title": _("Text Inspector & Case Converter"),
                 "category": "text",
                 "icon-name": "text-inspector-symbolic",
-                "tooltip": _("View statistics about the typed text and change cases"),
+                "tooltip": _("View statistics about text and change sentence cases"),
                 "child": TextInspectorView(),
             },
             "regex-tester": {
                 "title": _("Regex Tester"),
                 "category": "text",
                 "icon-name": "regex-symbolic",
-                "tooltip": _("Find all matching strings inside a text"),
+                "tooltip": _("Find matching strings inside a text"),
                 "child": RegexTesterView(),
             },
             "text-diff": {
                 "title": _("Text Diff"),
                 "category": "text",
                 "icon-name": "open-book-symbolic",
-                "tooltip": _("Analyze two texts and find all the differences"),
+                "tooltip": _("Analyze two texts and find differences"),
                 "child": TextDiffView(),
             },
             "xml-validator": {
-                "title": _("XML Schema Validator"),
+                "title": _("XML Scheme Validator"),
                 "category": "text",
                 "icon-name": "xml-check-symbolic",
-                "tooltip": _("Check an XML file against a XSD schema"),
+                "tooltip": _("Check an XML file against a XSD scheme"),
                 "child": XmlValidatorView(),
             },
             "markdown-preview": {
@@ -206,14 +198,14 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "title": _("Color Blindness"),
                 "category": "graphic",
                 "icon-name": "color-symbolic",
-                "tooltip": _("Simulate color blindness in images and compensate colors"),
+                "tooltip": _("Simulate color blindness in images"),
                 "child": ColorblindnessSimulatorView(),
             },
             "image-converter": {
                 "title": _("Image Format Converter"),
                 "category": "graphic",
                 "icon-name": "image-symbolic",
-                "tooltip": _("Converter images to different formats"),
+                "tooltip": _("Convert images to different formats"),
                 "child": ImageConverterView(),
             },
         }

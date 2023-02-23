@@ -28,7 +28,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     <child>
                       <object class="UtilityTitle" id="_title">
                         <property name="title" translatable="yes">Color Blindness Simulator</property>
-                        <property name="description" translatable="yes">Change image colors to simulate different types of color blindness</property>
+                        <property name="description" translatable="yes">Simulate color blindness in images</property>
                         <property name="tool-name">colorblind-sim</property>
                       </object>
                     </child>

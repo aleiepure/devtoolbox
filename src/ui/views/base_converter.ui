@@ -28,8 +28,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     <!-- Title -->
                     <child>
                       <object class="UtilityTitle" id="_title">
-                        <property name="title" translatable="yes">Number base Converter</property>
-                        <property name="description" translatable="yes">Convert numbers between common bases</property>
+                        <property name="title" translatable="yes">Number Bases Converter</property>
+                        <property name="description" translatable="yes">Convert numbers between bases</property>
                         <property name="tool-name">base-converter</property>
                       </object>
                     </child>

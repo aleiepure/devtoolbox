@@ -28,8 +28,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     <!-- Title -->
                     <child>
                       <object class="UtilityTitle" id="_title">
-                        <property name="title" translatable="yes">Text Inspector &amp; case converter</property>
-                        <property name="description" translatable="yes">View statistics about the typed text and change cases</property>
+                        <property name="title" translatable="yes">Text Inspector &amp; Case Converter</property>
+                        <property name="description" translatable="yes">View statistics about text and change sentence cases</property>
                         <property name="tool-name">text-inspector</property>
                       </object>
                     </child>

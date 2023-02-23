@@ -28,8 +28,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     <!-- Title -->
                     <child>
                       <object class="UtilityTitle" id="_title">
-                        <property name="title" translatable="yes">Cron Parser</property>
-                        <property name="description" translatable="yes">Interpret cron expressions to plain dates</property>
+                        <property name="title" translatable="yes">CRON Parser</property>
+                        <property name="description" translatable="yes">Convert CRON expressions to time and date</property>
                         <property name="tool-name">cron</property>
                       </object>
                     </child>
