@@ -37,10 +37,9 @@ class ImageConverterView(Adw.Bin):
 
     def _on_convertion_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
         converted_file_path = self._service.async_finish(result, self)
-        self._saved_toast.set_title(f'{_("Successfully saved as")} {converted_file_path}')
+        self._saved_toast.set_title(_("Successfully saved as {save_path}").format(save_path=converted_file_path))
         self._toast.add_toast(self._saved_toast)
         self._imagearea.set_action_btn_sensitive(True)
-
 
     def _on_toast_btn_clicked(self, user_data:GObject.GPointer):
         app = Gio.Application.get_default()

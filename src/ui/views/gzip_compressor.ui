@@ -28,7 +28,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     <child>
                       <object class="UtilityTitle" id="_title">
                         <property name="title" translatable="yes">GZip Compress &amp; Decompress</property>
-                        <property name="description" translatable="yes">Compress and decompress files and texts using gzip</property>
+                        <property name="description" translatable="yes">Compress and decompress files and texts using GZip</property>
                         <property name="tool-name">gzip-compressor</property>
                       </object>
                     </child>
@@ -50,8 +50,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="icon-name">horizontal-arrows-symbolic</property>
                             <child type="suffix">
                               <object class="BinarySelector" id="_direction_selector">
-                                <property name="left-lbl">Compress</property>
-                                <property name="right-lbl">Decompress</property>
+                                <property name="left-lbl" translatable="yes">Compress</property>
+                                <property name="right-lbl" translatable="yes">Decompress</property>
                                 <property name="left-btn-active">true</property>
                               </object>
                             </child>

@@ -6,3 +6,4 @@
 sonar-scanner.properties
 .pre-commit-config.yaml
 me.iepure.devtoolbox-release.json
+po/*.mo

@@ -54,3 +54,7 @@ License: CC0-1.0
 Files: po/LINGUAS
 Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
 License: CC0-1.0
+
+Files: po/devtoolbox.pot
+Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
+License: CC0-1.0

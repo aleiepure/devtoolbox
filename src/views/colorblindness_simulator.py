@@ -18,7 +18,7 @@ class ColorblindnessSimulatorView(Adw.Bin):
     _severity_scale = Gtk.Template.Child()
     _original_imagearea = Gtk.Template.Child()
     _protanopia_imagearea = Gtk.Template.Child()
-    _deutranopia_imagearea = Gtk.Template.Child()
+    _deuteranopia_imagearea = Gtk.Template.Child()
     _tritanopia_imagearea = Gtk.Template.Child()
 
     _service = ColorblindnessSimulatorService()
@@ -35,13 +35,13 @@ class ColorblindnessSimulatorView(Adw.Bin):
         self._original_imagearea.connect("image-loaded", self._on_image_loaded)
         self._severity_scale.connect("notify::css-classes", self._on_severity_changed)
         self._protanopia_imagearea.connect("saved", self._on_saved)
-        self._deutranopia_imagearea.connect("saved", self._on_saved)
+        self._deuteranopia_imagearea.connect("saved", self._on_saved)
         self._tritanopia_imagearea.connect("saved", self._on_saved)
         self._saved_toast.connect("button-clicked", self._on_toast_btn_clicked)
 
     def _on_view_cleared(self, source_widget:GObject.Object):
         self._protanopia_imagearea.clear()
-        self._deutranopia_imagearea.clear()
+        self._deuteranopia_imagearea.clear()
         self._tritanopia_imagearea.clear()
         self._service.get_cancellable().cancel()
 
@@ -54,7 +54,7 @@ class ColorblindnessSimulatorView(Adw.Bin):
         self._simulate()
 
     def _on_saved(self, source_widget:GObject.Object, path:str):
-        self._saved_toast.set_title(f'{_("Successfully saved as")} {path}')
+        self._saved_toast.set_title(_("Successfully saved as {save_path}").format(save_path=path))
         self._toast.add_toast(self._saved_toast)
 
     def _on_toast_btn_clicked(self, user_data:GObject.GPointer):
@@ -70,7 +70,7 @@ class ColorblindnessSimulatorView(Adw.Bin):
         # Stop previous tasks
         self._service.get_cancellable().cancel()
         self._protanopia_imagearea.clear()
-        self._deutranopia_imagearea.clear()
+        self._deuteranopia_imagearea.clear()
         self._tritanopia_imagearea.clear()
 
         # Setup task
@@ -83,8 +83,8 @@ class ColorblindnessSimulatorView(Adw.Bin):
         if original_file:
             self._protanopia_imagearea.set_loading_lbl(_("Loading simulation..."))
             self._protanopia_imagearea.set_visible_view("loading")
-            self._deutranopia_imagearea.set_loading_lbl(_("Loading simulation..."))
-            self._deutranopia_imagearea.set_visible_view("loading")
+            self._deuteranopia_imagearea.set_loading_lbl(_("Loading simulation..."))
+            self._deuteranopia_imagearea.set_visible_view("loading")
             self._tritanopia_imagearea.set_loading_lbl(_("Loading simulation..."))
             self._tritanopia_imagearea.set_visible_view("loading")
             self._service.simulate_async(self, self._on_async_done)
@@ -93,7 +93,7 @@ class ColorblindnessSimulatorView(Adw.Bin):
         protanopia_file, deutranopia_file, tritanopia_file = self._service.async_finish(result, self)
         self._protanopia_imagearea.set_file(protanopia_file)
         self._protanopia_imagearea.set_visible_view("image")
-        self._deutranopia_imagearea.set_file(deutranopia_file)
-        self._deutranopia_imagearea.set_visible_view("image")
+        self._deuteranopia_imagearea.set_file(deutranopia_file)
+        self._deuteranopia_imagearea.set_visible_view("image")
         self._tritanopia_imagearea.set_file(tritanopia_file)
         self._tritanopia_imagearea.set_visible_view("image")

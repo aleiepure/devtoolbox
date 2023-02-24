@@ -46,7 +46,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="title" translatable="yes">Tool options</property>
                         <child>
                           <object class="AdwComboRow" id="_format_combo">
-                            <property name="title" translatable="yes">Format</property>
+                            <property name="title" translatable="yes" context="noun">Format</property>
                             <property name="subtitle" translatable="yes">Select the desired output format</property>
                             <property name="icon-name">list-large-symbolic</property>
                             <property name="model">

@@ -49,8 +49,7 @@ class JsonYamlView(Adw.Bin):
         self._convert()
 
     def _on_error(self, source_widget:GObject.Object, error:str):
-        error_str = _("Error")
-        self._toast.add_toast(Adw.Toast(title=f"{error_str}: {error}", priority=Adw.ToastPriority.HIGH))
+        self._toast.add_toast(Adw.Toast(title=_("Error: {error}").format(error=error), priority=Adw.ToastPriority.HIGH))
 
     def _on_view_cleared(self, source_widget:GObject.Object):
         self._service.get_cancellable().cancel()

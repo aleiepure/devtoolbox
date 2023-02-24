@@ -55,7 +55,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
 
         tools = {
             "json-yaml": {
-                "title": _("JSON - YAML"),
+                "title": "JSON - YAML",
                 "category": "converter",
                 "icon-name": "horizontal-arrows-symbolic",
                 "tooltip": _("Convert JSON documents to YAML and vice-versa"),
@@ -72,7 +72,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "title": _("Number Bases"),
                 "category": "converter",
                 "icon-name": "hashtag-symbolic",
-                "tooltip": "Convert numbers between bases",
+                "tooltip": _("Convert numbers between bases"),
                 "child": BaseConverterView(),
             },
             "cron": {
@@ -100,7 +100,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "title": "GZip",
                 "category": "encoder",
                 "icon-name": "shoe-box-symbolic",
-                "tooltip": _("Compress and decompress files and texts using gzip"),
+                "tooltip": _("Compress and decompress files and texts using GZip"),
                 "child": GzipCompressorView(),
             },
             "jwt-decoder": {
@@ -177,7 +177,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "title": _("XML Scheme Validator"),
                 "category": "text",
                 "icon-name": "xml-check-symbolic",
-                "tooltip": _("Check an XML file against a XSD scheme"),
+                "tooltip": _("Check an XML file against an XSD schema"),
                 "child": XmlValidatorView(),
             },
             "markdown-preview": {

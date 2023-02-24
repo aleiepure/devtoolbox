@@ -101,7 +101,6 @@ class DevtoolboxApplication(Adw.Application):
         if shortcuts:
             self.set_accels_for_action(f"app.{name}", shortcuts)
 
-
 def main(version, debug):
     """The application's entry point."""
     app = DevtoolboxApplication(version, debug)

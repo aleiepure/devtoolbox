@@ -33,7 +33,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <child type="start">
               <object class="GtkToggleButton" id="_flap_btn">
                 <property name="icon-name">sidebar</property>
-                <property name="tooltip-text">Show/hide sidebar</property>
+                <property name="tooltip-text" translatable="yes">Show/hide sidebar</property>
               </object>
             </child>
             <child type="end">
@@ -79,7 +79,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <attribute name="action">win.show-help-overlay</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="yes">_About Devtoolbox</attribute>
+        <attribute name="label" translatable="yes">_About Dev Toolbox</attribute>
         <attribute name="action">app.about</attribute>
       </item>
     </section>

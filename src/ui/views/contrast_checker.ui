@@ -54,7 +54,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                 <property name="valign">center</property>
                                 <property name="modal">true</property>
                                 <property name="show-editor">true</property>
-                                <property name="title" translatable="yes">Text Color</property>
+                                <property name="title" translatable="yes">Text color</property>
                                 <property name="width-request">100</property>
                                 <property name="rgba">#FFFFFF</property>
                               </object>
@@ -72,7 +72,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                 <property name="valign">center</property>
                                 <property name="modal">true</property>
                                 <property name="show-editor">true</property>
-                                <property name="title" translatable="yes">Background Color</property>
+                                <property name="title" translatable="yes">Background color</property>
                                 <property name="width-request">100</property>
                                 <property name="rgba">#7A00E4</property>
                               </object>

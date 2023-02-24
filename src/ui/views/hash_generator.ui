@@ -46,7 +46,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <child>
                           <object class="AdwComboRow" id="_type_dropdown">
                             <property name="title" translatable="yes">Hash to calculate</property>
-                            <property name="subtitle" translatable="yes">Choose the hash type to use from the dropdown</property>
+                            <property name="subtitle" translatable="yes">Choose the hash type to calculate from the dropdown</property>
                             <property name="icon-name">fingerprint</property>
                             <property name="model">
                               <object class="GtkStringList">
@@ -83,7 +83,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                 </style>
                                 <property name="show-clear-btn">true</property>
                                 <property name="show-paste-btn">true</property>
-                                <property name="title">Type the hash to check against</property>
+                                <property name="title" translatable="yes">Type the hash to check against</property>
                               </object>
                             </child>
                           </object>

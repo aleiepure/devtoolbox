@@ -87,7 +87,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                       <object class="GtkButton" id="_view_btn">
                         <property name="valign">center</property>
                         <property name="icon-name">eye-open-symbolic</property>
-                        <property name="tooltip-text" translatable="yes">Open image in another program.</property>
+                        <property name="tooltip-text" translatable="yes">Open image in another program</property>
                       </object>
                     </child>
                     <child>

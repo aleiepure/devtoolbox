@@ -99,7 +99,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                       <object class="AdwPreferencesGroup">
                         <child>
                           <object class="EntryRow" id="_expression">
-                            <property name="title" translatable="yes">Cron expression</property>
+                            <property name="title" translatable="yes">CRON expression</property>
                             <property name="text">* * * * *</property>
                             <property name="show-copy-btn">true</property>
                             <property name="show-paste-btn">true</property>

@@ -106,8 +106,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="homogeneous">true</property>
                             <property name="spacing">10</property>
                             <child>
-                              <object class="ImageArea" id="_deutranopia_imagearea">
-                                <property name="name" translatable="yes">Deutranopia</property>
+                              <object class="ImageArea" id="_deuteranopia_imagearea">
+                                <property name="name" translatable="yes">Deuteranopia</property>
                               </object>
                             </child>
                             <child>

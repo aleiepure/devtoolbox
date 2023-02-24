@@ -73,8 +73,7 @@ class HashGeneratorView(Adw.Bin):
         self._check_box.set_visible(False)
 
     def _on_error(self, source_widget:GObject.Object, error:str):
-        error_str = _("Error")
-        self._toast.add_toast(Adw.Toast(title=f"{error_str}: {error}", priority=Adw.ToastPriority.HIGH))
+        self._toast.add_toast(Adw.Toast(title=_("Error: {error}").format(error=error), priority=Adw.ToastPriority.HIGH))
 
     def _calculate_hash(self):
 
@@ -151,7 +150,7 @@ class HashGeneratorView(Adw.Bin):
             self._check_icon.set_from_icon_name("warning")
             self._check_title_lbl.set_text(_("Warning, integrity cannot be verified!"))
             self._check_lbl.set_wrap(True)
-            self._check_lbl.set_text(_("The calculated hash and the provided one do not match. Check again and if this is a file you downloaded from the internet re-download it."))
+            self._check_lbl.set_text(_("The calculated hash and the provided one do not match. Check again and if this is a file you downloaded from the Internet re-download it."))
             self._check_icon.remove_css_class("success")
             self._check_title_lbl.remove_css_class("success")
             self._check_icon.add_css_class("warning")

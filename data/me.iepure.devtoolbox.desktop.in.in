@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 [Desktop Entry]
+# TRANSLATORS: do not translate
 Name=@app-name@
 Exec=devtoolbox
 Icon=me.iepure.devtoolbox

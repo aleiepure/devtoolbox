@@ -1,0 +1,917 @@
+# Italian translations for devtoolbox package.
+# Copyright (C) 2023 Alessandro Iepure
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Automatically generated, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: devtoolbox\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-24 16:40+0100\n"
+"PO-Revision-Date: 2023-02-24 16:41+0100\n"
+"Last-Translator: Alessandro Iepure\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. TRANSLATORS: do not translate
+#: data/me.iepure.devtoolbox.desktop.in.in:8
+msgid "@app-name@"
+msgstr "@app-name@"
+
+#: data/me.iepure.devtoolbox.appdata.xml.in:15 src/ui/about_window.ui:17
+msgid "Development tools at your fingertips"
+msgstr "Strumenti di sviluppo a portata di mano"
+
+#: data/me.iepure.devtoolbox.appdata.xml.in:18
+msgid ""
+"If you're tired of endlessly looking online for the right tool, or to find "
+"again that website of which you don't recall the name just for a quick "
+"conversion, this is the right app for you."
+msgstr ""
+"Se sei stanco di cercare all'infinito online lo strumento giusto o di "
+"trovare di nuovo quel sito web di cui non ricordi il nome solo per fare una "
+"rapida conversione, questa è l'app giusta per te."
+
+#: data/me.iepure.devtoolbox.appdata.xml.in:22
+msgid ""
+"This is a collection of powerful yet simple-to-use tools to solve the most "
+"common daily development problems."
+msgstr ""
+"Questa è una collezione di strumenti potenti ma semplici da usare per "
+"risolvere i più comuni problemi quotidiani durante lo sviluppo di codice."
+
+#: data/me.iepure.devtoolbox.appdata.xml.in:25
+msgid "Includes:"
+msgstr "Include:"
+
+#: data/me.iepure.devtoolbox.appdata.xml.in:27
+msgid "JSON to YAML converter and vice-versa"
+msgstr "Convertitore da JSON a YAML e viceversa"
+
+#: data/me.iepure.devtoolbox.appdata.xml.in:28
+msgid "CRON expressions parser"
+msgstr "Parser di espressioni CRON"
+
+#: data/me.iepure.devtoolbox.appdata.xml.in:29
+msgid "GZip compressor and decompressor"
+msgstr "Compressore e De-compressore GZip"
+
+#: data/me.iepure.devtoolbox.appdata.xml.in:30
+msgid "Formatters for common programming languages"
+msgstr "Formattatori per linguaggi di programmazione comuni"
+
+#: data/me.iepure.devtoolbox.appdata.xml.in:31
+msgid "Hash generators"
+msgstr "Generatori di hash"
+
+#: data/me.iepure.devtoolbox.appdata.xml.in:32
+msgid "Regex tester"
+msgstr "Tester di Espressioni Regolari"
+
+#: data/me.iepure.devtoolbox.appdata.xml.in:33 src/window.py:184
+#: src/ui/views/markdown_preview.ui:31
+msgid "Markdown Previewer"
+msgstr "Visualizzatore Markdown"
+
+#: data/me.iepure.devtoolbox.appdata.xml.in:34
+msgid "Image converters"
+msgstr "Convertitori di immagini"
+
+#: data/me.iepure.devtoolbox.appdata.xml.in:35
+msgid "Much more..."
+msgstr "Molto altro..."
+
+#: src/window.py:61 src/ui/views/json_yaml.ui:31
+msgid "Convert JSON documents to YAML and vice-versa"
+msgstr "Converti documenti JSON in YAML e viceversa"
+
+#: src/window.py:65 src/ui/views/timestamp.ui:45
+msgid "Timestamp"
+msgstr "Timestamp"
+
+#: src/window.py:68 src/ui/views/timestamp.ui:31
+msgid "Convert UNIX timestamps to and from plain dates"
+msgstr "Converti timestamp UNIX da e in date semplici"
+
+#: src/window.py:72
+msgid "Number Bases"
+msgstr "Basi Numeriche"
+
+#: src/window.py:75 src/ui/views/base_converter.ui:31
+msgid "Convert numbers between bases"
+msgstr "Converti numeri tra basi numeriche"
+
+#: src/window.py:79 src/ui/views/cron_converter.ui:31
+msgid "CRON Parser"
+msgstr "Parser CRON"
+
+#: src/window.py:82 src/ui/views/cron_converter.ui:32
+msgid "Convert CRON expressions to time and date"
+msgstr "Converti espressioni CRON in date e ore"
+
+#: src/window.py:89 src/ui/views/html_encoder.ui:31
+msgid "Encode and decode special characters using the HTML format"
+msgstr "Codifica e decodifica caratteri speciali usando il formato HTML"
+
+#: src/window.py:96 src/ui/views/url_encoder.ui:31
+msgid "Encode and decode special characters inside URLs"
+msgstr "Codifica e decodifica caratteri speciali dentro URL"
+
+#: src/window.py:103 src/ui/views/gzip_compressor.ui:31
+msgid "Compress and decompress files and texts using GZip"
+msgstr "Comprimi e de-comprimi file e testi usando GZip"
+
+#: src/window.py:110 src/ui/views/jwt_decoder.ui:31
+msgid "Decode JWT tokens to header and payload"
+msgstr "Decodifica token JWT in header e payload"
+
+#: src/window.py:117 src/formatters/json.py:14
+msgid "Format JSON documents"
+msgstr "Formatta documenti JSON"
+
+#: src/window.py:124 src/formatters/sql.py:14
+msgid "Format SQL documents"
+msgstr "Formatta documenti SQL"
+
+#: src/window.py:131 src/formatters/xml.py:16
+msgid "Format XML documents"
+msgstr "Formatta documenti XML"
+
+#: src/window.py:138 src/ui/views/hash_generator.ui:31
+msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
+msgstr "Calcola hash MD5, SHA1, SHA256 e SHA512 e controlla l'integrità"
+
+#: src/window.py:145 src/ui/views/lorem_generator.ui:31
+msgid "Generate lorem ipsum placeholder text"
+msgstr "Genera testo segnaposto lorem ipsum"
+
+#: src/window.py:152 src/ui/views/uuid_generator.ui:31
+msgid "Generate Universally Unique IDs (UUID)"
+msgstr "Genera ID Universalmente Univoci (UUID)"
+
+#: src/window.py:156 src/ui/views/text_inspector.ui:30
+msgid "Text Inspector & Case Converter"
+msgstr "Ispettore Testo"
+
+#: src/window.py:159 src/ui/views/text_inspector.ui:31
+msgid "View statistics about text and change sentence cases"
+msgstr "Visualizza statistiche sul testo e modifica maiuscole/minuscole"
+
+#: src/window.py:163
+msgid "Regex Tester"
+msgstr "Tester Espressioni Regolari"
+
+#: src/window.py:166 src/ui/views/regex_tester.ui:31
+msgid "Find matching strings inside a text"
+msgstr "Trova le stringhe corrispondenti all'interno di un testo"
+
+#: src/window.py:170 src/ui/views/text_diff.ui:30
+msgid "Text Diff"
+msgstr "Diff Testo"
+
+#: src/window.py:173 src/ui/views/text_diff.ui:31
+msgid "Analyze two texts and find differences"
+msgstr "Analizza due testi e trova le differenze"
+
+#: src/window.py:177 src/ui/views/xml_validator.ui:30
+msgid "XML Scheme Validator"
+msgstr "Validatore Schema XML"
+
+#: src/window.py:180 src/ui/views/xml_validator.ui:31
+msgid "Check an XML file against an XSD schema"
+msgstr "Confronta un file XML con uno schema XSD"
+
+#: src/window.py:187 src/ui/views/markdown_preview.ui:32
+msgid "Preview markdown code as you type"
+msgstr "Visuallizza l'anteprima del codice markdown mentre scrivi"
+
+#: src/window.py:191 src/ui/views/contrast_checker.ui:30
+msgid "Contrast Checker"
+msgstr "Controllo Contrasto"
+
+#: src/window.py:194 src/ui/views/contrast_checker.ui:31
+msgid "Check a color combination for WCAG compliance"
+msgstr "Controlla una combinazione di colori per la conformità WCAG"
+
+#: src/window.py:198
+msgid "Color Blindness"
+msgstr "Daltonismo"
+
+#: src/window.py:201 src/ui/views/colorblindness_simulator.ui:31
+msgid "Simulate color blindness in images"
+msgstr "Simula il daltonismo in immagini"
+
+#: src/window.py:205 src/ui/views/image_converter.ui:31
+msgid "Image Format Converter"
+msgstr "Convertitore Formato Immagini"
+
+#: src/window.py:208 src/ui/views/image_converter.ui:32
+msgid "Convert images to different formats"
+msgstr "Converti immagini in diversi formati"
+
+#: src/window.py:215
+msgid "Converters"
+msgstr "Convertitori"
+
+#: src/window.py:220
+msgid "Encoders"
+msgstr "Codificatori"
+
+#: src/window.py:225
+msgid "Formatters"
+msgstr "Formattatori"
+
+#: src/window.py:230
+msgid "Generators"
+msgstr "Generatori"
+
+#: src/window.py:235 src/ui/views/regex_tester.ui:68
+#: src/ui/views/text_inspector.ui:133 src/ui/views/text_inspector.ui:204
+msgid "Text"
+msgstr "Testo"
+
+#: src/window.py:240
+msgid "Graphics"
+msgstr "Grafica"
+
+#: src/widgets/image_area.py:101
+msgid "Opening image..."
+msgstr "Apertura in corso di un immagine..."
+
+#: src/widgets/image_area.py:108 src/widgets/text_area.py:156
+#: src/widgets/text_file_area.py:177
+msgid "Open File"
+msgstr "Apri file"
+
+#: src/widgets/image_area.py:110 src/widgets/text_area.py:158
+#: src/widgets/text_file_area.py:179 src/ui/widgets/image_area.ui:70
+#: src/ui/widgets/text_area.ui:82 src/ui/widgets/text_file_area.ui:82
+msgid "Open"
+msgstr "Apri"
+
+#: src/widgets/image_area.py:111 src/widgets/image_area.py:158
+#: src/widgets/text_area.py:159 src/widgets/text_file_area.py:180
+#: src/widgets/text_file_area.py:295 src/views/image_converter.py:61
+msgid "Cancel"
+msgstr "Annulla"
+
+#: src/widgets/image_area.py:119 src/widgets/text_file_area.py:206
+msgid "Images"
+msgstr "Immagini"
+
+#: src/widgets/image_area.py:148
+msgid "Saving image..."
+msgstr "Salvataggio in corso di un immagine..."
+
+#: src/widgets/image_area.py:155 src/widgets/text_file_area.py:292
+#: src/views/image_converter.py:58
+msgid "Save file as"
+msgstr "Salva con nome"
+
+#: src/widgets/image_area.py:157 src/widgets/text_file_area.py:294
+#: src/views/image_converter.py:60 src/ui/widgets/image_area.ui:81
+#: src/ui/widgets/text_file_area.ui:93
+msgid "Save"
+msgstr "Salva"
+
+#: src/widgets/image_area.py:181
+msgid "Unable to save image."
+msgstr "Impossibile salvare l'immagine."
+
+#: src/widgets/text_area.py:166 src/widgets/text_file_area.py:200
+msgid "Text files"
+msgstr "File di testo"
+
+#: src/widgets/text_area.py:173 src/widgets/text_file_area.py:213
+msgid "Accepted files"
+msgstr "File accettati"
+
+#. change view and save previous
+#: src/widgets/text_file_area.py:170
+msgid "Opening file..."
+msgstr "Apertura in corso di un file..."
+
+#: src/widgets/text_file_area.py:187
+msgid "All files"
+msgstr "Tutti i file"
+
+#: src/widgets/text_file_area.py:194
+msgid "Text files and images"
+msgstr "File di testo e immagini"
+
+#: src/widgets/text_file_area.py:285
+msgid "Saving file..."
+msgstr "Salvataggio in corso di un file..."
+
+#. Toast messages
+#: src/views/colorblindness_simulator.py:26 src/views/gzip_compressor.py:27
+#: src/views/image_converter.py:23
+msgid "Open folder"
+msgstr "Apri cartella"
+
+#: src/views/colorblindness_simulator.py:57 src/views/gzip_compressor.py:58
+#: src/views/image_converter.py:40
+#, python-brace-format
+msgid "Successfully saved as {save_path}"
+msgstr "Salvato con successo come {save_path}"
+
+#: src/views/colorblindness_simulator.py:84
+#: src/views/colorblindness_simulator.py:86
+#: src/views/colorblindness_simulator.py:88
+msgid "Loading simulation..."
+msgstr "Caricamento della simulazione..."
+
+#: src/views/formatter.py:45 src/views/gzip_compressor.py:67
+#: src/views/hash_generator.py:76 src/views/html_encoder.py:46
+#: src/views/json_yaml.py:52 src/views/url_encoder.py:53
+#, python-brace-format
+msgid "Error: {error}"
+msgstr "Errore: {error}"
+
+#: src/views/formatter.py:73
+msgid ""
+"Text is not in the correct format. Check if you misspelled something or if "
+"all parentheses are closed."
+msgstr ""
+"Il testo non è nel formato corretto. Controlla se hai sbagliato a scrivere "
+"qualcosa o se tutte le parentesi sono chiuse."
+
+#: src/views/gzip_compressor.py:29
+msgid "Cannot decompress from an image or a file"
+msgstr "Impossibile de-comprimere da un'immagine o un file"
+
+#: src/views/gzip_compressor.py:126
+msgid "Please save this file to view its contents"
+msgstr "Per favore salva questo file per vedere il suo contenuto"
+
+#: src/views/hash_generator.py:141
+msgid "Hashes match!"
+msgstr "Gli hash combaciano!"
+
+#: src/views/hash_generator.py:143
+msgid "The integrity is verified."
+msgstr "L'integrità è verificata."
+
+#: src/views/hash_generator.py:151
+msgid "Warning, integrity cannot be verified!"
+msgstr "Attenzione, l'integrità non può essere verificata!"
+
+#: src/views/hash_generator.py:153
+msgid ""
+"The calculated hash and the provided one do not match. Check again and if "
+"this is a file you downloaded from the Internet re-download it."
+msgstr ""
+"L'hash calcolato e quello fornito non combaciano. Controlla di nuovo e se è "
+"un file scaricato da Internet riscaricalo."
+
+#: src/views/xml_validator.py:76
+msgid "Valid!"
+msgstr "Valido!"
+
+#: src/views/xml_validator.py:78
+msgid "XML is compliant with the provided XSD schema."
+msgstr "XML è conforme allo schema XSD fornito."
+
+#: src/views/xml_validator.py:86
+msgid "Invalid!"
+msgstr "Invalido!"
+
+#: src/views/xml_validator.py:88
+#, python-brace-format
+msgid ""
+"XML is not compliant with the provided XSD scheme:\n"
+"{xsd_error}"
+msgstr ""
+"XML non è conforme allo schema XSD fornito:\n"
+"{xsd_error}"
+
+#: src/ui/window.ui:36
+msgid "Show/hide sidebar"
+msgstr "Mostra/nascondi sidebar"
+
+#: src/ui/window.ui:78
+msgid "_Keyboard Shortcuts"
+msgstr "_Scorciatoie da tastiera"
+
+#: src/ui/window.ui:82
+msgid "_About Dev Toolbox"
+msgstr "_Informazioni di Dev Toolbox"
+
+#: src/ui/widgets/date_area.ui:52 src/ui/views/timestamp.ui:49
+msgid "Now"
+msgstr "Ora"
+
+#: src/ui/widgets/date_area.ui:53
+msgid "Sets the current system date and time (local timezone)"
+msgstr "Imposta data e ora correnti del sistema (fuso orario locale)"
+
+#: src/ui/widgets/date_area.ui:73 src/ui/widgets/entry_row.ui:23
+#: src/ui/widgets/spin_area.ui:82 src/ui/widgets/text_area.ui:91
+#: src/ui/widgets/text_file_area.ui:109
+msgid "Copy to clipboard"
+msgstr "Copia negli appunti"
+
+#: src/ui/widgets/date_area.ui:105
+msgid "Year"
+msgstr "Anno"
+
+#: src/ui/widgets/date_area.ui:141
+msgid "Month"
+msgstr "Mese"
+
+#: src/ui/widgets/date_area.ui:176
+msgid "Day"
+msgstr "Giorno"
+
+#: src/ui/widgets/date_area.ui:220
+msgid "Hours"
+msgstr "Ora"
+
+#: src/ui/widgets/date_area.ui:256
+msgid "Minutes"
+msgstr "Minuti"
+
+#: src/ui/widgets/date_area.ui:291
+msgid "Seconds"
+msgstr "Secondi"
+
+#: src/ui/widgets/entry_row.ui:33 src/ui/widgets/spin_area.ui:89
+#: src/ui/widgets/text_area.ui:98 src/ui/widgets/text_file_area.ui:116
+msgid "Paste clipboard"
+msgstr "Incolla dagli appunti"
+
+#: src/ui/widgets/entry_row.ui:43 src/ui/widgets/image_area.ui:97
+#: src/ui/widgets/text_area.ui:105 src/ui/widgets/text_file_area.ui:123
+msgid "Clear input"
+msgstr "Elimina input"
+
+#: src/ui/widgets/image_area.ui:90 src/ui/widgets/text_file_area.ui:102
+msgid "Open image in another program"
+msgstr "Apri immagine in un programma esterno"
+
+#: src/ui/views/base_converter.ui:30
+msgid "Number Bases Converter"
+msgstr "Convertitore Basi Numeriche"
+
+#: src/ui/views/base_converter.ui:44
+msgid "Input numbers"
+msgstr "Inserisci numeri"
+
+#: src/ui/views/base_converter.ui:47
+msgid "Decimal"
+msgstr "Decimale"
+
+#: src/ui/views/base_converter.ui:56
+msgid "Binary"
+msgstr "Binario"
+
+#: src/ui/views/base_converter.ui:65
+msgid "Octal"
+msgstr "Ottale"
+
+#: src/ui/views/base_converter.ui:74
+msgid "Hexadecimal"
+msgstr "Esadecimale"
+
+#: src/ui/views/base_converter.ui:102
+msgid ""
+"Typing an unaccepted character (i.e. 'A' in the decimal field) will cause "
+"all the fields to reset to 0."
+msgstr ""
+"Scrivendo un carattere non valido (es. 'A' nel campo decimale) tutti i campi "
+"saranno resettati a 0."
+
+#: src/ui/views/colorblindness_simulator.ui:30
+msgid "Color Blindness Simulator"
+msgstr "Simulatore Daltonismo"
+
+#: src/ui/views/colorblindness_simulator.ui:45
+#: src/ui/views/contrast_checker.ui:45 src/ui/views/cron_converter.ui:46
+#: src/ui/views/formatter.ui:41 src/ui/views/gzip_compressor.ui:45
+#: src/ui/views/hash_generator.ui:45 src/ui/views/html_encoder.ui:45
+#: src/ui/views/image_converter.ui:46 src/ui/views/json_yaml.ui:45
+#: src/ui/views/lorem_generator.ui:45 src/ui/views/regex_tester.ui:45
+#: src/ui/views/text_inspector.ui:45 src/ui/views/url_encoder.ui:45
+#: src/ui/views/uuid_generator.ui:45
+msgid "Tool options"
+msgstr "Opzioni strumento"
+
+#: src/ui/views/colorblindness_simulator.ui:48
+msgid "Severity"
+msgstr "Severità"
+
+#: src/ui/views/colorblindness_simulator.ui:49
+msgid "Severity of the anomaly"
+msgstr "Severità dell'anomalia"
+
+#: src/ui/views/colorblindness_simulator.ui:90
+#: src/ui/views/text_inspector.ui:54
+msgid "Original"
+msgstr "Originale"
+
+#: src/ui/views/colorblindness_simulator.ui:98
+msgid "Protanopia"
+msgstr "Protanopia"
+
+#: src/ui/views/colorblindness_simulator.ui:110
+msgid "Deuteranopia"
+msgstr "Deuteranopia"
+
+#: src/ui/views/colorblindness_simulator.ui:115
+msgid "Tritanopia"
+msgstr "Tritanopia"
+
+#: src/ui/views/contrast_checker.ui:48 src/ui/views/contrast_checker.ui:57
+msgid "Text color"
+msgstr "Colore del testo"
+
+#: src/ui/views/contrast_checker.ui:49
+msgid "Color used for the text"
+msgstr "Colore usato per il testo"
+
+#: src/ui/views/contrast_checker.ui:66 src/ui/views/contrast_checker.ui:75
+msgid "Background color"
+msgstr "Colore sfondo"
+
+#: src/ui/views/contrast_checker.ui:67
+msgid "Color used for the background"
+msgstr "Colore usato per lo sfondo"
+
+#: src/ui/views/contrast_checker.ui:94
+msgid "Example"
+msgstr "Esempio"
+
+#: src/ui/views/contrast_checker.ui:146 src/ui/views/contrast_checker.ui:210
+msgid "small"
+msgstr "piccolo"
+
+#: src/ui/views/contrast_checker.ui:178 src/ui/views/contrast_checker.ui:242
+msgid "large"
+msgstr "grande"
+
+#: src/ui/views/cron_converter.ui:49
+msgid "Number of dates"
+msgstr "Numero di date"
+
+#: src/ui/views/cron_converter.ui:50
+msgid "Number of dates to be generated (up to 20)"
+msgstr "Numero di date da generare (max 20)"
+
+#: src/ui/views/cron_converter.ui:69
+msgid "Output format"
+msgstr "Formato dell'output"
+
+#: src/ui/views/cron_converter.ui:70
+msgid ""
+"Format used to display generated dates (<a href=\"https://strftime.org/"
+"\">python syntax</a>)"
+msgstr ""
+"Formato usato per mostrare le date generate (<a href=\"https://strftime.org/"
+"\">sintassi python</a>)"
+
+#: src/ui/views/cron_converter.ui:102
+msgid "CRON expression"
+msgstr "Expressione CRON"
+
+#: src/ui/views/cron_converter.ui:118
+msgid "Dates"
+msgstr "Date"
+
+#: src/ui/views/formatter.ui:44 src/ui/views/json_yaml.ui:62
+msgid "Indentations"
+msgstr "Indentazioni"
+
+#: src/ui/views/formatter.ui:45 src/ui/views/json_yaml.ui:63
+msgid "Number of spaces used for indentation"
+msgstr "Numero di spazio da usare per l'indentazione"
+
+#: src/ui/views/formatter.ui:78
+msgctxt "verb/action"
+msgid "Format"
+msgstr "Formatta"
+
+#: src/ui/views/gzip_compressor.ui:30
+msgid "GZip Compress & Decompress"
+msgstr "Compressore e de-compressore GZip"
+
+#: src/ui/views/gzip_compressor.ui:48 src/ui/views/html_encoder.ui:48
+#: src/ui/views/json_yaml.ui:48 src/ui/views/url_encoder.ui:48
+msgid "Direction"
+msgstr "Direzione"
+
+#: src/ui/views/gzip_compressor.ui:49
+msgid "Select the desired operation"
+msgstr "Seleziona l'operazione desiderata"
+
+#: src/ui/views/gzip_compressor.ui:53
+msgid "Compress"
+msgstr "Comprimi"
+
+#: src/ui/views/gzip_compressor.ui:54
+msgid "Decompress"
+msgstr "De-comprimi"
+
+#: src/ui/views/gzip_compressor.ui:78 src/ui/views/hash_generator.ui:110
+#: src/ui/views/html_encoder.ui:79 src/ui/views/json_yaml.ui:99
+#: src/ui/views/url_encoder.ui:101
+msgid "Input"
+msgstr "Input"
+
+#: src/ui/views/gzip_compressor.ui:90 src/ui/views/hash_generator.ui:122
+#: src/ui/views/html_encoder.ui:94 src/ui/views/json_yaml.ui:113
+#: src/ui/views/url_encoder.ui:115
+msgid "Output"
+msgstr "Output"
+
+#: src/ui/views/gzip_compressor.ui:121
+msgid ""
+"The compression result and the expected decompression input are base64 "
+"encoded."
+msgstr ""
+"Il risultato della compressione e l'input atteso per la de-compressione sono "
+"codificati in base64."
+
+#: src/ui/views/hash_generator.ui:30
+msgid "Hash Generator & Checker"
+msgstr "Generatore e Controllo Hash"
+
+#: src/ui/views/hash_generator.ui:48
+msgid "Hash to calculate"
+msgstr "Hash da calcolare"
+
+#: src/ui/views/hash_generator.ui:49
+msgid "Choose the hash type to calculate from the dropdown"
+msgstr "Scegli il tipo di hash da calcolare dal menù"
+
+#: src/ui/views/hash_generator.ui:65
+msgid "Check for integrity"
+msgstr "Controlla l'integrità"
+
+#: src/ui/views/hash_generator.ui:66
+msgid ""
+"If enabled the calculated hash will be checked against another provided hash "
+"to verify integrity"
+msgstr ""
+"Se attivato, l'hash calcolato sarà confrontato con l'altro hash fornito per "
+"verificare l'integrità"
+
+#: src/ui/views/hash_generator.ui:86
+msgid "Type the hash to check against"
+msgstr "Inserisci l'hash con cui confrontare"
+
+#: src/ui/views/html_encoder.ui:30
+msgid "HTML Encoder & Decoder"
+msgstr "Codificatore e Decodificatore HTML"
+
+#: src/ui/views/html_encoder.ui:49 src/ui/views/url_encoder.ui:49
+msgid "Select the desired encoding direction"
+msgstr "Seleziona la direzione di codifica desiderata"
+
+#: src/ui/views/html_encoder.ui:53 src/ui/views/url_encoder.ui:53
+msgid "Encode"
+msgstr "Codifica"
+
+#: src/ui/views/html_encoder.ui:54 src/ui/views/url_encoder.ui:54
+msgid "Decode"
+msgstr "Decodifica"
+
+#: src/ui/views/image_converter.ui:49
+msgctxt "noun"
+msgid "Format"
+msgstr "Formato"
+
+#: src/ui/views/image_converter.ui:50
+msgid "Select the desired output format"
+msgstr "Seleziona il formato dell'output desiderato"
+
+#: src/ui/views/image_converter.ui:77
+msgid "Image"
+msgstr "Immagine"
+
+#: src/ui/views/image_converter.ui:79
+msgid "Convert"
+msgstr "Converti"
+
+#: src/ui/views/json_yaml.ui:30
+msgid "JSON - YAML Converter"
+msgstr "Convertitore JSON - YAML"
+
+#: src/ui/views/json_yaml.ui:49
+msgid "Specify what format is the input and the desired output"
+msgstr "Specifica il formato di input e dell'output desiderato"
+
+#: src/ui/views/jwt_decoder.ui:30
+msgid "JWT tokens decoder"
+msgstr "Decodificatore Token JWT"
+
+#: src/ui/views/jwt_decoder.ui:44
+msgid "Token"
+msgstr "Token"
+
+#: src/ui/views/jwt_decoder.ui:67
+msgid "Header"
+msgstr "Header"
+
+#: src/ui/views/jwt_decoder.ui:75
+msgid "Payload"
+msgstr "Payload"
+
+#: src/ui/views/lorem_generator.ui:30
+msgid "Lorem Ipsum Generator"
+msgstr "Generatore Lorem Ipsum"
+
+#: src/ui/views/lorem_generator.ui:48
+msgid "Begin with \"Lorem ipsum dolor sit amet\""
+msgstr "Inizia con \"Lorem ipsum dolor sit amet\""
+
+#: src/ui/views/lorem_generator.ui:61 src/ui/views/uuid_generator.ui:72
+msgid "Amount"
+msgstr "Quantità"
+
+#: src/ui/views/lorem_generator.ui:66
+msgid "Words"
+msgstr "Parole"
+
+#: src/ui/views/lorem_generator.ui:67
+msgid "Sentences"
+msgstr "Frasi"
+
+#: src/ui/views/lorem_generator.ui:68
+msgid "Paragraphs"
+msgstr "Paragrafi"
+
+#: src/ui/views/lorem_generator.ui:99
+msgid "Generated text"
+msgstr "Testo generato"
+
+#: src/ui/views/markdown_preview.ui:53
+msgid "Markdown"
+msgstr "Markdown"
+
+#: src/ui/views/markdown_preview.ui:69
+msgid "Preview"
+msgstr "Anteprima"
+
+#: src/ui/views/regex_tester.ui:30
+msgid "Regular Expression Tester"
+msgstr "Tester di Espressioni regolari"
+
+#: src/ui/views/regex_tester.ui:51
+msgid "Regex to test"
+msgstr "Regex da testare"
+
+#: src/ui/views/text_diff.ui:48
+msgid "Old Text"
+msgstr "Testo vecchio"
+
+#: src/ui/views/text_diff.ui:60
+msgid "New Text"
+msgstr "Testo nuovo"
+
+#: src/ui/views/text_diff.ui:76
+msgid "Differences"
+msgstr "Differenze"
+
+#: src/ui/views/text_inspector.ui:48
+msgid "Change case"
+msgstr "Cambia maiuscole/minuscole"
+
+#: src/ui/views/text_inspector.ui:49
+msgid "Choose a case to apply to the text"
+msgstr "Scegli il formato da applicare al testo"
+
+#: src/ui/views/text_inspector.ui:85
+msgid "Information"
+msgstr "Informazioni"
+
+#: src/ui/views/text_inspector.ui:88
+msgid "Cursor"
+msgstr "Cursore"
+
+#: src/ui/views/text_inspector.ui:101
+msgid "Line:"
+msgstr "Linea:"
+
+#: src/ui/views/text_inspector.ui:117
+msgid "Column:"
+msgstr "Colonna:"
+
+#: src/ui/views/text_inspector.ui:146
+msgid "Characters:"
+msgstr "Caratteri:"
+
+#: src/ui/views/text_inspector.ui:162
+msgid "Words:"
+msgstr "Parole:"
+
+#: src/ui/views/text_inspector.ui:178
+msgid "Lines:"
+msgstr "Linee:"
+
+#: src/ui/views/timestamp.ui:30
+msgid "Timestamp Converter"
+msgstr "Convertitore Timestamp"
+
+#: src/ui/views/timestamp.ui:50
+msgid "Sets the current system timestamp"
+msgstr "Imposta il timestamp corrente del sistema"
+
+#: src/ui/views/timestamp.ui:57
+msgid "Date"
+msgstr "Data"
+
+#: src/ui/views/url_encoder.ui:30
+msgid "URL Encoder & Decoder"
+msgstr "Codificatore e Decodificatore URL"
+
+#: src/ui/views/url_encoder.ui:68
+msgid "Space encoding"
+msgstr "Codifica spazio"
+
+#: src/ui/views/url_encoder.ui:69
+msgid "Select the desired encoding for the space character"
+msgstr "Seleziona la codifica desiderata per il carattere spazio"
+
+#: src/ui/views/uuid_generator.ui:30
+msgid "UUID Generator"
+msgstr "Generatore UUID"
+
+#: src/ui/views/uuid_generator.ui:48
+msgid "Version"
+msgstr "Versione"
+
+#: src/ui/views/uuid_generator.ui:49
+msgid "Choose the UUID version to generate"
+msgstr "Selezione la versione del/degli UUID da generare"
+
+#. TRANSLATORS: translate only inside ()
+#: src/ui/views/uuid_generator.ui:55
+msgid "Version-1 (MAC address)"
+msgstr "Version-1 (Indirizzo MAC)"
+
+#. TRANSLATORS: translate only inside ()
+#: src/ui/views/uuid_generator.ui:58
+msgid "Version-4 (Random)"
+msgstr "Version-4 (Casuale)"
+
+#. TRANSLATORS: translate only inside ()
+#: src/ui/views/uuid_generator.ui:61
+msgid "Version-6 (Gregorian Time)"
+msgstr "Version-6 (Calendario Gregoriano)"
+
+#. TRANSLATORS: translate only inside ()
+#: src/ui/views/uuid_generator.ui:63
+msgid "Version-7 (UNIX Epoch)"
+msgstr "Version-7 (Epoch UNIX)"
+
+#: src/ui/views/uuid_generator.ui:73
+msgid "Number of UUIDs to be generated (up to 50)"
+msgstr "Numero di UUID da generare (max 50)"
+
+#: src/ui/views/uuid_generator.ui:101
+msgid "Generated UUIDs"
+msgstr "UUID generati"
+
+#: src/ui/gtk/help-overlay.ui:18
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Generale"
+
+#: src/ui/gtk/help-overlay.ui:21
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr "Mostra scorciatoie"
+
+#: src/ui/gtk/help-overlay.ui:27
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Esci"
+
+#: src/formatters/json.py:13
+msgid "JSON Formatter"
+msgstr "Formattatore JSON"
+
+#: src/formatters/json.py:16
+msgid "Type JSON code here"
+msgstr "Scrivi il codice JSON qua"
+
+#: src/formatters/sql.py:13
+msgid "SQL Formatter"
+msgstr "Formattatore SQL"
+
+#: src/formatters/sql.py:16
+msgid "Type SQL code here"
+msgstr "Scrivi il codice SQL qua"
+
+#: src/formatters/xml.py:15
+msgid "XML Formatter"
+msgstr "Formattatore XML"
+
+#: src/formatters/xml.py:18
+msgid "Type XML code here"
+msgstr "Scrivi il codice XML qua"

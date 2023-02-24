@@ -42,8 +42,7 @@ class FormatterView(Adw.Bin):
         self._textarea.set_spinner_spin(False)
 
     def _on_error(self, source_widget:GObject.Object, error:str):
-        error_str = _("Error")
-        self._toast.add_toast(Adw.Toast(title=f"{error_str}: {error}", priority=Adw.ToastPriority.HIGH))
+        self._toast.add_toast(Adw.Toast(title=_("Error: {error}").format(error=error), priority=Adw.ToastPriority.HIGH))
 
     def _on_indents_changed(self, user_data:GObject.GPointer):
         self._format_text()
@@ -71,7 +70,7 @@ class FormatterView(Adw.Bin):
         elif len(text) > 0:
             self._textarea.set_spinner_spin(False)
             self._textarea.add_css_class("border-red")
-            self._toast.add_toast(Adw.Toast(title=_("Text is not in the correct format. Check if you misspelled something or if all parenthesis are closed."), priority=Adw.ToastPriority.HIGH))
+            self._toast.add_toast(Adw.Toast(title=_("Text is not in the correct format. Check if you misspelled something or if all parentheses are closed."), priority=Adw.ToastPriority.HIGH))
         else:
             self._textarea.set_spinner_spin(False)
 

@@ -24,7 +24,7 @@ class GzipCompressorView(Adw.Bin):
     _service = GzipCompressorService()
 
     # Toast messages
-    _file_saved_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH, button_label=_("Open"))
+    _file_saved_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH, button_label=_("Open folder"))
     _error_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH)
     _cannot_convert = Adw.Toast(title=_("Cannot decompress from an image or a file"), priority=Adw.ToastPriority.HIGH)
 
@@ -55,7 +55,7 @@ class GzipCompressorView(Adw.Bin):
 
     def _on_file_saved(self, source_objcet:GObject.Object, file_path:str):
         self._output_area.set_file_path(file_path)
-        self._file_saved_toast.set_title(f'{_("Successfully saved as")} {file_path}')
+        self._file_saved_toast.set_title(_("Successfully saved as {save_path}").format(save_path=file_path))
         self._toast.add_toast(self._file_saved_toast)
 
     def _on_view_cleared(self, source_widget:GObject.Object):
@@ -64,8 +64,7 @@ class GzipCompressorView(Adw.Bin):
         self._output_area.clear()
 
     def _on_error(self, source_widget:GObject.Object, error:str):
-        error_str = _("Error")
-        self._error_toast.set_title(f"{error_str}: {error}")
+        self._error_toast.set_title(_("Error: {error}").format(error=error))
         self._toast.add_toast(self._error_toast)
 
     def _convert(self):
