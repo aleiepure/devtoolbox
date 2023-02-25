@@ -97,4 +97,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="image-symbolic.svg">../data/icons/symbolic/image-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="info-symbolic.svg">../data/icons/symbolic/info-symbolic.svg</file>
   </gresource>
+  <gresource prefix="/me/iepure/devtoolbox/markdown-preview/">
+    <file alias="github-markdown-dark.css">../data/markdown-preview/github-markdown-dark.css</file>
+    <file alias="fenced-code-colors.css">../data/markdown-preview/fenced-code-colors.css</file>
+    <file alias="scrollpos-script.js">../data/markdown-preview/scrollpos-script.js</file>
+  </gresource>
 </gresources>
