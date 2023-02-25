@@ -1,5 +1,5 @@
 data/me.iepure.devtoolbox.desktop.in.in
-data/me.iepure.devtoolbox.appdata.xml.in
+data/me.iepure.devtoolbox.metainfo.xml.in
 data/me.iepure.devtoolbox.gschema.xml
 
 src/main.py

@@ -27,8 +27,8 @@ if desktop_utils.found()
 endif
 
 appstream_file = i18n.merge_file(
-        input: 'me.iepure.devtoolbox.appdata.xml.in',
-       output: 'me.iepure.devtoolbox.appdata.xml',
+        input: 'me.iepure.devtoolbox.metainfo.xml.in',
+       output: 'me.iepure.devtoolbox.metainfo.xml',
        po_dir: '../po',
       install: true,
   install_dir: join_paths(get_option('datadir'), 'appdata')

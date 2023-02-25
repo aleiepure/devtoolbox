@@ -64,6 +64,10 @@ SPDX-License-Identifier: CC0-1.0
     <display_width compare="ge">1200</display_width>
   </requires>
   <releases>
-    <release version="1.0" date="2014-04-12" />
+    <release version="1.0" date="2023-02-25">
+      <description>
+        <p>First release</p>
+      </description>
+    </release>
   </releases>
 </component>
