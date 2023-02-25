@@ -170,10 +170,11 @@ class ImageArea(Adw.Bin):
         self._native = None
 
     def _save_file(self, destination:Gio.File):
+        self._save_destination_file = destination
         self._imageview.get_file().copy_async(destination, Gio.FileCopyFlags.OVERWRITE, 0, None, None, None, self._on_save_file_complete, None)
 
-    def _on_save_file_complete(self, file:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer=None):
-        res = file.copy_finish(result)
+    def _on_save_file_complete(self, source_file:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer=None):
+        res = source_file.copy_finish(result)
 
         self._save_btn.set_sensitive(True)
         self._stack.set_visible_child_name("image")
@@ -181,7 +182,7 @@ class ImageArea(Adw.Bin):
             self.emit("error", _("Unable to save image."))
             return
 
-        self.emit("saved", file.get_path())
+        self.emit("saved", self._save_destination_file.get_path())
 
     def _clear(self):
         self._view_btn.set_visible(False)
