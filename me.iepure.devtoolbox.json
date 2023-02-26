@@ -9,8 +9,7 @@
         "--share=ipc",
         "--socket=fallback-x11",
         "--device=dri",
-        "--socket=wayland",
-        "--filesystem=/tmp"
+        "--socket=wayland"
     ],
     "cleanup" : [
         "/include",
@@ -29,6 +28,10 @@
             "name" : "devtoolbox",
             "builddir" : true,
             "buildsystem" : "meson",
+            "post-install": [
+                "mv /app/bin/devtoolbox /app/bin/devtoolbox-bin",
+                "install -Dm755 /app/devtoolbox/devtoolbox-run-script /app/bin/devtoolbox"
+            ],
             "sources" : [
                 {
                     "type" : "git",
