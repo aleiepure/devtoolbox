@@ -17,7 +17,7 @@ class XmlFormatter(Formatter):
     _utility_name = "xml-formatter"
     _textarea_name = _("Type XML code here")
     _language = "xml"
-    _extensions = ["xml", "html", "htm", "svg"]
+    _extensions = ["xml", "html", "htm", "svg", "ui"]
 
     def _format(self, text:str, indents:int):
         indent_str = ""
