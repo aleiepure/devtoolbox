@@ -541,12 +541,28 @@ msgstr ""
 msgid "Example"
 msgstr ""
 
+#: src/ui/views/contrast_checker.ui:105
+msgid "Lorem ipsum dolor sit amet"
+msgstr ""
+
+#: src/ui/views/contrast_checker.ui:113
+msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
+msgstr ""
+
+#: src/ui/views/contrast_checker.ui:138 src/ui/views/contrast_checker.ui:170
+msgid "AA"
+msgstr ""
+
 #: src/ui/views/contrast_checker.ui:146 src/ui/views/contrast_checker.ui:210
 msgid "small"
 msgstr ""
 
 #: src/ui/views/contrast_checker.ui:178 src/ui/views/contrast_checker.ui:242
 msgid "large"
+msgstr ""
+
+#: src/ui/views/contrast_checker.ui:202 src/ui/views/contrast_checker.ui:234
+msgid "AAA"
 msgstr ""
 
 #: src/ui/views/cron_converter.ui:49
@@ -772,6 +788,58 @@ msgstr ""
 
 #: src/ui/views/text_inspector.ui:49
 msgid "Choose a case to apply to the text"
+msgstr ""
+
+#: src/ui/views/text_inspector.ui:55
+msgid "Sentence case"
+msgstr ""
+
+#: src/ui/views/text_inspector.ui:56
+msgid "lower case"
+msgstr ""
+
+#: src/ui/views/text_inspector.ui:57
+msgid "UPPER CASE"
+msgstr ""
+
+#: src/ui/views/text_inspector.ui:58
+msgid "Title Case"
+msgstr ""
+
+#: src/ui/views/text_inspector.ui:59
+msgid "camelCase"
+msgstr ""
+
+#: src/ui/views/text_inspector.ui:60
+msgid "PascalCase"
+msgstr ""
+
+#: src/ui/views/text_inspector.ui:61
+msgid "snake_case"
+msgstr ""
+
+#: src/ui/views/text_inspector.ui:62
+msgid "CONSTANT_CASE"
+msgstr ""
+
+#: src/ui/views/text_inspector.ui:63
+msgid "kebab-case"
+msgstr ""
+
+#: src/ui/views/text_inspector.ui:64
+msgid "COBOL-CASE"
+msgstr ""
+
+#: src/ui/views/text_inspector.ui:65
+msgid "Train-Case"
+msgstr ""
+
+#: src/ui/views/text_inspector.ui:66
+msgid "aLtErNaTiNg CaSe"
+msgstr ""
+
+#: src/ui/views/text_inspector.ui:67
+msgid "ReVeRsE aLtErNaTiNg CaSe"
 msgstr ""
 
 #: src/ui/views/text_inspector.ui:85

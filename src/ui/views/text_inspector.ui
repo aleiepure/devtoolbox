@@ -52,19 +52,19 @@ SPDX-License-Identifier: GPL-3.0-or-later
                               <object class="GtkStringList">
                                 <items>
                                   <item translatable="yes">Original</item>
-                                  <item>Sentence case</item>
-                                  <item>lower case</item>
-                                  <item>UPPER CASE</item>
-                                  <item>Title Case</item>
-                                  <item>camelCase</item>
-                                  <item>PascalCase</item>
-                                  <item>snake_case</item>
-                                  <item>CONSTANT_CASE</item>
-                                  <item>kebab-case</item>
-                                  <item>COBOL-CASE</item>
-                                  <item>Train-Case</item>
-                                  <item>aLtErNaTiNg CaSe</item>
-                                  <item>ReVeRsE aLtErNaTiNg CaSe</item>
+                                  <item translatable="yes">Sentence case</item>
+                                  <item translatable="yes">lower case</item>
+                                  <item translatable="yes">UPPER CASE</item>
+                                  <item translatable="yes">Title Case</item>
+                                  <item translatable="yes">camelCase</item>
+                                  <item translatable="yes">PascalCase</item>
+                                  <item translatable="yes">snake_case</item>
+                                  <item translatable="yes">CONSTANT_CASE</item>
+                                  <item translatable="yes">kebab-case</item>
+                                  <item translatable="yes">COBOL-CASE</item>
+                                  <item translatable="yes">Train-Case</item>
+                                  <item translatable="yes">aLtErNaTiNg CaSe</item>
+                                  <item translatable="yes">ReVeRsE aLtErNaTiNg CaSe</item>
                                 </items>
                               </object>
                             </property>
