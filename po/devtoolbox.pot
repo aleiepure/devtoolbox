@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-04 11:42+0100\n"
+"POT-Creation-Date: 2023-03-04 12:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -392,6 +392,11 @@ msgstr ""
 
 #: src/ui/window.ui:82
 msgid "_About Dev Toolbox"
+msgstr ""
+
+#. TRANSLATORS: Copy the string and add your name on a new line (add '\n' if necessary)
+#: src/ui/about_window.ui:32
+msgid "Alessandro Iepure https://ale.iepure.me"
 msgstr ""
 
 #: src/ui/widgets/date_area.ui:52 src/ui/views/timestamp.ui:49
