@@ -29,6 +29,6 @@ Some icons are copyright of the GNOME Project</property>
     <property name="artists"></property>
 
     <!-- TRANSLATORS: Copy the string and add your name on a new line (add '\n' if necessary) -->
-    <property name="translator-credits" translatable="yes">Alessandro Iepure https://ale.iepure.me</property>
+    <property name="translator-credits" translatable="yes">translator-credits</property>
   </object>
 </interface>
