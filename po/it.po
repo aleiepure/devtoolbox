@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-04 12:09+0100\n"
-"PO-Revision-Date: 2023-03-04 12:10+0100\n"
+"POT-Creation-Date: 2023-03-04 17:33+0100\n"
+"PO-Revision-Date: 2023-03-04 17:34+0100\n"
 "Last-Translator: Alessandro Iepure\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -406,9 +406,9 @@ msgstr "_Scorciatoie da tastiera"
 msgid "_About Dev Toolbox"
 msgstr "_Informazioni di Dev Toolbox"
 
-#. TRANSLATORS: Copy the string and add your name on a new line (add '\n' if necessary)
-#: src/ui/about_window.ui:32
-msgid "Alessandro Iepure https://ale.iepure.me"
+#. TRANSLATORS: replace this with your name (with optional email or website)
+#: src/ui/about_window.ui:26
+msgid "translator-credits"
 msgstr "Alessandro Iepure https://ale.iepure.me"
 
 #: src/ui/widgets/date_area.ui:52 src/ui/views/timestamp.ui:49
@@ -928,3 +928,6 @@ msgstr "Formattatore XML"
 #: src/formatters/xml.py:18
 msgid "Type XML code here"
 msgstr "Scrivi il codice XML qua"
+
+#~ msgid "Alessandro Iepure https://ale.iepure.me"
+#~ msgstr "Alessandro Iepure https://ale.iepure.me"

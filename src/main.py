@@ -14,8 +14,6 @@ from gi.repository import Gtk, Gio, Adw, GObject, GtkSource, Gdk
 
 from .window import DevtoolboxWindow
 
-from .credits import *
-
 from .widgets.utility_title import UtilityTitle
 from .widgets.text_area import TextArea
 from .widgets.file_view import FileView
@@ -77,9 +75,7 @@ class DevtoolboxApplication(Adw.Application):
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
-        builder = Gtk.Builder.new_from_resource(
-            "/me/iepure/devtoolbox/ui/about_window.ui"
-        )
+        builder = Gtk.Builder.new_from_resource("/me/iepure/devtoolbox/ui/about_window.ui")
         about_window = builder.get_object("about_window")
         if self.debug == "True":
             about_window.set_application_name(f"{about_window.get_application_name()}\n(Development snapshot)")

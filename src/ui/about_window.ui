@@ -20,15 +20,9 @@ Some icons are copyright of the GNOME Project</property>
     <property name="application-icon">me.iepure.devtoolbox</property>
     <property name="license-type">gpl-3-0</property>
     <property name="developer-name">Alessandro Iepure</property>
-
-<!-- To add names writes them on a new line. The closing tag (</property> should be near the last name)Example:
-    <property ...>John Smith
-      Bob Johnson</property>
--->
     <property name="developers">Alessandro Iepure https://ale.iepure.me</property>
     <property name="artists"></property>
-
-    <!-- TRANSLATORS: Copy the string and add your name on a new line (add '\n' if necessary) -->
+    <!-- TRANSLATORS: replace this with your name (with optional email or website) -->
     <property name="translator-credits" translatable="yes">translator-credits</property>
   </object>
 </interface>
