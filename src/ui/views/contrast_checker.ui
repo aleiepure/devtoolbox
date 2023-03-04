@@ -102,7 +102,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="spacing">5</property>
                             <child>
                               <object class="GtkLabel" id="_example_title_lbl">
-                                <property name="label">Lorem ipsum dolor sit amet</property>
+                                <property name="label" translatable="yes">Lorem ipsum dolor sit amet</property>
                                 <style>
                                   <class name="title-1" />
                                 </style>
@@ -110,7 +110,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             </child>
                             <child>
                               <object class="GtkLabel" id="_example_lbl">
-                                <property name="label">velit laboris excepteur aliqua nostrud dolore anim ad qui esse</property>
+                                <property name="label" translatable="yes">velit laboris excepteur aliqua nostrud dolore anim ad qui esse</property>
                               </object>
                             </child>
                           </object>
@@ -135,7 +135,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             </style>
                             <child>
                               <object class="GtkLabel">
-                                <property name="label">AA</property>
+                                <property name="label" translatable="yes">AA</property>
                                 <style>
                                   <class name="title-2" />
                                 </style>
@@ -167,7 +167,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             </style>
                             <child>
                               <object class="GtkLabel">
-                                <property name="label">AA</property>
+                                <property name="label" translatable="yes">AA</property>
                                 <style>
                                   <class name="title-2" />
                                 </style>
@@ -199,7 +199,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             </style>
                             <child>
                               <object class="GtkLabel">
-                                <property name="label">AAA</property>
+                                <property name="label" translatable="yes">AAA</property>
                                 <style>
                                   <class name="title-2" />
                                 </style>
@@ -231,7 +231,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             </style>
                             <child>
                               <object class="GtkLabel">
-                                <property name="label">AAA</property>
+                                <property name="label" translatable="yes">AAA</property>
                                 <style>
                                   <class name="title-2" />
                                 </style>
