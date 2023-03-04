@@ -396,7 +396,7 @@ msgstr ""
 
 #. TRANSLATORS: Copy the string and add your name on a new line (add '\n' if necessary)
 #: src/ui/about_window.ui:32
-msgid "Alessandro Iepure https://ale.iepure.me"
+msgid "translator-credits"
 msgstr ""
 
 #: src/ui/widgets/date_area.ui:52 src/ui/views/timestamp.ui:49
