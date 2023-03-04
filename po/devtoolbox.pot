@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-25 10:50+0100\n"
+"POT-Creation-Date: 2023-03-04 11:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -713,7 +713,7 @@ msgstr ""
 msgid "Begin with \"Lorem ipsum dolor sit amet\""
 msgstr ""
 
-#: src/ui/views/lorem_generator.ui:61 src/ui/views/uuid_generator.ui:72
+#: src/ui/views/lorem_generator.ui:61 src/ui/views/uuid_generator.ui:68
 msgid "Amount"
 msgstr ""
 
@@ -833,31 +833,35 @@ msgstr ""
 msgid "Choose the UUID version to generate"
 msgstr ""
 
-#. TRANSLATORS: translate only inside ()
+#: src/ui/views/uuid_generator.ui:54
+msgid "Version 1 (MAC address)"
+msgstr ""
+
 #: src/ui/views/uuid_generator.ui:55
-msgid "Version-1 (MAC address)"
+msgid "Version 3"
 msgstr ""
 
-#. TRANSLATORS: translate only inside ()
+#: src/ui/views/uuid_generator.ui:56
+msgid "Version 4 (Random)"
+msgstr ""
+
+#: src/ui/views/uuid_generator.ui:57
+msgid "Version 5"
+msgstr ""
+
 #: src/ui/views/uuid_generator.ui:58
-msgid "Version-4 (Random)"
+msgid "Version 6 (Gregorian Time)"
 msgstr ""
 
-#. TRANSLATORS: translate only inside ()
-#: src/ui/views/uuid_generator.ui:61
-msgid "Version-6 (Gregorian Time)"
+#: src/ui/views/uuid_generator.ui:59
+msgid "Version 7 (UNIX Epoch)"
 msgstr ""
 
-#. TRANSLATORS: translate only inside ()
-#: src/ui/views/uuid_generator.ui:63
-msgid "Version-7 (UNIX Epoch)"
-msgstr ""
-
-#: src/ui/views/uuid_generator.ui:73
+#: src/ui/views/uuid_generator.ui:69
 msgid "Number of UUIDs to be generated (up to 50)"
 msgstr ""
 
-#: src/ui/views/uuid_generator.ui:101
+#: src/ui/views/uuid_generator.ui:97
 msgid "Generated UUIDs"
 msgstr ""
 

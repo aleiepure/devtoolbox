@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-25 10:50+0100\n"
-"PO-Revision-Date: 2023-02-25 10:50+0100\n"
+"POT-Creation-Date: 2023-03-04 11:42+0100\n"
+"PO-Revision-Date: 2023-03-04 11:43+0100\n"
 "Last-Translator: Alessandro Iepure\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -733,7 +733,7 @@ msgstr "Generatore Lorem Ipsum"
 msgid "Begin with \"Lorem ipsum dolor sit amet\""
 msgstr "Inizia con \"Lorem ipsum dolor sit amet\""
 
-#: src/ui/views/lorem_generator.ui:61 src/ui/views/uuid_generator.ui:72
+#: src/ui/views/lorem_generator.ui:61 src/ui/views/uuid_generator.ui:68
 msgid "Amount"
 msgstr "Quantità"
 
@@ -853,31 +853,35 @@ msgstr "Versione"
 msgid "Choose the UUID version to generate"
 msgstr "Selezione la versione del/degli UUID da generare"
 
-#. TRANSLATORS: translate only inside ()
+#: src/ui/views/uuid_generator.ui:54
+msgid "Version 1 (MAC address)"
+msgstr "Versione 1 (Indirizzo MAC)"
+
 #: src/ui/views/uuid_generator.ui:55
-msgid "Version-1 (MAC address)"
-msgstr "Version-1 (Indirizzo MAC)"
+msgid "Version 3"
+msgstr "Versione 3"
 
-#. TRANSLATORS: translate only inside ()
+#: src/ui/views/uuid_generator.ui:56
+msgid "Version 4 (Random)"
+msgstr "Versione 4 (Casuale)"
+
+#: src/ui/views/uuid_generator.ui:57
+msgid "Version 5"
+msgstr "Versione 5"
+
 #: src/ui/views/uuid_generator.ui:58
-msgid "Version-4 (Random)"
-msgstr "Version-4 (Casuale)"
+msgid "Version 6 (Gregorian Time)"
+msgstr "Versione 6 (Calendario Gregoriano)"
 
-#. TRANSLATORS: translate only inside ()
-#: src/ui/views/uuid_generator.ui:61
-msgid "Version-6 (Gregorian Time)"
-msgstr "Version-6 (Calendario Gregoriano)"
+#: src/ui/views/uuid_generator.ui:59
+msgid "Version 7 (UNIX Epoch)"
+msgstr "Versione 7 (Epoch UNIX)"
 
-#. TRANSLATORS: translate only inside ()
-#: src/ui/views/uuid_generator.ui:63
-msgid "Version-7 (UNIX Epoch)"
-msgstr "Version-7 (Epoch UNIX)"
-
-#: src/ui/views/uuid_generator.ui:73
+#: src/ui/views/uuid_generator.ui:69
 msgid "Number of UUIDs to be generated (up to 50)"
 msgstr "Numero di UUID da generare (max 50)"
 
-#: src/ui/views/uuid_generator.ui:101
+#: src/ui/views/uuid_generator.ui:97
 msgid "Generated UUIDs"
 msgstr "UUID generati"
 

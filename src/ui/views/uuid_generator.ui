@@ -51,16 +51,12 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <property name="model">
                               <object class="GtkStringList">
                                 <items>
-                                  <!-- TRANSLATORS: translate only inside () -->
-                                  <item translatable="yes">Version-1 (MAC address)</item>
-                                  <item>Version-3</item>
-                                  <!-- TRANSLATORS: translate only inside () -->
-                                  <item translatable="yes">Version-4 (Random)</item>
-                                  <item>Version-5</item>
-                                  <!-- TRANSLATORS: translate only inside () -->
-                                  <item translatable="yes">Version-6 (Gregorian Time)</item>
-                                  <!-- TRANSLATORS: translate only inside () -->
-                                  <item translatable="yes">Version-7 (UNIX Epoch)</item>
+                                  <item translatable="yes">Version 1 (MAC address)</item>
+                                  <item translatable="yes">Version 3</item>
+                                  <item translatable="yes">Version 4 (Random)</item>
+                                  <item translatable="yes">Version 5</item>
+                                  <item translatable="yes">Version 6 (Gregorian Time)</item>
+                                  <item translatable="yes">Version 7 (UNIX Epoch)</item>
                                 </items>
                               </object>
                             </property>
