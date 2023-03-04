@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-04 17:33+0100\n"
+"POT-Creation-Date: 2023-03-04 19:17+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,7 +67,7 @@ msgstr ""
 msgid "Regex tester"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:184
+#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:185
 #: src/ui/views/markdown_preview.ui:31
 msgid "Markdown Previewer"
 msgstr ""
@@ -84,156 +84,160 @@ msgstr ""
 msgid "First release"
 msgstr ""
 
-#: src/window.py:61 src/ui/views/json_yaml.ui:31
+#: src/window.py:62 src/ui/views/json_yaml.ui:31
 msgid "Convert JSON documents to YAML and vice-versa"
 msgstr ""
 
-#: src/window.py:65 src/ui/views/timestamp.ui:45
+#: src/window.py:66 src/ui/views/timestamp.ui:45
 msgid "Timestamp"
 msgstr ""
 
-#: src/window.py:68 src/ui/views/timestamp.ui:31
+#: src/window.py:69 src/ui/views/timestamp.ui:31
 msgid "Convert UNIX timestamps to and from plain dates"
 msgstr ""
 
-#: src/window.py:72
+#: src/window.py:73
 msgid "Number Bases"
 msgstr ""
 
-#: src/window.py:75 src/ui/views/base_converter.ui:31
+#: src/window.py:76 src/ui/views/base_converter.ui:31
 msgid "Convert numbers between bases"
 msgstr ""
 
-#: src/window.py:79 src/ui/views/cron_converter.ui:31
+#: src/window.py:80 src/ui/views/cron_converter.ui:31
 msgid "CRON Parser"
 msgstr ""
 
-#: src/window.py:82 src/ui/views/cron_converter.ui:32
+#: src/window.py:83 src/ui/views/cron_converter.ui:32
 msgid "Convert CRON expressions to time and date"
 msgstr ""
 
-#: src/window.py:89 src/ui/views/html_encoder.ui:31
+#: src/window.py:90 src/ui/views/html_encoder.ui:31
 msgid "Encode and decode special characters using the HTML format"
 msgstr ""
 
-#: src/window.py:96 src/ui/views/url_encoder.ui:31
+#: src/window.py:97 src/ui/views/url_encoder.ui:31
 msgid "Encode and decode special characters inside URLs"
 msgstr ""
 
-#: src/window.py:103 src/ui/views/gzip_compressor.ui:31
+#: src/window.py:104 src/ui/views/gzip_compressor.ui:31
 msgid "Compress and decompress files and texts using GZip"
 msgstr ""
 
-#: src/window.py:110 src/ui/views/jwt_decoder.ui:31
+#: src/window.py:111 src/ui/views/jwt_decoder.ui:31
 msgid "Decode JWT tokens to header and payload"
 msgstr ""
 
-#: src/window.py:117 src/formatters/json.py:14
+#: src/window.py:118 src/formatters/json.py:14
 msgid "Format JSON documents"
 msgstr ""
 
-#: src/window.py:124 src/formatters/sql.py:14
+#: src/window.py:125 src/formatters/sql.py:14
 msgid "Format SQL documents"
 msgstr ""
 
-#: src/window.py:131 src/formatters/xml.py:16
+#: src/window.py:132 src/formatters/xml.py:16
 msgid "Format XML documents"
 msgstr ""
 
-#: src/window.py:138 src/ui/views/hash_generator.ui:31
+#: src/window.py:139 src/ui/views/hash_generator.ui:31
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
 msgstr ""
 
-#: src/window.py:145 src/ui/views/lorem_generator.ui:31
+#: src/window.py:146 src/ui/views/lorem_generator.ui:31
 msgid "Generate lorem ipsum placeholder text"
 msgstr ""
 
-#: src/window.py:152 src/ui/views/uuid_generator.ui:31
+#: src/window.py:153 src/ui/views/uuid_generator.ui:31
 msgid "Generate Universally Unique IDs (UUID)"
 msgstr ""
 
-#: src/window.py:156 src/ui/views/text_inspector.ui:30
+#: src/window.py:157 src/ui/views/text_inspector.ui:30
 msgid "Text Inspector & Case Converter"
 msgstr ""
 
-#: src/window.py:159 src/ui/views/text_inspector.ui:31
+#: src/window.py:160 src/ui/views/text_inspector.ui:31
 msgid "View statistics about text and change sentence cases"
 msgstr ""
 
-#: src/window.py:163
+#: src/window.py:164
 msgid "Regex Tester"
 msgstr ""
 
-#: src/window.py:166 src/ui/views/regex_tester.ui:31
+#: src/window.py:167 src/ui/views/regex_tester.ui:31
 msgid "Find matching strings inside a text"
 msgstr ""
 
-#: src/window.py:170 src/ui/views/text_diff.ui:30
+#: src/window.py:171 src/ui/views/text_diff.ui:30
 msgid "Text Diff"
 msgstr ""
 
-#: src/window.py:173 src/ui/views/text_diff.ui:31
+#: src/window.py:174 src/ui/views/text_diff.ui:31
 msgid "Analyze two texts and find differences"
 msgstr ""
 
-#: src/window.py:177 src/ui/views/xml_validator.ui:30
+#: src/window.py:178 src/ui/views/xml_validator.ui:30
 msgid "XML Scheme Validator"
 msgstr ""
 
-#: src/window.py:180 src/ui/views/xml_validator.ui:31
+#: src/window.py:181 src/ui/views/xml_validator.ui:31
 msgid "Check an XML file against an XSD schema"
 msgstr ""
 
-#: src/window.py:187 src/ui/views/markdown_preview.ui:32
+#: src/window.py:188 src/ui/views/markdown_preview.ui:32
 msgid "Preview markdown code as you type"
 msgstr ""
 
-#: src/window.py:191 src/ui/views/contrast_checker.ui:30
+#: src/window.py:192 src/ui/views/contrast_checker.ui:30
 msgid "Contrast Checker"
 msgstr ""
 
-#: src/window.py:194 src/ui/views/contrast_checker.ui:31
+#: src/window.py:195 src/ui/views/contrast_checker.ui:31
 msgid "Check a color combination for WCAG compliance"
 msgstr ""
 
-#: src/window.py:198
+#: src/window.py:199
 msgid "Color Blindness"
 msgstr ""
 
-#: src/window.py:201 src/ui/views/colorblindness_simulator.ui:31
+#: src/window.py:202 src/ui/views/colorblindness_simulator.ui:31
 msgid "Simulate color blindness in images"
 msgstr ""
 
-#: src/window.py:205 src/ui/views/image_converter.ui:31
+#: src/window.py:206 src/ui/views/image_converter.ui:31
 msgid "Image Format Converter"
 msgstr ""
 
-#: src/window.py:208 src/ui/views/image_converter.ui:32
+#: src/window.py:209 src/ui/views/image_converter.ui:32
 msgid "Convert images to different formats"
 msgstr ""
 
-#: src/window.py:215
+#: src/window.py:216
+msgid "Format HTML documents"
+msgstr ""
+
+#: src/window.py:223
 msgid "Converters"
 msgstr ""
 
-#: src/window.py:220
+#: src/window.py:228
 msgid "Encoders"
 msgstr ""
 
-#: src/window.py:225
+#: src/window.py:233
 msgid "Formatters"
 msgstr ""
 
-#: src/window.py:230
+#: src/window.py:238
 msgid "Generators"
 msgstr ""
 
-#: src/window.py:235 src/ui/views/regex_tester.ui:68
-#: src/ui/views/text_inspector.ui:133 src/ui/views/text_inspector.ui:204
+#: src/window.py:243 src/ui/views/regex_tester.ui:68
+#: src/ui/views/text_inspector.ui:146 src/ui/views/text_inspector.ui:217
 msgid "Text"
 msgstr ""
 
-#: src/window.py:240
+#: src/window.py:248
 msgid "Graphics"
 msgstr ""
 
@@ -451,6 +455,10 @@ msgstr ""
 msgid "Open image in another program"
 msgstr ""
 
+#: src/ui/widgets/webview_area.ui:65
+msgid "Open web page in another browser"
+msgstr ""
+
 #: src/ui/views/base_converter.ui:30
 msgid "Number Bases Converter"
 msgstr ""
@@ -541,27 +549,31 @@ msgstr ""
 msgid "Example"
 msgstr ""
 
-#: src/ui/views/contrast_checker.ui:105
+#. TRANSLATORS: if your language doesn't have a standard placeholder text, don't translate
+#: src/ui/views/contrast_checker.ui:106
 msgid "Lorem ipsum dolor sit amet"
 msgstr ""
 
-#: src/ui/views/contrast_checker.ui:113
+#. TRANSLATORS: if your language doesn't have a standard placeholder text, don't translate
+#: src/ui/views/contrast_checker.ui:115
 msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
 msgstr ""
 
-#: src/ui/views/contrast_checker.ui:138 src/ui/views/contrast_checker.ui:170
+#. TRANSLATORS: AA is refered to the WCAG contrast specification
+#: src/ui/views/contrast_checker.ui:141 src/ui/views/contrast_checker.ui:174
 msgid "AA"
 msgstr ""
 
-#: src/ui/views/contrast_checker.ui:146 src/ui/views/contrast_checker.ui:210
+#: src/ui/views/contrast_checker.ui:149 src/ui/views/contrast_checker.ui:215
 msgid "small"
 msgstr ""
 
-#: src/ui/views/contrast_checker.ui:178 src/ui/views/contrast_checker.ui:242
+#: src/ui/views/contrast_checker.ui:182 src/ui/views/contrast_checker.ui:248
 msgid "large"
 msgstr ""
 
-#: src/ui/views/contrast_checker.ui:202 src/ui/views/contrast_checker.ui:234
+#. TRANSLATORS: AAA is refered to the WCAG contrast specification
+#: src/ui/views/contrast_checker.ui:207 src/ui/views/contrast_checker.ui:240
 msgid "AAA"
 msgstr ""
 
@@ -790,83 +802,96 @@ msgstr ""
 msgid "Choose a case to apply to the text"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:55
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:56
 msgid "Sentence case"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:56
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:58
 msgid "lower case"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:57
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:60
 msgid "UPPER CASE"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:58
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:62
 msgid "Title Case"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:59
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:64
 msgid "camelCase"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:60
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:66
 msgid "PascalCase"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:61
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:68
 msgid "snake_case"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:62
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:70
 msgid "CONSTANT_CASE"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:63
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:72
 msgid "kebab-case"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:64
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:74
 msgid "COBOL-CASE"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:65
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:76
 msgid "Train-Case"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:66
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:78
 msgid "aLtErNaTiNg CaSe"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:67
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:80
 msgid "ReVeRsE aLtErNaTiNg CaSe"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:85
+#: src/ui/views/text_inspector.ui:98
 msgid "Information"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:88
+#: src/ui/views/text_inspector.ui:101
 msgid "Cursor"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:101
+#: src/ui/views/text_inspector.ui:114
 msgid "Line:"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:117
+#: src/ui/views/text_inspector.ui:130
 msgid "Column:"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:146
+#: src/ui/views/text_inspector.ui:159
 msgid "Characters:"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:162
+#: src/ui/views/text_inspector.ui:175
 msgid "Words:"
 msgstr ""
 
-#: src/ui/views/text_inspector.ui:178
+#: src/ui/views/text_inspector.ui:191
 msgid "Lines:"
 msgstr ""
 

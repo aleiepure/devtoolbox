@@ -46,8 +46,8 @@ Please remember that I'm working on this in my spare time, and fixes might not c
 In the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Known-issues), you can find an updated list of known problems and how to fix them temporarily.
 
 ## Install
-<a href='https://flathub.org/apps/details/me.iepure.devtoolbox'>
-  <img width='240' alt='Download on Flathub' src='https://dl.flathub.org/assets/badges/flathub-badge-en.png'/>
+<a href="https://flathub.org/apps/details/me.iepure.devtoolbox">
+  <img width="240" alt="Download on Flathub" src="https://dl.flathub.org/assets/badges/flathub-badge-en.png"/>
 </a> <br>
 
 The latest stable is also available in [Releases](https://github.com/aleiepure/devtoolbox/releases).\
@@ -62,7 +62,7 @@ Also, if you know another language, you can help by translating the app.\
 In the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Contributing), you can find more information.
 
 ## License
-Copyright (C) 2022 - 2023 Dev-toolbox Developers\
+Copyright (C) 2022 - 2023 Dev Toolbox Developers\
 This application comes with absolutely no warranty. See the GNU General Public License, version 3 or later for details. A [copy of the license](./LICENSES/GPL-3.0-or-later.txt)
 can be found in the [LICENSES/](./LICENSES/) folder.
 

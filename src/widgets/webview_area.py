@@ -14,6 +14,7 @@ class WebviewArea(Adw.Bin):
     _name_lbl = Gtk.Template.Child()
     _spinner = Gtk.Template.Child()
     _spinner_separator = Gtk.Template.Child()
+    _view_btn = Gtk.Template.Child()
 
     _webview = WebKit2.WebView()
 
@@ -48,6 +49,7 @@ class WebviewArea(Adw.Bin):
         # Signals
         self._webview.connect("decide-policy", self._on_policy_decision)
         self._webview.connect("context_menu", self._disable_contex_menu)
+        self._view_btn.connect("clicked", self._on_view_clicked)
 
     def _on_policy_decision(self, webview:WebKit2.WebView, decision:WebKit2.NavigationPolicyDecision, decision_type:WebKit2.PolicyDecisionType):
         if decision_type == WebKit2.PolicyDecisionType.NAVIGATION_ACTION:
@@ -61,5 +63,11 @@ class WebviewArea(Adw.Bin):
     def _disable_contex_menu(self, web_view:WebKit2.WebView, context_menu:WebKit2.ContextMenu, event:Gdk.Event, hit_test_result:WebKit2.HitTestResult):
         return True
 
+    def _on_view_clicked(self, user_data:GObject.GPointer):
+        app = Gio.Application.get_default()
+        window = app.get_active_window()
+        Gtk.show_uri(window, self._webview.get_uri(), Gdk.CURRENT_TIME)
+
     def load_uri(self, uri:str):
         self._webview.load_uri(uri)
+        self._view_btn.set_sensitive(True)

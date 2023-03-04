@@ -52,18 +52,31 @@ SPDX-License-Identifier: GPL-3.0-or-later
                               <object class="GtkStringList">
                                 <items>
                                   <item translatable="yes">Original</item>
+                                  <!-- TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English -->
                                   <item translatable="yes">Sentence case</item>
+                                  <!-- TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English -->
                                   <item translatable="yes">lower case</item>
+                                  <!-- TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English -->
                                   <item translatable="yes">UPPER CASE</item>
+                                  <!-- TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English -->
                                   <item translatable="yes">Title Case</item>
+                                  <!-- TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English -->
                                   <item translatable="yes">camelCase</item>
+                                  <!-- TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English -->
                                   <item translatable="yes">PascalCase</item>
+                                  <!-- TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English -->
                                   <item translatable="yes">snake_case</item>
+                                  <!-- TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English -->
                                   <item translatable="yes">CONSTANT_CASE</item>
+                                  <!-- TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English -->
                                   <item translatable="yes">kebab-case</item>
+                                  <!-- TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English -->
                                   <item translatable="yes">COBOL-CASE</item>
+                                  <!-- TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English -->
                                   <item translatable="yes">Train-Case</item>
+                                  <!-- TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English -->
                                   <item translatable="yes">aLtErNaTiNg CaSe</item>
+                                  <!-- TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English -->
                                   <item translatable="yes">ReVeRsE aLtErNaTiNg CaSe</item>
                                 </items>
                               </object>
