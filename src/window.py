@@ -32,6 +32,7 @@ from .views.image_converter import ImageConverterView
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
 from .formatters.xml import XmlFormatter
+from .formatters.html import HtmlFormatter
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
@@ -207,6 +208,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "image-symbolic",
                 "tooltip": _("Convert images to different formats"),
                 "child": ImageConverterView(),
+            },
+            "html-formatter": {
+                "title": "HTML",
+                "category": "formatter",
+                "icon-name": "html-symbolic",
+                "tooltip": _("Format HTML documents"),
+                "child": FormatterView(HtmlFormatter()),
             },
         }
 

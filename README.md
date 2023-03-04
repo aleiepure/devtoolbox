@@ -46,7 +46,12 @@ Please remember that I'm working on this in my spare time, and fixes might not c
 In the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Known-issues), you can find an updated list of known problems and how to fix them temporarily.
 
 ## Install
-The latest stable release in available in [Releases](https://github.com/aleiepure/devtoolbox/releases). Builds from the main branch are available as artifacts on
+<a href='https://flathub.org/apps/details/me.iepure.devtoolbox'>
+  <img width='240' alt='Download on Flathub' src='https://dl.flathub.org/assets/badges/flathub-badge-en.png'/>
+</a> <br>
+
+The latest stable is also available in [Releases](https://github.com/aleiepure/devtoolbox/releases).\
+Builds from the main branch are available as artifacts on the
 [Actions page](https://github.com/aleiepure/devtoolbox/actions).\
 Check the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Contributing) to learn how to build from source code manually.
 
