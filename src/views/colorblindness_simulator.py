@@ -33,7 +33,9 @@ class ColorblindnessSimulatorView(Adw.Bin):
         # Signals
         self._original_imagearea.connect("view-cleared", self._on_view_cleared)
         self._original_imagearea.connect("image-loaded", self._on_image_loaded)
-        self._severity_scale.connect("notify::css-classes", self._on_severity_changed)
+        self._severity_scale.connect("value-changed", self._on_severity_changed_by_keyboard)
+        self._severity_scale.connect("notify::css-classes", self._on_severity_changed_by_mouse)
+
         self._protanopia_imagearea.connect("saved", self._on_saved)
         self._deuteranopia_imagearea.connect("saved", self._on_saved)
         self._tritanopia_imagearea.connect("saved", self._on_saved)
@@ -45,7 +47,13 @@ class ColorblindnessSimulatorView(Adw.Bin):
         self._tritanopia_imagearea.clear()
         self._service.get_cancellable().cancel()
 
-    def _on_severity_changed(self, source_widget:GObject.Object, user_data:GObject.GPointer):
+    def _on_severity_changed_by_keyboard(self, user_data:GObject.GPointer):
+        if self._severity_scale.has_css_class("dragging"):
+            return
+        self._service.get_cancellable().cancel()
+        self._simulate()
+
+    def _on_severity_changed_by_mouse(self, source_widget:GObject.Object, user_data:GObject.GPointer):
         if not self._severity_scale.has_css_class("dragging"):
             self._service.get_cancellable().cancel()
             self._simulate()
