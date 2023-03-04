@@ -14,6 +14,8 @@ from gi.repository import Gtk, Gio, Adw, GObject, GtkSource, Gdk
 
 from .window import DevtoolboxWindow
 
+from .credits import *
+
 from .widgets.utility_title import UtilityTitle
 from .widgets.text_area import TextArea
 from .widgets.file_view import FileView
