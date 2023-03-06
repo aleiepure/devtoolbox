@@ -3,6 +3,7 @@
 # Copyright (C) 2023 THE devtoolbox'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the devtoolbox package.
 # Rafael Fontenelle <rafaelff@gnome.org>, 2023.
+# SPDX-License-Identifier: GPL-3.0-or-later
 #
 msgid ""
 msgstr ""
