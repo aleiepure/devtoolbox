@@ -4,6 +4,7 @@
     "runtime-version" : "43",
     "sdk" : "org.gnome.Sdk",
     "command" : "devtoolbox",
+    "separate-locales": false,
     "finish-args" : [
         "--share=network",
         "--share=ipc",
