@@ -64,6 +64,19 @@ SPDX-License-Identifier: CC0-1.0
     <display_width compare="ge">1200</display_width>
   </requires>
   <releases>
+    <release version="1.0.1" date="2023-03-07">
+      <description>
+        <p>What's new:</p>
+        <ul>
+          <li>XML formater: can now open .ui files (@gregorni)</li>
+          <li>Markdown previewer: can open preview in external browser</li>
+          <li>Color blindness simulator: severtity can be changed via keyboard</li>
+          <li>New tool: HTML formatter</li>
+          <li>Turkish translation by @sabriunal</li>
+          <li>Brasilian Portuguese translation by @rffontenelle</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0" date="2023-02-25">
       <description>
         <p>First release</p>
