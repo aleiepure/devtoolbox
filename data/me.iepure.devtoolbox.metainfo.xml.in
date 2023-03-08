@@ -64,6 +64,15 @@ SPDX-License-Identifier: CC0-1.0
     <display_width compare="ge">1200</display_width>
   </requires>
   <releases>
+    <release version="1.0.2" date="2023-03-08">
+      <description>
+        <p>What's new:</p>
+        <ul>
+          <li>Window can be resized smaller than before</li>
+          <li>Added missing icons on non GNOME desktops</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.1" date="2023-03-07">
       <description>
         <p>What's new:</p>
