@@ -19,6 +19,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
   <a href="https://api.reuse.software/info/github.com/aleiepure/devtoolbox" title="REUSE compliance">
     <img src="https://api.reuse.software/badge/github.com/aleiepure/devtoolbox" />
   </a>
+  <a href="https://hosted.weblate.org/engage/devtoolbox/">
+    <img src="https://hosted.weblate.org/widgets/devtoolbox/-/svg-badge.svg" alt="Translation status" />
+  </a>
   <a href="https://stopthemingmy.app" title="Please do not theme this app">
     <img src="https://stopthemingmy.app/badge.svg" />
   </a>
@@ -56,9 +59,14 @@ Builds from the main branch are available as artifacts on the
 Check the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Contributing) to learn how to build from source code manually.
 
 ## Contribute
-Contributions are and will always be welcome.\
+All contributions are and will always be welcome.\
 If you have an idea and you can make it happen by yourself, feel free to fork the repository, code it and open a PR.\
-Also, if you know another language, you can help by translating the app.\
+Also, if you know another language, you can help by translating the app.
+
+<a href="https://hosted.weblate.org/engage/devtoolbox/">
+  <img src="https://hosted.weblate.org/widgets/devtoolbox/-/multi-auto.svg" alt="Translation status" />
+</a>
+
 In the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Contributing), you can find more information.
 
 ## License
