@@ -6,24 +6,27 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2023-03-04 19:17+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-03-29 15:37+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"devtoolbox/devtoolbox/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
 msgid "@app-name@"
-msgstr ""
+msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_window.ui:17
 msgid "Development tools at your fingertips"
-msgstr ""
+msgstr "Utviklingsverktøy øyeblikkelig tilgjengelig"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:18
 msgid ""
@@ -129,15 +132,15 @@ msgstr ""
 
 #: src/window.py:118 src/formatters/json.py:14
 msgid "Format JSON documents"
-msgstr ""
+msgstr "Formater JSON-dokumenter"
 
 #: src/window.py:125 src/formatters/sql.py:14
 msgid "Format SQL documents"
-msgstr ""
+msgstr "Formater SQL-dokumenter"
 
 #: src/window.py:132 src/formatters/xml.py:16
 msgid "Format XML documents"
-msgstr ""
+msgstr "Formater XML-dokumenter"
 
 #: src/window.py:139 src/ui/views/hash_generator.ui:31
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
@@ -205,109 +208,109 @@ msgstr ""
 
 #: src/window.py:206 src/ui/views/image_converter.ui:31
 msgid "Image Format Converter"
-msgstr ""
+msgstr "Bildeformat-konverterer"
 
 #: src/window.py:209 src/ui/views/image_converter.ui:32
 msgid "Convert images to different formats"
-msgstr ""
+msgstr "Konverter bilder til forskjellige formater"
 
 #: src/window.py:216
 msgid "Format HTML documents"
-msgstr ""
+msgstr "Formater HTML-dokumenter"
 
 #: src/window.py:223
 msgid "Converters"
-msgstr ""
+msgstr "Konverterere"
 
 #: src/window.py:228
 msgid "Encoders"
-msgstr ""
+msgstr "Kodere"
 
 #: src/window.py:233
 msgid "Formatters"
-msgstr ""
+msgstr "Formaterere"
 
 #: src/window.py:238
 msgid "Generators"
-msgstr ""
+msgstr "Generatorer"
 
 #: src/window.py:243 src/ui/views/regex_tester.ui:68
 #: src/ui/views/text_inspector.ui:146 src/ui/views/text_inspector.ui:217
 msgid "Text"
-msgstr ""
+msgstr "Tekst"
 
 #: src/window.py:248
 msgid "Graphics"
-msgstr ""
+msgstr "Grafikk"
 
 #: src/widgets/image_area.py:101
 msgid "Opening image..."
-msgstr ""
+msgstr "Åpner bilde …"
 
 #: src/widgets/image_area.py:108 src/widgets/text_area.py:156
 #: src/widgets/text_file_area.py:177
 msgid "Open File"
-msgstr ""
+msgstr "Åpne fil"
 
 #: src/widgets/image_area.py:110 src/widgets/text_area.py:158
 #: src/widgets/text_file_area.py:179 src/ui/widgets/image_area.ui:70
 #: src/ui/widgets/text_area.ui:82 src/ui/widgets/text_file_area.ui:82
 msgid "Open"
-msgstr ""
+msgstr "Åpne"
 
 #: src/widgets/image_area.py:111 src/widgets/image_area.py:158
 #: src/widgets/text_area.py:159 src/widgets/text_file_area.py:180
 #: src/widgets/text_file_area.py:295 src/views/image_converter.py:61
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: src/widgets/image_area.py:119 src/widgets/text_file_area.py:206
 msgid "Images"
-msgstr ""
+msgstr "Bilder"
 
 #: src/widgets/image_area.py:148
 msgid "Saving image..."
-msgstr ""
+msgstr "Lagrer bilde …"
 
 #: src/widgets/image_area.py:155 src/widgets/text_file_area.py:292
 #: src/views/image_converter.py:58
 msgid "Save file as"
-msgstr ""
+msgstr "Lagre fil som"
 
 #: src/widgets/image_area.py:157 src/widgets/text_file_area.py:294
 #: src/views/image_converter.py:60 src/ui/widgets/image_area.ui:81
 #: src/ui/widgets/text_file_area.ui:93
 msgid "Save"
-msgstr ""
+msgstr "Lagre"
 
 #: src/widgets/image_area.py:182
 msgid "Unable to save image."
-msgstr ""
+msgstr "Kunne ikke endre bilde."
 
 #: src/widgets/text_area.py:166 src/widgets/text_file_area.py:200
 msgid "Text files"
-msgstr ""
+msgstr "Tekstfiler"
 
 #: src/widgets/text_area.py:173 src/widgets/text_file_area.py:213
 msgid "Accepted files"
-msgstr ""
+msgstr "Godkjente filer"
 
 #. change view and save previous
 #: src/widgets/text_file_area.py:170
 msgid "Opening file..."
-msgstr ""
+msgstr "Åpner fil …"
 
 #: src/widgets/text_file_area.py:187
 msgid "All files"
-msgstr ""
+msgstr "Alle filer"
 
 #: src/widgets/text_file_area.py:194
 msgid "Text files and images"
-msgstr ""
+msgstr "Tekstfiler og bilder"
 
 #: src/widgets/text_file_area.py:285
 msgid "Saving file..."
-msgstr ""
+msgstr "Lagrer fil …"
 
 #. Toast messages
 #: src/views/colorblindness_simulator.py:26 src/views/gzip_compressor.py:27
@@ -332,7 +335,7 @@ msgstr ""
 #: src/views/json_yaml.py:52 src/views/url_encoder.py:53
 #, python-brace-format
 msgid "Error: {error}"
-msgstr ""
+msgstr "Feil: {error}"
 
 #: src/views/formatter.py:73
 msgid ""
@@ -387,11 +390,11 @@ msgstr ""
 
 #: src/ui/window.ui:36
 msgid "Show/hide sidebar"
-msgstr ""
+msgstr "Vis/skjul sidefelt"
 
 #: src/ui/window.ui:78
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Tastatursnarveier"
 
 #: src/ui/window.ui:82
 msgid "_About Dev Toolbox"
@@ -400,11 +403,11 @@ msgstr ""
 #. TRANSLATORS: replace this with your name (with optional email or website)
 #: src/ui/about_window.ui:26
 msgid "translator-credits"
-msgstr ""
+msgstr "Allan Nordhøy <epost@anotheragency.no>"
 
 #: src/ui/widgets/date_area.ui:52 src/ui/views/timestamp.ui:49
 msgid "Now"
-msgstr ""
+msgstr "Nå"
 
 #: src/ui/widgets/date_area.ui:53
 msgid "Sets the current system date and time (local timezone)"
@@ -414,31 +417,31 @@ msgstr ""
 #: src/ui/widgets/spin_area.ui:82 src/ui/widgets/text_area.ui:91
 #: src/ui/widgets/text_file_area.ui:109
 msgid "Copy to clipboard"
-msgstr ""
+msgstr "Kopier til utklippstavlen"
 
 #: src/ui/widgets/date_area.ui:105
 msgid "Year"
-msgstr ""
+msgstr "År"
 
 #: src/ui/widgets/date_area.ui:141
 msgid "Month"
-msgstr ""
+msgstr "Måned"
 
 #: src/ui/widgets/date_area.ui:176
 msgid "Day"
-msgstr ""
+msgstr "Dag"
 
 #: src/ui/widgets/date_area.ui:220
 msgid "Hours"
-msgstr ""
+msgstr "Timer"
 
 #: src/ui/widgets/date_area.ui:256
 msgid "Minutes"
-msgstr ""
+msgstr "Minutter"
 
 #: src/ui/widgets/date_area.ui:291
 msgid "Seconds"
-msgstr ""
+msgstr "Sekunder"
 
 #: src/ui/widgets/entry_row.ui:33 src/ui/widgets/spin_area.ui:89
 #: src/ui/widgets/text_area.ui:98 src/ui/widgets/text_file_area.ui:116
@@ -448,11 +451,11 @@ msgstr ""
 #: src/ui/widgets/entry_row.ui:43 src/ui/widgets/image_area.ui:97
 #: src/ui/widgets/text_area.ui:105 src/ui/widgets/text_file_area.ui:123
 msgid "Clear input"
-msgstr ""
+msgstr "Tøm inndata"
 
 #: src/ui/widgets/image_area.ui:90 src/ui/widgets/text_file_area.ui:102
 msgid "Open image in another program"
-msgstr ""
+msgstr "Åpne bildet i et annet program"
 
 #: src/ui/widgets/webview_area.ui:65
 msgid "Open web page in another browser"
@@ -538,7 +541,7 @@ msgstr ""
 
 #: src/ui/views/contrast_checker.ui:66 src/ui/views/contrast_checker.ui:75
 msgid "Background color"
-msgstr ""
+msgstr "Bakgrunnsfarge"
 
 #: src/ui/views/contrast_checker.ui:67
 msgid "Color used for the background"
@@ -546,7 +549,7 @@ msgstr ""
 
 #: src/ui/views/contrast_checker.ui:94
 msgid "Example"
-msgstr ""
+msgstr "Eksempel"
 
 #. TRANSLATORS: if your language doesn't have a standard placeholder text, don't translate
 #: src/ui/views/contrast_checker.ui:106
@@ -578,7 +581,7 @@ msgstr ""
 
 #: src/ui/views/cron_converter.ui:49
 msgid "Number of dates"
-msgstr ""
+msgstr "Antall datoer"
 
 #: src/ui/views/cron_converter.ui:50
 msgid "Number of dates to be generated (up to 20)"
@@ -586,7 +589,7 @@ msgstr ""
 
 #: src/ui/views/cron_converter.ui:69
 msgid "Output format"
-msgstr ""
+msgstr "Utdataformat"
 
 #: src/ui/views/cron_converter.ui:70
 msgid ""
@@ -600,7 +603,7 @@ msgstr ""
 
 #: src/ui/views/cron_converter.ui:118
 msgid "Dates"
-msgstr ""
+msgstr "Datoer"
 
 #: src/ui/views/formatter.ui:44 src/ui/views/json_yaml.ui:62
 msgid "Indentations"
