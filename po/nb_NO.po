@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2023-03-04 19:17+0100\n"
-"PO-Revision-Date: 2023-03-29 15:37+0000\n"
+"PO-Revision-Date: 2023-03-31 01:39+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "devtoolbox/devtoolbox/nb_NO/>\n"
@@ -43,11 +43,11 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:25
 msgid "Includes:"
-msgstr ""
+msgstr "Inkluderer:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid "JSON to YAML converter and vice-versa"
-msgstr ""
+msgstr "JSON til YAML-konverterer og motsatt"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:28
 msgid "CRON expressions parser"
@@ -63,7 +63,7 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:31
 msgid "Hash generators"
-msgstr ""
+msgstr "Sjekksumsgeneratorer"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "Regex tester"
@@ -76,27 +76,28 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "Image converters"
-msgstr ""
+msgstr "Bildekonverterere"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Much more..."
-msgstr ""
+msgstr "Mye mer …"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:69
 msgid "First release"
-msgstr ""
+msgstr "Første utgivelse"
 
 #: src/window.py:62 src/ui/views/json_yaml.ui:31
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr ""
+msgstr "Konverter JSON-dokumenter til YAML og motsatt"
 
 #: src/window.py:66 src/ui/views/timestamp.ui:45
 msgid "Timestamp"
-msgstr ""
+msgstr "Tidsstempel"
 
 #: src/window.py:69 src/ui/views/timestamp.ui:31
+#, fuzzy
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr ""
+msgstr "Konverter UNIX-tidsstempel til og fra enkle datoer"
 
 #: src/window.py:73
 msgid "Number Bases"
@@ -116,15 +117,15 @@ msgstr ""
 
 #: src/window.py:90 src/ui/views/html_encoder.ui:31
 msgid "Encode and decode special characters using the HTML format"
-msgstr ""
+msgstr "Innkoding og dekoding av spesialtegn ved bruk av HTML-format"
 
 #: src/window.py:97 src/ui/views/url_encoder.ui:31
 msgid "Encode and decode special characters inside URLs"
-msgstr ""
+msgstr "Innkoding og dekoding av spesialtegn i nettadresser"
 
 #: src/window.py:104 src/ui/views/gzip_compressor.ui:31
 msgid "Compress and decompress files and texts using GZip"
-msgstr ""
+msgstr "Pakk sammen og pakk ut filer og tekster ved bruk av GZip"
 
 #: src/window.py:111 src/ui/views/jwt_decoder.ui:31
 msgid "Decode JWT tokens to header and payload"
@@ -152,7 +153,7 @@ msgstr ""
 
 #: src/window.py:153 src/ui/views/uuid_generator.ui:31
 msgid "Generate Universally Unique IDs (UUID)"
-msgstr ""
+msgstr "Generer universelt unike ID-er (UUID)"
 
 #: src/window.py:157 src/ui/views/text_inspector.ui:30
 msgid "Text Inspector & Case Converter"
@@ -176,7 +177,7 @@ msgstr ""
 
 #: src/window.py:174 src/ui/views/text_diff.ui:31
 msgid "Analyze two texts and find differences"
-msgstr ""
+msgstr "Analyser to tekster og finn forskjellene"
 
 #: src/window.py:178 src/ui/views/xml_validator.ui:30
 msgid "XML Scheme Validator"
@@ -187,12 +188,13 @@ msgid "Check an XML file against an XSD schema"
 msgstr ""
 
 #: src/window.py:188 src/ui/views/markdown_preview.ui:32
+#, fuzzy
 msgid "Preview markdown code as you type"
-msgstr ""
+msgstr "Forhåndsvis markdown-stilisering mens du skriver"
 
 #: src/window.py:192 src/ui/views/contrast_checker.ui:30
 msgid "Contrast Checker"
-msgstr ""
+msgstr "Kontrastsjekker"
 
 #: src/window.py:195 src/ui/views/contrast_checker.ui:31
 msgid "Check a color combination for WCAG compliance"
@@ -200,11 +202,11 @@ msgstr ""
 
 #: src/window.py:199
 msgid "Color Blindness"
-msgstr ""
+msgstr "Fargeblindhet"
 
 #: src/window.py:202 src/ui/views/colorblindness_simulator.ui:31
 msgid "Simulate color blindness in images"
-msgstr ""
+msgstr "Simuler fargeblindhet for bilder"
 
 #: src/window.py:206 src/ui/views/image_converter.ui:31
 msgid "Image Format Converter"
@@ -316,19 +318,19 @@ msgstr "Lagrer fil …"
 #: src/views/colorblindness_simulator.py:26 src/views/gzip_compressor.py:27
 #: src/views/image_converter.py:23
 msgid "Open folder"
-msgstr ""
+msgstr "Åpne mappe"
 
 #: src/views/colorblindness_simulator.py:57 src/views/gzip_compressor.py:58
 #: src/views/image_converter.py:40
-#, python-brace-format
+#, fuzzy, python-brace-format
 msgid "Successfully saved as {save_path}"
-msgstr ""
+msgstr "Lagret som {save_path}"
 
 #: src/views/colorblindness_simulator.py:84
 #: src/views/colorblindness_simulator.py:86
 #: src/views/colorblindness_simulator.py:88
 msgid "Loading simulation..."
-msgstr ""
+msgstr "Laster inn simulering …"
 
 #: src/views/formatter.py:45 src/views/gzip_compressor.py:67
 #: src/views/hash_generator.py:76 src/views/html_encoder.py:46
@@ -371,7 +373,7 @@ msgstr ""
 
 #: src/views/xml_validator.py:76
 msgid "Valid!"
-msgstr ""
+msgstr "Gyldig."
 
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
@@ -379,7 +381,7 @@ msgstr ""
 
 #: src/views/xml_validator.py:86
 msgid "Invalid!"
-msgstr ""
+msgstr "Ugyldig."
 
 #: src/views/xml_validator.py:88
 #, python-brace-format
@@ -398,7 +400,7 @@ msgstr "_Tastatursnarveier"
 
 #: src/ui/window.ui:82
 msgid "_About Dev Toolbox"
-msgstr ""
+msgstr "_Om Dev Toolbox"
 
 #. TRANSLATORS: replace this with your name (with optional email or website)
 #: src/ui/about_window.ui:26
@@ -411,7 +413,7 @@ msgstr "Nå"
 
 #: src/ui/widgets/date_area.ui:53
 msgid "Sets the current system date and time (local timezone)"
-msgstr ""
+msgstr "Setter nåværende systemdato og tid (lokal tidssone)"
 
 #: src/ui/widgets/date_area.ui:73 src/ui/widgets/entry_row.ui:23
 #: src/ui/widgets/spin_area.ui:82 src/ui/widgets/text_area.ui:91
@@ -446,7 +448,7 @@ msgstr "Sekunder"
 #: src/ui/widgets/entry_row.ui:33 src/ui/widgets/spin_area.ui:89
 #: src/ui/widgets/text_area.ui:98 src/ui/widgets/text_file_area.ui:116
 msgid "Paste clipboard"
-msgstr ""
+msgstr "Lim inn fra utklippstavlen"
 
 #: src/ui/widgets/entry_row.ui:43 src/ui/widgets/image_area.ui:97
 #: src/ui/widgets/text_area.ui:105 src/ui/widgets/text_file_area.ui:123
@@ -459,7 +461,7 @@ msgstr "Åpne bildet i et annet program"
 
 #: src/ui/widgets/webview_area.ui:65
 msgid "Open web page in another browser"
-msgstr ""
+msgstr "Åpne nettside i en annen nettleser"
 
 #: src/ui/views/base_converter.ui:30
 msgid "Number Bases Converter"
@@ -504,7 +506,7 @@ msgstr ""
 #: src/ui/views/text_inspector.ui:45 src/ui/views/url_encoder.ui:45
 #: src/ui/views/uuid_generator.ui:45
 msgid "Tool options"
-msgstr ""
+msgstr "Verktøyvalg"
 
 #: src/ui/views/colorblindness_simulator.ui:48
 msgid "Severity"
@@ -533,11 +535,11 @@ msgstr ""
 
 #: src/ui/views/contrast_checker.ui:48 src/ui/views/contrast_checker.ui:57
 msgid "Text color"
-msgstr ""
+msgstr "Tekstfarge"
 
 #: src/ui/views/contrast_checker.ui:49
 msgid "Color used for the text"
-msgstr ""
+msgstr "Farge brukt for teksten"
 
 #: src/ui/views/contrast_checker.ui:66 src/ui/views/contrast_checker.ui:75
 msgid "Background color"
@@ -545,7 +547,7 @@ msgstr "Bakgrunnsfarge"
 
 #: src/ui/views/contrast_checker.ui:67
 msgid "Color used for the background"
-msgstr ""
+msgstr "Farge brukt for bakgrunnen"
 
 #: src/ui/views/contrast_checker.ui:94
 msgid "Example"
@@ -585,7 +587,7 @@ msgstr "Antall datoer"
 
 #: src/ui/views/cron_converter.ui:50
 msgid "Number of dates to be generated (up to 20)"
-msgstr ""
+msgstr "Antall datoer å generere (maks. 20)"
 
 #: src/ui/views/cron_converter.ui:69
 msgid "Output format"
@@ -607,16 +609,17 @@ msgstr "Datoer"
 
 #: src/ui/views/formatter.ui:44 src/ui/views/json_yaml.ui:62
 msgid "Indentations"
-msgstr ""
+msgstr "Innrykk"
 
 #: src/ui/views/formatter.ui:45 src/ui/views/json_yaml.ui:63
 msgid "Number of spaces used for indentation"
 msgstr ""
 
 #: src/ui/views/formatter.ui:78
+#, fuzzy
 msgctxt "verb/action"
 msgid "Format"
-msgstr ""
+msgstr "Format"
 
 #: src/ui/views/gzip_compressor.ui:30
 msgid "GZip Compress & Decompress"
@@ -625,7 +628,7 @@ msgstr ""
 #: src/ui/views/gzip_compressor.ui:48 src/ui/views/html_encoder.ui:48
 #: src/ui/views/json_yaml.ui:48 src/ui/views/url_encoder.ui:48
 msgid "Direction"
-msgstr ""
+msgstr "Retning"
 
 #: src/ui/views/gzip_compressor.ui:49
 msgid "Select the desired operation"
@@ -633,23 +636,23 @@ msgstr ""
 
 #: src/ui/views/gzip_compressor.ui:53
 msgid "Compress"
-msgstr ""
+msgstr "Pakk sammen"
 
 #: src/ui/views/gzip_compressor.ui:54
 msgid "Decompress"
-msgstr ""
+msgstr "Pakk ut"
 
 #: src/ui/views/gzip_compressor.ui:78 src/ui/views/hash_generator.ui:110
 #: src/ui/views/html_encoder.ui:79 src/ui/views/json_yaml.ui:99
 #: src/ui/views/url_encoder.ui:101
 msgid "Input"
-msgstr ""
+msgstr "Inndata"
 
 #: src/ui/views/gzip_compressor.ui:90 src/ui/views/hash_generator.ui:122
 #: src/ui/views/html_encoder.ui:94 src/ui/views/json_yaml.ui:113
 #: src/ui/views/url_encoder.ui:115
 msgid "Output"
-msgstr ""
+msgstr "Utdata"
 
 #: src/ui/views/gzip_compressor.ui:121
 msgid ""
@@ -710,7 +713,7 @@ msgstr ""
 
 #: src/ui/views/image_converter.ui:77
 msgid "Image"
-msgstr ""
+msgstr "Bilde"
 
 #: src/ui/views/image_converter.ui:79
 msgid "Convert"
@@ -730,15 +733,15 @@ msgstr ""
 
 #: src/ui/views/jwt_decoder.ui:44
 msgid "Token"
-msgstr ""
+msgstr "Symbol"
 
 #: src/ui/views/jwt_decoder.ui:67
 msgid "Header"
-msgstr ""
+msgstr "Hode"
 
 #: src/ui/views/jwt_decoder.ui:75
 msgid "Payload"
-msgstr ""
+msgstr "Nyttelast"
 
 #: src/ui/views/lorem_generator.ui:30
 msgid "Lorem Ipsum Generator"
@@ -754,11 +757,11 @@ msgstr ""
 
 #: src/ui/views/lorem_generator.ui:66
 msgid "Words"
-msgstr ""
+msgstr "Ord"
 
 #: src/ui/views/lorem_generator.ui:67
 msgid "Sentences"
-msgstr ""
+msgstr "Setninger"
 
 #: src/ui/views/lorem_generator.ui:68
 msgid "Paragraphs"
@@ -766,15 +769,15 @@ msgstr ""
 
 #: src/ui/views/lorem_generator.ui:99
 msgid "Generated text"
-msgstr ""
+msgstr "Generert tekst"
 
 #: src/ui/views/markdown_preview.ui:53
 msgid "Markdown"
-msgstr ""
+msgstr "Markdown"
 
 #: src/ui/views/markdown_preview.ui:69
 msgid "Preview"
-msgstr ""
+msgstr "Forhåndsvisning"
 
 #: src/ui/views/regex_tester.ui:30
 msgid "Regular Expression Tester"
@@ -786,15 +789,15 @@ msgstr ""
 
 #: src/ui/views/text_diff.ui:48
 msgid "Old Text"
-msgstr ""
+msgstr "Gammel tekst"
 
 #: src/ui/views/text_diff.ui:60
 msgid "New Text"
-msgstr ""
+msgstr "Ny tekst"
 
 #: src/ui/views/text_diff.ui:76
 msgid "Differences"
-msgstr ""
+msgstr "Forskjeller"
 
 #: src/ui/views/text_inspector.ui:48
 msgid "Change case"
@@ -927,7 +930,7 @@ msgstr ""
 
 #: src/ui/views/uuid_generator.ui:48
 msgid "Version"
-msgstr ""
+msgstr "Versjon"
 
 #: src/ui/views/uuid_generator.ui:49
 msgid "Choose the UUID version to generate"
@@ -939,15 +942,15 @@ msgstr ""
 
 #: src/ui/views/uuid_generator.ui:55
 msgid "Version 3"
-msgstr ""
+msgstr "Versjon 3"
 
 #: src/ui/views/uuid_generator.ui:56
 msgid "Version 4 (Random)"
-msgstr ""
+msgstr "Versjon 4 (tilfeldig)"
 
 #: src/ui/views/uuid_generator.ui:57
 msgid "Version 5"
-msgstr ""
+msgstr "Versjon 5"
 
 #: src/ui/views/uuid_generator.ui:58
 msgid "Version 6 (Gregorian Time)"
@@ -968,17 +971,17 @@ msgstr ""
 #: src/ui/gtk/help-overlay.ui:18
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Generelt"
 
 #: src/ui/gtk/help-overlay.ui:21
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Vis snarveier"
 
 #: src/ui/gtk/help-overlay.ui:27
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Avslutt"
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
@@ -990,16 +993,16 @@ msgstr ""
 
 #: src/formatters/sql.py:13
 msgid "SQL Formatter"
-msgstr ""
+msgstr "SQL-formaterer"
 
 #: src/formatters/sql.py:16
 msgid "Type SQL code here"
-msgstr ""
+msgstr "Skriv inn SQL-kode her"
 
 #: src/formatters/xml.py:15
 msgid "XML Formatter"
-msgstr ""
+msgstr "XML-formaterer"
 
 #: src/formatters/xml.py:18
 msgid "Type XML code here"
-msgstr ""
+msgstr "Skriv inn XML-kode her"
