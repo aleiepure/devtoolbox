@@ -56,7 +56,7 @@ class DevtoolboxApplication(Adw.Application):
         self.debug = debug
         Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK)
 
-        self.create_action("quit", self.quit, ["<primary>q"])
+        self.create_action("quit", self.on_quit_action, ["<primary>q"])
         self.create_action("about", self.on_about_action)
 
         # Register custom types
@@ -84,6 +84,9 @@ class DevtoolboxApplication(Adw.Application):
         about_window.set_version(self.version)
         about_window.set_transient_for(self.props.active_window)
         about_window.present()
+
+    def on_quit_action(self, widget, _):
+        self.quit()
 
     def create_action(self, name, callback, shortcuts=None):
         """Add an application action.
