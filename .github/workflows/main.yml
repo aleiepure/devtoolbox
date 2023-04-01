@@ -1,16 +1,18 @@
 on:
   push:
-    branches: [main]
   pull_request:
+    branches: 
+      - main
 name: Build
-jobs:
+jobs:   
   flatpak:
-    name: "Build flatpak"
+    name: "Build Flatpak"
     runs-on: ubuntu-latest
     container:
       image: bilelmoussaoui/flatpak-github-actions:gnome-43
       options: --privileged
     steps:
+    - uses: fsfe/reuse-action@v1.2.0
     - uses: actions/checkout@v3
     - uses: flatpak/flatpak-github-actions/flatpak-builder@v5
       with:

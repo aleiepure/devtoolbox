@@ -58,3 +58,7 @@ License: CC0-1.0
 Files: po/devtoolbox.pot
 Copyright: 2022 - 2023 Alessandro <alessandro@iepure.me>
 License: CC0-1.0
+
+Files: po/*.po
+Copyright: see file header
+License: GPL-3.0-or-later

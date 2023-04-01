@@ -15,8 +15,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
     </style>
     <property name="default-width">1200</property>
     <property name="default-height">800</property>
-    <property name="width-request">1200</property>
-    <property name="height-request">800</property>
+    <property name="width-request">1050</property>
+    <property name="height-request">700</property>
     <child>
       <object class="GtkBox">
         <property name="orientation">vertical</property>
