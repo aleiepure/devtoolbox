@@ -3,11 +3,11 @@ python-dateutil
 humanize
 python-crontab
 croniter
+python-crontab
 pyjwt
 sqlparse
 lxml
 python-lorem
-base64io
 uuid6
 textstat
 markdown2
@@ -15,3 +15,4 @@ Pygments
 numpy
 Pillow
 daltonlens
+asn1crypto

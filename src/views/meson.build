@@ -28,6 +28,7 @@ sources = [
   'contrast_checker.py',
   'colorblindness_simulator.py',
   'image_converter.py',
+  'certificate_parser.py',
 ]
 
 install_data(sources, install_dir: viewsdir)

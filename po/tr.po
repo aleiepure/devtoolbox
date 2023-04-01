@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: me.iepure.devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-04 17:33+0100\n"
+"POT-Creation-Date: 2023-04-01 13:15+0200\n"
 "PO-Revision-Date: 2023-03-04 20:51+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -75,7 +75,7 @@ msgstr "Özet oluşturucular"
 msgid "Regex tester"
 msgstr "Düzenli ifade sınayıcı"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:184
+#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:186
 #: src/ui/views/markdown_preview.ui:31
 msgid "Markdown Previewer"
 msgstr "Markdown Ön İzleyici"
@@ -92,158 +92,168 @@ msgstr "Ve daha çoğu…"
 msgid "First release"
 msgstr "İlk sürüm"
 
-#: src/window.py:61 src/ui/views/json_yaml.ui:31
+#: src/window.py:63 src/ui/views/json_yaml.ui:31
 msgid "Convert JSON documents to YAML and vice-versa"
 msgstr "JSON belgelerini YAML biçimine, veya tam tersine dönüştür"
 
-#: src/window.py:65 src/ui/views/timestamp.ui:45
+#: src/window.py:67 src/ui/views/timestamp.ui:45
 msgid "Timestamp"
 msgstr "Zaman damgası"
 
-#: src/window.py:68 src/ui/views/timestamp.ui:31
+#: src/window.py:70 src/ui/views/timestamp.ui:31
 msgid "Convert UNIX timestamps to and from plain dates"
 msgstr "UNIX zaman damgalarını düz tarihlere, veya tam tersine dönüştür"
 
-#: src/window.py:72
+#: src/window.py:74
 msgid "Number Bases"
 msgstr "Sayı Tabanları"
 
-#: src/window.py:75 src/ui/views/base_converter.ui:31
+#: src/window.py:77 src/ui/views/base_converter.ui:31
 msgid "Convert numbers between bases"
 msgstr "Sayıları tabanlar arasında dönüştür"
 
-#: src/window.py:79 src/ui/views/cron_converter.ui:31
+#: src/window.py:81 src/ui/views/cron_converter.ui:31
 msgid "CRON Parser"
 msgstr "CRON Ayıklayıcı"
 
-#: src/window.py:82 src/ui/views/cron_converter.ui:32
+#: src/window.py:84 src/ui/views/cron_converter.ui:32
 msgid "Convert CRON expressions to time and date"
 msgstr "CRON ifadelerini saat ve tarihe dönüştür"
 
-#: src/window.py:89 src/ui/views/html_encoder.ui:31
+#: src/window.py:91 src/ui/views/html_encoder.ui:31
 msgid "Encode and decode special characters using the HTML format"
 msgstr "HTML biçimini kullanarak özel karakterleri kodlayın ve kodunu çözün"
 
-#: src/window.py:96 src/ui/views/url_encoder.ui:31
+#: src/window.py:98 src/ui/views/url_encoder.ui:31
 msgid "Encode and decode special characters inside URLs"
 msgstr "URLʼlerin içindeki özel karakterleri kodlayın ve kodunu çözün"
 
-#: src/window.py:103 src/ui/views/gzip_compressor.ui:31
+#: src/window.py:105 src/ui/views/gzip_compressor.ui:31
 msgid "Compress and decompress files and texts using GZip"
 msgstr "GZip kullanarak dosyaları ve metinleri sıkıştırın ve açın"
 
-#: src/window.py:110 src/ui/views/jwt_decoder.ui:31
+#: src/window.py:112 src/ui/views/jwt_decoder.ui:31
 msgid "Decode JWT tokens to header and payload"
 msgstr "JWT jetonlarını başlığa ve yüke kodunu çözün"
 
-#: src/window.py:117 src/formatters/json.py:14
+#: src/window.py:119 src/formatters/json.py:14
 msgid "Format JSON documents"
 msgstr "JSON belgelerini biçimlendir"
 
-#: src/window.py:124 src/formatters/sql.py:14
+#: src/window.py:126 src/formatters/sql.py:14
 msgid "Format SQL documents"
 msgstr "SQL belgelerini biçimlendir"
 
-#: src/window.py:131 src/formatters/xml.py:16
+#: src/window.py:133 src/formatters/xml.py:16
 msgid "Format XML documents"
 msgstr "XML belgelerini biçimlendir"
 
-#: src/window.py:138 src/ui/views/hash_generator.ui:31
+#: src/window.py:140 src/ui/views/hash_generator.ui:31
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
 msgstr ""
 "MD5, SHA1, SHA256 ve SHA512 özetlerini hesaplayın ve bütünlüğü denetleyin"
 
-#: src/window.py:145 src/ui/views/lorem_generator.ui:31
+#: src/window.py:147 src/ui/views/lorem_generator.ui:31
 msgid "Generate lorem ipsum placeholder text"
 msgstr "Lorem ipsum yer tutucu metin oluştur"
 
-#: src/window.py:152 src/ui/views/uuid_generator.ui:31
+#: src/window.py:154 src/ui/views/uuid_generator.ui:31
 msgid "Generate Universally Unique IDs (UUID)"
 msgstr "Evrensel Benzersiz Kimlik Oluştur (UUID)"
 
-#: src/window.py:156 src/ui/views/text_inspector.ui:30
+#: src/window.py:158 src/ui/views/text_inspector.ui:30
 msgid "Text Inspector & Case Converter"
 msgstr "Metin İnceleyici ve Durum Dönüştürücü"
 
-#: src/window.py:159 src/ui/views/text_inspector.ui:31
+#: src/window.py:161 src/ui/views/text_inspector.ui:31
 msgid "View statistics about text and change sentence cases"
 msgstr ""
 "Metinle ilgili istatistikleri görüntüleyin ve tümce durumlarını değiştirin"
 
-#: src/window.py:163
+#: src/window.py:165
 msgid "Regex Tester"
 msgstr "Düzenli İfade Sınayıcı"
 
-#: src/window.py:166 src/ui/views/regex_tester.ui:31
+#: src/window.py:168 src/ui/views/regex_tester.ui:31
 msgid "Find matching strings inside a text"
 msgstr "Metin içinde eşleşen dizgeleri bulun"
 
-#: src/window.py:170 src/ui/views/text_diff.ui:30
+#: src/window.py:172 src/ui/views/text_diff.ui:30
 msgid "Text Diff"
 msgstr "Metin Farkı"
 
-#: src/window.py:173 src/ui/views/text_diff.ui:31
+#: src/window.py:175 src/ui/views/text_diff.ui:31
 msgid "Analyze two texts and find differences"
 msgstr "İki metni inceleyip farkları bulun"
 
-#: src/window.py:177 src/ui/views/xml_validator.ui:30
+#: src/window.py:179 src/ui/views/xml_validator.ui:30
 msgid "XML Scheme Validator"
 msgstr "XML Şema Doğrulayıcı"
 
-#: src/window.py:180 src/ui/views/xml_validator.ui:31
+#: src/window.py:182 src/ui/views/xml_validator.ui:31
 msgid "Check an XML file against an XSD schema"
 msgstr "XML dosyasını XSD şemasına göre denetle"
 
-#: src/window.py:187 src/ui/views/markdown_preview.ui:32
+#: src/window.py:189 src/ui/views/markdown_preview.ui:32
 msgid "Preview markdown code as you type"
 msgstr "Yazarken markdown kodunu ön izle"
 
-#: src/window.py:191 src/ui/views/contrast_checker.ui:30
+#: src/window.py:193 src/ui/views/contrast_checker.ui:30
 msgid "Contrast Checker"
 msgstr "Karşıtlık Denetleyici"
 
-#: src/window.py:194 src/ui/views/contrast_checker.ui:31
+#: src/window.py:196 src/ui/views/contrast_checker.ui:31
 msgid "Check a color combination for WCAG compliance"
 msgstr "WCAG uyumluluğu için renk kombinasyonunu denetle"
 
-#: src/window.py:198
+#: src/window.py:200
 msgid "Color Blindness"
 msgstr "Renk Körlüğü"
 
-#: src/window.py:201 src/ui/views/colorblindness_simulator.ui:31
+#: src/window.py:203 src/ui/views/colorblindness_simulator.ui:31
 msgid "Simulate color blindness in images"
 msgstr "Resimde renk körlüğünü simüle et"
 
-#: src/window.py:205 src/ui/views/image_converter.ui:31
+#: src/window.py:207 src/ui/views/image_converter.ui:31
 msgid "Image Format Converter"
 msgstr "Resim Biçimi Dönüştürücü"
 
-#: src/window.py:208 src/ui/views/image_converter.ui:32
+#: src/window.py:210 src/ui/views/image_converter.ui:32
 msgid "Convert images to different formats"
 msgstr "Resimleri farklı biçimlere dönüştür"
 
-#: src/window.py:215
+#: src/window.py:217
+#, fuzzy
+msgid "Format HTML documents"
+msgstr "XML belgelerini biçimlendir"
+
+#: src/window.py:224 src/ui/views/certificate_parser.ui:29
+#, fuzzy
+msgid "View certificates contents"
+msgstr "İçeriğini görüntülemek için bu dosyayı kaydedin"
+
+#: src/window.py:231
 msgid "Converters"
 msgstr "Dönüştürücüler"
 
-#: src/window.py:220
+#: src/window.py:236
 msgid "Encoders"
 msgstr "Kodlayıcılar"
 
-#: src/window.py:225
+#: src/window.py:241
 msgid "Formatters"
 msgstr "Biçimlendiriciler"
 
-#: src/window.py:230
+#: src/window.py:246
 msgid "Generators"
 msgstr "Oluşturucular"
 
-#: src/window.py:235 src/ui/views/regex_tester.ui:68
-#: src/ui/views/text_inspector.ui:133 src/ui/views/text_inspector.ui:204
+#: src/window.py:251 src/ui/views/regex_tester.ui:68
+#: src/ui/views/text_inspector.ui:146 src/ui/views/text_inspector.ui:217
 msgid "Text"
 msgstr "Metin"
 
-#: src/window.py:240
+#: src/window.py:256
 msgid "Graphics"
 msgstr "Grafik"
 
@@ -252,19 +262,21 @@ msgid "Opening image..."
 msgstr "Resim açılıyor..."
 
 #: src/widgets/image_area.py:108 src/widgets/text_area.py:156
-#: src/widgets/text_file_area.py:177
+#: src/widgets/text_file_area.py:177 src/views/certificate_parser.py:80
 msgid "Open File"
 msgstr "Dosya Aç"
 
 #: src/widgets/image_area.py:110 src/widgets/text_area.py:158
-#: src/widgets/text_file_area.py:179 src/ui/widgets/image_area.ui:70
-#: src/ui/widgets/text_area.ui:82 src/ui/widgets/text_file_area.ui:82
+#: src/widgets/text_file_area.py:179 src/views/certificate_parser.py:82
+#: src/ui/widgets/image_area.ui:70 src/ui/widgets/text_area.ui:82
+#: src/ui/widgets/text_file_area.ui:82 src/ui/views/certificate_parser.ui:64
 msgid "Open"
 msgstr "Aç"
 
 #: src/widgets/image_area.py:111 src/widgets/image_area.py:158
 #: src/widgets/text_area.py:159 src/widgets/text_file_area.py:180
-#: src/widgets/text_file_area.py:295 src/views/image_converter.py:61
+#: src/widgets/text_file_area.py:295 src/views/certificate_parser.py:83
+#: src/views/image_converter.py:61
 msgid "Cancel"
 msgstr "İptal Et"
 
@@ -316,30 +328,112 @@ msgstr "Metin dosyaları ve resimler"
 msgid "Saving file..."
 msgstr "Dosya kaydediliyor..."
 
-#. Toast messages
-#: src/views/colorblindness_simulator.py:26 src/views/gzip_compressor.py:27
-#: src/views/image_converter.py:23
-msgid "Open folder"
-msgstr "Klasör aç"
-
-#: src/views/colorblindness_simulator.py:57 src/views/gzip_compressor.py:58
-#: src/views/image_converter.py:40
-#, python-brace-format
-msgid "Successfully saved as {save_path}"
-msgstr "{save_path} olarak kaydedildi"
-
-#: src/views/colorblindness_simulator.py:84
-#: src/views/colorblindness_simulator.py:86
-#: src/views/colorblindness_simulator.py:88
-msgid "Loading simulation..."
-msgstr "Simülasyon yükleniyor..."
-
+#: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
 #: src/views/formatter.py:45 src/views/gzip_compressor.py:67
 #: src/views/hash_generator.py:76 src/views/html_encoder.py:46
 #: src/views/json_yaml.py:52 src/views/url_encoder.py:53
 #, python-brace-format
 msgid "Error: {error}"
 msgstr "Hata: {error}"
+
+#: src/views/certificate_parser.py:60
+#, fuzzy
+msgid "Cannot open more than one file"
+msgstr "Görüntüden ya da dosyadan açılamıyor"
+
+#: src/views/certificate_parser.py:65
+#, fuzzy
+msgid "Unsupported file"
+msgstr "Kabul edilen dosyalar"
+
+#: src/views/certificate_parser.py:91
+msgid "Certificates"
+msgstr ""
+
+#: src/views/certificate_parser.py:102 src/ui/views/certificate_parser.ui:124
+msgid "Expand All"
+msgstr ""
+
+#: src/views/certificate_parser.py:106
+msgid "Collapse All"
+msgstr ""
+
+#. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
+#: src/views/certificate_parser.py:149
+#, python-brace-format
+msgid "Identity: {identity}"
+msgstr ""
+
+#. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
+#: src/views/certificate_parser.py:151
+#, python-brace-format
+msgid "Verified by: {verified_by}"
+msgstr ""
+
+#. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
+#: src/views/certificate_parser.py:153
+#, python-brace-format
+msgid "Expires: {expiration_date}"
+msgstr ""
+
+#. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
+#: src/views/certificate_parser.py:159
+msgid "Basic Constraints"
+msgstr ""
+
+#. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
+#: src/views/certificate_parser.py:160
+msgid "Extended Key Usage"
+msgstr ""
+
+#. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
+#: src/views/certificate_parser.py:161 src/views/certificate_parser.py:207
+msgid "Subject Key Identifier"
+msgstr ""
+
+#. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
+#: src/views/certificate_parser.py:162
+msgid "Key Usage"
+msgstr ""
+
+#. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
+#: src/views/certificate_parser.py:163
+msgid "Subject Alternative Names"
+msgstr ""
+
+#. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
+#: src/views/certificate_parser.py:167
+#, fuzzy
+msgid "Extension"
+msgstr "Sürüm"
+
+#. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
+#: src/views/certificate_parser.py:208
+msgid "Certificate Fingerprints"
+msgstr ""
+
+#. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
+#: src/views/certificate_parser.py:211
+msgid "Key Identifier"
+msgstr ""
+
+#. Toast messages
+#: src/views/colorblindness_simulator.py:26 src/views/gzip_compressor.py:27
+#: src/views/image_converter.py:23
+msgid "Open folder"
+msgstr "Klasör aç"
+
+#: src/views/colorblindness_simulator.py:65 src/views/gzip_compressor.py:58
+#: src/views/image_converter.py:40
+#, python-brace-format
+msgid "Successfully saved as {save_path}"
+msgstr "{save_path} olarak kaydedildi"
+
+#: src/views/colorblindness_simulator.py:92
+#: src/views/colorblindness_simulator.py:94
+#: src/views/colorblindness_simulator.py:96
+msgid "Loading simulation..."
+msgstr "Simülasyon yükleniyor..."
 
 #: src/views/formatter.py:73
 msgid ""
@@ -467,6 +561,11 @@ msgstr "Girdiyi temizle"
 msgid "Open image in another program"
 msgstr "Resmi başka programda aç"
 
+#: src/ui/widgets/webview_area.ui:65
+#, fuzzy
+msgid "Open web page in another browser"
+msgstr "Resmi başka programda aç"
+
 #: src/ui/views/base_converter.ui:30
 msgid "Number Bases Converter"
 msgstr "Sayı Tabanları Dönüştürücü"
@@ -499,10 +598,11 @@ msgstr ""
 "Kabul edilmeyen bir karakter (örneğin: ondalık alana 'A') yazılması, tüm "
 "alanların 0 olarak sıfırlanmasını neden olur."
 
-#: src/ui/views/colorblindness_simulator.ui:30
-msgid "Color Blindness Simulator"
-msgstr "Renk Körlüğü Simülatörü"
+#: src/ui/views/certificate_parser.ui:28
+msgid "Certificate Parser"
+msgstr ""
 
+#: src/ui/views/certificate_parser.ui:43
 #: src/ui/views/colorblindness_simulator.ui:45
 #: src/ui/views/contrast_checker.ui:45 src/ui/views/cron_converter.ui:46
 #: src/ui/views/formatter.ui:41 src/ui/views/gzip_compressor.ui:45
@@ -513,6 +613,24 @@ msgstr "Renk Körlüğü Simülatörü"
 #: src/ui/views/uuid_generator.ui:45
 msgid "Tool options"
 msgstr "Araç Seçenekleri"
+
+#: src/ui/views/certificate_parser.ui:46
+msgid "Certificate"
+msgstr ""
+
+#: src/ui/views/certificate_parser.ui:47
+#, fuzzy
+msgid "Open a certificate file (pem, der, cer extensions)"
+msgstr "İçeriğini görüntülemek için bu dosyayı kaydedin"
+
+#: src/ui/views/certificate_parser.ui:102
+#, fuzzy
+msgid "Open a certificate file to view its contents."
+msgstr "İçeriğini görüntülemek için bu dosyayı kaydedin"
+
+#: src/ui/views/colorblindness_simulator.ui:30
+msgid "Color Blindness Simulator"
+msgstr "Renk Körlüğü Simülatörü"
 
 #: src/ui/views/colorblindness_simulator.ui:48
 msgid "Severity"
@@ -559,27 +677,31 @@ msgstr "Arka plan için kullanılan renk"
 msgid "Example"
 msgstr "Örnek"
 
-#: src/ui/views/contrast_checker.ui:105
+#. TRANSLATORS: if your language doesn't have a standard placeholder text, don't translate
+#: src/ui/views/contrast_checker.ui:106
 msgid "Lorem ipsum dolor sit amet"
 msgstr "Lorem ipsum dolor sit amet"
 
-#: src/ui/views/contrast_checker.ui:113
+#. TRANSLATORS: if your language doesn't have a standard placeholder text, don't translate
+#: src/ui/views/contrast_checker.ui:115
 msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
 msgstr "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
 
-#: src/ui/views/contrast_checker.ui:138 src/ui/views/contrast_checker.ui:170
+#. TRANSLATORS: AA is refered to the WCAG contrast specification
+#: src/ui/views/contrast_checker.ui:141 src/ui/views/contrast_checker.ui:174
 msgid "AA"
 msgstr "AA"
 
-#: src/ui/views/contrast_checker.ui:146 src/ui/views/contrast_checker.ui:210
+#: src/ui/views/contrast_checker.ui:149 src/ui/views/contrast_checker.ui:215
 msgid "small"
 msgstr "küçük"
 
-#: src/ui/views/contrast_checker.ui:178 src/ui/views/contrast_checker.ui:242
+#: src/ui/views/contrast_checker.ui:182 src/ui/views/contrast_checker.ui:248
 msgid "large"
 msgstr "büyük"
 
-#: src/ui/views/contrast_checker.ui:202 src/ui/views/contrast_checker.ui:234
+#. TRANSLATORS: AAA is refered to the WCAG contrast specification
+#: src/ui/views/contrast_checker.ui:207 src/ui/views/contrast_checker.ui:240
 msgid "AAA"
 msgstr "AAA"
 
@@ -812,83 +934,96 @@ msgstr "Durum değiştir"
 msgid "Choose a case to apply to the text"
 msgstr "Metne uygulacak düzeni seçin"
 
-#: src/ui/views/text_inspector.ui:55
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:56
 msgid "Sentence case"
 msgstr "Tümce düzeni"
 
-#: src/ui/views/text_inspector.ui:56
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:58
 msgid "lower case"
 msgstr "küçük harf"
 
-#: src/ui/views/text_inspector.ui:57
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:60
 msgid "UPPER CASE"
 msgstr "BÜYÜK HARF"
 
-#: src/ui/views/text_inspector.ui:58
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:62
 msgid "Title Case"
 msgstr "Başlık Düzeni"
 
-#: src/ui/views/text_inspector.ui:59
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:64
 msgid "camelCase"
 msgstr "deveDüzeni"
 
-#: src/ui/views/text_inspector.ui:60
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:66
 msgid "PascalCase"
 msgstr "PascalDüzeni"
 
-#: src/ui/views/text_inspector.ui:61
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:68
 msgid "snake_case"
 msgstr "yılan_düzeni"
 
-#: src/ui/views/text_inspector.ui:62
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:70
 msgid "CONSTANT_CASE"
 msgstr "SABİT_DÜZENİ"
 
-#: src/ui/views/text_inspector.ui:63
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:72
 msgid "kebab-case"
 msgstr "kebap-düzeni"
 
-#: src/ui/views/text_inspector.ui:64
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:74
 msgid "COBOL-CASE"
 msgstr "COBOL-DÜZENİ"
 
-#: src/ui/views/text_inspector.ui:65
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:76
 msgid "Train-Case"
 msgstr "Tren-Düzeni"
 
-#: src/ui/views/text_inspector.ui:66
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:78
 msgid "aLtErNaTiNg CaSe"
 msgstr "dEğİşİm DüZeNi"
 
-#: src/ui/views/text_inspector.ui:67
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/ui/views/text_inspector.ui:80
 msgid "ReVeRsE aLtErNaTiNg CaSe"
 msgstr "TeRs dEğİşİm DüZeNi"
 
-#: src/ui/views/text_inspector.ui:85
+#: src/ui/views/text_inspector.ui:98
 msgid "Information"
 msgstr "Bilgi"
 
-#: src/ui/views/text_inspector.ui:88
+#: src/ui/views/text_inspector.ui:101
 msgid "Cursor"
 msgstr "İmleç"
 
-#: src/ui/views/text_inspector.ui:101
+#: src/ui/views/text_inspector.ui:114
 msgid "Line:"
 msgstr "Satır:"
 
-#: src/ui/views/text_inspector.ui:117
+#: src/ui/views/text_inspector.ui:130
 msgid "Column:"
 msgstr "Sütun:"
 
-#: src/ui/views/text_inspector.ui:146
+#: src/ui/views/text_inspector.ui:159
 msgid "Characters:"
 msgstr "Karakter:"
 
-#: src/ui/views/text_inspector.ui:162
+#: src/ui/views/text_inspector.ui:175
 msgid "Words:"
 msgstr "Sözcük:"
 
-#: src/ui/views/text_inspector.ui:178
+#: src/ui/views/text_inspector.ui:191
 msgid "Lines:"
 msgstr "Satır:"
 

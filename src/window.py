@@ -28,6 +28,7 @@ from .views.markdown_preview import MarkdownPreviewView
 from .views.contrast_checker import ContrastCheckerView
 from .views.colorblindness_simulator import ColorblindnessSimulatorView
 from .views.image_converter import ImageConverterView
+from .views.certificate_parser import CertificateParserView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -215,6 +216,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "html-symbolic",
                 "tooltip": _("Format HTML documents"),
                 "child": FormatterView(HtmlFormatter()),
+            },
+            "certificate-parser": {
+                "title": "Certificate Parser",
+                "category": "encoder",
+                "icon-name": "certificate-symbolic",
+                "tooltip": _("View certificates contents"),
+                "child": CertificateParserView(),
             },
         }
 

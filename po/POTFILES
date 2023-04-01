@@ -19,6 +19,7 @@ src/widgets/utility_title.py
 src/widgets/webview_area.py
 
 src/views/base_converter.py
+src/views/certificate_parser.py
 src/views/colorblindness_simulator.py
 src/views/contrast_checker.py
 src/views/cron_converter.py
@@ -55,6 +56,7 @@ src/ui/widgets/utility_title.ui
 src/ui/widgets/webview_area.ui
 
 src/ui/views/base_converter.ui
+src/ui/views/certificate_parser.ui
 src/ui/views/colorblindness_simulator.ui
 src/ui/views/contrast_checker.ui
 src/ui/views/cron_converter.ui

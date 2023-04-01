@@ -89,6 +89,25 @@
             ]
         },
         {
+            "name": "python3-python-crontab",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"python-crontab\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl",
+                    "sha256": "961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/9d/3b/8288af482e9ce777258ad234a497da22f36e4c36041da35b7648957eda37/python_crontab-2.7.1-py3-none-any.whl",
+                    "sha256": "9c374d1c9d401afdd8dd958f20077f74c158ab3fffb9604296802715e887fe48"
+                }
+            ]
+        },
+        {
             "name": "python3-pyjwt",
             "buildsystem": "simple",
             "build-commands": [
@@ -145,20 +164,6 @@
             ]
         },
         {
-            "name": "python3-base64io",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"base64io\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c7/9c/401865bd07802b916c327342ed609f9ac0aa8c6c48bea1a32b7eabc17229/base64io-1.0.3-py2.py3-none-any.whl",
-                    "sha256": "e9a6c9f470e34f8debaad26134bcf3f0bcbf677dac73e32295cfb2915d30815b"
-                }
-            ]
-        },
-        {
             "name": "python3-uuid6",
             "buildsystem": "simple",
             "build-commands": [
@@ -181,8 +186,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b2/2f/e4434084c12549a2aa015a8ba007722e6b4e0e7b0855baa915120271a8df/pyphen-0.13.2-py3-none-any.whl",
-                    "sha256": "e88cfb46aed61f4c7fe49592ff322e6266485fd2447c818a9123485cd92b7ef4"
+                    "url": "https://files.pythonhosted.org/packages/e3/c3/556e4ed0402ad7810a828532d539f1b14884fc0ff6c2da8ab401bf3bbd63/pyphen-0.14.0-py3-none-any.whl",
+                    "sha256": "414c9355958ca3c6a3ff233f65678c245b8ecb56418fb291e2b93499d61cd510"
                 },
                 {
                     "type": "file",
@@ -268,6 +273,20 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/65/e7/a6bea606f4e57fbfbbd5334e715be25c1d97d9018ff184ba5ec6e66c3b34/daltonlens-0.1.5-py3-none-any.whl",
                     "sha256": "e66edeb4bb006579a60a9ed221a23a9493349b633cdf1c18133805f36d8ccd5f"
+                }
+            ]
+        },
+        {
+            "name": "python3-asn1crypto",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"asn1crypto\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/c9/7f/09065fd9e27da0eda08b4d6897f1c13535066174cc023af248fc2a8d5e5a/asn1crypto-1.5.1-py2.py3-none-any.whl",
+                    "sha256": "db4e40728b728508912cbb3d44f19ce188f218e9eba635821bb4b68564f8fd67"
                 }
             ]
         }
