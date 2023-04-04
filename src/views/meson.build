@@ -29,6 +29,7 @@ sources = [
   'colorblindness_simulator.py',
   'image_converter.py',
   'certificate_parser.py',
+  'random_generator.py',
 ]
 
 install_data(sources, install_dir: viewsdir)

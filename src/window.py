@@ -29,6 +29,7 @@ from .views.contrast_checker import ContrastCheckerView
 from .views.colorblindness_simulator import ColorblindnessSimulatorView
 from .views.image_converter import ImageConverterView
 from .views.certificate_parser import CertificateParserView
+from .views.random_generator import RandomGeneratorView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -218,11 +219,18 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "child": FormatterView(HtmlFormatter()),
             },
             "certificate-parser": {
-                "title": "Certificate Parser",
+                "title": _("Certificate Parser"),
                 "category": "encoder",
                 "icon-name": "certificate-symbolic",
                 "tooltip": _("View certificates contents"),
                 "child": CertificateParserView(),
+            },
+             "random-generator": {
+                "title": _("Random Generator"),
+                "category": "generator",
+                "icon-name": "dice3-symbolic",
+                "tooltip": _("Generate random numbers and strings"),
+                "child": RandomGeneratorView(),
             },
         }
 
