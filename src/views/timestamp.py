@@ -16,6 +16,7 @@ class TimestampView(Adw.Bin):
     _title = Gtk.Template.Child()
     _timestamp_spin_area = Gtk.Template.Child()
     _date_area = Gtk.Template.Child()
+    _iso_date = Gtk.Template.Child()
 
     def __init__(self):
         super().__init__()
@@ -24,6 +25,7 @@ class TimestampView(Adw.Bin):
         time = datetime.now(tz = tz.tzlocal())
         self._timestamp_spin_area.set_value(time.timestamp())
         self._date_area.set_date(time.year, time.month, time.day, time.hour, time.minute, time.second)
+        self._iso_date.set_text(time.isoformat("T"))
 
         # Signals
         self._timestamp_spin_area.connect("action-clicked", self._on_timestamp_now_clicked)
@@ -32,11 +34,14 @@ class TimestampView(Adw.Bin):
 
     def _on_timestamp_now_clicked(self, source_widget:GObject.Object):
         self._timestamp_spin_area.set_value(int(datetime.now(tz = tz.tzlocal()).timestamp()))
+        self._iso_date.set_text(datetime.now(tz = tz.tzlocal()).isoformat("T"))
 
     def _on_timestamp_changed(self, source_widget:GObject.Object):
         time = datetime.fromtimestamp(self._timestamp_spin_area.get_value())
         self._date_area.set_date(time.year, time.month, time.day, time.hour, time.minute, time.second)
+        self._iso_date.set_text(time.isoformat("T"))
 
     def _on_date_changed(self, source_widget:GObject.Object):
         year, month, day, hours, minutes, seconds = self._date_area.get_date()
         self._timestamp_spin_area.set_value(int(datetime(year, month, day, hour=hours, minute=minutes, second=seconds).timestamp()))
+        self._iso_date.set_text(datetime(year, month, day, hour=hours, minute=minutes, second=seconds).isoformat("T"))

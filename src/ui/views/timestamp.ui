@@ -57,6 +57,19 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="name" translatable="yes">Date</property>
                       </object>
                     </child>
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="margin-top">10</property>
+                        <child>
+                          <object class="EntryRow" id="_iso_date">
+                            <property name="editable">false</property>
+                            <property name="show-copy-btn">true</property>
+                            <property name="title" translatable="yes">ISO date (ISO 8601/RFC 3339)</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
 
                   </object>
                 </property>
