@@ -16,3 +16,5 @@ numpy
 Pillow
 daltonlens
 asn1crypto
+pytz
+tzlocal
