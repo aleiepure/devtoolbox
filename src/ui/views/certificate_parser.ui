@@ -147,35 +147,22 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
                                 <!-- content box -->
                                 <child>
-                                  <object class="GtkBox">
-                                    <property name="orientation">vertical</property>
-                                    <property name="spacing">10</property>
+                                  <object class="AdwPreferencesGroup" id="_general_group">
                                     <property name="margin-top">10</property>
-                                    <child>
-                                      <object class="AdwPreferencesGroup" id="_general_group">
-                                        <property name="hexpand">true</property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkBox">
-                                        <property name="orientation">horizontal</property>
-                                        <property name="spacing">10</property>
-                                        <property name="homogeneous">true</property>
-
-                                        <child>
-                                          <object class="AdwPreferencesGroup" id="_named_extensions_group">
-                                            <property name="hexpand">true</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="AdwPreferencesGroup" id="_extensions_group">
-                                            <property name="hexpand">true</property>
-                                          </object>
-                                        </child>
-
-                                      </object>
-                                    </child>
-
+                                    <property name="hexpand">true</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwPreferencesGroup" id="_named_extensions_group">
+                                    <property name="margin-top">10</property>
+                                    <property name="hexpand">true</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwPreferencesGroup" id="_extensions_group">
+                                    <property name="margin-top">10</property>
+                                    <property name="margin-bottom">10</property>
+                                    <property name="hexpand">true</property>
                                   </object>
                                 </child>
 

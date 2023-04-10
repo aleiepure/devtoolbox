@@ -71,6 +71,7 @@ class CertificateParserView(Adw.Bin):
 
         # Disable button
         self._open_btn.set_sensitive(False)
+        self._open_certificate_row.remove_css_class("border-red")
 
         # Create a file chooser
         app = Gio.Application.get_default()
@@ -141,6 +142,11 @@ class CertificateParserView(Adw.Bin):
         certificate = self._service.get_gcr_async_finish(result, self)
 
         elements = certificate.get_interface_elements()
+        if not elements:
+            self._open_certificate_row.add_css_class("border-red")
+            self._toast.add_toast(Adw.Toast(title=_("Error: Cannot open this file because it is not a valid certificate."), priority=Adw.ToastPriority.HIGH))
+            self._view_stack.set_visible_child_name("empty")
+            return
 
         # General sections
         self._certificate_group.set_title(elements[0].get_label())
@@ -181,7 +187,6 @@ class CertificateParserView(Adw.Bin):
         self._view_stack.set_visible_child_name("certificate")
 
     def _create_expander(self, title:str, fields:List[Gcr.CertificateField]) -> Adw.ExpanderRow:
-        line_count = 0
         expander = Adw.ExpanderRow(title=title)
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL,
                       spacing=6,
@@ -219,15 +224,8 @@ class CertificateParserView(Adw.Bin):
 
             label = Gtk.Label(label=field.get_label() + ": " + value, halign=Gtk.Align.START, css_classes=["monospace"], selectable=True)
             box.append(label)
-            line_count += label.get_text().count("\n") + 1
 
-        # Based on number of lines add scroll ability
-        if line_count > 10:
-            scrolled_window = Gtk.ScrolledWindow(min_content_height=150)
-            scrolled_window.set_child(box)
-            expander.add_row(scrolled_window)
-        else:
-            expander.add_row(box)
+        expander.add_row(box)
 
         # Disable hover effect
         expander.get_child().get_last_child().get_first_child().get_first_child().remove_css_class("activatable")
