@@ -44,12 +44,31 @@ class ContrastCheckerView(Adw.Bin):
         bg_css_str = "* { background-color: " + bg_color.to_string() + "; }"
 
         lbl_css_provider = Gtk.CssProvider()
-        lbl_css_provider.load_from_data(lbl_css_str.encode("utf-8"))
+
+        # In GTK 4.8, bytes are expected, in GTK 4.10, you can provider a string, with a length.
+        # This patch still allows bytes for backwards compatibility, and add support for
+        # strings in GTK 4.8 and before.
+        # https://gitlab.gnome.org/GNOME/pygobject/-/merge_requests/231
+        # Credits to https://gitlab.gnome.org/amolenaar for the patch
+        if (Gtk.get_major_version(), Gtk.get_minor_version()) >= (4, 9):
+            lbl_css_provider.load_from_data(lbl_css_str, -1)
+        else:
+            lbl_css_provider.load_from_data(lbl_css_str.encode("utf-8"))
+
         self._example_title_lbl.get_style_context().add_provider(lbl_css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
         self._example_lbl.get_style_context().add_provider(lbl_css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
         bg_css_provider = Gtk.CssProvider()
-        bg_css_provider.load_from_data(bg_css_str.encode("utf-8"))
+
+        # In GTK 4.8, bytes are expected, in GTK 4.10, you can provider a string, with a length.
+        # This patch still allows bytes for backwards compatibility, and add support for
+        # strings in GTK 4.8 and before.
+        # https://gitlab.gnome.org/GNOME/pygobject/-/merge_requests/231
+        # Credits to https://gitlab.gnome.org/amolenaar for the patch
+        if (Gtk.get_major_version(), Gtk.get_minor_version()) >= (4, 9):
+            bg_css_provider.load_from_data(bg_css_str, -1)
+        else:
+            bg_css_provider.load_from_data(bg_css_str.encode("utf-8"))
         self._example_box.get_style_context().add_provider(bg_css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
     def _check_wcag(self):
