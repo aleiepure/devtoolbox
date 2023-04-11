@@ -8,9 +8,8 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2023-03-04 19:17+0100\n"
-"PO-Revision-Date: 2023-04-08 11:16+0000\n"
-"Last-Translator: Óscar Fernández Díaz <oscfdezdz@users.noreply.hosted.weblate"
-".org>\n"
+"PO-Revision-Date: 2023-04-09 11:52+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/es/>\n"
 "Language: es\n"
@@ -843,7 +842,7 @@ msgstr "MAYÚSCULAS"
 #. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
 #: src/ui/views/text_inspector.ui:62
 msgid "Title Case"
-msgstr "Title Case"
+msgstr "Titulo del caso"
 
 #. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
 #: src/ui/views/text_inspector.ui:64
