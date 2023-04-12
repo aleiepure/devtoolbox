@@ -30,6 +30,7 @@ sources = [
   'image_converter.py',
   'certificate_parser.py',
   'random_generator.py',
+  'certificate_request_generator.py',
 ]
 
 install_data(sources, install_dir: viewsdir)

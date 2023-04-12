@@ -29,6 +29,17 @@
     "modules" : [
         "pypi-dependencies.json",
         {
+	  "name": "blueprint-compiler",
+	  "buildsystem": "meson",
+	  "sources": [
+	    {
+	      "type": "git",
+	      "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+	      "tag": "v0.6.0"
+	    }
+	  ]
+	},
+        {
             "name" : "devtoolbox",
             "builddir" : true,
             "buildsystem" : "meson",

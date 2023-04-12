@@ -30,6 +30,7 @@ from .views.colorblindness_simulator import ColorblindnessSimulatorView
 from .views.image_converter import ImageConverterView
 from .views.certificate_parser import CertificateParserView
 from .views.random_generator import RandomGeneratorView
+from .views.certificate_request_generator import CertificateRequestGeneratorView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -226,11 +227,18 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "child": CertificateParserView(),
             },
              "random-generator": {
-                "title": _("Random Generator"),
+                "title": _("Random"),
                 "category": "generator",
                 "icon-name": "dice3-symbolic",
                 "tooltip": _("Generate random numbers and strings"),
                 "child": RandomGeneratorView(),
+            },
+            "csr-generator": {
+                "title": _("Certificate Signing Request"),
+                "category": "generator",
+                "icon-name": "certificate-symbolic",
+                "tooltip": _("Generate certificate signing requests"),
+                "child": CertificateRequestGeneratorView(),
             },
         }
 
