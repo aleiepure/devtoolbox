@@ -18,6 +18,7 @@ sources = [
   'entry_row.py',
   'webview_area.py',
   'image_area.py',
+  'theme_switcher.py',
 ]
 
 install_data(sources, install_dir: widgetsdir)

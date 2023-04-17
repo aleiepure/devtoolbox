@@ -9,6 +9,7 @@ gnome = import('gnome')
 blueprints = custom_target('blueprints',
   input: files(
     'ui/views/certificate_request_generator.blp',
+    'ui/widgets/theme_switcher.blp',
   ),
   output: '.',
   command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],

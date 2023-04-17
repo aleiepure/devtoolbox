@@ -10,6 +10,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
   <gresource prefix="/me/iepure/devtoolbox">
     <file alias="style.css">css/style.css</file>
     <file alias="style-hc.css">css/style-hc.css</file>
+    <file alias="style-dark.css">css/style-dark.css</file>
+    <file alias="style-dark-hc.css">css/style-dark-hc.css</file>
     <file preprocess="xml-stripblanks">ui/window.ui</file>
     <file preprocess="xml-stripblanks">ui/about_window.ui</file>
     <file preprocess="xml-stripblanks" alias="gtk/help-overlay.ui">ui/gtk/help-overlay.ui</file>
@@ -23,6 +25,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/widgets/entry_row.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/webview_area.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/image_area.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/theme_switcher.ui</file>
     <file preprocess="xml-stripblanks">ui/views/tab_content.ui</file>
     <file preprocess="xml-stripblanks">ui/views/json_yaml.ui</file>
     <file preprocess="xml-stripblanks">ui/views/timestamp.ui</file>

@@ -26,6 +26,7 @@ from .widgets.date_area import DateArea
 from .widgets.entry_row import EntryRow
 from .widgets.webview_area import WebviewArea
 from .widgets.image_area import ImageArea
+from .widgets.theme_switcher import ThemeSwitcher
 
 
 class DevtoolboxApplication(Adw.Application):
@@ -47,6 +48,7 @@ class DevtoolboxApplication(Adw.Application):
         EntryRow,
         WebviewArea,
         ImageArea,
+        ThemeSwitcher,
     ]
 
     def __init__(self, version, debug):
@@ -54,7 +56,7 @@ class DevtoolboxApplication(Adw.Application):
 
         self.version = version
         self.debug = debug
-        Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK)
+        # Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK)
 
         self.create_action("quit", self.on_quit_action, ["<primary>q"])
         self.create_action("about", self.on_about_action)

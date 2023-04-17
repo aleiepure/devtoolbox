@@ -6,6 +6,7 @@ from gi.repository import Adw, Gtk, Gio, GObject
 from gettext import gettext as _
 
 from .widgets.sidebar_item import SidebarItem
+from .widgets.theme_switcher import ThemeSwitcher
 
 from .views.tab_content import TabContent
 from .views.json_yaml import JsonYamlView
@@ -46,12 +47,19 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
     _title = Gtk.Template.Child()
     _flap_btn = Gtk.Template.Child()
     _tabs_stack = Gtk.Template.Child()
+    _menu_btn = Gtk.Template.Child()
 
     # GSettings
     _settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
 
     def __init__(self, debug, **kwargs):
         super().__init__(**kwargs)
+
+        # Deal with theme (Adapted from https://gitlab.gnome.org/tijder/blueprintgtk/)
+        self._menu_btn.get_popover().add_child(ThemeSwitcher(), "themeswitcher");
+        # style_manager = Adw.StyleManager.get_default()
+        # self.__update_style(style_manager, None)
+        # style_manager.connect('notify::dark', self.__update_style)
 
         # Theme headerbar
         if debug == "False":
@@ -307,3 +315,9 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             if tools[t]["category"] == category:
                 tools_in_category[t] = tools[t]
         return tools_in_category
+
+    # def __update_style(self, style_manager, dark):
+    #     if style_manager.get_dark():
+    #         self._settings.set_string("style-scheme", "Adwaita-dark")
+    #     else:
+    #         self._settings.set_string("style-scheme", "Adwaita")
