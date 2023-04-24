@@ -2,8 +2,7 @@
 #
 # SPDX-License-Identifier: CC0-1.0
 
-.scannerwork/
-sonar-scanner.properties
+.flatpak-builder/
 .pre-commit-config.yaml
 me.iepure.devtoolbox-release.json
 po/*.mo

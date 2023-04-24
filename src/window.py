@@ -32,6 +32,7 @@ from .views.image_converter import ImageConverterView
 from .views.certificate_parser import CertificateParserView
 from .views.random_generator import RandomGeneratorView
 from .views.certificate_request_generator import CertificateRequestGeneratorView
+from .views.reverse_cron import ReverseCronView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -55,13 +56,8 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
     def __init__(self, debug, **kwargs):
         super().__init__(**kwargs)
 
-        # Deal with theme (Adapted from https://gitlab.gnome.org/tijder/blueprintgtk/)
+        # Theme (Adapted from https://gitlab.gnome.org/tijder/blueprintgtk/)
         self._menu_btn.get_popover().add_child(ThemeSwitcher(), "themeswitcher");
-        # style_manager = Adw.StyleManager.get_default()
-        # self.__update_style(style_manager, None)
-        # style_manager.connect('notify::dark', self.__update_style)
-
-        # Theme headerbar
         if debug == "False":
             self.remove_css_class("devel")
 
@@ -247,6 +243,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "certificate-symbolic",
                 "tooltip": _("Generate certificate signing requests"),
                 "child": CertificateRequestGeneratorView(),
+            },
+            "reverse-cron": {
+                "title": _("Reverse CRON"),
+                "category": "converter",
+                "icon-name": "certificate-symbolic", # TODO: change icon (hourglass with curved arrow)
+                "tooltip": _("Generate CRON expressions"),
+                "child": ReverseCronView(),
             },
         }
 

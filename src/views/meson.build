@@ -31,6 +31,7 @@ sources = [
   'certificate_parser.py',
   'random_generator.py',
   'certificate_request_generator.py',
+  'reverse_cron.py',
 ]
 
 install_data(sources, install_dir: viewsdir)

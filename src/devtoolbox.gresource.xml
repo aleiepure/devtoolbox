@@ -50,6 +50,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/views/certificate_parser.ui</file>
     <file preprocess="xml-stripblanks">ui/views/random_generator.ui</file>
     <file preprocess="xml-stripblanks">ui/views/certificate_request_generator.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/reverse_cron.ui</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="non-starred-symbolic.svg">../data/icons/symbolic/non-starred-symbolic.svg</file>

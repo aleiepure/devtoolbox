@@ -41,6 +41,8 @@ src/views/url_encoder.py
 src/views/uuid_generator.py
 src/views/xml_validator.py
 
+src/views/reverse_cron.py
+
 src/ui/window.ui
 src/ui/about_window.ui
 

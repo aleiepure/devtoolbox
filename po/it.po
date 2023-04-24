@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-01 13:15+0200\n"
+"POT-Creation-Date: 2023-04-24 12:37+0200\n"
 "PO-Revision-Date: 2023-04-01 13:16+0200\n"
 "Last-Translator: Alessandro Iepure\n"
 "Language-Team: none\n"
@@ -73,7 +73,7 @@ msgstr "Generatori di hash"
 msgid "Regex tester"
 msgstr "Tester di Espressioni Regolari"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:186
+#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:192
 #: src/ui/views/markdown_preview.ui:31
 msgid "Markdown Previewer"
 msgstr "Visualizzatore Markdown"
@@ -87,167 +87,236 @@ msgid "Much more..."
 msgstr "Molto altro..."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:69
+#: data/me.iepure.devtoolbox.metainfo.xml.in:78
+msgid "What's new:"
+msgstr ""
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:71
+msgid "Window can be resized smaller than before"
+msgstr ""
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:72
+msgid "Added missing icons on non GNOME desktops"
+msgstr ""
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:80
+msgid "XML formater: can now open .ui files (@gregorni)"
+msgstr ""
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:81
+msgid "Markdown previewer: can open preview in external browser"
+msgstr ""
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:82
+msgid "Color blindness simulator: severtity can be changed via keyboard"
+msgstr ""
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:83
+msgid "New tool: HTML formatter"
+msgstr ""
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:84
+msgid "Turkish translation by @sabriunal"
+msgstr ""
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:85
+msgid "Brasilian Portuguese translation by @rffontenelle"
+msgstr ""
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:91
 msgid "First release"
 msgstr "Primo rilascio"
 
-#: src/window.py:63 src/ui/views/json_yaml.ui:31
+#: src/window.py:69 src/ui/views/json_yaml.ui:31
 msgid "Convert JSON documents to YAML and vice-versa"
 msgstr "Converti documenti JSON in YAML e viceversa"
 
-#: src/window.py:67 src/ui/views/timestamp.ui:45
+#: src/window.py:73 src/ui/views/timestamp.ui:66
 msgid "Timestamp"
 msgstr "Timestamp"
 
-#: src/window.py:70 src/ui/views/timestamp.ui:31
+#: src/window.py:76 src/ui/views/timestamp.ui:31
 msgid "Convert UNIX timestamps to and from plain dates"
 msgstr "Converti timestamp UNIX da e in date semplici"
 
-#: src/window.py:74
+#: src/window.py:80
 msgid "Number Bases"
 msgstr "Basi Numeriche"
 
-#: src/window.py:77 src/ui/views/base_converter.ui:31
+#: src/window.py:83 src/ui/views/base_converter.ui:31
 msgid "Convert numbers between bases"
 msgstr "Converti numeri tra basi numeriche"
 
-#: src/window.py:81 src/ui/views/cron_converter.ui:31
+#: src/window.py:87 src/ui/views/cron_converter.ui:31
 msgid "CRON Parser"
 msgstr "Parser CRON"
 
-#: src/window.py:84 src/ui/views/cron_converter.ui:32
+#: src/window.py:90 src/ui/views/cron_converter.ui:32
 msgid "Convert CRON expressions to time and date"
 msgstr "Converti espressioni CRON in date e ore"
 
-#: src/window.py:91 src/ui/views/html_encoder.ui:31
+#: src/window.py:97 src/ui/views/html_encoder.ui:31
 msgid "Encode and decode special characters using the HTML format"
 msgstr "Codifica e decodifica caratteri speciali usando il formato HTML"
 
-#: src/window.py:98 src/ui/views/url_encoder.ui:31
+#: src/window.py:104 src/ui/views/url_encoder.ui:31
 msgid "Encode and decode special characters inside URLs"
 msgstr "Codifica e decodifica caratteri speciali dentro URL"
 
-#: src/window.py:105 src/ui/views/gzip_compressor.ui:31
+#: src/window.py:111 src/ui/views/gzip_compressor.ui:31
 msgid "Compress and decompress files and texts using GZip"
 msgstr "Comprimi e de-comprimi file e testi usando GZip"
 
-#: src/window.py:112 src/ui/views/jwt_decoder.ui:31
+#: src/window.py:118 src/ui/views/jwt_decoder.ui:31
 msgid "Decode JWT tokens to header and payload"
 msgstr "Decodifica token JWT in header e payload"
 
-#: src/window.py:119 src/formatters/json.py:14
+#: src/window.py:125 src/formatters/json.py:14
 msgid "Format JSON documents"
 msgstr "Formatta documenti JSON"
 
-#: src/window.py:126 src/formatters/sql.py:14
+#: src/window.py:132 src/formatters/sql.py:14
 msgid "Format SQL documents"
 msgstr "Formatta documenti SQL"
 
-#: src/window.py:133 src/formatters/xml.py:16
+#: src/window.py:139 src/formatters/xml.py:16
 msgid "Format XML documents"
 msgstr "Formatta documenti XML"
 
-#: src/window.py:140 src/ui/views/hash_generator.ui:31
+#: src/window.py:146 src/ui/views/hash_generator.ui:31
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
 msgstr "Calcola hash MD5, SHA1, SHA256 e SHA512 e controlla l'integrità"
 
-#: src/window.py:147 src/ui/views/lorem_generator.ui:31
+#: src/window.py:153 src/ui/views/lorem_generator.ui:31
 msgid "Generate lorem ipsum placeholder text"
 msgstr "Genera testo segnaposto lorem ipsum"
 
-#: src/window.py:154 src/ui/views/uuid_generator.ui:31
+#: src/window.py:160 src/ui/views/uuid_generator.ui:31
 msgid "Generate Universally Unique IDs (UUID)"
 msgstr "Genera ID Universalmente Univoci (UUID)"
 
-#: src/window.py:158 src/ui/views/text_inspector.ui:30
+#: src/window.py:164 src/ui/views/text_inspector.ui:30
 msgid "Text Inspector & Case Converter"
 msgstr "Ispettore Testo"
 
-#: src/window.py:161 src/ui/views/text_inspector.ui:31
+#: src/window.py:167 src/ui/views/text_inspector.ui:31
 msgid "View statistics about text and change sentence cases"
 msgstr "Visualizza statistiche sul testo e modifica maiuscole/minuscole"
 
-#: src/window.py:165
+#: src/window.py:171
 msgid "Regex Tester"
 msgstr "Tester Espressioni Regolari"
 
-#: src/window.py:168 src/ui/views/regex_tester.ui:31
+#: src/window.py:174 src/ui/views/regex_tester.ui:31
 msgid "Find matching strings inside a text"
 msgstr "Trova le stringhe corrispondenti all'interno di un testo"
 
-#: src/window.py:172 src/ui/views/text_diff.ui:30
+#: src/window.py:178 src/ui/views/text_diff.ui:30
 msgid "Text Diff"
 msgstr "Diff Testo"
 
-#: src/window.py:175 src/ui/views/text_diff.ui:31
+#: src/window.py:181 src/ui/views/text_diff.ui:31
 msgid "Analyze two texts and find differences"
 msgstr "Analizza due testi e trova le differenze"
 
-#: src/window.py:179 src/ui/views/xml_validator.ui:30
+#: src/window.py:185 src/ui/views/xml_validator.ui:30
 msgid "XML Scheme Validator"
 msgstr "Validatore Schema XML"
 
-#: src/window.py:182 src/ui/views/xml_validator.ui:31
+#: src/window.py:188 src/ui/views/xml_validator.ui:31
 msgid "Check an XML file against an XSD schema"
 msgstr "Confronta un file XML con uno schema XSD"
 
-#: src/window.py:189 src/ui/views/markdown_preview.ui:32
+#: src/window.py:195 src/ui/views/markdown_preview.ui:32
 msgid "Preview markdown code as you type"
 msgstr "Visuallizza l'anteprima del codice markdown mentre scrivi"
 
-#: src/window.py:193 src/ui/views/contrast_checker.ui:30
+#: src/window.py:199 src/ui/views/contrast_checker.ui:30
 msgid "Contrast Checker"
 msgstr "Controllo Contrasto"
 
-#: src/window.py:196 src/ui/views/contrast_checker.ui:31
+#: src/window.py:202 src/ui/views/contrast_checker.ui:31
 msgid "Check a color combination for WCAG compliance"
 msgstr "Controlla una combinazione di colori per la conformità WCAG"
 
-#: src/window.py:200
+#: src/window.py:206
 msgid "Color Blindness"
 msgstr "Daltonismo"
 
-#: src/window.py:203 src/ui/views/colorblindness_simulator.ui:31
+#: src/window.py:209 src/ui/views/colorblindness_simulator.ui:31
 msgid "Simulate color blindness in images"
 msgstr "Simula il daltonismo in immagini"
 
-#: src/window.py:207 src/ui/views/image_converter.ui:31
+#: src/window.py:213 src/ui/views/image_converter.ui:31
 msgid "Image Format Converter"
 msgstr "Convertitore Formato Immagini"
 
-#: src/window.py:210 src/ui/views/image_converter.ui:32
+#: src/window.py:216 src/ui/views/image_converter.ui:32
 msgid "Convert images to different formats"
 msgstr "Converti immagini in diversi formati"
 
-#: src/window.py:217
+#: src/window.py:223
 msgid "Format HTML documents"
 msgstr "Formatta documenti HTML"
 
-#: src/window.py:224 src/ui/views/certificate_parser.ui:29
+#: src/window.py:227 src/ui/views/certificate_parser.ui:28
+msgid "Certificate Parser"
+msgstr "Parser Certificati"
+
+#: src/window.py:230 src/ui/views/certificate_parser.ui:29
 msgid "View certificates contents"
 msgstr "Vedi il contenuto di certificati"
 
-#: src/window.py:231
+#: src/window.py:234
+msgid "Random"
+msgstr ""
+
+#: src/window.py:237
+msgid "Generate random numbers and strings"
+msgstr ""
+
+#: src/window.py:241
+#, fuzzy
+msgid "Certificate Signing Request"
+msgstr "Impronte digitali certificato"
+
+#: src/window.py:244
+#, fuzzy
+msgid "Generate certificate signing requests"
+msgstr "Apri un file certificato"
+
+#: src/window.py:248
+msgid "Reverse CRON"
+msgstr ""
+
+#. TODO: change icon (hourglass with curved arrow)
+#: src/window.py:251
+#, fuzzy
+msgid "Generate CRON expressions"
+msgstr "Expressione CRON"
+
+#: src/window.py:258
 msgid "Converters"
 msgstr "Convertitori"
 
-#: src/window.py:236
+#: src/window.py:263
 msgid "Encoders"
 msgstr "Codificatori"
 
-#: src/window.py:241
+#: src/window.py:268
 msgid "Formatters"
 msgstr "Formattatori"
 
-#: src/window.py:246
+#: src/window.py:273
 msgid "Generators"
 msgstr "Generatori"
 
-#: src/window.py:251 src/ui/views/regex_tester.ui:68
+#: src/window.py:278 src/ui/views/regex_tester.ui:68
 #: src/ui/views/text_inspector.ui:146 src/ui/views/text_inspector.ui:217
 msgid "Text"
 msgstr "Testo"
 
-#: src/window.py:256
+#: src/window.py:283
 msgid "Graphics"
 msgstr "Grafica"
 
@@ -255,26 +324,26 @@ msgstr "Grafica"
 msgid "Opening image..."
 msgstr "Apertura in corso di un immagine..."
 
-#: src/widgets/image_area.py:108 src/widgets/text_area.py:156
-#: src/widgets/text_file_area.py:177 src/views/certificate_parser.py:80
+#: src/widgets/image_area.py:108 src/widgets/text_area.py:159
+#: src/widgets/text_file_area.py:180 src/views/certificate_parser.py:81
 msgid "Open File"
 msgstr "Apri file"
 
-#: src/widgets/image_area.py:110 src/widgets/text_area.py:158
-#: src/widgets/text_file_area.py:179 src/views/certificate_parser.py:82
+#: src/widgets/image_area.py:110 src/widgets/text_area.py:161
+#: src/widgets/text_file_area.py:182 src/views/certificate_parser.py:83
 #: src/ui/widgets/image_area.ui:70 src/ui/widgets/text_area.ui:82
 #: src/ui/widgets/text_file_area.ui:82 src/ui/views/certificate_parser.ui:64
 msgid "Open"
 msgstr "Apri"
 
 #: src/widgets/image_area.py:111 src/widgets/image_area.py:158
-#: src/widgets/text_area.py:159 src/widgets/text_file_area.py:180
-#: src/widgets/text_file_area.py:295 src/views/certificate_parser.py:83
+#: src/widgets/text_area.py:162 src/widgets/text_file_area.py:183
+#: src/widgets/text_file_area.py:298 src/views/certificate_parser.py:84
 #: src/views/image_converter.py:61
 msgid "Cancel"
 msgstr "Annulla"
 
-#: src/widgets/image_area.py:119 src/widgets/text_file_area.py:206
+#: src/widgets/image_area.py:119 src/widgets/text_file_area.py:209
 msgid "Images"
 msgstr "Immagini"
 
@@ -282,12 +351,12 @@ msgstr "Immagini"
 msgid "Saving image..."
 msgstr "Salvataggio in corso di un immagine..."
 
-#: src/widgets/image_area.py:155 src/widgets/text_file_area.py:292
+#: src/widgets/image_area.py:155 src/widgets/text_file_area.py:295
 #: src/views/image_converter.py:58
 msgid "Save file as"
 msgstr "Salva con nome"
 
-#: src/widgets/image_area.py:157 src/widgets/text_file_area.py:294
+#: src/widgets/image_area.py:157 src/widgets/text_file_area.py:297
 #: src/views/image_converter.py:60 src/ui/widgets/image_area.ui:81
 #: src/ui/widgets/text_file_area.ui:93
 msgid "Save"
@@ -297,28 +366,28 @@ msgstr "Salva"
 msgid "Unable to save image."
 msgstr "Impossibile salvare l'immagine."
 
-#: src/widgets/text_area.py:166 src/widgets/text_file_area.py:200
+#: src/widgets/text_area.py:169 src/widgets/text_file_area.py:203
 msgid "Text files"
 msgstr "File di testo"
 
-#: src/widgets/text_area.py:173 src/widgets/text_file_area.py:213
+#: src/widgets/text_area.py:176 src/widgets/text_file_area.py:216
 msgid "Accepted files"
 msgstr "File accettati"
 
 #. change view and save previous
-#: src/widgets/text_file_area.py:170
+#: src/widgets/text_file_area.py:173
 msgid "Opening file..."
 msgstr "Apertura in corso di un file..."
 
-#: src/widgets/text_file_area.py:187
+#: src/widgets/text_file_area.py:190
 msgid "All files"
 msgstr "Tutti i file"
 
-#: src/widgets/text_file_area.py:194
+#: src/widgets/text_file_area.py:197
 msgid "Text files and images"
 msgstr "File di testo e immagini"
 
-#: src/widgets/text_file_area.py:285
+#: src/widgets/text_file_area.py:288
 msgid "Saving file..."
 msgstr "Salvataggio in corso di un file..."
 
@@ -338,73 +407,78 @@ msgstr "Impossibile aprire più di un file alla volta"
 msgid "Unsupported file"
 msgstr "File non supportato"
 
-#: src/views/certificate_parser.py:91
+#: src/views/certificate_parser.py:92
 msgid "Certificates"
 msgstr "Certificati"
 
-#: src/views/certificate_parser.py:102 src/ui/views/certificate_parser.ui:124
+#: src/views/certificate_parser.py:103 src/views/reverse_cron.py:129
+#: src/ui/views/certificate_parser.ui:124
 msgid "Expand All"
 msgstr "Espandi Tutti"
 
-#: src/views/certificate_parser.py:106
+#: src/views/certificate_parser.py:107 src/views/reverse_cron.py:133
 msgid "Collapse All"
 msgstr "Comprimi Tutti"
 
+#: src/views/certificate_parser.py:147
+msgid "Error: Cannot open this file because it is not a valid certificate."
+msgstr ""
+
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
-#: src/views/certificate_parser.py:149
+#: src/views/certificate_parser.py:155
 #, python-brace-format
 msgid "Identity: {identity}"
 msgstr "Identità: {identity}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
-#: src/views/certificate_parser.py:151
+#: src/views/certificate_parser.py:157
 #, python-brace-format
 msgid "Verified by: {verified_by}"
 msgstr "Verificato da: {verified_by}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
-#: src/views/certificate_parser.py:153
+#: src/views/certificate_parser.py:159
 #, python-brace-format
 msgid "Expires: {expiration_date}"
 msgstr "Scadenza: {expiration_date}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
-#: src/views/certificate_parser.py:159
+#: src/views/certificate_parser.py:165
 msgid "Basic Constraints"
 msgstr "Vincoli di base"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
-#: src/views/certificate_parser.py:160
+#: src/views/certificate_parser.py:166
 msgid "Extended Key Usage"
 msgstr "Utilizzo esteso della chiave"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
-#: src/views/certificate_parser.py:161 src/views/certificate_parser.py:207
+#: src/views/certificate_parser.py:167 src/views/certificate_parser.py:212
 msgid "Subject Key Identifier"
 msgstr "Identificatore chiave soggetto"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
-#: src/views/certificate_parser.py:162
+#: src/views/certificate_parser.py:168
 msgid "Key Usage"
 msgstr "Utilizzo chiave"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
-#: src/views/certificate_parser.py:163
+#: src/views/certificate_parser.py:169
 msgid "Subject Alternative Names"
 msgstr "Nomi alternativi soggetto"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
-#: src/views/certificate_parser.py:167
+#: src/views/certificate_parser.py:173
 msgid "Extension"
 msgstr "Estensione"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
-#: src/views/certificate_parser.py:208
+#: src/views/certificate_parser.py:213
 msgid "Certificate Fingerprints"
 msgstr "Impronte digitali certificato"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
-#: src/views/certificate_parser.py:211
+#: src/views/certificate_parser.py:216
 msgid "Key Identifier"
 msgstr "Identificatore chiave"
 
@@ -483,15 +557,72 @@ msgstr ""
 "XML non è conforme allo schema XSD fornito:\n"
 "{xsd_error}"
 
+#: src/views/reverse_cron.py:152
+#, python-format
+msgid "%(day)dst"
+msgid_plural "%(day)dth"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/views/reverse_cron.py:155
+#, python-format
+msgid "%(day)s%(suffix)s"
+msgstr ""
+
+#: src/views/reverse_cron.py:178
+msgid "January"
+msgstr ""
+
+#: src/views/reverse_cron.py:179
+msgid "February"
+msgstr ""
+
+#: src/views/reverse_cron.py:180
+msgid "March"
+msgstr ""
+
+#: src/views/reverse_cron.py:181
+msgid "April"
+msgstr ""
+
+#: src/views/reverse_cron.py:182
+#, fuzzy
+msgid "May"
+msgstr "Giorno"
+
+#: src/views/reverse_cron.py:183
+msgid "June"
+msgstr ""
+
+#: src/views/reverse_cron.py:184
+msgid "July"
+msgstr ""
+
+#: src/views/reverse_cron.py:185
+msgid "August"
+msgstr ""
+
+#: src/views/reverse_cron.py:186
+msgid "September"
+msgstr ""
+
+#: src/views/reverse_cron.py:187
+msgid "October"
+msgstr ""
+
+#: src/views/reverse_cron.py:188
+msgid "November"
+msgstr ""
+
+#: src/views/reverse_cron.py:189
+msgid "December"
+msgstr ""
+
 #: src/ui/window.ui:36
 msgid "Show/hide sidebar"
 msgstr "Mostra/nascondi sidebar"
 
-#: src/ui/window.ui:78
-msgid "_Keyboard Shortcuts"
-msgstr "_Scorciatoie da tastiera"
-
-#: src/ui/window.ui:82
+#: src/ui/window.ui:83
 msgid "_About Dev Toolbox"
 msgstr "_Informazioni di Dev Toolbox"
 
@@ -500,7 +631,7 @@ msgstr "_Informazioni di Dev Toolbox"
 msgid "translator-credits"
 msgstr "Alessandro Iepure https://ale.iepure.me"
 
-#: src/ui/widgets/date_area.ui:52 src/ui/views/timestamp.ui:49
+#: src/ui/widgets/date_area.ui:52 src/ui/views/timestamp.ui:70
 msgid "Now"
 msgstr "Ora"
 
@@ -508,7 +639,7 @@ msgstr "Ora"
 msgid "Sets the current system date and time (local timezone)"
 msgstr "Imposta data e ora correnti del sistema (fuso orario locale)"
 
-#: src/ui/widgets/date_area.ui:73 src/ui/widgets/entry_row.ui:23
+#: src/ui/widgets/date_area.ui:73 src/ui/widgets/entry_row.ui:33
 #: src/ui/widgets/spin_area.ui:82 src/ui/widgets/text_area.ui:91
 #: src/ui/widgets/text_file_area.ui:109
 msgid "Copy to clipboard"
@@ -538,12 +669,17 @@ msgstr "Minuti"
 msgid "Seconds"
 msgstr "Secondi"
 
-#: src/ui/widgets/entry_row.ui:33 src/ui/widgets/spin_area.ui:89
+#: src/ui/widgets/entry_row.ui:23
+#, fuzzy
+msgid "Generate again"
+msgstr "Testo generato"
+
+#: src/ui/widgets/entry_row.ui:43 src/ui/widgets/spin_area.ui:89
 #: src/ui/widgets/text_area.ui:98 src/ui/widgets/text_file_area.ui:116
 msgid "Paste clipboard"
 msgstr "Incolla dagli appunti"
 
-#: src/ui/widgets/entry_row.ui:43 src/ui/widgets/image_area.ui:97
+#: src/ui/widgets/entry_row.ui:53 src/ui/widgets/image_area.ui:97
 #: src/ui/widgets/text_area.ui:105 src/ui/widgets/text_file_area.ui:123
 msgid "Clear input"
 msgstr "Elimina input"
@@ -588,10 +724,6 @@ msgstr ""
 "Scrivendo un carattere non valido (es. 'A' nel campo decimale) tutti i campi "
 "saranno resettati a 0."
 
-#: src/ui/views/certificate_parser.ui:28
-msgid "Certificate Parser"
-msgstr "Parser Certificati"
-
 #: src/ui/views/certificate_parser.ui:43
 #: src/ui/views/colorblindness_simulator.ui:45
 #: src/ui/views/contrast_checker.ui:45 src/ui/views/cron_converter.ui:46
@@ -599,8 +731,8 @@ msgstr "Parser Certificati"
 #: src/ui/views/hash_generator.ui:45 src/ui/views/html_encoder.ui:45
 #: src/ui/views/image_converter.ui:46 src/ui/views/json_yaml.ui:45
 #: src/ui/views/lorem_generator.ui:45 src/ui/views/regex_tester.ui:45
-#: src/ui/views/text_inspector.ui:45 src/ui/views/url_encoder.ui:45
-#: src/ui/views/uuid_generator.ui:45
+#: src/ui/views/text_inspector.ui:45 src/ui/views/timestamp.ui:45
+#: src/ui/views/url_encoder.ui:45 src/ui/views/uuid_generator.ui:45
 msgid "Tool options"
 msgstr "Opzioni strumento"
 
@@ -755,13 +887,13 @@ msgstr "Comprimi"
 msgid "Decompress"
 msgstr "De-comprimi"
 
-#: src/ui/views/gzip_compressor.ui:78 src/ui/views/hash_generator.ui:110
+#: src/ui/views/gzip_compressor.ui:78 src/ui/views/hash_generator.ui:111
 #: src/ui/views/html_encoder.ui:79 src/ui/views/json_yaml.ui:99
 #: src/ui/views/url_encoder.ui:101
 msgid "Input"
 msgstr "Input"
 
-#: src/ui/views/gzip_compressor.ui:90 src/ui/views/hash_generator.ui:122
+#: src/ui/views/gzip_compressor.ui:90 src/ui/views/hash_generator.ui:123
 #: src/ui/views/html_encoder.ui:94 src/ui/views/json_yaml.ui:113
 #: src/ui/views/url_encoder.ui:115
 msgid "Output"
@@ -799,7 +931,7 @@ msgstr ""
 "Se attivato, l'hash calcolato sarà confrontato con l'altro hash fornito per "
 "verificare l'integrità"
 
-#: src/ui/views/hash_generator.ui:86
+#: src/ui/views/hash_generator.ui:87
 msgid "Type the hash to check against"
 msgstr "Inserisci l'hash con cui confrontare"
 
@@ -1021,13 +1153,26 @@ msgstr "Linee:"
 msgid "Timestamp Converter"
 msgstr "Convertitore Timestamp"
 
-#: src/ui/views/timestamp.ui:50
+#: src/ui/views/timestamp.ui:48
+msgid "Timezone"
+msgstr ""
+
+#: src/ui/views/timestamp.ui:49
+#, fuzzy
+msgid "Select the desired timezone"
+msgstr "Seleziona l'operazione desiderata"
+
+#: src/ui/views/timestamp.ui:71
 msgid "Sets the current system timestamp"
 msgstr "Imposta il timestamp corrente del sistema"
 
-#: src/ui/views/timestamp.ui:57
+#: src/ui/views/timestamp.ui:78
 msgid "Date"
 msgstr "Data"
+
+#: src/ui/views/timestamp.ui:88
+msgid "ISO date (ISO 8601/RFC 3339)"
+msgstr ""
 
 #: src/ui/views/url_encoder.ui:30
 msgid "URL Encoder & Decoder"
@@ -1124,8 +1269,8 @@ msgstr "Formattatore XML"
 msgid "Type XML code here"
 msgstr "Scrivi il codice XML qua"
 
-#~ msgid "Open a certificate file"
-#~ msgstr "Apri un file certificato"
+#~ msgid "_Keyboard Shortcuts"
+#~ msgstr "_Scorciatoie da tastiera"
 
 #~ msgid "Alessandro Iepure https://ale.iepure.me"
 #~ msgstr "Alessandro Iepure https://ale.iepure.me"
