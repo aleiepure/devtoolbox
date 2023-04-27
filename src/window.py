@@ -86,7 +86,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             "cron": {
                 "title": _("CRON Parser"),
                 "category": "converter",
-                "icon-name": "hourglass-symbolic",
+                "icon-name": "timer-symbolic",
                 "tooltip": _("Convert CRON expressions to time and date"),
                 "child": CronConverterView(),
             },
@@ -247,7 +247,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             "reverse-cron": {
                 "title": _("Reverse CRON"),
                 "category": "converter",
-                "icon-name": "certificate-symbolic", # TODO: change icon (hourglass with curved arrow)
+                "icon-name": "timer-reverse-symbolic",
                 "tooltip": _("Generate CRON expressions"),
                 "child": ReverseCronView(),
             },
