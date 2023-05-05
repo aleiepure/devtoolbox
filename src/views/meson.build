@@ -32,6 +32,7 @@ sources = [
   'random_generator.py',
   'certificate_request_generator.py',
   'reverse_cron.py',
+  'chmod_calculator.py',
 ]
 
 install_data(sources, install_dir: viewsdir)

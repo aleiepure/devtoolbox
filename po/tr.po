@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: me.iepure.devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-24 12:37+0200\n"
+"POT-Creation-Date: 2023-05-05 23:29+0200\n"
 "PO-Revision-Date: 2023-03-04 20:51+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -75,7 +75,7 @@ msgstr "Özet oluşturucular"
 msgid "Regex tester"
 msgstr "Düzenli ifade sınayıcı"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:192
+#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:193
 #: src/ui/views/markdown_preview.ui:31
 msgid "Markdown Previewer"
 msgstr "Markdown Ön İzleyici"
@@ -129,198 +129,206 @@ msgstr ""
 msgid "First release"
 msgstr "İlk sürüm"
 
-#: src/window.py:69 src/ui/views/json_yaml.ui:31
+#: src/window.py:70 src/ui/views/json_yaml.ui:31
 msgid "Convert JSON documents to YAML and vice-versa"
 msgstr "JSON belgelerini YAML biçimine, veya tam tersine dönüştür"
 
-#: src/window.py:73 src/ui/views/timestamp.ui:66
+#: src/window.py:74 src/ui/views/timestamp.ui:66
 msgid "Timestamp"
 msgstr "Zaman damgası"
 
-#: src/window.py:76 src/ui/views/timestamp.ui:31
+#: src/window.py:77 src/ui/views/timestamp.ui:31
 msgid "Convert UNIX timestamps to and from plain dates"
 msgstr "UNIX zaman damgalarını düz tarihlere, veya tam tersine dönüştür"
 
-#: src/window.py:80
+#: src/window.py:81
 msgid "Number Bases"
 msgstr "Sayı Tabanları"
 
-#: src/window.py:83 src/ui/views/base_converter.ui:31
+#: src/window.py:84 src/ui/views/base_converter.ui:31
 msgid "Convert numbers between bases"
 msgstr "Sayıları tabanlar arasında dönüştür"
 
-#: src/window.py:87 src/ui/views/cron_converter.ui:31
+#: src/window.py:88 src/ui/views/cron_converter.ui:31
 msgid "CRON Parser"
 msgstr "CRON Ayıklayıcı"
 
-#: src/window.py:90 src/ui/views/cron_converter.ui:32
+#: src/window.py:91 src/ui/views/cron_converter.ui:32
 msgid "Convert CRON expressions to time and date"
 msgstr "CRON ifadelerini saat ve tarihe dönüştür"
 
-#: src/window.py:97 src/ui/views/html_encoder.ui:31
+#: src/window.py:98 src/ui/views/html_encoder.ui:31
 msgid "Encode and decode special characters using the HTML format"
 msgstr "HTML biçimini kullanarak özel karakterleri kodlayın ve kodunu çözün"
 
-#: src/window.py:104 src/ui/views/url_encoder.ui:31
+#: src/window.py:105 src/ui/views/url_encoder.ui:31
 msgid "Encode and decode special characters inside URLs"
 msgstr "URLʼlerin içindeki özel karakterleri kodlayın ve kodunu çözün"
 
-#: src/window.py:111 src/ui/views/gzip_compressor.ui:31
+#: src/window.py:112 src/ui/views/gzip_compressor.ui:31
 msgid "Compress and decompress files and texts using GZip"
 msgstr "GZip kullanarak dosyaları ve metinleri sıkıştırın ve açın"
 
-#: src/window.py:118 src/ui/views/jwt_decoder.ui:31
+#: src/window.py:119 src/ui/views/jwt_decoder.ui:31
 msgid "Decode JWT tokens to header and payload"
 msgstr "JWT jetonlarını başlığa ve yüke kodunu çözün"
 
-#: src/window.py:125 src/formatters/json.py:14
+#: src/window.py:126 src/formatters/json.py:14
 msgid "Format JSON documents"
 msgstr "JSON belgelerini biçimlendir"
 
-#: src/window.py:132 src/formatters/sql.py:14
+#: src/window.py:133 src/formatters/sql.py:14
 msgid "Format SQL documents"
 msgstr "SQL belgelerini biçimlendir"
 
-#: src/window.py:139 src/formatters/xml.py:16
+#: src/window.py:140 src/formatters/xml.py:16
 msgid "Format XML documents"
 msgstr "XML belgelerini biçimlendir"
 
-#: src/window.py:146 src/ui/views/hash_generator.ui:31
+#: src/window.py:147 src/ui/views/hash_generator.ui:31
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
 msgstr ""
 "MD5, SHA1, SHA256 ve SHA512 özetlerini hesaplayın ve bütünlüğü denetleyin"
 
-#: src/window.py:153 src/ui/views/lorem_generator.ui:31
+#: src/window.py:154 src/ui/views/lorem_generator.ui:31
 msgid "Generate lorem ipsum placeholder text"
 msgstr "Lorem ipsum yer tutucu metin oluştur"
 
-#: src/window.py:160 src/ui/views/uuid_generator.ui:31
+#: src/window.py:161 src/ui/views/uuid_generator.ui:31
 msgid "Generate Universally Unique IDs (UUID)"
 msgstr "Evrensel Benzersiz Kimlik Oluştur (UUID)"
 
-#: src/window.py:164 src/ui/views/text_inspector.ui:30
+#: src/window.py:165 src/ui/views/text_inspector.ui:30
 msgid "Text Inspector & Case Converter"
 msgstr "Metin İnceleyici ve Durum Dönüştürücü"
 
-#: src/window.py:167 src/ui/views/text_inspector.ui:31
+#: src/window.py:168 src/ui/views/text_inspector.ui:31
 msgid "View statistics about text and change sentence cases"
 msgstr ""
 "Metinle ilgili istatistikleri görüntüleyin ve tümce durumlarını değiştirin"
 
-#: src/window.py:171
+#: src/window.py:172
 msgid "Regex Tester"
 msgstr "Düzenli İfade Sınayıcı"
 
-#: src/window.py:174 src/ui/views/regex_tester.ui:31
+#: src/window.py:175 src/ui/views/regex_tester.ui:31
 msgid "Find matching strings inside a text"
 msgstr "Metin içinde eşleşen dizgeleri bulun"
 
-#: src/window.py:178 src/ui/views/text_diff.ui:30
+#: src/window.py:179 src/ui/views/text_diff.ui:30
 msgid "Text Diff"
 msgstr "Metin Farkı"
 
-#: src/window.py:181 src/ui/views/text_diff.ui:31
+#: src/window.py:182 src/ui/views/text_diff.ui:31
 msgid "Analyze two texts and find differences"
 msgstr "İki metni inceleyip farkları bulun"
 
-#: src/window.py:185 src/ui/views/xml_validator.ui:30
+#: src/window.py:186 src/ui/views/xml_validator.ui:30
 msgid "XML Scheme Validator"
 msgstr "XML Şema Doğrulayıcı"
 
-#: src/window.py:188 src/ui/views/xml_validator.ui:31
+#: src/window.py:189 src/ui/views/xml_validator.ui:31
 msgid "Check an XML file against an XSD schema"
 msgstr "XML dosyasını XSD şemasına göre denetle"
 
-#: src/window.py:195 src/ui/views/markdown_preview.ui:32
+#: src/window.py:196 src/ui/views/markdown_preview.ui:32
 msgid "Preview markdown code as you type"
 msgstr "Yazarken markdown kodunu ön izle"
 
-#: src/window.py:199 src/ui/views/contrast_checker.ui:30
+#: src/window.py:200 src/ui/views/contrast_checker.ui:30
 msgid "Contrast Checker"
 msgstr "Karşıtlık Denetleyici"
 
-#: src/window.py:202 src/ui/views/contrast_checker.ui:31
+#: src/window.py:203 src/ui/views/contrast_checker.ui:31
 msgid "Check a color combination for WCAG compliance"
 msgstr "WCAG uyumluluğu için renk kombinasyonunu denetle"
 
-#: src/window.py:206
+#: src/window.py:207
 msgid "Color Blindness"
 msgstr "Renk Körlüğü"
 
-#: src/window.py:209 src/ui/views/colorblindness_simulator.ui:31
+#: src/window.py:210 src/ui/views/colorblindness_simulator.ui:31
 msgid "Simulate color blindness in images"
 msgstr "Resimde renk körlüğünü simüle et"
 
-#: src/window.py:213 src/ui/views/image_converter.ui:31
+#: src/window.py:214 src/ui/views/image_converter.ui:31
 msgid "Image Format Converter"
 msgstr "Resim Biçimi Dönüştürücü"
 
-#: src/window.py:216 src/ui/views/image_converter.ui:32
+#: src/window.py:217 src/ui/views/image_converter.ui:32
 msgid "Convert images to different formats"
 msgstr "Resimleri farklı biçimlere dönüştür"
 
-#: src/window.py:223
+#: src/window.py:224
 #, fuzzy
 msgid "Format HTML documents"
 msgstr "XML belgelerini biçimlendir"
 
-#: src/window.py:227 src/ui/views/certificate_parser.ui:28
+#: src/window.py:228 src/ui/views/certificate_parser.ui:28
 msgid "Certificate Parser"
 msgstr ""
 
-#: src/window.py:230 src/ui/views/certificate_parser.ui:29
+#: src/window.py:231 src/ui/views/certificate_parser.ui:29
 #, fuzzy
 msgid "View certificates contents"
 msgstr "İçeriğini görüntülemek için bu dosyayı kaydedin"
 
-#: src/window.py:234
+#: src/window.py:235
 msgid "Random"
 msgstr ""
 
-#: src/window.py:237
+#: src/window.py:238
 msgid "Generate random numbers and strings"
 msgstr ""
 
-#: src/window.py:241
+#: src/window.py:242
 msgid "Certificate Signing Request"
 msgstr ""
 
-#: src/window.py:244
+#: src/window.py:245
 msgid "Generate certificate signing requests"
 msgstr ""
 
-#: src/window.py:248
+#: src/window.py:249
 msgid "Reverse CRON"
 msgstr ""
 
-#. TODO: change icon (hourglass with curved arrow)
-#: src/window.py:251
+#: src/window.py:252
 #, fuzzy
 msgid "Generate CRON expressions"
 msgstr "CRON ifadesi"
 
-#: src/window.py:258
+#: src/window.py:256
+#, fuzzy
+msgid "Chmod Calculator"
+msgstr "Hesaplanacak özet"
+
+#: src/window.py:259
+msgid "Calculate values to modify permissions with chmod"
+msgstr ""
+
+#: src/window.py:266
 msgid "Converters"
 msgstr "Dönüştürücüler"
 
-#: src/window.py:263
+#: src/window.py:271
 msgid "Encoders"
 msgstr "Kodlayıcılar"
 
-#: src/window.py:268
+#: src/window.py:276
 msgid "Formatters"
 msgstr "Biçimlendiriciler"
 
-#: src/window.py:273
+#: src/window.py:281
 msgid "Generators"
 msgstr "Oluşturucular"
 
-#: src/window.py:278 src/ui/views/regex_tester.ui:68
+#: src/window.py:286 src/ui/views/regex_tester.ui:68
 #: src/ui/views/text_inspector.ui:146 src/ui/views/text_inspector.ui:217
 msgid "Text"
 msgstr "Metin"
 
-#: src/window.py:283
+#: src/window.py:291
 msgid "Graphics"
 msgstr "Grafik"
 
@@ -417,12 +425,12 @@ msgstr "Kabul edilen dosyalar"
 msgid "Certificates"
 msgstr ""
 
-#: src/views/certificate_parser.py:103 src/views/reverse_cron.py:129
+#: src/views/certificate_parser.py:103 src/views/reverse_cron.py:180
 #: src/ui/views/certificate_parser.ui:124
 msgid "Expand All"
 msgstr ""
 
-#: src/views/certificate_parser.py:107 src/views/reverse_cron.py:133
+#: src/views/certificate_parser.py:107 src/views/reverse_cron.py:184
 msgid "Collapse All"
 msgstr ""
 
@@ -564,64 +572,101 @@ msgstr ""
 "XML, sağlanan XSD şemasıyla uyumsuz:\n"
 "{xsd_error}"
 
-#: src/views/reverse_cron.py:152
-#, python-format
-msgid "%(day)dst"
-msgid_plural "%(day)dth"
-msgstr[0] ""
-
-#: src/views/reverse_cron.py:155
-#, python-format
-msgid "%(day)s%(suffix)s"
+#. TRANSLATORS: cardinal suffix for numbers
+#: src/views/reverse_cron.py:207
+msgid "st"
 msgstr ""
 
-#: src/views/reverse_cron.py:178
+#. TRANSLATORS: cardinal suffix for numbers
+#: src/views/reverse_cron.py:210
+msgid "nd"
+msgstr ""
+
+#. TRANSLATORS: cardinal suffix for numbers
+#: src/views/reverse_cron.py:213
+msgid "rd"
+msgstr ""
+
+#. TRANSLATORS: cardinal suffix for numbers
+#: src/views/reverse_cron.py:216
+msgid "th"
+msgstr ""
+
+#: src/views/reverse_cron.py:240 src/views/reverse_cron.py:354
 msgid "January"
 msgstr ""
 
-#: src/views/reverse_cron.py:179
+#: src/views/reverse_cron.py:241 src/views/reverse_cron.py:355
 msgid "February"
 msgstr ""
 
-#: src/views/reverse_cron.py:180
+#: src/views/reverse_cron.py:242 src/views/reverse_cron.py:356
 msgid "March"
 msgstr ""
 
-#: src/views/reverse_cron.py:181
+#: src/views/reverse_cron.py:243 src/views/reverse_cron.py:357
 msgid "April"
 msgstr ""
 
-#: src/views/reverse_cron.py:182
+#: src/views/reverse_cron.py:244 src/views/reverse_cron.py:358
 #, fuzzy
 msgid "May"
 msgstr "Gün"
 
-#: src/views/reverse_cron.py:183
+#: src/views/reverse_cron.py:245 src/views/reverse_cron.py:359
 msgid "June"
 msgstr ""
 
-#: src/views/reverse_cron.py:184
+#: src/views/reverse_cron.py:246 src/views/reverse_cron.py:360
 msgid "July"
 msgstr ""
 
-#: src/views/reverse_cron.py:185
+#: src/views/reverse_cron.py:247 src/views/reverse_cron.py:361
 msgid "August"
 msgstr ""
 
-#: src/views/reverse_cron.py:186
+#: src/views/reverse_cron.py:248 src/views/reverse_cron.py:362
 msgid "September"
 msgstr ""
 
-#: src/views/reverse_cron.py:187
+#: src/views/reverse_cron.py:249 src/views/reverse_cron.py:363
 msgid "October"
 msgstr ""
 
-#: src/views/reverse_cron.py:188
+#: src/views/reverse_cron.py:250 src/views/reverse_cron.py:364
 msgid "November"
 msgstr ""
 
-#: src/views/reverse_cron.py:189
+#: src/views/reverse_cron.py:251 src/views/reverse_cron.py:365
 msgid "December"
+msgstr ""
+
+#: src/views/reverse_cron.py:376
+msgid "Sunday"
+msgstr ""
+
+#: src/views/reverse_cron.py:377
+msgid "Monday"
+msgstr ""
+
+#: src/views/reverse_cron.py:378
+msgid "Tuesday"
+msgstr ""
+
+#: src/views/reverse_cron.py:379
+msgid "Wednesday"
+msgstr ""
+
+#: src/views/reverse_cron.py:380
+msgid "Thursday"
+msgstr ""
+
+#: src/views/reverse_cron.py:381
+msgid "Friday"
+msgstr ""
+
+#: src/views/reverse_cron.py:382
+msgid "Saturday"
 msgstr ""
 
 #: src/ui/window.ui:36

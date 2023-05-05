@@ -214,7 +214,7 @@ class ReverseCronView(Adw.Bin):
                     else:
                         # TRANSLATORS: cardinal suffix for numbers
                         suffix = _("th")
-                    output.append(_("%(day)s%(suffix)s") % {'day': i, 'suffix':suffix})
+                    output.append("%(day)s%(suffix)s" % {'day': i, 'suffix':suffix})
                 else:
                     output.append(str(i))
         return output

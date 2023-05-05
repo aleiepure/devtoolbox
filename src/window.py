@@ -33,6 +33,7 @@ from .views.certificate_parser import CertificateParserView
 from .views.random_generator import RandomGeneratorView
 from .views.certificate_request_generator import CertificateRequestGeneratorView
 from .views.reverse_cron import ReverseCronView
+from .views.chmod_calculator import ChmodCalculatorView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -250,6 +251,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "timer-reverse-symbolic",
                 "tooltip": _("Generate CRON expressions"),
                 "child": ReverseCronView(),
+            },
+            "chmod": {
+                "title": _("Chmod Calculator"),
+                "category": "generator",
+                "icon-name": "general-properties-symbolic",
+                "tooltip": _("Calculate values to modify permissions with chmod"),
+                "child": ChmodCalculatorView(),
             },
         }
 

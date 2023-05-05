@@ -15,6 +15,7 @@ src/widgets/sidebar_item.py
 src/widgets/spin_area.py
 src/widgets/text_area.py
 src/widgets/text_file_area.py
+src/widgets/theme_switcher.py
 src/widgets/utility_title.py
 src/widgets/webview_area.py
 
@@ -54,6 +55,7 @@ src/ui/widgets/image_area.ui
 src/ui/widgets/spin_area.ui
 src/ui/widgets/text_area.ui
 src/ui/widgets/text_file_area.ui
+src/ui/widgets/theme_switcher.ui
 src/ui/widgets/utility_title.ui
 src/ui/widgets/webview_area.ui
 
