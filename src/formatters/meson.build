@@ -12,6 +12,7 @@ sources = [
   'sql.py',
   'xml.py',
   'html.py',
+  'js.py',
 ]
 
 install_data(sources, install_dir: formattersdir)

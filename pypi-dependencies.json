@@ -17,8 +17,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9e/cb/938214ac358fbef7058343b3765c79a1b7ed0c366f7f992ce7ff38335652/ruamel.yaml-0.17.21-py3-none-any.whl",
-                    "sha256": "742b35d3d665023981bd6d16b3d24248ce5df75fdb4e2924e93a05c1f8b61ca7"
+                    "url": "https://files.pythonhosted.org/packages/8d/7b/a7bfb158635d6849244daafc268fe2576c70d0fe6b38d890a8638a968ab7/ruamel.yaml-0.17.24-py3-none-any.whl",
+                    "sha256": "f251bd9096207af604af69d6495c3c650a3338d0493d27b04bc55477d7a884ed"
                 }
             ]
         },
@@ -83,8 +83,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/30/0f/950fbc18f3dfc03bcfbe30b5fab4b4fff4e95d0f3b80180b77b51585a2b6/croniter-1.3.10-py2.py3-none-any.whl",
-                    "sha256": "362bbba72cbd3d3ffa34218414762c81e48001ba6bf7f32164b6e22aa597cbb3"
+                    "url": "https://files.pythonhosted.org/packages/e7/f4/afbf09131612dad1737c8f9b0f4f494153f4099e114904bd6b94036e588f/croniter-1.3.14-py2.py3-none-any.whl",
+                    "sha256": "da1a1a7ca977b38e952ab0a119576e002bc4c05d058d644e81fc06ef7e995bb0"
                 }
             ]
         },
@@ -130,8 +130,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/97/d3/31dd2c3e48fc2060819f4acb0686248250a0f2326356306b38a42e059144/sqlparse-0.4.3-py3-none-any.whl",
-                    "sha256": "0323c0ec29cd52bceabc1b4d9d579e311f3e4961b98d174201d5622a23b85e34"
+                    "url": "https://files.pythonhosted.org/packages/98/5a/66d7c9305baa9f11857f247d4ba761402cea75db6058ff850ed7128957b7/sqlparse-0.4.4-py3-none-any.whl",
+                    "sha256": "5430a4fe2ac7d0f93e66f1efc6e1338a41884b7ddf2a350cedd20ccc4d9d28f3"
                 }
             ]
         },
@@ -139,7 +139,7 @@
             "name": "python3-lxml",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --ignore-installed --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
+                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -158,8 +158,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/13/78/4cc1f402939662746cfe1a4a500923fc271164070d805cad87e58f4fed25/python_lorem-1.2.0-py3-none-any.whl",
-                    "sha256": "10524c0c8fb029dc8ab794aeb98debe42fdc90415b6f1c1a4c52343c2d84f9dd"
+                    "url": "https://files.pythonhosted.org/packages/c4/11/1b1b81e0c2e9cc481a8a2394f42320a6162242bc933031a8e02de6688ecd/python_lorem-1.3.0-py3-none-any.whl",
+                    "sha256": "f4155c42ecf8b276c2f3350e60d78c4336e9842eebc1c6a16c6287be570ffaac"
                 }
             ]
         },
@@ -172,8 +172,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ed/f0/c3be0d8de7a38daeb20d83833ec5078006dfb93b7595e55db7fa49b985c1/uuid6-2022.10.25-py3-none-any.whl",
-                    "sha256": "bd9b874081968c5f24af7ec7a3f48175197806224cc6f4833914f671854c6266"
+                    "url": "https://files.pythonhosted.org/packages/ea/e6/a1051b44f47bed2e7ca52cb8f96cdb81323a3227a50912a7427d203b3c5e/uuid6-2023.5.2-py3-none-any.whl",
+                    "sha256": "9a8125a621426f24d3e4811f9885e7c0c6567ed3cc47f68fe8d41112e603bf85"
                 }
             ]
         },
@@ -219,8 +219,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/08/4c/c587fc05d6f15f4deff971cb1a5b624429d6187c19f7274a50670edf3ec8/Pygments-2.15.0-py3-none-any.whl",
-                    "sha256": "77a3299119af881904cd5ecd1ac6a66214b6e9bed1f2db16993b54adede64094"
+                    "url": "https://files.pythonhosted.org/packages/34/a7/37c8d68532ba71549db4212cb036dbd6161b40e463aba336770e80c72f84/Pygments-2.15.1-py3-none-any.whl",
+                    "sha256": "db2db3deb4b4179f399a09054b023b6a586b76499d36965813c71aa8ed7b5fd1"
                 }
             ]
         },
@@ -233,8 +233,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e4/a9/6704bb5e1d1d778d3a6ee1278a8d8134f0db160e09d52863a24edb58eab5/numpy-1.24.2.tar.gz",
-                    "sha256": "003a9f530e880cb2cd177cba1af7220b9aa42def9c4afc2a2fc3ee6be7eb2b22"
+                    "url": "https://files.pythonhosted.org/packages/2c/d4/590ae7df5044465cc9fa2db152ae12468694d62d952b1528ecff328ef7fc/numpy-1.24.3.tar.gz",
+                    "sha256": "ab344f1bf21f140adab8e47fdbc7c35a477dc01408791f8ba00d018dd0bc5155"
                 }
             ]
         },
@@ -266,8 +266,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e4/a9/6704bb5e1d1d778d3a6ee1278a8d8134f0db160e09d52863a24edb58eab5/numpy-1.24.2.tar.gz",
-                    "sha256": "003a9f530e880cb2cd177cba1af7220b9aa42def9c4afc2a2fc3ee6be7eb2b22"
+                    "url": "https://files.pythonhosted.org/packages/2c/d4/590ae7df5044465cc9fa2db152ae12468694d62d952b1528ecff328ef7fc/numpy-1.24.3.tar.gz",
+                    "sha256": "ab344f1bf21f140adab8e47fdbc7c35a477dc01408791f8ba00d018dd0bc5155"
                 },
                 {
                     "type": "file",
@@ -325,6 +325,25 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/d4/46/e8002faae3d1df7d7a0a3aa0cb4b2ccd805c3a71fb507b06446012b28790/tzlocal-4.3-py3-none-any.whl",
                     "sha256": "b44c4388f3d34f25862cfbb387578a4d70fec417649da694a132f628a23367e2"
+                }
+            ]
+        },
+        {
+            "name": "python3-jsbeautifier",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"jsbeautifier\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/4e/04/e8a79c1db0c55ef03d53c05c61d06c4d6d3be37ef84e5400ce36b4a0fbe9/EditorConfig-0.12.3-py3-none-any.whl",
+                    "sha256": "6b0851425aa875b08b16789ee0eeadbd4ab59666e9ebe728e526314c4a2e52c1"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/7d/0a/6cb21f26972a794ba994a4680998177fdd4130b2ee2d1b82d424721cc103/jsbeautifier-1.14.7.tar.gz",
+                    "sha256": "77993254db1ff6f84eb6e1d75e3b6b72cba2ef20813a585b2d81e8e5e3c713c6"
                 }
             ]
         }

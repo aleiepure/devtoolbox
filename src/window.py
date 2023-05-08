@@ -39,6 +39,7 @@ from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
 from .formatters.xml import XmlFormatter
 from .formatters.html import HtmlFormatter
+from .formatters.js import JsFormatter
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
@@ -258,6 +259,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "general-properties-symbolic",
                 "tooltip": _("Calculate values to modify permissions with chmod"),
                 "child": ChmodCalculatorView(),
+            },
+            "js-formatter": {
+                "title": "JavaScript",
+                "category": "formatter",
+                "icon-name": "js-symbolic",
+                "tooltip": _("Format JavaScript documents"),
+                "child": FormatterView(JsFormatter()),
             },
         }
 

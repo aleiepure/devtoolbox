@@ -18,3 +18,4 @@ daltonlens
 asn1crypto
 pytz
 tzlocal
+jsbeautifier

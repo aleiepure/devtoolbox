@@ -118,6 +118,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="timer-symbolic.svg">../data/icons/symbolic/timer-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="timer-reverse-symbolic.svg">../data/icons/symbolic/timer-reverse-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="general-properties-symbolic.svg">../data/icons/symbolic/general-properties-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="js-symbolic.svg">../data/icons/symbolic/js-symbolic.svg</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/markdown-preview/">
     <file alias="github-markdown-dark.css">../data/markdown-preview/github-markdown-dark.css</file>
