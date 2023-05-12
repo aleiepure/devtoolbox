@@ -1,0 +1,83 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template ChmodCalculatorView : Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+        child: Box {
+          orientation: vertical;
+
+          .UtilityTitle _title {
+            title: _("Chmod Calculator");
+            description: _("Calculate values to modify permissions with chmod");
+            tool-name: "chmod";
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            margin-bottom: 10;
+
+            Adw.ActionRow {
+              title: _("Permissions");
+
+              Grid {
+                column-homogeneous: true;
+                column-spacing: 10;
+                row-spacing: 10;
+                margin-end: 10;
+                margin-top: 10;
+                margin-bottom: 10;
+
+                Label {label: _("Owner"); layout {column: 1; row: 0;} styles ["heading"]}
+                Label {label: _("Group"); layout {column: 2; row: 0;} styles ["heading"]}
+                Label {label: _("Others"); layout {column: 3; row: 0;} styles ["heading"]}
+                Label {label: _("Read"); layout {column: 0; row: 1;} styles ["heading"]}
+                Label {label: _("Write"); layout {column: 0; row: 2;} styles ["heading"]}
+                Label {label: _("Execute"); layout {column: 0; row: 3;} styles ["heading"]}
+                CheckButton _owner_read_btn {halign: center; active: true; layout {column: 1; row: 1;} styles ["heading"]}
+                CheckButton _owner_write_btn {halign: center; active: true; layout {column: 1; row: 2;} styles ["heading"]}
+                CheckButton _owner_execute_btn {halign: center; active: true; layout {column: 1; row: 3;} styles ["heading"]}
+                CheckButton _group_read_btn {halign: center; active: true; layout {column: 2; row: 1;} styles ["heading"]}
+                CheckButton _group_write_btn {halign: center; layout {column: 2; row: 2;} styles ["heading"]}
+                CheckButton _group_execute_btn {halign: center; active: true; layout {column: 2; row: 3;} styles ["heading"]}
+                CheckButton _others_read_btn {halign: center; active: true; layout {column: 3; row: 1;} styles ["heading"]}
+                CheckButton _others_write_btn {halign: center; layout {column: 3; row: 2;} styles ["heading"]}
+                CheckButton _others_execute_btn {halign: center; active: true; layout {column: 3; row: 3;} styles ["heading"]}
+              }
+            }
+          }
+          Adw.PreferencesGroup {
+            .EntryRow _numeric_row {
+              title: _("Numeric value");
+              text: "755";
+              show-copy-btn: true;
+              show-paste-btn: true;
+              show-clear-btn: true;
+              styles ["monospace"]
+            }
+            .EntryRow _symbolic_row {
+              title: _("Symbolic value");
+              text: "rwxr-xr-x";
+              show-copy-btn: true;
+              show-paste-btn: true;
+              show-clear-btn: true;
+              styles ["monospace"]
+            }
+          }
+        };
+      };
+    };
+  }
+}

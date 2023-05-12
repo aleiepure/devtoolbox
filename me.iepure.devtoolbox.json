@@ -1,7 +1,7 @@
 {
     "app-id" : "me.iepure.devtoolbox",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "43",
+    "runtime-version" : "44",
     "sdk" : "org.gnome.Sdk",
     "command" : "devtoolbox",
     "separate-locales": false,
@@ -23,8 +23,22 @@
         "*.la",
         "*.a"
     ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/rust-stable/bin"
+    },
     "modules" : [
         "pypi-dependencies.json",
+        {
+	  "name": "blueprint-compiler",
+	  "buildsystem": "meson",
+	  "sources": [
+	    {
+	      "type": "git",
+	      "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+	      "tag": "v0.6.0"
+	    }
+	  ]
+	},
         {
             "name" : "devtoolbox",
             "builddir" : true,

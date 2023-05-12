@@ -36,9 +36,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 	  <!-- Settings -->
 	  <key name="style-scheme" type="s">
-	    <default>"Adwaita-dark"</default>
+	    <default>"auto"</default>
 	  </key>
 	</schema>
 
 </schemalist>
-

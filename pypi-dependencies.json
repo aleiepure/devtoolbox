@@ -17,8 +17,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9e/cb/938214ac358fbef7058343b3765c79a1b7ed0c366f7f992ce7ff38335652/ruamel.yaml-0.17.21-py3-none-any.whl",
-                    "sha256": "742b35d3d665023981bd6d16b3d24248ce5df75fdb4e2924e93a05c1f8b61ca7"
+                    "url": "https://files.pythonhosted.org/packages/8d/7b/a7bfb158635d6849244daafc268fe2576c70d0fe6b38d890a8638a968ab7/ruamel.yaml-0.17.24-py3-none-any.whl",
+                    "sha256": "f251bd9096207af604af69d6495c3c650a3338d0493d27b04bc55477d7a884ed"
                 }
             ]
         },
@@ -83,8 +83,27 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/0f/4d/0cc5a7f4bdcefecebdf8a95c8372606c13d3355e8536d9cd3e7070e94269/croniter-1.3.8-py2.py3-none-any.whl",
-                    "sha256": "d6ed8386d5f4bbb29419dc1b65c4909c04a2322bd15ec0dc5b2877bfa1b75c7a"
+                    "url": "https://files.pythonhosted.org/packages/e7/f4/afbf09131612dad1737c8f9b0f4f494153f4099e114904bd6b94036e588f/croniter-1.3.14-py2.py3-none-any.whl",
+                    "sha256": "da1a1a7ca977b38e952ab0a119576e002bc4c05d058d644e81fc06ef7e995bb0"
+                }
+            ]
+        },
+        {
+            "name": "python3-python-crontab",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"python-crontab\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl",
+                    "sha256": "961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/9d/3b/8288af482e9ce777258ad234a497da22f36e4c36041da35b7648957eda37/python_crontab-2.7.1-py3-none-any.whl",
+                    "sha256": "9c374d1c9d401afdd8dd958f20077f74c158ab3fffb9604296802715e887fe48"
                 }
             ]
         },
@@ -111,8 +130,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/97/d3/31dd2c3e48fc2060819f4acb0686248250a0f2326356306b38a42e059144/sqlparse-0.4.3-py3-none-any.whl",
-                    "sha256": "0323c0ec29cd52bceabc1b4d9d579e311f3e4961b98d174201d5622a23b85e34"
+                    "url": "https://files.pythonhosted.org/packages/98/5a/66d7c9305baa9f11857f247d4ba761402cea75db6058ff850ed7128957b7/sqlparse-0.4.4-py3-none-any.whl",
+                    "sha256": "5430a4fe2ac7d0f93e66f1efc6e1338a41884b7ddf2a350cedd20ccc4d9d28f3"
                 }
             ]
         },
@@ -120,7 +139,7 @@
             "name": "python3-lxml",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --ignore-installed --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
+                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -139,22 +158,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/13/78/4cc1f402939662746cfe1a4a500923fc271164070d805cad87e58f4fed25/python_lorem-1.2.0-py3-none-any.whl",
-                    "sha256": "10524c0c8fb029dc8ab794aeb98debe42fdc90415b6f1c1a4c52343c2d84f9dd"
-                }
-            ]
-        },
-        {
-            "name": "python3-base64io",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"base64io\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c7/9c/401865bd07802b916c327342ed609f9ac0aa8c6c48bea1a32b7eabc17229/base64io-1.0.3-py2.py3-none-any.whl",
-                    "sha256": "e9a6c9f470e34f8debaad26134bcf3f0bcbf677dac73e32295cfb2915d30815b"
+                    "url": "https://files.pythonhosted.org/packages/c4/11/1b1b81e0c2e9cc481a8a2394f42320a6162242bc933031a8e02de6688ecd/python_lorem-1.3.0-py3-none-any.whl",
+                    "sha256": "f4155c42ecf8b276c2f3350e60d78c4336e9842eebc1c6a16c6287be570ffaac"
                 }
             ]
         },
@@ -167,8 +172,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ed/f0/c3be0d8de7a38daeb20d83833ec5078006dfb93b7595e55db7fa49b985c1/uuid6-2022.10.25-py3-none-any.whl",
-                    "sha256": "bd9b874081968c5f24af7ec7a3f48175197806224cc6f4833914f671854c6266"
+                    "url": "https://files.pythonhosted.org/packages/ea/e6/a1051b44f47bed2e7ca52cb8f96cdb81323a3227a50912a7427d203b3c5e/uuid6-2023.5.2-py3-none-any.whl",
+                    "sha256": "9a8125a621426f24d3e4811f9885e7c0c6567ed3cc47f68fe8d41112e603bf85"
                 }
             ]
         },
@@ -181,8 +186,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b2/2f/e4434084c12549a2aa015a8ba007722e6b4e0e7b0855baa915120271a8df/pyphen-0.13.2-py3-none-any.whl",
-                    "sha256": "e88cfb46aed61f4c7fe49592ff322e6266485fd2447c818a9123485cd92b7ef4"
+                    "url": "https://files.pythonhosted.org/packages/e3/c3/556e4ed0402ad7810a828532d539f1b14884fc0ff6c2da8ab401bf3bbd63/pyphen-0.14.0-py3-none-any.whl",
+                    "sha256": "414c9355958ca3c6a3ff233f65678c245b8ecb56418fb291e2b93499d61cd510"
                 },
                 {
                     "type": "file",
@@ -214,8 +219,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/0b/42/d9d95cc461f098f204cd20c85642ae40fbff81f74c300341b8d0e0df14e0/Pygments-2.14.0-py3-none-any.whl",
-                    "sha256": "fa7bd7bd2771287c0de303af8bfdfc731f51bd2c6a47ab69d117138893b82717"
+                    "url": "https://files.pythonhosted.org/packages/34/a7/37c8d68532ba71549db4212cb036dbd6161b40e463aba336770e80c72f84/Pygments-2.15.1-py3-none-any.whl",
+                    "sha256": "db2db3deb4b4179f399a09054b023b6a586b76499d36965813c71aa8ed7b5fd1"
                 }
             ]
         },
@@ -228,8 +233,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e4/a9/6704bb5e1d1d778d3a6ee1278a8d8134f0db160e09d52863a24edb58eab5/numpy-1.24.2.tar.gz",
-                    "sha256": "003a9f530e880cb2cd177cba1af7220b9aa42def9c4afc2a2fc3ee6be7eb2b22"
+                    "url": "https://files.pythonhosted.org/packages/2c/d4/590ae7df5044465cc9fa2db152ae12468694d62d952b1528ecff328ef7fc/numpy-1.24.3.tar.gz",
+                    "sha256": "ab344f1bf21f140adab8e47fdbc7c35a477dc01408791f8ba00d018dd0bc5155"
                 }
             ]
         },
@@ -242,8 +247,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/bc/07/830784e061fb94d67649f3e438ff63cfb902dec6d48ac75aeaaac7c7c30e/Pillow-9.4.0.tar.gz",
-                    "sha256": "a1c2d7780448eb93fbcc3789bf3916aa5720d942e37945f4056680317f1cd23e"
+                    "url": "https://files.pythonhosted.org/packages/00/d5/4903f310765e0ff2b8e91ffe55031ac6af77d982f0156061e20a4d1a8b2d/Pillow-9.5.0.tar.gz",
+                    "sha256": "bf548479d336726d7a0eceb6e767e179fbde37833ae42794602631a070d630f1"
                 }
             ]
         },
@@ -256,18 +261,89 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/bc/07/830784e061fb94d67649f3e438ff63cfb902dec6d48ac75aeaaac7c7c30e/Pillow-9.4.0.tar.gz",
-                    "sha256": "a1c2d7780448eb93fbcc3789bf3916aa5720d942e37945f4056680317f1cd23e"
+                    "url": "https://files.pythonhosted.org/packages/00/d5/4903f310765e0ff2b8e91ffe55031ac6af77d982f0156061e20a4d1a8b2d/Pillow-9.5.0.tar.gz",
+                    "sha256": "bf548479d336726d7a0eceb6e767e179fbde37833ae42794602631a070d630f1"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e4/a9/6704bb5e1d1d778d3a6ee1278a8d8134f0db160e09d52863a24edb58eab5/numpy-1.24.2.tar.gz",
-                    "sha256": "003a9f530e880cb2cd177cba1af7220b9aa42def9c4afc2a2fc3ee6be7eb2b22"
+                    "url": "https://files.pythonhosted.org/packages/2c/d4/590ae7df5044465cc9fa2db152ae12468694d62d952b1528ecff328ef7fc/numpy-1.24.3.tar.gz",
+                    "sha256": "ab344f1bf21f140adab8e47fdbc7c35a477dc01408791f8ba00d018dd0bc5155"
                 },
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/65/e7/a6bea606f4e57fbfbbd5334e715be25c1d97d9018ff184ba5ec6e66c3b34/daltonlens-0.1.5-py3-none-any.whl",
                     "sha256": "e66edeb4bb006579a60a9ed221a23a9493349b633cdf1c18133805f36d8ccd5f"
+                }
+            ]
+        },
+        {
+            "name": "python3-asn1crypto",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"asn1crypto\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/c9/7f/09065fd9e27da0eda08b4d6897f1c13535066174cc023af248fc2a8d5e5a/asn1crypto-1.5.1-py2.py3-none-any.whl",
+                    "sha256": "db4e40728b728508912cbb3d44f19ce188f218e9eba635821bb4b68564f8fd67"
+                }
+            ]
+        },
+        {
+            "name": "python3-pytz",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pytz\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/7f/99/ad6bd37e748257dd70d6f85d916cafe79c0b0f5e2e95b11f7fbc82bf3110/pytz-2023.3-py2.py3-none-any.whl",
+                    "sha256": "a151b3abb88eda1d4e34a9814df37de2a80e301e68ba0fd856fb9b46bfbbbffb"
+                }
+            ]
+        },
+        {
+            "name": "python3-tzlocal",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"tzlocal\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/d5/fb/a79efcab32b8a1f1ddca7f35109a50e4a80d42ac1c9187ab46522b2407d7/tzdata-2023.3-py2.py3-none-any.whl",
+                    "sha256": "7e65763eef3120314099b6939b5546db7adce1e7d6f2e179e3df563c70511eda"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/eb/73/3eaab547ca809754e67e06871cff0fc962bafd4b604e15f31896a0f94431/pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl",
+                    "sha256": "8314c9692a636c8eb3bda879b9f119e350e93223ae83e70e80c31675a0fdc1a6"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/d4/46/e8002faae3d1df7d7a0a3aa0cb4b2ccd805c3a71fb507b06446012b28790/tzlocal-4.3-py3-none-any.whl",
+                    "sha256": "b44c4388f3d34f25862cfbb387578a4d70fec417649da694a132f628a23367e2"
+                }
+            ]
+        },
+        {
+            "name": "python3-jsbeautifier",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"jsbeautifier\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/4e/04/e8a79c1db0c55ef03d53c05c61d06c4d6d3be37ef84e5400ce36b4a0fbe9/EditorConfig-0.12.3-py3-none-any.whl",
+                    "sha256": "6b0851425aa875b08b16789ee0eeadbd4ab59666e9ebe728e526314c4a2e52c1"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/7d/0a/6cb21f26972a794ba994a4680998177fdd4130b2ee2d1b82d424721cc103/jsbeautifier-1.14.7.tar.gz",
+                    "sha256": "77993254db1ff6f84eb6e1d75e3b6b72cba2ef20813a585b2d81e8e5e3c713c6"
                 }
             ]
         }

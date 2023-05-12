@@ -15,10 +15,12 @@ src/widgets/sidebar_item.py
 src/widgets/spin_area.py
 src/widgets/text_area.py
 src/widgets/text_file_area.py
+src/widgets/theme_switcher.py
 src/widgets/utility_title.py
 src/widgets/webview_area.py
 
 src/views/base_converter.py
+src/views/certificate_parser.py
 src/views/colorblindness_simulator.py
 src/views/contrast_checker.py
 src/views/cron_converter.py
@@ -40,6 +42,8 @@ src/views/url_encoder.py
 src/views/uuid_generator.py
 src/views/xml_validator.py
 
+src/views/reverse_cron.py
+
 src/ui/window.ui
 src/ui/about_window.ui
 
@@ -51,10 +55,12 @@ src/ui/widgets/image_area.ui
 src/ui/widgets/spin_area.ui
 src/ui/widgets/text_area.ui
 src/ui/widgets/text_file_area.ui
+src/ui/widgets/theme_switcher.ui
 src/ui/widgets/utility_title.ui
 src/ui/widgets/webview_area.ui
 
 src/ui/views/base_converter.ui
+src/ui/views/certificate_parser.ui
 src/ui/views/colorblindness_simulator.ui
 src/ui/views/contrast_checker.ui
 src/ui/views/cron_converter.ui

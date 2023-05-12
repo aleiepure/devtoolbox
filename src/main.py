@@ -8,7 +8,8 @@ import gi
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 gi.require_version("GtkSource", "5")
-gi.require_version('WebKit2', '5.0')
+gi.require_version('WebKit', '6.0')
+gi.require_version('Gcr', '4')
 
 from gi.repository import Gtk, Gio, Adw, GObject, GtkSource, Gdk
 
@@ -25,6 +26,7 @@ from .widgets.date_area import DateArea
 from .widgets.entry_row import EntryRow
 from .widgets.webview_area import WebviewArea
 from .widgets.image_area import ImageArea
+from .widgets.theme_switcher import ThemeSwitcher
 
 
 class DevtoolboxApplication(Adw.Application):
@@ -46,6 +48,7 @@ class DevtoolboxApplication(Adw.Application):
         EntryRow,
         WebviewArea,
         ImageArea,
+        ThemeSwitcher,
     ]
 
     def __init__(self, version, debug):
@@ -53,9 +56,9 @@ class DevtoolboxApplication(Adw.Application):
 
         self.version = version
         self.debug = debug
-        Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK)
+        # Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK)
 
-        self.create_action("quit", self.quit, ["<primary>q"])
+        self.create_action("quit", self.on_quit_action, ["<primary>q"])
         self.create_action("about", self.on_about_action)
 
         # Register custom types
@@ -83,6 +86,9 @@ class DevtoolboxApplication(Adw.Application):
         about_window.set_version(self.version)
         about_window.set_transient_for(self.props.active_window)
         about_window.present()
+
+    def on_quit_action(self, widget, _):
+        self.quit()
 
     def create_action(self, name, callback, shortcuts=None):
         """Add an application action.

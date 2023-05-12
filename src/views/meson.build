@@ -28,6 +28,11 @@ sources = [
   'contrast_checker.py',
   'colorblindness_simulator.py',
   'image_converter.py',
+  'certificate_parser.py',
+  'random_generator.py',
+  'certificate_request_generator.py',
+  'reverse_cron.py',
+  'chmod_calculator.py',
 ]
 
 install_data(sources, install_dir: viewsdir)

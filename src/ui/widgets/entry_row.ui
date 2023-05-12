@@ -17,6 +17,16 @@ SPDX-License-Identifier: GPL-3.0-or-later
           <class name="linked" />
         </style>
         <child>
+          <object class="GtkButton" id="_generate_btn">
+            <property name="icon-name">update</property>
+            <property name="valign">center</property>
+            <property name="tooltip-text" translatable="yes">Generate again</property>
+            <style>
+              <class name="flat" />
+            </style>
+          </object>
+        </child>
+        <child>
           <object class="GtkButton" id="_copy_btn">
             <property name="icon-name">edit-copy</property>
             <property name="valign">center</property>

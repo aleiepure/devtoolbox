@@ -1,0 +1,26 @@
+/*
+ * Copyright (C) 2022 - 2023 Alessandro Iepure
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+/* Dark mode CSS - overrides style.css */
+
+.fake-action-row-bottom {
+  padding-top: 2px;
+  background: #363636;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.fake-action-row-top {
+  background: #363636;
+  border-bottom: 1px solid #232323;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+.fake-action-row-middle {
+  background: #363636;
+  border-bottom: 1px solid #232323;
+}

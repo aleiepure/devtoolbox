@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, GObject, Gio, Gdk, WebKit2
+from gi.repository import Gtk, Adw, GObject, Gio, Gdk, WebKit
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/widgets/webview_area.ui")
@@ -16,7 +16,7 @@ class WebviewArea(Adw.Bin):
     _spinner_separator = Gtk.Template.Child()
     _view_btn = Gtk.Template.Child()
 
-    _webview = WebKit2.WebView()
+    _webview = WebKit.WebView()
 
     # Properties
     name = GObject.Property(type=str, default="")
@@ -51,8 +51,8 @@ class WebviewArea(Adw.Bin):
         self._webview.connect("context_menu", self._disable_contex_menu)
         self._view_btn.connect("clicked", self._on_view_clicked)
 
-    def _on_policy_decision(self, webview:WebKit2.WebView, decision:WebKit2.NavigationPolicyDecision, decision_type:WebKit2.PolicyDecisionType):
-        if decision_type == WebKit2.PolicyDecisionType.NAVIGATION_ACTION:
+    def _on_policy_decision(self, webview:WebKit.WebView, decision:WebKit.NavigationPolicyDecision, decision_type:WebKit.PolicyDecisionType):
+        if decision_type == WebKit.PolicyDecisionType.NAVIGATION_ACTION:
             uri = decision.get_navigation_action().get_request().get_uri()
             if decision.get_navigation_action().is_user_gesture() and not uri.split("#")[0] == webview.get_uri():
                 decision.ignore()
@@ -60,7 +60,7 @@ class WebviewArea(Adw.Bin):
                 window = app.get_active_window()
                 Gtk.show_uri(window, uri, Gdk.CURRENT_TIME)
 
-    def _disable_contex_menu(self, web_view:WebKit2.WebView, context_menu:WebKit2.ContextMenu, event:Gdk.Event, hit_test_result:WebKit2.HitTestResult):
+    def _disable_contex_menu(self, web_view:WebKit.WebView, context_menu:WebKit.ContextMenu, event:Gdk.Event, hit_test_result:WebKit.HitTestResult):
         return True
 
     def _on_view_clicked(self, user_data:GObject.GPointer):

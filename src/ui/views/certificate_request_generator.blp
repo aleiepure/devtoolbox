@@ -1,0 +1,150 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template CertificateRequestGeneratorView : Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+        child: Box {
+          orientation: vertical;
+
+          .UtilityTitle _title {
+            title: _("Certificate Signing Request Generator");
+            description: _("Generate certificate signing requests");
+            tool-name: "csr-generator";
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup _preferences_group {
+            margin-bottom: 10;
+            title: _("Fill the information below");
+            description: _("Fill at least the required fields then press the 'Create CSR' button. An empty passphrase will generate an unecrypted CSR.");
+
+            [header-suffix]
+            Button _create_csr_btn {
+              label: _("Create CSR");
+              valign: center;
+              styles ["suggested-action", "pill"]
+            }
+
+            Adw.EntryRow _common_name_entry {
+              title: _("Common Name (CN) *");
+            }
+
+            Adw.EntryRow _country_name_entry {
+              title: _("Country Name (C)");
+            }
+
+            Adw.EntryRow _state_entry {
+              title: _("State or Province Name (ST)");
+            }
+
+            Adw.EntryRow _locality_entry {
+              title: _("Locality Name (L)");
+            }
+
+            Adw.EntryRow _organization_entry {
+              title: _("Organization Name (O)");
+            }
+
+            Adw.EntryRow _organization_unit_entry {
+              title: _("Organization Unit Name (OU)");
+            }
+
+            Adw.PasswordEntryRow _password_entry {
+              title: _("Passphrase");
+            }
+
+            Adw.ActionRow {
+              title: _("Key");
+              subtitle: _("Generate a new key or use and existing one");
+
+              .BinarySelector _key_type_selector {
+                left-lbl: "New";
+                right-lbl: "Exisisting";
+                left-btn-active: true;
+              }
+            }
+
+            Revealer {
+              reveal-child: bind _key_type_selector.right-btn-active;
+
+              Adw.ActionRow _key_open_row {
+                title: _("Key File *");
+                subtitle: _("Open the file containing the key you want to use");
+                styles ["fake-action-row-bottom"]
+                Box {
+                  orientation: horizontal;
+
+                  Label _key_open_path {
+                    margin-end: 10;
+                  }
+
+                  Button _key_open_btn {
+                    valign: center;
+                    child: Adw.ButtonContent {
+                      icon-name: "document-open-symbolic";
+                      label: _("Open");
+                    };
+                  }
+                }
+              }
+            }
+
+            Revealer {
+              reveal-child: bind _key_type_selector.left-btn-active;
+
+              Adw.ActionRow {
+                title: _("Key Size");
+                subtitle: _("Size of the new key. It will be saved on the same path as the CSR.");
+                styles ["fake-action-row-middle"]
+                .BinarySelector _key_size_selector {
+                  left-lbl: "2048 bits";
+                  right-lbl: "4096 bits";
+                  left-btn-active: true;
+                }
+              }
+            }
+
+            Revealer {
+              reveal-child: bind _key_type_selector.left-btn-active;
+
+              Adw.ActionRow _key_save_row {
+                title: _("Key Save Location *");
+                subtitle: _("Save location for the generated key file");
+                styles ["fake-action-row-bottom"]
+                Box {
+                  orientation: horizontal;
+
+                  Label _key_save_path {
+                    margin-end: 10;
+                  }
+
+                  Button _key_save_btn {
+                    valign: center;
+                    child: Adw.ButtonContent {
+                      icon-name: "floppy-symbolic";
+                      label: _("Save");
+                    };
+                  }
+                }
+              }
+            }
+
+          }
+        };
+      };
+    };
+  }
+}

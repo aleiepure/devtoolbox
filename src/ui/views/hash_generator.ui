@@ -80,6 +80,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                               <object class="EntryRow" id="_check_entryrow">
                                 <style>
                                   <class name="fake-action-row-bottom" />
+                                  <class name="boxed-list" />
                                 </style>
                                 <property name="show-clear-btn">true</property>
                                 <property name="show-paste-btn">true</property>

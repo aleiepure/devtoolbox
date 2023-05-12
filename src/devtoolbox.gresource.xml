@@ -10,6 +10,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
   <gresource prefix="/me/iepure/devtoolbox">
     <file alias="style.css">css/style.css</file>
     <file alias="style-hc.css">css/style-hc.css</file>
+    <file alias="style-dark.css">css/style-dark.css</file>
+    <file alias="style-dark-hc.css">css/style-dark-hc.css</file>
     <file preprocess="xml-stripblanks">ui/window.ui</file>
     <file preprocess="xml-stripblanks">ui/about_window.ui</file>
     <file preprocess="xml-stripblanks" alias="gtk/help-overlay.ui">ui/gtk/help-overlay.ui</file>
@@ -23,6 +25,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/widgets/entry_row.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/webview_area.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/image_area.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/theme_switcher.ui</file>
     <file preprocess="xml-stripblanks">ui/views/tab_content.ui</file>
     <file preprocess="xml-stripblanks">ui/views/json_yaml.ui</file>
     <file preprocess="xml-stripblanks">ui/views/timestamp.ui</file>
@@ -44,6 +47,11 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/views/contrast_checker.ui</file>
     <file preprocess="xml-stripblanks">ui/views/colorblindness_simulator.ui</file>
     <file preprocess="xml-stripblanks">ui/views/image_converter.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/certificate_parser.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/random_generator.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/certificate_request_generator.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/reverse_cron.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/chmod_calculator.ui</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="non-starred-symbolic.svg">../data/icons/symbolic/non-starred-symbolic.svg</file>
@@ -97,7 +105,20 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="image-symbolic.svg">../data/icons/symbolic/image-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="info-symbolic.svg">../data/icons/symbolic/info-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="html-symbolic.svg">../data/icons/symbolic/html-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="certificate-symbolic.svg">../data/icons/symbolic/certificate-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="up-symbolic.svg">../data/icons/symbolic/up-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="down-symbolic.svg">../data/icons/symbolic/down-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="format-text-rich-symbolic.svg">../data/icons/symbolic/format-text-rich-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="dice3-symbolic.svg">../data/icons/symbolic/dice3-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="update-symbolic.svg">../data/icons/symbolic/update-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="size-horizontally-symbolic.svg">../data/icons/symbolic/size-horizontally-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="lowercase-symbolic.svg">../data/icons/symbolic/lowercase-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="symbols-symbolic.svg">../data/icons/symbolic/symbols-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="clock-alt-symbolic.svg">../data/icons/symbolic/clock-alt-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="timer-symbolic.svg">../data/icons/symbolic/timer-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="timer-reverse-symbolic.svg">../data/icons/symbolic/timer-reverse-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="general-properties-symbolic.svg">../data/icons/symbolic/general-properties-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="js-symbolic.svg">../data/icons/symbolic/js-symbolic.svg</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/markdown-preview/">
     <file alias="github-markdown-dark.css">../data/markdown-preview/github-markdown-dark.css</file>

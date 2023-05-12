@@ -79,10 +79,12 @@ class TextFileArea(Adw.Bin):
 
         self.set_property("css-name", "textfilearea")
 
-        # Set syntax highlighting
+        # Set theme
         language = GtkSource.LanguageManager.get_default().get_language(self.text_language_highlight)
-        style_from_settings = self._settings.get_string("style-scheme")
-        style_scheme = GtkSource.StyleSchemeManager().get_default().get_scheme(style_from_settings)
+        if Adw.StyleManager.get_default().get_dark():
+            style_scheme = GtkSource.StyleSchemeManager().get_default().get_scheme("Adwaita-dark")
+        else:
+            style_scheme = GtkSource.StyleSchemeManager().get_default().get_scheme("Adwaita")
         self._textview.get_buffer().set_language(language)
         self._textview.get_buffer().set_style_scheme(style_scheme)
 
@@ -126,6 +128,7 @@ class TextFileArea(Adw.Bin):
         self._open_btn.connect("clicked", self._on_open_clicked)
         self._save_btn.connect("clicked", self._on_save_clicked)
         self._textview.get_buffer().connect("changed", self._on_text_changed)
+        Adw.StyleManager.get_default().connect("notify::dark", self._on_theme_changed)
 
     def _on_dnd_drop(self, drop_target:Gtk.DropTarget, value: Gdk.FileList, x:float, y:float, user_data:GObject.Object=None):
         self._spinner.set_visible(True)
@@ -336,6 +339,13 @@ class TextFileArea(Adw.Bin):
         self._fileview.set_file_path("")
         self._fileview.set_file_size("")
         self._stack.set_visible_child_name("text-area")
+
+    def _on_theme_changed(self, key:str, user_data:GObject.GPointer):
+        if Adw.StyleManager.get_default().get_dark():
+            style_scheme = GtkSource.StyleSchemeManager().get_default().get_scheme("Adwaita-dark")
+        else:
+            style_scheme = GtkSource.StyleSchemeManager().get_default().get_scheme("Adwaita")
+        self._textview.get_buffer().set_style_scheme(style_scheme)
 
     def get_text(self) -> str:
         text_buffer = self._textview.get_buffer()

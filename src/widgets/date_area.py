@@ -5,7 +5,6 @@
 from gi.repository import Gtk, Adw, GObject, Gdk
 from gettext import gettext as _
 from datetime import datetime
-from dateutil import tz
 
 
 @Gtk.Template(resource_path='/me/iepure/devtoolbox/ui/widgets/date_area.ui')
@@ -51,13 +50,7 @@ class DateArea(Adw.Bin):
         self._seconds_spinner.connect("value-changed", self._on_value_changed)
 
     def _on_now_clicked(self, user_data:GObject.GPointer):
-        date = datetime.now(tz = tz.tzlocal())
-        self._year_spinner.set_value(date.year)
-        self._month_spinner.set_value(date.month)
-        self._day_spinner.set_value(date.day)
-        self._hours_spinner.set_value(date.hour)
-        self._minutes_spinner.set_value(date.minute)
-        self._seconds_spinner.set_value(date.second)
+        self.emit("now-clicked")
 
     def _on_copy_clicked(self, user_data:GObject.GPointer):
         year = int(self._year_spinner.get_value())

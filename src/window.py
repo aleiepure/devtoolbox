@@ -6,6 +6,7 @@ from gi.repository import Adw, Gtk, Gio, GObject
 from gettext import gettext as _
 
 from .widgets.sidebar_item import SidebarItem
+from .widgets.theme_switcher import ThemeSwitcher
 
 from .views.tab_content import TabContent
 from .views.json_yaml import JsonYamlView
@@ -28,11 +29,17 @@ from .views.markdown_preview import MarkdownPreviewView
 from .views.contrast_checker import ContrastCheckerView
 from .views.colorblindness_simulator import ColorblindnessSimulatorView
 from .views.image_converter import ImageConverterView
+from .views.certificate_parser import CertificateParserView
+from .views.random_generator import RandomGeneratorView
+from .views.certificate_request_generator import CertificateRequestGeneratorView
+from .views.reverse_cron import ReverseCronView
+from .views.chmod_calculator import ChmodCalculatorView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
 from .formatters.xml import XmlFormatter
 from .formatters.html import HtmlFormatter
+from .formatters.js import JsFormatter
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
@@ -43,6 +50,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
     _title = Gtk.Template.Child()
     _flap_btn = Gtk.Template.Child()
     _tabs_stack = Gtk.Template.Child()
+    _menu_btn = Gtk.Template.Child()
 
     # GSettings
     _settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
@@ -50,7 +58,8 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
     def __init__(self, debug, **kwargs):
         super().__init__(**kwargs)
 
-        # Theme headerbar
+        # Theme (Adapted from https://gitlab.gnome.org/tijder/blueprintgtk/)
+        self._menu_btn.get_popover().add_child(ThemeSwitcher(), "themeswitcher");
         if debug == "False":
             self.remove_css_class("devel")
 
@@ -79,7 +88,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             "cron": {
                 "title": _("CRON Parser"),
                 "category": "converter",
-                "icon-name": "hourglass-symbolic",
+                "icon-name": "timer-symbolic",
                 "tooltip": _("Convert CRON expressions to time and date"),
                 "child": CronConverterView(),
             },
@@ -216,6 +225,48 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "tooltip": _("Format HTML documents"),
                 "child": FormatterView(HtmlFormatter()),
             },
+            "certificate-parser": {
+                "title": _("Certificate Parser"),
+                "category": "encoder",
+                "icon-name": "certificate-symbolic",
+                "tooltip": _("View certificates contents"),
+                "child": CertificateParserView(),
+            },
+             "random-generator": {
+                "title": _("Random"),
+                "category": "generator",
+                "icon-name": "dice3-symbolic",
+                "tooltip": _("Generate random numbers and strings"),
+                "child": RandomGeneratorView(),
+            },
+            "csr-generator": {
+                "title": _("Certificate Signing Request"),
+                "category": "generator",
+                "icon-name": "certificate-symbolic",
+                "tooltip": _("Generate certificate signing requests"),
+                "child": CertificateRequestGeneratorView(),
+            },
+            "reverse-cron": {
+                "title": _("Reverse CRON"),
+                "category": "converter",
+                "icon-name": "timer-reverse-symbolic",
+                "tooltip": _("Generate CRON expressions"),
+                "child": ReverseCronView(),
+            },
+            "chmod": {
+                "title": _("Chmod Calculator"),
+                "category": "generator",
+                "icon-name": "general-properties-symbolic",
+                "tooltip": _("Calculate values to modify permissions with chmod"),
+                "child": ChmodCalculatorView(),
+            },
+            "js-formatter": {
+                "title": "JavaScript",
+                "category": "formatter",
+                "icon-name": "js-symbolic",
+                "tooltip": _("Format JavaScript documents"),
+                "child": FormatterView(JsFormatter()),
+            },
         }
 
         categories = {
@@ -283,3 +334,9 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             if tools[t]["category"] == category:
                 tools_in_category[t] = tools[t]
         return tools_in_category
+
+    # def __update_style(self, style_manager, dark):
+    #     if style_manager.get_dark():
+    #         self._settings.set_string("style-scheme", "Adwaita-dark")
+    #     else:
+    #         self._settings.set_string("style-scheme", "Adwaita")

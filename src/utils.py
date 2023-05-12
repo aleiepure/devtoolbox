@@ -132,3 +132,26 @@ class Utils:
         except Exception as e:
             print(e)
             return False
+
+    @staticmethod
+    def is_numeric_chmod(value: int) -> bool:
+        return value >= 0 and value <=777
+
+    @staticmethod
+    def is_symbolic_chmod(value: str) -> bool:
+        if len(value) != 9:
+            return False
+
+        string = list(value)
+        if (string[0] in ['-', 'r'] and
+            string[1] in ['-', 'w'] and
+            string[2] in ['-', 'x'] and
+            string[3] in ['-', 'r'] and
+            string[4] in ['-', 'w'] and
+            string[5] in ['-', 'x'] and
+            string[6] in ['-', 'r'] and
+            string[7] in ['-', 'w'] and
+            string[8] in ['-', 'x']):
+            return True
+        else:
+            return False
