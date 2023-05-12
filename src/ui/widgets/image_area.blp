@@ -1,0 +1,153 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template ImageArea : Adw.Bin {
+  Box {
+    margin-top: 10;
+    orientation: vertical;
+
+    styles [
+      "card",
+      "activatable",
+    ]
+
+    Box {
+      orientation: horizontal;
+      halign: fill;
+      hexpand: true;
+
+      styles [
+        "toolbar",
+      ]
+
+      Label _name_lbl {
+        margin-bottom: 15;
+        margin-top: 15;
+        margin-start: 8;
+
+        styles [
+          "label",
+        ]
+      }
+
+      Box {
+        orientation: horizontal;
+        halign: end;
+        hexpand: true;
+
+        Button _action_btn {
+          styles [
+            "suggested-action",
+          ]
+        }
+
+        Separator _action_btn_separator {
+          styles [
+            "spacer",
+          ]
+        }
+
+        Box {
+          orientation: horizontal;
+
+          styles [
+            "linked",
+          ]
+
+          Button _open_btn {
+            valign: center;
+            child:
+            Adw.ButtonContent {
+              icon-name: "document-open-symbolic";
+              label: _("Open");
+            }
+
+            ;
+          }
+
+          Button _save_btn {
+            valign: center;
+            child:
+            Adw.ButtonContent {
+              icon-name: "floppy-symbolic";
+              label: _("Save");
+            }
+
+            ;
+          }
+
+          Button _view_btn {
+            valign: center;
+            icon-name: "eye-open-symbolic";
+            tooltip-text: _("Open image in another program");
+          }
+
+          Button _clear_btn {
+            valign: center;
+            icon-name: "edit-clear-symbolic";
+            tooltip-text: _("Clear input");
+          }
+        }
+      }
+    }
+
+    Adw.ViewStack _stack {
+      Adw.ViewStackPage {
+        name: "image";
+        child:
+        Picture _imageview {
+          margin-top: 0;
+          margin-bottom: 3;
+          margin-start: 3;
+          margin-end: 3;
+          can-shrink: true;
+          keep-aspect-ratio: true;
+
+          styles [
+            "rounded-border",
+            "view",
+          ]
+        }
+
+        ;
+      }
+
+      Adw.ViewStackPage {
+        name: "loading";
+        child:
+        Box {
+          styles [
+            "rounded-border",
+            "view",
+          ]
+
+          orientation: vertical;
+          margin-top: 0;
+          margin-bottom: 3;
+          margin-start: 3;
+          margin-end: 3;
+
+          Box {
+            orientation: vertical;
+            valign: center;
+            vexpand: true;
+            spacing: 10;
+
+            Spinner {
+              spinning: true;
+            }
+
+            Label _loading_lbl {
+            }
+          }
+        }
+
+        ;
+      }
+    }
+  }
+}

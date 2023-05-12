@@ -1,0 +1,190 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template RandomGeneratorView : Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child:     ScrolledWindow {
+      child:       Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+        child:
+        Box {
+          orientation: vertical;
+
+          $UtilityTitle _title {
+            title: _("Random Generator");
+            description: _("Generate random numbers and strings");
+            tool-name: "random-generator";
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            title: _("String");
+            description: _("Generate a random string with the given options");
+
+            Adw.ActionRow {
+              title: _("Length");
+              subtitle: _("Length of the generated string");
+              icon-name: "size-horizontally-symbolic";
+
+              [suffix]
+              SpinButton _string_length_spinner {
+                valign: center;
+                adjustment:
+                Adjustment {
+                  lower: 1;
+                  upper: 100;
+                  step-increment: 1;
+                  value: 10;
+                }
+
+                ;
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Uppercase letters (A-Z)");
+              icon-name: "text-symbolic";
+
+              [suffix]
+              Switch _string_uppercase_switch {
+                valign: center;
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Lowercase letters (a-z)");
+              icon-name: "lowercase-symbolic";
+
+              [suffix]
+              Switch _string_lowercase_switch {
+                valign: center;
+                active: true;
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Numbers (0-9)");
+              icon-name: "hashtag-symbolic";
+
+              [suffix]
+              Switch _string_numbers_switch {
+                valign: center;
+                active: true;
+              }
+            }
+
+            Adw.ActionRow {
+              use-markup: false;
+              title: _("Special characters (!\"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~)");
+              icon-name: "symbols-symbolic";
+
+              [suffix]
+              Switch _string_special_chars_switch {
+                valign: center;
+              }
+            }
+          }
+
+          Adw.PreferencesGroup {
+            margin-top: 10;
+
+            $EntryRow _random_string_row {
+              title: "Generated string";
+              editable: "false";
+              show-generate-btn: "true";
+              show-copy-btn: "true";
+
+              styles [
+                "monospace",
+              ]
+            }
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            title: _("Number");
+            description: _("Generate a random number in the given range");
+
+            Adw.ActionRow {
+              title: _("Range");
+              subtitle: _("Range in which to generate");
+              icon-name: "size-horizontally-symbolic";
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                spacing: 10;
+
+                SpinButton _number_min_spinner {
+                  valign: center;
+                  adjustment:
+                  Adjustment {
+                    lower: -10000000;
+                    upper: 10000000;
+                    step-increment: 1;
+                    value: 25;
+                  }
+
+                  ;
+                }
+
+                Label {
+                  label: "-";
+                }
+
+                SpinButton _number_max_spinner {
+                  valign: center;
+                  adjustment:
+                  Adjustment {
+                    lower: 0;
+                    upper: 10000000;
+                    step-increment: 1;
+                    value: 100;
+                  }
+
+                  ;
+                }
+              }
+            }
+          }
+
+          Adw.PreferencesGroup {
+            margin-top: 10;
+            margin-bottom: 10;
+
+            $EntryRow _random_number_row {
+              title: "Generated number";
+              editable: "false";
+              show-generate-btn: "true";
+              show-copy-btn: "true";
+
+              styles [
+                "monospace",
+              ]
+            }
+          }
+        }
+
+        ;
+      }
+
+      ;
+    }
+
+    ;
+  }
+}

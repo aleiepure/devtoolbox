@@ -1,0 +1,171 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template TextArea : Adw.Bin {
+  Box {
+    margin-top: 10;
+    orientation: vertical;
+
+    styles [
+      "card",
+      "activatable",
+    ]
+
+    Box {
+      orientation: horizontal;
+      halign: fill;
+      hexpand: true;
+
+      styles [
+        "toolbar",
+      ]
+
+      Label _name_lbl {
+        margin-bottom: 8;
+        margin-top: 8;
+        margin-start: 8;
+
+        styles [
+          "label",
+        ]
+      }
+
+      Box {
+        orientation: horizontal;
+        halign: end;
+        hexpand: true;
+
+        Spinner _spinner {
+          width-request: 16;
+        }
+
+        Separator _spinner_separator {
+          styles [
+            "spacer",
+          ]
+        }
+
+        Button _action_btn {
+          styles [
+            "suggested-action",
+          ]
+        }
+
+        Separator _action_btn_separator {
+          styles [
+            "spacer",
+          ]
+        }
+
+        Box {
+          orientation: horizontal;
+
+          styles [
+            "linked",
+          ]
+
+          Button _open_btn {
+            valign: center;
+            child:
+            Adw.ButtonContent {
+              icon-name: "document-open-symbolic";
+              label: _("Open");
+            }
+
+            ;
+          }
+
+          Button _copy_btn {
+            valign: center;
+            icon-name: "edit-copy-symbolic";
+            tooltip-text: _("Copy to clipboard");
+          }
+
+          Button _paste_btn {
+            valign: center;
+            icon-name: "edit-paste-symbolic";
+            tooltip-text: _("Paste clipboard");
+          }
+
+          Button _clear_btn {
+            valign: center;
+            icon-name: "edit-clear-symbolic";
+            tooltip-text: _("Clear input");
+          }
+        }
+      }
+    }
+
+    Adw.ViewStack _stack {
+      Adw.ViewStackPage {
+        name: "text-area";
+        child:
+        ScrolledWindow {
+          margin-top: 0;
+          margin-bottom: 3;
+          margin-start: 3;
+          margin-end: 3;
+          child:
+          $GtkSourceView _textview {
+            auto-indent: "true";
+            tab-width: "4";
+            smart-backspace: "true";
+            insert-spaces-instead-of-tabs: "true";
+            wrap-mode: "char";
+            monospace: "true";
+            top-margin: "12";
+            left-margin: "12";
+            right-margin: "12";
+            bottom-margin: "12";
+
+            styles [
+              "rounded-border",
+            ]
+          }
+
+          ;
+        }
+
+        ;
+      }
+
+      Adw.ViewStackPage {
+        name: "loading";
+        child:
+        Box {
+          styles [
+            "rounded-border",
+            "view",
+          ]
+
+          orientation: vertical;
+          margin-top: 0;
+          margin-bottom: 3;
+          margin-start: 3;
+          margin-end: 3;
+
+          Box {
+            orientation: vertical;
+            valign: center;
+            vexpand: true;
+            spacing: 10;
+
+            Spinner {
+              spinning: true;
+              width-request: 36;
+            }
+
+            Label _loading_lbl {
+            }
+          }
+        }
+
+        ;
+      }
+    }
+  }
+}

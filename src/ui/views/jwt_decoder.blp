@@ -1,0 +1,69 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template JwtDecoderView : Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child:     ScrolledWindow {
+      child:       Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+        child:
+        Box {
+          orientation: vertical;
+
+          $UtilityTitle _title {
+            title: _("JWT tokens decoder");
+            description: _("Decode JWT tokens to header and payload");
+            tool-name: "jwt-decoder";
+          }
+
+          Separator {
+            margin-top: 10;
+          }
+
+          $TextArea _token_area {
+            name: _("Token");
+            show-clear-btn: "true";
+            show-paste-btn: "true";
+            area-height: "100";
+            text-wrap-mode: "char";
+          }
+
+          Separator {
+            margin-top: 10;
+          }
+
+          Box {
+            orientation: horizontal;
+            homogeneous: true;
+            spacing: 10;
+            margin-bottom: 10;
+
+            $TextArea _header_area {
+              name: _("Header");
+              show-copy-btn: "true";
+              text-wrap-mode: "none";
+            }
+
+            $TextArea _payload_area {
+              name: _("Payload");
+              show-copy-btn: "true";
+              text-wrap-mode: "none";
+            }
+          }
+        }
+
+        ;
+      }
+
+      ;
+    }
+
+    ;
+  }
+}

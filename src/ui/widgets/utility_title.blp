@@ -1,0 +1,55 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template UtilityTitle : Adw.Bin {
+  Grid {
+    Button _star_btn {
+      visible: false;
+      valign: center;
+      margin-top: 10;
+
+      styles [
+        "circular",
+      ]
+
+      layout {
+        column: "0";
+        row: "0";
+        row-span: "2";
+      }
+    }
+
+    Label _title_lbl {
+      halign: start;
+      margin-top: 10;
+      margin-start: 10;
+
+      styles [
+        "title-1",
+      ]
+
+      layout {
+        column: "1";
+        row: "0";
+      }
+    }
+
+    Label _description_lbl {
+      halign: start;
+      margin-start: 10;
+
+      styles [
+        "caption-heading",
+      ]
+
+      layout {
+        column: "1";
+        row: "1";
+      }
+    }
+  }
+}

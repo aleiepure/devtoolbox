@@ -1,0 +1,107 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template GzipCompressorView : Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child:     ScrolledWindow {
+      child:       Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+        child:
+        Box {
+          orientation: vertical;
+
+          $UtilityTitle _title {
+            title: _("GZip Compress & Decompress");
+            description: _("Compress and decompress files and texts using GZip");
+            tool-name: "gzip-compressor";
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            title: _("Tool options");
+
+            Adw.ActionRow {
+              title: _("Direction");
+              subtitle: _("Select the desired operation");
+              icon-name: "horizontal-arrows-symbolic";
+
+              [suffix]
+              $BinarySelector _direction_selector {
+                left-lbl: _("Compress");
+                right-lbl: _("Decompress");
+                left-btn-active: "true";
+              }
+            }
+          }
+
+          Separator {
+            margin-top: 10;
+          }
+
+          Box {
+            orientation: horizontal;
+            homogeneous: true;
+            spacing: 10;
+
+            $TextFileArea _input_area {
+              name: _("Input");
+              show-clear-btn: "true";
+              show-paste-btn: "true";
+              show-open-btn: "true";
+              use-all-files-extensions: "true";
+              text-wrap-mode: "word-char";
+            }
+
+            $TextFileArea _output_area {
+              name: _("Output");
+              show-copy-btn: "true";
+              show-clear-btn: "false";
+              show-paste-btn: "false";
+              show-open-btn: "false";
+              text-editable: "false";
+              allow-drag-and-drop: "false";
+              text-wrap-mode: "char";
+            }
+          }
+
+          Box {
+            orientation: horizontal;
+            halign: center;
+            margin-bottom: 10;
+            margin-top: 10;
+
+            styles [
+              "dim-label",
+            ]
+
+            Image {
+              margin-end: 5;
+              pixel-size: 16;
+              icon-name: "info-symbolic";
+            }
+
+            Label {
+              label: _("The compression result and the expected decompression input are base64 encoded.");
+            }
+          }
+        }
+
+        ;
+      }
+
+      ;
+    }
+
+    ;
+  }
+}

@@ -1,0 +1,115 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template CronConverterView : Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child:     ScrolledWindow {
+      child:       Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+        child:
+        Box {
+          orientation: vertical;
+          margin-bottom: 10;
+
+          $UtilityTitle _title {
+            title: _("CRON Parser");
+            description: _("Convert CRON expressions to time and date");
+            tool-name: "cron";
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            title: _("Tool options");
+
+            Adw.ActionRow {
+              title: _("Number of dates");
+              subtitle: _("Number of dates to be generated (up to 20)");
+              icon-name: "today-alt-symbolic";
+
+              [suffix]
+              SpinButton _dates_spinner {
+                valign: center;
+                adjustment:
+                Adjustment {
+                  lower: 1;
+                  upper: 20;
+                  step-increment: 1;
+                  value: 5;
+                }
+
+                ;
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Output format");
+              subtitle: _("Format used to display generated dates (<a href=\"https://strftime.org/\">python syntax</a>)");
+              icon-name: "format-text-rich-symbolic";
+
+              [suffix]
+              Text _format_text {
+                valign: center;
+                width-request: 250;
+                height-request: 30;
+                text: "%c";
+
+                styles [
+                  "view",
+                  "rounded-border",
+                  "padding-left-8",
+                  "monospace",
+                ]
+              }
+            }
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            $EntryRow _expression {
+              title: _("CRON expression");
+              text: "* * * * *";
+              show-copy-btn: "true";
+              show-paste-btn: "true";
+              show-clear-btn: "true";
+
+              styles [
+                "monospace",
+              ]
+            }
+          }
+
+          $TextArea _output_area {
+            name: _("Dates");
+            show-copy-btn: "true";
+            show-clear-btn: "false";
+            show-paste-btn: "false";
+            show-open-btn: "false";
+            text-editable: "false";
+            allow-drag-and-drop: "false";
+            text-wrap-mode: "none";
+          }
+        }
+
+        ;
+      }
+
+      ;
+    }
+
+    ;
+  }
+}

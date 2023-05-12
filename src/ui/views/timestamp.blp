@@ -1,0 +1,76 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template TimestampView : Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child:     ScrolledWindow {
+      child:       Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+        child:
+        Box {
+          orientation: vertical;
+
+          $UtilityTitle _title {
+            title: _("Timestamp Converter");
+            description: _("Convert UNIX timestamps to and from plain dates");
+            tool-name: "timestamp";
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            title: _("Tool options");
+
+            Adw.ActionRow _timezone_row {
+              title: _("Timezone");
+              subtitle: _("Select the desired timezone");
+              icon-name: "clock-alt-symbolic";
+            }
+          }
+
+          Separator {
+            margin-top: 10;
+          }
+
+          $SpinArea _timestamp_spin_area {
+            name: _("Timestamp");
+            show-copy-btn: "true";
+            show-paste-btn: "true";
+            show-action-btn: "true";
+            action-btn-name: _("Now");
+            action-btn-tooltip: _("Sets the current system timestamp");
+          }
+
+          $DateArea _date_area {
+            name: _("Date");
+          }
+
+          Adw.PreferencesGroup {
+            margin-top: 10;
+
+            $EntryRow _iso_date {
+              editable: "false";
+              show-copy-btn: "true";
+              title: _("ISO date (ISO 8601/RFC 3339)");
+            }
+          }
+        }
+
+        ;
+      }
+
+      ;
+    }
+
+    ;
+  }
+}

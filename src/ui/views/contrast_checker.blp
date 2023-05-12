@@ -1,0 +1,239 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template ContrastCheckerView : Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child:     ScrolledWindow {
+      child:       Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+        child:
+        Box {
+          orientation: vertical;
+
+          $UtilityTitle _title {
+            title: _("Contrast Checker");
+            description: _("Check a color combination for WCAG compliance");
+            tool-name: "contrast-checker";
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            title: _("Tool options");
+
+            Adw.ActionRow {
+              title: _("Text color");
+              subtitle: _("Color used for the text");
+              icon-name: "text-symbolic";
+              activatable-widget: _label_color_btn;
+
+              [suffix]
+              ColorButton _label_color_btn {
+                valign: center;
+                modal: true;
+                show-editor: true;
+                title: _("Text color");
+                width-request: 100;
+                rgba: "#FFFFFF";
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Background color");
+              subtitle: _("Color used for the background");
+              icon-name: "checkerboard-big-symbolic";
+              activatable-widget: _background_color_btn;
+
+              [suffix]
+              ColorButton _background_color_btn {
+                valign: center;
+                modal: true;
+                show-editor: true;
+                title: _("Background color");
+                width-request: 100;
+                rgba: "#7A00E4";
+              }
+            }
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            title: _("Example");
+
+            Box _example_box {
+              styles [
+                "rounded-border",
+                "padding-20",
+              ]
+
+              orientation: vertical;
+              spacing: 5;
+
+              Label _example_title_lbl {
+                label: _("Lorem ipsum dolor sit amet");
+
+                styles [
+                  "title-1",
+                ]
+              }
+
+              Label _example_lbl {
+                label: _("velit laboris excepteur aliqua nostrud dolore anim ad qui esse");
+              }
+            }
+          }
+
+          Box {
+            margin-top: 20;
+            orientation: horizontal;
+            homogeneous: true;
+            spacing: 10;
+
+            Box {
+              orientation: vertical;
+              spacing: 5;
+
+              styles [
+                "card",
+                "padding-20",
+              ]
+
+              Label {
+                label: _("AA");
+
+                styles [
+                  "title-2",
+                ]
+              }
+
+              Label {
+                label: _("small");
+
+                styles [
+                  "heading",
+                ]
+              }
+
+              Image _aa_small_image {
+                icon-name: "check-round-outline";
+                pixel-size: 32;
+              }
+            }
+
+            Box {
+              orientation: vertical;
+              spacing: 5;
+
+              styles [
+                "card",
+                "padding-20",
+              ]
+
+              Label {
+                label: _("AA");
+
+                styles [
+                  "title-2",
+                ]
+              }
+
+              Label {
+                label: _("large");
+
+                styles [
+                  "heading",
+                ]
+              }
+
+              Image _aa_large_image {
+                icon-name: "check-round-outline";
+                pixel-size: 32;
+              }
+            }
+
+            Box {
+              orientation: vertical;
+              spacing: 5;
+
+              styles [
+                "card",
+                "padding-20",
+              ]
+
+              Label {
+                label: _("AAA");
+
+                styles [
+                  "title-2",
+                ]
+              }
+
+              Label {
+                label: _("small");
+
+                styles [
+                  "heading",
+                ]
+              }
+
+              Image _aaa_small_image {
+                icon-name: "check-round-outline";
+                pixel-size: 32;
+              }
+            }
+
+            Box {
+              orientation: vertical;
+              spacing: 5;
+
+              styles [
+                "card",
+                "padding-20",
+              ]
+
+              Label {
+                label: _("AAA");
+
+                styles [
+                  "title-2",
+                ]
+              }
+
+              Label {
+                label: _("large");
+
+                styles [
+                  "heading",
+                ]
+              }
+
+              Image _aaa_large_image {
+                icon-name: "check-round-outline";
+                pixel-size: 32;
+              }
+            }
+          }
+        }
+
+        ;
+      }
+
+      ;
+    }
+
+    ;
+  }
+}
