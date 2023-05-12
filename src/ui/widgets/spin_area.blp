@@ -1,0 +1,84 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template SpinArea : Adw.Bin {
+    Adw.PreferencesGroup {
+        margin-top: 10;
+
+        Adw.PreferencesRow {
+            Box {
+                orientation: vertical;
+
+                // Header
+                Box {
+                    orientation: horizontal;
+                    halign: fill;
+                    hexpand: true;
+                    styles ["toolbar"]
+
+                    Label _name_lbl {
+                        margin-bottom: 8;
+                        margin-top: 8;
+                        margin-start: 8;
+                        styles ["label"]
+                    }
+
+                    Box {
+                        orientation: horizontal;
+                        halign: end;
+                        hexpand: true;
+
+                        Spinner _spinner {
+                            width-request: 16;
+                        }
+
+                        Separator _spinner_separator {
+                            styles ["spacer"]
+                        }
+
+                        Button _action_btn {
+                            styles ["suggested-action"]
+                        }
+
+                        Separator _action_btn_separator {
+                            styles ["spacer"]
+                        }
+
+                        Box {
+                            orientation: horizontal;
+                            styles ["linked"]
+
+                            Button _copy_btn {
+                                valign: center;
+                                icon-name: "edit-copy";
+                                tooltip-text: _("Copy to clipboard");
+                            }
+
+                            Button _paste_btn {
+                                valign: center;
+                                icon-name: "edit-paste";
+                                tooltip-text: _("Paste clipboard");
+                            }
+                        }
+                    }
+                }
+
+                // Content
+                SpinButton _spin_btn {
+                    styles ["rounded-border", "view"]
+                    numeric: true;
+                    update-policy: if_valid;
+                    adjustment: Adjustment {
+                        lower: 0;
+                        upper: 99999999999;
+                        step-increment: 1;
+                    };
+                }
+            }
+        }
+    }
+}
