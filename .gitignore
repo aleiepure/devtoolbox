@@ -6,6 +6,7 @@
 .flatpak/
 .vscode/
 builddir/
+_build/
 
 .pre-commit-config.yaml
 me.iepure.devtoolbox-release.json

@@ -28,6 +28,8 @@ class ColorblindnessSimulatorView(Adw.Bin):
     def __init__(self):
         super().__init__()
 
+        # Marks
+        self._severity_scale.add_mark(0.8, Gtk.PositionType.BOTTOM, None)
         self._severity_scale.remove_css_class("marks-after")
 
         # Signals
