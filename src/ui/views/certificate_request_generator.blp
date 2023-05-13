@@ -15,7 +15,7 @@ template CertificateRequestGeneratorView : Adw.Bin {
         child: Box {
           orientation: vertical;
 
-          .UtilityTitle _title {
+          $UtilityTitle _title {
             title: _("Certificate Signing Request Generator");
             description: _("Generate certificate signing requests");
             tool-name: "csr-generator";
@@ -70,7 +70,7 @@ template CertificateRequestGeneratorView : Adw.Bin {
               title: _("Key");
               subtitle: _("Generate a new key or use and existing one");
 
-              .BinarySelector _key_type_selector {
+              $BinarySelector _key_type_selector {
                 left-lbl: "New";
                 right-lbl: "Exisisting";
                 left-btn-active: true;
@@ -109,7 +109,7 @@ template CertificateRequestGeneratorView : Adw.Bin {
                 title: _("Key Size");
                 subtitle: _("Size of the new key. It will be saved on the same path as the CSR.");
                 styles ["fake-action-row-middle"]
-                .BinarySelector _key_size_selector {
+                $BinarySelector _key_size_selector {
                   left-lbl: "2048 bits";
                   right-lbl: "4096 bits";
                   left-btn-active: true;

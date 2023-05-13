@@ -1,0 +1,174 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template TextInspectorView : Adw.Bin {
+    Adw.ToastOverlay _toast {
+        child: ScrolledWindow {
+            child: Adw.Clamp {
+                vexpand: true;
+                maximum-size: 1200;
+                tightening-threshold: 600;
+                child: Box {
+                    orientation: vertical;
+
+                    // Title
+                    $UtilityTitle _title {
+                        title: _("Text Inspector & Case Converter");
+                        description: _("View statistics about text and change sentence cases");
+                        tool-name: "text-inspector";
+                    }
+                    Separator {
+                        margin-top: 10;
+                        margin-bottom: 10;
+                    }
+
+                    // Options
+                    Adw.PreferencesGroup {
+                        title: _("Tool options");
+
+                        Adw.ComboRow _case_dropdown {
+                            title: _("Change case");
+                            subtitle: "Choose a case to apply to the text";
+                            model: StringList {
+                                // TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+                                strings [
+                                    _("Original"),
+                                    _("Sentence case"),
+                                    _("lower case"),
+                                    _("UPPERCASE"),
+                                    _("Title Case"),
+                                    _("camelCase"),
+                                    _("PascalCase"),
+                                    _("snake_case"),
+                                    _("CONSTANT_CASE"),
+                                    _("kebab-case"),
+                                    _("COBOL-CASE"),
+                                    _("Train-Case"),
+                                    _("aLtErNaTiNg CaSe"),
+                                    _("ReVeRsE aLtErNaTiNg CaSe")
+                                ]
+                            };
+                        }
+                        Separator {
+                            margin-top: 10;
+                            margin-bottom: 10;
+                        }
+
+                        // Stats
+                        Adw.PreferencesGroup {
+                            title: _("Information");
+
+                            Adw.ActionRow {
+                                title: _("Cursor");
+                                icon-name: "select-mode";
+
+                                [suffix]
+                                Box {
+                                    orientation: horizontal;
+                                    spacing: 50;
+                                    margin-end: 10;
+
+                                    Box {
+                                        orientation: horizontal;
+                                        spacing: 5;
+
+                                        Label {
+                                            label: _("Line:");
+                                        }
+
+                                        Label _line_lbl {
+                                            label: "1";
+                                        }
+                                    }
+
+                                    Box {
+                                        orientation: horizontal;
+                                        spacing: 5;
+
+                                        Label {
+                                            label: _("Column:");
+                                        }
+
+                                        Label _column_lbl {
+                                            label: "1";
+                                        }
+                                    }
+                                }
+                            }
+
+                            Adw.ActionRow {
+                                title: _("Text");
+                                icon-name: "text";
+
+                                [suffix]
+                                Box {
+                                    orientation: horizontal;
+                                    spacing: 50;
+                                    margin-end: 10;
+
+                                    Box {
+                                        orientation: horizontal;
+                                        spacing: 5;
+
+                                        Label {
+                                            label: _("Characters:");
+                                        }
+
+                                        Label _chars_lbl {
+                                            label: "0";
+                                        }
+                                    }
+
+                                    Box {
+                                        orientation: horizontal;
+                                        spacing: 5;
+
+                                        Label {
+                                            label: _("Words:");
+                                        }
+
+                                        Label _words_lbl {
+                                            label: "0";
+                                        }
+                                    }
+
+                                    Box {
+                                        orientation: horizontal;
+                                        spacing: 5;
+
+                                        Label {
+                                            label: _("Lines:");
+                                        }
+
+                                        Label _lines_lbl {
+                                            label: "0";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        Separator {
+                            margin-top: 10;
+                        }
+
+                        // Text area
+                        $TextArea _textarea {
+                            name: _("Text");
+                            show-copy-btn: true;
+                            show-clear-btn: true;
+                            show-paste-btn: true;
+                            show-open-btn: true;
+                            use-default-text-extensions: true;
+                            margin-bottom: 10;
+                            text-wrap-mode: word-char;
+                        }
+                    }
+                };
+            };
+        };
+    }
+}

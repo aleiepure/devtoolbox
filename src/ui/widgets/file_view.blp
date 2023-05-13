@@ -1,0 +1,35 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template FileView : Adw.Bin {
+  styles [
+    "rounded-border",
+    "view",
+  ]
+
+  Box {
+    orientation: vertical;
+
+    Box {
+      orientation: vertical;
+      valign: center;
+      vexpand: true;
+      spacing: 10;
+
+      Image {
+        icon-name: "paper-filled";
+        pixel-size: 64;
+      }
+
+      Label _file_size_lbl {
+      }
+
+      Label _file_path_lbl {
+      }
+    }
+  }
+}

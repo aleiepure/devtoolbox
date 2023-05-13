@@ -1,0 +1,80 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template FormatterView : Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child:     ScrolledWindow {
+      child:       Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+        child:
+        Box {
+          orientation: vertical;
+
+          $UtilityTitle _title {
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            title: _("Tool options");
+
+            Adw.ActionRow {
+              title: _("Indentations");
+              subtitle: _("Number of spaces used for indentation");
+              icon-name: "format-indent-more-symbolic";
+
+              [suffix]
+              SpinButton _indents_spinner {
+                valign: center;
+                adjustment:
+                Adjustment {
+                  lower: 2;
+                  upper: 8;
+                  step-increment: 1;
+                  value: 4;
+                }
+
+                ;
+              }
+            }
+          }
+
+          Separator {
+            margin-top: 10;
+          }
+
+          $TextArea _textarea {
+            show-action-btn: "true";
+            show-clear-btn: "true";
+            show-copy-btn: "true";
+            show-paste-btn: "true";
+            show-open-btn: "true";
+            action-btn-name: C_("verb/action", "Format");
+            text-show-line-numbers: "true";
+            text-highlight-current-line: "true";
+            text-syntax-highlighting: "true";
+            area-height: "500";
+            use-custom-file-extensions: "true";
+            margin-bottom: "10";
+            text-wrap-mode: "none";
+          }
+        }
+
+        ;
+      }
+
+      ;
+    }
+
+    ;
+  }
+}

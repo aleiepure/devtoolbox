@@ -1,0 +1,156 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template CertificateParserView : Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child:     ScrolledWindow {
+      child:       Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+        child:
+        Box {
+          orientation: vertical;
+
+          $UtilityTitle _title {
+            title: _("Certificate Parser");
+            description: _("View certificates contents");
+            tool-name: "certificate-parser";
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            title: _("Tool options");
+
+            Adw.ActionRow _open_certificate_row {
+              title: _("Certificate");
+              subtitle: _("Open a certificate file (pem, der, cer extensions)");
+              icon-name: "document-open-symbolic";
+              activatable-widget: _open_btn;
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+
+                Label _path_lbl {
+                  margin-end: 10;
+                }
+
+                Button _open_btn {
+                  valign: center;
+                  child:
+                  Adw.ButtonContent {
+                    icon-name: "document-open-symbolic";
+                    label: _("Open");
+                  }
+
+                  ;
+                }
+              }
+            }
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.ViewStack _view_stack {
+            Adw.ViewStackPage {
+              name: "empty";
+              child:
+              Box {
+                valign: center;
+                vexpand: true;
+                orientation: vertical;
+                spacing: 5;
+
+                Image {
+                  icon-name: "certificate-symbolic";
+                  pixel-size: 64;
+                }
+
+                Label {
+                  label: _("Open a certificate file to view its contents.");
+
+                  styles [
+                    "title-3",
+                  ]
+                }
+              }
+
+              ;
+            }
+
+            Adw.ViewStackPage {
+              name: "certificate";
+              child:
+              Adw.PreferencesGroup _certificate_group {
+                margin-bottom: 10;
+
+                [header-suffix]
+                Button _expand_btn {
+                  valign: center;
+                  child:
+                  Adw.ButtonContent {
+                    icon-name: "down-symbolic";
+                    label: _("Expand All");
+                  }
+
+                  ;
+                }
+
+                Label _identity_lbl {
+                  halign: start;
+                  margin-start: 10;
+                }
+
+                Label _verified_by_lbl {
+                  halign: start;
+                  margin-start: 10;
+                }
+
+                Label _expire_lbl {
+                  halign: start;
+                  margin-start: 10;
+                }
+
+                Adw.PreferencesGroup _general_group {
+                  margin-top: 10;
+                  hexpand: true;
+                }
+
+                Adw.PreferencesGroup _named_extensions_group {
+                  margin-top: 10;
+                  hexpand: true;
+                }
+
+                Adw.PreferencesGroup _extensions_group {
+                  margin-top: 10;
+                  margin-bottom: 10;
+                  hexpand: true;
+                }
+              }
+
+              ;
+            }
+          }
+        }
+
+        ;
+      }
+
+      ;
+    }
+
+    ;
+  }
+}

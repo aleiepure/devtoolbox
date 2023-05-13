@@ -3,6 +3,11 @@
 # SPDX-License-Identifier: CC0-1.0
 
 .flatpak-builder/
+.flatpak/
+.vscode/
+builddir/
+_build/
+
 .pre-commit-config.yaml
 me.iepure.devtoolbox-release.json
 po/*.mo

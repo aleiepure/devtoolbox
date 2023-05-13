@@ -1,0 +1,288 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template DateArea : Adw.Bin {
+  Adw.PreferencesGroup {
+    margin-top: 10;
+
+    Adw.PreferencesRow {
+      Box {
+        orientation: vertical;
+
+        Box {
+          orientation: horizontal;
+          halign: fill;
+          hexpand: true;
+
+          styles [
+            "toolbar",
+          ]
+
+          Label _name_lbl {
+            margin-bottom: 8;
+            margin-top: 8;
+            margin-start: 8;
+
+            styles [
+              "label",
+            ]
+          }
+
+          Box {
+            orientation: horizontal;
+            halign: end;
+            hexpand: true;
+
+            Button _now_btn {
+              styles [
+                "suggested-action",
+              ]
+
+              valign: center;
+              label: _("Now");
+              tooltip-text: _("Sets the current system date and time (local timezone)");
+            }
+
+            Separator _separator {
+              styles [
+                "spacer",
+              ]
+            }
+
+            Box {
+              orientation: horizontal;
+
+              styles [
+                "linked",
+              ]
+
+              Button _copy_btn {
+                valign: center;
+                icon-name: "edit-copy-symbolic";
+                tooltip-text: _("Copy to clipboard");
+              }
+            }
+          }
+        }
+
+        Box {
+          orientation: vertical;
+
+          styles [
+            "view",
+            "rounded-border",
+          ]
+
+          Box {
+            orientation: horizontal;
+            homogeneous: true;
+
+            Box {
+              orientation: vertical;
+              margin-end: 1;
+
+              Label {
+                label: _("Year");
+                margin-bottom: 10;
+                margin-top: 10;
+                margin-start: 7;
+                margin-end: 7;
+              }
+
+              SpinButton _year_spinner {
+                numeric: true;
+                margin-start: 4;
+                margin-end: 2;
+                adjustment:
+                Adjustment {
+                  lower: 1970;
+                  upper: 9999;
+                  step-increment: 1;
+                  value: 1970;
+                }
+
+                ;
+
+                styles [
+                  "rounded-border",
+                ]
+              }
+            }
+
+            Box {
+              orientation: vertical;
+              margin-end: 1;
+              margin-start: 1;
+
+              Label {
+                label: _("Month");
+                margin-bottom: 10;
+                margin-top: 10;
+                margin-start: 7;
+                margin-end: 7;
+              }
+
+              SpinButton _month_spinner {
+                numeric: true;
+                margin-start: 2;
+                margin-end: 2;
+                adjustment:
+                Adjustment {
+                  lower: 1;
+                  upper: 12;
+                  step-increment: 1;
+                  value: 1;
+                }
+
+                ;
+
+                styles [
+                  "rounded-border",
+                ]
+              }
+            }
+
+            Box {
+              orientation: vertical;
+              margin-start: 1;
+
+              Label {
+                label: _("Day");
+                margin-bottom: 10;
+                margin-top: 10;
+                margin-start: 7;
+                margin-end: 7;
+              }
+
+              SpinButton _day_spinner {
+                numeric: true;
+                margin-start: 2;
+                margin-end: 4;
+                adjustment:
+                Adjustment {
+                  lower: 1;
+                  upper: 31;
+                  step-increment: 1;
+                  value: 1;
+                }
+
+                ;
+
+                styles [
+                  "rounded-border",
+                ]
+              }
+            }
+          }
+
+          Box {
+            orientation: horizontal;
+            homogeneous: true;
+            margin-bottom: 4;
+
+            Box {
+              orientation: vertical;
+              margin-end: 1;
+
+              Label {
+                label: _("Hours");
+                margin-bottom: 10;
+                margin-top: 10;
+                margin-start: 7;
+                margin-end: 7;
+              }
+
+              SpinButton _hours_spinner {
+                numeric: true;
+                margin-start: 4;
+                margin-end: 2;
+                adjustment:
+                Adjustment {
+                  lower: 0;
+                  upper: 23;
+                  step-increment: 1;
+                  value: 0;
+                }
+
+                ;
+
+                styles [
+                  "rounded-border",
+                ]
+              }
+            }
+
+            Box {
+              orientation: vertical;
+              margin-end: 1;
+              margin-start: 1;
+
+              Label {
+                label: _("Minutes");
+                margin-bottom: 10;
+                margin-top: 10;
+                margin-start: 7;
+                margin-end: 7;
+              }
+
+              SpinButton _minutes_spinner {
+                numeric: true;
+                margin-start: 2;
+                margin-end: 2;
+                adjustment:
+                Adjustment {
+                  lower: 0;
+                  upper: 59;
+                  step-increment: 1;
+                  value: 0;
+                }
+
+                ;
+
+                styles [
+                  "rounded-border",
+                ]
+              }
+            }
+
+            Box {
+              orientation: vertical;
+              margin-start: 1;
+
+              Label {
+                label: _("Seconds");
+                margin-bottom: 10;
+                margin-top: 10;
+                margin-start: 7;
+                margin-end: 7;
+              }
+
+              SpinButton _seconds_spinner {
+                numeric: true;
+                margin-start: 2;
+                margin-end: 4;
+                adjustment:
+                Adjustment {
+                  lower: 0;
+                  upper: 59;
+                  step-increment: 1;
+                  value: 0;
+                }
+
+                ;
+
+                styles [
+                  "rounded-border",
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

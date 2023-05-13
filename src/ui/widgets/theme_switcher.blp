@@ -27,7 +27,7 @@ template ThemeSwitcher : Box {
       halign: center;
       focus-on-click: false;
       tooltip-text: _("Follow system style");
-      notify::active => _on_color_scheme_changed();
+      notify::active => $_on_color_scheme_changed();
     }
 
     CheckButton light {
@@ -41,7 +41,7 @@ template ThemeSwitcher : Box {
       group: system;
       focus-on-click: false;
       tooltip-text: _("Light style");
-      notify::active => _on_color_scheme_changed();
+      notify::active => $_on_color_scheme_changed();
     }
 
     CheckButton dark {
@@ -55,7 +55,7 @@ template ThemeSwitcher : Box {
       group: system;
       focus-on-click: false;
       tooltip-text: _("Dark style");
-      notify::active => _on_color_scheme_changed();
+      notify::active => $_on_color_scheme_changed();
     }
   }
 }

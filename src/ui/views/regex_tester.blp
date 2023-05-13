@@ -1,0 +1,69 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template RegexTesterView : Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child:     ScrolledWindow {
+      child:       Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+        child:
+        Box {
+          orientation: vertical;
+
+          $UtilityTitle _title {
+            title: _("Regular Expression Tester");
+            description: _("Find matching strings inside a text");
+            tool-name: "regex-tester";
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            title: _("Tool options");
+
+            $EntryRow _regex_entry {
+              styles [
+                "monospace",
+              ]
+
+              title: _("Regex to test");
+              show-copy-btn: "true";
+              show-paste-btn: "true";
+              show-clear-btn: "true";
+            }
+          }
+
+          Separator {
+            margin-top: 10;
+          }
+
+          $TextArea _textarea {
+            name: _("Text");
+            show-copy-btn: "true";
+            show-clear-btn: "true";
+            show-paste-btn: "true";
+            show-open-btn: "true";
+            use-default-text-extensions: "true";
+            margin-bottom: "10";
+            text-wrap-mode: "word-char";
+          }
+        }
+
+        ;
+      }
+
+      ;
+    }
+
+    ;
+  }
+}

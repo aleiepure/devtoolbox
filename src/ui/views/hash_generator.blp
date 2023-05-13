@@ -1,0 +1,129 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template HashGeneratorView : Adw.Bin {
+    Adw.ToastOverlay _toast {
+        child: ScrolledWindow {
+            child: Adw.Clamp {
+                vexpand: true;
+                maximum-size: 1200;
+                tightening-threshold: 600;
+                child: Box {
+                    orientation: vertical;
+
+                    // Title
+                    $UtilityTitle _title {
+                        title: _("Hash Generator & Checker");
+                        description: _("Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity");
+                        tool-name: "hash-generator";
+                    }
+                    Separator {
+                        margin-top: 10;
+                        margin-bottom: 10;
+                    }
+
+                    // Options
+                    Adw.PreferencesGroup _preference_group {
+                        title: _("Tool options");
+
+                        Adw.ComboRow _type_dropdown {
+                            title: _("Hash to calculate");
+                            subtitle: _("Choose the hash type to calculate");
+                            icon-name: "fingerprint";
+                            model: StringList {
+                                strings ["MD5", "SHA1", "SHA256", "SHA512"]
+                            };
+                        }
+
+                        Adw.ActionRow {
+                            title: _("Check for integrity");
+                            subtitle: _("If enabled the calculated hash will be checked against another provided hash to verify integrity");
+                            icon-name: "check-plain";
+                            activatable-widget: _check_switch;
+
+                            Switch _check_switch {
+                                valign: center;
+                            }
+                        }
+
+                        Revealer _revealer {
+                            reveal-child: true;
+
+                            $EntryRow _check_entryrow {
+                                title: _("Type the hash to check against");
+                                show-clear-btn: true;
+                                show-paste-btn: true;
+                                styles ["fake-action-row-bottom", "boxed-list"]
+                            }
+                        }
+
+                    }
+                    Separator {
+                        margin-top: 10;
+                    }
+
+                    // Text areas
+                    Box {
+                        orientation: horizontal;
+                        homogeneous: true;
+                        spacing: 10;
+                        margin-bottom: 10;
+
+                        $TextFileArea _input_area {
+                            name: _("Input");
+                            show-clear-btn: true;
+                            show-paste-btn: true;
+                            show-open-btn: true;
+                            use-all-files-extensions: true;
+                            text-wrap-mode: word-char;
+                        }
+
+                        $TextArea _output_area {
+                            name: _("Output");
+                            show-copy-btn: true;
+                            text-editable: false;
+                            allow-drag-and-drop: false;
+                            area-height: 100;
+                            text_wrap_mode: char;
+                        }
+                    }
+
+                    // Validation result
+                    Box _check_box {
+                        visible: false;
+                        orientation: horizontal;
+                        halign: center;
+                        margin-bottom: 15;
+                        margin-top: 5;
+
+                        Image _check_icon {
+                            pixel-size: 56;
+                            margin-end: 20;
+                        }
+
+                        Box {
+                            orientation: vertical;
+                            valign: center;
+
+                            Label _check_title_lbl {
+                                margin-bottom: 5;
+                                styles ["heading"]
+                            }
+
+                            Label _check_lbl {
+                                width-request: 100;
+                                wrap: true;
+                            }
+
+                        }
+                    }
+
+                };
+            };
+        };
+    }
+}

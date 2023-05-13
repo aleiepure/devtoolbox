@@ -1,0 +1,101 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template ColorblindnessSimulatorView : Adw.Bin {
+    Adw.ToastOverlay _toast {
+        child: ScrolledWindow {
+            child: Adw.Clamp {
+                vexpand: true;
+                maximum-size: 1200;
+                tightening-threshold: 600;
+                child: Box {
+                    orientation: vertical;
+
+                    // Title
+                    $UtilityTitle _title {
+                        title: _("Color Blindness Simulator");
+                        description: _("Simulate color blindness in images");
+                        tool-name: "colorblind-sim";
+                    }
+                    Separator {
+                        margin-top: 10;
+                        margin-bottom: 10;
+                    }
+
+                    // Options
+                    Adw.PreferencesGroup {
+                        title: _("Tool options");
+
+                        Adw.ActionRow {
+                            title: _("Severity");
+                            subtitle: _("Severity of the anomaly");
+                            icon-name: "weight";
+
+                            [suffix]
+                            Scale _severity_scale {
+                                hexpand: true;
+                                adjustment: Adjustment {
+                                    lower: 0;
+                                    upper: 1;
+                                    step-increment: 0.01;
+                                    value: 0.8;
+                                };
+                                // TODO add marks
+                                /*
+                                    <marks>
+                                        <mark value="0.8" position="GTK_POS_BOTTOM" />
+                                    </marks>
+                                */
+                            }
+                        }
+                    }
+                    Separator {
+                        margin-top: 10;
+                    }
+
+                    // Content
+                    Box {
+                        orientation: vertical;
+                        homogeneous: true;
+                        margin-bottom: 10;
+
+                        Box {
+                            orientation: horizontal;
+                            homogeneous: true;
+                            spacing: 10;
+
+                            $ImageArea _original_imagearea {
+                                name: _("Original");
+                                show-open-btn: true;
+                                show-clear-btn: true;
+                                allow-drag-and-drop: true;
+                            }
+
+                            $ImageArea _protanopia_imagearea {
+                                name: _("Protanopia");
+                            }
+                        }
+
+                        Box {
+                            orientation: horizontal;
+                            homogeneous: true;
+                            spacing: 10;
+
+                            $ImageArea _deuteranopia_imagearea {
+                                name: _("Deuteranopia");
+                            }
+
+                            $ImageArea _tritanopia_imagearea {
+                                name: _("Tritanopia");
+                            }
+                        }
+                    }
+                };
+            };
+        };
+    }
+}

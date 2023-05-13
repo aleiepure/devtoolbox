@@ -1,0 +1,20 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+Adw.AboutWindow about_window {
+    application-name: "Dev Toolbox";
+    modal: true;
+    copyright: _("Copyright © 2022 - 2023 Alessandro Iepure\nSome icons are copyright of the GNOME Project");
+    comments: _("Development tools at your figertips");
+    website: "https://github.com/aleiepure/devtoolbox";
+    issue-url: "https://github.com/aleiepure/devtoolbox/issues";
+    application-icon: "me.iepure.devtoolbox";
+    license-type: gpl_3_0;
+    developer-name: "Alessandro Iepure";
+    // TRANSLATORS: replace with your name (with optional email or website)
+    translator-credits: _("translator-credits");
+}

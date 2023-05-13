@@ -1,0 +1,58 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template EntryRow : Adw.EntryRow {
+  [suffix]
+  Box {
+    orientation: horizontal;
+
+    styles [
+      "linked",
+    ]
+
+    Button _generate_btn {
+      icon-name: "update";
+      valign: center;
+      tooltip-text: _("Generate again");
+
+      styles [
+        "flat",
+      ]
+    }
+
+    Button _copy_btn {
+      icon-name: "edit-copy";
+      valign: center;
+      tooltip-text: _("Copy to clipboard");
+
+      styles [
+        "flat",
+      ]
+    }
+
+    Button _paste_btn {
+      icon-name: "edit-paste";
+      valign: center;
+      tooltip-text: _("Paste clipboard");
+
+      styles [
+        "flat",
+      ]
+    }
+
+    [suffix]
+    Button _clear_btn {
+      icon-name: "edit-clear";
+      valign: center;
+      tooltip-text: _("Clear input");
+
+      styles [
+        "flat",
+      ]
+    }
+  }
+}

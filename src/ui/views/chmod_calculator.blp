@@ -15,7 +15,7 @@ template ChmodCalculatorView : Adw.Bin {
         child: Box {
           orientation: vertical;
 
-          .UtilityTitle _title {
+          $UtilityTitle _title {
             title: _("Chmod Calculator");
             description: _("Calculate values to modify permissions with chmod");
             tool-name: "chmod";
@@ -59,7 +59,7 @@ template ChmodCalculatorView : Adw.Bin {
             }
           }
           Adw.PreferencesGroup {
-            .EntryRow _numeric_row {
+            $EntryRow _numeric_row {
               title: _("Numeric value");
               text: "755";
               show-copy-btn: true;
@@ -67,7 +67,7 @@ template ChmodCalculatorView : Adw.Bin {
               show-clear-btn: true;
               styles ["monospace"]
             }
-            .EntryRow _symbolic_row {
+            $EntryRow _symbolic_row {
               title: _("Symbolic value");
               text: "rwxr-xr-x";
               show-copy-btn: true;

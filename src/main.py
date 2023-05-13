@@ -85,6 +85,15 @@ class DevtoolboxApplication(Adw.Application):
             about_window.set_icon_name("me.iepure.devtoolbox")
         about_window.set_version(self.version)
         about_window.set_transient_for(self.props.active_window)
+        about_window.add_credit_section("Contributors", [
+            "Rafael Fontenelle https://github.com/rffontenelle",
+            "Sabri Ünal https://github.com/sabriunal",
+            "Allan Nordhøy https://github.com/comradekingu",
+            "Silvério Santos https://github.com/SantosSi",
+            "gallegonovato https://github.com/gallegonovato",
+            "Amerey https://github.com/Amereyeu",
+            "gregorni https://github.com/gregorni"
+        ])
         about_window.present()
 
     def on_quit_action(self, widget, _):

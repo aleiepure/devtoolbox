@@ -1,0 +1,67 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template ImageConverterView : Adw.Bin {
+    Adw.ToastOverlay _toast {
+        child: ScrolledWindow {
+            child: Adw.Clamp {
+                vexpand: true;
+                maximum-size: 1200;
+                tightening-threshold: 600;
+                child: Box {
+                    orientation: vertical;
+
+                    // Title
+                    $UtilityTitle _title {
+                        title: _("Image Format Converter");
+                        description: _("Convert images to different formats");
+                        tool-name: "image-converter";
+                    }
+                    Separator {
+                        margin-top: 10;
+                        margin-bottom: 10;
+                    }
+
+                    // Options
+                    Adw.PreferencesGroup _preference_group {
+                        title: _("Tool options");
+
+                        Adw.ComboRow _format_combo {
+                            title: C_("noun", "Format");
+                            subtitle: _("Select the desired output format");
+                            icon-name: "list-large";
+                            model: StringList{
+                                strings [
+                                    "BMP",
+                                    "GIF",
+                                    "ICNS",
+                                    "JPEG",
+                                    "PNG",
+                                    "TIFF",
+                                    "WEBP"
+                                ]
+                            };
+                        }
+                    }
+                    Separator {
+                        margin-top: 10;
+                    }
+
+                    // Image area
+                    $ImageArea _imagearea {
+                        name: _("Image");
+                        show-action-btn: true;
+                        action-btn-name: _("Convert");
+                        show-open-btn: true;
+                        show-clear-btn: true;
+                        allow-drag-and-drop: true;
+                    }
+                };
+            };
+        };
+    }
+}
