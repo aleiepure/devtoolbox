@@ -1,0 +1,61 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template DevtoolboxWindow : Adw.ApplicationWindow {
+    styles ["devel"]
+    default-width: 1200;
+    default-height: 800;
+    width-request: 1050;
+    height-request: 700;
+
+    Box {
+        orientation: vertical;
+
+        // Header bar
+        Adw.HeaderBar _header_bar {
+            [title]
+            Adw.ViewSwitcherTitle _title {
+                title: "Dev Toolbox";
+                stack: _tabs_stack;
+            }
+
+            [start]
+            ToggleButton _flap_btn {
+                icon-name: "sidebar";
+                tooltip-text: _("Show/hide sidebar");
+            }
+
+            [end]
+            MenuButton _menu_btn {
+                icon-name: "open-menu";
+                menu-model: primary_menu;
+            }
+        }
+
+        // Contents
+        Box {
+            orientation: vertical;
+
+            Adw.ViewStack _tabs_stack {}
+        }
+    }
+}
+
+menu primary_menu {
+    section {
+      item {
+        custom: "themeswitcher";
+      }
+    }
+
+    section {
+      item {
+        label: _("_About Dev Toolbox");
+        action: "app.about";
+      }
+    }
+}

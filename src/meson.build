@@ -45,6 +45,8 @@ blueprints = custom_target('blueprints',
     'ui/widgets/entry_row.blp',
     'ui/widgets/theme_switcher.blp',
     'ui/widgets/spin_area.blp',
+    'ui/about_window.blp',
+    'ui/window.blp'
   ),
   output: '.',
   command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
