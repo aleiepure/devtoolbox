@@ -5,7 +5,7 @@
 using Gtk 4.0;
 using Adw 1;
 
-template ColorblindnessSimulatorView : Adw.Bin {
+template $ColorblindnessSimulatorView : Adw.Bin {
     Adw.ToastOverlay _toast {
         child: ScrolledWindow {
             child: Adw.Clamp {
@@ -44,12 +44,11 @@ template ColorblindnessSimulatorView : Adw.Bin {
                                     step-increment: 0.01;
                                     value: 0.8;
                                 };
-                                // TODO add marks
-                                /*
-                                    <marks>
-                                        <mark value="0.8" position="GTK_POS_BOTTOM" />
-                                    </marks>
-                                */
+
+                                marks [
+                                    mark(0.8, bottom, "")
+                                ]
+
                             }
                         }
                     }
