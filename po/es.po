@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-15 21:01+0200\n"
+"POT-Creation-Date: 2023-05-15 21:44+0200\n"
 "PO-Revision-Date: 2023-04-09 11:52+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/devtoolbox/"
@@ -602,117 +602,117 @@ msgid "th"
 msgstr ""
 
 #: src/views/reverse_cron.py:240 src/views/reverse_cron.py:354
-#: src/ui/views/reverse_cron.blp:291 src/ui/views/reverse_cron.blp:335
-#: src/ui/views/reverse_cron.blp:357
+#: src/ui/views/reverse_cron.blp:295 src/ui/views/reverse_cron.blp:340
+#: src/ui/views/reverse_cron.blp:363
 msgid "January"
 msgstr ""
 
 #: src/views/reverse_cron.py:241 src/views/reverse_cron.py:355
-#: src/ui/views/reverse_cron.blp:292 src/ui/views/reverse_cron.blp:336
-#: src/ui/views/reverse_cron.blp:358
+#: src/ui/views/reverse_cron.blp:296 src/ui/views/reverse_cron.blp:341
+#: src/ui/views/reverse_cron.blp:364
 msgid "February"
 msgstr ""
 
 #: src/views/reverse_cron.py:242 src/views/reverse_cron.py:356
-#: src/ui/views/reverse_cron.blp:293 src/ui/views/reverse_cron.blp:337
-#: src/ui/views/reverse_cron.blp:359
+#: src/ui/views/reverse_cron.blp:297 src/ui/views/reverse_cron.blp:342
+#: src/ui/views/reverse_cron.blp:365
 msgid "March"
 msgstr ""
 
 #: src/views/reverse_cron.py:243 src/views/reverse_cron.py:357
-#: src/ui/views/reverse_cron.blp:294 src/ui/views/reverse_cron.blp:338
-#: src/ui/views/reverse_cron.blp:360
+#: src/ui/views/reverse_cron.blp:298 src/ui/views/reverse_cron.blp:343
+#: src/ui/views/reverse_cron.blp:366
 msgid "April"
 msgstr ""
 
 #: src/views/reverse_cron.py:244 src/views/reverse_cron.py:358
-#: src/ui/views/reverse_cron.blp:295 src/ui/views/reverse_cron.blp:339
-#: src/ui/views/reverse_cron.blp:361
+#: src/ui/views/reverse_cron.blp:299 src/ui/views/reverse_cron.blp:344
+#: src/ui/views/reverse_cron.blp:367
 #, fuzzy
 msgid "May"
 msgstr "Día"
 
 #: src/views/reverse_cron.py:245 src/views/reverse_cron.py:359
-#: src/ui/views/reverse_cron.blp:296 src/ui/views/reverse_cron.blp:340
-#: src/ui/views/reverse_cron.blp:362
+#: src/ui/views/reverse_cron.blp:300 src/ui/views/reverse_cron.blp:345
+#: src/ui/views/reverse_cron.blp:368
 msgid "June"
 msgstr ""
 
 #: src/views/reverse_cron.py:246 src/views/reverse_cron.py:360
-#: src/ui/views/reverse_cron.blp:297 src/ui/views/reverse_cron.blp:341
-#: src/ui/views/reverse_cron.blp:363
+#: src/ui/views/reverse_cron.blp:301 src/ui/views/reverse_cron.blp:346
+#: src/ui/views/reverse_cron.blp:369
 msgid "July"
 msgstr ""
 
 #: src/views/reverse_cron.py:247 src/views/reverse_cron.py:361
-#: src/ui/views/reverse_cron.blp:298 src/ui/views/reverse_cron.blp:342
-#: src/ui/views/reverse_cron.blp:364
+#: src/ui/views/reverse_cron.blp:302 src/ui/views/reverse_cron.blp:347
+#: src/ui/views/reverse_cron.blp:370
 msgid "August"
 msgstr ""
 
 #: src/views/reverse_cron.py:248 src/views/reverse_cron.py:362
-#: src/ui/views/reverse_cron.blp:299 src/ui/views/reverse_cron.blp:343
-#: src/ui/views/reverse_cron.blp:365
+#: src/ui/views/reverse_cron.blp:303 src/ui/views/reverse_cron.blp:348
+#: src/ui/views/reverse_cron.blp:371
 msgid "September"
 msgstr ""
 
 #: src/views/reverse_cron.py:249 src/views/reverse_cron.py:363
-#: src/ui/views/reverse_cron.blp:300 src/ui/views/reverse_cron.blp:344
-#: src/ui/views/reverse_cron.blp:366
+#: src/ui/views/reverse_cron.blp:304 src/ui/views/reverse_cron.blp:349
+#: src/ui/views/reverse_cron.blp:372
 msgid "October"
 msgstr ""
 
 #: src/views/reverse_cron.py:250 src/views/reverse_cron.py:364
-#: src/ui/views/reverse_cron.blp:301 src/ui/views/reverse_cron.blp:345
-#: src/ui/views/reverse_cron.blp:367
+#: src/ui/views/reverse_cron.blp:305 src/ui/views/reverse_cron.blp:350
+#: src/ui/views/reverse_cron.blp:373
 msgid "November"
 msgstr ""
 
 #: src/views/reverse_cron.py:251 src/views/reverse_cron.py:365
-#: src/ui/views/reverse_cron.blp:302 src/ui/views/reverse_cron.blp:346
-#: src/ui/views/reverse_cron.blp:368
+#: src/ui/views/reverse_cron.blp:306 src/ui/views/reverse_cron.blp:351
+#: src/ui/views/reverse_cron.blp:374
 msgid "December"
 msgstr ""
 
-#: src/views/reverse_cron.py:376 src/ui/views/reverse_cron.blp:416
-#: src/ui/views/reverse_cron.blp:440 src/ui/views/reverse_cron.blp:464
-#: src/ui/views/reverse_cron.blp:482
+#: src/views/reverse_cron.py:376 src/ui/views/reverse_cron.blp:422
+#: src/ui/views/reverse_cron.blp:446 src/ui/views/reverse_cron.blp:471
+#: src/ui/views/reverse_cron.blp:490
 msgid "Sunday"
 msgstr ""
 
-#: src/views/reverse_cron.py:377 src/ui/views/reverse_cron.blp:410
-#: src/ui/views/reverse_cron.blp:434 src/ui/views/reverse_cron.blp:458
-#: src/ui/views/reverse_cron.blp:476
+#: src/views/reverse_cron.py:377 src/ui/views/reverse_cron.blp:416
+#: src/ui/views/reverse_cron.blp:440 src/ui/views/reverse_cron.blp:465
+#: src/ui/views/reverse_cron.blp:484
 msgid "Monday"
 msgstr ""
 
-#: src/views/reverse_cron.py:378 src/ui/views/reverse_cron.blp:411
-#: src/ui/views/reverse_cron.blp:435 src/ui/views/reverse_cron.blp:459
-#: src/ui/views/reverse_cron.blp:477
+#: src/views/reverse_cron.py:378 src/ui/views/reverse_cron.blp:417
+#: src/ui/views/reverse_cron.blp:441 src/ui/views/reverse_cron.blp:466
+#: src/ui/views/reverse_cron.blp:485
 msgid "Tuesday"
 msgstr ""
 
-#: src/views/reverse_cron.py:379 src/ui/views/reverse_cron.blp:412
-#: src/ui/views/reverse_cron.blp:436 src/ui/views/reverse_cron.blp:460
-#: src/ui/views/reverse_cron.blp:478
+#: src/views/reverse_cron.py:379 src/ui/views/reverse_cron.blp:418
+#: src/ui/views/reverse_cron.blp:442 src/ui/views/reverse_cron.blp:467
+#: src/ui/views/reverse_cron.blp:486
 msgid "Wednesday"
 msgstr ""
 
-#: src/views/reverse_cron.py:380 src/ui/views/reverse_cron.blp:413
-#: src/ui/views/reverse_cron.blp:437 src/ui/views/reverse_cron.blp:461
-#: src/ui/views/reverse_cron.blp:479
+#: src/views/reverse_cron.py:380 src/ui/views/reverse_cron.blp:419
+#: src/ui/views/reverse_cron.blp:443 src/ui/views/reverse_cron.blp:468
+#: src/ui/views/reverse_cron.blp:487
 msgid "Thursday"
 msgstr ""
 
-#: src/views/reverse_cron.py:381 src/ui/views/reverse_cron.blp:414
-#: src/ui/views/reverse_cron.blp:438 src/ui/views/reverse_cron.blp:462
-#: src/ui/views/reverse_cron.blp:480
+#: src/views/reverse_cron.py:381 src/ui/views/reverse_cron.blp:420
+#: src/ui/views/reverse_cron.blp:444 src/ui/views/reverse_cron.blp:469
+#: src/ui/views/reverse_cron.blp:488
 msgid "Friday"
 msgstr ""
 
-#: src/views/reverse_cron.py:382 src/ui/views/reverse_cron.blp:415
-#: src/ui/views/reverse_cron.blp:439 src/ui/views/reverse_cron.blp:463
-#: src/ui/views/reverse_cron.blp:481
+#: src/views/reverse_cron.py:382 src/ui/views/reverse_cron.blp:421
+#: src/ui/views/reverse_cron.blp:445 src/ui/views/reverse_cron.blp:470
+#: src/ui/views/reverse_cron.blp:489
 msgid "Saturday"
 msgstr ""
 
@@ -779,11 +779,11 @@ msgstr "Copiar al portapapeles"
 msgid "Year"
 msgstr "Año"
 
-#: src/ui/widgets/date_area.blp:122 src/ui/views/reverse_cron.blp:259
+#: src/ui/widgets/date_area.blp:122 src/ui/views/reverse_cron.blp:263
 msgid "Month"
 msgstr "Mes"
 
-#: src/ui/widgets/date_area.blp:154 src/ui/views/reverse_cron.blp:184
+#: src/ui/widgets/date_area.blp:154 src/ui/views/reverse_cron.blp:186
 msgid "Day"
 msgstr "Día"
 
@@ -907,30 +907,6 @@ msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:36
 msgid "Create CSR"
-msgstr ""
-
-#: src/ui/views/certificate_request_generator.blp:42
-msgid "Common Name (CN) *"
-msgstr ""
-
-#: src/ui/views/certificate_request_generator.blp:46
-msgid "Country Name (C)"
-msgstr ""
-
-#: src/ui/views/certificate_request_generator.blp:50
-msgid "State or Province Name (ST)"
-msgstr ""
-
-#: src/ui/views/certificate_request_generator.blp:54
-msgid "Locality Name (L)"
-msgstr ""
-
-#: src/ui/views/certificate_request_generator.blp:58
-msgid "Organization Name (O)"
-msgstr ""
-
-#: src/ui/views/certificate_request_generator.blp:62
-msgid "Organization Unit Name (OU)"
 msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:66
@@ -1294,7 +1270,7 @@ msgid "String"
 msgstr ""
 
 #: src/ui/views/random_generator.blp:32
-msgid "Generate a random string with the given options"
+msgid "Generate a random string with the given options. ASCII characters only."
 msgstr ""
 
 #: src/ui/views/random_generator.blp:35
@@ -1361,8 +1337,8 @@ msgstr ""
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
 #. TRANSLATORS: part of "Every x day(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:65 src/ui/views/reverse_cron.blp:135
-#: src/ui/views/reverse_cron.blp:205 src/ui/views/reverse_cron.blp:280
-#: src/ui/views/reverse_cron.blp:398
+#: src/ui/views/reverse_cron.blp:207 src/ui/views/reverse_cron.blp:284
+#: src/ui/views/reverse_cron.blp:404
 msgid "Every"
 msgstr ""
 
@@ -1375,11 +1351,13 @@ msgstr ""
 msgid "Specific minute (choose one or many, no selection means every minute)"
 msgstr ""
 
+#. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:99
 #, fuzzy
 msgid "Every minute between minute"
 msgstr "Convertir números entre bases"
 
+#. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:105
 msgid "and minute"
 msgstr ""
@@ -1397,88 +1375,96 @@ msgstr ""
 msgid "Specific hour (choose one or many, no selection means every hour)"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:169
+#. TRANSLATORS: part of "Every hour between hour x and hour y"
+#: src/ui/views/reverse_cron.blp:170
 msgid "Every hour between hour"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:175
+#. TRANSLATORS: part of "Every hour between hour x and hour y"
+#: src/ui/views/reverse_cron.blp:177
 msgid "and hour"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:194
+#: src/ui/views/reverse_cron.blp:196
 msgid "Every day"
 msgstr ""
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
-#: src/ui/views/reverse_cron.blp:211
+#: src/ui/views/reverse_cron.blp:213
 msgid "day(s) starting on the"
 msgstr ""
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
-#: src/ui/views/reverse_cron.blp:217
+#: src/ui/views/reverse_cron.blp:219
 msgid "of the month"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:229
+#: src/ui/views/reverse_cron.blp:231
 msgid ""
 "Specific day of month (choose one or many, no selection means every day)"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:244
+#. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
+#: src/ui/views/reverse_cron.blp:247
 msgid "Every day between the"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:250
+#. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
+#: src/ui/views/reverse_cron.blp:254
 msgid "and the"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:269
+#: src/ui/views/reverse_cron.blp:273
 msgid "Every month"
 msgstr ""
 
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
-#: src/ui/views/reverse_cron.blp:286
+#: src/ui/views/reverse_cron.blp:290
 msgid "month(s) starting in"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:315
+#: src/ui/views/reverse_cron.blp:319
 msgid "Specific month (choose one or many, no selection means every month)"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:330
+#. TRANSLATORS: part of "Every month between x and y" with x and y list of months
+#: src/ui/views/reverse_cron.blp:335
 msgid "Every month between"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:352 src/ui/views/reverse_cron.blp:470
+#. TRANSLATORS: part of "Every month between x and y" with x and y list of months
+#. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
+#: src/ui/views/reverse_cron.blp:358 src/ui/views/reverse_cron.blp:478
 msgid "and"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:377
+#: src/ui/views/reverse_cron.blp:383
 msgid "Weekday"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:387
+#: src/ui/views/reverse_cron.blp:393
 msgid "Every weekday"
 msgstr ""
 
 #. TRANSLATORS: part of "Every x day(s) starting on y" with y list of weekdays
-#: src/ui/views/reverse_cron.blp:404
+#: src/ui/views/reverse_cron.blp:410
 msgid "weekday(s) starting on"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:429
+#: src/ui/views/reverse_cron.blp:435
 msgid "Specific weekday (choose one or many, no selection means every weekday)"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:452
+#. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
+#: src/ui/views/reverse_cron.blp:459
 msgid "Every weekday between"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:491
+#: src/ui/views/reverse_cron.blp:499
 msgid "Command to execute"
 msgstr ""
 
-#: src/ui/views/reverse_cron.blp:505
+#: src/ui/views/reverse_cron.blp:513
 #, fuzzy
 msgid "CRON Expression"
 msgstr "Expresión CRON"
@@ -1631,7 +1617,7 @@ msgstr "Seleccione la versión UUID que desea generar"
 
 #: src/ui/views/uuid_generator.blp:39
 #, fuzzy
-msgid "Version 1 (MAC address,)"
+msgid "Version 1 (MAC address)"
 msgstr "Versión 1 (dirección MAC)"
 
 #: src/ui/views/uuid_generator.blp:40
