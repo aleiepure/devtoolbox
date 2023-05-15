@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
-"POT-Creation-Date: 2023-05-15 21:01+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-15 21:56+0200\n"
 "PO-Revision-Date: 2023-05-15 19:45+0000\n"
 "Last-Translator: Alessandro Iepure <alessandro.iepure@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/devtoolbox/"
@@ -1262,7 +1262,8 @@ msgstr "Stringa"
 
 #: src/ui/views/random_generator.blp:32
 msgid "Generate a random string with the given options. ASCII characters only."
-msgstr "Genera una stringa casuale con le opzioni specificate. Solo caratteri ASCII."
+msgstr ""
+"Genera una stringa casuale con le opzioni specificate. Solo caratteri ASCII."
 
 #: src/ui/views/random_generator.blp:35
 msgid "Length"
