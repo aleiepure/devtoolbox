@@ -6,17 +6,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-15 21:44+0200\n"
-"PO-Revision-Date: 2023-05-05 23:33+0200\n"
-"Last-Translator: Alessandro Iepure <alessandro@iepure.me>\n"
-"Language-Team: none\n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
+"POT-Creation-Date: 2023-05-15 21:01+0200\n"
+"PO-Revision-Date: 2023-05-15 19:45+0000\n"
+"Last-Translator: Alessandro Iepure <alessandro.iepure@gmail.com>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/devtoolbox/"
+"devtoolbox/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -303,9 +304,8 @@ msgid "Calculate values to modify permissions with chmod"
 msgstr "Calcola i valori per modificare i permessi con chmod"
 
 #: src/window.py:267 src/formatters/js.py:15
-#, fuzzy
 msgid "Format JavaScript documents"
-msgstr "Formatta documenti JSON"
+msgstr "Formatta documenti JavaScript"
 
 #: src/window.py:274
 msgid "Converters"
@@ -511,12 +511,10 @@ msgid "Open folder"
 msgstr "Apri cartella"
 
 #: src/views/certificate_request_generator.py:66
-#, fuzzy
 msgid "Open Key File"
-msgstr "Apri file"
+msgstr "Apri file chiave"
 
 #: src/views/certificate_request_generator.py:75
-#, fuzzy
 msgid "All Files"
 msgstr "Tutti i file"
 
@@ -528,13 +526,12 @@ msgid "Successfully saved as {save_path}"
 msgstr "Salvato con successo come {save_path}"
 
 #: src/views/certificate_request_generator.py:196
-#, fuzzy
 msgid "Save key as"
-msgstr "Salva con nome"
+msgstr "Salva chiave con nome"
 
 #: src/views/chmod_calculator.py:30
 msgid "Invalid value. Please check again"
-msgstr ""
+msgstr "Valore non valido. Per favore ricontrolla"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
@@ -746,9 +743,10 @@ msgid ""
 "Copyright © 2022 - 2023 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
+"Copyright © 2022 - 2023 Alessandro Iepure\n"
+"Alcune icone sono copyright del Progetto GNOME"
 
 #: src/ui/about_window.blp:12
-#, fuzzy
 msgid "Development tools at your figertips"
 msgstr "Strumenti di sviluppo a portata di mano"
 
@@ -815,15 +813,15 @@ msgstr "Apri immagine in un programma esterno"
 
 #: src/ui/widgets/theme_switcher.blp:29
 msgid "Follow system style"
-msgstr ""
+msgstr "Segui stile del sistema"
 
 #: src/ui/widgets/theme_switcher.blp:43
 msgid "Light style"
-msgstr ""
+msgstr "Stile chiaro"
 
 #: src/ui/widgets/theme_switcher.blp:57
 msgid "Dark style"
-msgstr ""
+msgstr "Stile scuro"
 
 #: src/ui/widgets/webview_area.blp:61
 msgid "Open web page in another browser"
@@ -886,98 +884,97 @@ msgid "Open a certificate file to view its contents."
 msgstr "Apri un file certificato per vederne il contenuto."
 
 #: src/ui/views/certificate_request_generator.blp:19
-#, fuzzy
 msgid "Certificate Signing Request Generator"
-msgstr "Certificate Signing Request"
+msgstr "Generatore richieste di firma certificato (CSR)"
 
 #: src/ui/views/certificate_request_generator.blp:31
 msgid "Fill the information below"
-msgstr ""
+msgstr "Completa le informazioni sottostanti"
 
 #: src/ui/views/certificate_request_generator.blp:32
 msgid ""
 "Fill at least the required fields then press the 'Create CSR' button. An "
 "empty passphrase will generate an unecrypted CSR."
 msgstr ""
+"Completa almeno i campi obbligatori e poi premi il pulsante 'Crea CSR'. Una "
+"passphrase vuota genererà una richiesta non criptata."
 
 #: src/ui/views/certificate_request_generator.blp:36
 msgid "Create CSR"
-msgstr ""
+msgstr "Crea CSR"
 
 #: src/ui/views/certificate_request_generator.blp:66
 msgid "Passphrase"
-msgstr ""
+msgstr "Passphrase"
 
 #: src/ui/views/certificate_request_generator.blp:70
 msgid "Key"
-msgstr ""
+msgstr "Chiave"
 
 #: src/ui/views/certificate_request_generator.blp:71
-#, fuzzy
 msgid "Generate a new key or use and existing one"
-msgstr "Genera numeri e stringhe casuali"
+msgstr "Genera una nuova chiave o usane una già esistente"
 
 #: src/ui/views/certificate_request_generator.blp:84
-#, fuzzy
 msgid "Key File *"
-msgstr "Apri file"
+msgstr "File chiave *"
 
 #: src/ui/views/certificate_request_generator.blp:85
 msgid "Open the file containing the key you want to use"
-msgstr ""
+msgstr "Apri il file contenente la chiave che vuoi usare"
 
 #: src/ui/views/certificate_request_generator.blp:109
 msgid "Key Size"
-msgstr ""
+msgstr "Dimensione chiave"
 
 #: src/ui/views/certificate_request_generator.blp:110
 msgid "Size of the new key. It will be saved on the same path as the CSR."
 msgstr ""
+"Dimensione della nuova chiave. Sarà salvata nello stesso percorso della CSR."
 
 #: src/ui/views/certificate_request_generator.blp:124
 msgid "Key Save Location *"
-msgstr ""
+msgstr "Percorso salvataggio della chiave *"
 
 #: src/ui/views/certificate_request_generator.blp:125
 msgid "Save location for the generated key file"
-msgstr ""
+msgstr "Percorso salvataggio del file chiave generato"
 
 #: src/ui/views/chmod_calculator.blp:33
-#, fuzzy
 msgid "Permissions"
-msgstr "Versione"
+msgstr "Permessi"
 
 #: src/ui/views/chmod_calculator.blp:43
 msgid "Owner"
-msgstr ""
+msgstr "Proprietario"
 
 #: src/ui/views/chmod_calculator.blp:44
 msgid "Group"
-msgstr ""
+msgstr "Gruppo"
 
 #: src/ui/views/chmod_calculator.blp:45
 msgid "Others"
-msgstr ""
+msgstr "Altri"
 
 #: src/ui/views/chmod_calculator.blp:46
 msgid "Read"
-msgstr ""
+msgstr "Lettura"
 
 #: src/ui/views/chmod_calculator.blp:47
 msgid "Write"
-msgstr ""
+msgstr "Scrittura"
 
 #: src/ui/views/chmod_calculator.blp:48
 msgid "Execute"
-msgstr ""
+msgstr "Esecuzione"
 
 #: src/ui/views/chmod_calculator.blp:63
 msgid "Numeric value"
-msgstr ""
+msgstr "Valore numerico"
 
 #: src/ui/views/chmod_calculator.blp:71
 msgid "Symbolic value"
-msgstr ""
+msgstr "Valore simbolico"
 
 #: src/ui/views/colorblindness_simulator.blp:20
 msgid "Color Blindness Simulator"
@@ -1143,9 +1140,8 @@ msgid "Hash to calculate"
 msgstr "Hash da calcolare"
 
 #: src/ui/views/hash_generator.blp:35
-#, fuzzy
 msgid "Choose the hash type to calculate"
-msgstr "Scegli il tipo di hash da calcolare dal menù"
+msgstr "Scegli il tipo di hash da calcolare"
 
 #: src/ui/views/hash_generator.blp:43
 msgid "Check for integrity"
@@ -1257,60 +1253,56 @@ msgid "Preview"
 msgstr "Anteprima"
 
 #: src/ui/views/random_generator.blp:20
-#, fuzzy
 msgid "Random Generator"
-msgstr "Generatori"
+msgstr "Generatore casuale"
 
 #: src/ui/views/random_generator.blp:31
 msgid "String"
-msgstr ""
+msgstr "Stringa"
 
 #: src/ui/views/random_generator.blp:32
-#, fuzzy
 msgid "Generate a random string with the given options. ASCII characters only."
-msgstr "Genera numeri e stringhe casuali"
+msgstr "Genera una stringa casuale con le opzioni specificate. Solo caratteri ASCII."
 
 #: src/ui/views/random_generator.blp:35
 msgid "Length"
-msgstr ""
+msgstr "Lunghezza"
 
 #: src/ui/views/random_generator.blp:36
 msgid "Length of the generated string"
-msgstr ""
+msgstr "Lunghezza della stringa generata"
 
 #: src/ui/views/random_generator.blp:55
 msgid "Uppercase letters (A-Z)"
-msgstr ""
+msgstr "Lettere maiuscole (A-Z)"
 
 #: src/ui/views/random_generator.blp:65
 msgid "Lowercase letters (a-z)"
-msgstr ""
+msgstr "Lettere minuscole (a-z)"
 
 #: src/ui/views/random_generator.blp:76
 msgid "Numbers (0-9)"
-msgstr ""
+msgstr "Cifre (0-9)"
 
 #: src/ui/views/random_generator.blp:88
 msgid "Special characters (!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~)"
-msgstr ""
+msgstr "Caratteri speciali (!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~)"
 
 #: src/ui/views/random_generator.blp:119
-#, fuzzy
 msgid "Number"
-msgstr "Novembre"
+msgstr "Numero"
 
 #: src/ui/views/random_generator.blp:120
-#, fuzzy
 msgid "Generate a random number in the given range"
-msgstr "Genera numeri e stringhe casuali"
+msgstr "Genera un numero casuale nell'intervallo specificato"
 
 #: src/ui/views/random_generator.blp:123
 msgid "Range"
-msgstr ""
+msgstr "Intervallo"
 
 #: src/ui/views/random_generator.blp:124
 msgid "Range in which to generate"
-msgstr ""
+msgstr "Intervallo in cui generare"
 
 #: src/ui/views/regex_tester.blp:20
 msgid "Regular Expression Tester"
@@ -1321,13 +1313,12 @@ msgid "Regex to test"
 msgstr "Regex da testare"
 
 #: src/ui/views/reverse_cron.blp:31
-#, fuzzy
 msgid "Tool Options"
 msgstr "Opzioni strumento"
 
 #: src/ui/views/reverse_cron.blp:54
 msgid "Every minute"
-msgstr ""
+msgstr "Ogni minuto"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
@@ -1338,16 +1329,18 @@ msgstr ""
 #: src/ui/views/reverse_cron.blp:207 src/ui/views/reverse_cron.blp:284
 #: src/ui/views/reverse_cron.blp:404
 msgid "Every"
-msgstr ""
+msgstr "Ogni"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #: src/ui/views/reverse_cron.blp:71
 msgid "minute(s) starting at minute"
-msgstr ""
+msgstr "minuti partendo dal minuto"
 
 #: src/ui/views/reverse_cron.blp:84
 msgid "Specific minute (choose one or many, no selection means every minute)"
 msgstr ""
+"Minuto/i specifico (seleziona uno o più, nessuna selezione equivale a ogni "
+"minuto)"
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:99
@@ -1461,12 +1454,11 @@ msgstr ""
 
 #: src/ui/views/reverse_cron.blp:499
 msgid "Command to execute"
-msgstr ""
+msgstr "Comando da eseguire"
 
 #: src/ui/views/reverse_cron.blp:513
-#, fuzzy
 msgid "CRON Expression"
-msgstr "Expressione CRON"
+msgstr "Espressione CRON"
 
 #: src/ui/views/text_diff.blp:34
 msgid "Old Text"
@@ -1493,9 +1485,8 @@ msgid "lower case"
 msgstr "lower case"
 
 #: src/ui/views/text_inspector.blp:42
-#, fuzzy
 msgid "UPPERCASE"
-msgstr "UPPER CASE"
+msgstr "UPPERCASE"
 
 #: src/ui/views/text_inspector.blp:43
 msgid "Title Case"
@@ -1662,24 +1653,20 @@ msgid "Quit"
 msgstr "Esci"
 
 #: src/formatters/html.py:14
-#, fuzzy
 msgid "HTML Formatter"
-msgstr "Formattatore XML"
+msgstr "Formattatore HTML"
 
 #: src/formatters/html.py:17
-#, fuzzy
 msgid "Type HTML code here"
-msgstr "Scrivi il codice XML qua"
+msgstr "Scrivi il codice HTML qua"
 
 #: src/formatters/js.py:14
-#, fuzzy
 msgid "JavaScript Formatter"
-msgstr "Formattatore JSON"
+msgstr "Formattatore JavaScript"
 
 #: src/formatters/js.py:17
-#, fuzzy
 msgid "Type JavaScript code here"
-msgstr "Scrivi il codice JSON qua"
+msgstr "Scrivi il codice JavaScript qua"
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
