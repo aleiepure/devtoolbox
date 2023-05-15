@@ -21,6 +21,8 @@ src/widgets/webview_area.py
 
 src/views/base_converter.py
 src/views/certificate_parser.py
+src/views/certificate_request_generator.py
+src/views/chmod_calculator.py
 src/views/colorblindness_simulator.py
 src/views/contrast_checker.py
 src/views/cron_converter.py
@@ -33,7 +35,9 @@ src/views/json_yaml.py
 src/views/jwt_decoder.py
 src/views/lorem_generator.py
 src/views/markdown_preview.py
+src/views/random_generator.py
 src/views/regex_tester.py
+src/views/reverse_cron.py
 src/views/tab_content.py
 src/views/text_diff.py
 src/views/text_inspector.py
@@ -42,48 +46,51 @@ src/views/url_encoder.py
 src/views/uuid_generator.py
 src/views/xml_validator.py
 
-src/views/reverse_cron.py
+src/ui/window.blp
+src/ui/about_window.blp
 
-src/ui/window.ui
-src/ui/about_window.ui
+src/ui/widgets/binary_selector.blp
+src/ui/widgets/date_area.blp
+src/ui/widgets/entry_row.blp
+src/ui/widgets/file_view.blp
+src/ui/widgets/image_area.blp
+src/ui/widgets/spin_area.blp
+src/ui/widgets/text_area.blp
+src/ui/widgets/text_file_area.blp
+src/ui/widgets/theme_switcher.blp
+src/ui/widgets/utility_title.blp
+src/ui/widgets/webview_area.blp
 
-src/ui/widgets/binary_selector.ui
-src/ui/widgets/date_area.ui
-src/ui/widgets/entry_row.ui
-src/ui/widgets/file_view.ui
-src/ui/widgets/image_area.ui
-src/ui/widgets/spin_area.ui
-src/ui/widgets/text_area.ui
-src/ui/widgets/text_file_area.ui
-src/ui/widgets/theme_switcher.ui
-src/ui/widgets/utility_title.ui
-src/ui/widgets/webview_area.ui
+src/ui/views/base_converter.blp
+src/ui/views/certificate_parser.blp
+src/ui/views/certificate_request_generator.blp
+src/ui/views/chmod_calculator.blp
+src/ui/views/colorblindness_simulator.blp
+src/ui/views/contrast_checker.blp
+src/ui/views/cron_converter.blp
+src/ui/views/formatter.blp
+src/ui/views/gzip_compressor.blp
+src/ui/views/hash_generator.blp
+src/ui/views/html_encoder.blp
+src/ui/views/image_converter.blp
+src/ui/views/json_yaml.blp
+src/ui/views/jwt_decoder.blp
+src/ui/views/lorem_generator.blp
+src/ui/views/markdown_preview.blp
+src/ui/views/random_generator.blp
+src/ui/views/regex_tester.blp
+src/ui/views/reverse_cron.blp
+src/ui/views/tab_content.blp
+src/ui/views/text_diff.blp
+src/ui/views/text_inspector.blp
+src/ui/views/timestamp.blp
+src/ui/views/url_encoder.blp
+src/ui/views/uuid_generator.blp
+src/ui/views/xml_validator.blp
 
-src/ui/views/base_converter.ui
-src/ui/views/certificate_parser.ui
-src/ui/views/colorblindness_simulator.ui
-src/ui/views/contrast_checker.ui
-src/ui/views/cron_converter.ui
-src/ui/views/formatter.ui
-src/ui/views/gzip_compressor.ui
-src/ui/views/hash_generator.ui
-src/ui/views/html_encoder.ui
-src/ui/views/image_converter.ui
-src/ui/views/json_yaml.ui
-src/ui/views/jwt_decoder.ui
-src/ui/views/lorem_generator.ui
-src/ui/views/markdown_preview.ui
-src/ui/views/regex_tester.ui
-src/ui/views/tab_content.ui
-src/ui/views/text_diff.ui
-src/ui/views/text_inspector.ui
-src/ui/views/timestamp.ui
-src/ui/views/url_encoder.ui
-src/ui/views/uuid_generator.ui
-src/ui/views/xml_validator.ui
+src/ui/gtk/help-overlay.blp
 
-src/ui/gtk/help-overlay.ui
-
+src/services/certificate_parser.py
 src/services/colorblindness_simulator.py
 src/services/cron_converter.py
 src/services/gzip_compressor.py
@@ -102,6 +109,8 @@ src/services/uuid_generator.py
 src/services/xml_validator.py
 
 src/formatters/formatter.py
+src/formatters/html.py
+src/formatters/js.py
 src/formatters/json.py
 src/formatters/sql.py
 src/formatters/xml.py
