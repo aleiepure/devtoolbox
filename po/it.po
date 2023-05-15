@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2023-05-15 21:56+0200\n"
-"PO-Revision-Date: 2023-05-15 19:45+0000\n"
+"PO-Revision-Date: 2023-05-15 20:16+0000\n"
 "Last-Translator: Alessandro Iepure <alessandro.iepure@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/it/>\n"
@@ -281,7 +281,7 @@ msgstr "Genera numeri e stringhe casuali"
 
 #: src/window.py:243
 msgid "Certificate Signing Request"
-msgstr "Certificate Signing Request"
+msgstr "Richieste di firma certificato (CSR)"
 
 #: src/window.py:246 src/ui/views/certificate_request_generator.blp:20
 msgid "Generate certificate signing requests"
@@ -1340,118 +1340,122 @@ msgstr "minuti partendo dal minuto"
 #: src/ui/views/reverse_cron.blp:84
 msgid "Specific minute (choose one or many, no selection means every minute)"
 msgstr ""
-"Minuto/i specifico (seleziona uno o più, nessuna selezione equivale a ogni "
+"Minuto specifico (seleziona uno o più, nessuna selezione equivale a ogni "
 "minuto)"
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:99
-#, fuzzy
 msgid "Every minute between minute"
-msgstr "Converti numeri tra basi numeriche"
+msgstr "Ogni minuto tra il minuto"
 
 #. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:105
 msgid "and minute"
-msgstr ""
+msgstr "e il minuto"
 
 #: src/ui/views/reverse_cron.blp:124
 msgid "Every hour"
-msgstr ""
+msgstr "Ogni ora"
 
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
 #: src/ui/views/reverse_cron.blp:141
 msgid "hour(s) starting at hour"
-msgstr ""
+msgstr "ora/e a partire dalle ore"
 
 #: src/ui/views/reverse_cron.blp:154
 msgid "Specific hour (choose one or many, no selection means every hour)"
 msgstr ""
+"Ora specifica (seleziona uno o più, nessuna selezione equivale a ogni ora)"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:170
 msgid "Every hour between hour"
-msgstr ""
+msgstr "Ogni ora tra le ore"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:177
 msgid "and hour"
-msgstr ""
+msgstr "e le ore"
 
 #: src/ui/views/reverse_cron.blp:196
 msgid "Every day"
-msgstr ""
+msgstr "Ogni giorno"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:213
 msgid "day(s) starting on the"
-msgstr ""
+msgstr "giorno/i a partire dal"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:219
 msgid "of the month"
-msgstr ""
+msgstr "del mese"
 
 #: src/ui/views/reverse_cron.blp:231
 msgid ""
 "Specific day of month (choose one or many, no selection means every day)"
 msgstr ""
+"Giorno del mese specifico (seleziona uno o più, nessuna selezione equivale a "
+"ogni giorno)"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:247
 msgid "Every day between the"
-msgstr ""
+msgstr "Ogni giorno tra il"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:254
 msgid "and the"
-msgstr ""
+msgstr "e il"
 
 #: src/ui/views/reverse_cron.blp:273
 msgid "Every month"
-msgstr ""
+msgstr "Ogni mese"
 
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
 #: src/ui/views/reverse_cron.blp:290
 msgid "month(s) starting in"
-msgstr ""
+msgstr "mese/i a partire da"
 
 #: src/ui/views/reverse_cron.blp:319
 msgid "Specific month (choose one or many, no selection means every month)"
 msgstr ""
+"Mese specifico (seleziona uno o più, nessuna selezione equivale a ogni mese)"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #: src/ui/views/reverse_cron.blp:335
 msgid "Every month between"
-msgstr ""
+msgstr "Ogni mese tra"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:358 src/ui/views/reverse_cron.blp:478
-#, fuzzy
 msgid "and"
-msgstr " "
+msgstr "e"
 
 #: src/ui/views/reverse_cron.blp:383
 msgid "Weekday"
-msgstr ""
+msgstr "Giorno della settimana"
 
 #: src/ui/views/reverse_cron.blp:393
 msgid "Every weekday"
-msgstr ""
+msgstr "Ogni giorno della settimana"
 
 #. TRANSLATORS: part of "Every x day(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:410
 msgid "weekday(s) starting on"
-msgstr ""
+msgstr "giorno/i della settimana a partire da"
 
 #: src/ui/views/reverse_cron.blp:435
 msgid "Specific weekday (choose one or many, no selection means every weekday)"
 msgstr ""
+"Giorno della settimana specifico (seleziona uno o più, nessuna selezione "
+"equivale a ogni giorno della settimana)"
 
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:459
 msgid "Every weekday between"
-msgstr ""
+msgstr "Ogni giorno della settimana tra"
 
 #: src/ui/views/reverse_cron.blp:499
 msgid "Command to execute"
@@ -1606,7 +1610,6 @@ msgid "Choose the UUID version to generate"
 msgstr "Selezione la versione del/degli UUID da generare"
 
 #: src/ui/views/uuid_generator.blp:39
-#, fuzzy
 msgid "Version 1 (MAC address)"
 msgstr "Versione 1 (Indirizzo MAC)"
 
