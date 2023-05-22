@@ -17,8 +17,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8d/7b/a7bfb158635d6849244daafc268fe2576c70d0fe6b38d890a8638a968ab7/ruamel.yaml-0.17.24-py3-none-any.whl",
-                    "sha256": "f251bd9096207af604af69d6495c3c650a3338d0493d27b04bc55477d7a884ed"
+                    "url": "https://files.pythonhosted.org/packages/23/33/dbc62343de0cf92e0f9c15bc0a287bdaea0953f1cadca0480c78d5ac6641/ruamel.yaml-0.17.26-py3-none-any.whl",
+                    "sha256": "25d0ee82a0a9a6f44683dcf8c282340def4074a4562f3a24f55695bb254c1693"
                 }
             ]
         },
@@ -116,8 +116,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/40/46/505f0dd53c14096f01922bf93a7abb4e40e29a06f858abbaa791e6954324/PyJWT-2.6.0-py3-none-any.whl",
-                    "sha256": "d83c3d892a77bbb74d3e1a2cfa90afaadb60945205d1095d9221f04466f64c14"
+                    "url": "https://files.pythonhosted.org/packages/c7/e8/01b2e35d81e618a8212e651e10c91660bdfda49c1d15ce66f4ca1ff43649/PyJWT-2.7.0-py3-none-any.whl",
+                    "sha256": "ba2b425b15ad5ef12f200dc67dd56af4e26de2331f965c5439994dad075876e1"
                 }
             ]
         },
@@ -313,18 +313,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d5/fb/a79efcab32b8a1f1ddca7f35109a50e4a80d42ac1c9187ab46522b2407d7/tzdata-2023.3-py2.py3-none-any.whl",
-                    "sha256": "7e65763eef3120314099b6939b5546db7adce1e7d6f2e179e3df563c70511eda"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/eb/73/3eaab547ca809754e67e06871cff0fc962bafd4b604e15f31896a0f94431/pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl",
-                    "sha256": "8314c9692a636c8eb3bda879b9f119e350e93223ae83e70e80c31675a0fdc1a6"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d4/46/e8002faae3d1df7d7a0a3aa0cb4b2ccd805c3a71fb507b06446012b28790/tzlocal-4.3-py3-none-any.whl",
-                    "sha256": "b44c4388f3d34f25862cfbb387578a4d70fec417649da694a132f628a23367e2"
+                    "url": "https://files.pythonhosted.org/packages/0a/93/55e34fba4b61fd4ba30e9341edb313f474d0e18006e8400b05e36b71a7bd/tzlocal-5.0-py3-none-any.whl",
+                    "sha256": "c640e3fdccbb6fee1172ce211cefd3c3c04eaf2b0fbf676f0ac7958c41f373e4"
                 }
             ]
         },
@@ -344,6 +334,30 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/7d/0a/6cb21f26972a794ba994a4680998177fdd4130b2ee2d1b82d424721cc103/jsbeautifier-1.14.7.tar.gz",
                     "sha256": "77993254db1ff6f84eb6e1d75e3b6b72cba2ef20813a585b2d81e8e5e3c713c6"
+                }
+            ]
+        },
+        {
+            "name": "python3-qrcode",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"qrcode\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/31/25/5abcd82372d3d4a3932e1fa8c3dbf9efac10cc7c0d16e78467460571b404/typing_extensions-4.5.0-py3-none-any.whl",
+                    "sha256": "fb33085c39dd998ac16d1431ebc293a8b3eedd00fd4a32de0ff79002c19511b4"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/3e/b9/3766cc361d93edb2ce81e2e1f87dd98f314d7d513877a342d31b30741680/pypng-0.20220715.0-py3-none-any.whl",
+                    "sha256": "4a43e969b8f5aaafb2a415536c1a8ec7e341cd6a3f957fd5b5f32a4cfeed902c"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/24/79/aaf0c1c7214f2632badb2771d770b1500d3d7cbdf2590ae62e721ec50584/qrcode-7.4.2-py3-none-any.whl",
+                    "sha256": "581dca7a029bcb2deef5d01068e39093e80ef00b4a61098a2182eac59d01643a"
                 }
             ]
         }

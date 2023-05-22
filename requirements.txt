@@ -19,3 +19,4 @@ asn1crypto
 pytz
 tzlocal
 jsbeautifier
+qrcode

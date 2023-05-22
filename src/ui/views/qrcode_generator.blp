@@ -1,0 +1,201 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template $QRCodeGeneratorView: Adw.Bin {
+    Adw.ToastOverlay _toast {
+        child: ScrolledWindow {
+            child: Adw.Clamp {
+                vexpand: true;
+                maximum-size: 1200;
+                tightening-threshold: 600;
+                child: Box {
+                    orientation: vertical;
+
+                    // Title
+                    $UtilityTitle _title {
+                        title: _("QR Code Generator");
+                        description: _("Create custom QR Codes");
+                        tool-name: "qrcode";
+                    }
+                    Separator {
+                        margin-top: 10;
+                        margin-bottom: 10;
+                    }
+
+                    // Options
+                    Adw.PreferencesGroup {
+                        title: _("Tool Options");
+                        description: _("Fill the required information and press 'generate'");
+
+                        [header-suffix]
+                        Button _generate_btn {
+                            styles ["suggested-action", "pill"]
+
+                            child: Adw.ButtonContent {
+                                label: _("Generate");
+                                icon-name: "qr-code";
+                            };
+                        }
+
+                        Adw.ComboRow _type_combo {
+                            title: _("Content type");
+                            subtitle: _("Choose the content of the QR Code");
+                            model: StringList {
+                                strings [
+                                    _("Text/URL"),
+                                    _("WiFi Network"),
+                                    _("Contact")
+                                ]
+                            };
+                        }
+
+                        $EntryRow _text_entry {
+                            title: _("Text/URL");
+                            show-copy-btn: true;
+                            show-clear-btn: true;
+                            show-paste-btn: true;
+                        }
+
+                        $EntryRow _wifi_ssid_entry {
+                            title: _("Network Name (SSID)");
+                            show-copy-btn: true;
+                            show-clear-btn: true;
+                            show-paste-btn: true;
+                        }
+
+                        Adw.ComboRow _wifi_encryption_combo {
+                            title: _("Network Encryption");
+                            model: StringList {
+                                strings [
+                                    "WPA",
+                                    "WEP",
+                                    _("None")
+                                ]
+                            };
+                        }
+
+                        Adw.PasswordEntryRow _wifi_password_entry {
+                            title: _("Network Password");
+                        }
+
+                        $EntryRow _contact_first_name_entry {
+                            title: _("First Name *");
+                            show-copy-btn: true;
+                            show-clear-btn: true;
+                            show-paste-btn: true;
+                        }
+
+                        $EntryRow _contact_last_name_entry {
+                            title: _("Last Name *");
+                            show-copy-btn: true;
+                            show-clear-btn: true;
+                            show-paste-btn: true;
+                        }
+
+                        $EntryRow _contact_phone_entry {
+                            title: _("Phone Number");
+                            show-copy-btn: true;
+                            show-clear-btn: true;
+                            show-paste-btn: true;
+                        }
+
+                        $EntryRow _contact_email_entry {
+                            title: _("Email");
+                            show-copy-btn: true;
+                            show-clear-btn: true;
+                            show-paste-btn: true;
+                        }
+
+                        Adw.ActionRow _contact_birthday_row{
+                            title: _("Birthday");
+                            activatable-widget: _contact_birthday_btn;
+
+                            MenuButton _contact_birthday_btn {
+                                valign: center;
+                                label: _("Not Set");
+                                has-frame: false;
+                                popover: Popover {
+                                    Box {
+                                        orientation: vertical;
+                                        spacing: 1;
+
+                                        CheckButton _contact_birthday_not_set_btn {
+                                            label: _("Not Set");
+                                            active: true;
+                                        }
+
+                                        CheckButton _contact_birthday_calendar_btn {
+                                            label: _("Select from calendar:");
+                                            group: _contact_birthday_not_set_btn;
+                                        }
+
+                                        Calendar _contact_birthday_calendar {}
+                                    }
+                                };
+                            }
+                        }
+
+                        $EntryRow _contact_url_entry {
+                            title: _("URL");
+                            show-copy-btn: true;
+                            show-clear-btn: true;
+                            show-paste-btn: true;
+                        }
+
+                        Adw.ExpanderRow _contact_address_row {
+                            title: _("Address");
+
+                            $EntryRow _contact_address_street_entry {
+                                title: _("Street");
+                                show-copy-btn: true;
+                                show-clear-btn: true;
+                                show-paste-btn: true;
+                            }
+                            $EntryRow _contact_address_city_entry {
+                                title: _("City");
+                                show-copy-btn: true;
+                                show-clear-btn: true;
+                                show-paste-btn: true;
+                            }
+                            $EntryRow _contact_address_state_entry {
+                                title: _("State");
+                                show-copy-btn: true;
+                                show-clear-btn: true;
+                                show-paste-btn: true;
+                            }
+                            $EntryRow _contact_address_zip_entry {
+                                title: _("ZIP Code");
+                                show-copy-btn: true;
+                                show-clear-btn: true;
+                                show-paste-btn: true;
+                            }
+                            $EntryRow _contact_address_country_entry {
+                                title: _("Country");
+                                show-copy-btn: true;
+                                show-clear-btn: true;
+                                show-paste-btn: true;
+                            }
+
+                        }
+
+                    }
+
+                    // Image
+                    $ImageArea _qrcode_area {
+                        name: _("Generated QR Code");
+                        show-view-btn: true;
+                        show-save-btn: true;
+                        allow-drag-and-drop: false;
+                        height-request: 400;
+                        margin-bottom: 10;
+                        content-fit: scale-down;
+                    }
+                };
+            };
+        };
+    }
+}

@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, GObject, Gio, Gdk
+from gi.repository import Gtk, Adw, GObject, Gio, Gdk, GdkPixbuf
 from gettext import gettext as _
 from typing import List
 
@@ -33,6 +33,7 @@ class ImageArea(Adw.Bin):
     show_open_btn = GObject.Property(type=bool, default=False)
     loading_label = GObject.Property(type=str, default="Opening file...")
     allow_drag_and_drop = GObject.Property(type=bool, default=False)
+    content_fit = GObject.Property(type=Gtk.ContentFit, default=Gtk.ContentFit.CONTAIN)
 
     # Custom signals
     __gsignals__ = {
@@ -41,6 +42,8 @@ class ImageArea(Adw.Bin):
         "image-loaded": (GObject.SIGNAL_RUN_LAST, None, ()),
         "error": (GObject.SIGNAL_RUN_LAST, None, (str,)),
         "saved": (GObject.SIGNAL_RUN_LAST, None, (str,)),
+        "save-clicked": (GObject.SIGNAL_RUN_LAST, bool, ()),
+        "view-clicked": (GObject.SIGNAL_RUN_LAST, bool, ()),
     }
 
     def __init__(self):
@@ -64,6 +67,7 @@ class ImageArea(Adw.Bin):
         self.bind_property("show-open-btn", self._open_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-save-btn", self._save_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("loading-label", self._loading_lbl, "label", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("content-fit", self._imageview, "content-fit", GObject.BindingFlags.SYNC_CREATE)
         self._action_btn.bind_property("visible", self._action_btn_separator, "visible", GObject.BindingFlags.BIDIRECTIONAL)
 
         # Signals
@@ -84,6 +88,10 @@ class ImageArea(Adw.Bin):
         self.emit("action-clicked")
 
     def _on_view_clicked(self, user_data:GObject.GPointer):
+
+        if self.emit("view-clicked"):
+            return
+
         app = Gio.Application.get_default()
         window = app.get_active_window()
         Gtk.show_uri(window, self._imageview.get_file().get_uri(), Gdk.CURRENT_TIME)
@@ -142,6 +150,9 @@ class ImageArea(Adw.Bin):
         self._stack.set_visible_child_name("image")
 
     def _on_save_clicked(self, user_data:GObject.GPointer):
+
+        if self.emit("save-clicked"):
+            return
 
         # Start loading animation and disable save button
         self._save_btn.set_sensitive(False)
@@ -213,3 +224,8 @@ class ImageArea(Adw.Bin):
 
     def set_action_btn_sensitive(self, sensitive:bool):
         self._action_btn.set_sensitive(sensitive)
+
+    def set_pixbuf(self, pixbuf: GdkPixbuf.Pixbuf):
+        self._view_btn.set_visible(True)
+        self._save_btn.set_visible(True)
+        self._imageview.set_pixbuf(pixbuf)

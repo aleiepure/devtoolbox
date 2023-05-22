@@ -34,6 +34,7 @@ from .views.random_generator import RandomGeneratorView
 from .views.certificate_request_generator import CertificateRequestGeneratorView
 from .views.reverse_cron import ReverseCronView
 from .views.chmod_calculator import ChmodCalculatorView
+from .views.qrcode_generator import QRCodeGeneratorView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -266,6 +267,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "js-symbolic",
                 "tooltip": _("Format JavaScript documents"),
                 "child": FormatterView(JsFormatter()),
+            },
+            "qrcode": {
+                "title": "QR Code",
+                "category": "generator",
+                "icon-name": "qr-code-symbolic",
+                "tooltip": _("Create custom QR Codes"),
+                "child": QRCodeGeneratorView(),
             },
         }
 
