@@ -77,67 +77,58 @@ template $CertificateRequestGeneratorView : Adw.Bin {
               }
             }
 
-            Revealer {
-              reveal-child: bind _key_type_selector.right-btn-active;
+            Adw.ActionRow _key_open_row {
+              visible: bind _key_type_selector.right-btn-active;
+              title: _("Key File *");
+              subtitle: _("Open the file containing the key you want to use");
+              styles ["fake-action-row-bottom"]
+              Box {
+                orientation: horizontal;
 
-              Adw.ActionRow _key_open_row {
-                title: _("Key File *");
-                subtitle: _("Open the file containing the key you want to use");
-                styles ["fake-action-row-bottom"]
-                Box {
-                  orientation: horizontal;
+                Label _key_open_path {
+                  margin-end: 10;
+                }
 
-                  Label _key_open_path {
-                    margin-end: 10;
-                  }
-
-                  Button _key_open_btn {
-                    valign: center;
-                    child: Adw.ButtonContent {
-                      icon-name: "document-open-symbolic";
-                      label: _("Open");
-                    };
-                  }
+                Button _key_open_btn {
+                  valign: center;
+                  child: Adw.ButtonContent {
+                    icon-name: "document-open-symbolic";
+                    label: _("Open");
+                  };
                 }
               }
             }
 
-            Revealer {
-              reveal-child: bind _key_type_selector.left-btn-active;
-
-              Adw.ActionRow {
-                title: _("Key Size");
-                subtitle: _("Size of the new key. It will be saved on the same path as the CSR.");
-                styles ["fake-action-row-middle"]
-                $BinarySelector _key_size_selector {
-                  left-lbl: "2048 bits";
-                  right-lbl: "4096 bits";
-                  left-btn-active: true;
-                }
+            Adw.ActionRow {
+              visible: bind _key_type_selector.left-btn-active;
+              title: _("Key Size");
+              subtitle: _("Size of the new key. It will be saved on the same path as the CSR.");
+              styles ["fake-action-row-middle"]
+              $BinarySelector _key_size_selector {
+                left-lbl: "2048 bits";
+                right-lbl: "4096 bits";
+                left-btn-active: true;
               }
             }
 
-            Revealer {
-              reveal-child: bind _key_type_selector.left-btn-active;
+            Adw.ActionRow _key_save_row {
+              visible: bind _key_type_selector.left-btn-active;
+              title: _("Key Save Location *");
+              subtitle: _("Save location for the generated key file");
+              styles ["fake-action-row-bottom"]
+              Box {
+                orientation: horizontal;
 
-              Adw.ActionRow _key_save_row {
-                title: _("Key Save Location *");
-                subtitle: _("Save location for the generated key file");
-                styles ["fake-action-row-bottom"]
-                Box {
-                  orientation: horizontal;
+                Label _key_save_path {
+                  margin-end: 10;
+                }
 
-                  Label _key_save_path {
-                    margin-end: 10;
-                  }
-
-                  Button _key_save_btn {
-                    valign: center;
-                    child: Adw.ButtonContent {
-                      icon-name: "floppy-symbolic";
-                      label: _("Save");
-                    };
-                  }
+                Button _key_save_btn {
+                  valign: center;
+                  child: Adw.ButtonContent {
+                    icon-name: "floppy-symbolic";
+                    label: _("Save");
+                  };
                 }
               }
             }

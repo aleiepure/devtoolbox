@@ -10,8 +10,7 @@ textarea textview, textarea box.view,
 textfilearea textview, textfilearea box.view, textfilearea picture, textfilearea fileview,
 imagearea picture, imagearea box.view,
 webarea webkitwebview,
-row text.view,
-.fake-action-row-bottom, .fake-action-row-top, .fake-action-row-middle
+row text.view
 {
   border: 1px solid #9a9a9a;
 }

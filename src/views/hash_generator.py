@@ -19,7 +19,6 @@ class HashGeneratorView(Adw.Bin):
     _type_dropdown = Gtk.Template.Child()
     _check_switch = Gtk.Template.Child()
     _check_entryrow = Gtk.Template.Child()
-    _revealer = Gtk.Template.Child()
     _input_area = Gtk.Template.Child()
     _output_area = Gtk.Template.Child()
     _check_box = Gtk.Template.Child()
@@ -32,12 +31,8 @@ class HashGeneratorView(Adw.Bin):
     def __init__(self):
         super().__init__()
 
-        # Bind switch to hidden option
-        self._check_switch.bind_property("active", self._revealer, "reveal_child", GObject.BindingFlags.SYNC_CREATE)
-
         # Signals
         self._type_dropdown.connect("notify::selected", self._on_type_changed)
-        self._check_switch.connect("notify::active", self._on_check_switch_changed)
         self._check_entryrow.connect("changed", self._on_check_hash_changed)
         self._input_area.connect("text-changed", self._on_input_changed)
         self._input_area.connect("text-loaded", self._on_input_changed)
@@ -45,17 +40,6 @@ class HashGeneratorView(Adw.Bin):
         self._input_area.connect("image-loaded", self._on_input_changed)
         self._input_area.connect("view-cleared", self._on_view_cleared)
         self._input_area.connect("error", self._on_error)
-
-    def _on_check_switch_changed(self, source_widget:GObject.Object, pspec:GObject.ParamSpec):
-        if self._check_switch.get_active():
-            self._preference_group.get_first_child().get_last_child().get_first_child().remove_css_class("boxed-list")
-            self._preference_group.get_first_child().get_last_child().get_first_child().get_row_at_index(0).add_css_class("fake-action-row-top")
-            self._preference_group.get_first_child().get_last_child().get_first_child().get_row_at_index(1).add_css_class("fake-action-row-middle")
-        else:
-            self._preference_group.get_first_child().get_last_child().get_first_child().add_css_class("boxed-list")
-            self._preference_group.get_first_child().get_last_child().get_first_child().get_row_at_index(0).remove_css_class("fake-action-row-top")
-            self._preference_group.get_first_child().get_last_child().get_first_child().get_row_at_index(1).remove_css_class("fake-action-row-middle")
-            self._check_box.set_visible(False)
 
     def _on_type_changed(self, source_widget:GObject.Object, pspec:GObject.ParamSpec):
         self._calculate_hash()

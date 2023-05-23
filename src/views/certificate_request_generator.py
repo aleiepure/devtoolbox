@@ -37,14 +37,6 @@ class CertificateRequestGeneratorView(Adw.Bin):
     def __init__(self):
         super().__init__()
 
-        # Fix style
-        self._preferences_group.get_first_child().get_last_child().get_first_child().remove_css_class("boxed-list")
-        self._preferences_group.get_first_child().get_last_child().get_first_child().get_row_at_index(0).add_css_class("fake-action-row-top")
-        i = 1
-        while(self._preferences_group.get_first_child().get_last_child().get_first_child().get_row_at_index(i) != None):
-            self._preferences_group.get_first_child().get_last_child().get_first_child().get_row_at_index(i).add_css_class("fake-action-row-middle")
-            i += 1
-
         # Signals
         self._key_open_btn.connect("clicked", self._on_key_open_clicked)
         self._key_save_btn.connect("clicked", self._on_key_save_clicked)

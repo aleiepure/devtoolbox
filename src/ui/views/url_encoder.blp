@@ -43,14 +43,7 @@ template $UrlEncoderView : Adw.Bin {
               }
             }
 
-            Revealer _revealer {
-              reveal-child: false;
-
-              Adw.ActionRow {
-                styles [
-                  "fake-action-row-bottom",
-                ]
-
+            Adw.ActionRow _space_encoding_row {
                 title: _("Space encoding");
                 subtitle: _("Select the desired encoding for the space character");
                 icon-name: "spacebar-symbolic";
@@ -61,7 +54,6 @@ template $UrlEncoderView : Adw.Bin {
                   right-lbl: "%20";
                   left-btn-active: "true";
                 }
-              }
             }
           }
 

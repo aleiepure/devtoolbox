@@ -16,7 +16,7 @@ class UrlEncoderView(Adw.Bin):
     _title = Gtk.Template.Child()
     _preference_group = Gtk.Template.Child()
     _direction_selector = Gtk.Template.Child()
-    _revealer = Gtk.Template.Child()
+    _space_encoding_row = Gtk.Template.Child()
     _space_encoding_selector = Gtk.Template.Child()
     _input_area = Gtk.Template.Child()
     _output_area = Gtk.Template.Child()
@@ -26,13 +26,6 @@ class UrlEncoderView(Adw.Bin):
     def __init__(self):
         super().__init__()
 
-        # Visually style direction_selector
-        self._preference_group.get_first_child().get_last_child().get_first_child().remove_css_class("boxed-list")
-        self._preference_group.get_first_child().get_last_child().get_first_child().add_css_class("fake-action-row-top")
-
-        # Bind button to hidden option
-        self._direction_selector.get_left_btn().bind_property("active", self._revealer, "reveal_child", GObject.BindingFlags.SYNC_CREATE)
-
         # Signals
         self._direction_selector.connect("toggled", self._on_input_changed)
         self._space_encoding_selector.connect("toggled", self._on_input_changed)
@@ -40,10 +33,12 @@ class UrlEncoderView(Adw.Bin):
         self._input_area.connect("error", self._on_error)
         self._input_area.connect("view-cleared", self._on_view_cleared)
         self._output_area.connect("error", self._on_error)
-        self._direction_selector.get_left_btn().connect("clicked", self._on_left_clicked)
-        self._direction_selector.get_right_btn().connect("clicked", self._on_right_clicked)
 
     def _on_input_changed(self, source_widget:GObject.Object):
+        if self._direction_selector.get_left_btn_active():
+            self._space_encoding_row.set_visible(True)
+        else:
+            self._space_encoding_row.set_visible(False)
         self._convert()
 
     def _on_view_cleared(self, source_widget:GObject.Object):
@@ -77,11 +72,3 @@ class UrlEncoderView(Adw.Bin):
         self._output_area.set_spinner_spin(False)
         outcome = self._service.async_finish(result, self)
         self._output_area.set_text(outcome)
-
-    def _on_left_clicked(self, user_data:GObject.GPointer):
-        self._preference_group.get_first_child().get_last_child().get_first_child().remove_css_class("boxed-list")
-        self._preference_group.get_first_child().get_last_child().get_first_child().add_css_class("fake-action-row-top")
-
-    def _on_right_clicked(self, user_data:GObject.GPointer):
-        self._preference_group.get_first_child().get_last_child().get_first_child().add_css_class("boxed-list")
-        self._preference_group.get_first_child().get_last_child().get_first_child().remove_css_class("fake-action-row-top")

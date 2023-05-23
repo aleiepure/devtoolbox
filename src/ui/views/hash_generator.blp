@@ -50,16 +50,13 @@ template $HashGeneratorView : Adw.Bin {
                             }
                         }
 
-                        Revealer _revealer {
-                            reveal-child: true;
-
-                            $EntryRow _check_entryrow {
-                                title: _("Type the hash to check against");
-                                show-clear-btn: true;
-                                show-paste-btn: true;
-                                styles ["fake-action-row-bottom", "boxed-list"]
-                            }
-                        }
+                        $EntryRow _check_entryrow {
+                              visible: bind _check_switch.active;
+                              title: _("Type the hash to check against");
+                              show-clear-btn: true;
+                              show-paste-btn: true;
+                              styles ["fake-action-row-bottom", "boxed-list"]
+                          }
 
                     }
                     Separator {

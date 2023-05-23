@@ -121,10 +121,10 @@ class ImageArea(Adw.Bin):
 
         # File filters
         image_file_filter = Gtk.FileFilter()
-        allowed_extensions = ["bmp", "gif", "jpg", "jpeg", "png", "tiff", "tif", "svg"]
+        allowed_extensions = ["bmp", "gif", "jpg", "jpeg", "png", "tiff", "tif"]
         for extension in allowed_extensions:
             image_file_filter.add_suffix(extension)
-        image_file_filter.set_name(_("Images"))
+        image_file_filter.set_name(_("Supported Image Formats"))
         self._native.add_filter(image_file_filter)
 
         # Signals and show dialog
