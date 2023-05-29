@@ -24,6 +24,7 @@ sources = [
   'colorblindness_simulator.py',
   'image_converter.py',
   'certificate_parser.py',
+  'json_validator.py',
 ]
 
 install_data(sources, install_dir: servicesdir)

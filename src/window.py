@@ -35,6 +35,7 @@ from .views.certificate_request_generator import CertificateRequestGeneratorView
 from .views.reverse_cron import ReverseCronView
 from .views.chmod_calculator import ChmodCalculatorView
 from .views.qrcode_generator import QRCodeGeneratorView
+from .views.json_validator import JsonValidatorView
 
 from .formatters.json import JsonFormatter
 from .formatters.sql import SqlFormatter
@@ -228,8 +229,8 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             },
             "certificate-parser": {
                 "title": _("Certificate Parser"),
-                "category": "encoder",
-                "icon-name": "certificate-symbolic",
+                "category": "certificate",
+                "icon-name": "certificate-parser-symbolic",
                 "tooltip": _("View certificates contents"),
                 "child": CertificateParserView(),
             },
@@ -242,8 +243,8 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             },
             "csr-generator": {
                 "title": _("Certificate Signing Request"),
-                "category": "generator",
-                "icon-name": "certificate-symbolic",
+                "category": "certificate",
+                "icon-name": "csr-symbolic",
                 "tooltip": _("Generate certificate signing requests"),
                 "child": CertificateRequestGeneratorView(),
             },
@@ -269,11 +270,18 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "child": FormatterView(JsFormatter()),
             },
             "qrcode": {
-                "title": "QR Code",
+                "title": _("QR Code"),
                 "category": "generator",
                 "icon-name": "qr-code-symbolic",
                 "tooltip": _("Create custom QR Codes"),
                 "child": QRCodeGeneratorView(),
+            },
+            "json-validator": {
+                "title": _("JSON Schema Validator"),
+                "category": "text",
+                "icon-name": "json-check-symbolic",
+                "tooltip": _("Check a JSON file against a JSON schema"),
+                "child": JsonValidatorView(),
             },
         }
 
@@ -307,6 +315,11 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "title": _("Graphics"),
                 "icon-name": "brush-symbolic",
                 "child": TabContent(self._get_tools(tools, "graphic"), "graphic"),
+            },
+            "certificate": {
+                "title": _("Certificates"),
+                "icon-name": "certificate-symbolic",
+                "child": TabContent(self._get_tools(tools, "certificate"), "certificate"),
             },
         }
 

@@ -53,6 +53,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/views/reverse_cron.ui</file>
     <file preprocess="xml-stripblanks">ui/views/chmod_calculator.ui</file>
     <file preprocess="xml-stripblanks">ui/views/qrcode_generator.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/json_validator.ui</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <file preprocess="xml-stripblanks" alias="non-starred-symbolic.svg">../data/icons/symbolic/non-starred-symbolic.svg</file>
@@ -121,6 +122,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="general-properties-symbolic.svg">../data/icons/symbolic/general-properties-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="js-symbolic.svg">../data/icons/symbolic/js-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="qr-code-symbolic.svg">../data/icons/symbolic/qr-code-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="json-check-symbolic.svg">../data/icons/symbolic/json-check-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="certificate-parser-symbolic.svg">../data/icons/symbolic/certificate-parser-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="csr-symbolic.svg">../data/icons/symbolic/csr-symbolic.svg</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/markdown-preview/">
     <file alias="github-markdown-dark.css">../data/markdown-preview/github-markdown-dark.css</file>

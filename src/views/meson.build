@@ -34,6 +34,7 @@ sources = [
   'reverse_cron.py',
   'chmod_calculator.py',
   'qrcode_generator.py',
+  'json_validator.py',
 ]
 
 install_data(sources, install_dir: viewsdir)

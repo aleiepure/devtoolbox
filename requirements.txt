@@ -20,3 +20,4 @@ pytz
 tzlocal
 jsbeautifier
 qrcode
+jsonschema

@@ -11,6 +11,8 @@ import json
 import base64
 import jwt
 import re
+from jsonschema.protocols import Validator
+from jsonschema.exceptions import SchemaError
 
 
 class Bases(Enum):
@@ -154,4 +156,12 @@ class Utils:
             string[8] in ['-', 'x']):
             return True
         else:
+            return False
+
+    @staticmethod
+    def is_json_schema(text: str) -> bool:
+        try:
+            Validator.check_schema(json.loads(text))
+            return True
+        except:
             return False
