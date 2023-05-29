@@ -33,9 +33,12 @@ template $CertificateRequestGeneratorView : Adw.Bin {
 
             [header-suffix]
             Button _create_csr_btn {
-              label: _("Create CSR");
-              valign: center;
-              styles ["suggested-action", "pill"]
+                styles ["suggested-action", "pill"]
+
+                child: Adw.ButtonContent {
+                    label: _("Create CSR");
+                    icon-name: "edit";
+                };
             }
 
             Adw.EntryRow _common_name_entry {

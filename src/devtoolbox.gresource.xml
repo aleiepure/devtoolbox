@@ -125,6 +125,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="json-check-symbolic.svg">../data/icons/symbolic/json-check-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="certificate-parser-symbolic.svg">../data/icons/symbolic/certificate-parser-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="csr-symbolic.svg">../data/icons/symbolic/csr-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="edit-symbolic.svg">../data/icons/symbolic/edit-symbolic.svg</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/markdown-preview/">
     <file alias="github-markdown-dark.css">../data/markdown-preview/github-markdown-dark.css</file>
