@@ -66,6 +66,8 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             self.remove_css_class("devel")
 
         tools = {
+
+            # Converters
             "json-yaml": {
                 "title": "JSON - YAML",
                 "category": "converter",
@@ -94,6 +96,15 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "tooltip": _("Convert CRON expressions to time and date"),
                 "child": CronConverterView(),
             },
+            "reverse-cron": {
+                "title": _("Reverse CRON"),
+                "category": "converter",
+                "icon-name": "timer-reverse-symbolic",
+                "tooltip": _("Generate CRON expressions"),
+                "child": ReverseCronView(),
+            },
+
+            # Encoders
             "html-encoder": {
                 "title": "HTML",
                 "category": "encoder",
@@ -122,6 +133,8 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "tooltip": _("Decode JWT tokens to header and payload"),
                 "child": JwtDecoderView(),
             },
+
+            # Formatters
             "json-formatter": {
                 "title": "JSON",
                 "category": "formatter",
@@ -143,6 +156,22 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "tooltip": _("Format XML documents"),
                 "child": FormatterView(XmlFormatter()),
             },
+            "html-formatter": {
+                "title": "HTML",
+                "category": "formatter",
+                "icon-name": "html-symbolic",
+                "tooltip": _("Format HTML documents"),
+                "child": FormatterView(HtmlFormatter()),
+            },
+            "js-formatter": {
+                "title": "JavaScript",
+                "category": "formatter",
+                "icon-name": "js-symbolic",
+                "tooltip": _("Format JavaScript documents"),
+                "child": FormatterView(JsFormatter()),
+            },
+
+            # Generetors
             "hash-generator": {
                 "title": "Hash",
                 "category": "generator",
@@ -164,6 +193,29 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "tooltip": _("Generate Universally Unique IDs (UUID)"),
                 "child": UuidGeneratorView(),
             },
+            "random-generator": {
+                "title": _("Random"),
+                "category": "generator",
+                "icon-name": "dice3-symbolic",
+                "tooltip": _("Generate random numbers and strings"),
+                "child": RandomGeneratorView(),
+            },
+            "chmod": {
+                "title": _("Chmod Calculator"),
+                "category": "generator",
+                "icon-name": "general-properties-symbolic",
+                "tooltip": _("Calculate values to modify permissions with chmod"),
+                "child": ChmodCalculatorView(),
+            },
+            "qrcode": {
+                "title": _("QR Code"),
+                "category": "generator",
+                "icon-name": "qr-code-symbolic",
+                "tooltip": _("Create custom QR Codes"),
+                "child": QRCodeGeneratorView(),
+            },
+
+            # Text
             "text-inspector": {
                 "title": _("Text Inspector & Case Converter"),
                 "category": "text",
@@ -192,6 +244,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "tooltip": _("Check an XML file against an XSD schema"),
                 "child": XmlValidatorView(),
             },
+            "json-validator": {
+                "title": _("JSON Schema Validator"),
+                "category": "text",
+                "icon-name": "json-check-symbolic",
+                "tooltip": _("Check a JSON file against a JSON schema"),
+                "child": JsonValidatorView(),
+            },
             "markdown-preview": {
                 "title": _("Markdown Previewer"),
                 "category": "text",
@@ -199,6 +258,8 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "tooltip": _("Preview markdown code as you type"),
                 "child": MarkdownPreviewView(),
             },
+
+            # Graphics
             "contrast-checker": {
                 "title": _("Contrast Checker"),
                 "category": "graphic",
@@ -220,13 +281,8 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "tooltip": _("Convert images to different formats"),
                 "child": ImageConverterView(),
             },
-            "html-formatter": {
-                "title": "HTML",
-                "category": "formatter",
-                "icon-name": "html-symbolic",
-                "tooltip": _("Format HTML documents"),
-                "child": FormatterView(HtmlFormatter()),
-            },
+
+            # Certificates
             "certificate-parser": {
                 "title": _("Certificate Parser"),
                 "category": "certificate",
@@ -234,54 +290,12 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "tooltip": _("View certificates contents"),
                 "child": CertificateParserView(),
             },
-             "random-generator": {
-                "title": _("Random"),
-                "category": "generator",
-                "icon-name": "dice3-symbolic",
-                "tooltip": _("Generate random numbers and strings"),
-                "child": RandomGeneratorView(),
-            },
             "csr-generator": {
                 "title": _("Certificate Signing Request"),
                 "category": "certificate",
                 "icon-name": "csr-symbolic",
                 "tooltip": _("Generate certificate signing requests"),
                 "child": CertificateRequestGeneratorView(),
-            },
-            "reverse-cron": {
-                "title": _("Reverse CRON"),
-                "category": "converter",
-                "icon-name": "timer-reverse-symbolic",
-                "tooltip": _("Generate CRON expressions"),
-                "child": ReverseCronView(),
-            },
-            "chmod": {
-                "title": _("Chmod Calculator"),
-                "category": "generator",
-                "icon-name": "general-properties-symbolic",
-                "tooltip": _("Calculate values to modify permissions with chmod"),
-                "child": ChmodCalculatorView(),
-            },
-            "js-formatter": {
-                "title": "JavaScript",
-                "category": "formatter",
-                "icon-name": "js-symbolic",
-                "tooltip": _("Format JavaScript documents"),
-                "child": FormatterView(JsFormatter()),
-            },
-            "qrcode": {
-                "title": _("QR Code"),
-                "category": "generator",
-                "icon-name": "qr-code-symbolic",
-                "tooltip": _("Create custom QR Codes"),
-                "child": QRCodeGeneratorView(),
-            },
-            "json-validator": {
-                "title": _("JSON Schema Validator"),
-                "category": "text",
-                "icon-name": "json-check-symbolic",
-                "tooltip": _("Check a JSON file against a JSON schema"),
-                "child": JsonValidatorView(),
             },
         }
 
@@ -311,15 +325,15 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "text-ab-symbolic",
                 "child": TabContent(self._get_tools(tools, "text"), "text"),
             },
-            "graphic": {
-                "title": _("Graphics"),
-                "icon-name": "brush-symbolic",
-                "child": TabContent(self._get_tools(tools, "graphic"), "graphic"),
-            },
             "certificate": {
                 "title": _("Certificates"),
                 "icon-name": "certificate-symbolic",
                 "child": TabContent(self._get_tools(tools, "certificate"), "certificate"),
+            },
+            "graphic": {
+                "title": _("Graphics"),
+                "icon-name": "brush-symbolic",
+                "child": TabContent(self._get_tools(tools, "graphic"), "graphic"),
             },
         }
 
