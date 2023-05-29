@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-15 21:56+0200\n"
+"POT-Creation-Date: 2023-05-29 22:24+0200\n"
 "PO-Revision-Date: 2023-04-07 17:48+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/devtoolbox/"
@@ -74,7 +74,7 @@ msgstr "Geradores de hash"
 msgid "Regex tester"
 msgstr "Testador de regex"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:194
+#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:255
 #: src/ui/views/markdown_preview.blp:20
 msgid "Markdown Previewer"
 msgstr "Visualizador de Markdown"
@@ -128,262 +128,284 @@ msgstr ""
 msgid "First release"
 msgstr "Primeiro lançamento"
 
-#: src/window.py:71 src/ui/views/json_yaml.blp:21
+#: src/window.py:75 src/ui/views/json_yaml.blp:21
 msgid "Convert JSON documents to YAML and vice-versa"
 msgstr "Converta documentos JSON para YAML e vice-versa"
 
-#: src/window.py:75 src/ui/views/timestamp.blp:45
+#: src/window.py:79 src/ui/views/timestamp.blp:45
 msgid "Timestamp"
 msgstr "Data/hora"
 
-#: src/window.py:78 src/ui/views/timestamp.blp:21
+#: src/window.py:82 src/ui/views/timestamp.blp:21
 msgid "Convert UNIX timestamps to and from plain dates"
 msgstr "Converta carimbos de data/hora do UNIX de e para datas simples"
 
-#: src/window.py:82
+#: src/window.py:86
 msgid "Number Bases"
 msgstr "Bases de número"
 
-#: src/window.py:85 src/ui/views/base_converter.blp:21
+#: src/window.py:89 src/ui/views/base_converter.blp:21
 msgid "Convert numbers between bases"
 msgstr "Converta números entre bases"
 
-#: src/window.py:89 src/ui/views/cron_converter.blp:21
+#: src/window.py:93 src/ui/views/cron_converter.blp:21
 msgid "CRON Parser"
 msgstr "Analisador de CRON"
 
-#: src/window.py:92 src/ui/views/cron_converter.blp:22
+#: src/window.py:96 src/ui/views/cron_converter.blp:22
 msgid "Convert CRON expressions to time and date"
 msgstr "Converta expressões CRON em hora e data"
 
-#: src/window.py:99 src/ui/views/html_encoder.blp:21
+#: src/window.py:100 src/ui/views/reverse_cron.blp:19
+msgid "Reverse CRON"
+msgstr ""
+
+#: src/window.py:103 src/ui/views/reverse_cron.blp:20
+#, fuzzy
+msgid "Generate CRON expressions"
+msgstr "Expressão CRON"
+
+#: src/window.py:112 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
 msgstr "Codifique e decodifique caracteres especiais usando o formato HTML"
 
-#: src/window.py:106 src/ui/views/url_encoder.blp:21
+#: src/window.py:119 src/ui/views/url_encoder.blp:21
 msgid "Encode and decode special characters inside URLs"
 msgstr "Codifique e decodifique caracteres especiais dentro de URLs"
 
-#: src/window.py:113 src/ui/views/gzip_compressor.blp:21
+#: src/window.py:126 src/ui/views/gzip_compressor.blp:21
 msgid "Compress and decompress files and texts using GZip"
 msgstr "Compacte e descompacte ficheiros e textos usando GZip"
 
-#: src/window.py:120 src/ui/views/jwt_decoder.blp:21
+#: src/window.py:133 src/ui/views/jwt_decoder.blp:21
 msgid "Decode JWT tokens to header and payload"
 msgstr "Decodifique tokens JWT para cabeçalho e carga útil (payload)"
 
-#: src/window.py:127 src/formatters/json.py:14
+#: src/window.py:142 src/formatters/json.py:14
 msgid "Format JSON documents"
 msgstr "Formate documentos JSON"
 
-#: src/window.py:134 src/formatters/sql.py:14
+#: src/window.py:149 src/formatters/sql.py:14
 msgid "Format SQL documents"
 msgstr "Formate documentos SQL"
 
-#: src/window.py:141 src/formatters/xml.py:16
+#: src/window.py:156 src/formatters/xml.py:16
 msgid "Format XML documents"
 msgstr "Formate documentos XML"
 
-#: src/window.py:148 src/ui/views/hash_generator.blp:21
+#: src/window.py:163 src/formatters/html.py:15
+msgid "Format HTML documents"
+msgstr "Formate documentos HTML"
+
+#: src/window.py:170 src/formatters/js.py:15
+#, fuzzy
+msgid "Format JavaScript documents"
+msgstr "Formate documentos JSON"
+
+#: src/window.py:179 src/ui/views/hash_generator.blp:21
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
 msgstr "Calcule os hashes MD5, SHA1, SHA256 e SHA512 e verifique a integridade"
 
-#: src/window.py:155 src/ui/views/lorem_generator.blp:21
+#: src/window.py:186 src/ui/views/lorem_generator.blp:21
 msgid "Generate lorem ipsum placeholder text"
 msgstr "Gere texto de espaço reservado para lorem ipsum"
 
-#: src/window.py:162 src/ui/views/uuid_generator.blp:21
+#: src/window.py:193 src/ui/views/uuid_generator.blp:21
 msgid "Generate Universally Unique IDs (UUID)"
 msgstr "Gere IDs Universalmente Exclusivos (UUID)"
 
-#: src/window.py:166 src/ui/views/text_inspector.blp:20
+#: src/window.py:197
+msgid "Random"
+msgstr ""
+
+#: src/window.py:200 src/ui/views/random_generator.blp:21
+msgid "Generate random numbers and strings"
+msgstr ""
+
+#: src/window.py:204 src/ui/views/chmod_calculator.blp:19
+#, fuzzy
+msgid "Chmod Calculator"
+msgstr "Hash para calcular"
+
+#: src/window.py:207 src/ui/views/chmod_calculator.blp:20
+msgid "Calculate values to modify permissions with chmod"
+msgstr ""
+
+#: src/window.py:211
+msgid "QR Code"
+msgstr ""
+
+#: src/window.py:214 src/ui/views/qrcode_generator.blp:21
+msgid "Create custom QR Codes"
+msgstr ""
+
+#: src/window.py:220 src/ui/views/text_inspector.blp:20
 msgid "Text Inspector & Case Converter"
 msgstr "Inspetor de texto e conversor de maiúsculas e minúsculas"
 
-#: src/window.py:169 src/ui/views/text_inspector.blp:21
+#: src/window.py:223 src/ui/views/text_inspector.blp:21
 msgid "View statistics about text and change sentence cases"
 msgstr ""
 "Veja as estatísticas sobre o texto e altere as maiúsculas e minúsculas das "
 "frases"
 
-#: src/window.py:173
+#: src/window.py:227
 msgid "Regex Tester"
 msgstr "Testador de regex"
 
-#: src/window.py:176 src/ui/views/regex_tester.blp:21
+#: src/window.py:230 src/ui/views/regex_tester.blp:21
 msgid "Find matching strings inside a text"
 msgstr "Encontre cadeias correspondentes num texto"
 
-#: src/window.py:180 src/ui/views/text_diff.blp:20
+#: src/window.py:234 src/ui/views/text_diff.blp:20
 msgid "Text Diff"
 msgstr "Comparação de texto"
 
-#: src/window.py:183 src/ui/views/text_diff.blp:21
+#: src/window.py:237 src/ui/views/text_diff.blp:21
 msgid "Analyze two texts and find differences"
 msgstr "Analise dois textos e encontre diferenças"
 
-#: src/window.py:187 src/ui/views/xml_validator.blp:20
+#: src/window.py:241 src/ui/views/xml_validator.blp:20
 msgid "XML Scheme Validator"
 msgstr "Validador de esquema XML"
 
-#: src/window.py:190 src/ui/views/xml_validator.blp:21
+#: src/window.py:244 src/ui/views/xml_validator.blp:21
 msgid "Check an XML file against an XSD schema"
 msgstr "Verifique um ficheiro XML em relação a um esquema XSD"
 
-#: src/window.py:197 src/ui/views/markdown_preview.blp:21
+#: src/window.py:248 src/ui/views/json_validator.blp:19
+#, fuzzy
+msgid "JSON Schema Validator"
+msgstr "Validador de esquema XML"
+
+#: src/window.py:251 src/ui/views/json_validator.blp:20
+#, fuzzy
+msgid "Check a JSON file against a JSON schema"
+msgstr "Verifique um ficheiro XML em relação a um esquema XSD"
+
+#: src/window.py:258 src/ui/views/markdown_preview.blp:21
 msgid "Preview markdown code as you type"
 msgstr "Visualize o código markdown enquanto digita"
 
-#: src/window.py:201 src/ui/views/contrast_checker.blp:20
+#: src/window.py:264 src/ui/views/contrast_checker.blp:20
 msgid "Contrast Checker"
 msgstr "Verificador de contraste"
 
-#: src/window.py:204 src/ui/views/contrast_checker.blp:21
+#: src/window.py:267 src/ui/views/contrast_checker.blp:21
 msgid "Check a color combination for WCAG compliance"
 msgstr "Verifique uma combinação de cores para conformidade com as WCAG"
 
-#: src/window.py:208
+#: src/window.py:271
 msgid "Color Blindness"
 msgstr "Daltonismo"
 
-#: src/window.py:211 src/ui/views/colorblindness_simulator.blp:21
+#: src/window.py:274 src/ui/views/colorblindness_simulator.blp:21
 msgid "Simulate color blindness in images"
 msgstr "Simule daltonismo em imagens"
 
-#: src/window.py:215 src/ui/views/image_converter.blp:20
+#: src/window.py:278 src/ui/views/image_converter.blp:20
 msgid "Image Format Converter"
 msgstr "Conversor de formato de imagem"
 
-#: src/window.py:218 src/ui/views/image_converter.blp:21
+#: src/window.py:281 src/ui/views/image_converter.blp:21
 msgid "Convert images to different formats"
 msgstr "Converta imagens para diferentes formatos"
 
-#: src/window.py:225 src/formatters/html.py:15
-msgid "Format HTML documents"
-msgstr "Formate documentos HTML"
-
-#: src/window.py:229 src/ui/views/certificate_parser.blp:20
+#: src/window.py:287 src/ui/views/certificate_parser.blp:20
 msgid "Certificate Parser"
 msgstr ""
 
-#: src/window.py:232 src/ui/views/certificate_parser.blp:21
+#: src/window.py:290 src/ui/views/certificate_parser.blp:21
 msgid "View certificates contents"
 msgstr ""
 
-#: src/window.py:236
-msgid "Random"
-msgstr ""
-
-#: src/window.py:239 src/ui/views/random_generator.blp:21
-msgid "Generate random numbers and strings"
-msgstr ""
-
-#: src/window.py:243
+#: src/window.py:294
 msgid "Certificate Signing Request"
 msgstr ""
 
-#: src/window.py:246 src/ui/views/certificate_request_generator.blp:20
+#: src/window.py:297 src/ui/views/certificate_request_generator.blp:20
 msgid "Generate certificate signing requests"
 msgstr ""
 
-#: src/window.py:250 src/ui/views/reverse_cron.blp:19
-msgid "Reverse CRON"
-msgstr ""
-
-#: src/window.py:253 src/ui/views/reverse_cron.blp:20
-#, fuzzy
-msgid "Generate CRON expressions"
-msgstr "Expressão CRON"
-
-#: src/window.py:257 src/ui/views/chmod_calculator.blp:19
-#, fuzzy
-msgid "Chmod Calculator"
-msgstr "Hash para calcular"
-
-#: src/window.py:260 src/ui/views/chmod_calculator.blp:20
-msgid "Calculate values to modify permissions with chmod"
-msgstr ""
-
-#: src/window.py:267 src/formatters/js.py:15
-#, fuzzy
-msgid "Format JavaScript documents"
-msgstr "Formate documentos JSON"
-
-#: src/window.py:274
+#: src/window.py:304
 msgid "Converters"
 msgstr "Conversores"
 
-#: src/window.py:279
+#: src/window.py:309
 msgid "Encoders"
 msgstr "Codificadores"
 
-#: src/window.py:284
+#: src/window.py:314
 msgid "Formatters"
 msgstr "Formatadores"
 
-#: src/window.py:289
+#: src/window.py:319
 msgid "Generators"
 msgstr "Geradores"
 
-#: src/window.py:294 src/ui/views/regex_tester.blp:50
+#: src/window.py:324 src/ui/views/regex_tester.blp:50
 #: src/ui/views/text_inspector.blp:104 src/ui/views/text_inspector.blp:160
 msgid "Text"
 msgstr "Texto"
 
-#: src/window.py:299
+#: src/window.py:329 src/views/certificate_parser.py:92
+msgid "Certificates"
+msgstr ""
+
+#: src/window.py:334
 msgid "Graphics"
 msgstr "Imagens"
 
-#: src/widgets/image_area.py:101
+#: src/widgets/image_area.py:109
 msgid "Opening image..."
 msgstr "Abrindo imagem..."
 
-#: src/widgets/image_area.py:108 src/widgets/text_area.py:159
+#: src/widgets/image_area.py:116 src/widgets/text_area.py:159
 #: src/widgets/text_file_area.py:180 src/views/certificate_parser.py:81
 msgid "Open File"
 msgstr "Abrir ficheiro"
 
-#: src/widgets/image_area.py:110 src/widgets/text_area.py:161
+#: src/widgets/image_area.py:118 src/widgets/text_area.py:161
 #: src/widgets/text_file_area.py:182 src/views/certificate_parser.py:83
-#: src/views/certificate_request_generator.py:68
+#: src/views/certificate_request_generator.py:60
 #: src/ui/widgets/image_area.blp:66 src/ui/widgets/text_area.blp:76
 #: src/ui/widgets/text_file_area.blp:76 src/ui/views/certificate_parser.blp:52
-#: src/ui/views/certificate_request_generator.blp:98
+#: src/ui/views/certificate_request_generator.blp:99
 msgid "Open"
 msgstr "Abrir"
 
-#: src/widgets/image_area.py:111 src/widgets/image_area.py:158
+#: src/widgets/image_area.py:119 src/widgets/image_area.py:169
 #: src/widgets/text_area.py:162 src/widgets/text_file_area.py:183
 #: src/widgets/text_file_area.py:298 src/views/certificate_parser.py:84
-#: src/views/certificate_request_generator.py:69
-#: src/views/image_converter.py:61
+#: src/views/certificate_request_generator.py:61
+#: src/views/image_converter.py:61 src/views/qrcode_generator.py:173
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/widgets/image_area.py:119 src/widgets/text_file_area.py:209
-msgid "Images"
-msgstr "Imagens"
+#: src/widgets/image_area.py:127
+msgid "Supported Image Formats"
+msgstr ""
 
-#: src/widgets/image_area.py:148
+#: src/widgets/image_area.py:159
 msgid "Saving image..."
 msgstr "A gravar imagem..."
 
-#: src/widgets/image_area.py:155 src/widgets/text_file_area.py:295
-#: src/views/certificate_request_generator.py:129
-#: src/views/image_converter.py:58
+#: src/widgets/image_area.py:166 src/widgets/text_file_area.py:295
+#: src/views/certificate_request_generator.py:121
+#: src/views/image_converter.py:58 src/views/qrcode_generator.py:170
 msgid "Save file as"
 msgstr "A gravar ficheiro como"
 
-#: src/widgets/image_area.py:157 src/widgets/text_file_area.py:297
-#: src/views/certificate_request_generator.py:130
-#: src/views/certificate_request_generator.py:197
-#: src/views/image_converter.py:60 src/ui/widgets/image_area.blp:77
-#: src/ui/widgets/text_file_area.blp:87
-#: src/ui/views/certificate_request_generator.blp:138
+#: src/widgets/image_area.py:168 src/widgets/text_file_area.py:297
+#: src/views/certificate_request_generator.py:122
+#: src/views/certificate_request_generator.py:189
+#: src/views/image_converter.py:60 src/views/qrcode_generator.py:172
+#: src/ui/widgets/image_area.blp:77 src/ui/widgets/text_file_area.blp:87
+#: src/ui/views/certificate_request_generator.blp:133
 msgid "Save"
 msgstr "Gravar"
 
-#: src/widgets/image_area.py:182
+#: src/widgets/image_area.py:193
 msgid "Unable to save image."
 msgstr "Não foi possível gravar imagem."
 
@@ -408,15 +430,19 @@ msgstr "Todos ficheiros"
 msgid "Text files and images"
 msgstr "Ficheiros texto e imagens"
 
+#: src/widgets/text_file_area.py:209
+msgid "Images"
+msgstr "Imagens"
+
 #: src/widgets/text_file_area.py:288
 msgid "Saving file..."
 msgstr "A gravar ficheiro..."
 
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
-#: src/views/certificate_request_generator.py:184 src/views/formatter.py:45
-#: src/views/gzip_compressor.py:67 src/views/hash_generator.py:76
+#: src/views/certificate_request_generator.py:176 src/views/formatter.py:45
+#: src/views/gzip_compressor.py:67 src/views/hash_generator.py:60
 #: src/views/html_encoder.py:46 src/views/json_yaml.py:52
-#: src/views/url_encoder.py:53
+#: src/views/url_encoder.py:48
 #, python-brace-format
 msgid "Error: {error}"
 msgstr "Erro: {error}"
@@ -430,10 +456,6 @@ msgstr "Não é possível descompactar de uma imagem ou ficheiro"
 #, fuzzy
 msgid "Unsupported file"
 msgstr "Ficheiros aceitos"
-
-#: src/views/certificate_parser.py:92
-msgid "Certificates"
-msgstr ""
 
 #: src/views/certificate_parser.py:103 src/views/reverse_cron.py:180
 #: src/ui/views/certificate_parser.blp:105 src/ui/views/reverse_cron.blp:39
@@ -514,24 +536,24 @@ msgstr ""
 msgid "Open folder"
 msgstr "Abrir pasta"
 
-#: src/views/certificate_request_generator.py:66
+#: src/views/certificate_request_generator.py:58
 #, fuzzy
 msgid "Open Key File"
 msgstr "Abrir ficheiro"
 
-#: src/views/certificate_request_generator.py:75
+#: src/views/certificate_request_generator.py:67
 #, fuzzy
 msgid "All Files"
 msgstr "Todos ficheiros"
 
-#: src/views/certificate_request_generator.py:181
+#: src/views/certificate_request_generator.py:173
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:58
 #: src/views/image_converter.py:40
 #, python-brace-format
 msgid "Successfully saved as {save_path}"
 msgstr "Gravado com sucesso em {save_path}"
 
-#: src/views/certificate_request_generator.py:196
+#: src/views/certificate_request_generator.py:188
 #, fuzzy
 msgid "Save key as"
 msgstr "A gravar ficheiro como"
@@ -562,25 +584,60 @@ msgstr "Não é possível descompactar de uma imagem ou ficheiro"
 msgid "Please save this file to view its contents"
 msgstr "Grave este ficheiro para visualizar o seu conteúdo"
 
-#: src/views/hash_generator.py:141
+#: src/views/hash_generator.py:125
 msgid "Hashes match!"
 msgstr "Os hashes batem!"
 
-#: src/views/hash_generator.py:143
+#: src/views/hash_generator.py:127
 msgid "The integrity is verified."
 msgstr "A integridade foi confirmada."
 
-#: src/views/hash_generator.py:151
+#: src/views/hash_generator.py:135
 msgid "Warning, integrity cannot be verified!"
 msgstr "Aviso, a integridade não pode ser verificada!"
 
-#: src/views/hash_generator.py:153
+#: src/views/hash_generator.py:137
 msgid ""
 "The calculated hash and the provided one do not match. Check again and if "
 "this is a file you downloaded from the Internet re-download it."
 msgstr ""
 "O hash calculado e o fornecido não correspondem. Verifique novamente e, se "
 "for um ficheiro que descarregou da Internet, descarregue novamente."
+
+#: src/views/json_validator.py:77 src/views/xml_validator.py:76
+msgid "Valid!"
+msgstr "Válido!"
+
+#: src/views/json_validator.py:79
+#, fuzzy
+msgid "JSON is compliant with the provided JSON schema."
+msgstr "O XML é compatível com o esquema XSD fornecido."
+
+#: src/views/json_validator.py:87 src/views/json_validator.py:97
+#: src/views/xml_validator.py:86
+msgid "Invalid!"
+msgstr "Inválido!"
+
+#: src/views/json_validator.py:89
+#, fuzzy, python-brace-format
+msgid ""
+"JSON is not compliant with the provided JSON scheme:\n"
+"{validation_error}"
+msgstr ""
+"XML não é compatível com o esquema XSD fornecido:\n"
+"{xsd_error}"
+
+#: src/views/json_validator.py:99
+#, python-brace-format
+msgid ""
+"Error in JSON schema:\n"
+"{schema_error}"
+msgstr ""
+
+#: src/views/qrcode_generator.py:62 src/ui/views/qrcode_generator.blp:119
+#: src/ui/views/qrcode_generator.blp:127
+msgid "Not Set"
+msgstr ""
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
@@ -717,17 +774,9 @@ msgstr ""
 msgid "Saturday"
 msgstr ""
 
-#: src/views/xml_validator.py:76
-msgid "Valid!"
-msgstr "Válido!"
-
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
 msgstr "O XML é compatível com o esquema XSD fornecido."
-
-#: src/views/xml_validator.py:86
-msgid "Invalid!"
-msgstr "Inválido!"
 
 #: src/views/xml_validator.py:88
 #, python-brace-format
@@ -906,44 +955,44 @@ msgid ""
 "empty passphrase will generate an unecrypted CSR."
 msgstr ""
 
-#: src/ui/views/certificate_request_generator.blp:36
+#: src/ui/views/certificate_request_generator.blp:39
 msgid "Create CSR"
 msgstr ""
 
-#: src/ui/views/certificate_request_generator.blp:66
+#: src/ui/views/certificate_request_generator.blp:69
 msgid "Passphrase"
 msgstr ""
 
-#: src/ui/views/certificate_request_generator.blp:70
+#: src/ui/views/certificate_request_generator.blp:73
 msgid "Key"
 msgstr ""
 
-#: src/ui/views/certificate_request_generator.blp:71
+#: src/ui/views/certificate_request_generator.blp:74
 msgid "Generate a new key or use and existing one"
 msgstr ""
 
-#: src/ui/views/certificate_request_generator.blp:84
+#: src/ui/views/certificate_request_generator.blp:85
 #, fuzzy
 msgid "Key File *"
 msgstr "Abrir ficheiro"
 
-#: src/ui/views/certificate_request_generator.blp:85
+#: src/ui/views/certificate_request_generator.blp:86
 msgid "Open the file containing the key you want to use"
 msgstr ""
 
-#: src/ui/views/certificate_request_generator.blp:109
+#: src/ui/views/certificate_request_generator.blp:107
 msgid "Key Size"
 msgstr ""
 
-#: src/ui/views/certificate_request_generator.blp:110
+#: src/ui/views/certificate_request_generator.blp:108
 msgid "Size of the new key. It will be saved on the same path as the CSR."
 msgstr ""
 
-#: src/ui/views/certificate_request_generator.blp:124
+#: src/ui/views/certificate_request_generator.blp:119
 msgid "Key Save Location *"
 msgstr ""
 
-#: src/ui/views/certificate_request_generator.blp:125
+#: src/ui/views/certificate_request_generator.blp:120
 msgid "Save location for the generated key file"
 msgstr ""
 
@@ -1119,15 +1168,15 @@ msgstr "Compressão"
 msgid "Decompress"
 msgstr "Descompressão"
 
-#: src/ui/views/gzip_compressor.blp:57 src/ui/views/hash_generator.blp:77
+#: src/ui/views/gzip_compressor.blp:57 src/ui/views/hash_generator.blp:74
 #: src/ui/views/html_encoder.blp:58 src/ui/views/json_yaml.blp:78
-#: src/ui/views/url_encoder.blp:79
+#: src/ui/views/url_encoder.blp:71
 msgid "Input"
 msgstr "Entrada"
 
-#: src/ui/views/gzip_compressor.blp:66 src/ui/views/hash_generator.blp:86
+#: src/ui/views/gzip_compressor.blp:66 src/ui/views/hash_generator.blp:83
 #: src/ui/views/html_encoder.blp:70 src/ui/views/json_yaml.blp:89
-#: src/ui/views/url_encoder.blp:90
+#: src/ui/views/url_encoder.blp:82
 msgid "Output"
 msgstr "Saída"
 
@@ -1164,7 +1213,7 @@ msgstr ""
 "Se ativado, o hash calculado será verificado em relação a outro hash "
 "fornecido para verificar a integridade"
 
-#: src/ui/views/hash_generator.blp:57
+#: src/ui/views/hash_generator.blp:55
 msgid "Type the hash to check against"
 msgstr "Insira o hash para verificar"
 
@@ -1261,6 +1310,122 @@ msgstr "Markdown"
 msgid "Preview"
 msgstr "Visualização"
 
+#: src/ui/views/qrcode_generator.blp:20
+#, fuzzy
+msgid "QR Code Generator"
+msgstr "Geradores"
+
+#: src/ui/views/qrcode_generator.blp:31 src/ui/views/reverse_cron.blp:31
+#, fuzzy
+msgid "Tool Options"
+msgstr "Opções da ferramenta"
+
+#: src/ui/views/qrcode_generator.blp:32
+msgid "Fill the required information and press 'generate'"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:39
+#, fuzzy
+msgid "Generate"
+msgstr "Geral"
+
+#: src/ui/views/qrcode_generator.blp:45
+msgid "Content type"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:46
+msgid "Choose the content of the QR Code"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:49 src/ui/views/qrcode_generator.blp:57
+#, fuzzy
+msgid "Text/URL"
+msgstr "Texto"
+
+#: src/ui/views/qrcode_generator.blp:50
+msgid "WiFi Network"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:51
+msgid "Contact"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:64
+msgid "Network Name (SSID)"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:71
+msgid "Network Encryption"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:76
+msgid "None"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:82
+msgid "Network Password"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:86
+#, fuzzy
+msgid "First Name *"
+msgstr "Primeiro lançamento"
+
+#: src/ui/views/qrcode_generator.blp:93
+msgid "Last Name *"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:100
+#, fuzzy
+msgid "Phone Number"
+msgstr "Bases de número"
+
+#: src/ui/views/qrcode_generator.blp:107
+msgid "Email"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:114
+msgid "Birthday"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:132
+msgid "Select from calendar:"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:143
+msgid "URL"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:150
+msgid "Address"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:153
+msgid "Street"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:159
+msgid "City"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:165
+msgid "State"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:171
+msgid "ZIP Code"
+msgstr ""
+
+#: src/ui/views/qrcode_generator.blp:177
+#, fuzzy
+msgid "Country"
+msgstr "Quantidade"
+
+#: src/ui/views/qrcode_generator.blp:189
+#, fuzzy
+msgid "Generated QR Code"
+msgstr "Texto gerado"
+
 #: src/ui/views/random_generator.blp:20
 #, fuzzy
 msgid "Random Generator"
@@ -1294,24 +1459,24 @@ msgstr ""
 msgid "Numbers (0-9)"
 msgstr ""
 
-#: src/ui/views/random_generator.blp:88
-msgid "Special characters (!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~)"
+#: src/ui/views/random_generator.blp:87
+msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 msgstr ""
 
-#: src/ui/views/random_generator.blp:119
+#: src/ui/views/random_generator.blp:118
 #, fuzzy
 msgid "Number"
 msgstr "Bases de número"
 
-#: src/ui/views/random_generator.blp:120
+#: src/ui/views/random_generator.blp:119
 msgid "Generate a random number in the given range"
 msgstr ""
 
-#: src/ui/views/random_generator.blp:123
+#: src/ui/views/random_generator.blp:122
 msgid "Range"
 msgstr ""
 
-#: src/ui/views/random_generator.blp:124
+#: src/ui/views/random_generator.blp:123
 msgid "Range in which to generate"
 msgstr ""
 
@@ -1323,11 +1488,6 @@ msgstr "Testador de expressão regular"
 msgid "Regex to test"
 msgstr "Regex para testar"
 
-#: src/ui/views/reverse_cron.blp:31
-#, fuzzy
-msgid "Tool Options"
-msgstr "Opções da ferramenta"
-
 #: src/ui/views/reverse_cron.blp:54
 msgid "Every minute"
 msgstr ""
@@ -1336,7 +1496,7 @@ msgstr ""
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
-#. TRANSLATORS: part of "Every x day(s) starting on y" with y list of weekdays
+#. TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:65 src/ui/views/reverse_cron.blp:135
 #: src/ui/views/reverse_cron.blp:207 src/ui/views/reverse_cron.blp:284
 #: src/ui/views/reverse_cron.blp:404
@@ -1447,7 +1607,7 @@ msgstr ""
 msgid "Every weekday"
 msgstr ""
 
-#. TRANSLATORS: part of "Every x day(s) starting on y" with y list of weekdays
+#. TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:410
 msgid "weekday(s) starting on"
 msgstr ""
@@ -1596,11 +1756,11 @@ msgstr ""
 msgid "URL Encoder & Decoder"
 msgstr "Codificador e decodificador de URL"
 
-#: src/ui/views/url_encoder.blp:54
+#: src/ui/views/url_encoder.blp:47
 msgid "Space encoding"
 msgstr "Codificação de espaço"
 
-#: src/ui/views/url_encoder.blp:55
+#: src/ui/views/url_encoder.blp:48
 msgid "Select the desired encoding for the space character"
 msgstr "Selecione a codificação desejada para o caractere de espaço"
 

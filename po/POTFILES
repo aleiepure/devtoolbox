@@ -31,10 +31,12 @@ src/views/gzip_compressor.py
 src/views/hash_generator.py
 src/views/html_encoder.py
 src/views/image_converter.py
+src/views/json_validator.py
 src/views/json_yaml.py
 src/views/jwt_decoder.py
 src/views/lorem_generator.py
 src/views/markdown_preview.py
+src/views/qrcode_generator.py
 src/views/random_generator.py
 src/views/regex_tester.py
 src/views/reverse_cron.py
@@ -73,10 +75,12 @@ src/ui/views/gzip_compressor.blp
 src/ui/views/hash_generator.blp
 src/ui/views/html_encoder.blp
 src/ui/views/image_converter.blp
+src/ui/views/json_validator.blp
 src/ui/views/json_yaml.blp
 src/ui/views/jwt_decoder.blp
 src/ui/views/lorem_generator.blp
 src/ui/views/markdown_preview.blp
+src/ui/views/qrcode_generator.blp
 src/ui/views/random_generator.blp
 src/ui/views/regex_tester.blp
 src/ui/views/reverse_cron.blp
@@ -97,6 +101,7 @@ src/services/gzip_compressor.py
 src/services/hash_generator.py
 src/services/html_encoder.py
 src/services/image_converter.py
+src/services/json_validator.py
 src/services/json_yaml.py
 src/services/jwt_decoder.py
 src/services/lorem_generator.py
