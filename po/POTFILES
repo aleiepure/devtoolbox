@@ -119,3 +119,4 @@ src/formatters/js.py
 src/formatters/json.py
 src/formatters/sql.py
 src/formatters/xml.py
+src/formatters/css.py

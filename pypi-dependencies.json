@@ -384,6 +384,30 @@
                     "sha256": "a870ad254da1a8ca84b6a2905cac29d265f805acc57af304784962a2aa6508f6"
                 }
             ]
+        },
+        {
+            "name": "python3-cssbeautifier",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"cssbeautifier\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/7d/0a/6cb21f26972a794ba994a4680998177fdd4130b2ee2d1b82d424721cc103/jsbeautifier-1.14.7.tar.gz",
+                    "sha256": "77993254db1ff6f84eb6e1d75e3b6b72cba2ef20813a585b2d81e8e5e3c713c6"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/4e/04/e8a79c1db0c55ef03d53c05c61d06c4d6d3be37ef84e5400ce36b4a0fbe9/EditorConfig-0.12.3-py3-none-any.whl",
+                    "sha256": "6b0851425aa875b08b16789ee0eeadbd4ab59666e9ebe728e526314c4a2e52c1"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/67/73/50e036cff400655749716ea895bd8a3c16e3696cdd21f01e743c2d586a95/cssbeautifier-1.14.7.tar.gz",
+                    "sha256": "be7f1ea7a7b009f0172c2c0d0bebb2d136346e786f7182185ea944affb52135a"
+                }
+            ]
         }
     ]
 }

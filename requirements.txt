@@ -21,3 +21,4 @@ tzlocal
 jsbeautifier
 qrcode
 jsonschema
+cssbeautifier

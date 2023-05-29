@@ -42,6 +42,7 @@ from .formatters.sql import SqlFormatter
 from .formatters.xml import XmlFormatter
 from .formatters.html import HtmlFormatter
 from .formatters.js import JsFormatter
+from .formatters.css import CssFormatter
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
@@ -169,6 +170,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "js-symbolic",
                 "tooltip": _("Format JavaScript documents"),
                 "child": FormatterView(JsFormatter()),
+            },
+            "css-formatter": {
+                "title": "CSS",
+                "category": "formatter",
+                "icon-name": "css-symbolic",
+                "tooltip": _("Format CSS documents"),
+                "child": FormatterView(CssFormatter()),
             },
 
             # Generetors

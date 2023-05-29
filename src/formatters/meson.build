@@ -13,6 +13,7 @@ sources = [
   'xml.py',
   'html.py',
   'js.py',
+  'css.py',
 ]
 
 install_data(sources, install_dir: formattersdir)
