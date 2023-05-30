@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2023-05-29 22:52+0200\n"
-"PO-Revision-Date: 2023-05-15 19:45+0000\n"
+"PO-Revision-Date: 2023-05-30 13:18+0000\n"
 "Last-Translator: Alessandro Iepure <alessandro.iepure@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/it/>\n"
@@ -204,9 +204,8 @@ msgid "Format JavaScript documents"
 msgstr "Formatta documenti JavaScript"
 
 #: src/window.py:178 src/formatters/css.py:14
-#, fuzzy
 msgid "Format CSS documents"
-msgstr "Formatta documenti SQL"
+msgstr "Formatta documenti CSS"
 
 #: src/window.py:187 src/ui/views/hash_generator.blp:21
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
@@ -238,11 +237,11 @@ msgstr "Calcola i valori per modificare i permessi con chmod"
 
 #: src/window.py:219
 msgid "QR Code"
-msgstr ""
+msgstr "Codice QR"
 
 #: src/window.py:222 src/ui/views/qrcode_generator.blp:21
 msgid "Create custom QR Codes"
-msgstr ""
+msgstr "Crea codici QR personalizzati"
 
 #: src/window.py:228 src/ui/views/text_inspector.blp:20
 msgid "Text Inspector & Case Converter"
@@ -277,14 +276,12 @@ msgid "Check an XML file against an XSD schema"
 msgstr "Confronta un file XML con uno schema XSD"
 
 #: src/window.py:256 src/ui/views/json_validator.blp:19
-#, fuzzy
 msgid "JSON Schema Validator"
-msgstr "Validatore Schema XML"
+msgstr "Validatore schema JSON"
 
 #: src/window.py:259 src/ui/views/json_validator.blp:20
-#, fuzzy
 msgid "Check a JSON file against a JSON schema"
-msgstr "Confronta un file XML con uno schema XSD"
+msgstr "Confronta un file JSON con uno schema JSON"
 
 #: src/window.py:266 src/ui/views/markdown_preview.blp:21
 msgid "Preview markdown code as you type"
@@ -387,7 +384,7 @@ msgstr "Annulla"
 
 #: src/widgets/image_area.py:127
 msgid "Supported Image Formats"
-msgstr ""
+msgstr "Formati immagine supportati"
 
 #: src/widgets/image_area.py:159
 msgid "Saving image..."
@@ -607,9 +604,8 @@ msgid "Valid!"
 msgstr "Valido!"
 
 #: src/views/json_validator.py:79
-#, fuzzy
 msgid "JSON is compliant with the provided JSON schema."
-msgstr "XML è conforme allo schema XSD fornito."
+msgstr "JSON è conforme allo schema JSON fornito."
 
 #: src/views/json_validator.py:87 src/views/json_validator.py:97
 #: src/views/xml_validator.py:86
@@ -617,13 +613,13 @@ msgid "Invalid!"
 msgstr "Invalido!"
 
 #: src/views/json_validator.py:89
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "JSON is not compliant with the provided JSON scheme:\n"
 "{validation_error}"
 msgstr ""
-"XML non è conforme allo schema XSD fornito:\n"
-"{xsd_error}"
+"JSON non è conforme allo schema JSON fornito:\n"
+"{validation_error}"
 
 #: src/views/json_validator.py:99
 #, python-brace-format
@@ -631,11 +627,13 @@ msgid ""
 "Error in JSON schema:\n"
 "{schema_error}"
 msgstr ""
+"Errore nello schema JSON:\n"
+"{schema_error}"
 
 #: src/views/qrcode_generator.py:62 src/ui/views/qrcode_generator.blp:119
 #: src/ui/views/qrcode_generator.blp:127
 msgid "Not Set"
-msgstr ""
+msgstr "Non impostato"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
@@ -1307,9 +1305,8 @@ msgid "Preview"
 msgstr "Anteprima"
 
 #: src/ui/views/qrcode_generator.blp:20
-#, fuzzy
 msgid "QR Code Generator"
-msgstr "Generatore casuale"
+msgstr "Generatore codici QR"
 
 #: src/ui/views/qrcode_generator.blp:31 src/ui/views/reverse_cron.blp:31
 msgid "Tool Options"
@@ -1317,109 +1314,103 @@ msgstr "Opzioni strumento"
 
 #: src/ui/views/qrcode_generator.blp:32
 msgid "Fill the required information and press 'generate'"
-msgstr ""
+msgstr "Completa i campi richiesti e premi 'Genera'"
 
 #: src/ui/views/qrcode_generator.blp:39
-#, fuzzy
 msgid "Generate"
-msgstr "Generale"
+msgstr "Genera"
 
 #: src/ui/views/qrcode_generator.blp:45
 msgid "Content type"
-msgstr ""
+msgstr "Tipologia contenuto"
 
 #: src/ui/views/qrcode_generator.blp:46
 msgid "Choose the content of the QR Code"
-msgstr ""
+msgstr "Scegli il contenuto del codice QR"
 
 #: src/ui/views/qrcode_generator.blp:49 src/ui/views/qrcode_generator.blp:57
-#, fuzzy
 msgid "Text/URL"
-msgstr "Testo"
+msgstr "Testo/URL"
 
 #: src/ui/views/qrcode_generator.blp:50
 msgid "WiFi Network"
-msgstr ""
+msgstr "Rete WiFi"
 
 #: src/ui/views/qrcode_generator.blp:51
 msgid "Contact"
-msgstr ""
+msgstr "Contatto"
 
 #: src/ui/views/qrcode_generator.blp:64
 msgid "Network Name (SSID)"
-msgstr ""
+msgstr "Nome della rete (SSID)"
 
 #: src/ui/views/qrcode_generator.blp:71
 msgid "Network Encryption"
-msgstr ""
+msgstr "Crittografia della rete"
 
 #: src/ui/views/qrcode_generator.blp:76
 msgid "None"
-msgstr ""
+msgstr "Nessuna"
 
 #: src/ui/views/qrcode_generator.blp:82
 msgid "Network Password"
-msgstr ""
+msgstr "Password della rete"
 
 #: src/ui/views/qrcode_generator.blp:86
-#, fuzzy
 msgid "First Name *"
-msgstr "Primo rilascio"
+msgstr "Nome *"
 
 #: src/ui/views/qrcode_generator.blp:93
 msgid "Last Name *"
-msgstr ""
+msgstr "Cognome *"
 
 #: src/ui/views/qrcode_generator.blp:100
-#, fuzzy
 msgid "Phone Number"
-msgstr "Numero"
+msgstr "Numero di telefono"
 
 #: src/ui/views/qrcode_generator.blp:107
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: src/ui/views/qrcode_generator.blp:114
 msgid "Birthday"
-msgstr ""
+msgstr "Compleanno"
 
 #: src/ui/views/qrcode_generator.blp:132
 msgid "Select from calendar:"
-msgstr ""
+msgstr "Seleziona sul calendario:"
 
 #: src/ui/views/qrcode_generator.blp:143
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/ui/views/qrcode_generator.blp:150
 msgid "Address"
-msgstr ""
+msgstr "Indirizzo"
 
 #: src/ui/views/qrcode_generator.blp:153
 msgid "Street"
-msgstr ""
+msgstr "Via"
 
 #: src/ui/views/qrcode_generator.blp:159
 msgid "City"
-msgstr ""
+msgstr "Città"
 
 #: src/ui/views/qrcode_generator.blp:165
 msgid "State"
-msgstr ""
+msgstr "Provincia"
 
 #: src/ui/views/qrcode_generator.blp:171
 msgid "ZIP Code"
-msgstr ""
+msgstr "CAP"
 
 #: src/ui/views/qrcode_generator.blp:177
-#, fuzzy
 msgid "Country"
-msgstr "Quantità"
+msgstr "Paese"
 
 #: src/ui/views/qrcode_generator.blp:189
-#, fuzzy
 msgid "Generated QR Code"
-msgstr "Testo generato"
+msgstr "Codice QR generato"
 
 #: src/ui/views/random_generator.blp:20
 msgid "Random Generator"
@@ -1455,9 +1446,8 @@ msgid "Numbers (0-9)"
 msgstr "Cifre (0-9)"
 
 #: src/ui/views/random_generator.blp:87
-#, fuzzy
 msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
-msgstr "Caratteri speciali (!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~)"
+msgstr "Caratteri speciali (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 
 #: src/ui/views/random_generator.blp:118
 msgid "Number"
@@ -1511,113 +1501,117 @@ msgstr ""
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:99
-#, fuzzy
 msgid "Every minute between minute"
-msgstr "Converti numeri tra basi numeriche"
+msgstr "Ogni minuto tra il minuto"
 
 #. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:105
 msgid "and minute"
-msgstr ""
+msgstr "e il minuto"
 
 #: src/ui/views/reverse_cron.blp:124
 msgid "Every hour"
-msgstr ""
+msgstr "Ogni ora"
 
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
 #: src/ui/views/reverse_cron.blp:141
 msgid "hour(s) starting at hour"
-msgstr ""
+msgstr "ora/e a partire dalle ore"
 
 #: src/ui/views/reverse_cron.blp:154
 msgid "Specific hour (choose one or many, no selection means every hour)"
 msgstr ""
+"Ora specifica (seleziona uno o più, nessuna selezione equivale a ogni ora)"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:170
 msgid "Every hour between hour"
-msgstr ""
+msgstr "Ogni ora tra le ore"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:177
 msgid "and hour"
-msgstr ""
+msgstr "e le ore"
 
 #: src/ui/views/reverse_cron.blp:196
 msgid "Every day"
-msgstr ""
+msgstr "Ogni giorno"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:213
 msgid "day(s) starting on the"
-msgstr ""
+msgstr "giorno/i a partire dal"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:219
 msgid "of the month"
-msgstr ""
+msgstr "del mese"
 
 #: src/ui/views/reverse_cron.blp:231
 msgid ""
 "Specific day of month (choose one or many, no selection means every day)"
 msgstr ""
+"Giorno del mese specifico (seleziona uno o più, nessuna selezione equivale a "
+"ogni giorno)"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:247
 msgid "Every day between the"
-msgstr ""
+msgstr "Ogni giorno tra il"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:254
 msgid "and the"
-msgstr ""
+msgstr "e il"
 
 #: src/ui/views/reverse_cron.blp:273
 msgid "Every month"
-msgstr ""
+msgstr "Ogni mese"
 
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
 #: src/ui/views/reverse_cron.blp:290
 msgid "month(s) starting in"
-msgstr ""
+msgstr "mese/i a partire da"
 
 #: src/ui/views/reverse_cron.blp:319
 msgid "Specific month (choose one or many, no selection means every month)"
 msgstr ""
+"Mese specifico (seleziona uno o più, nessuna selezione equivale a ogni mese)"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #: src/ui/views/reverse_cron.blp:335
 msgid "Every month between"
-msgstr ""
+msgstr "Ogni mese tra"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:358 src/ui/views/reverse_cron.blp:478
-#, fuzzy
 msgid "and"
-msgstr " "
+msgstr "e"
 
 #: src/ui/views/reverse_cron.blp:383
 msgid "Weekday"
-msgstr ""
+msgstr "Giorno della settimana"
 
 #: src/ui/views/reverse_cron.blp:393
 msgid "Every weekday"
-msgstr ""
+msgstr "Ogni giorno della settimana"
 
 #. TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:410
 msgid "weekday(s) starting on"
-msgstr ""
+msgstr "giorno/i della settimana a partire da"
 
 #: src/ui/views/reverse_cron.blp:435
 msgid "Specific weekday (choose one or many, no selection means every weekday)"
 msgstr ""
+"Giorno della settimana specifico (seleziona uno o più, nessuna selezione "
+"equivale a ogni giorno della settimana)"
 
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:459
 msgid "Every weekday between"
-msgstr ""
+msgstr "Ogni giorno della settimana tra"
 
 #: src/ui/views/reverse_cron.blp:499
 msgid "Command to execute"
@@ -1772,7 +1766,6 @@ msgid "Choose the UUID version to generate"
 msgstr "Selezione la versione del/degli UUID da generare"
 
 #: src/ui/views/uuid_generator.blp:39
-#, fuzzy
 msgid "Version 1 (MAC address)"
 msgstr "Versione 1 (Indirizzo MAC)"
 
@@ -1860,14 +1853,12 @@ msgid "Type XML code here"
 msgstr "Scrivi il codice XML qua"
 
 #: src/formatters/css.py:13
-#, fuzzy
 msgid "CSS Formatter"
-msgstr "Formattatore SQL"
+msgstr "Formattatore CSS"
 
 #: src/formatters/css.py:16
-#, fuzzy
 msgid "Type CSS here"
-msgstr "Scrivi il codice SQL qua"
+msgstr "Scrivi il codice CSS qua"
 
 #~ msgid "Choose a case to apply to the text"
 #~ msgstr "Scegli il formato da applicare al testo"
