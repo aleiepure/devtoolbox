@@ -91,7 +91,7 @@ msgstr "Ve daha çoğu…"
 #: data/me.iepure.devtoolbox.metainfo.xml.in:69
 #: data/me.iepure.devtoolbox.metainfo.xml.in:78
 msgid "What's new:"
-msgstr ""
+msgstr "Neler yeni:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:71
 msgid "Window can be resized smaller than before"
@@ -195,19 +195,16 @@ msgid "Format XML documents"
 msgstr "XML belgelerini biçimlendir"
 
 #: src/window.py:164 src/formatters/html.py:15
-#, fuzzy
 msgid "Format HTML documents"
-msgstr "XML belgelerini biçimlendir"
+msgstr "HTML belgelerini biçimlendir"
 
 #: src/window.py:171 src/formatters/js.py:15
-#, fuzzy
 msgid "Format JavaScript documents"
-msgstr "JSON belgelerini biçimlendir"
+msgstr "JavaScript belgelerini biçimlendir"
 
 #: src/window.py:178 src/formatters/css.py:14
-#, fuzzy
 msgid "Format CSS documents"
-msgstr "SQL belgelerini biçimlendir"
+msgstr "CSS belgelerini biçimlendir"
 
 #: src/window.py:187 src/ui/views/hash_generator.blp:21
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
