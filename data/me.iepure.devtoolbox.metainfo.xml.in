@@ -60,10 +60,33 @@ SPDX-License-Identifier: CC0-1.0
     <control>keyboard</control>
   </recommends>
   <requires>
-    <display_length compare="ge">800</display_length>
-    <display_width compare="ge">1200</display_width>
+    <display_length compare="ge">700</display_length>
+    <display_width compare="ge">1050</display_width>
   </requires>
   <releases>
+    <release version="1.1" date="2023-06-16">
+      <description>
+        <p>What's new:</p>
+        <ul>
+          <li>Upgraded to GNOME platform 44</li>
+          <li>Now follows the system theme</li>
+          <li>Timestamp: ISO8601/RFC3339 output format and timezone support</li>
+          <li>Ported UIs to blueprint</li>
+          <li>Improved icon</li>
+          <li>New tool: JS Formatter</li>
+          <li>New tool: Certificate Parser</li>
+          <li>New tool: CSR Generator</li>
+          <li>New tool: Random Generator</li>
+          <li>New tool: CRON generator</li>
+          <li>New tool: chmod calculator</li>
+          <li>New tool: QR-code generator</li>
+          <li>New tool: JSON validator</li>
+          <li>New tool: CSS Formatter</li>
+          <li>New translations: Czech (@Amereyeu), Spanish (Óscar Fernández Díaz on Weblate and @gallegonovato), Norwegian Bokmål (@comradekingu), and Portuguese (@SantosSi)</li>
+        </ul>
+        <p>I'm always open to suggestions. Feel free to contribute to the project with code or translations on Weblate.</p>
+      </description>
+    </release>
     <release version="1.0.2" date="2023-03-08">
       <description>
         <p>What's new:</p>
