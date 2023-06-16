@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-29 22:52+0200\n"
+"POT-Creation-Date: 2023-06-16 12:48+0200\n"
 "PO-Revision-Date: 2023-04-07 17:48+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/devtoolbox/"
@@ -361,6 +361,18 @@ msgstr ""
 msgid "Graphics"
 msgstr "Imagens"
 
+#. change view and save previous
+#: src/widgets/image_area.py:34 src/widgets/text_area.py:52
+#: src/widgets/text_file_area.py:61 src/widgets/text_file_area.py:173
+msgid "Opening file..."
+msgstr "Abrindo ficheiro..."
+
+#: src/widgets/image_area.py:83 src/widgets/text_area.py:123
+#: src/widgets/text_file_area.py:137 src/views/certificate_parser.py:60
+#, fuzzy
+msgid "Cannot open more than one file"
+msgstr "Não é possível descompactar de uma imagem ou ficheiro"
+
 #: src/widgets/image_area.py:109
 msgid "Opening image..."
 msgstr "Abrindo imagem..."
@@ -422,10 +434,21 @@ msgstr "Ficheiros texto"
 msgid "Accepted files"
 msgstr "Ficheiros aceitos"
 
-#. change view and save previous
-#: src/widgets/text_file_area.py:173
-msgid "Opening file..."
-msgstr "Abrindo ficheiro..."
+#: src/widgets/text_area.py:197
+#, python-brace-format
+msgid ""
+"Loading a large file ({size})\n"
+"Might take a while, please wait..."
+msgstr ""
+
+#: src/widgets/text_area.py:204 src/widgets/text_file_area.py:251
+#, python-brace-format
+msgid "Unable to open {file_path}: {file_content}."
+msgstr ""
+
+#: src/widgets/text_area.py:219
+msgid "File is not UTF-8 encoded."
+msgstr ""
 
 #: src/widgets/text_file_area.py:190
 msgid "All files"
@@ -443,6 +466,11 @@ msgstr "Imagens"
 msgid "Saving file..."
 msgstr "A gravar ficheiro..."
 
+#: src/widgets/text_file_area.py:327
+#, fuzzy, python-brace-format
+msgid "Unable to save {path}"
+msgstr "Não foi possível gravar imagem."
+
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
 #: src/views/certificate_request_generator.py:176 src/views/formatter.py:45
 #: src/views/gzip_compressor.py:67 src/views/hash_generator.py:60
@@ -451,11 +479,6 @@ msgstr "A gravar ficheiro..."
 #, python-brace-format
 msgid "Error: {error}"
 msgstr "Erro: {error}"
-
-#: src/views/certificate_parser.py:60
-#, fuzzy
-msgid "Cannot open more than one file"
-msgstr "Não é possível descompactar de uma imagem ou ficheiro"
 
 #: src/views/certificate_parser.py:65
 #, fuzzy
@@ -976,6 +999,15 @@ msgstr ""
 msgid "Generate a new key or use and existing one"
 msgstr ""
 
+#: src/ui/views/certificate_request_generator.blp:77
+#, fuzzy
+msgid "New"
+msgstr "Agora"
+
+#: src/ui/views/certificate_request_generator.blp:78
+msgid "Exisisting"
+msgstr ""
+
 #: src/ui/views/certificate_request_generator.blp:85
 #, fuzzy
 msgid "Key File *"
@@ -991,6 +1023,14 @@ msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:108
 msgid "Size of the new key. It will be saved on the same path as the CSR."
+msgstr ""
+
+#: src/ui/views/certificate_request_generator.blp:111
+msgid "2048 bits"
+msgstr ""
+
+#: src/ui/views/certificate_request_generator.blp:112
+msgid "4096 bits"
 msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:119
@@ -1468,6 +1508,11 @@ msgstr ""
 msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 msgstr ""
 
+#: src/ui/views/random_generator.blp:101
+#, fuzzy
+msgid "Generated string"
+msgstr "Texto gerado"
+
 #: src/ui/views/random_generator.blp:118
 #, fuzzy
 msgid "Number"
@@ -1484,6 +1529,11 @@ msgstr ""
 #: src/ui/views/random_generator.blp:123
 msgid "Range in which to generate"
 msgstr ""
+
+#: src/ui/views/random_generator.blp:169
+#, fuzzy
+msgid "Generated number"
+msgstr "Texto gerado"
 
 #: src/ui/views/regex_tester.blp:20
 msgid "Regular Expression Tester"
@@ -1650,6 +1700,10 @@ msgstr "Diferenças"
 #: src/ui/views/text_inspector.blp:34
 msgid "Change case"
 msgstr "Alteração de maiúsculo e minúsculo"
+
+#: src/ui/views/text_inspector.blp:35
+msgid "Choose a case to apply to the text"
+msgstr "Escolha um \"case\" para aplicar ao texto"
 
 #: src/ui/views/text_inspector.blp:40
 msgid "Sentence case"
@@ -1885,6 +1939,3 @@ msgstr "Insira o código SQL aqui"
 
 #~ msgid "_Keyboard Shortcuts"
 #~ msgstr "Atalhos de _teclado"
-
-#~ msgid "Choose a case to apply to the text"
-#~ msgstr "Escolha um \"case\" para aplicar ao texto"

@@ -49,7 +49,7 @@ class TextArea(Adw.Bin):
     use_default_text_extensions = GObject.Property(type=bool, default=False)
     use_custom_file_extensions = GObject.Property(type=bool, default=False)
     custom_file_extensions = GObject.Property(type=GObject.TYPE_STRV)
-    loading_label = GObject.Property(type=str, default="Opening file...")
+    loading_label = GObject.Property(type=str, default=_("Opening file..."))
     allow_drag_and_drop = GObject.Property(type=bool, default=True)
 
     # Custom signals
@@ -120,7 +120,7 @@ class TextArea(Adw.Bin):
         self._spinner.set_visible(True)
         files: List[Gio.File] = value.get_files()
         if len(files) != 1:
-            self.emit("error", "Cannot open more than one file")
+            self.emit("error", _("Cannot open more than one file"))
             return
         self._open_file(files[0])
         self._spinner.set_visible(False)
@@ -194,14 +194,14 @@ class TextArea(Adw.Bin):
 
         if file_size > 536870912: # 512 Mb
             self._stack.set_visible_child_name("loading")
-            self.loading_label = f"Loading a large file ({humanize.naturalsize(file_size)})\nMight take a while, please wait..."
+            self.loading_label = _("Loading a large file ({size})\nMight take a while, please wait...").format(size=humanize.naturalsize(file_size))
             self.emit("big-file")
         file.load_contents_async(None, self._open_file_async_complete)
 
     def _open_file_async_complete(self, source_file:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer=None):
         contents = source_file.load_contents_finish(result)
         if not contents[0]:
-            self.emit("error", f"Unable to open {source_file.peek_path()}: {contents[1]}.")
+            self.emit("error", _("Unable to open {file_path}: {file_content}.").format(file_path=source_file.peek_path(), file_content=contents[1]))
             return
 
         if Utils.is_text(contents[1]) and self.allow_drag_and_drop:
@@ -216,7 +216,7 @@ class TextArea(Adw.Bin):
             self._textview.get_buffer().set_text("")
             self._open_btn.set_sensitive(True)
             self._stack.set_visible_child_name("text-area")
-            self.emit("error", "File is not UTF-8 encoded.")
+            self.emit("error", _("File is not UTF-8 encoded."))
 
     def _on_text_changed(self, user_data:GObject.GPointer):
         self.emit("text-changed")

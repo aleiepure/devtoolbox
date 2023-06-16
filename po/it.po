@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
-"POT-Creation-Date: 2023-05-29 22:52+0200\n"
-"PO-Revision-Date: 2023-05-30 13:18+0000\n"
-"Last-Translator: Alessandro Iepure <alessandro.iepure@gmail.com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-16 12:48+0200\n"
+"PO-Revision-Date: 2023-06-16 12:56+0200\n"
+"Last-Translator: Alessandro Iepure <alessandro@iepure.me>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/it/>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -356,6 +356,17 @@ msgstr "Certificati"
 msgid "Graphics"
 msgstr "Grafica"
 
+#. change view and save previous
+#: src/widgets/image_area.py:34 src/widgets/text_area.py:52
+#: src/widgets/text_file_area.py:61 src/widgets/text_file_area.py:173
+msgid "Opening file..."
+msgstr "Apertura in corso di un file..."
+
+#: src/widgets/image_area.py:83 src/widgets/text_area.py:123
+#: src/widgets/text_file_area.py:137 src/views/certificate_parser.py:60
+msgid "Cannot open more than one file"
+msgstr "Impossibile aprire più di un file alla volta"
+
 #: src/widgets/image_area.py:109
 msgid "Opening image..."
 msgstr "Apertura in corso di un immagine..."
@@ -417,10 +428,23 @@ msgstr "File di testo"
 msgid "Accepted files"
 msgstr "File accettati"
 
-#. change view and save previous
-#: src/widgets/text_file_area.py:173
-msgid "Opening file..."
-msgstr "Apertura in corso di un file..."
+#: src/widgets/text_area.py:197
+#, python-brace-format
+msgid ""
+"Loading a large file ({size})\n"
+"Might take a while, please wait..."
+msgstr ""
+"Caricamento di un file pesante ({size})\n"
+"Potrebbe volerci un po', attendere..."
+
+#: src/widgets/text_area.py:204 src/widgets/text_file_area.py:251
+#, python-brace-format
+msgid "Unable to open {file_path}: {file_content}."
+msgstr "Impossibile aprire il file {file_path}: {file_content}."
+
+#: src/widgets/text_area.py:219
+msgid "File is not UTF-8 encoded."
+msgstr "Il file non è codificato in UTF-8."
 
 #: src/widgets/text_file_area.py:190
 msgid "All files"
@@ -438,6 +462,11 @@ msgstr "Immagini"
 msgid "Saving file..."
 msgstr "Salvataggio in corso di un file..."
 
+#: src/widgets/text_file_area.py:327
+#, python-brace-format
+msgid "Unable to save {path}"
+msgstr "Impossibile salvare il file {path}"
+
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
 #: src/views/certificate_request_generator.py:176 src/views/formatter.py:45
 #: src/views/gzip_compressor.py:67 src/views/hash_generator.py:60
@@ -446,10 +475,6 @@ msgstr "Salvataggio in corso di un file..."
 #, python-brace-format
 msgid "Error: {error}"
 msgstr "Errore: {error}"
-
-#: src/views/certificate_parser.py:60
-msgid "Cannot open more than one file"
-msgstr "Impossibile aprire più di un file alla volta"
 
 #: src/views/certificate_parser.py:65
 msgid "Unsupported file"
@@ -638,17 +663,17 @@ msgstr "Non impostato"
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
 msgid "st"
-msgstr " "
+msgstr " "
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:210
 msgid "nd"
-msgstr " "
+msgstr " "
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:213
 msgid "rd"
-msgstr " "
+msgstr " "
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:216
@@ -788,7 +813,7 @@ msgstr "Mostra/nascondi sidebar"
 
 #: src/ui/window.blp:57
 msgid "_About Dev Toolbox"
-msgstr "_Informazioni di Dev Toolbox"
+msgstr "_Informazioni su Dev Toolbox"
 
 #: src/ui/about_window.blp:11
 msgid ""
@@ -967,6 +992,14 @@ msgstr "Chiave"
 msgid "Generate a new key or use and existing one"
 msgstr "Genera una nuova chiave o usane una già esistente"
 
+#: src/ui/views/certificate_request_generator.blp:77
+msgid "New"
+msgstr "Nuova"
+
+#: src/ui/views/certificate_request_generator.blp:78
+msgid "Exisisting"
+msgstr "Esistente"
+
 #: src/ui/views/certificate_request_generator.blp:85
 msgid "Key File *"
 msgstr "File chiave *"
@@ -983,6 +1016,14 @@ msgstr "Dimensione chiave"
 msgid "Size of the new key. It will be saved on the same path as the CSR."
 msgstr ""
 "Dimensione della nuova chiave. Sarà salvata nello stesso percorso della CSR."
+
+#: src/ui/views/certificate_request_generator.blp:111
+msgid "2048 bits"
+msgstr "2048 bit"
+
+#: src/ui/views/certificate_request_generator.blp:112
+msgid "4096 bits"
+msgstr "4096 bit"
 
 #: src/ui/views/certificate_request_generator.blp:119
 msgid "Key Save Location *"
@@ -1378,7 +1419,7 @@ msgstr "Compleanno"
 
 #: src/ui/views/qrcode_generator.blp:132
 msgid "Select from calendar:"
-msgstr "Seleziona sul calendario:"
+msgstr "Seleziona dal calendario:"
 
 #: src/ui/views/qrcode_generator.blp:143
 msgid "URL"
@@ -1449,6 +1490,10 @@ msgstr "Cifre (0-9)"
 msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 msgstr "Caratteri speciali (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 
+#: src/ui/views/random_generator.blp:101
+msgid "Generated string"
+msgstr "Stringa generata"
+
 #: src/ui/views/random_generator.blp:118
 msgid "Number"
 msgstr "Numero"
@@ -1464,6 +1509,10 @@ msgstr "Intervallo"
 #: src/ui/views/random_generator.blp:123
 msgid "Range in which to generate"
 msgstr "Intervallo in cui generare"
+
+#: src/ui/views/random_generator.blp:169
+msgid "Generated number"
+msgstr "Numero generato"
 
 #: src/ui/views/regex_tester.blp:20
 msgid "Regular Expression Tester"
@@ -1606,7 +1655,7 @@ msgstr "giorno/i della settimana a partire da"
 msgid "Specific weekday (choose one or many, no selection means every weekday)"
 msgstr ""
 "Giorno della settimana specifico (seleziona uno o più, nessuna selezione "
-"equivale a ogni giorno della settimana)"
+"equivale a ogni giorno)"
 
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:459
@@ -1636,6 +1685,10 @@ msgstr "Differenze"
 #: src/ui/views/text_inspector.blp:34
 msgid "Change case"
 msgstr "Cambia maiuscole/minuscole"
+
+#: src/ui/views/text_inspector.blp:35
+msgid "Choose a case to apply to the text"
+msgstr "Scegli il formato da applicare al testo"
 
 #: src/ui/views/text_inspector.blp:40
 msgid "Sentence case"
@@ -1818,7 +1871,7 @@ msgstr "Formattatore HTML"
 
 #: src/formatters/html.py:17
 msgid "Type HTML code here"
-msgstr "Scrivi il codice HTML qua"
+msgstr "Scrivi il codice HTML qui"
 
 #: src/formatters/js.py:14
 msgid "JavaScript Formatter"
@@ -1826,7 +1879,7 @@ msgstr "Formattatore JavaScript"
 
 #: src/formatters/js.py:17
 msgid "Type JavaScript code here"
-msgstr "Scrivi il codice JavaScript qua"
+msgstr "Scrivi il codice JavaScript qui"
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
@@ -1834,7 +1887,7 @@ msgstr "Formattatore JSON"
 
 #: src/formatters/json.py:16
 msgid "Type JSON code here"
-msgstr "Scrivi il codice JSON qua"
+msgstr "Scrivi il codice JSON qui"
 
 #: src/formatters/sql.py:13
 msgid "SQL Formatter"
@@ -1842,7 +1895,7 @@ msgstr "Formattatore SQL"
 
 #: src/formatters/sql.py:16
 msgid "Type SQL code here"
-msgstr "Scrivi il codice SQL qua"
+msgstr "Scrivi il codice SQL qui"
 
 #: src/formatters/xml.py:15
 msgid "XML Formatter"
@@ -1850,7 +1903,7 @@ msgstr "Formattatore XML"
 
 #: src/formatters/xml.py:18
 msgid "Type XML code here"
-msgstr "Scrivi il codice XML qua"
+msgstr "Scrivi il codice XML qui"
 
 #: src/formatters/css.py:13
 msgid "CSS Formatter"
@@ -1858,10 +1911,7 @@ msgstr "Formattatore CSS"
 
 #: src/formatters/css.py:16
 msgid "Type CSS here"
-msgstr "Scrivi il codice CSS qua"
-
-#~ msgid "Choose a case to apply to the text"
-#~ msgstr "Scegli il formato da applicare al testo"
+msgstr "Scrivi il codice CSS qui"
 
 #~ msgid "_Keyboard Shortcuts"
 #~ msgstr "_Scorciatoie da tastiera"

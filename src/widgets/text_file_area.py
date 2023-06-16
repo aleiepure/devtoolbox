@@ -58,7 +58,7 @@ class TextFileArea(Adw.Bin):
     use_all_files_extensions = GObject.Property(type=bool, default=False)
     use_custom_file_extensions = GObject.Property(type=bool, default=False)
     custom_file_extensions = GObject.Property(type=GObject.TYPE_STRV)
-    loading_label = GObject.Property(type=str, default="Opening file...")
+    loading_label = GObject.Property(type=str, default=_("Opening file..."))
     allow_drag_and_drop = GObject.Property(type=bool, default=True)
 
     # Custom signals
@@ -134,7 +134,7 @@ class TextFileArea(Adw.Bin):
         self._spinner.set_visible(True)
         files: List[Gio.File] = value.get_files()
         if len(files) != 1:
-            self.emit("error", "Cannot open more than one file")
+            self.emit("error", _("Cannot open more than one file"))
             return
         self._open_file(files[0])
         self._spinner.set_visible(False)
@@ -248,7 +248,7 @@ class TextFileArea(Adw.Bin):
         contents = source_file.load_contents_finish(result)
         if not contents[0]:
             self._stack.set_visible_child_name(self._previous_view)
-            self.emit("error", f"Unable to open {source_file.peek_path()}: {contents[1]}.")
+            self.emit("error", _("Unable to open {file_path}: {file_content}.").format(file_path=source_file.peek_path(), file_content=contents[1]))
             return
 
         if Utils.is_text(contents[1]) and self.allow_drag_and_drop:
@@ -324,7 +324,7 @@ class TextFileArea(Adw.Bin):
         self._save_btn.set_sensitive(True)
         self._stack.set_visible_child_name(self._previous_view)
         if not res:
-            self.emit("error", f"Unable to save {file_path}")
+            self.emit("error", _("Unable to save {path}").format(path=file_path))
             return
 
         self.emit("saved", file_path)

@@ -31,7 +31,7 @@ class ImageArea(Adw.Bin):
     show_clear_btn = GObject.Property(type=bool, default=False)
     show_save_btn = GObject.Property(type=bool, default=False)
     show_open_btn = GObject.Property(type=bool, default=False)
-    loading_label = GObject.Property(type=str, default="Opening file...")
+    loading_label = GObject.Property(type=str, default=_("Opening file..."))
     allow_drag_and_drop = GObject.Property(type=bool, default=False)
     content_fit = GObject.Property(type=Gtk.ContentFit, default=Gtk.ContentFit.CONTAIN)
 
@@ -80,7 +80,7 @@ class ImageArea(Adw.Bin):
     def _on_dnd_drop(self, drop_target:Gtk.DropTarget, value: Gdk.FileList, x:float, y:float, user_data:GObject.Object=None):
         files: List[Gio.File] = value.get_files()
         if len(files) != 1:
-            self.emit("error", "Cannot open more than one file")
+            self.emit("error", _("Cannot open more than one file"))
             return
         self._open_file(files[0])
 
