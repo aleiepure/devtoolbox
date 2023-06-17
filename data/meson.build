@@ -4,9 +4,9 @@
 
 desktop_conf = configuration_data()
 if get_option('debug')
-  desktop_conf.set('app-name', 'Dev toolbox (Development snapshot)')
+  desktop_conf.set('app-name', 'Dev Toolbox (Development snapshot)')
 else
-  desktop_conf.set('app-name', 'Dev toolbox')
+  desktop_conf.set('app-name', 'Dev Toolbox')
 endif
 desktop_file = i18n.merge_file(
         input: configure_file(
