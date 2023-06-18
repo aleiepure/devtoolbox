@@ -31,6 +31,11 @@ class TimestampView(Adw.Bin):
 
         # Set current date/time
         tz = get_localzone_name()
+
+        # Fix for https://github.com/aleiepure/devtoolbox/issues/28
+        if tz == "Europe/Kiev":
+            tz = "Europe/Kyiv"
+
         self._timezone_dropdown.set_selected(common_timezones.index(tz))
         time = datetime.now(tz = ZoneInfo(tz))
         self._timestamp_spin_area.set_value(time.timestamp())

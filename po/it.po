@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-16 12:48+0200\n"
-"PO-Revision-Date: 2023-06-16 12:56+0200\n"
+"POT-Creation-Date: 2023-06-18 11:58+0200\n"
+"PO-Revision-Date: 2023-06-18 12:05+0200\n"
 "Last-Translator: Alessandro Iepure <alessandro@iepure.me>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/it/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "@app-name@"
 msgstr "@app-name@"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:15
+#: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_window.blp:12
 msgid "Development tools at your fingertips"
 msgstr "Strumenti di sviluppo a portata di mano"
 
@@ -88,46 +88,121 @@ msgid "Much more..."
 msgstr "Molto altro..."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:69
-#: data/me.iepure.devtoolbox.metainfo.xml.in:78
+#: data/me.iepure.devtoolbox.metainfo.xml.in:92
+#: data/me.iepure.devtoolbox.metainfo.xml.in:101
 msgid "What's new:"
 msgstr "Novità:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:71
+msgid "Upgraded to GNOME platform 44"
+msgstr "Aggiornato alla piattaforma GNOME 44"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:72
+msgid "Now follows the system theme"
+msgstr "Ora segue il tema del sistema"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:73
+msgid "Timestamp: ISO8601/RFC3339 output format and timezone support"
+msgstr "Timestamp: output in formato ISO8601/RFC3339 e supporto ai fusi orari"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:74
+msgid "Ported UIs to blueprint"
+msgstr "Porting dell'interfaccia a blueprint"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:75
+msgid "Improved icon"
+msgstr "Icona migliorata"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:76
+msgid "New tool: JS Formatter"
+msgstr "Nuovo strumento: Formatter JS"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:77
+msgid "New tool: Certificate Parser"
+msgstr "Nuovo strumento: Parser Certificati"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:78
+msgid "New tool: CSR Generator"
+msgstr "Nuovo strumento: Generatore CSR"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:79
+msgid "New tool: Random Generator"
+msgstr "Nuovo: strumento: Generatore casuale"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:80
+msgid "New tool: CRON generator"
+msgstr "Nuovo strumento: Generatore CRON"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:81
+msgid "New tool: chmod calculator"
+msgstr "Nuovo strumento: Calcolatore chmod"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:82
+msgid "New tool: QR-code generator"
+msgstr "Nuovo strumento: Generatore codici QR"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:83
+msgid "New tool: JSON validator"
+msgstr "Nuovo strumento: Validatore JSON"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:84
+msgid "New tool: CSS Formatter"
+msgstr "Nuovo strumento: Formatter CSS"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:85
+msgid ""
+"New translations: Czech (@Amereyeu), Spanish (Óscar Fernández Díaz on "
+"Weblate and @gallegonovato), Norwegian Bokmål (@comradekingu), and "
+"Portuguese (@SantosSi)"
+msgstr ""
+"Nuove traduzioni: ceco (@Amereyeu), spagnolo (Óscar Fernández Díaz su "
+"Weblate e @gallegonovato), norvegese bokmål (@comradekingu) e portoghese "
+"(@SantosSi)"
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:87
+msgid ""
+"I'm always open to suggestions. Feel free to contribute to the project with "
+"code or translations on Weblate."
+msgstr ""
+"Sono sempre aperto a nuovi suggerimenti. Puoi contribuire al progetto con "
+"codice o traduzioni su Weblate."
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:94
 msgid "Window can be resized smaller than before"
 msgstr ""
 "La finestra può essere ridimensionata più piccola di quanto consentito in "
 "precedenza"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:72
+#: data/me.iepure.devtoolbox.metainfo.xml.in:95
 msgid "Added missing icons on non GNOME desktops"
 msgstr "Aggiunte icone mancanti su desktop diversi da GNOME"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:80
+#: data/me.iepure.devtoolbox.metainfo.xml.in:103
 msgid "XML formater: can now open .ui files (@gregorni)"
 msgstr "XML formatter: ora può aprire file .ui (@gregorni)"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:81
+#: data/me.iepure.devtoolbox.metainfo.xml.in:104
 msgid "Markdown previewer: can open preview in external browser"
 msgstr ""
 "Visualizzatore Markdown: l'anteprima può essere aperta in un browser esterno"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:82
+#: data/me.iepure.devtoolbox.metainfo.xml.in:105
 msgid "Color blindness simulator: severtity can be changed via keyboard"
 msgstr "Simulatore Daltonismo: la severità può essere cambiata con la tastiera"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:83
+#: data/me.iepure.devtoolbox.metainfo.xml.in:106
 msgid "New tool: HTML formatter"
 msgstr "Nuovo strumento: Formatter HTML"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:84
+#: data/me.iepure.devtoolbox.metainfo.xml.in:107
 msgid "Turkish translation by @sabriunal"
 msgstr "Traduzione in Turco di @sabriunal"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:85
+#: data/me.iepure.devtoolbox.metainfo.xml.in:108
 msgid "Brasilian Portuguese translation by @rffontenelle"
 msgstr "Traduzione in Portoghese del Brasile di @rffontenelle"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:91
+#: data/me.iepure.devtoolbox.metainfo.xml.in:114
 msgid "First release"
 msgstr "Primo rilascio"
 
@@ -822,10 +897,6 @@ msgid ""
 msgstr ""
 "Copyright © 2022 - 2023 Alessandro Iepure\n"
 "Alcune icone sono copyright del Progetto GNOME"
-
-#: src/ui/about_window.blp:12
-msgid "Development tools at your figertips"
-msgstr "Strumenti di sviluppo a portata di mano"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
 #: src/ui/about_window.blp:19
@@ -1912,6 +1983,9 @@ msgstr "Formattatore CSS"
 #: src/formatters/css.py:16
 msgid "Type CSS here"
 msgstr "Scrivi il codice CSS qui"
+
+#~ msgid "Development tools at your figertips"
+#~ msgstr "Strumenti di sviluppo a portata di mano"
 
 #~ msgid "_Keyboard Shortcuts"
 #~ msgstr "_Scorciatoie da tastiera"
