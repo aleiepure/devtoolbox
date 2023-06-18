@@ -6,155 +6,159 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2023-06-18 12:20+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-06-19 14:53+0000\n"
+"Last-Translator: \"L.Yang\" <yang120120110@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"devtoolbox/devtoolbox/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.1\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
 msgid "@app-name@"
-msgstr ""
+msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_window.blp:12
 msgid "Development tools at your fingertips"
-msgstr ""
+msgstr "触手可及的开发工具箱"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:18
 msgid ""
 "If you're tired of endlessly looking online for the right tool, or to find "
 "again that website of which you don't recall the name just for a quick "
 "conversion, this is the right app for you."
-msgstr ""
+msgstr "如果您厌倦了没完没了地在网上寻找合适的工具，或者为了快速转换而再次查找您不记"
+"得其名称的网站，那么这就是适合您的应用程序。"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:22
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
-msgstr ""
+msgstr "这是一组功能强大但易于使用的工具，用于解决最常见的日常开发问题。"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:25
 msgid "Includes:"
-msgstr ""
+msgstr "包括："
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid "JSON to YAML converter and vice-versa"
-msgstr ""
+msgstr "JSON和YAML的互相转换"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:28
 msgid "CRON expressions parser"
-msgstr ""
+msgstr "CRON表达式解析"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:29
 msgid "GZip compressor and decompressor"
-msgstr ""
+msgstr "GZip压缩和解压"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Formatters for common programming languages"
-msgstr ""
+msgstr "常用编程语言格式器"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:31
 msgid "Hash generators"
-msgstr ""
+msgstr "哈希生成器"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "Regex tester"
-msgstr ""
+msgstr "正则表达式测试"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:263
 #: src/ui/views/markdown_preview.blp:20
 msgid "Markdown Previewer"
-msgstr ""
+msgstr "Markdown预览"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "Image converters"
-msgstr ""
+msgstr "图片转换"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Much more..."
-msgstr ""
+msgstr "还有更多..."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:69
 #: data/me.iepure.devtoolbox.metainfo.xml.in:79
 #: data/me.iepure.devtoolbox.metainfo.xml.in:102
 #: data/me.iepure.devtoolbox.metainfo.xml.in:111
 msgid "What's new:"
-msgstr ""
+msgstr "更新内容："
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:71
 msgid "Fixed various typos"
-msgstr ""
+msgstr "修复了各种错别字"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:72
 msgid ""
 "Timestamp: fixed issue that prevented the app from launching when the system "
 "timezone was \"Europe/Kyiv\""
-msgstr ""
+msgstr "时间戳：修复了当系统时区为\"欧洲/基辅\"时阻止应用启动的问题"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:73
 msgid "Updated translations"
-msgstr ""
+msgstr "更新了翻译"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:81
 msgid "Upgraded to GNOME platform 44"
-msgstr ""
+msgstr "升级到GNOME平台44"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:82
 msgid "Now follows the system theme"
-msgstr ""
+msgstr "现在遵循系统主题"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:83
 msgid "Timestamp: ISO8601/RFC3339 output format and timezone support"
-msgstr ""
+msgstr "时间戳：ISO8601/RFC3339 输出格式和时区支持"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:84
 msgid "Ported UIs to blueprint"
-msgstr ""
+msgstr "将 UI 移植到蓝图"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:85
 msgid "Improved icon"
-msgstr ""
+msgstr "改进了图标"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:86
 msgid "New tool: JS Formatter"
-msgstr ""
+msgstr "新工具：JS格式器"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:87
 msgid "New tool: Certificate Parser"
-msgstr ""
+msgstr "新工具：证书解析"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:88
 msgid "New tool: CSR Generator"
-msgstr ""
+msgstr "新工具：CSR生成器"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:89
 msgid "New tool: Random Generator"
-msgstr ""
+msgstr "新工具：随机生成器"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:90
 msgid "New tool: CRON generator"
-msgstr ""
+msgstr "新工具：CRON生成器"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:91
 msgid "New tool: chmod calculator"
-msgstr ""
+msgstr "新工具：chmod计算器"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:92
 msgid "New tool: QR-code generator"
-msgstr ""
+msgstr "新工具：二维码生成器"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:93
 msgid "New tool: JSON validator"
-msgstr ""
+msgstr "新工具：JSON验证器"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:94
 msgid "New tool: CSS Formatter"
-msgstr ""
+msgstr "新工具：CSS格式器"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:95
 msgid ""
@@ -162,28 +166,30 @@ msgid ""
 "Weblate and @gallegonovato), Norwegian Bokmål (@comradekingu), and "
 "Portuguese (@SantosSi)"
 msgstr ""
+"新增语言翻译： 捷克语 (@Amereyeu), 西班牙语 (Óscar Fernández Díaz on Weblate "
+"and @gallegonovato), 波克默尔语 (@comradekingu), 和葡萄牙语 (@SantosSi)"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:97
 msgid ""
 "I'm always open to suggestions. Feel free to contribute to the project with "
 "code or translations on Weblate."
-msgstr ""
+msgstr "我总是乐于接受建议。请随意为项目贡献代码或者在Weblate上贡献翻译。"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:104
 msgid "Window can be resized smaller than before"
-msgstr ""
+msgstr "窗口可以调整的比原来的更小"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:105
 msgid "Added missing icons on non GNOME desktops"
-msgstr ""
+msgstr "在非GNOME桌面上添加了缺失的图标"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:113
 msgid "XML formater: can now open .ui files (@gregorni)"
-msgstr ""
+msgstr "XML格式器：现在可以打开.ui文件了 (@gregorni)"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:114
 msgid "Markdown previewer: can open preview in external browser"
-msgstr ""
+msgstr "Markdown预览：现在可以在外部浏览器打开预览了"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:115
 msgid "Color blindness simulator: severtity can be changed via keyboard"
@@ -191,7 +197,7 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:116
 msgid "New tool: HTML formatter"
-msgstr ""
+msgstr "新工具：HTML格式器"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:117
 msgid "Turkish translation by @sabriunal"
@@ -207,51 +213,51 @@ msgstr ""
 
 #: src/window.py:76 src/ui/views/json_yaml.blp:21
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr ""
+msgstr "JSON和YAML文档互相转换"
 
 #: src/window.py:80 src/ui/views/timestamp.blp:45
 msgid "Timestamp"
-msgstr ""
+msgstr "时间戳"
 
 #: src/window.py:83 src/ui/views/timestamp.blp:21
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr ""
+msgstr "将 UNIX 时间戳与纯日期相互转换"
 
 #: src/window.py:87
 msgid "Number Bases"
-msgstr ""
+msgstr "基数"
 
 #: src/window.py:90 src/ui/views/base_converter.blp:21
 msgid "Convert numbers between bases"
-msgstr ""
+msgstr "在各基数进制之间转换"
 
 #: src/window.py:94 src/ui/views/cron_converter.blp:21
 msgid "CRON Parser"
-msgstr ""
+msgstr "CRON解析"
 
 #: src/window.py:97 src/ui/views/cron_converter.blp:22
 msgid "Convert CRON expressions to time and date"
-msgstr ""
+msgstr "将 CRON 表达式转换为时间和日期"
 
 #: src/window.py:101 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
-msgstr ""
+msgstr "逆转CRON"
 
 #: src/window.py:104 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
-msgstr ""
+msgstr "生成CRON表达式"
 
 #: src/window.py:113 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
-msgstr ""
+msgstr "用HTML格式编码和解码特殊字符"
 
 #: src/window.py:120 src/ui/views/url_encoder.blp:21
 msgid "Encode and decode special characters inside URLs"
-msgstr ""
+msgstr "编码和解码URL中的特殊字符"
 
 #: src/window.py:127 src/ui/views/gzip_compressor.blp:21
 msgid "Compress and decompress files and texts using GZip"
-msgstr ""
+msgstr "用GZip压缩和解压文件和文本"
 
 #: src/window.py:134 src/ui/views/jwt_decoder.blp:21
 msgid "Decode JWT tokens to header and payload"
@@ -259,115 +265,115 @@ msgstr ""
 
 #: src/window.py:143 src/formatters/json.py:14
 msgid "Format JSON documents"
-msgstr ""
+msgstr "格式化JSON文档"
 
 #: src/window.py:150 src/formatters/sql.py:14
 msgid "Format SQL documents"
-msgstr ""
+msgstr "格式化SQL文档"
 
 #: src/window.py:157 src/formatters/xml.py:16
 msgid "Format XML documents"
-msgstr ""
+msgstr "格式化XML文档"
 
 #: src/window.py:164 src/formatters/html.py:15
 msgid "Format HTML documents"
-msgstr ""
+msgstr "格式化HTML文档"
 
 #: src/window.py:171 src/formatters/js.py:15
 msgid "Format JavaScript documents"
-msgstr ""
+msgstr "格式化JS文档"
 
 #: src/window.py:178 src/formatters/css.py:14
 msgid "Format CSS documents"
-msgstr ""
+msgstr "格式化CSS文档"
 
 #: src/window.py:187 src/ui/views/hash_generator.blp:21
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
-msgstr ""
+msgstr "计算MD5、SHA1、SHA256和SHA512哈希并检查完整性"
 
 #: src/window.py:194 src/ui/views/lorem_generator.blp:21
 msgid "Generate lorem ipsum placeholder text"
-msgstr ""
+msgstr "生成假数乱文占位文本"
 
 #: src/window.py:201 src/ui/views/uuid_generator.blp:21
 msgid "Generate Universally Unique IDs (UUID)"
-msgstr ""
+msgstr "生成通用唯一识别码（UUID）"
 
 #: src/window.py:205
 msgid "Random"
-msgstr ""
+msgstr "随机"
 
 #: src/window.py:208 src/ui/views/random_generator.blp:21
 msgid "Generate random numbers and strings"
-msgstr ""
+msgstr "生成随机数和字符串"
 
 #: src/window.py:212 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
-msgstr ""
+msgstr "chmod计算器"
 
 #: src/window.py:215 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
-msgstr ""
+msgstr "计算值以使用 chmod 修改权限"
 
 #: src/window.py:219
 msgid "QR Code"
-msgstr ""
+msgstr "二维码"
 
 #: src/window.py:222 src/ui/views/qrcode_generator.blp:21
 msgid "Create custom QR Codes"
-msgstr ""
+msgstr "创建自定义的二维码"
 
 #: src/window.py:228 src/ui/views/text_inspector.blp:20
 msgid "Text Inspector & Case Converter"
-msgstr ""
+msgstr "文本检查器和大小写转化器"
 
 #: src/window.py:231 src/ui/views/text_inspector.blp:21
 msgid "View statistics about text and change sentence cases"
-msgstr ""
+msgstr "查看有关文本的统计信息和更改句子大小写"
 
 #: src/window.py:235
 msgid "Regex Tester"
-msgstr ""
+msgstr "正则表达式测试器"
 
 #: src/window.py:238 src/ui/views/regex_tester.blp:21
 msgid "Find matching strings inside a text"
-msgstr ""
+msgstr "在文本内查找匹配的字符串"
 
 #: src/window.py:242 src/ui/views/text_diff.blp:20
 msgid "Text Diff"
-msgstr ""
+msgstr "文本对比"
 
 #: src/window.py:245 src/ui/views/text_diff.blp:21
 msgid "Analyze two texts and find differences"
-msgstr ""
+msgstr "分析两个文本并找出不同的地方"
 
 #: src/window.py:249 src/ui/views/xml_validator.blp:20
 msgid "XML Scheme Validator"
-msgstr ""
+msgstr "XML 架构验证器"
 
 #: src/window.py:252 src/ui/views/xml_validator.blp:21
 msgid "Check an XML file against an XSD schema"
-msgstr ""
+msgstr "根据 XSD 架构检查 XML 文件"
 
 #: src/window.py:256 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
-msgstr ""
+msgstr "JSON 架构验证器"
 
 #: src/window.py:259 src/ui/views/json_validator.blp:20
 msgid "Check a JSON file against a JSON schema"
-msgstr ""
+msgstr "根据 JSON 架构检查 JSON 文件"
 
 #: src/window.py:266 src/ui/views/markdown_preview.blp:21
 msgid "Preview markdown code as you type"
-msgstr ""
+msgstr "预览你输入的markdown代码"
 
 #: src/window.py:272 src/ui/views/contrast_checker.blp:20
 msgid "Contrast Checker"
-msgstr ""
+msgstr "对比度检查器"
 
 #: src/window.py:275 src/ui/views/contrast_checker.blp:21
 msgid "Check a color combination for WCAG compliance"
-msgstr ""
+msgstr "检查颜色组合是否符合 WCAG 标准"
 
 #: src/window.py:279
 msgid "Color Blindness"
@@ -379,76 +385,76 @@ msgstr ""
 
 #: src/window.py:286 src/ui/views/image_converter.blp:20
 msgid "Image Format Converter"
-msgstr ""
+msgstr "图片格式转换器"
 
 #: src/window.py:289 src/ui/views/image_converter.blp:21
 msgid "Convert images to different formats"
-msgstr ""
+msgstr "转换图片到不同的格式"
 
 #: src/window.py:295 src/ui/views/certificate_parser.blp:20
 msgid "Certificate Parser"
-msgstr ""
+msgstr "证书解析器"
 
 #: src/window.py:298 src/ui/views/certificate_parser.blp:21
 msgid "View certificates contents"
-msgstr ""
+msgstr "查看证书内容"
 
 #: src/window.py:302
 msgid "Certificate Signing Request"
-msgstr ""
+msgstr "证书签名请求"
 
 #: src/window.py:305 src/ui/views/certificate_request_generator.blp:20
 msgid "Generate certificate signing requests"
-msgstr ""
+msgstr "生成证书签名请求"
 
 #: src/window.py:312
 msgid "Converters"
-msgstr ""
+msgstr "转换器"
 
 #: src/window.py:317
 msgid "Encoders"
-msgstr ""
+msgstr "编码器"
 
 #: src/window.py:322
 msgid "Formatters"
-msgstr ""
+msgstr "格式器"
 
 #: src/window.py:327
 msgid "Generators"
-msgstr ""
+msgstr "生成器"
 
 #: src/window.py:332 src/ui/views/regex_tester.blp:50
 #: src/ui/views/text_inspector.blp:104 src/ui/views/text_inspector.blp:160
 msgid "Text"
-msgstr ""
+msgstr "文本"
 
 #: src/window.py:337 src/views/certificate_parser.py:92
 msgid "Certificates"
-msgstr ""
+msgstr "证书"
 
 #: src/window.py:342
 msgid "Graphics"
-msgstr ""
+msgstr "图形"
 
 #. change view and save previous
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:52
 #: src/widgets/text_file_area.py:61 src/widgets/text_file_area.py:173
 msgid "Opening file..."
-msgstr ""
+msgstr "打开文件..."
 
 #: src/widgets/image_area.py:83 src/widgets/text_area.py:123
 #: src/widgets/text_file_area.py:137 src/views/certificate_parser.py:60
 msgid "Cannot open more than one file"
-msgstr ""
+msgstr "无法打开多个文件"
 
 #: src/widgets/image_area.py:109
 msgid "Opening image..."
-msgstr ""
+msgstr "打开图片..."
 
 #: src/widgets/image_area.py:116 src/widgets/text_area.py:159
 #: src/widgets/text_file_area.py:180 src/views/certificate_parser.py:81
 msgid "Open File"
-msgstr ""
+msgstr "打开文件"
 
 #: src/widgets/image_area.py:118 src/widgets/text_area.py:161
 #: src/widgets/text_file_area.py:182 src/views/certificate_parser.py:83
@@ -457,7 +463,7 @@ msgstr ""
 #: src/ui/widgets/text_file_area.blp:76 src/ui/views/certificate_parser.blp:52
 #: src/ui/views/certificate_request_generator.blp:99
 msgid "Open"
-msgstr ""
+msgstr "打开"
 
 #: src/widgets/image_area.py:119 src/widgets/image_area.py:169
 #: src/widgets/text_area.py:162 src/widgets/text_file_area.py:183
@@ -465,21 +471,21 @@ msgstr ""
 #: src/views/certificate_request_generator.py:61
 #: src/views/image_converter.py:61 src/views/qrcode_generator.py:173
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: src/widgets/image_area.py:127
 msgid "Supported Image Formats"
-msgstr ""
+msgstr "支持的图片格式"
 
 #: src/widgets/image_area.py:159
 msgid "Saving image..."
-msgstr ""
+msgstr "保存图片..."
 
 #: src/widgets/image_area.py:166 src/widgets/text_file_area.py:295
 #: src/views/certificate_request_generator.py:121
 #: src/views/image_converter.py:58 src/views/qrcode_generator.py:170
 msgid "Save file as"
-msgstr ""
+msgstr "文件另存为"
 
 #: src/widgets/image_area.py:168 src/widgets/text_file_area.py:297
 #: src/views/certificate_request_generator.py:122
@@ -488,19 +494,19 @@ msgstr ""
 #: src/ui/widgets/image_area.blp:77 src/ui/widgets/text_file_area.blp:87
 #: src/ui/views/certificate_request_generator.blp:133
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: src/widgets/image_area.py:193
 msgid "Unable to save image."
-msgstr ""
+msgstr "不能保存图片."
 
 #: src/widgets/text_area.py:169 src/widgets/text_file_area.py:203
 msgid "Text files"
-msgstr ""
+msgstr "文本文件"
 
 #: src/widgets/text_area.py:176 src/widgets/text_file_area.py:216
 msgid "Accepted files"
-msgstr ""
+msgstr "接受的文件"
 
 #: src/widgets/text_area.py:197
 #, python-brace-format
@@ -508,36 +514,38 @@ msgid ""
 "Loading a large file ({size})\n"
 "Might take a while, please wait..."
 msgstr ""
+"加载大文件 ({size}) 中\n"
+"可能需要一段时间, 请稍等..."
 
 #: src/widgets/text_area.py:204 src/widgets/text_file_area.py:251
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr ""
+msgstr "不能打开 {file_path}: {file_content}."
 
 #: src/widgets/text_area.py:219
 msgid "File is not UTF-8 encoded."
-msgstr ""
+msgstr "文件未采用UTF-8编码。"
 
 #: src/widgets/text_file_area.py:190
 msgid "All files"
-msgstr ""
+msgstr "所有文件"
 
 #: src/widgets/text_file_area.py:197
 msgid "Text files and images"
-msgstr ""
+msgstr "文本文件和图片"
 
 #: src/widgets/text_file_area.py:209
 msgid "Images"
-msgstr ""
+msgstr "图片"
 
 #: src/widgets/text_file_area.py:288
 msgid "Saving file..."
-msgstr ""
+msgstr "正在保存文件..."
 
 #: src/widgets/text_file_area.py:327
 #, python-brace-format
 msgid "Unable to save {path}"
-msgstr ""
+msgstr "不能保存到 {path}"
 
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
 #: src/views/certificate_request_generator.py:176 src/views/formatter.py:45
@@ -546,24 +554,24 @@ msgstr ""
 #: src/views/url_encoder.py:48
 #, python-brace-format
 msgid "Error: {error}"
-msgstr ""
+msgstr "错误: {error}"
 
 #: src/views/certificate_parser.py:65
 msgid "Unsupported file"
-msgstr ""
+msgstr "不支持的文件"
 
 #: src/views/certificate_parser.py:103 src/views/reverse_cron.py:180
 #: src/ui/views/certificate_parser.blp:105 src/ui/views/reverse_cron.blp:39
 msgid "Expand All"
-msgstr ""
+msgstr "全部展开"
 
 #: src/views/certificate_parser.py:107 src/views/reverse_cron.py:184
 msgid "Collapse All"
-msgstr ""
+msgstr "全部折叠"
 
 #: src/views/certificate_parser.py:147
 msgid "Error: Cannot open this file because it is not a valid certificate."
-msgstr ""
+msgstr "错误：无法打开此文件，因为它不是有效的证书。"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:155
