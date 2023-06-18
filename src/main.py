@@ -94,6 +94,8 @@ class DevtoolboxApplication(Adw.Application):
             "Amerey https://github.com/Amereyeu",
             "gregorni https://github.com/gregorni",
             "Óscar Fernández Díaz <oscfdezdz@tuta.io>",
+            "Hari Rana https://github.com/TheEvilSkeleton",
+            "K.B.Dharun Krishna https://github.com/kbdharun",
         ])
         about_window.present()
 
