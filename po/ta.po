@@ -1,33 +1,29 @@
-# Turkish translation of me.iepure.devtoolbox.
-# Copyright (C) 2023 me.iepure.devtoolbox's copyright holder
-# SPDX-License-Identifier: GPL-3.0-or-later
-#
-# Sabri Ünal <libreajans@gmail.com>, 2023.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the devtoolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: me.iepure.devtoolbox\n"
+"Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-16 12:48+0200\n"
-"PO-Revision-Date: 2023-03-04 20:51+0300\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
-"Language-Team: Türkçe <gnome-turk@gnome.org>\n"
-"Language: tr\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.1.1\n"
-"X-Poedit-SourceCharset: utf-8\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
 msgid "@app-name@"
-msgstr "@app-name@"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:15
 msgid "Development tools at your fingertips"
-msgstr "Geliştirme araçları parmaklarınızın ucunda"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:18
 msgid ""
@@ -35,63 +31,58 @@ msgid ""
 "again that website of which you don't recall the name just for a quick "
 "conversion, this is the right app for you."
 msgstr ""
-"Doğru araç için durmadan çevrim içi arama yapmaktan ya da hızlı bir dönüşüm "
-"için adını hatırlamadığınız web sitesini tekrar bulmaktan sıkıldıysanız, bu "
-"uygulama tam sizin için."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:22
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr ""
-"Bu, en yaygın günlük geliştirme sorunlarını çözmek için güçlü ancak "
-"kullanımı kolay araçlardan oluşan bir koleksiyondur."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:25
 msgid "Includes:"
-msgstr "İçerir:"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid "JSON to YAML converter and vice-versa"
-msgstr "JSON belgelerini YAML biçimine, veya tam tersine dönüştürücü"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:28
 msgid "CRON expressions parser"
-msgstr "CRON ifadeleri ayrıştırıcı"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:29
 msgid "GZip compressor and decompressor"
-msgstr "GZip sıkıştırıcı ve açıcı"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Formatters for common programming languages"
-msgstr "Yaygın programlama dilleri için biçimlendiriciler"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:31
 msgid "Hash generators"
-msgstr "Özet oluşturucular"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "Regex tester"
-msgstr "Düzenli ifade sınayıcı"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:263
 #: src/ui/views/markdown_preview.blp:20
 msgid "Markdown Previewer"
-msgstr "Markdown Ön İzleyici"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "Image converters"
-msgstr "Resim dönüştürücüler"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Much more..."
-msgstr "Ve daha çoğu…"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:69
 #: data/me.iepure.devtoolbox.metainfo.xml.in:78
 msgid "What's new:"
-msgstr "Neler yeni:"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:71
 msgid "Window can be resized smaller than before"
@@ -127,97 +118,95 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:91
 msgid "First release"
-msgstr "İlk sürüm"
+msgstr ""
 
 #: src/window.py:76 src/ui/views/json_yaml.blp:21
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr "JSON belgelerini YAML biçimine, veya tam tersine dönüştür"
+msgstr ""
 
 #: src/window.py:80 src/ui/views/timestamp.blp:45
 msgid "Timestamp"
-msgstr "Zaman damgası"
+msgstr ""
 
 #: src/window.py:83 src/ui/views/timestamp.blp:21
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr "UNIX zaman damgalarını düz tarihlere, veya tam tersine dönüştür"
+msgstr ""
 
 #: src/window.py:87
 msgid "Number Bases"
-msgstr "Sayı Tabanları"
+msgstr ""
 
 #: src/window.py:90 src/ui/views/base_converter.blp:21
 msgid "Convert numbers between bases"
-msgstr "Sayıları tabanlar arasında dönüştür"
+msgstr ""
 
 #: src/window.py:94 src/ui/views/cron_converter.blp:21
 msgid "CRON Parser"
-msgstr "CRON Ayıklayıcı"
+msgstr ""
 
 #: src/window.py:97 src/ui/views/cron_converter.blp:22
 msgid "Convert CRON expressions to time and date"
-msgstr "CRON ifadelerini saat ve tarihe dönüştür"
+msgstr ""
 
 #: src/window.py:101 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
 msgstr ""
 
 #: src/window.py:104 src/ui/views/reverse_cron.blp:20
-#, fuzzy
 msgid "Generate CRON expressions"
-msgstr "CRON ifadesi"
+msgstr ""
 
 #: src/window.py:113 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
-msgstr "HTML biçimini kullanarak özel karakterleri kodlayın ve kodunu çözün"
+msgstr ""
 
 #: src/window.py:120 src/ui/views/url_encoder.blp:21
 msgid "Encode and decode special characters inside URLs"
-msgstr "URLʼlerin içindeki özel karakterleri kodlayın ve kodunu çözün"
+msgstr ""
 
 #: src/window.py:127 src/ui/views/gzip_compressor.blp:21
 msgid "Compress and decompress files and texts using GZip"
-msgstr "GZip kullanarak dosyaları ve metinleri sıkıştırın ve açın"
+msgstr ""
 
 #: src/window.py:134 src/ui/views/jwt_decoder.blp:21
 msgid "Decode JWT tokens to header and payload"
-msgstr "JWT jetonlarını başlığa ve yüke kodunu çözün"
+msgstr ""
 
 #: src/window.py:143 src/formatters/json.py:14
 msgid "Format JSON documents"
-msgstr "JSON belgelerini biçimlendir"
+msgstr ""
 
 #: src/window.py:150 src/formatters/sql.py:14
 msgid "Format SQL documents"
-msgstr "SQL belgelerini biçimlendir"
+msgstr ""
 
 #: src/window.py:157 src/formatters/xml.py:16
 msgid "Format XML documents"
-msgstr "XML belgelerini biçimlendir"
+msgstr ""
 
 #: src/window.py:164 src/formatters/html.py:15
 msgid "Format HTML documents"
-msgstr "HTML belgelerini biçimlendir"
+msgstr ""
 
 #: src/window.py:171 src/formatters/js.py:15
 msgid "Format JavaScript documents"
-msgstr "JavaScript belgelerini biçimlendir"
+msgstr ""
 
 #: src/window.py:178 src/formatters/css.py:14
 msgid "Format CSS documents"
-msgstr "CSS belgelerini biçimlendir"
+msgstr ""
 
 #: src/window.py:187 src/ui/views/hash_generator.blp:21
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
 msgstr ""
-"MD5, SHA1, SHA256 ve SHA512 özetlerini hesaplayın ve bütünlüğü denetleyin"
 
 #: src/window.py:194 src/ui/views/lorem_generator.blp:21
 msgid "Generate lorem ipsum placeholder text"
-msgstr "Lorem ipsum yer tutucu metin oluştur"
+msgstr ""
 
 #: src/window.py:201 src/ui/views/uuid_generator.blp:21
 msgid "Generate Universally Unique IDs (UUID)"
-msgstr "Evrensel Benzersiz Kimlik Oluştur (UUID)"
+msgstr ""
 
 #: src/window.py:205
 msgid "Random"
@@ -228,9 +217,8 @@ msgid "Generate random numbers and strings"
 msgstr ""
 
 #: src/window.py:212 src/ui/views/chmod_calculator.blp:19
-#, fuzzy
 msgid "Chmod Calculator"
-msgstr "Hesaplanacak özet"
+msgstr ""
 
 #: src/window.py:215 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
@@ -246,83 +234,79 @@ msgstr ""
 
 #: src/window.py:228 src/ui/views/text_inspector.blp:20
 msgid "Text Inspector & Case Converter"
-msgstr "Metin İnceleyici ve Durum Dönüştürücü"
+msgstr ""
 
 #: src/window.py:231 src/ui/views/text_inspector.blp:21
 msgid "View statistics about text and change sentence cases"
 msgstr ""
-"Metinle ilgili istatistikleri görüntüleyin ve tümce durumlarını değiştirin"
 
 #: src/window.py:235
 msgid "Regex Tester"
-msgstr "Düzenli İfade Sınayıcı"
+msgstr ""
 
 #: src/window.py:238 src/ui/views/regex_tester.blp:21
 msgid "Find matching strings inside a text"
-msgstr "Metin içinde eşleşen dizgeleri bulun"
+msgstr ""
 
 #: src/window.py:242 src/ui/views/text_diff.blp:20
 msgid "Text Diff"
-msgstr "Metin Farkı"
+msgstr ""
 
 #: src/window.py:245 src/ui/views/text_diff.blp:21
 msgid "Analyze two texts and find differences"
-msgstr "İki metni inceleyip farkları bulun"
+msgstr ""
 
 #: src/window.py:249 src/ui/views/xml_validator.blp:20
 msgid "XML Scheme Validator"
-msgstr "XML Şema Doğrulayıcı"
+msgstr ""
 
 #: src/window.py:252 src/ui/views/xml_validator.blp:21
 msgid "Check an XML file against an XSD schema"
-msgstr "XML dosyasını XSD şemasına göre denetle"
+msgstr ""
 
 #: src/window.py:256 src/ui/views/json_validator.blp:19
-#, fuzzy
 msgid "JSON Schema Validator"
-msgstr "XML Şema Doğrulayıcı"
+msgstr ""
 
 #: src/window.py:259 src/ui/views/json_validator.blp:20
-#, fuzzy
 msgid "Check a JSON file against a JSON schema"
-msgstr "XML dosyasını XSD şemasına göre denetle"
+msgstr ""
 
 #: src/window.py:266 src/ui/views/markdown_preview.blp:21
 msgid "Preview markdown code as you type"
-msgstr "Yazarken markdown kodunu ön izle"
+msgstr ""
 
 #: src/window.py:272 src/ui/views/contrast_checker.blp:20
 msgid "Contrast Checker"
-msgstr "Karşıtlık Denetleyici"
+msgstr ""
 
 #: src/window.py:275 src/ui/views/contrast_checker.blp:21
 msgid "Check a color combination for WCAG compliance"
-msgstr "WCAG uyumluluğu için renk kombinasyonunu denetle"
+msgstr ""
 
 #: src/window.py:279
 msgid "Color Blindness"
-msgstr "Renk Körlüğü"
+msgstr ""
 
 #: src/window.py:282 src/ui/views/colorblindness_simulator.blp:21
 msgid "Simulate color blindness in images"
-msgstr "Resimde renk körlüğünü simüle et"
+msgstr ""
 
 #: src/window.py:286 src/ui/views/image_converter.blp:20
 msgid "Image Format Converter"
-msgstr "Resim Biçimi Dönüştürücü"
+msgstr ""
 
 #: src/window.py:289 src/ui/views/image_converter.blp:21
 msgid "Convert images to different formats"
-msgstr "Resimleri farklı biçimlere dönüştür"
+msgstr ""
 
 #: src/window.py:295 src/ui/views/certificate_parser.blp:20
 msgid "Certificate Parser"
 msgstr ""
 
 #: src/window.py:298 src/ui/views/certificate_parser.blp:21
-#, fuzzy
 msgid "View certificates contents"
-msgstr "İçeriğini görüntülemek için bu dosyayı kaydedin"
+msgstr ""
 
 #: src/window.py:302
 msgid "Certificate Signing Request"
@@ -334,24 +318,24 @@ msgstr ""
 
 #: src/window.py:312
 msgid "Converters"
-msgstr "Dönüştürücüler"
+msgstr ""
 
 #: src/window.py:317
 msgid "Encoders"
-msgstr "Kodlayıcılar"
+msgstr ""
 
 #: src/window.py:322
 msgid "Formatters"
-msgstr "Biçimlendiriciler"
+msgstr ""
 
 #: src/window.py:327
 msgid "Generators"
-msgstr "Oluşturucular"
+msgstr ""
 
 #: src/window.py:332 src/ui/views/regex_tester.blp:50
 #: src/ui/views/text_inspector.blp:104 src/ui/views/text_inspector.blp:160
 msgid "Text"
-msgstr "Metin"
+msgstr ""
 
 #: src/window.py:337 src/views/certificate_parser.py:92
 msgid "Certificates"
@@ -359,28 +343,27 @@ msgstr ""
 
 #: src/window.py:342
 msgid "Graphics"
-msgstr "Grafik"
+msgstr ""
 
 #. change view and save previous
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:52
 #: src/widgets/text_file_area.py:61 src/widgets/text_file_area.py:173
 msgid "Opening file..."
-msgstr "Dosya açılıyor..."
+msgstr ""
 
 #: src/widgets/image_area.py:83 src/widgets/text_area.py:123
 #: src/widgets/text_file_area.py:137 src/views/certificate_parser.py:60
-#, fuzzy
 msgid "Cannot open more than one file"
-msgstr "Görüntüden ya da dosyadan açılamıyor"
+msgstr ""
 
 #: src/widgets/image_area.py:109
 msgid "Opening image..."
-msgstr "Resim açılıyor..."
+msgstr ""
 
 #: src/widgets/image_area.py:116 src/widgets/text_area.py:159
 #: src/widgets/text_file_area.py:180 src/views/certificate_parser.py:81
 msgid "Open File"
-msgstr "Dosya Aç"
+msgstr ""
 
 #: src/widgets/image_area.py:118 src/widgets/text_area.py:161
 #: src/widgets/text_file_area.py:182 src/views/certificate_parser.py:83
@@ -389,7 +372,7 @@ msgstr "Dosya Aç"
 #: src/ui/widgets/text_file_area.blp:76 src/ui/views/certificate_parser.blp:52
 #: src/ui/views/certificate_request_generator.blp:99
 msgid "Open"
-msgstr "Aç"
+msgstr ""
 
 #: src/widgets/image_area.py:119 src/widgets/image_area.py:169
 #: src/widgets/text_area.py:162 src/widgets/text_file_area.py:183
@@ -397,7 +380,7 @@ msgstr "Aç"
 #: src/views/certificate_request_generator.py:61
 #: src/views/image_converter.py:61 src/views/qrcode_generator.py:173
 msgid "Cancel"
-msgstr "İptal Et"
+msgstr ""
 
 #: src/widgets/image_area.py:127
 msgid "Supported Image Formats"
@@ -405,13 +388,13 @@ msgstr ""
 
 #: src/widgets/image_area.py:159
 msgid "Saving image..."
-msgstr "Resimler kaydediliyor..."
+msgstr ""
 
 #: src/widgets/image_area.py:166 src/widgets/text_file_area.py:295
 #: src/views/certificate_request_generator.py:121
 #: src/views/image_converter.py:58 src/views/qrcode_generator.py:170
 msgid "Save file as"
-msgstr "Dosyayı farklı kaydet"
+msgstr ""
 
 #: src/widgets/image_area.py:168 src/widgets/text_file_area.py:297
 #: src/views/certificate_request_generator.py:122
@@ -420,19 +403,19 @@ msgstr "Dosyayı farklı kaydet"
 #: src/ui/widgets/image_area.blp:77 src/ui/widgets/text_file_area.blp:87
 #: src/ui/views/certificate_request_generator.blp:133
 msgid "Save"
-msgstr "Kayde"
+msgstr ""
 
 #: src/widgets/image_area.py:193
 msgid "Unable to save image."
-msgstr "Resim kaydedilemedi."
+msgstr ""
 
 #: src/widgets/text_area.py:169 src/widgets/text_file_area.py:203
 msgid "Text files"
-msgstr "Metin dosyaları"
+msgstr ""
 
 #: src/widgets/text_area.py:176 src/widgets/text_file_area.py:216
 msgid "Accepted files"
-msgstr "Kabul edilen dosyalar"
+msgstr ""
 
 #: src/widgets/text_area.py:197
 #, python-brace-format
@@ -452,24 +435,24 @@ msgstr ""
 
 #: src/widgets/text_file_area.py:190
 msgid "All files"
-msgstr "Tüm dosyalar"
+msgstr ""
 
 #: src/widgets/text_file_area.py:197
 msgid "Text files and images"
-msgstr "Metin dosyaları ve resimler"
+msgstr ""
 
 #: src/widgets/text_file_area.py:209
 msgid "Images"
-msgstr "Resimler"
+msgstr ""
 
 #: src/widgets/text_file_area.py:288
 msgid "Saving file..."
-msgstr "Dosya kaydediliyor..."
+msgstr ""
 
 #: src/widgets/text_file_area.py:327
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Unable to save {path}"
-msgstr "Resim kaydedilemedi."
+msgstr ""
 
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
 #: src/views/certificate_request_generator.py:176 src/views/formatter.py:45
@@ -478,12 +461,11 @@ msgstr "Resim kaydedilemedi."
 #: src/views/url_encoder.py:48
 #, python-brace-format
 msgid "Error: {error}"
-msgstr "Hata: {error}"
+msgstr ""
 
 #: src/views/certificate_parser.py:65
-#, fuzzy
 msgid "Unsupported file"
-msgstr "Kabul edilen dosyalar"
+msgstr ""
 
 #: src/views/certificate_parser.py:103 src/views/reverse_cron.py:180
 #: src/ui/views/certificate_parser.blp:105 src/ui/views/reverse_cron.blp:39
@@ -543,9 +525,8 @@ msgstr ""
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:173
-#, fuzzy
 msgid "Extension"
-msgstr "Sürüm"
+msgstr ""
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:213
@@ -562,29 +543,26 @@ msgstr ""
 #: src/views/colorblindness_simulator.py:26 src/views/gzip_compressor.py:27
 #: src/views/image_converter.py:23
 msgid "Open folder"
-msgstr "Klasör aç"
+msgstr ""
 
 #: src/views/certificate_request_generator.py:58
-#, fuzzy
 msgid "Open Key File"
-msgstr "Dosya Aç"
+msgstr ""
 
 #: src/views/certificate_request_generator.py:67
-#, fuzzy
 msgid "All Files"
-msgstr "Tüm dosyalar"
+msgstr ""
 
 #: src/views/certificate_request_generator.py:173
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:58
 #: src/views/image_converter.py:40
 #, python-brace-format
 msgid "Successfully saved as {save_path}"
-msgstr "{save_path} olarak kaydedildi"
+msgstr ""
 
 #: src/views/certificate_request_generator.py:188
-#, fuzzy
 msgid "Save key as"
-msgstr "Dosyayı farklı kaydet"
+msgstr ""
 
 #: src/views/chmod_calculator.py:30
 msgid "Invalid value. Please check again"
@@ -594,66 +572,59 @@ msgstr ""
 #: src/views/colorblindness_simulator.py:96
 #: src/views/colorblindness_simulator.py:98
 msgid "Loading simulation..."
-msgstr "Simülasyon yükleniyor..."
+msgstr ""
 
 #: src/views/formatter.py:73
 msgid ""
 "Text is not in the correct format. Check if you misspelled something or if "
 "all parentheses are closed."
 msgstr ""
-"Metin biçimi yanlış. Bir şeyi yanlış yazıp yazmadığınızı ya da tüm "
-"parantezlerin kapalı olup olmadığını denetleyin."
 
 #: src/views/gzip_compressor.py:29
 msgid "Cannot decompress from an image or a file"
-msgstr "Görüntüden ya da dosyadan açılamıyor"
+msgstr ""
 
 #: src/views/gzip_compressor.py:126
 msgid "Please save this file to view its contents"
-msgstr "İçeriğini görüntülemek için bu dosyayı kaydedin"
+msgstr ""
 
 #: src/views/hash_generator.py:125
 msgid "Hashes match!"
-msgstr "Özetler uyuşuyor!"
+msgstr ""
 
 #: src/views/hash_generator.py:127
 msgid "The integrity is verified."
-msgstr "Bütünlük doğrulandı."
+msgstr ""
 
 #: src/views/hash_generator.py:135
 msgid "Warning, integrity cannot be verified!"
-msgstr "Uyarı, bütünlük doğrulanamıyor!"
+msgstr ""
 
 #: src/views/hash_generator.py:137
 msgid ""
 "The calculated hash and the provided one do not match. Check again and if "
 "this is a file you downloaded from the Internet re-download it."
 msgstr ""
-"Hesaplanan özet ile sağlanan özet eşleşmiyor. Tekrar denetleyin ve bu "
-"internetten indirdiğiniz bir dosyaysa tekrar indirin."
 
 #: src/views/json_validator.py:77 src/views/xml_validator.py:76
 msgid "Valid!"
-msgstr "Geçerli!"
+msgstr ""
 
 #: src/views/json_validator.py:79
-#, fuzzy
 msgid "JSON is compliant with the provided JSON schema."
-msgstr "XML, sağlanan XSD şemasıyla uyumludur."
+msgstr ""
 
 #: src/views/json_validator.py:87 src/views/json_validator.py:97
 #: src/views/xml_validator.py:86
 msgid "Invalid!"
-msgstr "Geçersiz!"
+msgstr ""
 
 #: src/views/json_validator.py:89
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "JSON is not compliant with the provided JSON scheme:\n"
 "{validation_error}"
 msgstr ""
-"XML, sağlanan XSD şemasıyla uyumsuz:\n"
-"{xsd_error}"
 
 #: src/views/json_validator.py:99
 #, python-brace-format
@@ -714,9 +685,8 @@ msgstr ""
 #: src/views/reverse_cron.py:244 src/views/reverse_cron.py:358
 #: src/ui/views/reverse_cron.blp:299 src/ui/views/reverse_cron.blp:344
 #: src/ui/views/reverse_cron.blp:367
-#, fuzzy
 msgid "May"
-msgstr "Gün"
+msgstr ""
 
 #: src/views/reverse_cron.py:245 src/views/reverse_cron.py:359
 #: src/ui/views/reverse_cron.blp:300 src/ui/views/reverse_cron.blp:345
@@ -804,7 +774,7 @@ msgstr ""
 
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
-msgstr "XML, sağlanan XSD şemasıyla uyumludur."
+msgstr ""
 
 #: src/views/xml_validator.py:88
 #, python-brace-format
@@ -812,16 +782,14 @@ msgid ""
 "XML is not compliant with the provided XSD scheme:\n"
 "{xsd_error}"
 msgstr ""
-"XML, sağlanan XSD şemasıyla uyumsuz:\n"
-"{xsd_error}"
 
 #: src/ui/window.blp:29
 msgid "Show/hide sidebar"
-msgstr "Kenar çubuğunu göster/gizle"
+msgstr ""
 
 #: src/ui/window.blp:57
 msgid "_About Dev Toolbox"
-msgstr "Dev Toolbox _Hakkında"
+msgstr ""
 
 #: src/ui/about_window.blp:11
 msgid ""
@@ -830,71 +798,69 @@ msgid ""
 msgstr ""
 
 #: src/ui/about_window.blp:12
-#, fuzzy
 msgid "Development tools at your figertips"
-msgstr "Geliştirme araçları parmaklarınızın ucunda"
+msgstr ""
 
 #. TRANSLATORS: replace with your name (with optional email or website)
 #: src/ui/about_window.blp:19
 msgid "translator-credits"
-msgstr "Sabri Ünal <libreajans@gmail.com>"
+msgstr ""
 
 #: src/ui/widgets/date_area.blp:46 src/ui/views/timestamp.blp:49
 msgid "Now"
-msgstr "Şimdi"
+msgstr ""
 
 #: src/ui/widgets/date_area.blp:47
 msgid "Sets the current system date and time (local timezone)"
-msgstr "Geçerli sistem tarihini ve saatini ayarlar (yerel saat dilimi)"
+msgstr ""
 
 #: src/ui/widgets/date_area.blp:66 src/ui/widgets/entry_row.blp:30
 #: src/ui/widgets/spin_area.blp:58 src/ui/widgets/text_area.blp:85
 #: src/ui/widgets/text_file_area.blp:102
 msgid "Copy to clipboard"
-msgstr "Panoya kopyala"
+msgstr ""
 
 #: src/ui/widgets/date_area.blp:89
 msgid "Year"
-msgstr "Yıl"
+msgstr ""
 
 #: src/ui/widgets/date_area.blp:122 src/ui/views/reverse_cron.blp:263
 msgid "Month"
-msgstr "Ay"
+msgstr ""
 
 #: src/ui/widgets/date_area.blp:154 src/ui/views/reverse_cron.blp:186
 msgid "Day"
-msgstr "Gün"
+msgstr ""
 
 #: src/ui/widgets/date_area.blp:192 src/ui/views/reverse_cron.blp:114
 msgid "Hours"
-msgstr "Saat"
+msgstr ""
 
 #: src/ui/widgets/date_area.blp:225 src/ui/views/reverse_cron.blp:44
 msgid "Minutes"
-msgstr "Dakika"
+msgstr ""
 
 #: src/ui/widgets/date_area.blp:257
 msgid "Seconds"
-msgstr "Saniye"
+msgstr ""
 
 #: src/ui/widgets/entry_row.blp:20
-#, fuzzy
 msgid "Generate again"
-msgstr "Oluşturulan metin"
+msgstr ""
 
 #: src/ui/widgets/entry_row.blp:40 src/ui/widgets/spin_area.blp:64
 #: src/ui/widgets/text_area.blp:91 src/ui/widgets/text_file_area.blp:108
 msgid "Paste clipboard"
-msgstr "Panodan yapıştır"
+msgstr ""
 
 #: src/ui/widgets/entry_row.blp:51 src/ui/widgets/image_area.blp:92
 #: src/ui/widgets/text_area.blp:97 src/ui/widgets/text_file_area.blp:114
 msgid "Clear input"
-msgstr "Girdiyi temizle"
+msgstr ""
 
 #: src/ui/widgets/image_area.blp:86 src/ui/widgets/text_file_area.blp:96
 msgid "Open image in another program"
-msgstr "Resmi başka programda aç"
+msgstr ""
 
 #: src/ui/widgets/theme_switcher.blp:29
 msgid "Follow system style"
@@ -909,41 +875,38 @@ msgid "Dark style"
 msgstr ""
 
 #: src/ui/widgets/webview_area.blp:61
-#, fuzzy
 msgid "Open web page in another browser"
-msgstr "Resmi başka programda aç"
+msgstr ""
 
 #: src/ui/views/base_converter.blp:20
 msgid "Number Bases Converter"
-msgstr "Sayı Tabanları Dönüştürücü"
+msgstr ""
 
 #: src/ui/views/base_converter.blp:31
 msgid "Input numbers"
-msgstr "Girdi sayıları"
+msgstr ""
 
 #: src/ui/views/base_converter.blp:34
 msgid "Decimal"
-msgstr "Ondalık"
+msgstr ""
 
 #: src/ui/views/base_converter.blp:42
 msgid "Binary"
-msgstr "İkilik"
+msgstr ""
 
 #: src/ui/views/base_converter.blp:50
 msgid "Octal"
-msgstr "Sekizlik"
+msgstr ""
 
 #: src/ui/views/base_converter.blp:58
 msgid "Hexadecimal"
-msgstr "Onaltılık"
+msgstr ""
 
 #: src/ui/views/base_converter.blp:83
 msgid ""
 "Typing an unaccepted character (i.e. 'A' in the decimal field) will cause "
 "all the fields to reset to 0."
 msgstr ""
-"Kabul edilmeyen bir karakter (örneğin: ondalık alana 'A') yazılması, tüm "
-"alanların 0 olarak sıfırlanmasını neden olur."
 
 #: src/ui/views/certificate_parser.blp:31
 #: src/ui/views/colorblindness_simulator.blp:31
@@ -955,21 +918,19 @@ msgstr ""
 #: src/ui/views/text_inspector.blp:31 src/ui/views/timestamp.blp:31
 #: src/ui/views/url_encoder.blp:31 src/ui/views/uuid_generator.blp:31
 msgid "Tool options"
-msgstr "Araç Seçenekleri"
+msgstr ""
 
 #: src/ui/views/certificate_parser.blp:34
 msgid "Certificate"
 msgstr ""
 
 #: src/ui/views/certificate_parser.blp:35
-#, fuzzy
 msgid "Open a certificate file (pem, der, cer extensions)"
-msgstr "İçeriğini görüntülemek için bu dosyayı kaydedin"
+msgstr ""
 
 #: src/ui/views/certificate_parser.blp:82
-#, fuzzy
 msgid "Open a certificate file to view its contents."
-msgstr "İçeriğini görüntülemek için bu dosyayı kaydedin"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:19
 msgid "Certificate Signing Request Generator"
@@ -1002,18 +963,16 @@ msgid "Generate a new key or use and existing one"
 msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:77
-#, fuzzy
 msgid "New"
-msgstr "Şimdi"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:78
 msgid "Exisisting"
 msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:85
-#, fuzzy
 msgid "Key File *"
-msgstr "Dosya Aç"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:86
 msgid "Open the file containing the key you want to use"
@@ -1044,9 +1003,8 @@ msgid "Save location for the generated key file"
 msgstr ""
 
 #: src/ui/views/chmod_calculator.blp:33
-#, fuzzy
 msgid "Permissions"
-msgstr "Sürüm"
+msgstr ""
 
 #: src/ui/views/chmod_calculator.blp:43
 msgid "Owner"
@@ -1082,297 +1040,289 @@ msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:20
 msgid "Color Blindness Simulator"
-msgstr "Renk Körlüğü Simülatörü"
+msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:34
 msgid "Severity"
-msgstr "Önem"
+msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:35
 msgid "Severity of the anomaly"
-msgstr "Anomalinin ciddiyeti"
+msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:71
 #: src/ui/views/text_inspector.blp:39
 msgid "Original"
-msgstr "Özgün"
+msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:78
 msgid "Protanopia"
-msgstr "Protanopi (Kırmızıyı görememe)"
+msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:88
 msgid "Deuteranopia"
-msgstr "Döteranopi (Yeşili görememe)"
+msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:92
 msgid "Tritanopia"
-msgstr "Tritanopi (Maviyi görememe)"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:34 src/ui/views/contrast_checker.blp:44
 msgid "Text color"
-msgstr "Metin rengi"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:35
 msgid "Color used for the text"
-msgstr "Metin için kullanılan renk"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:51 src/ui/views/contrast_checker.blp:61
 msgid "Background color"
-msgstr "Arka plan rengi"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:52
 msgid "Color used for the background"
-msgstr "Arka plan için kullanılan renk"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:74
 msgid "Example"
-msgstr "Örnek"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:86
 msgid "Lorem ipsum dolor sit amet"
-msgstr "Lorem ipsum dolor sit amet"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:94
 msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
-msgstr "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:115 src/ui/views/contrast_checker.blp:146
 msgid "AA"
-msgstr "AA"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:123 src/ui/views/contrast_checker.blp:185
 msgid "small"
-msgstr "küçük"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:154 src/ui/views/contrast_checker.blp:216
 msgid "large"
-msgstr "büyük"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:177 src/ui/views/contrast_checker.blp:208
 msgid "AAA"
-msgstr "AAA"
+msgstr ""
 
 #: src/ui/views/cron_converter.blp:35
 msgid "Number of dates"
-msgstr "Tarih sayısı"
+msgstr ""
 
 #: src/ui/views/cron_converter.blp:36
 msgid "Number of dates to be generated (up to 20)"
-msgstr "Oluşturulacak tarih sayısı (en fazla 20)"
+msgstr ""
 
 #: src/ui/views/cron_converter.blp:55
 msgid "Output format"
-msgstr "Çıktı biçimi"
+msgstr ""
 
 #: src/ui/views/cron_converter.blp:56
 msgid ""
 "Format used to display generated dates (<a href=\"https://strftime.org/"
 "\">python syntax</a>)"
 msgstr ""
-"Oluşturulan tarihleri görüntülemek için kullanılan biçim (<a href=\"https://"
-"strftime.org/\">python sözdizimi</a>)"
 
 #: src/ui/views/cron_converter.blp:83
 msgid "CRON expression"
-msgstr "CRON ifadesi"
+msgstr ""
 
 #: src/ui/views/cron_converter.blp:96
 msgid "Dates"
-msgstr "Tarihler"
+msgstr ""
 
 #: src/ui/views/formatter.blp:31 src/ui/views/json_yaml.blp:47
 msgid "Indentations"
-msgstr "Girintileme"
+msgstr ""
 
 #: src/ui/views/formatter.blp:32 src/ui/views/json_yaml.blp:48
 msgid "Number of spaces used for indentation"
-msgstr "Girinti için kullanılacak boşluk sayısı"
+msgstr ""
 
 #: src/ui/views/formatter.blp:61
 msgctxt "verb/action"
 msgid "Format"
-msgstr "Biçimlendir"
+msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:20
 msgid "GZip Compress & Decompress"
-msgstr "GZip Sıkıştır ve Aç"
+msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:34 src/ui/views/html_encoder.blp:34
 #: src/ui/views/json_yaml.blp:34 src/ui/views/url_encoder.blp:34
 msgid "Direction"
-msgstr "Yön"
+msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:35
 msgid "Select the desired operation"
-msgstr "İşlemi seçin"
+msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:40
 msgid "Compress"
-msgstr "Sıkıştır"
+msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:41
 msgid "Decompress"
-msgstr "Aç"
+msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:57 src/ui/views/hash_generator.blp:74
 #: src/ui/views/html_encoder.blp:58 src/ui/views/json_yaml.blp:78
 #: src/ui/views/url_encoder.blp:71
 msgid "Input"
-msgstr "Girdi"
+msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:66 src/ui/views/hash_generator.blp:83
 #: src/ui/views/html_encoder.blp:70 src/ui/views/json_yaml.blp:89
 #: src/ui/views/url_encoder.blp:82
 msgid "Output"
-msgstr "Çıktı"
+msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:94
 msgid ""
 "The compression result and the expected decompression input are base64 "
 "encoded."
-msgstr "Sıkıştırma sonucu ve beklenen açma girdisi base64 kodludur."
+msgstr ""
 
 #: src/ui/views/hash_generator.blp:20
 msgid "Hash Generator & Checker"
-msgstr "Özet Oluşturucu ve Denetleyici"
+msgstr ""
 
 #: src/ui/views/hash_generator.blp:34
 msgid "Hash to calculate"
-msgstr "Hesaplanacak özet"
+msgstr ""
 
 #: src/ui/views/hash_generator.blp:35
-#, fuzzy
 msgid "Choose the hash type to calculate"
-msgstr "Açılır listeden hesaplanacak özet türünü seçin"
+msgstr ""
 
 #: src/ui/views/hash_generator.blp:43
 msgid "Check for integrity"
-msgstr "Bütünlüğü denetle"
+msgstr ""
 
 #: src/ui/views/hash_generator.blp:44
 msgid ""
 "If enabled the calculated hash will be checked against another provided hash "
 "to verify integrity"
 msgstr ""
-"Etkinleştirilirse, hesaplanan özet, bütünlüğü doğrulamak için sağlanan başka "
-"bir özet ile karşılaştırılır"
 
 #: src/ui/views/hash_generator.blp:55
 msgid "Type the hash to check against"
-msgstr "Karşılaştırılacak özeti yazın"
+msgstr ""
 
 #: src/ui/views/html_encoder.blp:20
 msgid "HTML Encoder & Decoder"
-msgstr "HTML Kodlayıcı ve Kod Çözücü"
+msgstr ""
 
 #: src/ui/views/html_encoder.blp:35 src/ui/views/url_encoder.blp:35
 msgid "Select the desired encoding direction"
-msgstr "Kodlama yönünü seçin"
+msgstr ""
 
 #: src/ui/views/html_encoder.blp:40 src/ui/views/url_encoder.blp:40
 msgid "Encode"
-msgstr "Kodla"
+msgstr ""
 
 #: src/ui/views/html_encoder.blp:41 src/ui/views/url_encoder.blp:41
 msgid "Decode"
-msgstr "Kod Çözümle"
+msgstr ""
 
 #: src/ui/views/image_converter.blp:34
 msgctxt "noun"
 msgid "Format"
-msgstr "Biçim"
+msgstr ""
 
 #: src/ui/views/image_converter.blp:35
 msgid "Select the desired output format"
-msgstr "Çıktı biçimini seçin"
+msgstr ""
 
 #: src/ui/views/image_converter.blp:56
 msgid "Image"
-msgstr "Resim"
+msgstr ""
 
 #: src/ui/views/image_converter.blp:58
 msgid "Convert"
-msgstr "Dönüştür"
+msgstr ""
 
 #: src/ui/views/json_yaml.blp:20
 msgid "JSON - YAML Converter"
-msgstr "JSON - YAML Dönüştürücü"
+msgstr ""
 
 #: src/ui/views/json_yaml.blp:35
 msgid "Specify what format is the input and the desired output"
-msgstr "Girdi biçimini ve istenen çıktı biçimini seçin"
+msgstr ""
 
 #: src/ui/views/jwt_decoder.blp:20
 msgid "JWT tokens decoder"
-msgstr "JWT anahtarları kod çözücü"
+msgstr ""
 
 #: src/ui/views/jwt_decoder.blp:30
 msgid "Token"
-msgstr "Jeton"
+msgstr ""
 
 #: src/ui/views/jwt_decoder.blp:48
 msgid "Header"
-msgstr "Başlık"
+msgstr ""
 
 #: src/ui/views/jwt_decoder.blp:54
 msgid "Payload"
-msgstr "Yük"
+msgstr ""
 
 #: src/ui/views/lorem_generator.blp:20
 msgid "Lorem Ipsum Generator"
-msgstr "Lorem Ipsum Oluşturucu"
+msgstr ""
 
 #: src/ui/views/lorem_generator.blp:34
 msgid "Begin with \"Lorem ipsum dolor sit amet\""
-msgstr "\"Lorem ipsum dolor sit amet\" ile başla"
+msgstr ""
 
 #: src/ui/views/lorem_generator.blp:46 src/ui/views/uuid_generator.blp:51
 msgid "Amount"
-msgstr "Miktar"
+msgstr ""
 
 #: src/ui/views/lorem_generator.blp:50
 msgid "Words"
-msgstr "Sözcük"
+msgstr ""
 
 #: src/ui/views/lorem_generator.blp:51
 msgid "Sentences"
-msgstr "Tümce"
+msgstr ""
 
 #: src/ui/views/lorem_generator.blp:52
 msgid "Paragraphs"
-msgstr "Paragraf"
+msgstr ""
 
 #: src/ui/views/lorem_generator.blp:75
 msgid "Generated text"
-msgstr "Oluşturulan metin"
+msgstr ""
 
 #: src/ui/views/markdown_preview.blp:36
 msgid "Markdown"
-msgstr "Markdown"
+msgstr ""
 
 #: src/ui/views/markdown_preview.blp:49
 msgid "Preview"
-msgstr "Ön izleme"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:20
-#, fuzzy
 msgid "QR Code Generator"
-msgstr "Oluşturucular"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:31 src/ui/views/reverse_cron.blp:31
-#, fuzzy
 msgid "Tool Options"
-msgstr "Araç Seçenekleri"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:32
 msgid "Fill the required information and press 'generate'"
 msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:39
-#, fuzzy
 msgid "Generate"
-msgstr "Genel"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:45
 msgid "Content type"
@@ -1383,9 +1333,8 @@ msgid "Choose the content of the QR Code"
 msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:49 src/ui/views/qrcode_generator.blp:57
-#, fuzzy
 msgid "Text/URL"
-msgstr "Metin"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:50
 msgid "WiFi Network"
@@ -1412,18 +1361,16 @@ msgid "Network Password"
 msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:86
-#, fuzzy
 msgid "First Name *"
-msgstr "İlk sürüm"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:93
 msgid "Last Name *"
 msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:100
-#, fuzzy
 msgid "Phone Number"
-msgstr "Sayı Tabanları"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:107
 msgid "Email"
@@ -1462,19 +1409,16 @@ msgid "ZIP Code"
 msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:177
-#, fuzzy
 msgid "Country"
-msgstr "Miktar"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:189
-#, fuzzy
 msgid "Generated QR Code"
-msgstr "Oluşturulan metin"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:20
-#, fuzzy
 msgid "Random Generator"
-msgstr "Oluşturucular"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:31
 msgid "String"
@@ -1509,14 +1453,12 @@ msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 msgstr ""
 
 #: src/ui/views/random_generator.blp:101
-#, fuzzy
 msgid "Generated string"
-msgstr "Oluşturulan metin"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:118
-#, fuzzy
 msgid "Number"
-msgstr "Sayı Tabanları"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:119
 msgid "Generate a random number in the given range"
@@ -1531,17 +1473,16 @@ msgid "Range in which to generate"
 msgstr ""
 
 #: src/ui/views/random_generator.blp:169
-#, fuzzy
 msgid "Generated number"
-msgstr "Oluşturulan metin"
+msgstr ""
 
 #: src/ui/views/regex_tester.blp:20
 msgid "Regular Expression Tester"
-msgstr "Düzenli İfade Sınayıcı"
+msgstr ""
 
 #: src/ui/views/regex_tester.blp:38
 msgid "Regex to test"
-msgstr "Sınanacak Düzenli İfade"
+msgstr ""
 
 #: src/ui/views/reverse_cron.blp:54
 msgid "Every minute"
@@ -1569,9 +1510,8 @@ msgstr ""
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:99
-#, fuzzy
 msgid "Every minute between minute"
-msgstr "Sayıları tabanlar arasında dönüştür"
+msgstr ""
 
 #. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:105
@@ -1681,131 +1621,128 @@ msgid "Command to execute"
 msgstr ""
 
 #: src/ui/views/reverse_cron.blp:513
-#, fuzzy
 msgid "CRON Expression"
-msgstr "CRON ifadesi"
+msgstr ""
 
 #: src/ui/views/text_diff.blp:34
 msgid "Old Text"
-msgstr "Eski Metin"
+msgstr ""
 
 #: src/ui/views/text_diff.blp:45
 msgid "New Text"
-msgstr "Yeni Metin"
+msgstr ""
 
 #: src/ui/views/text_diff.blp:57
 msgid "Differences"
-msgstr "Farklar"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:34
 msgid "Change case"
-msgstr "Durum değiştir"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:35
 msgid "Choose a case to apply to the text"
-msgstr "Metne uygulacak düzeni seçin"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:40
 msgid "Sentence case"
-msgstr "Tümce düzeni"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:41
 msgid "lower case"
-msgstr "küçük harf"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:42
-#, fuzzy
 msgid "UPPERCASE"
-msgstr "BÜYÜK HARF"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:43
 msgid "Title Case"
-msgstr "Başlık Düzeni"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:44
 msgid "camelCase"
-msgstr "deveDüzeni"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:45
 msgid "PascalCase"
-msgstr "PascalDüzeni"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:46
 msgid "snake_case"
-msgstr "yılan_düzeni"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:47
 msgid "CONSTANT_CASE"
-msgstr "SABİT_DÜZENİ"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:48
 msgid "kebab-case"
-msgstr "kebap-düzeni"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:49
 msgid "COBOL-CASE"
-msgstr "COBOL-DÜZENİ"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:50
 msgid "Train-Case"
-msgstr "Tren-Düzeni"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:51
 msgid "aLtErNaTiNg CaSe"
-msgstr "dEğİşİm DüZeNi"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:52
 msgid "ReVeRsE aLtErNaTiNg CaSe"
-msgstr "TeRs dEğİşİm DüZeNi"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:63
 msgid "Information"
-msgstr "Bilgi"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:66
 msgid "Cursor"
-msgstr "İmleç"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:80
 msgid "Line:"
-msgstr "Satır:"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:93
 msgid "Column:"
-msgstr "Sütun:"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:118
 msgid "Characters:"
-msgstr "Karakter:"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:131
 msgid "Words:"
-msgstr "Sözcük:"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:144
 msgid "Lines:"
-msgstr "Satır:"
+msgstr ""
 
 #: src/ui/views/timestamp.blp:20
 msgid "Timestamp Converter"
-msgstr "Zaman Damgası Dönüştürücü"
+msgstr ""
 
 #: src/ui/views/timestamp.blp:34
 msgid "Timezone"
 msgstr ""
 
 #: src/ui/views/timestamp.blp:35
-#, fuzzy
 msgid "Select the desired timezone"
-msgstr "İşlemi seçin"
+msgstr ""
 
 #: src/ui/views/timestamp.blp:50
 msgid "Sets the current system timestamp"
-msgstr "Geçerli sistem zaman damgasını ayarlar"
+msgstr ""
 
 #: src/ui/views/timestamp.blp:54
 msgid "Date"
-msgstr "Tarih"
+msgstr ""
 
 #: src/ui/views/timestamp.blp:63
 msgid "ISO date (ISO 8601/RFC 3339)"
@@ -1813,132 +1750,119 @@ msgstr ""
 
 #: src/ui/views/url_encoder.blp:20
 msgid "URL Encoder & Decoder"
-msgstr "URL Kodlayıcı ve Kod Çözücü"
+msgstr ""
 
 #: src/ui/views/url_encoder.blp:47
 msgid "Space encoding"
-msgstr "Boşluk kodlama"
+msgstr ""
 
 #: src/ui/views/url_encoder.blp:48
 msgid "Select the desired encoding for the space character"
-msgstr "Boşluk karakteri için istenen kodlamayı seçin"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:20
 msgid "UUID Generator"
-msgstr "UUID Oluşturucu"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:34
 msgid "Version"
-msgstr "Sürüm"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:35
 msgid "Choose the UUID version to generate"
-msgstr "Oluşturulacak UUID sürümünü seçin"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:39
-#, fuzzy
 msgid "Version 1 (MAC address)"
-msgstr "Sürüm 1 (MAC adresi)"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:40
 msgid "Version 3"
-msgstr "Sürüm 3"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:41
 msgid "Version 4 (Random)"
-msgstr "Sürüm 4 (Rastgele)"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:42
 msgid "Version 5"
-msgstr "Sürüm 5"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:43
 msgid "Version 6 (Gregorian Time)"
-msgstr "Sürüm 6 (Gregoryan Saati)"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:44
 msgid "Version 7 (UNIX Epoch)"
-msgstr "Sürüm 7 (UNIX Zaman)"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:52
 msgid "Number of UUIDs to be generated (up to 50)"
-msgstr "Oluşturulacak UUID sayısı (en fazla 50)"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:73
 msgid "Generated UUIDs"
-msgstr "Oluşturulan UUID"
+msgstr ""
 
 #: src/ui/gtk/help-overlay.blp:15
 msgctxt "shortcut window"
 msgid "General"
-msgstr "Genel"
+msgstr ""
 
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Kısayolları Göster"
+msgstr ""
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Çık"
+msgstr ""
 
 #: src/formatters/html.py:14
-#, fuzzy
 msgid "HTML Formatter"
-msgstr "XML Biçimlendirici"
+msgstr ""
 
 #: src/formatters/html.py:17
-#, fuzzy
 msgid "Type HTML code here"
-msgstr "XML kodunu buraya yazın"
+msgstr ""
 
 #: src/formatters/js.py:14
-#, fuzzy
 msgid "JavaScript Formatter"
-msgstr "JSON Biçimlendirici"
+msgstr ""
 
 #: src/formatters/js.py:17
-#, fuzzy
 msgid "Type JavaScript code here"
-msgstr "JSON kodunu buraya yazın"
+msgstr ""
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
-msgstr "JSON Biçimlendirici"
+msgstr ""
 
 #: src/formatters/json.py:16
 msgid "Type JSON code here"
-msgstr "JSON kodunu buraya yazın"
+msgstr ""
 
 #: src/formatters/sql.py:13
 msgid "SQL Formatter"
-msgstr "SQL Biçimlendirici"
+msgstr ""
 
 #: src/formatters/sql.py:16
 msgid "Type SQL code here"
-msgstr "SQL kodunu buraya yazın"
+msgstr ""
 
 #: src/formatters/xml.py:15
 msgid "XML Formatter"
-msgstr "XML Biçimlendirici"
+msgstr ""
 
 #: src/formatters/xml.py:18
 msgid "Type XML code here"
-msgstr "XML kodunu buraya yazın"
+msgstr ""
 
 #: src/formatters/css.py:13
-#, fuzzy
 msgid "CSS Formatter"
-msgstr "SQL Biçimlendirici"
+msgstr ""
 
 #: src/formatters/css.py:16
-#, fuzzy
 msgid "Type CSS here"
-msgstr "SQL kodunu buraya yazın"
-
-#~ msgid "_Keyboard Shortcuts"
-#~ msgstr "_Klavye Kısayolları"
-
-#~ msgid "Alessandro Iepure https://ale.iepure.me"
-#~ msgstr "Sabri Ünal <libreajans@gmail.com>"
+msgstr ""
