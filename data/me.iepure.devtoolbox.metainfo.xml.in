@@ -64,6 +64,16 @@ SPDX-License-Identifier: CC0-1.0
     <display_width compare="ge">1050</display_width>
   </requires>
   <releases>
+    <release version="1.1.1" date="2023-06-18">
+      <description>
+        <p>What's new:</p>
+        <ul>
+          <li>Fixed various typos</li>
+          <li>Timestamp: fixed issue that prevented the app from launching when the system timezone was "Europe/Kyiv" </li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1" date="2023-06-16">
       <description>
         <p>What's new:</p>

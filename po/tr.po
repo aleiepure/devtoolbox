@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: me.iepure.devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-18 11:58+0200\n"
+"POT-Creation-Date: 2023-06-18 12:20+0200\n"
 "PO-Revision-Date: 2023-03-04 20:51+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -89,119 +89,134 @@ msgid "Much more..."
 msgstr "Ve daha çoğu…"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:69
-#: data/me.iepure.devtoolbox.metainfo.xml.in:92
-#: data/me.iepure.devtoolbox.metainfo.xml.in:101
+#: data/me.iepure.devtoolbox.metainfo.xml.in:79
+#: data/me.iepure.devtoolbox.metainfo.xml.in:102
+#: data/me.iepure.devtoolbox.metainfo.xml.in:111
 msgid "What's new:"
 msgstr "Neler yeni:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:71
-msgid "Upgraded to GNOME platform 44"
+msgid "Fixed various typos"
 msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:72
-msgid "Now follows the system theme"
+msgid ""
+"Timestamp: fixed issue that prevented the app from launching when the system "
+"timezone was \"Europe/Kyiv\""
 msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:73
+msgid "Updated translations"
+msgstr ""
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:81
+msgid "Upgraded to GNOME platform 44"
+msgstr ""
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:82
+msgid "Now follows the system theme"
+msgstr ""
+
+#: data/me.iepure.devtoolbox.metainfo.xml.in:83
 msgid "Timestamp: ISO8601/RFC3339 output format and timezone support"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:74
+#: data/me.iepure.devtoolbox.metainfo.xml.in:84
 msgid "Ported UIs to blueprint"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:75
+#: data/me.iepure.devtoolbox.metainfo.xml.in:85
 msgid "Improved icon"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:76
+#: data/me.iepure.devtoolbox.metainfo.xml.in:86
 #, fuzzy
 msgid "New tool: JS Formatter"
 msgstr "JSON Biçimlendirici"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:77
+#: data/me.iepure.devtoolbox.metainfo.xml.in:87
 msgid "New tool: Certificate Parser"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:78
+#: data/me.iepure.devtoolbox.metainfo.xml.in:88
 #, fuzzy
 msgid "New tool: CSR Generator"
 msgstr "Oluşturucular"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:79
+#: data/me.iepure.devtoolbox.metainfo.xml.in:89
 #, fuzzy
 msgid "New tool: Random Generator"
 msgstr "Oluşturucular"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:80
+#: data/me.iepure.devtoolbox.metainfo.xml.in:90
 msgid "New tool: CRON generator"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:81
+#: data/me.iepure.devtoolbox.metainfo.xml.in:91
 #, fuzzy
 msgid "New tool: chmod calculator"
 msgstr "Hesaplanacak özet"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:82
+#: data/me.iepure.devtoolbox.metainfo.xml.in:92
 #, fuzzy
 msgid "New tool: QR-code generator"
 msgstr "Oluşturucular"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:83
+#: data/me.iepure.devtoolbox.metainfo.xml.in:93
 msgid "New tool: JSON validator"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:84
+#: data/me.iepure.devtoolbox.metainfo.xml.in:94
 #, fuzzy
 msgid "New tool: CSS Formatter"
 msgstr "SQL Biçimlendirici"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:85
+#: data/me.iepure.devtoolbox.metainfo.xml.in:95
 msgid ""
 "New translations: Czech (@Amereyeu), Spanish (Óscar Fernández Díaz on "
 "Weblate and @gallegonovato), Norwegian Bokmål (@comradekingu), and "
 "Portuguese (@SantosSi)"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:87
+#: data/me.iepure.devtoolbox.metainfo.xml.in:97
 msgid ""
 "I'm always open to suggestions. Feel free to contribute to the project with "
 "code or translations on Weblate."
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:94
+#: data/me.iepure.devtoolbox.metainfo.xml.in:104
 msgid "Window can be resized smaller than before"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:95
+#: data/me.iepure.devtoolbox.metainfo.xml.in:105
 msgid "Added missing icons on non GNOME desktops"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:103
+#: data/me.iepure.devtoolbox.metainfo.xml.in:113
 msgid "XML formater: can now open .ui files (@gregorni)"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:104
+#: data/me.iepure.devtoolbox.metainfo.xml.in:114
 msgid "Markdown previewer: can open preview in external browser"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:105
+#: data/me.iepure.devtoolbox.metainfo.xml.in:115
 msgid "Color blindness simulator: severtity can be changed via keyboard"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:106
+#: data/me.iepure.devtoolbox.metainfo.xml.in:116
 msgid "New tool: HTML formatter"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:107
+#: data/me.iepure.devtoolbox.metainfo.xml.in:117
 msgid "Turkish translation by @sabriunal"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:108
+#: data/me.iepure.devtoolbox.metainfo.xml.in:118
 msgid "Brasilian Portuguese translation by @rffontenelle"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:114
+#: data/me.iepure.devtoolbox.metainfo.xml.in:124
 msgid "First release"
 msgstr "İlk sürüm"
 
