@@ -1,14 +1,14 @@
-# SOME DESCRIPTIVE TITLE.
+# Czech translation for Devtoolbox.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the devtoolbox package.
-# FIRST AUTHOR Amerey.eu <info@amerey.eu>, 2023.
+# Amerey.eu <info@amerey.eu>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-18 12:20+0200\n"
-"PO-Revision-Date: 2023-03-22 13:59+0100\n"
+"PO-Revision-Date: 2023-06-25 22:35+0200\n"
 "Last-Translator: Amerey.eu <info@amerey.eu>\n"
 "Language-Team: \n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -91,83 +91,80 @@ msgstr "Mnohem více..."
 #: data/me.iepure.devtoolbox.metainfo.xml.in:102
 #: data/me.iepure.devtoolbox.metainfo.xml.in:111
 msgid "What's new:"
-msgstr ""
+msgstr "Co je nového:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:71
 msgid "Fixed various typos"
-msgstr ""
+msgstr "Opraveny různé překlepy"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:72
 msgid ""
 "Timestamp: fixed issue that prevented the app from launching when the system "
 "timezone was \"Europe/Kyiv\""
 msgstr ""
+"Časové razítko: opraven problém, který bránil spuštění aplikace, když bylo "
+"systémové časové pásmo „Evropa/Kyjev“"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:73
 msgid "Updated translations"
-msgstr ""
+msgstr "Aktualizované překlady"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:81
 msgid "Upgraded to GNOME platform 44"
-msgstr ""
+msgstr "Upgradováno na platformu GNOME 44"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:82
 msgid "Now follows the system theme"
-msgstr ""
+msgstr "Nyní používá systémové téma"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:83
 msgid "Timestamp: ISO8601/RFC3339 output format and timezone support"
 msgstr ""
+"Časové razítko: Výstupní formát ISO8601/RFC3339 a podpora časového pásma"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:84
 msgid "Ported UIs to blueprint"
-msgstr ""
+msgstr "Přenesená uživatelská rozhraní na blueprint"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:85
 msgid "Improved icon"
-msgstr ""
+msgstr "Vylepšená ikona"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:86
-#, fuzzy
 msgid "New tool: JS Formatter"
-msgstr "Formátování JSON"
+msgstr "Nový nástroj: formátovač JS"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:87
 msgid "New tool: Certificate Parser"
-msgstr ""
+msgstr "Nový nástroj: analyzátor certifikátů"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:88
-#, fuzzy
 msgid "New tool: CSR Generator"
-msgstr "Generátory"
+msgstr "Nový nástroj: Generátor CSR"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:89
-#, fuzzy
 msgid "New tool: Random Generator"
-msgstr "Generátory"
+msgstr "Nový nástroj: Generátor náhodných čísel a textu"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:90
 msgid "New tool: CRON generator"
-msgstr ""
+msgstr "Nový nástroj: CRON generátor"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:91
-#, fuzzy
 msgid "New tool: chmod calculator"
-msgstr "Hash pro výpočet"
+msgstr "Nový nástroj: chmod kalkulačka"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:92
-#, fuzzy
 msgid "New tool: QR-code generator"
-msgstr "Generátory"
+msgstr "Nový nástroj: Generátor QR kódů"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:93
 msgid "New tool: JSON validator"
-msgstr ""
+msgstr "Nový nástroj: validátor JSON"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:94
-#, fuzzy
 msgid "New tool: CSS Formatter"
-msgstr "Formátování SQL"
+msgstr "Nový nástroj: CSS formátovač"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:95
 msgid ""
@@ -175,44 +172,48 @@ msgid ""
 "Weblate and @gallegonovato), Norwegian Bokmål (@comradekingu), and "
 "Portuguese (@SantosSi)"
 msgstr ""
+"Nové překlady: čeština (@Amereyeu), španělština (@gallegonovato), norština "
+"(@comradekingu) a portugalština (@SantosSi)"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:97
 msgid ""
 "I'm always open to suggestions. Feel free to contribute to the project with "
 "code or translations on Weblate."
 msgstr ""
+"Jsem vždy otevřený návrhům. Neváhejte a přispějte do projektu kódem nebo "
+"překlady na Weblate."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:104
 msgid "Window can be resized smaller than before"
-msgstr ""
+msgstr "Velikost okna lze změnit na menší než dříve"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:105
 msgid "Added missing icons on non GNOME desktops"
-msgstr ""
+msgstr "Přidány chybějící ikony v prostředích jiných než GNOME"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:113
 msgid "XML formater: can now open .ui files (@gregorni)"
-msgstr ""
+msgstr "Formátovač XML: nyní může otevírat soubory .ui (@gregorni)"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:114
 msgid "Markdown previewer: can open preview in external browser"
-msgstr ""
+msgstr "Prohlížeč Markdown: může otevřít náhled v externím prohlížeči"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:115
 msgid "Color blindness simulator: severtity can be changed via keyboard"
-msgstr ""
+msgstr "Simulátor barevné slepoty: závažnost lze změnit pomocí klávesnice"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:116
 msgid "New tool: HTML formatter"
-msgstr ""
+msgstr "Nový nástroj: HTML formátovač"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:117
 msgid "Turkish translation by @sabriunal"
-msgstr ""
+msgstr "Turecký překlad od @sabriunal"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:118
 msgid "Brasilian Portuguese translation by @rffontenelle"
-msgstr ""
+msgstr "Překlad do brazilské portugalštiny od @rffontenelle"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:124
 msgid "First release"
@@ -248,12 +249,11 @@ msgstr "Převod výrazů CRON na čas a datum"
 
 #: src/window.py:101 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
-msgstr ""
+msgstr "Reverzní CRON"
 
 #: src/window.py:104 src/ui/views/reverse_cron.blp:20
-#, fuzzy
 msgid "Generate CRON expressions"
-msgstr "výraz CRON"
+msgstr "Generování CRON výrazů"
 
 #: src/window.py:113 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
@@ -288,14 +288,12 @@ msgid "Format HTML documents"
 msgstr "Formátování dokumentů HTML"
 
 #: src/window.py:171 src/formatters/js.py:15
-#, fuzzy
 msgid "Format JavaScript documents"
-msgstr "Formátování dokumentů JSON"
+msgstr "Formátování dokumentů JavaScript"
 
 #: src/window.py:178 src/formatters/css.py:14
-#, fuzzy
 msgid "Format CSS documents"
-msgstr "Formátování dokumentů SQL"
+msgstr "Formátování dokumentů CSS"
 
 #: src/window.py:187 src/ui/views/hash_generator.blp:21
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
@@ -311,28 +309,27 @@ msgstr "Generování univerzálních jedinečných ID (UUID)"
 
 #: src/window.py:205
 msgid "Random"
-msgstr ""
+msgstr "Náhodný generátor"
 
 #: src/window.py:208 src/ui/views/random_generator.blp:21
 msgid "Generate random numbers and strings"
-msgstr ""
+msgstr "Generování náhodných čísel a řetězců"
 
 #: src/window.py:212 src/ui/views/chmod_calculator.blp:19
-#, fuzzy
 msgid "Chmod Calculator"
-msgstr "Hash pro výpočet"
+msgstr "Kalkulačka Chmod"
 
 #: src/window.py:215 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
-msgstr ""
+msgstr "Vypočítejte hodnoty pro úpravu oprávnění pomocí chmod"
 
 #: src/window.py:219
 msgid "QR Code"
-msgstr ""
+msgstr "QR kód"
 
 #: src/window.py:222 src/ui/views/qrcode_generator.blp:21
 msgid "Create custom QR Codes"
-msgstr ""
+msgstr "Vytváření vlastních QR kódů"
 
 #: src/window.py:228 src/ui/views/text_inspector.blp:20
 msgid "Text Inspector & Case Converter"
@@ -367,14 +364,12 @@ msgid "Check an XML file against an XSD schema"
 msgstr "Zkontrolujte soubor XML se schématem XSD"
 
 #: src/window.py:256 src/ui/views/json_validator.blp:19
-#, fuzzy
 msgid "JSON Schema Validator"
-msgstr "Validátor schématu XML"
+msgstr "Validátor schématu JSON"
 
 #: src/window.py:259 src/ui/views/json_validator.blp:20
-#, fuzzy
 msgid "Check a JSON file against a JSON schema"
-msgstr "Zkontrolujte soubor XML se schématem XSD"
+msgstr "Zkontrolujte soubor JSON se schématem JSON"
 
 #: src/window.py:266 src/ui/views/markdown_preview.blp:21
 msgid "Preview markdown code as you type"
@@ -406,7 +401,7 @@ msgstr "Převeďte obrázky do různých formátů"
 
 #: src/window.py:295 src/ui/views/certificate_parser.blp:20
 msgid "Certificate Parser"
-msgstr ""
+msgstr "Analyzátor certifikátu"
 
 #: src/window.py:298 src/ui/views/certificate_parser.blp:21
 msgid "View certificates contents"
@@ -457,9 +452,8 @@ msgstr "Otevírání souboru..."
 
 #: src/widgets/image_area.py:83 src/widgets/text_area.py:123
 #: src/widgets/text_file_area.py:137 src/views/certificate_parser.py:60
-#, fuzzy
 msgid "Cannot open more than one file"
-msgstr "Nelze dekomprimovat z obrázku nebo souboru"
+msgstr "Nelze otevřít více než jeden soubor"
 
 #: src/widgets/image_area.py:109
 msgid "Opening image..."
@@ -489,7 +483,7 @@ msgstr "Zrušit"
 
 #: src/widgets/image_area.py:127
 msgid "Supported Image Formats"
-msgstr ""
+msgstr "Podporované formáty obrázků"
 
 #: src/widgets/image_area.py:159
 msgid "Saving image..."
@@ -528,15 +522,17 @@ msgid ""
 "Loading a large file ({size})\n"
 "Might take a while, please wait..."
 msgstr ""
+"Načítání velkého souboru ({size})\n"
+"Může to chvíli trvat, prosím čekejte..."
 
 #: src/widgets/text_area.py:204 src/widgets/text_file_area.py:251
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr ""
+msgstr "Nelze otevřít {file_path}: {file_content}."
 
 #: src/widgets/text_area.py:219
 msgid "File is not UTF-8 encoded."
-msgstr ""
+msgstr "Soubor nemá kódování UTF-8."
 
 #: src/widgets/text_file_area.py:190
 msgid "All files"
@@ -555,9 +551,9 @@ msgid "Saving file..."
 msgstr "Ukládání souboru..."
 
 #: src/widgets/text_file_area.py:327
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Unable to save {path}"
-msgstr "Obrázek nelze uložit."
+msgstr "{path} nelze uložit"
 
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
 #: src/views/certificate_request_generator.py:176 src/views/formatter.py:45
@@ -569,40 +565,40 @@ msgid "Error: {error}"
 msgstr "Chyba: {error}"
 
 #: src/views/certificate_parser.py:65
-#, fuzzy
 msgid "Unsupported file"
-msgstr "Přijaté soubory"
+msgstr "Nepodporovaný soubor"
 
 #: src/views/certificate_parser.py:103 src/views/reverse_cron.py:180
 #: src/ui/views/certificate_parser.blp:105 src/ui/views/reverse_cron.blp:39
 msgid "Expand All"
-msgstr ""
+msgstr "Rozbalit vše"
 
 #: src/views/certificate_parser.py:107 src/views/reverse_cron.py:184
 msgid "Collapse All"
-msgstr ""
+msgstr "Sbalit vše"
 
 #: src/views/certificate_parser.py:147
 msgid "Error: Cannot open this file because it is not a valid certificate."
 msgstr ""
+"Chyba: Tento soubor nelze otevřít, protože se nejedná o platný certifikát."
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:155
 #, python-brace-format
 msgid "Identity: {identity}"
-msgstr ""
+msgstr "Identita: {identity}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:157
 #, python-brace-format
 msgid "Verified by: {verified_by}"
-msgstr ""
+msgstr "Ověřeno: {verified_by}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:159
 #, python-brace-format
 msgid "Expires: {expiration_date}"
-msgstr ""
+msgstr "Platnost vyprší: {expiration_date}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:165
@@ -631,9 +627,8 @@ msgstr ""
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:173
-#, fuzzy
 msgid "Extension"
-msgstr "Verze"
+msgstr "Rozšíření"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:213
@@ -653,12 +648,10 @@ msgid "Open folder"
 msgstr "Otevřít složku"
 
 #: src/views/certificate_request_generator.py:58
-#, fuzzy
 msgid "Open Key File"
-msgstr "Otevřít soubor"
+msgstr "Otevřít soubor s klíčem"
 
 #: src/views/certificate_request_generator.py:67
-#, fuzzy
 msgid "All Files"
 msgstr "Všechny soubory"
 
@@ -670,13 +663,12 @@ msgid "Successfully saved as {save_path}"
 msgstr "Úspěšně uloženo jako {save_path}"
 
 #: src/views/certificate_request_generator.py:188
-#, fuzzy
 msgid "Save key as"
-msgstr "Uložit soubor jako"
+msgstr "Uložit klíč jako"
 
 #: src/views/chmod_calculator.py:30
 msgid "Invalid value. Please check again"
-msgstr ""
+msgstr "Neplatná hodnota. Zkontrolujte prosím znovu"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
@@ -725,9 +717,8 @@ msgid "Valid!"
 msgstr "Platný!"
 
 #: src/views/json_validator.py:79
-#, fuzzy
 msgid "JSON is compliant with the provided JSON schema."
-msgstr "XML je v souladu s poskytnutým schématem XSD."
+msgstr "JSON je v souladu s poskytnutým schématem JSON."
 
 #: src/views/json_validator.py:87 src/views/json_validator.py:97
 #: src/views/xml_validator.py:86
@@ -735,13 +726,13 @@ msgid "Invalid!"
 msgstr "Neplatný!"
 
 #: src/views/json_validator.py:89
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "JSON is not compliant with the provided JSON scheme:\n"
 "{validation_error}"
 msgstr ""
-"XML není v souladu s poskytnutým schématem XSD:\n"
-"{xsd_error}"
+"JSON není v souladu s poskytnutým schématem JSON:\n"
+"{validation_error}"
 
 #: src/views/json_validator.py:99
 #, python-brace-format
@@ -749,11 +740,13 @@ msgid ""
 "Error in JSON schema:\n"
 "{schema_error}"
 msgstr ""
+"Chyba ve schématu JSON:\n"
+"{schema_error}"
 
 #: src/views/qrcode_generator.py:62 src/ui/views/qrcode_generator.blp:119
 #: src/ui/views/qrcode_generator.blp:127
 msgid "Not Set"
-msgstr ""
+msgstr "Nenastaveno"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
@@ -779,116 +772,115 @@ msgstr ""
 #: src/ui/views/reverse_cron.blp:295 src/ui/views/reverse_cron.blp:340
 #: src/ui/views/reverse_cron.blp:363
 msgid "January"
-msgstr ""
+msgstr "Leden"
 
 #: src/views/reverse_cron.py:241 src/views/reverse_cron.py:355
 #: src/ui/views/reverse_cron.blp:296 src/ui/views/reverse_cron.blp:341
 #: src/ui/views/reverse_cron.blp:364
 msgid "February"
-msgstr ""
+msgstr "Únor"
 
 #: src/views/reverse_cron.py:242 src/views/reverse_cron.py:356
 #: src/ui/views/reverse_cron.blp:297 src/ui/views/reverse_cron.blp:342
 #: src/ui/views/reverse_cron.blp:365
 msgid "March"
-msgstr ""
+msgstr "Březen"
 
 #: src/views/reverse_cron.py:243 src/views/reverse_cron.py:357
 #: src/ui/views/reverse_cron.blp:298 src/ui/views/reverse_cron.blp:343
 #: src/ui/views/reverse_cron.blp:366
 msgid "April"
-msgstr ""
+msgstr "Duben"
 
 #: src/views/reverse_cron.py:244 src/views/reverse_cron.py:358
 #: src/ui/views/reverse_cron.blp:299 src/ui/views/reverse_cron.blp:344
 #: src/ui/views/reverse_cron.blp:367
-#, fuzzy
 msgid "May"
-msgstr "Den"
+msgstr "Květen"
 
 #: src/views/reverse_cron.py:245 src/views/reverse_cron.py:359
 #: src/ui/views/reverse_cron.blp:300 src/ui/views/reverse_cron.blp:345
 #: src/ui/views/reverse_cron.blp:368
 msgid "June"
-msgstr ""
+msgstr "Červen"
 
 #: src/views/reverse_cron.py:246 src/views/reverse_cron.py:360
 #: src/ui/views/reverse_cron.blp:301 src/ui/views/reverse_cron.blp:346
 #: src/ui/views/reverse_cron.blp:369
 msgid "July"
-msgstr ""
+msgstr "Červenec"
 
 #: src/views/reverse_cron.py:247 src/views/reverse_cron.py:361
 #: src/ui/views/reverse_cron.blp:302 src/ui/views/reverse_cron.blp:347
 #: src/ui/views/reverse_cron.blp:370
 msgid "August"
-msgstr ""
+msgstr "Srpen"
 
 #: src/views/reverse_cron.py:248 src/views/reverse_cron.py:362
 #: src/ui/views/reverse_cron.blp:303 src/ui/views/reverse_cron.blp:348
 #: src/ui/views/reverse_cron.blp:371
 msgid "September"
-msgstr ""
+msgstr "Září"
 
 #: src/views/reverse_cron.py:249 src/views/reverse_cron.py:363
 #: src/ui/views/reverse_cron.blp:304 src/ui/views/reverse_cron.blp:349
 #: src/ui/views/reverse_cron.blp:372
 msgid "October"
-msgstr ""
+msgstr "Říjen"
 
 #: src/views/reverse_cron.py:250 src/views/reverse_cron.py:364
 #: src/ui/views/reverse_cron.blp:305 src/ui/views/reverse_cron.blp:350
 #: src/ui/views/reverse_cron.blp:373
 msgid "November"
-msgstr ""
+msgstr "Listopad"
 
 #: src/views/reverse_cron.py:251 src/views/reverse_cron.py:365
 #: src/ui/views/reverse_cron.blp:306 src/ui/views/reverse_cron.blp:351
 #: src/ui/views/reverse_cron.blp:374
 msgid "December"
-msgstr ""
+msgstr "Prosinec"
 
 #: src/views/reverse_cron.py:376 src/ui/views/reverse_cron.blp:422
 #: src/ui/views/reverse_cron.blp:446 src/ui/views/reverse_cron.blp:471
 #: src/ui/views/reverse_cron.blp:490
 msgid "Sunday"
-msgstr ""
+msgstr "Neděle"
 
 #: src/views/reverse_cron.py:377 src/ui/views/reverse_cron.blp:416
 #: src/ui/views/reverse_cron.blp:440 src/ui/views/reverse_cron.blp:465
 #: src/ui/views/reverse_cron.blp:484
 msgid "Monday"
-msgstr ""
+msgstr "Pondělí"
 
 #: src/views/reverse_cron.py:378 src/ui/views/reverse_cron.blp:417
 #: src/ui/views/reverse_cron.blp:441 src/ui/views/reverse_cron.blp:466
 #: src/ui/views/reverse_cron.blp:485
 msgid "Tuesday"
-msgstr ""
+msgstr "Úterý"
 
 #: src/views/reverse_cron.py:379 src/ui/views/reverse_cron.blp:418
 #: src/ui/views/reverse_cron.blp:442 src/ui/views/reverse_cron.blp:467
 #: src/ui/views/reverse_cron.blp:486
 msgid "Wednesday"
-msgstr ""
+msgstr "Středa"
 
 #: src/views/reverse_cron.py:380 src/ui/views/reverse_cron.blp:419
 #: src/ui/views/reverse_cron.blp:443 src/ui/views/reverse_cron.blp:468
 #: src/ui/views/reverse_cron.blp:487
 msgid "Thursday"
-msgstr ""
+msgstr "Čtvrtek"
 
 #: src/views/reverse_cron.py:381 src/ui/views/reverse_cron.blp:420
 #: src/ui/views/reverse_cron.blp:444 src/ui/views/reverse_cron.blp:469
 #: src/ui/views/reverse_cron.blp:488
 msgid "Friday"
-msgstr ""
+msgstr "Pátek"
 
 #: src/views/reverse_cron.py:382 src/ui/views/reverse_cron.blp:421
 #: src/ui/views/reverse_cron.blp:445 src/ui/views/reverse_cron.blp:470
 #: src/ui/views/reverse_cron.blp:489
 msgid "Saturday"
-msgstr ""
+msgstr "Sobota"
 
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
@@ -916,6 +908,8 @@ msgid ""
 "Copyright © 2022 - 2023 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
+"Copyright © 2022 - 2023 Alessandro Iepure\n"
+"Některé ikony jsou chráněny autorským právem projektu GNOME"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
 #: src/ui/about_window.blp:19
@@ -961,9 +955,8 @@ msgid "Seconds"
 msgstr "Sekundy"
 
 #: src/ui/widgets/entry_row.blp:20
-#, fuzzy
 msgid "Generate again"
-msgstr "Vygenerovaný text"
+msgstr "Vygenerovat znovu"
 
 #: src/ui/widgets/entry_row.blp:40 src/ui/widgets/spin_area.blp:64
 #: src/ui/widgets/text_area.blp:91 src/ui/widgets/text_file_area.blp:108
@@ -981,15 +974,15 @@ msgstr "Otevřít obrázek v jiném programu"
 
 #: src/ui/widgets/theme_switcher.blp:29
 msgid "Follow system style"
-msgstr ""
+msgstr "Použít motiv systému"
 
 #: src/ui/widgets/theme_switcher.blp:43
 msgid "Light style"
-msgstr ""
+msgstr "Světlý motiv"
 
 #: src/ui/widgets/theme_switcher.blp:57
 msgid "Dark style"
-msgstr ""
+msgstr "Tmavý motiv"
 
 #: src/ui/widgets/webview_area.blp:61
 msgid "Open web page in another browser"
@@ -1040,16 +1033,15 @@ msgstr "Možnosti nástroje"
 
 #: src/ui/views/certificate_parser.blp:34
 msgid "Certificate"
-msgstr ""
+msgstr "Certifikát"
 
 #: src/ui/views/certificate_parser.blp:35
 msgid "Open a certificate file (pem, der, cer extensions)"
-msgstr ""
+msgstr "Otevřete soubor s certifikátem (přípony pem, der, cer)"
 
 #: src/ui/views/certificate_parser.blp:82
-#, fuzzy
 msgid "Open a certificate file to view its contents."
-msgstr "Uložte si prosím tento soubor, abyste viděli jeho obsah"
+msgstr "Otevřete soubor certifikátu a zobrazte jeho obsah."
 
 #: src/ui/views/certificate_request_generator.blp:19
 msgid "Certificate Signing Request Generator"
@@ -1057,43 +1049,43 @@ msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:31
 msgid "Fill the information below"
-msgstr ""
+msgstr "Vyplňte níže uvedené informace"
 
 #: src/ui/views/certificate_request_generator.blp:32
 msgid ""
 "Fill at least the required fields then press the 'Create CSR' button. An "
 "empty passphrase will generate an unecrypted CSR."
 msgstr ""
+"Vyplňte alespoň požadovaná pole a poté stiskněte tlačítko „Vytvořit CSR“. "
+"Prázdná přístupová fráze vygeneruje nešifrované CSR."
 
 #: src/ui/views/certificate_request_generator.blp:39
 msgid "Create CSR"
-msgstr ""
+msgstr "Vytvořit CSR"
 
 #: src/ui/views/certificate_request_generator.blp:69
 msgid "Passphrase"
-msgstr ""
+msgstr "Přístupové heslo"
 
 #: src/ui/views/certificate_request_generator.blp:73
 msgid "Key"
-msgstr ""
+msgstr "Klíč"
 
 #: src/ui/views/certificate_request_generator.blp:74
 msgid "Generate a new key or use and existing one"
 msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:77
-#, fuzzy
 msgid "New"
-msgstr "Nyní"
+msgstr "Nový"
 
 #: src/ui/views/certificate_request_generator.blp:78
 msgid "Exisisting"
 msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:85
-#, fuzzy
 msgid "Key File *"
-msgstr "Otevřít soubor"
+msgstr "Soubor s klíčem *"
 
 #: src/ui/views/certificate_request_generator.blp:86
 msgid "Open the file containing the key you want to use"
@@ -1109,11 +1101,11 @@ msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:111
 msgid "2048 bits"
-msgstr ""
+msgstr "2048 bitů"
 
 #: src/ui/views/certificate_request_generator.blp:112
 msgid "4096 bits"
-msgstr ""
+msgstr "4096 bitů"
 
 #: src/ui/views/certificate_request_generator.blp:119
 msgid "Key Save Location *"
@@ -1124,33 +1116,32 @@ msgid "Save location for the generated key file"
 msgstr ""
 
 #: src/ui/views/chmod_calculator.blp:33
-#, fuzzy
 msgid "Permissions"
-msgstr "Verze"
+msgstr "Oprávnění"
 
 #: src/ui/views/chmod_calculator.blp:43
 msgid "Owner"
-msgstr ""
+msgstr "Vlastník"
 
 #: src/ui/views/chmod_calculator.blp:44
 msgid "Group"
-msgstr ""
+msgstr "Skupina"
 
 #: src/ui/views/chmod_calculator.blp:45
 msgid "Others"
-msgstr ""
+msgstr "Ostatní"
 
 #: src/ui/views/chmod_calculator.blp:46
 msgid "Read"
-msgstr ""
+msgstr "Čtení"
 
 #: src/ui/views/chmod_calculator.blp:47
 msgid "Write"
-msgstr ""
+msgstr "Zápis"
 
 #: src/ui/views/chmod_calculator.blp:48
 msgid "Execute"
-msgstr ""
+msgstr "Spouštění"
 
 #: src/ui/views/chmod_calculator.blp:63
 msgid "Numeric value"
@@ -1322,9 +1313,8 @@ msgid "Hash to calculate"
 msgstr "Hash pro výpočet"
 
 #: src/ui/views/hash_generator.blp:35
-#, fuzzy
 msgid "Choose the hash type to calculate"
-msgstr "Z rozbalovací nabídky vyberte typ hash, který chcete vypočítat"
+msgstr "Vyberte typ hash, který chcete vypočítat"
 
 #: src/ui/views/hash_generator.blp:43
 msgid "Check for integrity"
@@ -1436,12 +1426,10 @@ msgid "Preview"
 msgstr "Náhled"
 
 #: src/ui/views/qrcode_generator.blp:20
-#, fuzzy
 msgid "QR Code Generator"
-msgstr "Generátory"
+msgstr "Generátor QR kódů"
 
 #: src/ui/views/qrcode_generator.blp:31 src/ui/views/reverse_cron.blp:31
-#, fuzzy
 msgid "Tool Options"
 msgstr "Možnosti nástroje"
 
@@ -1450,111 +1438,104 @@ msgid "Fill the required information and press 'generate'"
 msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:39
-#, fuzzy
 msgid "Generate"
-msgstr "Obecné"
+msgstr "Vygenerovat"
 
 #: src/ui/views/qrcode_generator.blp:45
 msgid "Content type"
-msgstr ""
+msgstr "Typ obsahu"
 
 #: src/ui/views/qrcode_generator.blp:46
 msgid "Choose the content of the QR Code"
-msgstr ""
+msgstr "Vyberte obsah QR kódu"
 
 #: src/ui/views/qrcode_generator.blp:49 src/ui/views/qrcode_generator.blp:57
-#, fuzzy
 msgid "Text/URL"
-msgstr "Text"
+msgstr "Text/URL"
 
 #: src/ui/views/qrcode_generator.blp:50
 msgid "WiFi Network"
-msgstr ""
+msgstr "WiFi síť"
 
 #: src/ui/views/qrcode_generator.blp:51
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 #: src/ui/views/qrcode_generator.blp:64
 msgid "Network Name (SSID)"
-msgstr ""
+msgstr "Název sítě (SSID)"
 
 #: src/ui/views/qrcode_generator.blp:71
 msgid "Network Encryption"
-msgstr ""
+msgstr "Šifrování sítě"
 
 #: src/ui/views/qrcode_generator.blp:76
 msgid "None"
-msgstr ""
+msgstr "Žádné"
 
 #: src/ui/views/qrcode_generator.blp:82
 msgid "Network Password"
-msgstr ""
+msgstr "Síťové heslo"
 
 #: src/ui/views/qrcode_generator.blp:86
-#, fuzzy
 msgid "First Name *"
-msgstr "První verze"
+msgstr "Jméno *"
 
 #: src/ui/views/qrcode_generator.blp:93
 msgid "Last Name *"
-msgstr ""
+msgstr "Příjmení *"
 
 #: src/ui/views/qrcode_generator.blp:100
-#, fuzzy
 msgid "Phone Number"
-msgstr "Číselné základy"
+msgstr "Telefonní číslo"
 
 #: src/ui/views/qrcode_generator.blp:107
 msgid "Email"
-msgstr ""
+msgstr "E-mail"
 
 #: src/ui/views/qrcode_generator.blp:114
 msgid "Birthday"
-msgstr ""
+msgstr "Datum narození"
 
 #: src/ui/views/qrcode_generator.blp:132
 msgid "Select from calendar:"
-msgstr ""
+msgstr "Vyberte z kalendáře:"
 
 #: src/ui/views/qrcode_generator.blp:143
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/ui/views/qrcode_generator.blp:150
 msgid "Address"
-msgstr ""
+msgstr "Adresa"
 
 #: src/ui/views/qrcode_generator.blp:153
 msgid "Street"
-msgstr ""
+msgstr "Ulice"
 
 #: src/ui/views/qrcode_generator.blp:159
 msgid "City"
-msgstr ""
+msgstr "Město"
 
 #: src/ui/views/qrcode_generator.blp:165
 msgid "State"
-msgstr ""
+msgstr "Stát"
 
 #: src/ui/views/qrcode_generator.blp:171
 msgid "ZIP Code"
-msgstr ""
+msgstr "PSČ"
 
 #: src/ui/views/qrcode_generator.blp:177
-#, fuzzy
 msgid "Country"
-msgstr "Počet"
+msgstr "Země"
 
 #: src/ui/views/qrcode_generator.blp:189
-#, fuzzy
 msgid "Generated QR Code"
-msgstr "Vygenerovaný text"
+msgstr "Vygenerovaný QR Kód"
 
 #: src/ui/views/random_generator.blp:20
-#, fuzzy
 msgid "Random Generator"
-msgstr "Generátory"
+msgstr "Náhodný generátor"
 
 #: src/ui/views/random_generator.blp:31
 msgid "String"
@@ -1589,14 +1570,12 @@ msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 msgstr ""
 
 #: src/ui/views/random_generator.blp:101
-#, fuzzy
 msgid "Generated string"
 msgstr "Vygenerovaný text"
 
 #: src/ui/views/random_generator.blp:118
-#, fuzzy
 msgid "Number"
-msgstr "Číselné základy"
+msgstr "Číslo"
 
 #: src/ui/views/random_generator.blp:119
 msgid "Generate a random number in the given range"
@@ -1611,9 +1590,8 @@ msgid "Range in which to generate"
 msgstr ""
 
 #: src/ui/views/random_generator.blp:169
-#, fuzzy
 msgid "Generated number"
-msgstr "Vygenerovaný text"
+msgstr "Vygenerované číslo"
 
 #: src/ui/views/regex_tester.blp:20
 msgid "Regular Expression Tester"
@@ -1649,9 +1627,8 @@ msgstr ""
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:99
-#, fuzzy
 msgid "Every minute between minute"
-msgstr "Převod čísel mezi základy"
+msgstr "Každou minutu mezi minutou"
 
 #. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:105
@@ -1758,10 +1735,9 @@ msgstr ""
 
 #: src/ui/views/reverse_cron.blp:499
 msgid "Command to execute"
-msgstr ""
+msgstr "Příkaz k provedení"
 
 #: src/ui/views/reverse_cron.blp:513
-#, fuzzy
 msgid "CRON Expression"
 msgstr "výraz CRON"
 
@@ -1794,7 +1770,6 @@ msgid "lower case"
 msgstr "malá písmena"
 
 #: src/ui/views/text_inspector.blp:42
-#, fuzzy
 msgid "UPPERCASE"
 msgstr "VELKÁ PÍSMENA"
 
@@ -1872,12 +1847,11 @@ msgstr "Převodník časových razítek"
 
 #: src/ui/views/timestamp.blp:34
 msgid "Timezone"
-msgstr ""
+msgstr "Časové pásmo"
 
 #: src/ui/views/timestamp.blp:35
-#, fuzzy
 msgid "Select the desired timezone"
-msgstr "Vyberte požadovanou operaci"
+msgstr "Vyberte požadované časové pásmo"
 
 #: src/ui/views/timestamp.blp:50
 msgid "Sets the current system timestamp"
@@ -1889,7 +1863,7 @@ msgstr "Datum"
 
 #: src/ui/views/timestamp.blp:63
 msgid "ISO date (ISO 8601/RFC 3339)"
-msgstr ""
+msgstr "Datum ISO (ISO 8601/RFC 3339)"
 
 #: src/ui/views/url_encoder.blp:20
 msgid "URL Encoder & Decoder"
@@ -1916,7 +1890,6 @@ msgid "Choose the UUID version to generate"
 msgstr "Vyberte verzi UUID, kterou chcete vygenerovat"
 
 #: src/ui/views/uuid_generator.blp:39
-#, fuzzy
 msgid "Version 1 (MAC address)"
 msgstr "Verze 1 (MAC adresa)"
 
@@ -1964,24 +1937,20 @@ msgid "Quit"
 msgstr "Ukončit"
 
 #: src/formatters/html.py:14
-#, fuzzy
 msgid "HTML Formatter"
-msgstr "Formátování XML"
+msgstr "Formátování HTML"
 
 #: src/formatters/html.py:17
-#, fuzzy
 msgid "Type HTML code here"
-msgstr "Zde zadejte kód XML"
+msgstr "Zde zadejte kód HTML"
 
 #: src/formatters/js.py:14
-#, fuzzy
 msgid "JavaScript Formatter"
-msgstr "Formátování JSON"
+msgstr "Formátování JavaScript"
 
 #: src/formatters/js.py:17
-#, fuzzy
 msgid "Type JavaScript code here"
-msgstr "Zde zadejte kód JSON"
+msgstr "Zde zadejte kód JavaScript"
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
@@ -2008,14 +1977,12 @@ msgid "Type XML code here"
 msgstr "Zde zadejte kód XML"
 
 #: src/formatters/css.py:13
-#, fuzzy
 msgid "CSS Formatter"
-msgstr "Formátování SQL"
+msgstr "Formátování CSS"
 
 #: src/formatters/css.py:16
-#, fuzzy
 msgid "Type CSS here"
-msgstr "Zde zadejte kód SQL"
+msgstr "Zde zadejte kód CSS"
 
 #, fuzzy
 #~ msgid "Development tools at your figertips"
