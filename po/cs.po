@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-18 12:20+0200\n"
-"PO-Revision-Date: 2023-06-25 22:35+0200\n"
+"PO-Revision-Date: 2023-06-25 23:24+0200\n"
 "Last-Translator: Amerey.eu <info@amerey.eu>\n"
 "Language-Team: \n"
 "Language: cs\n"
@@ -405,15 +405,15 @@ msgstr "Analyzátor certifikátu"
 
 #: src/window.py:298 src/ui/views/certificate_parser.blp:21
 msgid "View certificates contents"
-msgstr ""
+msgstr "Zobrazení obsahu certifikátů"
 
 #: src/window.py:302
 msgid "Certificate Signing Request"
-msgstr ""
+msgstr "Žádost o podpis certifikátu"
 
 #: src/window.py:305 src/ui/views/certificate_request_generator.blp:20
 msgid "Generate certificate signing requests"
-msgstr ""
+msgstr "Generování požadavků na podpis certifikátu"
 
 #: src/window.py:312
 msgid "Converters"
@@ -438,7 +438,7 @@ msgstr "Text"
 
 #: src/window.py:337 src/views/certificate_parser.py:92
 msgid "Certificates"
-msgstr ""
+msgstr "Certifikáty"
 
 #: src/window.py:342
 msgid "Graphics"
@@ -603,27 +603,27 @@ msgstr "Platnost vyprší: {expiration_date}"
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:165
 msgid "Basic Constraints"
-msgstr ""
+msgstr "Základní omezení"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:166
 msgid "Extended Key Usage"
-msgstr ""
+msgstr "Rozšířené použití klíče"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:167 src/views/certificate_parser.py:212
 msgid "Subject Key Identifier"
-msgstr ""
+msgstr "Předmět identifikátoru klíče"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:168
 msgid "Key Usage"
-msgstr ""
+msgstr "Použití klíče"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:169
 msgid "Subject Alternative Names"
-msgstr ""
+msgstr "Předmět alternativního názvu"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:173
@@ -633,12 +633,12 @@ msgstr "Rozšíření"
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:213
 msgid "Certificate Fingerprints"
-msgstr ""
+msgstr "Fingerprints certifikátu"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:216
 msgid "Key Identifier"
-msgstr ""
+msgstr "Identifikátor klíče"
 
 #. Toast messages
 #: src/views/certificate_request_generator.py:35
@@ -751,22 +751,22 @@ msgstr "Nenastaveno"
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
 msgid "st"
-msgstr ""
+msgstr "st"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:210
 msgid "nd"
-msgstr ""
+msgstr "nd"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:213
 msgid "rd"
-msgstr ""
+msgstr "rd"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:216
 msgid "th"
-msgstr ""
+msgstr "th"
 
 #: src/views/reverse_cron.py:240 src/views/reverse_cron.py:354
 #: src/ui/views/reverse_cron.blp:295 src/ui/views/reverse_cron.blp:340
@@ -1045,7 +1045,7 @@ msgstr "Otevřete soubor certifikátu a zobrazte jeho obsah."
 
 #: src/ui/views/certificate_request_generator.blp:19
 msgid "Certificate Signing Request Generator"
-msgstr ""
+msgstr "Generátor požadavků na podpis certifikátu"
 
 #: src/ui/views/certificate_request_generator.blp:31
 msgid "Fill the information below"
@@ -1073,7 +1073,7 @@ msgstr "Klíč"
 
 #: src/ui/views/certificate_request_generator.blp:74
 msgid "Generate a new key or use and existing one"
-msgstr ""
+msgstr "Vygenerujte nový klíč nebo použijte existující"
 
 #: src/ui/views/certificate_request_generator.blp:77
 msgid "New"
@@ -1081,7 +1081,7 @@ msgstr "Nový"
 
 #: src/ui/views/certificate_request_generator.blp:78
 msgid "Exisisting"
-msgstr ""
+msgstr "Existující"
 
 #: src/ui/views/certificate_request_generator.blp:85
 msgid "Key File *"
@@ -1089,15 +1089,15 @@ msgstr "Soubor s klíčem *"
 
 #: src/ui/views/certificate_request_generator.blp:86
 msgid "Open the file containing the key you want to use"
-msgstr ""
+msgstr "Otevřete soubor obsahující klíč, který chcete použít"
 
 #: src/ui/views/certificate_request_generator.blp:107
 msgid "Key Size"
-msgstr ""
+msgstr "Velikost klíče"
 
 #: src/ui/views/certificate_request_generator.blp:108
 msgid "Size of the new key. It will be saved on the same path as the CSR."
-msgstr ""
+msgstr "Velikost nového klíče. Bude uložen na stejném místě jako CSR."
 
 #: src/ui/views/certificate_request_generator.blp:111
 msgid "2048 bits"
@@ -1109,11 +1109,11 @@ msgstr "4096 bitů"
 
 #: src/ui/views/certificate_request_generator.blp:119
 msgid "Key Save Location *"
-msgstr ""
+msgstr "Umístění uložení klíče *"
 
 #: src/ui/views/certificate_request_generator.blp:120
 msgid "Save location for the generated key file"
-msgstr ""
+msgstr "Umístění pro vygenerovaný soubor klíče"
 
 #: src/ui/views/chmod_calculator.blp:33
 msgid "Permissions"
@@ -1145,11 +1145,11 @@ msgstr "Spouštění"
 
 #: src/ui/views/chmod_calculator.blp:63
 msgid "Numeric value"
-msgstr ""
+msgstr "Číselná hodnota"
 
 #: src/ui/views/chmod_calculator.blp:71
 msgid "Symbolic value"
-msgstr ""
+msgstr "Symbolická hodnota"
 
 #: src/ui/views/colorblindness_simulator.blp:20
 msgid "Color Blindness Simulator"
@@ -1435,7 +1435,7 @@ msgstr "Možnosti nástroje"
 
 #: src/ui/views/qrcode_generator.blp:32
 msgid "Fill the required information and press 'generate'"
-msgstr ""
+msgstr "Vyplňte požadované informace a stiskněte 'vygenerovat'"
 
 #: src/ui/views/qrcode_generator.blp:39
 msgid "Generate"
@@ -1539,35 +1539,35 @@ msgstr "Náhodný generátor"
 
 #: src/ui/views/random_generator.blp:31
 msgid "String"
-msgstr ""
+msgstr "Řetězec"
 
 #: src/ui/views/random_generator.blp:32
 msgid "Generate a random string with the given options. ASCII characters only."
-msgstr ""
+msgstr "Generování náhodného řetězce s danými možnostmi. Pouze znaky ASCII."
 
 #: src/ui/views/random_generator.blp:35
 msgid "Length"
-msgstr ""
+msgstr "Délka"
 
 #: src/ui/views/random_generator.blp:36
 msgid "Length of the generated string"
-msgstr ""
+msgstr "Délka vygenerovaného řetězce"
 
 #: src/ui/views/random_generator.blp:55
 msgid "Uppercase letters (A-Z)"
-msgstr ""
+msgstr "Velká písmena (A–Z)"
 
 #: src/ui/views/random_generator.blp:65
 msgid "Lowercase letters (a-z)"
-msgstr ""
+msgstr "Malá písmena (a–z)"
 
 #: src/ui/views/random_generator.blp:76
 msgid "Numbers (0-9)"
-msgstr ""
+msgstr "Čísla (0-9)"
 
 #: src/ui/views/random_generator.blp:87
 msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
-msgstr ""
+msgstr "Speciální znaky (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 
 #: src/ui/views/random_generator.blp:101
 msgid "Generated string"
@@ -1579,15 +1579,15 @@ msgstr "Číslo"
 
 #: src/ui/views/random_generator.blp:119
 msgid "Generate a random number in the given range"
-msgstr ""
+msgstr "Generování náhodného čísla v daném rozsahu"
 
 #: src/ui/views/random_generator.blp:122
 msgid "Range"
-msgstr ""
+msgstr "Rozsah"
 
 #: src/ui/views/random_generator.blp:123
 msgid "Range in which to generate"
-msgstr ""
+msgstr "Rozsah, ve kterém se má generovat"
 
 #: src/ui/views/random_generator.blp:169
 msgid "Generated number"
@@ -1603,7 +1603,7 @@ msgstr "Regulární výraz k otestování"
 
 #: src/ui/views/reverse_cron.blp:54
 msgid "Every minute"
-msgstr ""
+msgstr "Každou minutu"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
@@ -1614,16 +1614,17 @@ msgstr ""
 #: src/ui/views/reverse_cron.blp:207 src/ui/views/reverse_cron.blp:284
 #: src/ui/views/reverse_cron.blp:404
 msgid "Every"
-msgstr ""
+msgstr "Každou"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #: src/ui/views/reverse_cron.blp:71
 msgid "minute(s) starting at minute"
-msgstr ""
+msgstr "minutu začínající minutou"
 
 #: src/ui/views/reverse_cron.blp:84
 msgid "Specific minute (choose one or many, no selection means every minute)"
 msgstr ""
+"Konkrétní minuta (vyberte jednu nebo více, žádný výběr znamená každou minutu)"
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:99
@@ -1633,105 +1634,111 @@ msgstr "Každou minutu mezi minutou"
 #. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:105
 msgid "and minute"
-msgstr ""
+msgstr "a minutou"
 
 #: src/ui/views/reverse_cron.blp:124
 msgid "Every hour"
-msgstr ""
+msgstr "Každou hodinu"
 
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
 #: src/ui/views/reverse_cron.blp:141
 msgid "hour(s) starting at hour"
-msgstr ""
+msgstr "hodinu počínaje hodinou"
 
 #: src/ui/views/reverse_cron.blp:154
 msgid "Specific hour (choose one or many, no selection means every hour)"
 msgstr ""
+"Konkrétní hodina (vyberte jednu nebo více, žádný výběr znamená každou hodinu)"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:170
 msgid "Every hour between hour"
-msgstr ""
+msgstr "Každou hodinu mezi hodinou"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:177
 msgid "and hour"
-msgstr ""
+msgstr "a hodinou"
 
 #: src/ui/views/reverse_cron.blp:196
 msgid "Every day"
-msgstr ""
+msgstr "Každý den"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:213
 msgid "day(s) starting on the"
-msgstr ""
+msgstr "dny začínající dne"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:219
 msgid "of the month"
-msgstr ""
+msgstr "měsíce"
 
 #: src/ui/views/reverse_cron.blp:231
 msgid ""
 "Specific day of month (choose one or many, no selection means every day)"
 msgstr ""
+"Konkrétní den v měsíci (vyberte jeden nebo více, žádný výběr znamená každý "
+"den)"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:247
 msgid "Every day between the"
-msgstr ""
+msgstr "Každý den mezi"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:254
 msgid "and the"
-msgstr ""
+msgstr "a"
 
 #: src/ui/views/reverse_cron.blp:273
 msgid "Every month"
-msgstr ""
+msgstr "Každý měsíc"
 
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
 #: src/ui/views/reverse_cron.blp:290
 msgid "month(s) starting in"
-msgstr ""
+msgstr "měsíce začínající v"
 
 #: src/ui/views/reverse_cron.blp:319
 msgid "Specific month (choose one or many, no selection means every month)"
 msgstr ""
+"Konkrétní měsíc (vyberte jeden nebo více, žádný výběr znamená každý měsíc)"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #: src/ui/views/reverse_cron.blp:335
 msgid "Every month between"
-msgstr ""
+msgstr "Každý měsíc mezi"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:358 src/ui/views/reverse_cron.blp:478
 msgid "and"
-msgstr ""
+msgstr "a"
 
 #: src/ui/views/reverse_cron.blp:383
 msgid "Weekday"
-msgstr ""
+msgstr "Konkrétní den v týdnu"
 
 #: src/ui/views/reverse_cron.blp:393
 msgid "Every weekday"
-msgstr ""
+msgstr "Každý den v týdnu"
 
 #. TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:410
 msgid "weekday(s) starting on"
-msgstr ""
+msgstr "dny v týdnu začínající dnem"
 
 #: src/ui/views/reverse_cron.blp:435
 msgid "Specific weekday (choose one or many, no selection means every weekday)"
 msgstr ""
+"Konkrétní den v týdnu (vyberte jeden nebo více, žádný výběr znamená každý "
+"den v týdnu)"
 
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:459
 msgid "Every weekday between"
-msgstr ""
+msgstr "Každý všední den mezi"
 
 #: src/ui/views/reverse_cron.blp:499
 msgid "Command to execute"
