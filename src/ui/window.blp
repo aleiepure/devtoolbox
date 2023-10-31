@@ -6,43 +6,85 @@ using Gtk 4.0;
 using Adw 1;
 
 template $DevtoolboxWindow : Adw.ApplicationWindow {
-    styles ["devel"]
-    default-width: 1200;
-    default-height: 800;
-    width-request: 1050;
-    height-request: 700;
+  styles ["devel"]
+  map => $_on_map();
+  default-width: 1200;
+  default-height: 800;
+  width-request: 930;
+  height-request: 700;
 
-    Box {
+  Adw.Breakpoint {
+    condition("max-width: 1100px")
+    setters {
+      _split_view.collapsed: true;
+      _show_sidebar_btn.visible: true;
+      _toggle_sidebar_btn.visible: false;
+    }
+  }
+
+  Adw.OverlaySplitView _split_view {
+    show-sidebar: bind _toggle_sidebar_btn.active;
+    max-sidebar-width: 350;
+    sidebar-width-fraction: 0.35;
+
+    sidebar: Adw.ToolbarView {
+
+      [top]
+      Adw.HeaderBar {
+        show-title: false;
+      }
+
+      content: ScrolledWindow {
+        vadjustment: Adjustment _adjustment {
+          upper: 593;
+        };
+        child: ListBox _sidebar {
+          selection-mode: single;
+          vexpand: true;
+          width-request: 256;
+
+          styles [
+            "navigation-sidebar",
+          ]
+          row-activated => $_on_sidebar_row_activated();
+        };
+      };
+    };
+
+    content: Adw.ToolbarView {
+
+      [top]
+      Adw.HeaderBar {
+        show-title: false;
+
+        [start]
+        ToggleButton _toggle_sidebar_btn {
+            icon-name: "sidebar";
+            tooltip-text: _("Show/hide sidebar");
+        }
+
+        [start]
+        Button _show_sidebar_btn {
+            visible: false;
+            icon-name: "sidebar";
+            tooltip-text: _("Show/hide sidebar");
+            clicked => $_on_sidebar_btn_clicked();
+        }
+
+        [end]
+        MenuButton _menu_btn {
+            icon-name: "open-menu";
+            menu-model: primary_menu;
+        }
+      }
+
+      content: Box {
         orientation: vertical;
 
-        // Header bar
-        Adw.HeaderBar _header_bar {
-            [title]
-            Adw.ViewSwitcherTitle _title {
-                title: "Dev Toolbox";
-                stack: _tabs_stack;
-            }
-
-            [start]
-            ToggleButton _flap_btn {
-                icon-name: "sidebar";
-                tooltip-text: _("Show/hide sidebar");
-            }
-
-            [end]
-            MenuButton _menu_btn {
-                icon-name: "open-menu";
-                menu-model: primary_menu;
-            }
-        }
-
-        // Contents
-        Box {
-            orientation: vertical;
-
-            Adw.ViewStack _tabs_stack {}
-        }
-    }
+        Adw.ViewStack _content_stack {}
+      };
+    };
+  }
 }
 
 menu primary_menu {
