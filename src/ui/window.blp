@@ -48,24 +48,65 @@ template $DevtoolboxWindow : Adw.ApplicationWindow {
           icon-name: "loupe";
           tooltip-text: _("Show/hide searchbar");
         }
+
+        [end]
+        MenuButton _fav_btn {
+          icon-name: "starred";
+          tooltip-text: _("Favorite Tools");
+
+          popover: Popover {
+            child: Adw.ViewStack _fav_stack {
+              Adw.ViewStackPage {
+                name: 'empty';
+                child: Adw.Clamp {
+                  child: Adw.StatusPage {
+                    title: _("No Favorites");
+                    description: _("Add your favorite tools here by clicking the star button beside the title");
+                    icon-name: 'starred';
+                  };
+                };
+              }
+
+              Adw.ViewStackPage {
+                name: "filled";
+                child: Box {
+                  orientation: vertical;
+                  spacing: 6;
+
+                  Label {
+                    margin-top: 6;
+                    styles ["title-4"]
+                    label: _("Favorites");
+                  }
+
+                  ScrolledWindow {
+                    vexpand: true;
+                    child: ListBox _favorites {
+                      styles ["navigation-sidebar"]
+                      selection-mode: single;
+                      row-activated => $_on_favorite_row_activated();
+                    };
+                  }
+                };
+              }
+            };
+          };
+        }
       }
 
       [top]
       SearchBar _search_bar {
         search-mode-enabled: bind _show_search_btn.active;
         child: SearchEntry _search_entry {
-            halign: center;
-            activates-default: true;
-            placeholder-text: _("Search Tools…");
-            search-delay: 500;
-            search-changed => $_on_searchentry_search_changed();
-          };
+          halign: center;
+          activates-default: true;
+          placeholder-text: _("Search Tools…");
+          search-delay: 500;
+          search-changed => $_on_searchentry_search_changed();
+        };
       }
 
       content: ScrolledWindow {
-        vadjustment: Adjustment _adjustment {
-          upper: 593;
-        };
         child: ListBox _sidebar {
           selection-mode: single;
           vexpand: true;

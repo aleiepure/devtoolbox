@@ -6,9 +6,12 @@ using Gtk 4.0;
 using Adw 1;
 
 template $UtilityTitle : Adw.Bin {
+
+  map => $_on_map();
+
   Grid {
     Button _star_btn {
-      visible: false;
+      visible: true;
       valign: center;
       margin-top: 10;
 
@@ -21,6 +24,8 @@ template $UtilityTitle : Adw.Bin {
         row: "0";
         row-span: "2";
       }
+
+      clicked => $_on_star_btn_clicked();
     }
 
     Label _title_lbl {

@@ -53,6 +53,9 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
     _show_search_btn = Gtk.Template.Child()
     _search_bar = Gtk.Template.Child()
     _search_entry = Gtk.Template.Child()
+    _fav_btn = Gtk.Template.Child()
+    _fav_stack = Gtk.Template.Child()
+    _favorites = Gtk.Template.Child()
     _sidebar = Gtk.Template.Child()
     _toggle_sidebar_btn = Gtk.Template.Child()
     _show_sidebar_btn = Gtk.Template.Child()
@@ -78,8 +81,23 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
         source._show_search_btn.set_active(new_state.get_boolean())
         self.set_state(new_state)
 
+    def _refresh_favorites(self, new_state: None, source: Gtk.Widget) -> None:
+        """
+        Callback for the win.search action
+
+        Args:
+            new_state (None): stateless action, always None
+            source (Gtk.Widget): widget that caused the activation
+
+        Returns:
+            None
+        """
+
+        source._populate_favorites()
+
     _actions = {
         ('search', None, None, 'false', _toggle_search),
+        ('refresh-favorites', _refresh_favorites)
     }
 
     def __init__(self, debug, **kwargs):
@@ -92,7 +110,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
         if debug == "False":
             self.remove_css_class("devel")
 
-        tools = {
+        self._tools = {
 
             # Converters
             "json-yaml": {
@@ -334,21 +352,26 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
         }
 
         # Populate sidebar and content stack
-        for t in tools:
+        for t in self._tools:
             self._sidebar.append(SidebarItem(
                 tool_name=t,
-                title=tools[t]["title"],
-                icon_name=tools[t]["icon-name"],
-                tool_tip=tools[t]["tooltip"],
-                category=tools[t]["category"]))
-            self._content_stack.add_named(tools[t]["child"], t)
+                title=self._tools[t]["title"],
+                icon_name=self._tools[t]["icon-name"],
+                tool_tip=self._tools[t]["tooltip"],
+                category=self._tools[t]["category"]))
+            self._content_stack.add_named(self._tools[t]["child"], t)
 
         self._sidebar.set_header_func(self._create_sidebar_headers, None, None)
         self._sidebar.set_filter_func(self._filter_func, None, None)
 
+        # Populate favorites
+        self._populate_favorites()
+        if self._favorites.get_row_at_index(0) is not None:
+            self._fav_stack.set_visible_child_name("filled")
+
         # Select row for visible content
         try:
-            index = list(tools.keys()).index(
+            index = list(self._tools.keys()).index(
                 self._settings.get_string("last-tool"))
             if index == 0:
                 self._sidebar.select_row(self._sidebar.get_first_child())
@@ -368,6 +391,36 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                             "active", Gio.SettingsBindFlags.DEFAULT)
         self._settings.bind("last-tool", self._content_stack,
                             "visible-child-name", Gio.SettingsBindFlags.DEFAULT)
+
+    @Gtk.Template.Callback()
+    def _on_favorite_row_activated(self, list_box: Gtk.ListBox, row: Gtk.ListBoxRow) -> None:
+        """
+        Callback for "row-activated" signal.
+        Changes visible view and the selected row in the sidebar, closes the popover and the sidebar if the window is too small.
+
+        Args:
+            list_box (Gtk.ListBox): ListBox interracted with
+            row (Gtk.ListBoxRow): selected row in ListBox
+
+        Returns:
+            None
+        """
+
+        self._content_stack.set_visible_child_name(row.get_tool_name())
+
+        idx = 0
+        sidebar_row = self._sidebar.get_row_at_index(idx)
+        while sidebar_row is not None:
+            if row.get_tool_name() == sidebar_row.get_tool_name():
+                self._sidebar.select_row(sidebar_row)
+                self._sidebar.grab_focus()
+                break
+            idx += 1
+            sidebar_row = self._sidebar.get_row_at_index(idx)
+
+        self._fav_btn.popdown()
+        if not self._toggle_sidebar_btn.get_visible():
+            self._split_view.set_show_sidebar(False)
 
     @Gtk.Template.Callback()
     def _on_sidebar_row_activated(self, list_box: Gtk.ListBox, row: Gtk.ListBoxRow) -> None:
@@ -479,7 +532,37 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
         """
 
         if (self._search_entry.get_text().lower() in row.get_title().lower() or
-            self._search_entry.get_text().lower() in row.get_tool_tip().lower()):
+                self._search_entry.get_text().lower() in row.get_tool_tip().lower()):
             return True
 
         return False
+
+    def _populate_favorites(self) -> None:
+        """
+        Populates the favorites popover with the currrent gsettings values.
+
+        Args:
+            None
+
+        Returns:
+            None
+        """
+
+        self._favorites.remove_all()
+
+        favorite_tools = self._settings.get_strv('favorites')
+        if len(favorite_tools) == 0:
+            self._fav_stack.set_visible_child_name('empty')
+        else:
+            self._fav_stack.set_visible_child_name('filled')
+            for t in self._tools:
+                if t in favorite_tools:
+                    self._favorites.append(
+                        SidebarItem(
+                            tool_name=t,
+                            title=self._tools[t]["title"],
+                            icon_name=self._tools[t]["icon-name"],
+                            tool_tip=self._tools[t]["tooltip"],
+                            category=self._tools[t]["category"]
+                        )
+                    )
