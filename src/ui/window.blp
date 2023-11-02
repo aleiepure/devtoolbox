@@ -13,6 +13,16 @@ template $DevtoolboxWindow : Adw.ApplicationWindow {
   width-request: 930;
   height-request: 700;
 
+  ShortcutController {
+    scope: global;
+
+    Shortcut {
+      trigger: "<control>f";
+      action: "action(win.search)";
+    }
+  }
+
+
   Adw.Breakpoint {
     condition("max-width: 1100px")
     setters {
@@ -32,6 +42,24 @@ template $DevtoolboxWindow : Adw.ApplicationWindow {
       [top]
       Adw.HeaderBar {
         show-title: false;
+
+        [start]
+        ToggleButton _show_search_btn {
+          icon-name: "loupe";
+          tooltip-text: _("Show/hide searchbar");
+        }
+      }
+
+      [top]
+      SearchBar _search_bar {
+        search-mode-enabled: bind _show_search_btn.active;
+        child: SearchEntry _search_entry {
+            halign: center;
+            activates-default: true;
+            placeholder-text: _("Search Tools…");
+            search-delay: 500;
+            search-changed => $_on_searchentry_search_changed();
+          };
       }
 
       content: ScrolledWindow {
@@ -95,6 +123,10 @@ menu primary_menu {
     }
 
     section {
+      item {
+        label: _("_Keyboard Shortcuts");
+        action: "win.show-help-overlay";
+      }
       item {
         label: _("_About Dev Toolbox");
         action: "app.about";

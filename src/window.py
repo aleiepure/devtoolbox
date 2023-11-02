@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Adw, Gtk, Gio
+from gi.repository import Adw, Gtk, Gio, GLib
 from gettext import gettext as _
 
 from .widgets.sidebar_item import SidebarItem
@@ -50,6 +50,9 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
 
     # Template elements
     _split_view = Gtk.Template.Child()
+    _show_search_btn = Gtk.Template.Child()
+    _search_bar = Gtk.Template.Child()
+    _search_entry = Gtk.Template.Child()
     _sidebar = Gtk.Template.Child()
     _toggle_sidebar_btn = Gtk.Template.Child()
     _show_sidebar_btn = Gtk.Template.Child()
@@ -59,8 +62,30 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
     # GSettings
     _settings = Gio.Settings(schema_id="me.iepure.devtoolbox")
 
+    def _toggle_search(self, new_state: GLib.Variant, source: Gtk.Widget) -> None:
+        """
+        Callback for the win.search action
+
+        Args:
+            new_state (bool): new selected state
+            source (Gtk.Widget): widget that caused the activation
+
+        Returns:
+            None
+        """
+
+        source._search_bar.set_search_mode(new_state.get_boolean())
+        source._show_search_btn.set_active(new_state.get_boolean())
+        self.set_state(new_state)
+
+    _actions = {
+        ('search', None, None, 'false', _toggle_search),
+    }
+
     def __init__(self, debug, **kwargs):
         super().__init__(**kwargs)
+
+        self.add_action_entries(self._actions, self)
 
         # Theme (Adapted from https://gitlab.gnome.org/tijder/blueprintgtk/)
         self._menu_btn.get_popover().add_child(ThemeSwitcher(), "themeswitcher")
@@ -319,6 +344,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             self._content_stack.add_named(tools[t]["child"], t)
 
         self._sidebar.set_header_func(self._create_sidebar_headers, None, None)
+        self._sidebar.set_filter_func(self._filter_func, None, None)
 
         # Select row for visible content
         try:
@@ -422,3 +448,38 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 header_label.set_margin_top(16)
 
             row.set_header(header_label)
+
+    @Gtk.Template.Callback()
+    def _on_searchentry_search_changed(self, user_data: object | None) -> None:
+        """
+        Callback for "search-changed" signal.
+        Invalidates filter to perform search.
+
+        user_data (object or None): additional data passed to the callback
+            dummy (None): required variable to make function work (why?)
+
+        Returns:
+            None
+        """
+
+        self._sidebar.invalidate_filter()
+
+    def _filter_func(self, row: Gtk.ListBoxRow, user_data: object | None, dummy: None) -> bool:
+        """
+        Loops on every sidebar item and returns True if the title or tooltip
+        contain the searched text.
+
+        Args:
+            row (Gtk.ListBoxRow): list box analyzed
+            user_data (object or None): additional data passed to the callback
+            dummy (None): required variable to make function work (why?)
+
+        Returns:
+            bool with the result
+        """
+
+        if (self._search_entry.get_text().lower() in row.get_title().lower() or
+            self._search_entry.get_text().lower() in row.get_tool_tip().lower()):
+            return True
+
+        return False
