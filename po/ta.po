@@ -6,24 +6,27 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2023-06-18 12:20+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-11-23 12:05+0000\n"
+"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/devtoolbox/"
+"devtoolbox/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.2.1-rc\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
 msgid "@app-name@"
-msgstr ""
+msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_window.blp:12
 msgid "Development tools at your fingertips"
-msgstr ""
+msgstr "உங்கள் விரல் நுனியில் மேம்பாட்டு கருவிகள்"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:18
 msgid ""
