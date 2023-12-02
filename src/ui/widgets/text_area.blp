@@ -9,29 +9,19 @@ template $TextArea : Adw.Bin {
   Box {
     margin-top: 10;
     orientation: vertical;
-
-    styles [
-      "card",
-      "activatable",
-    ]
+    spacing: 6;
 
     Box {
       orientation: horizontal;
       halign: fill;
       hexpand: true;
 
-      styles [
-        "toolbar",
-      ]
-
       Label _name_lbl {
         margin-bottom: 8;
         margin-top: 8;
         margin-start: 8;
 
-        styles [
-          "label",
-        ]
+        styles ["heading"]
       }
 
       Box {
@@ -44,55 +34,48 @@ template $TextArea : Adw.Bin {
         }
 
         Separator _spinner_separator {
-          styles [
-            "spacer",
-          ]
+          styles ["spacer"]
         }
 
         Button _action_btn {
-          styles [
-            "suggested-action",
-          ]
+          styles ["accent"]
         }
 
         Separator _action_btn_separator {
-          styles [
-            "spacer",
-          ]
+          styles ["spacer"]
         }
 
         Box {
+          margin-start: 6;
+          spacing: 6;
           orientation: horizontal;
-
-          styles [
-            "linked",
-          ]
 
           Button _open_btn {
             valign: center;
-            child:
-            Adw.ButtonContent {
+            styles ["flat"]
+            child: Adw.ButtonContent {
               icon-name: "document-open-symbolic";
               label: _("Open");
-            }
-
-            ;
+            };
           }
 
           Button _copy_btn {
             valign: center;
+            styles ["flat"]
             icon-name: "edit-copy-symbolic";
             tooltip-text: _("Copy to clipboard");
           }
 
           Button _paste_btn {
             valign: center;
+            styles ["flat"]
             icon-name: "edit-paste-symbolic";
             tooltip-text: _("Paste clipboard");
           }
 
           Button _clear_btn {
             valign: center;
+            styles ["flat"]
             icon-name: "edit-clear-symbolic";
             tooltip-text: _("Clear input");
           }
@@ -101,46 +84,32 @@ template $TextArea : Adw.Bin {
     }
 
     Adw.ViewStack _stack {
+      styles ["card"]
+
       Adw.ViewStackPage {
         name: "text-area";
-        child:
-        ScrolledWindow {
-          margin-top: 0;
-          margin-bottom: 3;
-          margin-start: 3;
-          margin-end: 3;
-          child:
-          $GtkSourceView _textview {
-            auto-indent: "true";
-            tab-width: "4";
-            smart-backspace: "true";
-            insert-spaces-instead-of-tabs: "true";
-            wrap-mode: "char";
-            monospace: "true";
-            top-margin: "12";
-            left-margin: "12";
-            right-margin: "12";
-            bottom-margin: "12";
+        child: ScrolledWindow {
+          child: $GtkSourceView _textview {
+            auto-indent: true;
+            tab-width: 4;
+            smart-backspace: true;
+            insert-spaces-instead-of-tabs: true;
+            wrap-mode: char;
+            monospace: true;
+            top-margin: 12;
+            left-margin: 12;
+            right-margin: 12;
+            bottom-margin: 12;
 
-            styles [
-              "rounded-border",
-            ]
-          }
-
-          ;
-        }
-
-        ;
+            styles ["rounded-border"]
+          };
+        };
       }
 
       Adw.ViewStackPage {
         name: "loading";
-        child:
-        Box {
-          styles [
-            "rounded-border",
-            "view",
-          ]
+        child: Box {
+          styles ["rounded-border"]
 
           orientation: vertical;
           margin-top: 0;
@@ -159,12 +128,9 @@ template $TextArea : Adw.Bin {
               width-request: 36;
             }
 
-            Label _loading_lbl {
-            }
+            Label _loading_lbl {}
           }
-        }
-
-        ;
+        };
       }
     }
   }

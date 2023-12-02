@@ -9,29 +9,19 @@ template $WebviewArea : Adw.Bin {
   Box _box {
     margin-top: 10;
     orientation: vertical;
-
-    styles [
-      "card",
-      "activatable",
-    ]
+    spacing: 6;
 
     Box {
       orientation: horizontal;
       halign: fill;
       hexpand: true;
 
-      styles [
-        "toolbar",
-      ]
-
       Label _name_lbl {
-        margin-bottom: 15;
-        margin-top: 15;
+        margin-bottom: 8;
+        margin-top: 8;
         margin-start: 8;
 
-        styles [
-          "label",
-        ]
+        styles ["heading"]
       }
 
       Box {
@@ -43,19 +33,14 @@ template $WebviewArea : Adw.Bin {
         }
 
         Separator _spinner_separator {
-          styles [
-            "spacer",
-          ]
+          styles ["spacer"]
         }
 
         Box {
           orientation: horizontal;
 
-          styles [
-            "linked",
-          ]
-
           Button _view_btn {
+            styles ["flat"]
             valign: center;
             icon-name: "eye-open-symbolic";
             tooltip-text: _("Open web page in another browser");

@@ -7,7 +7,6 @@ viewsdir = join_paths(pkgdatadir, 'devtoolbox/views')
 
 sources = [
   '__init__.py',
-  'tab_content.py',
   'json_yaml.py',
   'timestamp.py',
   'base_converter.py',

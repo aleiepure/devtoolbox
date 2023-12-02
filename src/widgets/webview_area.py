@@ -32,10 +32,6 @@ class WebviewArea(Adw.Bin):
         # Style and add webview
         self._webview.set_vexpand(True)
         self._webview.set_hexpand(True)
-        self._webview.set_margin_bottom(3)
-        self._webview.set_margin_start(3)
-        self._webview.set_margin_end(3)
-        # self._webview.add_css_class("padding-5")
         self._webview.load_html(self._blank_html, "")
         self._box.append(self._webview)
 

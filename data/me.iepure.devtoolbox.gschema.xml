@@ -19,9 +19,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
 		<key name="window-maximized" type="b">
 			<default>false</default>
 		</key>
-		<key name="last-tab" type="s">
-			<default>"converters"</default>
-		</key>
 		<key name="last-tool" type="s">
 			<default>"json-yaml"</default>
 		</key>

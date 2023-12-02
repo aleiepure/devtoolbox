@@ -8,13 +8,14 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 <gresources>
   <gresource prefix="/me/iepure/devtoolbox">
+
+    <!-- Stylesheets -->
     <file alias="style.css">css/style.css</file>
     <file alias="style-hc.css">css/style-hc.css</file>
     <file alias="style-dark.css">css/style-dark.css</file>
     <file alias="style-dark-hc.css">css/style-dark-hc.css</file>
-    <file preprocess="xml-stripblanks">ui/window.ui</file>
-    <file preprocess="xml-stripblanks">ui/about_window.ui</file>
-    <file preprocess="xml-stripblanks" alias="gtk/help-overlay.ui">ui/gtk/help-overlay.ui</file>
+
+    <!-- Widgets -->
     <file preprocess="xml-stripblanks">ui/widgets/utility_title.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/text_area.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/text_file_area.ui</file>
@@ -26,7 +27,11 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/widgets/webview_area.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/image_area.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/theme_switcher.ui</file>
-    <file preprocess="xml-stripblanks">ui/views/tab_content.ui</file>
+
+    <!-- Views -->
+    <file preprocess="xml-stripblanks">ui/window.ui</file>
+    <file preprocess="xml-stripblanks">ui/about_window.ui</file>
+    <file preprocess="xml-stripblanks" alias="gtk/help-overlay.ui">ui/gtk/help-overlay.ui</file>
     <file preprocess="xml-stripblanks">ui/views/json_yaml.ui</file>
     <file preprocess="xml-stripblanks">ui/views/timestamp.ui</file>
     <file preprocess="xml-stripblanks">ui/views/base_converter.ui</file>
@@ -127,6 +132,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="csr-symbolic.svg">../data/icons/symbolic/csr-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="edit-symbolic.svg">../data/icons/symbolic/edit-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="css-symbolic.svg">../data/icons/symbolic/css-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="loupe-symbolic.svg">../data/icons/symbolic/loupe-symbolic.svg</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/markdown-preview/">
     <file alias="github-markdown-dark.css">../data/markdown-preview/github-markdown-dark.css</file>

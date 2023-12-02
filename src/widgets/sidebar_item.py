@@ -13,14 +13,16 @@ class SidebarItem(Gtk.ListBoxRow):
     title = GObject.Property(type=str, default="")
     icon_name = GObject.Property(type=str, default="")
     tool_tip = GObject.Property(type=str, default="")
+    category = GObject.Property(type=str, default="")
 
-    def __init__(self, tool_name:str, title:str, icon_name:str, tool_tip:str):
+    def __init__(self, tool_name:str, title:str, icon_name:str, tool_tip:str, category: str):
         super().__init__()
 
         self.tool_name = tool_name
         self.title = title
         self.icon_name = icon_name
         self.tool_tip = tool_tip
+        self.category = category
 
         grid = Gtk.Grid()
         grid.set_hexpand(True)
@@ -48,3 +50,6 @@ class SidebarItem(Gtk.ListBoxRow):
 
     def get_tool_tip(self) -> str:
         return self.tool_tip
+
+    def get_category(self) -> str:
+        return self.category
