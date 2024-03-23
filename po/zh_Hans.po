@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2023-06-18 12:20+0200\n"
-"PO-Revision-Date: 2023-09-08 13:55+0000\n"
-"Last-Translator: nsfoxer <muwuren@gmail.com>\n"
+"PO-Revision-Date: 2024-03-24 09:02+0000\n"
+"Last-Translator: 复予 <clonewith@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "devtoolbox/devtoolbox/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0.1-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -193,7 +193,7 @@ msgstr "Markdown预览：现在可以在外部浏览器打开预览了"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:115
 msgid "Color blindness simulator: severtity can be changed via keyboard"
-msgstr ""
+msgstr "色盲模拟：可使用键盘更改程度"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:116
 msgid "New tool: HTML formatter"
@@ -201,11 +201,11 @@ msgstr "新工具：HTML格式器"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:117
 msgid "Turkish translation by @sabriunal"
-msgstr ""
+msgstr "@sabriunal 进行的土耳其语翻译"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:118
 msgid "Brasilian Portuguese translation by @rffontenelle"
-msgstr ""
+msgstr "@rffontenelle 进行的巴西葡萄牙语翻译"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:124
 msgid "First release"
@@ -261,7 +261,7 @@ msgstr "用GZip压缩和解压文件和文本"
 
 #: src/window.py:134 src/ui/views/jwt_decoder.blp:21
 msgid "Decode JWT tokens to header and payload"
-msgstr ""
+msgstr "将 JWT 令牌解码到标头与负载"
 
 #: src/window.py:143 src/formatters/json.py:14
 msgid "Format JSON documents"
@@ -377,11 +377,11 @@ msgstr "检查颜色组合是否符合 WCAG 标准"
 
 #: src/window.py:279
 msgid "Color Blindness"
-msgstr ""
+msgstr "色盲"
 
 #: src/window.py:282 src/ui/views/colorblindness_simulator.blp:21
 msgid "Simulate color blindness in images"
-msgstr ""
+msgstr "在图像中模拟色盲"
 
 #: src/window.py:286 src/ui/views/image_converter.blp:20
 msgid "Image Format Converter"
@@ -577,140 +577,141 @@ msgstr "错误：无法打开此文件，因为它不是有效的证书。"
 #: src/views/certificate_parser.py:155
 #, python-brace-format
 msgid "Identity: {identity}"
-msgstr ""
+msgstr "身份：{identity}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:157
 #, python-brace-format
 msgid "Verified by: {verified_by}"
-msgstr ""
+msgstr "认证机构：{verified_by}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:159
 #, python-brace-format
 msgid "Expires: {expiration_date}"
-msgstr ""
+msgstr "过期于：{expiration_date}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:165
 msgid "Basic Constraints"
-msgstr ""
+msgstr "基本约束"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:166
 msgid "Extended Key Usage"
-msgstr ""
+msgstr "延长密钥使用"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:167 src/views/certificate_parser.py:212
 msgid "Subject Key Identifier"
-msgstr ""
+msgstr "主体密钥标识"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:168
 msgid "Key Usage"
-msgstr ""
+msgstr "密钥用途"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:169
 msgid "Subject Alternative Names"
-msgstr ""
+msgstr "主体备用名称"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:173
 msgid "Extension"
-msgstr ""
+msgstr "扩展"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:213
 msgid "Certificate Fingerprints"
-msgstr ""
+msgstr "证书指纹"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:216
 msgid "Key Identifier"
-msgstr ""
+msgstr "密钥标识"
 
 #. Toast messages
 #: src/views/certificate_request_generator.py:35
 #: src/views/colorblindness_simulator.py:26 src/views/gzip_compressor.py:27
 #: src/views/image_converter.py:23
 msgid "Open folder"
-msgstr ""
+msgstr "打开文件夹"
 
 #: src/views/certificate_request_generator.py:58
 msgid "Open Key File"
-msgstr ""
+msgstr "打开密钥文件"
 
 #: src/views/certificate_request_generator.py:67
 msgid "All Files"
-msgstr ""
+msgstr "所有文件"
 
 #: src/views/certificate_request_generator.py:173
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:58
 #: src/views/image_converter.py:40
 #, python-brace-format
 msgid "Successfully saved as {save_path}"
-msgstr ""
+msgstr "成功保存为 {save_path}"
 
 #: src/views/certificate_request_generator.py:188
 msgid "Save key as"
-msgstr ""
+msgstr "将密钥另存为"
 
 #: src/views/chmod_calculator.py:30
 msgid "Invalid value. Please check again"
-msgstr ""
+msgstr "数值无效。请重新检查"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
 #: src/views/colorblindness_simulator.py:98
 msgid "Loading simulation..."
-msgstr ""
+msgstr "加载模拟中..."
 
 #: src/views/formatter.py:73
 msgid ""
 "Text is not in the correct format. Check if you misspelled something or if "
 "all parentheses are closed."
-msgstr ""
+msgstr "文本格式不正确。请检查拼写是否出错，及圆括号是否都已闭合。"
 
 #: src/views/gzip_compressor.py:29
 msgid "Cannot decompress from an image or a file"
-msgstr ""
+msgstr "无法从图像或文件解压缩"
 
 #: src/views/gzip_compressor.py:126
 msgid "Please save this file to view its contents"
-msgstr ""
+msgstr "请保存此文件以查看其内容"
 
 #: src/views/hash_generator.py:125
 msgid "Hashes match!"
-msgstr ""
+msgstr "哈希值匹配！"
 
 #: src/views/hash_generator.py:127
 msgid "The integrity is verified."
-msgstr ""
+msgstr "完整性已验证。"
 
 #: src/views/hash_generator.py:135
 msgid "Warning, integrity cannot be verified!"
-msgstr ""
+msgstr "警告，无法验证完整性！"
 
 #: src/views/hash_generator.py:137
 msgid ""
 "The calculated hash and the provided one do not match. Check again and if "
 "this is a file you downloaded from the Internet re-download it."
-msgstr ""
+msgstr "计算出的哈希值与提供的不匹配。请再次进行检查，如果您从互联网上下载了此文件，"
+"请重新下载。"
 
 #: src/views/json_validator.py:77 src/views/xml_validator.py:76
 msgid "Valid!"
-msgstr ""
+msgstr "有效！"
 
 #: src/views/json_validator.py:79
 msgid "JSON is compliant with the provided JSON schema."
-msgstr ""
+msgstr "JSON 与提供的 JSON 模式兼容。"
 
 #: src/views/json_validator.py:87 src/views/json_validator.py:97
 #: src/views/xml_validator.py:86
 msgid "Invalid!"
-msgstr ""
+msgstr "无效！"
 
 #: src/views/json_validator.py:89
 #, python-brace-format
@@ -718,6 +719,8 @@ msgid ""
 "JSON is not compliant with the provided JSON scheme:\n"
 "{validation_error}"
 msgstr ""
+"JSON 与提供的 JSON 模式不兼容：\n"
+"{validation_error}"
 
 #: src/views/json_validator.py:99
 #, python-brace-format
@@ -725,149 +728,151 @@ msgid ""
 "Error in JSON schema:\n"
 "{schema_error}"
 msgstr ""
+"JSON 模式有错误：\n"
+"{schema_error}"
 
 #: src/views/qrcode_generator.py:62 src/ui/views/qrcode_generator.blp:119
 #: src/ui/views/qrcode_generator.blp:127
 msgid "Not Set"
-msgstr ""
+msgstr "未设定"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
 msgid "st"
-msgstr ""
+msgstr "个"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:210
 msgid "nd"
-msgstr ""
+msgstr "个"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:213
 msgid "rd"
-msgstr ""
+msgstr "个"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:216
 msgid "th"
-msgstr ""
+msgstr "个"
 
 #: src/views/reverse_cron.py:240 src/views/reverse_cron.py:354
 #: src/ui/views/reverse_cron.blp:295 src/ui/views/reverse_cron.blp:340
 #: src/ui/views/reverse_cron.blp:363
 msgid "January"
-msgstr ""
+msgstr "一月"
 
 #: src/views/reverse_cron.py:241 src/views/reverse_cron.py:355
 #: src/ui/views/reverse_cron.blp:296 src/ui/views/reverse_cron.blp:341
 #: src/ui/views/reverse_cron.blp:364
 msgid "February"
-msgstr ""
+msgstr "二月"
 
 #: src/views/reverse_cron.py:242 src/views/reverse_cron.py:356
 #: src/ui/views/reverse_cron.blp:297 src/ui/views/reverse_cron.blp:342
 #: src/ui/views/reverse_cron.blp:365
 msgid "March"
-msgstr ""
+msgstr "三月"
 
 #: src/views/reverse_cron.py:243 src/views/reverse_cron.py:357
 #: src/ui/views/reverse_cron.blp:298 src/ui/views/reverse_cron.blp:343
 #: src/ui/views/reverse_cron.blp:366
 msgid "April"
-msgstr ""
+msgstr "四月"
 
 #: src/views/reverse_cron.py:244 src/views/reverse_cron.py:358
 #: src/ui/views/reverse_cron.blp:299 src/ui/views/reverse_cron.blp:344
 #: src/ui/views/reverse_cron.blp:367
 msgid "May"
-msgstr ""
+msgstr "五月"
 
 #: src/views/reverse_cron.py:245 src/views/reverse_cron.py:359
 #: src/ui/views/reverse_cron.blp:300 src/ui/views/reverse_cron.blp:345
 #: src/ui/views/reverse_cron.blp:368
 msgid "June"
-msgstr ""
+msgstr "六月"
 
 #: src/views/reverse_cron.py:246 src/views/reverse_cron.py:360
 #: src/ui/views/reverse_cron.blp:301 src/ui/views/reverse_cron.blp:346
 #: src/ui/views/reverse_cron.blp:369
 msgid "July"
-msgstr ""
+msgstr "七月"
 
 #: src/views/reverse_cron.py:247 src/views/reverse_cron.py:361
 #: src/ui/views/reverse_cron.blp:302 src/ui/views/reverse_cron.blp:347
 #: src/ui/views/reverse_cron.blp:370
 msgid "August"
-msgstr ""
+msgstr "八月"
 
 #: src/views/reverse_cron.py:248 src/views/reverse_cron.py:362
 #: src/ui/views/reverse_cron.blp:303 src/ui/views/reverse_cron.blp:348
 #: src/ui/views/reverse_cron.blp:371
 msgid "September"
-msgstr ""
+msgstr "九月"
 
 #: src/views/reverse_cron.py:249 src/views/reverse_cron.py:363
 #: src/ui/views/reverse_cron.blp:304 src/ui/views/reverse_cron.blp:349
 #: src/ui/views/reverse_cron.blp:372
 msgid "October"
-msgstr ""
+msgstr "十月"
 
 #: src/views/reverse_cron.py:250 src/views/reverse_cron.py:364
 #: src/ui/views/reverse_cron.blp:305 src/ui/views/reverse_cron.blp:350
 #: src/ui/views/reverse_cron.blp:373
 msgid "November"
-msgstr ""
+msgstr "十一月"
 
 #: src/views/reverse_cron.py:251 src/views/reverse_cron.py:365
 #: src/ui/views/reverse_cron.blp:306 src/ui/views/reverse_cron.blp:351
 #: src/ui/views/reverse_cron.blp:374
 msgid "December"
-msgstr ""
+msgstr "十二月"
 
 #: src/views/reverse_cron.py:376 src/ui/views/reverse_cron.blp:422
 #: src/ui/views/reverse_cron.blp:446 src/ui/views/reverse_cron.blp:471
 #: src/ui/views/reverse_cron.blp:490
 msgid "Sunday"
-msgstr ""
+msgstr "星期日"
 
 #: src/views/reverse_cron.py:377 src/ui/views/reverse_cron.blp:416
 #: src/ui/views/reverse_cron.blp:440 src/ui/views/reverse_cron.blp:465
 #: src/ui/views/reverse_cron.blp:484
 msgid "Monday"
-msgstr ""
+msgstr "星期一"
 
 #: src/views/reverse_cron.py:378 src/ui/views/reverse_cron.blp:417
 #: src/ui/views/reverse_cron.blp:441 src/ui/views/reverse_cron.blp:466
 #: src/ui/views/reverse_cron.blp:485
 msgid "Tuesday"
-msgstr ""
+msgstr "星期二"
 
 #: src/views/reverse_cron.py:379 src/ui/views/reverse_cron.blp:418
 #: src/ui/views/reverse_cron.blp:442 src/ui/views/reverse_cron.blp:467
 #: src/ui/views/reverse_cron.blp:486
 msgid "Wednesday"
-msgstr ""
+msgstr "星期三"
 
 #: src/views/reverse_cron.py:380 src/ui/views/reverse_cron.blp:419
 #: src/ui/views/reverse_cron.blp:443 src/ui/views/reverse_cron.blp:468
 #: src/ui/views/reverse_cron.blp:487
 msgid "Thursday"
-msgstr ""
+msgstr "星期四"
 
 #: src/views/reverse_cron.py:381 src/ui/views/reverse_cron.blp:420
 #: src/ui/views/reverse_cron.blp:444 src/ui/views/reverse_cron.blp:469
 #: src/ui/views/reverse_cron.blp:488
 msgid "Friday"
-msgstr ""
+msgstr "星期五"
 
 #: src/views/reverse_cron.py:382 src/ui/views/reverse_cron.blp:421
 #: src/ui/views/reverse_cron.blp:445 src/ui/views/reverse_cron.blp:470
 #: src/ui/views/reverse_cron.blp:489
 msgid "Saturday"
-msgstr ""
+msgstr "星期六"
 
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
-msgstr ""
+msgstr "XML 与提供的 XSD 模式兼容。"
 
 #: src/views/xml_validator.py:88
 #, python-brace-format
@@ -875,127 +880,131 @@ msgid ""
 "XML is not compliant with the provided XSD scheme:\n"
 "{xsd_error}"
 msgstr ""
+"XML 与提供的 XSD 模式不兼容：\n"
+"{xsd_error}"
 
 #: src/ui/window.blp:29
 msgid "Show/hide sidebar"
-msgstr ""
+msgstr "显示/隐藏侧边栏"
 
 #: src/ui/window.blp:57
 msgid "_About Dev Toolbox"
-msgstr ""
+msgstr "关于 Dev Toolbox (_A)"
 
 #: src/ui/about_window.blp:11
 msgid ""
 "Copyright © 2022 - 2023 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
+"版权所有 © 2022 - 2023 Alessandro Iepure\n"
+"一些图标的版权由 The GNOME Project 所有"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
 #: src/ui/about_window.blp:19
 msgid "translator-credits"
-msgstr ""
+msgstr "L.Yang, 复予 <clonewith@qq.com>"
 
 #: src/ui/widgets/date_area.blp:46 src/ui/views/timestamp.blp:49
 msgid "Now"
-msgstr ""
+msgstr "现在"
 
 #: src/ui/widgets/date_area.blp:47
 msgid "Sets the current system date and time (local timezone)"
-msgstr ""
+msgstr "设置当前系统日期与时间（本地时区）"
 
 #: src/ui/widgets/date_area.blp:66 src/ui/widgets/entry_row.blp:30
 #: src/ui/widgets/spin_area.blp:58 src/ui/widgets/text_area.blp:85
 #: src/ui/widgets/text_file_area.blp:102
 msgid "Copy to clipboard"
-msgstr ""
+msgstr "复制到剪贴板"
 
 #: src/ui/widgets/date_area.blp:89
 msgid "Year"
-msgstr ""
+msgstr "年"
 
 #: src/ui/widgets/date_area.blp:122 src/ui/views/reverse_cron.blp:263
 msgid "Month"
-msgstr ""
+msgstr "月"
 
 #: src/ui/widgets/date_area.blp:154 src/ui/views/reverse_cron.blp:186
 msgid "Day"
-msgstr ""
+msgstr "日"
 
 #: src/ui/widgets/date_area.blp:192 src/ui/views/reverse_cron.blp:114
 msgid "Hours"
-msgstr ""
+msgstr "小时"
 
 #: src/ui/widgets/date_area.blp:225 src/ui/views/reverse_cron.blp:44
 msgid "Minutes"
-msgstr ""
+msgstr "分钟"
 
 #: src/ui/widgets/date_area.blp:257
 msgid "Seconds"
-msgstr ""
+msgstr "秒"
 
 #: src/ui/widgets/entry_row.blp:20
 msgid "Generate again"
-msgstr ""
+msgstr "重新生成"
 
 #: src/ui/widgets/entry_row.blp:40 src/ui/widgets/spin_area.blp:64
 #: src/ui/widgets/text_area.blp:91 src/ui/widgets/text_file_area.blp:108
 msgid "Paste clipboard"
-msgstr ""
+msgstr "粘贴剪贴板"
 
 #: src/ui/widgets/entry_row.blp:51 src/ui/widgets/image_area.blp:92
 #: src/ui/widgets/text_area.blp:97 src/ui/widgets/text_file_area.blp:114
 msgid "Clear input"
-msgstr ""
+msgstr "清空输入"
 
 #: src/ui/widgets/image_area.blp:86 src/ui/widgets/text_file_area.blp:96
 msgid "Open image in another program"
-msgstr ""
+msgstr "在其他程序中打开图像"
 
 #: src/ui/widgets/theme_switcher.blp:29
 msgid "Follow system style"
-msgstr ""
+msgstr "跟随系统样式"
 
 #: src/ui/widgets/theme_switcher.blp:43
 msgid "Light style"
-msgstr ""
+msgstr "浅色样式"
 
 #: src/ui/widgets/theme_switcher.blp:57
 msgid "Dark style"
-msgstr ""
+msgstr "深色样式"
 
 #: src/ui/widgets/webview_area.blp:61
 msgid "Open web page in another browser"
-msgstr ""
+msgstr "在其他浏览器中打开网页"
 
 #: src/ui/views/base_converter.blp:20
 msgid "Number Bases Converter"
-msgstr ""
+msgstr "数字进制转换"
 
 #: src/ui/views/base_converter.blp:31
 msgid "Input numbers"
-msgstr ""
+msgstr "输入数字"
 
 #: src/ui/views/base_converter.blp:34
 msgid "Decimal"
-msgstr ""
+msgstr "十进制"
 
 #: src/ui/views/base_converter.blp:42
 msgid "Binary"
-msgstr ""
+msgstr "二进制"
 
 #: src/ui/views/base_converter.blp:50
 msgid "Octal"
-msgstr ""
+msgstr "八进制"
 
 #: src/ui/views/base_converter.blp:58
 msgid "Hexadecimal"
-msgstr ""
+msgstr "十六进制"
 
 #: src/ui/views/base_converter.blp:83
 msgid ""
 "Typing an unaccepted character (i.e. 'A' in the decimal field) will cause "
 "all the fields to reset to 0."
-msgstr ""
+msgstr "输入无法接受的字符（例如十进制字段中的“A”）会使所有字段全部重置为 0。"
 
 #: src/ui/views/certificate_parser.blp:31
 #: src/ui/views/colorblindness_simulator.blp:31
@@ -1007,575 +1016,577 @@ msgstr ""
 #: src/ui/views/text_inspector.blp:31 src/ui/views/timestamp.blp:31
 #: src/ui/views/url_encoder.blp:31 src/ui/views/uuid_generator.blp:31
 msgid "Tool options"
-msgstr ""
+msgstr "工具选项"
 
 #: src/ui/views/certificate_parser.blp:34
 msgid "Certificate"
-msgstr ""
+msgstr "证书"
 
 #: src/ui/views/certificate_parser.blp:35
 msgid "Open a certificate file (pem, der, cer extensions)"
-msgstr ""
+msgstr "打开证书文件（pem, der, cer 格式）"
 
 #: src/ui/views/certificate_parser.blp:82
 msgid "Open a certificate file to view its contents."
-msgstr ""
+msgstr "打开证书文件以查看其内容。"
 
 #: src/ui/views/certificate_request_generator.blp:19
 msgid "Certificate Signing Request Generator"
-msgstr ""
+msgstr "证书签名请求生成器"
 
 #: src/ui/views/certificate_request_generator.blp:31
 msgid "Fill the information below"
-msgstr ""
+msgstr "填写以下信息"
 
 #: src/ui/views/certificate_request_generator.blp:32
 msgid ""
 "Fill at least the required fields then press the 'Create CSR' button. An "
 "empty passphrase will generate an unecrypted CSR."
-msgstr ""
+msgstr "填写所需字段，然后按下“创建 CSR”按钮。若密码留空，则会生成未加密的 CSR。"
 
 #: src/ui/views/certificate_request_generator.blp:39
 msgid "Create CSR"
-msgstr ""
+msgstr "创建 CSR"
 
 #: src/ui/views/certificate_request_generator.blp:69
 msgid "Passphrase"
-msgstr ""
+msgstr "密码"
 
 #: src/ui/views/certificate_request_generator.blp:73
 msgid "Key"
-msgstr ""
+msgstr "密钥"
 
 #: src/ui/views/certificate_request_generator.blp:74
 msgid "Generate a new key or use and existing one"
-msgstr ""
+msgstr "生成新密钥或使用已有的"
 
 #: src/ui/views/certificate_request_generator.blp:77
 msgid "New"
-msgstr ""
+msgstr "新建"
 
 #: src/ui/views/certificate_request_generator.blp:78
 msgid "Exisisting"
-msgstr ""
+msgstr "已有"
 
 #: src/ui/views/certificate_request_generator.blp:85
 msgid "Key File *"
-msgstr ""
+msgstr "密钥文件 *"
 
 #: src/ui/views/certificate_request_generator.blp:86
 msgid "Open the file containing the key you want to use"
-msgstr ""
+msgstr "打开含有待使用密钥的文件"
 
 #: src/ui/views/certificate_request_generator.blp:107
 msgid "Key Size"
-msgstr ""
+msgstr "密钥大小"
 
 #: src/ui/views/certificate_request_generator.blp:108
 msgid "Size of the new key. It will be saved on the same path as the CSR."
-msgstr ""
+msgstr "新密钥的大小。将会与 CSR 保存在相同路径。"
 
 #: src/ui/views/certificate_request_generator.blp:111
 msgid "2048 bits"
-msgstr ""
+msgstr "2048 比特"
 
 #: src/ui/views/certificate_request_generator.blp:112
 msgid "4096 bits"
-msgstr ""
+msgstr "4096 比特"
 
 #: src/ui/views/certificate_request_generator.blp:119
 msgid "Key Save Location *"
-msgstr ""
+msgstr "密钥保存位置 *"
 
 #: src/ui/views/certificate_request_generator.blp:120
 msgid "Save location for the generated key file"
-msgstr ""
+msgstr "生成密钥文件的保存位置"
 
 #: src/ui/views/chmod_calculator.blp:33
 msgid "Permissions"
-msgstr ""
+msgstr "权限"
 
 #: src/ui/views/chmod_calculator.blp:43
 msgid "Owner"
-msgstr ""
+msgstr "所有者"
 
 #: src/ui/views/chmod_calculator.blp:44
 msgid "Group"
-msgstr ""
+msgstr "用户组"
 
 #: src/ui/views/chmod_calculator.blp:45
 msgid "Others"
-msgstr ""
+msgstr "其他"
 
 #: src/ui/views/chmod_calculator.blp:46
 msgid "Read"
-msgstr ""
+msgstr "读取"
 
 #: src/ui/views/chmod_calculator.blp:47
 msgid "Write"
-msgstr ""
+msgstr "写入"
 
 #: src/ui/views/chmod_calculator.blp:48
 msgid "Execute"
-msgstr ""
+msgstr "执行"
 
 #: src/ui/views/chmod_calculator.blp:63
 msgid "Numeric value"
-msgstr ""
+msgstr "数值"
 
 #: src/ui/views/chmod_calculator.blp:71
 msgid "Symbolic value"
-msgstr ""
+msgstr "符号值"
 
 #: src/ui/views/colorblindness_simulator.blp:20
 msgid "Color Blindness Simulator"
-msgstr ""
+msgstr "色盲模拟工具"
 
 #: src/ui/views/colorblindness_simulator.blp:34
 msgid "Severity"
-msgstr ""
+msgstr "严重度"
 
 #: src/ui/views/colorblindness_simulator.blp:35
 msgid "Severity of the anomaly"
-msgstr ""
+msgstr "异常严重度"
 
 #: src/ui/views/colorblindness_simulator.blp:71
 #: src/ui/views/text_inspector.blp:39
 msgid "Original"
-msgstr ""
+msgstr "原始"
 
 #: src/ui/views/colorblindness_simulator.blp:78
 msgid "Protanopia"
-msgstr ""
+msgstr "红色盲"
 
 #: src/ui/views/colorblindness_simulator.blp:88
 msgid "Deuteranopia"
-msgstr ""
+msgstr "绿色盲"
 
 #: src/ui/views/colorblindness_simulator.blp:92
 msgid "Tritanopia"
-msgstr ""
+msgstr "黄蓝色盲"
 
 #: src/ui/views/contrast_checker.blp:34 src/ui/views/contrast_checker.blp:44
 msgid "Text color"
-msgstr ""
+msgstr "文本颜色"
 
 #: src/ui/views/contrast_checker.blp:35
 msgid "Color used for the text"
-msgstr ""
+msgstr "文本使用的颜色"
 
 #: src/ui/views/contrast_checker.blp:51 src/ui/views/contrast_checker.blp:61
 msgid "Background color"
-msgstr ""
+msgstr "背景颜色"
 
 #: src/ui/views/contrast_checker.blp:52
 msgid "Color used for the background"
-msgstr ""
+msgstr "背景使用的颜色"
 
 #: src/ui/views/contrast_checker.blp:74
 msgid "Example"
-msgstr ""
+msgstr "示例"
 
 #: src/ui/views/contrast_checker.blp:86
 msgid "Lorem ipsum dolor sit amet"
-msgstr ""
+msgstr "文本示例 Lorem ipsum dolor sit amet"
 
 #: src/ui/views/contrast_checker.blp:94
 msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
 msgstr ""
+"至若春和景明，波澜不惊，上下天光，一碧万顷，沙鸥翔集，锦鳞游泳，岸芷汀兰，郁"
+"郁青青。velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
 
 #: src/ui/views/contrast_checker.blp:115 src/ui/views/contrast_checker.blp:146
 msgid "AA"
-msgstr ""
+msgstr "AA"
 
 #: src/ui/views/contrast_checker.blp:123 src/ui/views/contrast_checker.blp:185
 msgid "small"
-msgstr ""
+msgstr "小"
 
 #: src/ui/views/contrast_checker.blp:154 src/ui/views/contrast_checker.blp:216
 msgid "large"
-msgstr ""
+msgstr "大"
 
 #: src/ui/views/contrast_checker.blp:177 src/ui/views/contrast_checker.blp:208
 msgid "AAA"
-msgstr ""
+msgstr "AAA"
 
 #: src/ui/views/cron_converter.blp:35
 msgid "Number of dates"
-msgstr ""
+msgstr "日期数"
 
 #: src/ui/views/cron_converter.blp:36
 msgid "Number of dates to be generated (up to 20)"
-msgstr ""
+msgstr "要生成的日期数（最多 20）"
 
 #: src/ui/views/cron_converter.blp:55
 msgid "Output format"
-msgstr ""
+msgstr "输出格式"
 
 #: src/ui/views/cron_converter.blp:56
 msgid ""
 "Format used to display generated dates (<a href=\"https://strftime.org/"
 "\">python syntax</a>)"
-msgstr ""
+msgstr "生成日期的显示格式（<a href=\"https://strftime.org/\">Python 语法</a>）"
 
 #: src/ui/views/cron_converter.blp:83
 msgid "CRON expression"
-msgstr ""
+msgstr "CRON 表达式"
 
 #: src/ui/views/cron_converter.blp:96
 msgid "Dates"
-msgstr ""
+msgstr "日期"
 
 #: src/ui/views/formatter.blp:31 src/ui/views/json_yaml.blp:47
 msgid "Indentations"
-msgstr ""
+msgstr "缩进"
 
 #: src/ui/views/formatter.blp:32 src/ui/views/json_yaml.blp:48
 msgid "Number of spaces used for indentation"
-msgstr ""
+msgstr "缩进使用的空格数"
 
 #: src/ui/views/formatter.blp:61
 msgctxt "verb/action"
 msgid "Format"
-msgstr ""
+msgstr "格式化"
 
 #: src/ui/views/gzip_compressor.blp:20
 msgid "GZip Compress & Decompress"
-msgstr ""
+msgstr "GZip 压缩 & 解压缩"
 
 #: src/ui/views/gzip_compressor.blp:34 src/ui/views/html_encoder.blp:34
 #: src/ui/views/json_yaml.blp:34 src/ui/views/url_encoder.blp:34
 msgid "Direction"
-msgstr ""
+msgstr "方向"
 
 #: src/ui/views/gzip_compressor.blp:35
 msgid "Select the desired operation"
-msgstr ""
+msgstr "选择待执行操作"
 
 #: src/ui/views/gzip_compressor.blp:40
 msgid "Compress"
-msgstr ""
+msgstr "压缩"
 
 #: src/ui/views/gzip_compressor.blp:41
 msgid "Decompress"
-msgstr ""
+msgstr "解压缩"
 
 #: src/ui/views/gzip_compressor.blp:57 src/ui/views/hash_generator.blp:74
 #: src/ui/views/html_encoder.blp:58 src/ui/views/json_yaml.blp:78
 #: src/ui/views/url_encoder.blp:71
 msgid "Input"
-msgstr ""
+msgstr "输入"
 
 #: src/ui/views/gzip_compressor.blp:66 src/ui/views/hash_generator.blp:83
 #: src/ui/views/html_encoder.blp:70 src/ui/views/json_yaml.blp:89
 #: src/ui/views/url_encoder.blp:82
 msgid "Output"
-msgstr ""
+msgstr "输出"
 
 #: src/ui/views/gzip_compressor.blp:94
 msgid ""
 "The compression result and the expected decompression input are base64 "
 "encoded."
-msgstr ""
+msgstr "压缩结果与预期的解压缩输入使用 Base64 编码。"
 
 #: src/ui/views/hash_generator.blp:20
 msgid "Hash Generator & Checker"
-msgstr ""
+msgstr "哈希值生成 & 检查工具"
 
 #: src/ui/views/hash_generator.blp:34
 msgid "Hash to calculate"
-msgstr ""
+msgstr "计算的哈希值"
 
 #: src/ui/views/hash_generator.blp:35
 msgid "Choose the hash type to calculate"
-msgstr ""
+msgstr "选择计算的哈希值类型"
 
 #: src/ui/views/hash_generator.blp:43
 msgid "Check for integrity"
-msgstr ""
+msgstr "检查完整性"
 
 #: src/ui/views/hash_generator.blp:44
 msgid ""
 "If enabled the calculated hash will be checked against another provided hash "
 "to verify integrity"
-msgstr ""
+msgstr "若启用，则会将计算出的哈希值与提供的哈希值校对，以验证完整性"
 
 #: src/ui/views/hash_generator.blp:55
 msgid "Type the hash to check against"
-msgstr ""
+msgstr "输入用于核对的哈希值"
 
 #: src/ui/views/html_encoder.blp:20
 msgid "HTML Encoder & Decoder"
-msgstr ""
+msgstr "HTML 编码 & 解码工具"
 
 #: src/ui/views/html_encoder.blp:35 src/ui/views/url_encoder.blp:35
 msgid "Select the desired encoding direction"
-msgstr ""
+msgstr "选择编码方向"
 
 #: src/ui/views/html_encoder.blp:40 src/ui/views/url_encoder.blp:40
 msgid "Encode"
-msgstr ""
+msgstr "编码"
 
 #: src/ui/views/html_encoder.blp:41 src/ui/views/url_encoder.blp:41
 msgid "Decode"
-msgstr ""
+msgstr "解码"
 
 #: src/ui/views/image_converter.blp:34
 msgctxt "noun"
 msgid "Format"
-msgstr ""
+msgstr "格式"
 
 #: src/ui/views/image_converter.blp:35
 msgid "Select the desired output format"
-msgstr ""
+msgstr "选择输出格式"
 
 #: src/ui/views/image_converter.blp:56
 msgid "Image"
-msgstr ""
+msgstr "图像"
 
 #: src/ui/views/image_converter.blp:58
 msgid "Convert"
-msgstr ""
+msgstr "转换"
 
 #: src/ui/views/json_yaml.blp:20
 msgid "JSON - YAML Converter"
-msgstr ""
+msgstr "JSON - YAML 转换工具"
 
 #: src/ui/views/json_yaml.blp:35
 msgid "Specify what format is the input and the desired output"
-msgstr ""
+msgstr "指定输入与期望输出的格式"
 
 #: src/ui/views/jwt_decoder.blp:20
 msgid "JWT tokens decoder"
-msgstr ""
+msgstr "JWT 令牌解码工具"
 
 #: src/ui/views/jwt_decoder.blp:30
 msgid "Token"
-msgstr ""
+msgstr "令牌"
 
 #: src/ui/views/jwt_decoder.blp:48
 msgid "Header"
-msgstr ""
+msgstr "标头"
 
 #: src/ui/views/jwt_decoder.blp:54
 msgid "Payload"
-msgstr ""
+msgstr "负载"
 
 #: src/ui/views/lorem_generator.blp:20
 msgid "Lorem Ipsum Generator"
-msgstr ""
+msgstr "乱数假文生成工具"
 
 #: src/ui/views/lorem_generator.blp:34
 msgid "Begin with \"Lorem ipsum dolor sit amet\""
-msgstr ""
+msgstr "以“Lorem ipsum dolor sit amet”开头"
 
 #: src/ui/views/lorem_generator.blp:46 src/ui/views/uuid_generator.blp:51
 msgid "Amount"
-msgstr ""
+msgstr "数目"
 
 #: src/ui/views/lorem_generator.blp:50
 msgid "Words"
-msgstr ""
+msgstr "单词"
 
 #: src/ui/views/lorem_generator.blp:51
 msgid "Sentences"
-msgstr ""
+msgstr "句子"
 
 #: src/ui/views/lorem_generator.blp:52
 msgid "Paragraphs"
-msgstr ""
+msgstr "段落"
 
 #: src/ui/views/lorem_generator.blp:75
 msgid "Generated text"
-msgstr ""
+msgstr "生成的文本"
 
 #: src/ui/views/markdown_preview.blp:36
 msgid "Markdown"
-msgstr ""
+msgstr "Markdown"
 
 #: src/ui/views/markdown_preview.blp:49
 msgid "Preview"
-msgstr ""
+msgstr "预览"
 
 #: src/ui/views/qrcode_generator.blp:20
 msgid "QR Code Generator"
-msgstr ""
+msgstr "二维码生成工具"
 
 #: src/ui/views/qrcode_generator.blp:31 src/ui/views/reverse_cron.blp:31
 msgid "Tool Options"
-msgstr ""
+msgstr "工具选项"
 
 #: src/ui/views/qrcode_generator.blp:32
 msgid "Fill the required information and press 'generate'"
-msgstr ""
+msgstr "填入所需信息并按下“生成”"
 
 #: src/ui/views/qrcode_generator.blp:39
 msgid "Generate"
-msgstr ""
+msgstr "生成"
 
 #: src/ui/views/qrcode_generator.blp:45
 msgid "Content type"
-msgstr ""
+msgstr "内容类型"
 
 #: src/ui/views/qrcode_generator.blp:46
 msgid "Choose the content of the QR Code"
-msgstr ""
+msgstr "选择二维码内容"
 
 #: src/ui/views/qrcode_generator.blp:49 src/ui/views/qrcode_generator.blp:57
 msgid "Text/URL"
-msgstr ""
+msgstr "文本/URL"
 
 #: src/ui/views/qrcode_generator.blp:50
 msgid "WiFi Network"
-msgstr ""
+msgstr "WiFi 网络"
 
 #: src/ui/views/qrcode_generator.blp:51
 msgid "Contact"
-msgstr ""
+msgstr "联系人"
 
 #: src/ui/views/qrcode_generator.blp:64
 msgid "Network Name (SSID)"
-msgstr ""
+msgstr "网络名称 (SSID)"
 
 #: src/ui/views/qrcode_generator.blp:71
 msgid "Network Encryption"
-msgstr ""
+msgstr "网络加密方式"
 
 #: src/ui/views/qrcode_generator.blp:76
 msgid "None"
-msgstr ""
+msgstr "无"
 
 #: src/ui/views/qrcode_generator.blp:82
 msgid "Network Password"
-msgstr ""
+msgstr "网络密码"
 
 #: src/ui/views/qrcode_generator.blp:86
 msgid "First Name *"
-msgstr ""
+msgstr "名 *"
 
 #: src/ui/views/qrcode_generator.blp:93
 msgid "Last Name *"
-msgstr ""
+msgstr "姓 *"
 
 #: src/ui/views/qrcode_generator.blp:100
 msgid "Phone Number"
-msgstr ""
+msgstr "手机号码"
 
 #: src/ui/views/qrcode_generator.blp:107
 msgid "Email"
-msgstr ""
+msgstr "电子邮件"
 
 #: src/ui/views/qrcode_generator.blp:114
 msgid "Birthday"
-msgstr ""
+msgstr "生日"
 
 #: src/ui/views/qrcode_generator.blp:132
 msgid "Select from calendar:"
-msgstr ""
+msgstr "从日历选择："
 
 #: src/ui/views/qrcode_generator.blp:143
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: src/ui/views/qrcode_generator.blp:150
 msgid "Address"
-msgstr ""
+msgstr "地址"
 
 #: src/ui/views/qrcode_generator.blp:153
 msgid "Street"
-msgstr ""
+msgstr "街道"
 
 #: src/ui/views/qrcode_generator.blp:159
 msgid "City"
-msgstr ""
+msgstr "城市"
 
 #: src/ui/views/qrcode_generator.blp:165
 msgid "State"
-msgstr ""
+msgstr "州/省"
 
 #: src/ui/views/qrcode_generator.blp:171
 msgid "ZIP Code"
-msgstr ""
+msgstr "ZIP 代码"
 
 #: src/ui/views/qrcode_generator.blp:177
 msgid "Country"
-msgstr ""
+msgstr "国家"
 
 #: src/ui/views/qrcode_generator.blp:189
 msgid "Generated QR Code"
-msgstr ""
+msgstr "生成的二维码"
 
 #: src/ui/views/random_generator.blp:20
 msgid "Random Generator"
-msgstr ""
+msgstr "随机生成工具"
 
 #: src/ui/views/random_generator.blp:31
 msgid "String"
-msgstr ""
+msgstr "字符串"
 
 #: src/ui/views/random_generator.blp:32
 msgid "Generate a random string with the given options. ASCII characters only."
-msgstr ""
+msgstr "使用所给设置生成一个随机字符串。仅限 ASCII 字符。"
 
 #: src/ui/views/random_generator.blp:35
 msgid "Length"
-msgstr ""
+msgstr "长度"
 
 #: src/ui/views/random_generator.blp:36
 msgid "Length of the generated string"
-msgstr ""
+msgstr "生成字符串的长度"
 
 #: src/ui/views/random_generator.blp:55
 msgid "Uppercase letters (A-Z)"
-msgstr ""
+msgstr "大写字母 (A-Z)"
 
 #: src/ui/views/random_generator.blp:65
 msgid "Lowercase letters (a-z)"
-msgstr ""
+msgstr "小写字母 (a-z)"
 
 #: src/ui/views/random_generator.blp:76
 msgid "Numbers (0-9)"
-msgstr ""
+msgstr "数字 (0-9)"
 
 #: src/ui/views/random_generator.blp:87
 msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
-msgstr ""
+msgstr "特殊字符 (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 
 #: src/ui/views/random_generator.blp:101
 msgid "Generated string"
-msgstr ""
+msgstr "生成的字符串"
 
 #: src/ui/views/random_generator.blp:118
 msgid "Number"
-msgstr ""
+msgstr "数字"
 
 #: src/ui/views/random_generator.blp:119
 msgid "Generate a random number in the given range"
-msgstr ""
+msgstr "生成给定范围内的随机数"
 
 #: src/ui/views/random_generator.blp:122
 msgid "Range"
-msgstr ""
+msgstr "范围"
 
 #: src/ui/views/random_generator.blp:123
 msgid "Range in which to generate"
-msgstr ""
+msgstr "生成的数字范围"
 
 #: src/ui/views/random_generator.blp:169
 msgid "Generated number"
-msgstr ""
+msgstr "生成的数字"
 
 #: src/ui/views/regex_tester.blp:20
 msgid "Regular Expression Tester"
-msgstr ""
+msgstr "正则表达式测试工具"
 
 #: src/ui/views/regex_tester.blp:38
 msgid "Regex to test"
-msgstr ""
+msgstr "待测试正则表达式"
 
 #: src/ui/views/reverse_cron.blp:54
 msgid "Every minute"
-msgstr ""
+msgstr "每分钟"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
@@ -1586,372 +1597,372 @@ msgstr ""
 #: src/ui/views/reverse_cron.blp:207 src/ui/views/reverse_cron.blp:284
 #: src/ui/views/reverse_cron.blp:404
 msgid "Every"
-msgstr ""
+msgstr "每"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #: src/ui/views/reverse_cron.blp:71
 msgid "minute(s) starting at minute"
-msgstr ""
+msgstr "分钟，自分钟"
 
 #: src/ui/views/reverse_cron.blp:84
 msgid "Specific minute (choose one or many, no selection means every minute)"
-msgstr ""
+msgstr "指定分钟（选择一个或多个，不选代表每分钟）"
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:99
 msgid "Every minute between minute"
-msgstr ""
+msgstr "以下区间内每分钟：分钟"
 
 #. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:105
 msgid "and minute"
-msgstr ""
+msgstr "到分钟"
 
 #: src/ui/views/reverse_cron.blp:124
 msgid "Every hour"
-msgstr ""
+msgstr "每小时"
 
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
 #: src/ui/views/reverse_cron.blp:141
 msgid "hour(s) starting at hour"
-msgstr ""
+msgstr "小时，自小时"
 
 #: src/ui/views/reverse_cron.blp:154
 msgid "Specific hour (choose one or many, no selection means every hour)"
-msgstr ""
+msgstr "指定小时（选择一个或多个，不选表示每小时）"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:170
 msgid "Every hour between hour"
-msgstr ""
+msgstr "以下区间内每小时：小时"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:177
 msgid "and hour"
-msgstr ""
+msgstr "到小时"
 
 #: src/ui/views/reverse_cron.blp:196
 msgid "Every day"
-msgstr ""
+msgstr "每天"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:213
 msgid "day(s) starting on the"
-msgstr ""
+msgstr "天，自一个月中的第"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:219
 msgid "of the month"
-msgstr ""
+msgstr "天起"
 
 #: src/ui/views/reverse_cron.blp:231
 msgid ""
 "Specific day of month (choose one or many, no selection means every day)"
-msgstr ""
+msgstr "一月中具体日期（选择一个或多个，不选表示每天）"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:247
 msgid "Every day between the"
-msgstr ""
+msgstr "以下区间内的每一天："
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:254
 msgid "and the"
-msgstr ""
+msgstr "到"
 
 #: src/ui/views/reverse_cron.blp:273
 msgid "Every month"
-msgstr ""
+msgstr "每个月"
 
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
 #: src/ui/views/reverse_cron.blp:290
 msgid "month(s) starting in"
-msgstr ""
+msgstr "月，开始于"
 
 #: src/ui/views/reverse_cron.blp:319
 msgid "Specific month (choose one or many, no selection means every month)"
-msgstr ""
+msgstr "指定月份（选择一个或多个，不选表示每个月）"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #: src/ui/views/reverse_cron.blp:335
 msgid "Every month between"
-msgstr ""
+msgstr "以下区间内每个月："
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:358 src/ui/views/reverse_cron.blp:478
 msgid "and"
-msgstr ""
+msgstr "到"
 
 #: src/ui/views/reverse_cron.blp:383
 msgid "Weekday"
-msgstr ""
+msgstr "星期"
 
 #: src/ui/views/reverse_cron.blp:393
 msgid "Every weekday"
-msgstr ""
+msgstr "每天（星期）"
 
 #. TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:410
 msgid "weekday(s) starting on"
-msgstr ""
+msgstr "星期，自"
 
 #: src/ui/views/reverse_cron.blp:435
 msgid "Specific weekday (choose one or many, no selection means every weekday)"
-msgstr ""
+msgstr "指定星期（选择一个或多个，不选表示每天）"
 
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:459
 msgid "Every weekday between"
-msgstr ""
+msgstr "以下区间内的每一天："
 
 #: src/ui/views/reverse_cron.blp:499
 msgid "Command to execute"
-msgstr ""
+msgstr "待执行命令"
 
 #: src/ui/views/reverse_cron.blp:513
 msgid "CRON Expression"
-msgstr ""
+msgstr "CRON 表达式"
 
 #: src/ui/views/text_diff.blp:34
 msgid "Old Text"
-msgstr ""
+msgstr "旧文本"
 
 #: src/ui/views/text_diff.blp:45
 msgid "New Text"
-msgstr ""
+msgstr "新文本"
 
 #: src/ui/views/text_diff.blp:57
 msgid "Differences"
-msgstr ""
+msgstr "差异"
 
 #: src/ui/views/text_inspector.blp:34
 msgid "Change case"
-msgstr ""
+msgstr "更改大小写"
 
 #: src/ui/views/text_inspector.blp:35
 msgid "Choose a case to apply to the text"
-msgstr ""
+msgstr "选择文本应用的大小写方式"
 
 #: src/ui/views/text_inspector.blp:40
 msgid "Sentence case"
-msgstr ""
+msgstr "首字母大写 (Sentence case)"
 
 #: src/ui/views/text_inspector.blp:41
 msgid "lower case"
-msgstr ""
+msgstr "全小写 (lower case)"
 
 #: src/ui/views/text_inspector.blp:42
 msgid "UPPERCASE"
-msgstr ""
+msgstr "全大写 (UPPERCASE)"
 
 #: src/ui/views/text_inspector.blp:43
 msgid "Title Case"
-msgstr ""
+msgstr "标题大小写 (Title Case)"
 
 #: src/ui/views/text_inspector.blp:44
 msgid "camelCase"
-msgstr ""
+msgstr "驼峰命名法 (camelCase)"
 
 #: src/ui/views/text_inspector.blp:45
 msgid "PascalCase"
-msgstr ""
+msgstr "帕斯卡命名法 (PascalCase)"
 
 #: src/ui/views/text_inspector.blp:46
 msgid "snake_case"
-msgstr ""
+msgstr "蛇形命名法 (snake_case)"
 
 #: src/ui/views/text_inspector.blp:47
 msgid "CONSTANT_CASE"
-msgstr ""
+msgstr "常量命名法 (CONSTANT_CASE)"
 
 #: src/ui/views/text_inspector.blp:48
 msgid "kebab-case"
-msgstr ""
+msgstr "短横线命名法 (kebab-case)"
 
 #: src/ui/views/text_inspector.blp:49
 msgid "COBOL-CASE"
-msgstr ""
+msgstr "COBOL 命名法 (COBOL-CASE)"
 
 #: src/ui/views/text_inspector.blp:50
 msgid "Train-Case"
-msgstr ""
+msgstr "火车命名法 (Train-Case)"
 
 #: src/ui/views/text_inspector.blp:51
 msgid "aLtErNaTiNg CaSe"
-msgstr ""
+msgstr "交替大小写 (aLtErNaTiNg CaSe)"
 
 #: src/ui/views/text_inspector.blp:52
 msgid "ReVeRsE aLtErNaTiNg CaSe"
-msgstr ""
+msgstr "反向交替大小写 (ReVeRsE aLtErNaTiNg CaSe)"
 
 #: src/ui/views/text_inspector.blp:63
 msgid "Information"
-msgstr ""
+msgstr "信息"
 
 #: src/ui/views/text_inspector.blp:66
 msgid "Cursor"
-msgstr ""
+msgstr "光标"
 
 #: src/ui/views/text_inspector.blp:80
 msgid "Line:"
-msgstr ""
+msgstr "行："
 
 #: src/ui/views/text_inspector.blp:93
 msgid "Column:"
-msgstr ""
+msgstr "列："
 
 #: src/ui/views/text_inspector.blp:118
 msgid "Characters:"
-msgstr ""
+msgstr "字符数："
 
 #: src/ui/views/text_inspector.blp:131
 msgid "Words:"
-msgstr ""
+msgstr "词数："
 
 #: src/ui/views/text_inspector.blp:144
 msgid "Lines:"
-msgstr ""
+msgstr "行数："
 
 #: src/ui/views/timestamp.blp:20
 msgid "Timestamp Converter"
-msgstr ""
+msgstr "时间戳转换工具"
 
 #: src/ui/views/timestamp.blp:34
 msgid "Timezone"
-msgstr ""
+msgstr "时区"
 
 #: src/ui/views/timestamp.blp:35
 msgid "Select the desired timezone"
-msgstr ""
+msgstr "选择期望时区"
 
 #: src/ui/views/timestamp.blp:50
 msgid "Sets the current system timestamp"
-msgstr ""
+msgstr "设置当前系统时间戳"
 
 #: src/ui/views/timestamp.blp:54
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: src/ui/views/timestamp.blp:63
 msgid "ISO date (ISO 8601/RFC 3339)"
-msgstr ""
+msgstr "ISO 日期 (ISO 8601/RFC 3339)"
 
 #: src/ui/views/url_encoder.blp:20
 msgid "URL Encoder & Decoder"
-msgstr ""
+msgstr "URL 编码 & 解码工具"
 
 #: src/ui/views/url_encoder.blp:47
 msgid "Space encoding"
-msgstr ""
+msgstr "空格编码方式"
 
 #: src/ui/views/url_encoder.blp:48
 msgid "Select the desired encoding for the space character"
-msgstr ""
+msgstr "选择空格字符的编码方式"
 
 #: src/ui/views/uuid_generator.blp:20
 msgid "UUID Generator"
-msgstr ""
+msgstr "UUID 生成工具"
 
 #: src/ui/views/uuid_generator.blp:34
 msgid "Version"
-msgstr ""
+msgstr "版本"
 
 #: src/ui/views/uuid_generator.blp:35
 msgid "Choose the UUID version to generate"
-msgstr ""
+msgstr "选择要生成的 UUID 版本"
 
 #: src/ui/views/uuid_generator.blp:39
 msgid "Version 1 (MAC address)"
-msgstr ""
+msgstr "版本 1（MAC 地址）"
 
 #: src/ui/views/uuid_generator.blp:40
 msgid "Version 3"
-msgstr ""
+msgstr "版本 3"
 
 #: src/ui/views/uuid_generator.blp:41
 msgid "Version 4 (Random)"
-msgstr ""
+msgstr "版本 4（随机）"
 
 #: src/ui/views/uuid_generator.blp:42
 msgid "Version 5"
-msgstr ""
+msgstr "版本 5"
 
 #: src/ui/views/uuid_generator.blp:43
 msgid "Version 6 (Gregorian Time)"
-msgstr ""
+msgstr "版本 6（格里高利时间）"
 
 #: src/ui/views/uuid_generator.blp:44
 msgid "Version 7 (UNIX Epoch)"
-msgstr ""
+msgstr "版本 7（UNIX 时期）"
 
 #: src/ui/views/uuid_generator.blp:52
 msgid "Number of UUIDs to be generated (up to 50)"
-msgstr ""
+msgstr "要生成的 UUID 数（最多 50）"
 
 #: src/ui/views/uuid_generator.blp:73
 msgid "Generated UUIDs"
-msgstr ""
+msgstr "生成的 UUID"
 
 #: src/ui/gtk/help-overlay.blp:15
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "通用"
 
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "显示快捷方式"
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "退出"
 
 #: src/formatters/html.py:14
 msgid "HTML Formatter"
-msgstr ""
+msgstr "HTML 格式化工具"
 
 #: src/formatters/html.py:17
 msgid "Type HTML code here"
-msgstr ""
+msgstr "在此输入 HTML 代码"
 
 #: src/formatters/js.py:14
 msgid "JavaScript Formatter"
-msgstr ""
+msgstr "JavaScript 格式化工具"
 
 #: src/formatters/js.py:17
 msgid "Type JavaScript code here"
-msgstr ""
+msgstr "在这里输入 JavaScript 代码"
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
-msgstr ""
+msgstr "JSON 格式化工具"
 
 #: src/formatters/json.py:16
 msgid "Type JSON code here"
-msgstr ""
+msgstr "在这里输入 JSON 代码"
 
 #: src/formatters/sql.py:13
 msgid "SQL Formatter"
-msgstr ""
+msgstr "SQL 格式化工具"
 
 #: src/formatters/sql.py:16
 msgid "Type SQL code here"
-msgstr ""
+msgstr "在这里输入 SQL 代码"
 
 #: src/formatters/xml.py:15
 msgid "XML Formatter"
-msgstr ""
+msgstr "XML 格式化工具"
 
 #: src/formatters/xml.py:18
 msgid "Type XML code here"
-msgstr ""
+msgstr "在这里输入 XML 代码"
 
 #: src/formatters/css.py:13
 msgid "CSS Formatter"
-msgstr ""
+msgstr "CSS 格式化工具"
 
 #: src/formatters/css.py:16
 msgid "Type CSS here"
-msgstr ""
+msgstr "在这里输入 CSS 代码"
