@@ -38,6 +38,7 @@ SPDX-License-Identifier: CC0-1.0
   <url type="homepage">https://github.com/aleiepure/devtoolbox</url>
   <url type="bugtracker">https://github.com/aleiepure/devtoolbox/issues</url>
   <url type="vcs-browser">https://github.com/aleiepure/devtoolbox</url>
+  <url type="translate">https://hosted.weblate.org/engage/devtoolbox/</url>
   <url type="contribute">https://github.com/aleiepure/devtoolbox/wiki/Contributing</url>
   <screenshots>
     <screenshot type="default">
