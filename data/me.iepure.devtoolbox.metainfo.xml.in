@@ -11,10 +11,10 @@ SPDX-License-Identifier: CC0-1.0
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
   <launchable type="desktop-id">me.iepure.devtoolbox.desktop</launchable>
-  <name translatable="no">Dev Toolbox</name>
+  <name translate="no">Dev Toolbox</name>
   <summary>Development tools at your fingertips</summary>
-  <developer_name translatable="no">Alessandro Iepure</developer_name>
   <description>
+  <developer_name translate="no">Alessandro Iepure</developer_name>
     <p>If you're tired of endlessly looking online for the right tool, or to
       find again that website of which you don't recall the name just for a quick
       conversion, this is the right app for you.</p>
