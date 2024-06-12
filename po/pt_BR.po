@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2023-06-18 12:20+0200\n"
-"PO-Revision-Date: 2023-09-29 23:03+0000\n"
-"Last-Translator: Claudio <kael81@gmail.com>\n"
+"PO-Revision-Date: 2024-06-13 23:09+0000\n"
+"Last-Translator: Lucio Cunha <vhf3d.test@inbox.testmail.app>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "devtoolbox/devtoolbox/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -319,7 +319,7 @@ msgstr "Aleatório"
 
 #: src/window.py:208 src/ui/views/random_generator.blp:21
 msgid "Generate random numbers and strings"
-msgstr ""
+msgstr "Gerar números e textos aleatórios"
 
 #: src/window.py:212 src/ui/views/chmod_calculator.blp:19
 #, fuzzy
@@ -328,15 +328,15 @@ msgstr "Hash para calcular"
 
 #: src/window.py:215 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
-msgstr ""
+msgstr "Calcular valores para modificar permissões com chmod"
 
 #: src/window.py:219
 msgid "QR Code"
-msgstr ""
+msgstr "Código QR"
 
 #: src/window.py:222 src/ui/views/qrcode_generator.blp:21
 msgid "Create custom QR Codes"
-msgstr ""
+msgstr "Criar QR codes personalizados"
 
 #: src/window.py:228 src/ui/views/text_inspector.blp:20
 msgid "Text Inspector & Case Converter"
@@ -411,11 +411,11 @@ msgstr "Converta imagens para diferentes formatos"
 
 #: src/window.py:295 src/ui/views/certificate_parser.blp:20
 msgid "Certificate Parser"
-msgstr ""
+msgstr "Leitor de certificados"
 
 #: src/window.py:298 src/ui/views/certificate_parser.blp:21
 msgid "View certificates contents"
-msgstr ""
+msgstr "Ver o conteúdo de certificados"
 
 #: src/window.py:302
 msgid "Certificate Signing Request"
@@ -423,7 +423,7 @@ msgstr "Solicitação de assinatura de certificado"
 
 #: src/window.py:305 src/ui/views/certificate_request_generator.blp:20
 msgid "Generate certificate signing requests"
-msgstr ""
+msgstr "Gerar uma solicitação de assinatura de certificado"
 
 #: src/window.py:312
 msgid "Converters"
@@ -448,7 +448,7 @@ msgstr "Texto"
 
 #: src/window.py:337 src/views/certificate_parser.py:92
 msgid "Certificates"
-msgstr ""
+msgstr "Certificados"
 
 #: src/window.py:342
 msgid "Graphics"
@@ -533,23 +533,25 @@ msgid ""
 "Loading a large file ({size})\n"
 "Might take a while, please wait..."
 msgstr ""
+"Carregando um arquivo grande ({size})\n"
+"Isto pode demorar um pouco, aguarde, por favor..."
 
 #: src/widgets/text_area.py:204 src/widgets/text_file_area.py:251
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr ""
+msgstr "Não foi possível abrir {file_path}:{file_content}."
 
 #: src/widgets/text_area.py:219
 msgid "File is not UTF-8 encoded."
-msgstr ""
+msgstr "O arquivo não está codificado em UTF-8."
 
 #: src/widgets/text_file_area.py:190
 msgid "All files"
-msgstr "Todos arquivos"
+msgstr "Todos os arquivos"
 
 #: src/widgets/text_file_area.py:197
 msgid "Text files and images"
-msgstr "Arquivos texto e imagens"
+msgstr "Arquivos de texto e imagens"
 
 #: src/widgets/text_file_area.py:209
 msgid "Images"
