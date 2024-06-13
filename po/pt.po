@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2023-06-18 12:20+0200\n"
-"PO-Revision-Date: 2023-04-07 17:48+0000\n"
-"Last-Translator: ssantos <ssantos@web.de>\n"
+"PO-Revision-Date: 2024-06-13 23:09+0000\n"
+"Last-Translator: Ismael Brendo <ismael.brendo2@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/pt/>\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.17-dev\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -92,7 +92,7 @@ msgstr "Muito mais..."
 #: data/me.iepure.devtoolbox.metainfo.xml.in:102
 #: data/me.iepure.devtoolbox.metainfo.xml.in:111
 msgid "What's new:"
-msgstr ""
+msgstr "O que há de novo:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:71
 msgid "Fixed various typos"
@@ -103,18 +103,20 @@ msgid ""
 "Timestamp: fixed issue that prevented the app from launching when the system "
 "timezone was \"Europe/Kyiv\""
 msgstr ""
+"Timestamp: corrigido problema que impedia a inicialização do aplicativo "
+"quando o fuso horário do sistema era \"Europa/Kyiv\""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:73
 msgid "Updated translations"
-msgstr ""
+msgstr "Traduções atualizadas"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:81
 msgid "Upgraded to GNOME platform 44"
-msgstr ""
+msgstr "Atualizado para a plataforma GNOME 44"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:82
 msgid "Now follows the system theme"
-msgstr ""
+msgstr "Agora segue o tema do sistema"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:83
 msgid "Timestamp: ISO8601/RFC3339 output format and timezone support"
@@ -122,11 +124,11 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:84
 msgid "Ported UIs to blueprint"
-msgstr ""
+msgstr "Interfaces de usuário portadas para blueprint"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:85
 msgid "Improved icon"
-msgstr ""
+msgstr "Ícone melhorado"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:86
 #, fuzzy
@@ -135,7 +137,7 @@ msgstr "Formatador JSON"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:87
 msgid "New tool: Certificate Parser"
-msgstr ""
+msgstr "Nova ferramenta: Analisador de Certificado"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:88
 #, fuzzy
@@ -143,13 +145,12 @@ msgid "New tool: CSR Generator"
 msgstr "Geradores"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:89
-#, fuzzy
 msgid "New tool: Random Generator"
-msgstr "Geradores"
+msgstr "Nova ferramenta: Gerador Aleatório"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:90
 msgid "New tool: CRON generator"
-msgstr ""
+msgstr "Nova ferramenta: gerador CRON"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:91
 #, fuzzy
@@ -157,9 +158,8 @@ msgid "New tool: chmod calculator"
 msgstr "Hash para calcular"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:92
-#, fuzzy
 msgid "New tool: QR-code generator"
-msgstr "Geradores"
+msgstr "Nova ferramenta: gerador de código QR"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:93
 msgid "New tool: JSON validator"
@@ -176,20 +176,25 @@ msgid ""
 "Weblate and @gallegonovato), Norwegian Bokmål (@comradekingu), and "
 "Portuguese (@SantosSi)"
 msgstr ""
+"Novas traduções: tcheco (@Amereyeu), espanhol (Óscar Fernández Díaz no "
+"Weblate e @gallegonovato), bokmål norueguês (@comradekingu) e português "
+"(@SantosSi)"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:97
 msgid ""
 "I'm always open to suggestions. Feel free to contribute to the project with "
 "code or translations on Weblate."
 msgstr ""
+"Estou sempre aberto a sugestões. Sinta-se à vontade para contribuir com o "
+"projeto com código ou traduções no Weblate."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:104
 msgid "Window can be resized smaller than before"
-msgstr ""
+msgstr "A janela pode ser redimensionada para um tamanho menor do que antes"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:105
 msgid "Added missing icons on non GNOME desktops"
-msgstr ""
+msgstr "Adicionados ícones ausentes em desktops não GNOME"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:113
 msgid "XML formater: can now open .ui files (@gregorni)"
@@ -198,6 +203,7 @@ msgstr ""
 #: data/me.iepure.devtoolbox.metainfo.xml.in:114
 msgid "Markdown previewer: can open preview in external browser"
 msgstr ""
+"Visualizador Markdown: pode abrir a visualização em um navegador externo"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:115
 msgid "Color blindness simulator: severtity can be changed via keyboard"
@@ -209,11 +215,11 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:117
 msgid "Turkish translation by @sabriunal"
-msgstr ""
+msgstr "Tradução turca por @sabriunal"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:118
 msgid "Brasilian Portuguese translation by @rffontenelle"
-msgstr ""
+msgstr "Tradução para o português brasileiro por @rffontenelle"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:124
 msgid "First release"
@@ -316,7 +322,7 @@ msgstr ""
 
 #: src/window.py:208 src/ui/views/random_generator.blp:21
 msgid "Generate random numbers and strings"
-msgstr ""
+msgstr "Gere números aleatórios e strings"
 
 #: src/window.py:212 src/ui/views/chmod_calculator.blp:19
 #, fuzzy
@@ -325,7 +331,7 @@ msgstr "Hash para calcular"
 
 #: src/window.py:215 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
-msgstr ""
+msgstr "Calcule valores para modificar permissões com chmod"
 
 #: src/window.py:219
 msgid "QR Code"
@@ -333,7 +339,7 @@ msgstr ""
 
 #: src/window.py:222 src/ui/views/qrcode_generator.blp:21
 msgid "Create custom QR Codes"
-msgstr ""
+msgstr "Crie códigos QR personalizados"
 
 #: src/window.py:228 src/ui/views/text_inspector.blp:20
 msgid "Text Inspector & Case Converter"
