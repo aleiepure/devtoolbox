@@ -6,15 +6,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2023-06-18 12:20+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-06-16 18:09+0000\n"
+"Last-Translator: SuperAtraction <superatraction@proton.me>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/devtoolbox/"
+"devtoolbox/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -23,7 +26,7 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_window.blp:12
 msgid "Development tools at your fingertips"
-msgstr ""
+msgstr "Outils de développement à portée de main"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:18
 msgid ""
@@ -31,130 +34,140 @@ msgid ""
 "again that website of which you don't recall the name just for a quick "
 "conversion, this is the right app for you."
 msgstr ""
+"Si vous êtes fatigué de chercher sans cesse en ligne le bon outil ou de "
+"retrouver ce site Web dont vous ne vous souvenez pas du nom juste pour une "
+"conversion rapide, c'est la bonne application pour vous."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:22
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr ""
+"Il s'agit d'une collection d'outils puissants mais simples à utiliser pour "
+"résoudre les problèmes de développement quotidiens les plus courants."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:25
 msgid "Includes:"
-msgstr ""
+msgstr "Comprend :"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid "JSON to YAML converter and vice-versa"
-msgstr ""
+msgstr "Convertisseur JSON vers YAML et vice-versa"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:28
 msgid "CRON expressions parser"
-msgstr ""
+msgstr "Analyseur d'expressions CRON"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:29
 msgid "GZip compressor and decompressor"
-msgstr ""
+msgstr "Compresseur et décompresseur GZip"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Formatters for common programming languages"
-msgstr ""
+msgstr "Formateurs pour les langages de programmation courants"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:31
 msgid "Hash generators"
-msgstr ""
+msgstr "Générateurs de hachage"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "Regex tester"
-msgstr ""
+msgstr "Testeur de regex"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:263
 #: src/ui/views/markdown_preview.blp:20
 msgid "Markdown Previewer"
-msgstr ""
+msgstr "Prévisualisation Markdown"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "Image converters"
-msgstr ""
+msgstr "Convertisseurs d'images"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
+#, fuzzy
 msgid "Much more..."
-msgstr ""
+msgstr "Beaucoup plus..."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:69
 #: data/me.iepure.devtoolbox.metainfo.xml.in:79
 #: data/me.iepure.devtoolbox.metainfo.xml.in:102
 #: data/me.iepure.devtoolbox.metainfo.xml.in:111
 msgid "What's new:"
-msgstr ""
+msgstr "Nouveautés :"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:71
 msgid "Fixed various typos"
-msgstr ""
+msgstr "Correction de plusieurs fautes de frappe"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:72
 msgid ""
 "Timestamp: fixed issue that prevented the app from launching when the system "
 "timezone was \"Europe/Kyiv\""
 msgstr ""
+"Horodatage : correction d'un problème qui empêchait l'application de se "
+"lancer lorsque le fuseau horaire du système était \"Europe/Kyiv\""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:73
 msgid "Updated translations"
-msgstr ""
+msgstr "Traductions mises à jour"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:81
 msgid "Upgraded to GNOME platform 44"
-msgstr ""
+msgstr "Mise à jour vers la plate-forme GNOME 44"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:82
 msgid "Now follows the system theme"
-msgstr ""
+msgstr "Suit maintenant le thème du système"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:83
 msgid "Timestamp: ISO8601/RFC3339 output format and timezone support"
 msgstr ""
+"Horodatage : Format de sortie ISO8601/RFC3339 et prise en charge des fuseaux "
+"horaires"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:84
 msgid "Ported UIs to blueprint"
-msgstr ""
+msgstr "Portage des UIs vers Blueprint"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:85
 msgid "Improved icon"
-msgstr ""
+msgstr "Icône améliorée"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:86
 msgid "New tool: JS Formatter"
-msgstr ""
+msgstr "Nouvel outil : JS Formatter"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:87
 msgid "New tool: Certificate Parser"
-msgstr ""
+msgstr "Nouvel outil : Analyseur de certificats"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:88
 msgid "New tool: CSR Generator"
-msgstr ""
+msgstr "Nouvel outil : Générateur de RSE"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:89
 msgid "New tool: Random Generator"
-msgstr ""
+msgstr "Nouvel outil : Générateur aléatoire"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:90
 msgid "New tool: CRON generator"
-msgstr ""
+msgstr "Nouvel outil : Générateur CRON"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:91
 msgid "New tool: chmod calculator"
-msgstr ""
+msgstr "Nouvel outil : calculateur de chmod"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:92
 msgid "New tool: QR-code generator"
-msgstr ""
+msgstr "Nouvel outil : Générateur de QR-codes"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:93
 msgid "New tool: JSON validator"
-msgstr ""
+msgstr "Nouvel outil : Valideur JSON"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:94
 msgid "New tool: CSS Formatter"
-msgstr ""
+msgstr "Nouvel outil : Formateur CSS"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:95
 msgid ""
@@ -162,28 +175,35 @@ msgid ""
 "Weblate and @gallegonovato), Norwegian Bokmål (@comradekingu), and "
 "Portuguese (@SantosSi)"
 msgstr ""
+"Nouvelles traductions : tchèque (@Amereyeu), espagnol (Óscar Fernández Díaz "
+"sur Weblate et @gallegonovato), norvégien Bokmål (@comradekingu), et "
+"portugais (@SantosSi)"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:97
 msgid ""
 "I'm always open to suggestions. Feel free to contribute to the project with "
 "code or translations on Weblate."
 msgstr ""
+"Je suis toujours ouvert aux suggestions. N'hésitez pas à contribuer au "
+"projet avec du code ou des traductions sur Weblate."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:104
 msgid "Window can be resized smaller than before"
-msgstr ""
+msgstr "La fenêtre peut être redimensionnée plus petite qu'auparavant"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:105
 msgid "Added missing icons on non GNOME desktops"
-msgstr ""
+msgstr "Ajout d'icônes manquantes sur les bureaux non GNOME"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:113
 msgid "XML formater: can now open .ui files (@gregorni)"
-msgstr ""
+msgstr "Formateur XML : peut maintenant ouvrir des fichiers .ui (@gregorni)"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:114
 msgid "Markdown previewer: can open preview in external browser"
 msgstr ""
+"Prévisualisation Markdown : possibilité d'ouvrir la prévisualisation dans un "
+"navigateur externe"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:115
 msgid "Color blindness simulator: severtity can be changed via keyboard"
@@ -191,127 +211,129 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:116
 msgid "New tool: HTML formatter"
-msgstr ""
+msgstr "Nouvel outil : Formateur HTML"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:117
 msgid "Turkish translation by @sabriunal"
-msgstr ""
+msgstr "Traduction en turc par @sabriunal"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:118
 msgid "Brasilian Portuguese translation by @rffontenelle"
-msgstr ""
+msgstr "Traduction en portugais brésilien par @rffontenelle"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:124
 msgid "First release"
-msgstr ""
+msgstr "Première version"
 
 #: src/window.py:76 src/ui/views/json_yaml.blp:21
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr ""
+msgstr "Convertir des documents JSON en YAML et vice-versa"
 
 #: src/window.py:80 src/ui/views/timestamp.blp:45
 msgid "Timestamp"
-msgstr ""
+msgstr "Horodatage"
 
 #: src/window.py:83 src/ui/views/timestamp.blp:21
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr ""
+msgstr "Convertir les horodatages UNIX en dates simples et inversement"
 
 #: src/window.py:87
 msgid "Number Bases"
-msgstr ""
+msgstr "Nombre Bases"
 
 #: src/window.py:90 src/ui/views/base_converter.blp:21
 msgid "Convert numbers between bases"
-msgstr ""
+msgstr "Convertir des nombres entre bases"
 
 #: src/window.py:94 src/ui/views/cron_converter.blp:21
 msgid "CRON Parser"
-msgstr ""
+msgstr "Analyseur CRON"
 
 #: src/window.py:97 src/ui/views/cron_converter.blp:22
 msgid "Convert CRON expressions to time and date"
-msgstr ""
+msgstr "Convertir les expressions CRON en heure et date"
 
 #: src/window.py:101 src/ui/views/reverse_cron.blp:19
+#, fuzzy
 msgid "Reverse CRON"
-msgstr ""
+msgstr "Inverser CRON"
 
 #: src/window.py:104 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
-msgstr ""
+msgstr "Générer des expressions CRON"
 
 #: src/window.py:113 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
-msgstr ""
+msgstr "Encoder et décoder les caractères spéciaux en utilisant le format HTML"
 
 #: src/window.py:120 src/ui/views/url_encoder.blp:21
 msgid "Encode and decode special characters inside URLs"
-msgstr ""
+msgstr "Encoder et décoder les caractères spéciaux dans les URL"
 
 #: src/window.py:127 src/ui/views/gzip_compressor.blp:21
 msgid "Compress and decompress files and texts using GZip"
-msgstr ""
+msgstr "Compresser et décompresser des fichiers et des textes à l'aide de GZip"
 
 #: src/window.py:134 src/ui/views/jwt_decoder.blp:21
 msgid "Decode JWT tokens to header and payload"
-msgstr ""
+msgstr "Décoder les jetons JWT en en-tête et charge utile"
 
 #: src/window.py:143 src/formatters/json.py:14
 msgid "Format JSON documents"
-msgstr ""
+msgstr "Formatage des documents JSON"
 
 #: src/window.py:150 src/formatters/sql.py:14
 msgid "Format SQL documents"
-msgstr ""
+msgstr "Formatage des documents SQL"
 
 #: src/window.py:157 src/formatters/xml.py:16
 msgid "Format XML documents"
-msgstr ""
+msgstr "Formatage des documents XML"
 
 #: src/window.py:164 src/formatters/html.py:15
 msgid "Format HTML documents"
-msgstr ""
+msgstr "Formater des documents HTML"
 
 #: src/window.py:171 src/formatters/js.py:15
 msgid "Format JavaScript documents"
-msgstr ""
+msgstr "Formatage des documents JavaScript"
 
 #: src/window.py:178 src/formatters/css.py:14
 msgid "Format CSS documents"
-msgstr ""
+msgstr "Formatage des documents CSS"
 
 #: src/window.py:187 src/ui/views/hash_generator.blp:21
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
 msgstr ""
+"Calculer les hachages MD5, SHA1, SHA256 et SHA512 et en vérifier l'intégrité"
 
 #: src/window.py:194 src/ui/views/lorem_generator.blp:21
 msgid "Generate lorem ipsum placeholder text"
-msgstr ""
+msgstr "Générer un texte de remplacement lorem ipsum"
 
 #: src/window.py:201 src/ui/views/uuid_generator.blp:21
 msgid "Generate Universally Unique IDs (UUID)"
-msgstr ""
+msgstr "Générer des identifiants universels uniques (UUID)"
 
 #: src/window.py:205
 msgid "Random"
-msgstr ""
+msgstr "Aléatoire"
 
 #: src/window.py:208 src/ui/views/random_generator.blp:21
 msgid "Generate random numbers and strings"
-msgstr ""
+msgstr "Générer des nombres et des chaînes de caractères aléatoires"
 
 #: src/window.py:212 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
-msgstr ""
+msgstr "Calculatrice Chmod"
 
 #: src/window.py:215 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
-msgstr ""
+msgstr "Calculer les valeurs pour modifier les permissions avec chmod"
 
 #: src/window.py:219
 msgid "QR Code"
-msgstr ""
+msgstr "QR Code"
 
 #: src/window.py:222 src/ui/views/qrcode_generator.blp:21
 msgid "Create custom QR Codes"
