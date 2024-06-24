@@ -5,9 +5,11 @@
 [Desktop Entry]
 # TRANSLATORS: do not translate
 Name=@app-name@
+Comment=Development tools at your fingertips
 Exec=devtoolbox
 Icon=me.iepure.devtoolbox
 Terminal=false
 Type=Application
-Categories=GTK;
+Categories=Development;GTK;
+Keywords=JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;Markdown;Image;
 StartupNotify=true
