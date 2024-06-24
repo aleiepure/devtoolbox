@@ -6,7 +6,7 @@ Copyright (C) 2022 - 2023 Alessandro Iepure
 SPDX-License-Identifier: CC0-1.0
 -->
 
-<component type="desktop">
+<component type="desktop-application">
 	<id>me.iepure.devtoolbox.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
