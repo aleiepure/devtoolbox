@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2023-06-18 12:20+0200\n"
-"PO-Revision-Date: 2024-06-13 23:09+0000\n"
-"Last-Translator: Ismael Brendo <ismael.brendo2@gmail.com>\n"
+"PO-Revision-Date: 2024-07-12 16:09+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/pt/>\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -96,7 +96,7 @@ msgstr "O que há de novo:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:71
 msgid "Fixed various typos"
-msgstr ""
+msgstr "Erros de digitação arrumados"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:72
 msgid ""
@@ -121,6 +121,8 @@ msgstr "Agora segue o tema do sistema"
 #: data/me.iepure.devtoolbox.metainfo.xml.in:83
 msgid "Timestamp: ISO8601/RFC3339 output format and timezone support"
 msgstr ""
+"Carimbo de data/hora (timestamp): formato de saída ISO8601/RFC3339 e suporte "
+"a fuso horário"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:84
 msgid "Ported UIs to blueprint"
@@ -131,18 +133,16 @@ msgid "Improved icon"
 msgstr "Ícone melhorado"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:86
-#, fuzzy
 msgid "New tool: JS Formatter"
-msgstr "Formatador JSON"
+msgstr "Nova ferramenta: Formatador JS"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:87
 msgid "New tool: Certificate Parser"
 msgstr "Nova ferramenta: Analisador de Certificado"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:88
-#, fuzzy
 msgid "New tool: CSR Generator"
-msgstr "Geradores"
+msgstr "Nova ferramenta: Gerador CSR"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:89
 msgid "New tool: Random Generator"
@@ -153,9 +153,8 @@ msgid "New tool: CRON generator"
 msgstr "Nova ferramenta: gerador CRON"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:91
-#, fuzzy
 msgid "New tool: chmod calculator"
-msgstr "Hash para calcular"
+msgstr "Nova ferramenta: Calculadora de chmod"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:92
 msgid "New tool: QR-code generator"
@@ -163,12 +162,11 @@ msgstr "Nova ferramenta: gerador de código QR"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:93
 msgid "New tool: JSON validator"
-msgstr ""
+msgstr "Nova ferramenta: Validador JSON"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:94
-#, fuzzy
 msgid "New tool: CSS Formatter"
-msgstr "Formatador SQL"
+msgstr "Nova ferramenta: Formatador CSS"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:95
 msgid ""
@@ -198,7 +196,7 @@ msgstr "Adicionados ícones ausentes em desktops não GNOME"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:113
 msgid "XML formater: can now open .ui files (@gregorni)"
-msgstr ""
+msgstr "Formatador XML: agora pode abrir ficheiros .ui (@gregorni)"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:114
 msgid "Markdown previewer: can open preview in external browser"
@@ -207,11 +205,11 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:115
 msgid "Color blindness simulator: severtity can be changed via keyboard"
-msgstr ""
+msgstr "Simulador de daltonismo: gravidade pode ser alterada via teclado"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:116
 msgid "New tool: HTML formatter"
-msgstr ""
+msgstr "Nova ferramenta: Formatador HTML"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:117
 msgid "Turkish translation by @sabriunal"
@@ -255,12 +253,11 @@ msgstr "Converta expressões CRON em hora e data"
 
 #: src/window.py:101 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
-msgstr ""
+msgstr "CRON Reverso"
 
 #: src/window.py:104 src/ui/views/reverse_cron.blp:20
-#, fuzzy
 msgid "Generate CRON expressions"
-msgstr "Expressão CRON"
+msgstr "Gerar expressões CRON"
 
 #: src/window.py:113 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
@@ -295,14 +292,12 @@ msgid "Format HTML documents"
 msgstr "Formate documentos HTML"
 
 #: src/window.py:171 src/formatters/js.py:15
-#, fuzzy
 msgid "Format JavaScript documents"
-msgstr "Formate documentos JSON"
+msgstr "Formata documentos JavaScript"
 
 #: src/window.py:178 src/formatters/css.py:14
-#, fuzzy
 msgid "Format CSS documents"
-msgstr "Formate documentos SQL"
+msgstr "Formata documentos CSS"
 
 #: src/window.py:187 src/ui/views/hash_generator.blp:21
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
@@ -318,16 +313,15 @@ msgstr "Gere IDs Universalmente Exclusivos (UUID)"
 
 #: src/window.py:205
 msgid "Random"
-msgstr ""
+msgstr "Aleatório"
 
 #: src/window.py:208 src/ui/views/random_generator.blp:21
 msgid "Generate random numbers and strings"
 msgstr "Gere números aleatórios e strings"
 
 #: src/window.py:212 src/ui/views/chmod_calculator.blp:19
-#, fuzzy
 msgid "Chmod Calculator"
-msgstr "Hash para calcular"
+msgstr "Calculadora Chmod"
 
 #: src/window.py:215 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
@@ -335,7 +329,7 @@ msgstr "Calcule valores para modificar permissões com chmod"
 
 #: src/window.py:219
 msgid "QR Code"
-msgstr ""
+msgstr "Código QR"
 
 #: src/window.py:222 src/ui/views/qrcode_generator.blp:21
 msgid "Create custom QR Codes"
@@ -376,9 +370,8 @@ msgid "Check an XML file against an XSD schema"
 msgstr "Verifique um ficheiro XML em relação a um esquema XSD"
 
 #: src/window.py:256 src/ui/views/json_validator.blp:19
-#, fuzzy
 msgid "JSON Schema Validator"
-msgstr "Validador de esquema XML"
+msgstr "Validador de esquema JSON"
 
 #: src/window.py:259 src/ui/views/json_validator.blp:20
 #, fuzzy
@@ -415,19 +408,19 @@ msgstr "Converta imagens para diferentes formatos"
 
 #: src/window.py:295 src/ui/views/certificate_parser.blp:20
 msgid "Certificate Parser"
-msgstr ""
+msgstr "Leitor de certificados"
 
 #: src/window.py:298 src/ui/views/certificate_parser.blp:21
 msgid "View certificates contents"
-msgstr ""
+msgstr "Ver o conteúdo de certificados"
 
 #: src/window.py:302
 msgid "Certificate Signing Request"
-msgstr ""
+msgstr "Solicitação de assinatura de certificado"
 
 #: src/window.py:305 src/ui/views/certificate_request_generator.blp:20
 msgid "Generate certificate signing requests"
-msgstr ""
+msgstr "Gerar uma solicitação de assinatura de certificado"
 
 #: src/window.py:312
 msgid "Converters"
@@ -452,11 +445,11 @@ msgstr "Texto"
 
 #: src/window.py:337 src/views/certificate_parser.py:92
 msgid "Certificates"
-msgstr ""
+msgstr "Certificados"
 
 #: src/window.py:342
 msgid "Graphics"
-msgstr "Imagens"
+msgstr "Gráficos"
 
 #. change view and save previous
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:52
@@ -498,7 +491,7 @@ msgstr "Cancelar"
 
 #: src/widgets/image_area.py:127
 msgid "Supported Image Formats"
-msgstr ""
+msgstr "Formatos de imagem suportados"
 
 #: src/widgets/image_area.py:159
 msgid "Saving image..."
@@ -537,15 +530,17 @@ msgid ""
 "Loading a large file ({size})\n"
 "Might take a while, please wait..."
 msgstr ""
+"A carregar um ficheiro grande ({size})\n"
+"Isto pode demorar um pouco, aguarde, por favor..."
 
 #: src/widgets/text_area.py:204 src/widgets/text_file_area.py:251
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr ""
+msgstr "Não foi possível abrir {file_path}:{file_content}."
 
 #: src/widgets/text_area.py:219
 msgid "File is not UTF-8 encoded."
-msgstr ""
+msgstr "O ficheiro não está codificado em UTF-8."
 
 #: src/widgets/text_file_area.py:190
 msgid "All files"
@@ -564,9 +559,9 @@ msgid "Saving file..."
 msgstr "A gravar ficheiro..."
 
 #: src/widgets/text_file_area.py:327
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Unable to save {path}"
-msgstr "Não foi possível gravar imagem."
+msgstr "Não foi possível gravar {path}"
 
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
 #: src/views/certificate_request_generator.py:176 src/views/formatter.py:45
@@ -744,13 +739,13 @@ msgid "Invalid!"
 msgstr "Inválido!"
 
 #: src/views/json_validator.py:89
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "JSON is not compliant with the provided JSON scheme:\n"
 "{validation_error}"
 msgstr ""
-"XML não é compatível com o esquema XSD fornecido:\n"
-"{xsd_error}"
+"JSON não é compatível com o esquema JSON fornecido:\n"
+"{validation_error}"
 
 #: src/views/json_validator.py:99
 #, python-brace-format
@@ -1057,9 +1052,8 @@ msgid "Open a certificate file (pem, der, cer extensions)"
 msgstr ""
 
 #: src/ui/views/certificate_parser.blp:82
-#, fuzzy
 msgid "Open a certificate file to view its contents."
-msgstr "Grave este ficheiro para visualizar o seu conteúdo"
+msgstr "Abra este ficheiro de certificado para visualizar o seu conteúdo."
 
 #: src/ui/views/certificate_request_generator.blp:19
 msgid "Certificate Signing Request Generator"
@@ -1085,16 +1079,15 @@ msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:73
 msgid "Key"
-msgstr ""
+msgstr "Chave"
 
 #: src/ui/views/certificate_request_generator.blp:74
 msgid "Generate a new key or use and existing one"
 msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:77
-#, fuzzy
 msgid "New"
-msgstr "Agora"
+msgstr "Novo"
 
 #: src/ui/views/certificate_request_generator.blp:78
 msgid "Exisisting"
@@ -1111,7 +1104,7 @@ msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:107
 msgid "Key Size"
-msgstr ""
+msgstr "Tamanho da chave"
 
 #: src/ui/views/certificate_request_generator.blp:108
 msgid "Size of the new key. It will be saved on the same path as the CSR."
@@ -1119,11 +1112,11 @@ msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:111
 msgid "2048 bits"
-msgstr ""
+msgstr "2048 bits"
 
 #: src/ui/views/certificate_request_generator.blp:112
 msgid "4096 bits"
-msgstr ""
+msgstr "4096 bits"
 
 #: src/ui/views/certificate_request_generator.blp:119
 msgid "Key Save Location *"
@@ -1144,23 +1137,23 @@ msgstr ""
 
 #: src/ui/views/chmod_calculator.blp:44
 msgid "Group"
-msgstr ""
+msgstr "Grupo"
 
 #: src/ui/views/chmod_calculator.blp:45
 msgid "Others"
-msgstr ""
+msgstr "Outros"
 
 #: src/ui/views/chmod_calculator.blp:46
 msgid "Read"
-msgstr ""
+msgstr "Ler"
 
 #: src/ui/views/chmod_calculator.blp:47
 msgid "Write"
-msgstr ""
+msgstr "Escrever"
 
 #: src/ui/views/chmod_calculator.blp:48
 msgid "Execute"
-msgstr ""
+msgstr "Executar"
 
 #: src/ui/views/chmod_calculator.blp:63
 msgid "Numeric value"
@@ -1564,13 +1557,12 @@ msgid "Generated QR Code"
 msgstr "Texto gerado"
 
 #: src/ui/views/random_generator.blp:20
-#, fuzzy
 msgid "Random Generator"
-msgstr "Geradores"
+msgstr "Gerador aleatório"
 
 #: src/ui/views/random_generator.blp:31
 msgid "String"
-msgstr ""
+msgstr "Cadeia de caracteres"
 
 #: src/ui/views/random_generator.blp:32
 msgid "Generate a random string with the given options. ASCII characters only."
@@ -1601,14 +1593,12 @@ msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 msgstr ""
 
 #: src/ui/views/random_generator.blp:101
-#, fuzzy
 msgid "Generated string"
-msgstr "Texto gerado"
+msgstr "Cadeia gerada"
 
 #: src/ui/views/random_generator.blp:118
-#, fuzzy
 msgid "Number"
-msgstr "Bases de número"
+msgstr "Número"
 
 #: src/ui/views/random_generator.blp:119
 msgid "Generate a random number in the given range"
@@ -1928,7 +1918,6 @@ msgid "Choose the UUID version to generate"
 msgstr "Escolha a versão de UUID para gerar"
 
 #: src/ui/views/uuid_generator.blp:39
-#, fuzzy
 msgid "Version 1 (MAC address)"
 msgstr "Versão 1 (Endereço MAC)"
 
@@ -1976,24 +1965,20 @@ msgid "Quit"
 msgstr "Sai"
 
 #: src/formatters/html.py:14
-#, fuzzy
 msgid "HTML Formatter"
-msgstr "Formatador XML"
+msgstr "Formatador HTML"
 
 #: src/formatters/html.py:17
-#, fuzzy
 msgid "Type HTML code here"
-msgstr "Insira o código XML aqui"
+msgstr "Insira o código HTML aqui"
 
 #: src/formatters/js.py:14
-#, fuzzy
 msgid "JavaScript Formatter"
-msgstr "Formatador JSON"
+msgstr "Formatador JavaScript"
 
 #: src/formatters/js.py:17
-#, fuzzy
 msgid "Type JavaScript code here"
-msgstr "Insira o código JSON aqui"
+msgstr "Insira o código JavaScript aqui"
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
@@ -2020,14 +2005,12 @@ msgid "Type XML code here"
 msgstr "Insira o código XML aqui"
 
 #: src/formatters/css.py:13
-#, fuzzy
 msgid "CSS Formatter"
-msgstr "Formatador SQL"
+msgstr "Formatador CSS"
 
 #: src/formatters/css.py:16
-#, fuzzy
 msgid "Type CSS here"
-msgstr "Insira o código SQL aqui"
+msgstr "Insira o código CSS aqui"
 
 #, fuzzy
 #~ msgid "Development tools at your figertips"
