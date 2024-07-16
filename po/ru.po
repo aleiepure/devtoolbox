@@ -73,7 +73,11 @@ msgstr "Хэш генераторы"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "Regex tester"
+<<<<<<< HEAD
 msgstr "Проверка регулярных выражений"
+=======
+msgstr "Проверку регулярных выражений"
+>>>>>>> beed57d (Translated using Weblate (Russian))
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:263
 #: src/ui/views/markdown_preview.blp:20
@@ -345,7 +349,11 @@ msgstr "Просмотр статистики текста и изменение
 
 #: src/window.py:235
 msgid "Regex Tester"
+<<<<<<< HEAD
 msgstr "Проверка регулярных выражений"
+=======
+msgstr "Тестирование регулярных выражений"
+>>>>>>> beed57d (Translated using Weblate (Russian))
 
 #: src/window.py:238 src/ui/views/regex_tester.blp:21
 msgid "Find matching strings inside a text"
@@ -1003,11 +1011,19 @@ msgstr "Введите числа"
 
 #: src/ui/views/base_converter.blp:34
 msgid "Decimal"
+<<<<<<< HEAD
 msgstr "Десятичное"
 
 #: src/ui/views/base_converter.blp:42
 msgid "Binary"
 msgstr "Двоичное"
+=======
+msgstr "Десятичные"
+
+#: src/ui/views/base_converter.blp:42
+msgid "Binary"
+msgstr "Двоичные"
+>>>>>>> beed57d (Translated using Weblate (Russian))
 
 #: src/ui/views/base_converter.blp:50
 msgid "Octal"
