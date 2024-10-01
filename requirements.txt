@@ -1,5 +1,4 @@
-# ruamel.yaml
-ruamel.yaml.string
+ruamel.yaml
 python-dateutil
 humanize
 python-crontab
@@ -13,7 +12,10 @@ uuid6
 textstat
 markdown2
 Pygments
-numpy==1.25.1
+
+meson-python
+numpy
+
 Pillow
 daltonlens
 asn1crypto

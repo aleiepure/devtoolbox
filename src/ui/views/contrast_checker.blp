@@ -37,13 +37,14 @@ template $ContrastCheckerView : Adw.Bin {
               activatable-widget: _label_color_btn;
 
               [suffix]
-              ColorButton _label_color_btn {
+              ColorDialogButton _label_color_btn {
                 valign: center;
-                modal: true;
-                show-editor: true;
-                title: _("Text color");
                 width-request: 100;
                 rgba: "#FFFFFF";
+                dialog: ColorDialog {
+                  modal: true;
+                  title: _("Text color");
+                };
               }
             }
 
@@ -54,13 +55,14 @@ template $ContrastCheckerView : Adw.Bin {
               activatable-widget: _background_color_btn;
 
               [suffix]
-              ColorButton _background_color_btn {
+              ColorDialogButton _background_color_btn {
                 valign: center;
-                modal: true;
-                show-editor: true;
-                title: _("Background color");
                 width-request: 100;
                 rgba: "#7A00E4";
+                dialog: ColorDialog {
+                  modal: true;
+                  title: _("Background color");
+                };
               }
             }
           }

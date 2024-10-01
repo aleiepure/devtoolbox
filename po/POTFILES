@@ -40,7 +40,6 @@ src/views/qrcode_generator.py
 src/views/random_generator.py
 src/views/regex_tester.py
 src/views/reverse_cron.py
-src/views/tab_content.py
 src/views/text_diff.py
 src/views/text_inspector.py
 src/views/timestamp.py
@@ -49,7 +48,7 @@ src/views/uuid_generator.py
 src/views/xml_validator.py
 
 src/ui/window.blp
-src/ui/about_window.blp
+src/ui/about_dialog.blp
 
 src/ui/widgets/binary_selector.blp
 src/ui/widgets/date_area.blp
@@ -84,7 +83,6 @@ src/ui/views/qrcode_generator.blp
 src/ui/views/random_generator.blp
 src/ui/views/regex_tester.blp
 src/ui/views/reverse_cron.blp
-src/ui/views/tab_content.blp
 src/ui/views/text_diff.blp
 src/ui/views/text_inspector.blp
 src/ui/views/timestamp.blp

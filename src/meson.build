@@ -47,7 +47,7 @@ blueprints = custom_target('blueprints',
     'ui/widgets/entry_row.blp',
     'ui/widgets/theme_switcher.blp',
     'ui/widgets/spin_area.blp',
-    'ui/about_window.blp',
+    'ui/about_dialog.blp',
     'ui/window.blp'
   ),
   output: '.',

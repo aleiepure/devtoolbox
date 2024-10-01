@@ -1,7 +1,7 @@
 {
     "id" : "me.iepure.devtoolbox",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "45",
+    "runtime-version" : "47",
     "sdk" : "org.gnome.Sdk",
     "command" : "devtoolbox",
     "separate-locales": false,
@@ -30,11 +30,12 @@
         {
             "name": "blueprint-compiler",
             "buildsystem": "meson",
+            "cleanup": ["*"],
             "sources": [
                 {
                 "type": "git",
                 "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-                "tag": "v0.10.0"
+                "tag": "v0.14.0"
                 }
 	        ]
 	    },

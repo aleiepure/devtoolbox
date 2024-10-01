@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
-"POT-Creation-Date: 2023-06-18 12:20+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-01 16:36+0200\n"
 "PO-Revision-Date: 2023-09-26 19:01+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/devtoolbox/"
@@ -24,9 +24,16 @@ msgstr ""
 msgid "@app-name@"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_window.blp:12
+#: data/me.iepure.devtoolbox.desktop.in.in:9
+#: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_dialog.blp:11
 msgid "Development tools at your fingertips"
 msgstr "Kehitystyökalut lähellä"
+
+#: data/me.iepure.devtoolbox.desktop.in.in:15
+msgid ""
+"JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
+"Markdown;Image;"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:18
 msgid ""
@@ -74,7 +81,7 @@ msgstr "Tiivistegeneraattorit"
 msgid "Regex tester"
 msgstr "Säännöllisten lausekkeiden testaus"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:263
+#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:307
 #: src/ui/views/markdown_preview.blp:20
 msgid "Markdown Previewer"
 msgstr "Markdown-esikatselu"
@@ -87,356 +94,235 @@ msgstr "Kuvamuuntimet"
 msgid "Much more..."
 msgstr "Ja paljon enemmän..."
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:69
-#: data/me.iepure.devtoolbox.metainfo.xml.in:79
-#: data/me.iepure.devtoolbox.metainfo.xml.in:102
-#: data/me.iepure.devtoolbox.metainfo.xml.in:111
-msgid "What's new:"
-msgstr "Uutta:"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:71
-msgid "Fixed various typos"
-msgstr "Korjattu lukuisia kirjoitusvirheitä"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:72
-msgid ""
-"Timestamp: fixed issue that prevented the app from launching when the system "
-"timezone was \"Europe/Kyiv\""
-msgstr ""
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:73
-msgid "Updated translations"
-msgstr "Päivitetyt käännökset"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:81
-msgid "Upgraded to GNOME platform 44"
-msgstr ""
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:82
-msgid "Now follows the system theme"
-msgstr "Seuraa nyt järjestelmän teemaa"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:83
-msgid "Timestamp: ISO8601/RFC3339 output format and timezone support"
-msgstr ""
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:84
-msgid "Ported UIs to blueprint"
-msgstr ""
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:85
-msgid "Improved icon"
-msgstr "Aiempaa parempi kuvake"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:86
-msgid "New tool: JS Formatter"
-msgstr "Uusi työkalu: JS-muotoilija"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:87
-msgid "New tool: Certificate Parser"
-msgstr "Uusi työkalu: Varmenteen jäsennin"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:88
-msgid "New tool: CSR Generator"
-msgstr "Uusi työkalu: CSR-generaattori"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:89
-msgid "New tool: Random Generator"
-msgstr "Uusi työkalu: Satunnaisuusgeneraattori"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:90
-msgid "New tool: CRON generator"
-msgstr "Uusi työkalu: CRON-generaattori"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:91
-msgid "New tool: chmod calculator"
-msgstr "Uusi työkalu: chmod-laskin"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:92
-msgid "New tool: QR-code generator"
-msgstr "Uusi työkalu: QR-koodin generaattori"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:93
-msgid "New tool: JSON validator"
-msgstr "Uusi työkalu: JSON-validointi"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:94
-msgid "New tool: CSS Formatter"
-msgstr "Uusi työkalu: CSS-muotoilija"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:95
-msgid ""
-"New translations: Czech (@Amereyeu), Spanish (Óscar Fernández Díaz on "
-"Weblate and @gallegonovato), Norwegian Bokmål (@comradekingu), and "
-"Portuguese (@SantosSi)"
-msgstr ""
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:97
-msgid ""
-"I'm always open to suggestions. Feel free to contribute to the project with "
-"code or translations on Weblate."
-msgstr ""
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:104
-msgid "Window can be resized smaller than before"
-msgstr ""
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:105
-msgid "Added missing icons on non GNOME desktops"
-msgstr ""
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:113
-msgid "XML formater: can now open .ui files (@gregorni)"
-msgstr ""
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:114
-msgid "Markdown previewer: can open preview in external browser"
-msgstr ""
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:115
-msgid "Color blindness simulator: severtity can be changed via keyboard"
-msgstr ""
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:116
-msgid "New tool: HTML formatter"
-msgstr "Uusi työkalu: HTML-muotoilija"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:117
-msgid "Turkish translation by @sabriunal"
-msgstr ""
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:118
-msgid "Brasilian Portuguese translation by @rffontenelle"
-msgstr ""
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:124
-msgid "First release"
-msgstr "Ensimmäinen julkaisu"
-
-#: src/window.py:76 src/ui/views/json_yaml.blp:21
-msgid "Convert JSON documents to YAML and vice-versa"
-msgstr "Muunna JSON-asiakirjat YAML-muotoon ja päinvastoin"
-
-#: src/window.py:80 src/ui/views/timestamp.blp:45
-msgid "Timestamp"
-msgstr "Aikaleima"
-
-#: src/window.py:83 src/ui/views/timestamp.blp:21
-msgid "Convert UNIX timestamps to and from plain dates"
-msgstr "Muunna ymmärrettävä päivämäärämuoto UNIX-aikaleimaksi tai päinvastoin"
-
-#: src/window.py:87
-msgid "Number Bases"
-msgstr "Kantaluvut"
-
-#: src/window.py:90 src/ui/views/base_converter.blp:21
-msgid "Convert numbers between bases"
-msgstr "Muunna numeroita eri lukujärjestelmien välillä"
-
-#: src/window.py:94 src/ui/views/cron_converter.blp:21
-msgid "CRON Parser"
-msgstr "CRON-jäsennin"
-
-#: src/window.py:97 src/ui/views/cron_converter.blp:22
-msgid "Convert CRON expressions to time and date"
-msgstr "Muunna CRON-lausekkeet ajaksi ja päiväksi"
-
-#: src/window.py:101 src/ui/views/reverse_cron.blp:19
-msgid "Reverse CRON"
-msgstr "Käänteinen CRON"
-
-#: src/window.py:104 src/ui/views/reverse_cron.blp:20
-msgid "Generate CRON expressions"
-msgstr "Luo CRON-lausekkeita"
-
-#: src/window.py:113 src/ui/views/html_encoder.blp:21
-msgid "Encode and decode special characters using the HTML format"
-msgstr "Koodaa ja pura erikoismerkkejä käyttäen HTML-muotoilua"
-
-#: src/window.py:120 src/ui/views/url_encoder.blp:21
-msgid "Encode and decode special characters inside URLs"
-msgstr "Koodaa ja pura erikoismerkkejä URL-osoitteiden sisälle"
-
-#: src/window.py:127 src/ui/views/gzip_compressor.blp:21
-msgid "Compress and decompress files and texts using GZip"
-msgstr "Pakkaa pura tiedostoja sekä tekstiä GZipiä käyttäen"
-
-#: src/window.py:134 src/ui/views/jwt_decoder.blp:21
-msgid "Decode JWT tokens to header and payload"
-msgstr "Pura JWT-poletteja otsakkeeksi ja tietosisällöksi"
-
-#: src/window.py:143 src/formatters/json.py:14
-msgid "Format JSON documents"
-msgstr "Muotoile JSON-asiakirjoja"
-
-#: src/window.py:150 src/formatters/sql.py:14
-msgid "Format SQL documents"
-msgstr "Muotoile SQL-asiakirjoja"
-
-#: src/window.py:157 src/formatters/xml.py:16
-msgid "Format XML documents"
-msgstr "Muotoile XML-asiakirjoja"
-
-#: src/window.py:164 src/formatters/html.py:15
-msgid "Format HTML documents"
-msgstr "Muotoile HTML-asiakirjoja"
-
-#: src/window.py:171 src/formatters/js.py:15
-msgid "Format JavaScript documents"
-msgstr "Muotoile JavaScript-asiakirjoja"
-
-#: src/window.py:178 src/formatters/css.py:14
-msgid "Format CSS documents"
-msgstr "Muotoile CSS-asiakirjoja"
-
-#: src/window.py:187 src/ui/views/hash_generator.blp:21
-msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
-msgstr "Laske MD5-, SHA1-, SHA256- sekä SHA512-tiivisteet ja tarkista eheys"
-
-#: src/window.py:194 src/ui/views/lorem_generator.blp:21
-msgid "Generate lorem ipsum placeholder text"
-msgstr "Luo lorem ipsum -täytetekstiä"
-
-#: src/window.py:201 src/ui/views/uuid_generator.blp:21
-msgid "Generate Universally Unique IDs (UUID)"
-msgstr "Luo Universally Unique ID -tunnisteita (UUID)"
-
-#: src/window.py:205
-msgid "Random"
-msgstr "Satunnainen"
-
-#: src/window.py:208 src/ui/views/random_generator.blp:21
-msgid "Generate random numbers and strings"
-msgstr "Luo satunnaisnumeroita ja -merkkijonoja"
-
-#: src/window.py:212 src/ui/views/chmod_calculator.blp:19
-msgid "Chmod Calculator"
-msgstr "Chmod-laskin"
-
-#: src/window.py:215 src/ui/views/chmod_calculator.blp:20
-msgid "Calculate values to modify permissions with chmod"
-msgstr ""
-
-#: src/window.py:219
-msgid "QR Code"
-msgstr "QR-koodi"
-
-#: src/window.py:222 src/ui/views/qrcode_generator.blp:21
-msgid "Create custom QR Codes"
-msgstr "Luo QR-koodeja"
-
-#: src/window.py:228 src/ui/views/text_inspector.blp:20
-msgid "Text Inspector & Case Converter"
-msgstr "Tekstin tutkimus ja kirjainkoon muunnin"
-
-#: src/window.py:231 src/ui/views/text_inspector.blp:21
-msgid "View statistics about text and change sentence cases"
-msgstr "Näytä tilastoja tekstistä ja vaihda kirjoitusasua"
-
-#: src/window.py:235
-msgid "Regex Tester"
-msgstr "Regex-testaus"
-
-#: src/window.py:238 src/ui/views/regex_tester.blp:21
-msgid "Find matching strings inside a text"
-msgstr ""
-
-#: src/window.py:242 src/ui/views/text_diff.blp:20
-msgid "Text Diff"
-msgstr "Tekstin eroavaisuudet"
-
-#: src/window.py:245 src/ui/views/text_diff.blp:21
-msgid "Analyze two texts and find differences"
-msgstr "Analysoi kaksi eri tekstiä ja löydä erot niiden väliltä"
-
-#: src/window.py:249 src/ui/views/xml_validator.blp:20
-msgid "XML Scheme Validator"
-msgstr "XML-skeeman validointi"
-
-#: src/window.py:252 src/ui/views/xml_validator.blp:21
-msgid "Check an XML file against an XSD schema"
-msgstr "Tarkista XML-tiedosto XSD-skeemaa vasten"
-
-#: src/window.py:256 src/ui/views/json_validator.blp:19
-msgid "JSON Schema Validator"
-msgstr "JSON-skeeman validointi"
-
-#: src/window.py:259 src/ui/views/json_validator.blp:20
-msgid "Check a JSON file against a JSON schema"
-msgstr "Tarkista JSON-tiedosto JSON-skeemaa vasten"
-
-#: src/window.py:266 src/ui/views/markdown_preview.blp:21
-msgid "Preview markdown code as you type"
-msgstr "Esikatsele markdown-koodia kirjoittaessasi"
-
-#: src/window.py:272 src/ui/views/contrast_checker.blp:20
-msgid "Contrast Checker"
-msgstr "Kontrastin tarkistus"
-
-#: src/window.py:275 src/ui/views/contrast_checker.blp:21
-msgid "Check a color combination for WCAG compliance"
-msgstr "Tarkista väriyhdistelmä WCAG-yhteensopivuuden osalta"
-
-#: src/window.py:279
-msgid "Color Blindness"
-msgstr "Värisokeus"
-
-#: src/window.py:282 src/ui/views/colorblindness_simulator.blp:21
-msgid "Simulate color blindness in images"
-msgstr "Simuloi värisokeutta kuvien kanssa"
-
-#: src/window.py:286 src/ui/views/image_converter.blp:20
-msgid "Image Format Converter"
-msgstr "Kuvamuotojen muunnin"
-
-#: src/window.py:289 src/ui/views/image_converter.blp:21
-msgid "Convert images to different formats"
-msgstr "Muunna kuvia eri muotoihin"
-
-#: src/window.py:295 src/ui/views/certificate_parser.blp:20
-msgid "Certificate Parser"
-msgstr "Varmenteen jäsennin"
-
-#: src/window.py:298 src/ui/views/certificate_parser.blp:21
-msgid "View certificates contents"
-msgstr "Näytä varmenteiden sisältö"
-
-#: src/window.py:302
-msgid "Certificate Signing Request"
-msgstr "Varmenteen allekirjoituspyyntö (CSR)"
-
-#: src/window.py:305 src/ui/views/certificate_request_generator.blp:20
-msgid "Generate certificate signing requests"
-msgstr "Luo varmenteen allekirjoituspyyntöjä"
-
-#: src/window.py:312
+#: src/window.py:118 src/window.py:125 src/window.py:132 src/window.py:139
+#: src/window.py:146
 msgid "Converters"
 msgstr "Muuntimet"
 
-#: src/window.py:317
-msgid "Encoders"
-msgstr "Enkoodaajat"
+#: src/window.py:120 src/ui/views/json_yaml.blp:20
+msgid "Convert JSON documents to YAML and vice-versa"
+msgstr "Muunna JSON-asiakirjat YAML-muotoon ja päinvastoin"
 
-#: src/window.py:322
+#: src/window.py:124 src/ui/views/timestamp.blp:45
+msgid "Timestamp"
+msgstr "Aikaleima"
+
+#: src/window.py:127 src/ui/views/timestamp.blp:21
+msgid "Convert UNIX timestamps to and from plain dates"
+msgstr "Muunna ymmärrettävä päivämäärämuoto UNIX-aikaleimaksi tai päinvastoin"
+
+#: src/window.py:131
+msgid "Number Bases"
+msgstr "Kantaluvut"
+
+#: src/window.py:134 src/ui/views/base_converter.blp:21
+msgid "Convert numbers between bases"
+msgstr "Muunna numeroita eri lukujärjestelmien välillä"
+
+#: src/window.py:138 src/ui/views/cron_converter.blp:21
+msgid "CRON Parser"
+msgstr "CRON-jäsennin"
+
+#: src/window.py:141 src/ui/views/cron_converter.blp:22
+msgid "Convert CRON expressions to time and date"
+msgstr "Muunna CRON-lausekkeet ajaksi ja päiväksi"
+
+#: src/window.py:145 src/ui/views/reverse_cron.blp:19
+msgid "Reverse CRON"
+msgstr "Käänteinen CRON"
+
+#: src/window.py:148 src/ui/views/reverse_cron.blp:20
+msgid "Generate CRON expressions"
+msgstr "Luo CRON-lausekkeita"
+
+#: src/window.py:155 src/window.py:162 src/window.py:169 src/window.py:176
+#, fuzzy
+msgid "Encoders & Decoders"
+msgstr "URL-osoitteen koodaaja ja purkaja"
+
+#: src/window.py:157 src/ui/views/html_encoder.blp:21
+msgid "Encode and decode special characters using the HTML format"
+msgstr "Koodaa ja pura erikoismerkkejä käyttäen HTML-muotoilua"
+
+#: src/window.py:164 src/ui/views/url_encoder.blp:21
+msgid "Encode and decode special characters inside URLs"
+msgstr "Koodaa ja pura erikoismerkkejä URL-osoitteiden sisälle"
+
+#: src/window.py:171 src/ui/views/gzip_compressor.blp:21
+msgid "Compress and decompress files and texts using GZip"
+msgstr "Pakkaa pura tiedostoja sekä tekstiä GZipiä käyttäen"
+
+#: src/window.py:178 src/ui/views/jwt_decoder.blp:21
+msgid "Decode JWT tokens to header and payload"
+msgstr "Pura JWT-poletteja otsakkeeksi ja tietosisällöksi"
+
+#: src/window.py:185 src/window.py:192 src/window.py:199 src/window.py:206
+#: src/window.py:213 src/window.py:220
 msgid "Formatters"
 msgstr "Muotoilijat"
 
-#: src/window.py:327
+#: src/window.py:187 src/formatters/json.py:14
+msgid "Format JSON documents"
+msgstr "Muotoile JSON-asiakirjoja"
+
+#: src/window.py:194 src/formatters/sql.py:14
+msgid "Format SQL documents"
+msgstr "Muotoile SQL-asiakirjoja"
+
+#: src/window.py:201 src/formatters/xml.py:16
+msgid "Format XML documents"
+msgstr "Muotoile XML-asiakirjoja"
+
+#: src/window.py:208 src/formatters/html.py:15
+msgid "Format HTML documents"
+msgstr "Muotoile HTML-asiakirjoja"
+
+#: src/window.py:215 src/formatters/js.py:15
+msgid "Format JavaScript documents"
+msgstr "Muotoile JavaScript-asiakirjoja"
+
+#: src/window.py:222 src/formatters/css.py:14
+msgid "Format CSS documents"
+msgstr "Muotoile CSS-asiakirjoja"
+
+#: src/window.py:229 src/window.py:236 src/window.py:243 src/window.py:250
+#: src/window.py:257 src/window.py:264
 msgid "Generators"
 msgstr "Generaattorit"
 
-#: src/window.py:332 src/ui/views/regex_tester.blp:50
+#: src/window.py:231 src/ui/views/hash_generator.blp:21
+msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
+msgstr "Laske MD5-, SHA1-, SHA256- sekä SHA512-tiivisteet ja tarkista eheys"
+
+#: src/window.py:238 src/ui/views/lorem_generator.blp:21
+msgid "Generate lorem ipsum placeholder text"
+msgstr "Luo lorem ipsum -täytetekstiä"
+
+#: src/window.py:245 src/ui/views/uuid_generator.blp:21
+msgid "Generate Universally Unique IDs (UUID)"
+msgstr "Luo Universally Unique ID -tunnisteita (UUID)"
+
+#: src/window.py:249
+msgid "Random"
+msgstr "Satunnainen"
+
+#: src/window.py:252 src/ui/views/random_generator.blp:21
+msgid "Generate random numbers and strings"
+msgstr "Luo satunnaisnumeroita ja -merkkijonoja"
+
+#: src/window.py:256 src/ui/views/chmod_calculator.blp:19
+msgid "Chmod Calculator"
+msgstr "Chmod-laskin"
+
+#: src/window.py:259 src/ui/views/chmod_calculator.blp:20
+msgid "Calculate values to modify permissions with chmod"
+msgstr ""
+
+#: src/window.py:263
+msgid "QR Code"
+msgstr "QR-koodi"
+
+#: src/window.py:266 src/ui/views/qrcode_generator.blp:21
+msgid "Create custom QR Codes"
+msgstr "Luo QR-koodeja"
+
+#: src/window.py:272 src/ui/views/text_inspector.blp:20
+msgid "Text Inspector & Case Converter"
+msgstr "Tekstin tutkimus ja kirjainkoon muunnin"
+
+#: src/window.py:273 src/window.py:280 src/window.py:287 src/window.py:294
+#: src/window.py:301 src/window.py:308 src/ui/views/regex_tester.blp:50
 #: src/ui/views/text_inspector.blp:104 src/ui/views/text_inspector.blp:160
 msgid "Text"
 msgstr "Teksti"
 
-#: src/window.py:337 src/views/certificate_parser.py:92
+#: src/window.py:275 src/ui/views/text_inspector.blp:21
+msgid "View statistics about text and change sentence cases"
+msgstr "Näytä tilastoja tekstistä ja vaihda kirjoitusasua"
+
+#: src/window.py:279
+msgid "Regex Tester"
+msgstr "Regex-testaus"
+
+#: src/window.py:282 src/ui/views/regex_tester.blp:21
+msgid "Find matching strings inside a text"
+msgstr ""
+
+#: src/window.py:286 src/ui/views/text_diff.blp:20
+msgid "Text Diff"
+msgstr "Tekstin eroavaisuudet"
+
+#: src/window.py:289 src/ui/views/text_diff.blp:21
+msgid "Analyze two texts and find differences"
+msgstr "Analysoi kaksi eri tekstiä ja löydä erot niiden väliltä"
+
+#: src/window.py:293 src/ui/views/xml_validator.blp:20
+msgid "XML Scheme Validator"
+msgstr "XML-skeeman validointi"
+
+#: src/window.py:296 src/ui/views/xml_validator.blp:21
+msgid "Check an XML file against an XSD schema"
+msgstr "Tarkista XML-tiedosto XSD-skeemaa vasten"
+
+#: src/window.py:300 src/ui/views/json_validator.blp:19
+msgid "JSON Schema Validator"
+msgstr "JSON-skeeman validointi"
+
+#: src/window.py:303 src/ui/views/json_validator.blp:20
+msgid "Check a JSON file against a JSON schema"
+msgstr "Tarkista JSON-tiedosto JSON-skeemaa vasten"
+
+#: src/window.py:310 src/ui/views/markdown_preview.blp:21
+msgid "Preview markdown code as you type"
+msgstr "Esikatsele markdown-koodia kirjoittaessasi"
+
+#: src/window.py:316 src/ui/views/contrast_checker.blp:20
+msgid "Contrast Checker"
+msgstr "Kontrastin tarkistus"
+
+#: src/window.py:317 src/window.py:324 src/window.py:331
+msgid "Graphics"
+msgstr "Grafiikka"
+
+#: src/window.py:319 src/ui/views/contrast_checker.blp:21
+msgid "Check a color combination for WCAG compliance"
+msgstr "Tarkista väriyhdistelmä WCAG-yhteensopivuuden osalta"
+
+#: src/window.py:323
+msgid "Color Blindness"
+msgstr "Värisokeus"
+
+#: src/window.py:326 src/ui/views/colorblindness_simulator.blp:21
+msgid "Simulate color blindness in images"
+msgstr "Simuloi värisokeutta kuvien kanssa"
+
+#: src/window.py:330 src/ui/views/image_converter.blp:20
+msgid "Image Format Converter"
+msgstr "Kuvamuotojen muunnin"
+
+#: src/window.py:333 src/ui/views/image_converter.blp:21
+msgid "Convert images to different formats"
+msgstr "Muunna kuvia eri muotoihin"
+
+#: src/window.py:339 src/ui/views/certificate_parser.blp:20
+msgid "Certificate Parser"
+msgstr "Varmenteen jäsennin"
+
+#: src/window.py:340 src/window.py:347 src/views/certificate_parser.py:92
 msgid "Certificates"
 msgstr "Varmenteet"
 
-#: src/window.py:342
-msgid "Graphics"
-msgstr "Grafiikka"
+#: src/window.py:342 src/ui/views/certificate_parser.blp:21
+msgid "View certificates contents"
+msgstr "Näytä varmenteiden sisältö"
+
+#: src/window.py:346
+msgid "Certificate Signing Request"
+msgstr "Varmenteen allekirjoituspyyntö (CSR)"
+
+#: src/window.py:349 src/ui/views/certificate_request_generator.blp:20
+msgid "Generate certificate signing requests"
+msgstr "Luo varmenteen allekirjoituspyyntöjä"
 
 #. change view and save previous
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:52
@@ -461,8 +347,8 @@ msgstr "Avaa tiedosto"
 #: src/widgets/image_area.py:118 src/widgets/text_area.py:161
 #: src/widgets/text_file_area.py:182 src/views/certificate_parser.py:83
 #: src/views/certificate_request_generator.py:60
-#: src/ui/widgets/image_area.blp:66 src/ui/widgets/text_area.blp:76
-#: src/ui/widgets/text_file_area.blp:76 src/ui/views/certificate_parser.blp:52
+#: src/ui/widgets/image_area.blp:50 src/ui/widgets/text_area.blp:58
+#: src/ui/widgets/text_file_area.blp:58 src/ui/views/certificate_parser.blp:52
 #: src/ui/views/certificate_request_generator.blp:99
 msgid "Open"
 msgstr "Avaa"
@@ -493,7 +379,7 @@ msgstr "Tallenna nimellä"
 #: src/views/certificate_request_generator.py:122
 #: src/views/certificate_request_generator.py:189
 #: src/views/image_converter.py:60 src/views/qrcode_generator.py:172
-#: src/ui/widgets/image_area.blp:77 src/ui/widgets/text_file_area.blp:87
+#: src/ui/widgets/image_area.blp:59 src/ui/widgets/text_file_area.blp:67
 #: src/ui/views/certificate_request_generator.blp:133
 msgid "Save"
 msgstr "Tallenna"
@@ -563,7 +449,7 @@ msgid "Unsupported file"
 msgstr "Tiedosto ei ole tuettu"
 
 #: src/views/certificate_parser.py:103 src/views/reverse_cron.py:180
-#: src/ui/views/certificate_parser.blp:105 src/ui/views/reverse_cron.blp:39
+#: src/ui/views/certificate_parser.blp:103 src/ui/views/reverse_cron.blp:39
 msgid "Expand All"
 msgstr "Laajenna kaikki"
 
@@ -889,15 +775,46 @@ msgstr ""
 "XML ei ole yhteensopiva annetun XSD-skeeman kanssa:\n"
 "{xsd_error}"
 
-#: src/ui/window.blp:29
+#: src/ui/window.blp:56
+#, fuzzy
+msgid "Show/hide searchbar"
+msgstr "Näytä/piilota sivupalkki"
+
+#: src/ui/window.blp:62
+msgid "Favorite Tools"
+msgstr ""
+
+#: src/ui/window.blp:71
+msgid "No Favorites"
+msgstr ""
+
+#: src/ui/window.blp:72
+msgid ""
+"Add your favorite tools here by clicking the star button beside the title"
+msgstr ""
+
+#: src/ui/window.blp:92
+msgid "Favorites"
+msgstr ""
+
+#: src/ui/window.blp:121
+msgid "Search Tools…"
+msgstr ""
+
+#: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
 msgstr "Näytä/piilota sivupalkki"
 
-#: src/ui/window.blp:57
+#: src/ui/window.blp:186
+#, fuzzy
+msgid "_Keyboard Shortcuts"
+msgstr "Näytä pikanäppäimet"
+
+#: src/ui/window.blp:191
 msgid "_About Dev Toolbox"
 msgstr "_Tietoja - Dev Toolbox"
 
-#: src/ui/about_window.blp:11
+#: src/ui/about_dialog.blp:10
 msgid ""
 "Copyright © 2022 - 2023 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
@@ -906,7 +823,7 @@ msgstr ""
 "Joidenkin kuvakkeiden tekijänoikeus kuuluu GNOME-projektille"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
-#: src/ui/about_window.blp:19
+#: src/ui/about_dialog.blp:18
 msgid "translator-credits"
 msgstr "Jiri Grönroos <jiri.gronroos+l10n@iki.fi>"
 
@@ -919,8 +836,8 @@ msgid "Sets the current system date and time (local timezone)"
 msgstr "Asettaa järjestelmän nykyisen päivän ja ajan (paikallinen aikavyöhyke)"
 
 #: src/ui/widgets/date_area.blp:66 src/ui/widgets/entry_row.blp:30
-#: src/ui/widgets/spin_area.blp:58 src/ui/widgets/text_area.blp:85
-#: src/ui/widgets/text_file_area.blp:102
+#: src/ui/widgets/spin_area.blp:58 src/ui/widgets/text_area.blp:66
+#: src/ui/widgets/text_file_area.blp:82
 msgid "Copy to clipboard"
 msgstr "Kopioi leikepöydälle"
 
@@ -953,16 +870,16 @@ msgid "Generate again"
 msgstr "Luo uudelleen"
 
 #: src/ui/widgets/entry_row.blp:40 src/ui/widgets/spin_area.blp:64
-#: src/ui/widgets/text_area.blp:91 src/ui/widgets/text_file_area.blp:108
+#: src/ui/widgets/text_area.blp:73 src/ui/widgets/text_file_area.blp:89
 msgid "Paste clipboard"
 msgstr "Liitä leikepöydältä"
 
-#: src/ui/widgets/entry_row.blp:51 src/ui/widgets/image_area.blp:92
-#: src/ui/widgets/text_area.blp:97 src/ui/widgets/text_file_area.blp:114
+#: src/ui/widgets/entry_row.blp:51 src/ui/widgets/image_area.blp:74
+#: src/ui/widgets/text_area.blp:80 src/ui/widgets/text_file_area.blp:96
 msgid "Clear input"
 msgstr "Tyhjennä syöte"
 
-#: src/ui/widgets/image_area.blp:86 src/ui/widgets/text_file_area.blp:96
+#: src/ui/widgets/image_area.blp:67 src/ui/widgets/text_file_area.blp:75
 msgid "Open image in another program"
 msgstr "Avaa kuva toisessa sovelluksessa"
 
@@ -978,7 +895,7 @@ msgstr "Vaalea tyyli"
 msgid "Dark style"
 msgstr "Tumma tyyli"
 
-#: src/ui/widgets/webview_area.blp:61
+#: src/ui/widgets/webview_area.blp:46
 msgid "Open web page in another browser"
 msgstr "Avaa verkkosivu toisessa selaimessa"
 
@@ -1019,7 +936,7 @@ msgstr ""
 #: src/ui/views/contrast_checker.blp:31 src/ui/views/cron_converter.blp:32
 #: src/ui/views/formatter.blp:28 src/ui/views/gzip_compressor.blp:31
 #: src/ui/views/hash_generator.blp:31 src/ui/views/html_encoder.blp:31
-#: src/ui/views/image_converter.blp:31 src/ui/views/json_yaml.blp:31
+#: src/ui/views/image_converter.blp:31 src/ui/views/json_yaml.blp:30
 #: src/ui/views/lorem_generator.blp:31 src/ui/views/regex_tester.blp:31
 #: src/ui/views/text_inspector.blp:31 src/ui/views/timestamp.blp:31
 #: src/ui/views/url_encoder.blp:31 src/ui/views/uuid_generator.blp:31
@@ -1057,6 +974,32 @@ msgstr ""
 #: src/ui/views/certificate_request_generator.blp:39
 msgid "Create CSR"
 msgstr "Luo CSR"
+
+#: src/ui/views/certificate_request_generator.blp:45
+msgid "Common Name (CN) *"
+msgstr ""
+
+#: src/ui/views/certificate_request_generator.blp:49
+#, fuzzy
+msgid "Country Name (C)"
+msgstr "Maa"
+
+#: src/ui/views/certificate_request_generator.blp:53
+msgid "State or Province Name (ST)"
+msgstr ""
+
+#: src/ui/views/certificate_request_generator.blp:57
+#, fuzzy
+msgid "Locality Name (L)"
+msgstr "Sukunimi *"
+
+#: src/ui/views/certificate_request_generator.blp:61
+msgid "Organization Name (O)"
+msgstr ""
+
+#: src/ui/views/certificate_request_generator.blp:65
+msgid "Organization Unit Name (OU)"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:69
 msgid "Passphrase"
@@ -1175,7 +1118,7 @@ msgstr "Puna-vihersokeus"
 msgid "Tritanopia"
 msgstr "Sinisokeus (tritanopia)"
 
-#: src/ui/views/contrast_checker.blp:34 src/ui/views/contrast_checker.blp:44
+#: src/ui/views/contrast_checker.blp:34 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
 msgstr "Tekstin väri"
 
@@ -1183,39 +1126,39 @@ msgstr "Tekstin väri"
 msgid "Color used for the text"
 msgstr "Tekstiin käytettävä väri"
 
-#: src/ui/views/contrast_checker.blp:51 src/ui/views/contrast_checker.blp:61
+#: src/ui/views/contrast_checker.blp:52 src/ui/views/contrast_checker.blp:64
 msgid "Background color"
 msgstr "Taustaväri"
 
-#: src/ui/views/contrast_checker.blp:52
+#: src/ui/views/contrast_checker.blp:53
 msgid "Color used for the background"
 msgstr "Taustassa käytettävä väri"
 
-#: src/ui/views/contrast_checker.blp:74
+#: src/ui/views/contrast_checker.blp:76
 msgid "Example"
 msgstr "Esimerkki"
 
-#: src/ui/views/contrast_checker.blp:86
+#: src/ui/views/contrast_checker.blp:88
 msgid "Lorem ipsum dolor sit amet"
 msgstr "Lorem ipsum dolor sit amet"
 
-#: src/ui/views/contrast_checker.blp:94
+#: src/ui/views/contrast_checker.blp:96
 msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
 msgstr "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
 
-#: src/ui/views/contrast_checker.blp:115 src/ui/views/contrast_checker.blp:146
+#: src/ui/views/contrast_checker.blp:117 src/ui/views/contrast_checker.blp:148
 msgid "AA"
 msgstr "AA"
 
-#: src/ui/views/contrast_checker.blp:123 src/ui/views/contrast_checker.blp:185
+#: src/ui/views/contrast_checker.blp:125 src/ui/views/contrast_checker.blp:187
 msgid "small"
 msgstr "pieni"
 
-#: src/ui/views/contrast_checker.blp:154 src/ui/views/contrast_checker.blp:216
+#: src/ui/views/contrast_checker.blp:156 src/ui/views/contrast_checker.blp:218
 msgid "large"
 msgstr "suuri"
 
-#: src/ui/views/contrast_checker.blp:177 src/ui/views/contrast_checker.blp:208
+#: src/ui/views/contrast_checker.blp:179 src/ui/views/contrast_checker.blp:210
 msgid "AAA"
 msgstr "AAA"
 
@@ -1247,11 +1190,11 @@ msgstr "CRON-lauseke"
 msgid "Dates"
 msgstr "Päiväykset"
 
-#: src/ui/views/formatter.blp:31 src/ui/views/json_yaml.blp:47
+#: src/ui/views/formatter.blp:31 src/ui/views/json_yaml.blp:46
 msgid "Indentations"
 msgstr "Sisennykset"
 
-#: src/ui/views/formatter.blp:32 src/ui/views/json_yaml.blp:48
+#: src/ui/views/formatter.blp:32 src/ui/views/json_yaml.blp:47
 msgid "Number of spaces used for indentation"
 msgstr "Sisennykseen käytettävien välilyöntien määrä"
 
@@ -1265,7 +1208,7 @@ msgid "GZip Compress & Decompress"
 msgstr "GZipin pakkaus ja purku"
 
 #: src/ui/views/gzip_compressor.blp:34 src/ui/views/html_encoder.blp:34
-#: src/ui/views/json_yaml.blp:34 src/ui/views/url_encoder.blp:34
+#: src/ui/views/json_yaml.blp:33 src/ui/views/url_encoder.blp:34
 msgid "Direction"
 msgstr "Suunta"
 
@@ -1282,13 +1225,13 @@ msgid "Decompress"
 msgstr "Pura"
 
 #: src/ui/views/gzip_compressor.blp:57 src/ui/views/hash_generator.blp:74
-#: src/ui/views/html_encoder.blp:58 src/ui/views/json_yaml.blp:78
+#: src/ui/views/html_encoder.blp:58 src/ui/views/json_yaml.blp:87
 #: src/ui/views/url_encoder.blp:71
 msgid "Input"
 msgstr "Syöte"
 
 #: src/ui/views/gzip_compressor.blp:66 src/ui/views/hash_generator.blp:83
-#: src/ui/views/html_encoder.blp:70 src/ui/views/json_yaml.blp:89
+#: src/ui/views/html_encoder.blp:70 src/ui/views/json_yaml.blp:98
 #: src/ui/views/url_encoder.blp:82
 msgid "Output"
 msgstr "Tuloste"
@@ -1358,11 +1301,11 @@ msgstr "Kuva"
 msgid "Convert"
 msgstr "Muunna"
 
-#: src/ui/views/json_yaml.blp:20
+#: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
 msgstr "JSON - YAML -muunnin"
 
-#: src/ui/views/json_yaml.blp:35
+#: src/ui/views/json_yaml.blp:34
 msgid "Specify what format is the input and the desired output"
 msgstr "Määritä syötteen ja halutun tulosteen muoto"
 
@@ -1536,7 +1479,8 @@ msgstr "Merkkijono"
 
 #: src/ui/views/random_generator.blp:32
 msgid "Generate a random string with the given options. ASCII characters only."
-msgstr "Luo satunnainen merkkijono halutuilla valinnoilla. Vain ASCII-merkkejä."
+msgstr ""
+"Luo satunnainen merkkijono halutuilla valinnoilla. Vain ASCII-merkkejä."
 
 #: src/ui/views/random_generator.blp:35
 msgid "Length"
@@ -1931,10 +1875,15 @@ msgstr "Yleiset"
 
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
+msgid "Search Tools"
+msgstr ""
+
+#: src/ui/gtk/help-overlay.blp:23
+msgctxt "shortcut window"
 msgid "Show Shortcuts"
 msgstr "Näytä pikanäppäimet"
 
-#: src/ui/gtk/help-overlay.blp:23
+#: src/ui/gtk/help-overlay.blp:28
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Lopeta"
@@ -1986,3 +1935,54 @@ msgstr "CSS-muotoilija"
 #: src/formatters/css.py:16
 msgid "Type CSS here"
 msgstr "Kirjoita CSS tähän"
+
+#~ msgid "What's new:"
+#~ msgstr "Uutta:"
+
+#~ msgid "Fixed various typos"
+#~ msgstr "Korjattu lukuisia kirjoitusvirheitä"
+
+#~ msgid "Updated translations"
+#~ msgstr "Päivitetyt käännökset"
+
+#~ msgid "Now follows the system theme"
+#~ msgstr "Seuraa nyt järjestelmän teemaa"
+
+#~ msgid "Improved icon"
+#~ msgstr "Aiempaa parempi kuvake"
+
+#~ msgid "New tool: JS Formatter"
+#~ msgstr "Uusi työkalu: JS-muotoilija"
+
+#~ msgid "New tool: Certificate Parser"
+#~ msgstr "Uusi työkalu: Varmenteen jäsennin"
+
+#~ msgid "New tool: CSR Generator"
+#~ msgstr "Uusi työkalu: CSR-generaattori"
+
+#~ msgid "New tool: Random Generator"
+#~ msgstr "Uusi työkalu: Satunnaisuusgeneraattori"
+
+#~ msgid "New tool: CRON generator"
+#~ msgstr "Uusi työkalu: CRON-generaattori"
+
+#~ msgid "New tool: chmod calculator"
+#~ msgstr "Uusi työkalu: chmod-laskin"
+
+#~ msgid "New tool: QR-code generator"
+#~ msgstr "Uusi työkalu: QR-koodin generaattori"
+
+#~ msgid "New tool: JSON validator"
+#~ msgstr "Uusi työkalu: JSON-validointi"
+
+#~ msgid "New tool: CSS Formatter"
+#~ msgstr "Uusi työkalu: CSS-muotoilija"
+
+#~ msgid "New tool: HTML formatter"
+#~ msgstr "Uusi työkalu: HTML-muotoilija"
+
+#~ msgid "First release"
+#~ msgstr "Ensimmäinen julkaisu"
+
+#~ msgid "Encoders"
+#~ msgstr "Enkoodaajat"

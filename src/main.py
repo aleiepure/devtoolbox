@@ -78,14 +78,15 @@ class DevtoolboxApplication(Adw.Application):
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
-        builder = Gtk.Builder.new_from_resource("/me/iepure/devtoolbox/ui/about_window.ui")
-        about_window = builder.get_object("about_window")
+        builder = Gtk.Builder.new_from_resource("/me/iepure/devtoolbox/ui/about_dialog.ui")
+        about_dialog = builder.get_object("about_dialog")
+        
         if self.debug == "True":
-            about_window.set_application_name(f"{about_window.get_application_name()}\n(Development snapshot)")
-            about_window.set_icon_name("me.iepure.devtoolbox")
-        about_window.set_version(self.version)
-        about_window.set_transient_for(self.props.active_window)
-        about_window.add_credit_section("Contributors", [
+            about_dialog.set_application_name(f"{about_dialog.get_application_name()}\n(Development snapshot)")
+            about_dialog.set_application_icon("me.iepure.devtoolbox")
+        
+        about_dialog.set_version(self.version)
+        about_dialog.add_credit_section("Contributors", [
             "Rafael Fontenelle https://github.com/rffontenelle",
             "Sabri Ünal https://github.com/sabriunal",
             "Allan Nordhøy https://github.com/comradekingu",
@@ -97,8 +98,18 @@ class DevtoolboxApplication(Adw.Application):
             "Hari Rana https://github.com/TheEvilSkeleton",
             "K.B.Dharun Krishna https://github.com/kbdharun",
             "L.Yang <yang120120110@gmail.com>",
+            "Finnever https://github.com/MrFinnever",
+            "Miyu Sakatsuki https://github.com/Miyu-dev",
+            "复予 https://github.com/CloneWith",
+            "Konstantin Tutsch https://github.com/konstantintutsch",
+            "Zishan Rahman https://github.com/Zishan-Rahman",
+            "Mariana Batista https://github.com/maahbatistaa",
+            "SuperAtraction https://github.com/SuperAtraction",
+            "Claudio https://github.com/K-eL",
+            "mthw0 https://github.com/mthw0",
+            "Ismael Brendo https://github.com/Ismaelbrendo"
         ])
-        about_window.present()
+        about_dialog.present()
 
     def on_quit_action(self, widget, _):
         self.quit()

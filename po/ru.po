@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
-"POT-Creation-Date: 2023-06-18 12:20+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-01 16:36+0200\n"
 "PO-Revision-Date: 2024-07-16 21:26+0000\n"
 "Last-Translator: Finnever <mr.finnever@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/devtoolbox/"
@@ -25,9 +25,16 @@ msgstr ""
 msgid "@app-name@"
 msgstr "@app-name@"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_window.blp:12
+#: data/me.iepure.devtoolbox.desktop.in.in:9
+#: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_dialog.blp:11
 msgid "Development tools at your fingertips"
 msgstr "Инструменты разработки у вас под рукой"
+
+#: data/me.iepure.devtoolbox.desktop.in.in:15
+msgid ""
+"JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
+"Markdown;Image;"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:18
 msgid ""
@@ -75,7 +82,7 @@ msgstr "Хэш генераторы"
 msgid "Regex tester"
 msgstr "Проверка регулярных выражений"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:263
+#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:307
 #: src/ui/views/markdown_preview.blp:20
 msgid "Markdown Previewer"
 msgstr "Предпросмотр Markdown файлов"
@@ -88,365 +95,235 @@ msgstr "Конвертеры изображений"
 msgid "Much more..."
 msgstr "Многое другое..."
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:69
-#: data/me.iepure.devtoolbox.metainfo.xml.in:79
-#: data/me.iepure.devtoolbox.metainfo.xml.in:102
-#: data/me.iepure.devtoolbox.metainfo.xml.in:111
-msgid "What's new:"
-msgstr "Что нового:"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:71
-msgid "Fixed various typos"
-msgstr "Исправлены различные опечатки"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:72
-msgid ""
-"Timestamp: fixed issue that prevented the app from launching when the system "
-"timezone was \"Europe/Kyiv\""
-msgstr ""
-"Временная метка: исправлена проблема, из-за которой приложение не "
-"запускалось, если системный часовой пояс был «Европа/Киев»"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:73
-msgid "Updated translations"
-msgstr "Обновлены переводы"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:81
-msgid "Upgraded to GNOME platform 44"
-msgstr "Обновление до платформы GNOME 44"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:82
-msgid "Now follows the system theme"
-msgstr "Теперь используется системная тема"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:83
-msgid "Timestamp: ISO8601/RFC3339 output format and timezone support"
-msgstr ""
-"Временная метка: формат вывода ISO8601/RFC3339 и поддержка часовых поясов"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:84
-msgid "Ported UIs to blueprint"
-msgstr "Пользовательские интерфейсы портированы на blueprint"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:85
-msgid "Improved icon"
-msgstr "Улучшена иконка"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:86
-msgid "New tool: JS Formatter"
-msgstr "Новый инструмент: Форматер JS"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:87
-msgid "New tool: Certificate Parser"
-msgstr "Новый инструмент: Анализатор сертификатов"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:88
-msgid "New tool: CSR Generator"
-msgstr "Новый инструмент: Генератор CSR"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:89
-msgid "New tool: Random Generator"
-msgstr "Новый инструмент: Генератор случайных чисел и строк"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:90
-msgid "New tool: CRON generator"
-msgstr "Новый инструмент: CRON генератор"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:91
-msgid "New tool: chmod calculator"
-msgstr "Новый инструмент: chmod калькулятор"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:92
-msgid "New tool: QR-code generator"
-msgstr "Новый инструмент: Генератор QR-кодов"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:93
-msgid "New tool: JSON validator"
-msgstr "Новый инструмент: Валидатор JSON"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:94
-msgid "New tool: CSS Formatter"
-msgstr "Новый инструмент: CSS форматер"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:95
-msgid ""
-"New translations: Czech (@Amereyeu), Spanish (Óscar Fernández Díaz on "
-"Weblate and @gallegonovato), Norwegian Bokmål (@comradekingu), and "
-"Portuguese (@SantosSi)"
-msgstr ""
-"Новые переводы: чешский (@Amereyeu), испанский (Óscar Fernández Díaz на "
-"Weblate, @gallegonovato), норвежский букмол (@comradekingu) и португальский "
-"(@SantosSi)"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:97
-msgid ""
-"I'm always open to suggestions. Feel free to contribute to the project with "
-"code or translations on Weblate."
-msgstr ""
-"Я всегда открыт для предложений. Не стесняйтесь вносить свой вклад в проект, "
-"добавляя код или переводы на Weblate."
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:104
-msgid "Window can be resized smaller than before"
-msgstr "Размер окна может быть меньше, чем раньше"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:105
-msgid "Added missing icons on non GNOME desktops"
-msgstr "Добавлены недостающие иконки на рабочих столах, отличных от GNOME"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:113
-msgid "XML formater: can now open .ui files (@gregorni)"
-msgstr "Форматер XML: теперь можно открывать .ui файлы (@gregorni)"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:114
-msgid "Markdown previewer: can open preview in external browser"
-msgstr ""
-"Редактор Markdown: можно открыть предварительный просмотр во внешнем браузере"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:115
-msgid "Color blindness simulator: severtity can be changed via keyboard"
-msgstr "Симулятор дальтонизма: серьезность можно изменить с помощью клавиатуры"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:116
-msgid "New tool: HTML formatter"
-msgstr "Новый инструмент: HTML форматер"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:117
-msgid "Turkish translation by @sabriunal"
-msgstr "Турецкий перевод от @sabriunal"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:118
-msgid "Brasilian Portuguese translation by @rffontenelle"
-msgstr "Бразильский португальский перевод от @rffontenelle"
-
-#: data/me.iepure.devtoolbox.metainfo.xml.in:124
-msgid "First release"
-msgstr "Первый версия"
-
-#: src/window.py:76 src/ui/views/json_yaml.blp:21
-msgid "Convert JSON documents to YAML and vice-versa"
-msgstr "Преобразует JSON документы в YAML и наоборот"
-
-#: src/window.py:80 src/ui/views/timestamp.blp:45
-msgid "Timestamp"
-msgstr "Временная метка"
-
-#: src/window.py:83 src/ui/views/timestamp.blp:21
-msgid "Convert UNIX timestamps to and from plain dates"
-msgstr "Преобразует временные метки UNIX в простые даты и обратно"
-
-#: src/window.py:87
-msgid "Number Bases"
-msgstr "Системы счисления"
-
-#: src/window.py:90 src/ui/views/base_converter.blp:21
-msgid "Convert numbers between bases"
-msgstr "Преобразует числа между системами счисления с разным основанием"
-
-#: src/window.py:94 src/ui/views/cron_converter.blp:21
-msgid "CRON Parser"
-msgstr "CRON Парсер"
-
-#: src/window.py:97 src/ui/views/cron_converter.blp:22
-msgid "Convert CRON expressions to time and date"
-msgstr "Преобразует выражения CRON во время или дату"
-
-#: src/window.py:101 src/ui/views/reverse_cron.blp:19
-msgid "Reverse CRON"
-msgstr "Обратный CRON"
-
-#: src/window.py:104 src/ui/views/reverse_cron.blp:20
-msgid "Generate CRON expressions"
-msgstr "Генератор CRON выражений"
-
-#: src/window.py:113 src/ui/views/html_encoder.blp:21
-msgid "Encode and decode special characters using the HTML format"
-msgstr "Кодирует и декодирует специальные символы, используя HTML формат"
-
-#: src/window.py:120 src/ui/views/url_encoder.blp:21
-msgid "Encode and decode special characters inside URLs"
-msgstr "Кодирует и декодирует специальные символы в URL-адресах"
-
-#: src/window.py:127 src/ui/views/gzip_compressor.blp:21
-msgid "Compress and decompress files and texts using GZip"
-msgstr "Сжимает и распаковывает файлы и тексты с помощью GZip"
-
-#: src/window.py:134 src/ui/views/jwt_decoder.blp:21
-msgid "Decode JWT tokens to header and payload"
-msgstr "Декодирует токены JWT в заголовок и полезные данные"
-
-#: src/window.py:143 src/formatters/json.py:14
-msgid "Format JSON documents"
-msgstr "Форматирует JSON документы"
-
-#: src/window.py:150 src/formatters/sql.py:14
-msgid "Format SQL documents"
-msgstr "Форматирует SQL документы"
-
-#: src/window.py:157 src/formatters/xml.py:16
-msgid "Format XML documents"
-msgstr "Форматирует XML документы"
-
-#: src/window.py:164 src/formatters/html.py:15
-msgid "Format HTML documents"
-msgstr "Форматирует HTML документы"
-
-#: src/window.py:171 src/formatters/js.py:15
-msgid "Format JavaScript documents"
-msgstr "Форматирует JavaaScript документы"
-
-#: src/window.py:178 src/formatters/css.py:14
-msgid "Format CSS documents"
-msgstr "Форматирует CSS документы"
-
-#: src/window.py:187 src/ui/views/hash_generator.blp:21
-msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
-msgstr "Вычисляет MD5, SHA1, SHA256 и SHA512 хэши и проверяет их целостность"
-
-#: src/window.py:194 src/ui/views/lorem_generator.blp:21
-msgid "Generate lorem ipsum placeholder text"
-msgstr "Генерирует заполняющий текст lorem ipsum"
-
-#: src/window.py:201 src/ui/views/uuid_generator.blp:21
-msgid "Generate Universally Unique IDs (UUID)"
-msgstr "Генерирует Универсальные Уникальные ID (UUID)"
-
-#: src/window.py:205
-msgid "Random"
-msgstr "Случайный генератор"
-
-#: src/window.py:208 src/ui/views/random_generator.blp:21
-msgid "Generate random numbers and strings"
-msgstr "Генерирует случайные числа и строки"
-
-#: src/window.py:212 src/ui/views/chmod_calculator.blp:19
-msgid "Chmod Calculator"
-msgstr "Калькулятор Chmod"
-
-#: src/window.py:215 src/ui/views/chmod_calculator.blp:20
-msgid "Calculate values to modify permissions with chmod"
-msgstr "Рассчитывает значения для изменения прав доступа с помощью chmod"
-
-#: src/window.py:219
-msgid "QR Code"
-msgstr "QR-код"
-
-#: src/window.py:222 src/ui/views/qrcode_generator.blp:21
-msgid "Create custom QR Codes"
-msgstr "Создание собственных QR-кодов"
-
-#: src/window.py:228 src/ui/views/text_inspector.blp:20
-msgid "Text Inspector & Case Converter"
-msgstr "Инспектор текста и преобразователь регистра"
-
-#: src/window.py:231 src/ui/views/text_inspector.blp:21
-msgid "View statistics about text and change sentence cases"
-msgstr "Просмотр статистики текста и изменение регистра предложений"
-
-#: src/window.py:235
-msgid "Regex Tester"
-msgstr "Проверка регулярных выражений"
-
-#: src/window.py:238 src/ui/views/regex_tester.blp:21
-msgid "Find matching strings inside a text"
-msgstr "Находит совпадающие строки внутри текста"
-
-#: src/window.py:242 src/ui/views/text_diff.blp:20
-msgid "Text Diff"
-msgstr "Сравнение текста"
-
-#: src/window.py:245 src/ui/views/text_diff.blp:21
-msgid "Analyze two texts and find differences"
-msgstr "Анализирует два текста и находит отличия"
-
-#: src/window.py:249 src/ui/views/xml_validator.blp:20
-msgid "XML Scheme Validator"
-msgstr "Валидатор XML-схем"
-
-#: src/window.py:252 src/ui/views/xml_validator.blp:21
-msgid "Check an XML file against an XSD schema"
-msgstr "Проверка XML-файла на соответствие XSD-схеме"
-
-#: src/window.py:256 src/ui/views/json_validator.blp:19
-msgid "JSON Schema Validator"
-msgstr "Валидатор JSON-схем"
-
-#: src/window.py:259 src/ui/views/json_validator.blp:20
-msgid "Check a JSON file against a JSON schema"
-msgstr "Проверка JSON-файла на соответствие JSON-схеме"
-
-#: src/window.py:266 src/ui/views/markdown_preview.blp:21
-msgid "Preview markdown code as you type"
-msgstr "Предварительный просмотр Markdown-кода во время набора текста"
-
-#: src/window.py:272 src/ui/views/contrast_checker.blp:20
-msgid "Contrast Checker"
-msgstr "Проверка контрастности"
-
-#: src/window.py:275 src/ui/views/contrast_checker.blp:21
-msgid "Check a color combination for WCAG compliance"
-msgstr "Проверка сочетания цветов на соответствие требованиям WCAG"
-
-#: src/window.py:279
-msgid "Color Blindness"
-msgstr "Дальтонизм"
-
-#: src/window.py:282 src/ui/views/colorblindness_simulator.blp:21
-msgid "Simulate color blindness in images"
-msgstr "Имитация дальтонизма на изображений"
-
-#: src/window.py:286 src/ui/views/image_converter.blp:20
-msgid "Image Format Converter"
-msgstr "Конвертер форматов изображений"
-
-#: src/window.py:289 src/ui/views/image_converter.blp:21
-msgid "Convert images to different formats"
-msgstr "Преобразует изображения в разные форматы"
-
-#: src/window.py:295 src/ui/views/certificate_parser.blp:20
-msgid "Certificate Parser"
-msgstr "Анализатор сертификатов"
-
-#: src/window.py:298 src/ui/views/certificate_parser.blp:21
-msgid "View certificates contents"
-msgstr "Просмотр содержимого сертификатов"
-
-#: src/window.py:302
-msgid "Certificate Signing Request"
-msgstr "Запрос на подпись сертификата"
-
-#: src/window.py:305 src/ui/views/certificate_request_generator.blp:20
-msgid "Generate certificate signing requests"
-msgstr "Создание запросов на подпись сертификата"
-
-#: src/window.py:312
+#: src/window.py:118 src/window.py:125 src/window.py:132 src/window.py:139
+#: src/window.py:146
 msgid "Converters"
 msgstr "Конвертеры"
 
-#: src/window.py:317
-msgid "Encoders"
-msgstr "Кодировщики"
+#: src/window.py:120 src/ui/views/json_yaml.blp:20
+msgid "Convert JSON documents to YAML and vice-versa"
+msgstr "Преобразует JSON документы в YAML и наоборот"
 
-#: src/window.py:322
+#: src/window.py:124 src/ui/views/timestamp.blp:45
+msgid "Timestamp"
+msgstr "Временная метка"
+
+#: src/window.py:127 src/ui/views/timestamp.blp:21
+msgid "Convert UNIX timestamps to and from plain dates"
+msgstr "Преобразует временные метки UNIX в простые даты и обратно"
+
+#: src/window.py:131
+msgid "Number Bases"
+msgstr "Системы счисления"
+
+#: src/window.py:134 src/ui/views/base_converter.blp:21
+msgid "Convert numbers between bases"
+msgstr "Преобразует числа между системами счисления с разным основанием"
+
+#: src/window.py:138 src/ui/views/cron_converter.blp:21
+msgid "CRON Parser"
+msgstr "CRON Парсер"
+
+#: src/window.py:141 src/ui/views/cron_converter.blp:22
+msgid "Convert CRON expressions to time and date"
+msgstr "Преобразует выражения CRON во время или дату"
+
+#: src/window.py:145 src/ui/views/reverse_cron.blp:19
+msgid "Reverse CRON"
+msgstr "Обратный CRON"
+
+#: src/window.py:148 src/ui/views/reverse_cron.blp:20
+msgid "Generate CRON expressions"
+msgstr "Генератор CRON выражений"
+
+#: src/window.py:155 src/window.py:162 src/window.py:169 src/window.py:176
+#, fuzzy
+msgid "Encoders & Decoders"
+msgstr "URL кодер и декодер"
+
+#: src/window.py:157 src/ui/views/html_encoder.blp:21
+msgid "Encode and decode special characters using the HTML format"
+msgstr "Кодирует и декодирует специальные символы, используя HTML формат"
+
+#: src/window.py:164 src/ui/views/url_encoder.blp:21
+msgid "Encode and decode special characters inside URLs"
+msgstr "Кодирует и декодирует специальные символы в URL-адресах"
+
+#: src/window.py:171 src/ui/views/gzip_compressor.blp:21
+msgid "Compress and decompress files and texts using GZip"
+msgstr "Сжимает и распаковывает файлы и тексты с помощью GZip"
+
+#: src/window.py:178 src/ui/views/jwt_decoder.blp:21
+msgid "Decode JWT tokens to header and payload"
+msgstr "Декодирует токены JWT в заголовок и полезные данные"
+
+#: src/window.py:185 src/window.py:192 src/window.py:199 src/window.py:206
+#: src/window.py:213 src/window.py:220
 msgid "Formatters"
 msgstr "Форматеры"
 
-#: src/window.py:327
+#: src/window.py:187 src/formatters/json.py:14
+msgid "Format JSON documents"
+msgstr "Форматирует JSON документы"
+
+#: src/window.py:194 src/formatters/sql.py:14
+msgid "Format SQL documents"
+msgstr "Форматирует SQL документы"
+
+#: src/window.py:201 src/formatters/xml.py:16
+msgid "Format XML documents"
+msgstr "Форматирует XML документы"
+
+#: src/window.py:208 src/formatters/html.py:15
+msgid "Format HTML documents"
+msgstr "Форматирует HTML документы"
+
+#: src/window.py:215 src/formatters/js.py:15
+msgid "Format JavaScript documents"
+msgstr "Форматирует JavaaScript документы"
+
+#: src/window.py:222 src/formatters/css.py:14
+msgid "Format CSS documents"
+msgstr "Форматирует CSS документы"
+
+#: src/window.py:229 src/window.py:236 src/window.py:243 src/window.py:250
+#: src/window.py:257 src/window.py:264
 msgid "Generators"
 msgstr "Генераторы"
 
-#: src/window.py:332 src/ui/views/regex_tester.blp:50
+#: src/window.py:231 src/ui/views/hash_generator.blp:21
+msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
+msgstr "Вычисляет MD5, SHA1, SHA256 и SHA512 хэши и проверяет их целостность"
+
+#: src/window.py:238 src/ui/views/lorem_generator.blp:21
+msgid "Generate lorem ipsum placeholder text"
+msgstr "Генерирует заполняющий текст lorem ipsum"
+
+#: src/window.py:245 src/ui/views/uuid_generator.blp:21
+msgid "Generate Universally Unique IDs (UUID)"
+msgstr "Генерирует Универсальные Уникальные ID (UUID)"
+
+#: src/window.py:249
+msgid "Random"
+msgstr "Случайный генератор"
+
+#: src/window.py:252 src/ui/views/random_generator.blp:21
+msgid "Generate random numbers and strings"
+msgstr "Генерирует случайные числа и строки"
+
+#: src/window.py:256 src/ui/views/chmod_calculator.blp:19
+msgid "Chmod Calculator"
+msgstr "Калькулятор Chmod"
+
+#: src/window.py:259 src/ui/views/chmod_calculator.blp:20
+msgid "Calculate values to modify permissions with chmod"
+msgstr "Рассчитывает значения для изменения прав доступа с помощью chmod"
+
+#: src/window.py:263
+msgid "QR Code"
+msgstr "QR-код"
+
+#: src/window.py:266 src/ui/views/qrcode_generator.blp:21
+msgid "Create custom QR Codes"
+msgstr "Создание собственных QR-кодов"
+
+#: src/window.py:272 src/ui/views/text_inspector.blp:20
+msgid "Text Inspector & Case Converter"
+msgstr "Инспектор текста и преобразователь регистра"
+
+#: src/window.py:273 src/window.py:280 src/window.py:287 src/window.py:294
+#: src/window.py:301 src/window.py:308 src/ui/views/regex_tester.blp:50
 #: src/ui/views/text_inspector.blp:104 src/ui/views/text_inspector.blp:160
 msgid "Text"
 msgstr "Текст"
 
-#: src/window.py:337 src/views/certificate_parser.py:92
+#: src/window.py:275 src/ui/views/text_inspector.blp:21
+msgid "View statistics about text and change sentence cases"
+msgstr "Просмотр статистики текста и изменение регистра предложений"
+
+#: src/window.py:279
+msgid "Regex Tester"
+msgstr "Проверка регулярных выражений"
+
+#: src/window.py:282 src/ui/views/regex_tester.blp:21
+msgid "Find matching strings inside a text"
+msgstr "Находит совпадающие строки внутри текста"
+
+#: src/window.py:286 src/ui/views/text_diff.blp:20
+msgid "Text Diff"
+msgstr "Сравнение текста"
+
+#: src/window.py:289 src/ui/views/text_diff.blp:21
+msgid "Analyze two texts and find differences"
+msgstr "Анализирует два текста и находит отличия"
+
+#: src/window.py:293 src/ui/views/xml_validator.blp:20
+msgid "XML Scheme Validator"
+msgstr "Валидатор XML-схем"
+
+#: src/window.py:296 src/ui/views/xml_validator.blp:21
+msgid "Check an XML file against an XSD schema"
+msgstr "Проверка XML-файла на соответствие XSD-схеме"
+
+#: src/window.py:300 src/ui/views/json_validator.blp:19
+msgid "JSON Schema Validator"
+msgstr "Валидатор JSON-схем"
+
+#: src/window.py:303 src/ui/views/json_validator.blp:20
+msgid "Check a JSON file against a JSON schema"
+msgstr "Проверка JSON-файла на соответствие JSON-схеме"
+
+#: src/window.py:310 src/ui/views/markdown_preview.blp:21
+msgid "Preview markdown code as you type"
+msgstr "Предварительный просмотр Markdown-кода во время набора текста"
+
+#: src/window.py:316 src/ui/views/contrast_checker.blp:20
+msgid "Contrast Checker"
+msgstr "Проверка контрастности"
+
+#: src/window.py:317 src/window.py:324 src/window.py:331
+msgid "Graphics"
+msgstr "Графика"
+
+#: src/window.py:319 src/ui/views/contrast_checker.blp:21
+msgid "Check a color combination for WCAG compliance"
+msgstr "Проверка сочетания цветов на соответствие требованиям WCAG"
+
+#: src/window.py:323
+msgid "Color Blindness"
+msgstr "Дальтонизм"
+
+#: src/window.py:326 src/ui/views/colorblindness_simulator.blp:21
+msgid "Simulate color blindness in images"
+msgstr "Имитация дальтонизма на изображений"
+
+#: src/window.py:330 src/ui/views/image_converter.blp:20
+msgid "Image Format Converter"
+msgstr "Конвертер форматов изображений"
+
+#: src/window.py:333 src/ui/views/image_converter.blp:21
+msgid "Convert images to different formats"
+msgstr "Преобразует изображения в разные форматы"
+
+#: src/window.py:339 src/ui/views/certificate_parser.blp:20
+msgid "Certificate Parser"
+msgstr "Анализатор сертификатов"
+
+#: src/window.py:340 src/window.py:347 src/views/certificate_parser.py:92
 msgid "Certificates"
 msgstr "Сертификаты"
 
-#: src/window.py:342
-msgid "Graphics"
-msgstr "Графика"
+#: src/window.py:342 src/ui/views/certificate_parser.blp:21
+msgid "View certificates contents"
+msgstr "Просмотр содержимого сертификатов"
+
+#: src/window.py:346
+msgid "Certificate Signing Request"
+msgstr "Запрос на подпись сертификата"
+
+#: src/window.py:349 src/ui/views/certificate_request_generator.blp:20
+msgid "Generate certificate signing requests"
+msgstr "Создание запросов на подпись сертификата"
 
 #. change view and save previous
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:52
@@ -471,8 +348,8 @@ msgstr "Открыть файл"
 #: src/widgets/image_area.py:118 src/widgets/text_area.py:161
 #: src/widgets/text_file_area.py:182 src/views/certificate_parser.py:83
 #: src/views/certificate_request_generator.py:60
-#: src/ui/widgets/image_area.blp:66 src/ui/widgets/text_area.blp:76
-#: src/ui/widgets/text_file_area.blp:76 src/ui/views/certificate_parser.blp:52
+#: src/ui/widgets/image_area.blp:50 src/ui/widgets/text_area.blp:58
+#: src/ui/widgets/text_file_area.blp:58 src/ui/views/certificate_parser.blp:52
 #: src/ui/views/certificate_request_generator.blp:99
 msgid "Open"
 msgstr "Открыть"
@@ -503,7 +380,7 @@ msgstr "Сохранить файл как"
 #: src/views/certificate_request_generator.py:122
 #: src/views/certificate_request_generator.py:189
 #: src/views/image_converter.py:60 src/views/qrcode_generator.py:172
-#: src/ui/widgets/image_area.blp:77 src/ui/widgets/text_file_area.blp:87
+#: src/ui/widgets/image_area.blp:59 src/ui/widgets/text_file_area.blp:67
 #: src/ui/views/certificate_request_generator.blp:133
 msgid "Save"
 msgstr "Сохранить"
@@ -573,7 +450,7 @@ msgid "Unsupported file"
 msgstr "Неподдерживаемый файл"
 
 #: src/views/certificate_parser.py:103 src/views/reverse_cron.py:180
-#: src/ui/views/certificate_parser.blp:105 src/ui/views/reverse_cron.blp:39
+#: src/ui/views/certificate_parser.blp:103 src/ui/views/reverse_cron.blp:39
 msgid "Expand All"
 msgstr "Развернуть все"
 
@@ -900,15 +777,46 @@ msgstr ""
 "XML не соответствует предоставленной XSD-схеме:\n"
 "{xsd_error}"
 
-#: src/ui/window.blp:29
+#: src/ui/window.blp:56
+#, fuzzy
+msgid "Show/hide searchbar"
+msgstr "Показать/скрыть боковую панель"
+
+#: src/ui/window.blp:62
+msgid "Favorite Tools"
+msgstr ""
+
+#: src/ui/window.blp:71
+msgid "No Favorites"
+msgstr ""
+
+#: src/ui/window.blp:72
+msgid ""
+"Add your favorite tools here by clicking the star button beside the title"
+msgstr ""
+
+#: src/ui/window.blp:92
+msgid "Favorites"
+msgstr ""
+
+#: src/ui/window.blp:121
+msgid "Search Tools…"
+msgstr ""
+
+#: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
 msgstr "Показать/скрыть боковую панель"
 
-#: src/ui/window.blp:57
+#: src/ui/window.blp:186
+#, fuzzy
+msgid "_Keyboard Shortcuts"
+msgstr "Показать ярлыки"
+
+#: src/ui/window.blp:191
 msgid "_About Dev Toolbox"
 msgstr "_О программе"
 
-#: src/ui/about_window.blp:11
+#: src/ui/about_dialog.blp:10
 msgid ""
 "Copyright © 2022 - 2023 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
@@ -917,7 +825,7 @@ msgstr ""
 "Некоторые значки являются собственностью проекта GNOME"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
-#: src/ui/about_window.blp:19
+#: src/ui/about_dialog.blp:18
 msgid "translator-credits"
 msgstr "Finnever https://github.com/MrFinnever"
 
@@ -930,8 +838,8 @@ msgid "Sets the current system date and time (local timezone)"
 msgstr "Устанавливает текущую системную дату и время (местный часовой пояс)"
 
 #: src/ui/widgets/date_area.blp:66 src/ui/widgets/entry_row.blp:30
-#: src/ui/widgets/spin_area.blp:58 src/ui/widgets/text_area.blp:85
-#: src/ui/widgets/text_file_area.blp:102
+#: src/ui/widgets/spin_area.blp:58 src/ui/widgets/text_area.blp:66
+#: src/ui/widgets/text_file_area.blp:82
 msgid "Copy to clipboard"
 msgstr "Скопировать в буфер обмена"
 
@@ -964,16 +872,16 @@ msgid "Generate again"
 msgstr "Сгенерировать снова"
 
 #: src/ui/widgets/entry_row.blp:40 src/ui/widgets/spin_area.blp:64
-#: src/ui/widgets/text_area.blp:91 src/ui/widgets/text_file_area.blp:108
+#: src/ui/widgets/text_area.blp:73 src/ui/widgets/text_file_area.blp:89
 msgid "Paste clipboard"
 msgstr "Вставить из буфера обмена"
 
-#: src/ui/widgets/entry_row.blp:51 src/ui/widgets/image_area.blp:92
-#: src/ui/widgets/text_area.blp:97 src/ui/widgets/text_file_area.blp:114
+#: src/ui/widgets/entry_row.blp:51 src/ui/widgets/image_area.blp:74
+#: src/ui/widgets/text_area.blp:80 src/ui/widgets/text_file_area.blp:96
 msgid "Clear input"
 msgstr "Удалить"
 
-#: src/ui/widgets/image_area.blp:86 src/ui/widgets/text_file_area.blp:96
+#: src/ui/widgets/image_area.blp:67 src/ui/widgets/text_file_area.blp:75
 msgid "Open image in another program"
 msgstr "Открыть изображение в другой программе"
 
@@ -989,7 +897,7 @@ msgstr "Светлая тема"
 msgid "Dark style"
 msgstr "Тёмная тема"
 
-#: src/ui/widgets/webview_area.blp:61
+#: src/ui/widgets/webview_area.blp:46
 msgid "Open web page in another browser"
 msgstr "Открыть веб-страницу в другом браузере"
 
@@ -1030,7 +938,7 @@ msgstr ""
 #: src/ui/views/contrast_checker.blp:31 src/ui/views/cron_converter.blp:32
 #: src/ui/views/formatter.blp:28 src/ui/views/gzip_compressor.blp:31
 #: src/ui/views/hash_generator.blp:31 src/ui/views/html_encoder.blp:31
-#: src/ui/views/image_converter.blp:31 src/ui/views/json_yaml.blp:31
+#: src/ui/views/image_converter.blp:31 src/ui/views/json_yaml.blp:30
 #: src/ui/views/lorem_generator.blp:31 src/ui/views/regex_tester.blp:31
 #: src/ui/views/text_inspector.blp:31 src/ui/views/timestamp.blp:31
 #: src/ui/views/url_encoder.blp:31 src/ui/views/uuid_generator.blp:31
@@ -1068,6 +976,32 @@ msgstr ""
 #: src/ui/views/certificate_request_generator.blp:39
 msgid "Create CSR"
 msgstr "Создать CSR"
+
+#: src/ui/views/certificate_request_generator.blp:45
+msgid "Common Name (CN) *"
+msgstr ""
+
+#: src/ui/views/certificate_request_generator.blp:49
+#, fuzzy
+msgid "Country Name (C)"
+msgstr "Страна"
+
+#: src/ui/views/certificate_request_generator.blp:53
+msgid "State or Province Name (ST)"
+msgstr ""
+
+#: src/ui/views/certificate_request_generator.blp:57
+#, fuzzy
+msgid "Locality Name (L)"
+msgstr "Фамилия *"
+
+#: src/ui/views/certificate_request_generator.blp:61
+msgid "Organization Name (O)"
+msgstr ""
+
+#: src/ui/views/certificate_request_generator.blp:65
+msgid "Organization Unit Name (OU)"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:69
 msgid "Passphrase"
@@ -1186,7 +1120,7 @@ msgstr "Дойтеранопия"
 msgid "Tritanopia"
 msgstr "Тританопия"
 
-#: src/ui/views/contrast_checker.blp:34 src/ui/views/contrast_checker.blp:44
+#: src/ui/views/contrast_checker.blp:34 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
 msgstr "Цвет текста"
 
@@ -1194,39 +1128,39 @@ msgstr "Цвет текста"
 msgid "Color used for the text"
 msgstr "Цвет, используемый для текста"
 
-#: src/ui/views/contrast_checker.blp:51 src/ui/views/contrast_checker.blp:61
+#: src/ui/views/contrast_checker.blp:52 src/ui/views/contrast_checker.blp:64
 msgid "Background color"
 msgstr "Цвет фона"
 
-#: src/ui/views/contrast_checker.blp:52
+#: src/ui/views/contrast_checker.blp:53
 msgid "Color used for the background"
 msgstr "Цвет, используемый для фона"
 
-#: src/ui/views/contrast_checker.blp:74
+#: src/ui/views/contrast_checker.blp:76
 msgid "Example"
 msgstr "Пример"
 
-#: src/ui/views/contrast_checker.blp:86
+#: src/ui/views/contrast_checker.blp:88
 msgid "Lorem ipsum dolor sit amet"
 msgstr "Lorem ipsum dolor sit amet"
 
-#: src/ui/views/contrast_checker.blp:94
+#: src/ui/views/contrast_checker.blp:96
 msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
 msgstr "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
 
-#: src/ui/views/contrast_checker.blp:115 src/ui/views/contrast_checker.blp:146
+#: src/ui/views/contrast_checker.blp:117 src/ui/views/contrast_checker.blp:148
 msgid "AA"
 msgstr "AA"
 
-#: src/ui/views/contrast_checker.blp:123 src/ui/views/contrast_checker.blp:185
+#: src/ui/views/contrast_checker.blp:125 src/ui/views/contrast_checker.blp:187
 msgid "small"
 msgstr "маленький"
 
-#: src/ui/views/contrast_checker.blp:154 src/ui/views/contrast_checker.blp:216
+#: src/ui/views/contrast_checker.blp:156 src/ui/views/contrast_checker.blp:218
 msgid "large"
 msgstr "большой"
 
-#: src/ui/views/contrast_checker.blp:177 src/ui/views/contrast_checker.blp:208
+#: src/ui/views/contrast_checker.blp:179 src/ui/views/contrast_checker.blp:210
 msgid "AAA"
 msgstr "AAA"
 
@@ -1247,8 +1181,8 @@ msgid ""
 "Format used to display generated dates (<a href=\"https://strftime.org/"
 "\">python syntax</a>)"
 msgstr ""
-"Формат, используемый для отображения сгенерированных дат (<a href=\"https"
-"://strftime.org/\">python syntax</a>)"
+"Формат, используемый для отображения сгенерированных дат (<a href=\"https://"
+"strftime.org/\">python syntax</a>)"
 
 #: src/ui/views/cron_converter.blp:83
 msgid "CRON expression"
@@ -1258,11 +1192,11 @@ msgstr "CRON-выражение"
 msgid "Dates"
 msgstr "Даты"
 
-#: src/ui/views/formatter.blp:31 src/ui/views/json_yaml.blp:47
+#: src/ui/views/formatter.blp:31 src/ui/views/json_yaml.blp:46
 msgid "Indentations"
 msgstr "Отступ"
 
-#: src/ui/views/formatter.blp:32 src/ui/views/json_yaml.blp:48
+#: src/ui/views/formatter.blp:32 src/ui/views/json_yaml.blp:47
 msgid "Number of spaces used for indentation"
 msgstr "Количество пробелов, используемых для отступов"
 
@@ -1276,7 +1210,7 @@ msgid "GZip Compress & Decompress"
 msgstr "GZip сжатие и распаковка"
 
 #: src/ui/views/gzip_compressor.blp:34 src/ui/views/html_encoder.blp:34
-#: src/ui/views/json_yaml.blp:34 src/ui/views/url_encoder.blp:34
+#: src/ui/views/json_yaml.blp:33 src/ui/views/url_encoder.blp:34
 msgid "Direction"
 msgstr "Направление"
 
@@ -1293,13 +1227,13 @@ msgid "Decompress"
 msgstr "Распаковка"
 
 #: src/ui/views/gzip_compressor.blp:57 src/ui/views/hash_generator.blp:74
-#: src/ui/views/html_encoder.blp:58 src/ui/views/json_yaml.blp:78
+#: src/ui/views/html_encoder.blp:58 src/ui/views/json_yaml.blp:87
 #: src/ui/views/url_encoder.blp:71
 msgid "Input"
 msgstr "Ввод"
 
 #: src/ui/views/gzip_compressor.blp:66 src/ui/views/hash_generator.blp:83
-#: src/ui/views/html_encoder.blp:70 src/ui/views/json_yaml.blp:89
+#: src/ui/views/html_encoder.blp:70 src/ui/views/json_yaml.blp:98
 #: src/ui/views/url_encoder.blp:82
 msgid "Output"
 msgstr "Вывод"
@@ -1373,11 +1307,11 @@ msgstr "Изображение"
 msgid "Convert"
 msgstr "Конвертировать"
 
-#: src/ui/views/json_yaml.blp:20
+#: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
 msgstr "JSON - YAML конвертер"
 
-#: src/ui/views/json_yaml.blp:35
+#: src/ui/views/json_yaml.blp:34
 msgid "Specify what format is the input and the desired output"
 msgstr "Укажите формат ввода и желаемый вывод"
 
@@ -1954,10 +1888,15 @@ msgstr "Общее"
 
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
+msgid "Search Tools"
+msgstr ""
+
+#: src/ui/gtk/help-overlay.blp:23
+msgctxt "shortcut window"
 msgid "Show Shortcuts"
 msgstr "Показать ярлыки"
 
-#: src/ui/gtk/help-overlay.blp:23
+#: src/ui/gtk/help-overlay.blp:28
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Выйти"
@@ -2009,3 +1948,111 @@ msgstr "CSS форматер"
 #: src/formatters/css.py:16
 msgid "Type CSS here"
 msgstr "Введите CSS здесь"
+
+#~ msgid "What's new:"
+#~ msgstr "Что нового:"
+
+#~ msgid "Fixed various typos"
+#~ msgstr "Исправлены различные опечатки"
+
+#~ msgid ""
+#~ "Timestamp: fixed issue that prevented the app from launching when the "
+#~ "system timezone was \"Europe/Kyiv\""
+#~ msgstr ""
+#~ "Временная метка: исправлена проблема, из-за которой приложение не "
+#~ "запускалось, если системный часовой пояс был «Европа/Киев»"
+
+#~ msgid "Updated translations"
+#~ msgstr "Обновлены переводы"
+
+#~ msgid "Upgraded to GNOME platform 44"
+#~ msgstr "Обновление до платформы GNOME 44"
+
+#~ msgid "Now follows the system theme"
+#~ msgstr "Теперь используется системная тема"
+
+#~ msgid "Timestamp: ISO8601/RFC3339 output format and timezone support"
+#~ msgstr ""
+#~ "Временная метка: формат вывода ISO8601/RFC3339 и поддержка часовых поясов"
+
+#~ msgid "Ported UIs to blueprint"
+#~ msgstr "Пользовательские интерфейсы портированы на blueprint"
+
+#~ msgid "Improved icon"
+#~ msgstr "Улучшена иконка"
+
+#~ msgid "New tool: JS Formatter"
+#~ msgstr "Новый инструмент: Форматер JS"
+
+#~ msgid "New tool: Certificate Parser"
+#~ msgstr "Новый инструмент: Анализатор сертификатов"
+
+#~ msgid "New tool: CSR Generator"
+#~ msgstr "Новый инструмент: Генератор CSR"
+
+#~ msgid "New tool: Random Generator"
+#~ msgstr "Новый инструмент: Генератор случайных чисел и строк"
+
+#~ msgid "New tool: CRON generator"
+#~ msgstr "Новый инструмент: CRON генератор"
+
+#~ msgid "New tool: chmod calculator"
+#~ msgstr "Новый инструмент: chmod калькулятор"
+
+#~ msgid "New tool: QR-code generator"
+#~ msgstr "Новый инструмент: Генератор QR-кодов"
+
+#~ msgid "New tool: JSON validator"
+#~ msgstr "Новый инструмент: Валидатор JSON"
+
+#~ msgid "New tool: CSS Formatter"
+#~ msgstr "Новый инструмент: CSS форматер"
+
+#~ msgid ""
+#~ "New translations: Czech (@Amereyeu), Spanish (Óscar Fernández Díaz on "
+#~ "Weblate and @gallegonovato), Norwegian Bokmål (@comradekingu), and "
+#~ "Portuguese (@SantosSi)"
+#~ msgstr ""
+#~ "Новые переводы: чешский (@Amereyeu), испанский (Óscar Fernández Díaz на "
+#~ "Weblate, @gallegonovato), норвежский букмол (@comradekingu) и "
+#~ "португальский (@SantosSi)"
+
+#~ msgid ""
+#~ "I'm always open to suggestions. Feel free to contribute to the project "
+#~ "with code or translations on Weblate."
+#~ msgstr ""
+#~ "Я всегда открыт для предложений. Не стесняйтесь вносить свой вклад в "
+#~ "проект, добавляя код или переводы на Weblate."
+
+#~ msgid "Window can be resized smaller than before"
+#~ msgstr "Размер окна может быть меньше, чем раньше"
+
+#~ msgid "Added missing icons on non GNOME desktops"
+#~ msgstr "Добавлены недостающие иконки на рабочих столах, отличных от GNOME"
+
+#~ msgid "XML formater: can now open .ui files (@gregorni)"
+#~ msgstr "Форматер XML: теперь можно открывать .ui файлы (@gregorni)"
+
+#~ msgid "Markdown previewer: can open preview in external browser"
+#~ msgstr ""
+#~ "Редактор Markdown: можно открыть предварительный просмотр во внешнем "
+#~ "браузере"
+
+#~ msgid "Color blindness simulator: severtity can be changed via keyboard"
+#~ msgstr ""
+#~ "Симулятор дальтонизма: серьезность можно изменить с помощью клавиатуры"
+
+#~ msgid "New tool: HTML formatter"
+#~ msgstr "Новый инструмент: HTML форматер"
+
+#~ msgid "Turkish translation by @sabriunal"
+#~ msgstr "Турецкий перевод от @sabriunal"
+
+#~ msgid "Brasilian Portuguese translation by @rffontenelle"
+#~ msgstr "Бразильский португальский перевод от @rffontenelle"
+
+#~ msgid "First release"
+#~ msgstr "Первый версия"
+
+#~ msgid "Encoders"
+#~ msgstr "Кодировщики"

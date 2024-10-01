@@ -2,6 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+from io import StringIO
 from gi.repository import Gio, GObject
 import ruamel.yaml
 import json
@@ -25,11 +26,11 @@ class JsonYamlService():
         task.return_value(outcome)
 
     def _convert_json_to_yaml(self, json_str:str, indents:int) -> str:
-        yaml = ruamel.yaml.YAML(typ=['rt', 'string'])
+        yaml = ruamel.yaml.YAML(typ=['rt'])
         yaml.indent(mapping=indents, sequence=indents, offset=indents)
-        return yaml.dump_to_string(
-            json.loads(json_str)
-        )
+        stream = StringIO()
+        yaml.dump(json.loads(json_str), stream)
+        return  stream.getvalue()
 
     def _convert_yaml_to_json(self, yaml_str:str, indents:int) -> str:
         yaml = ruamel.yaml.YAML(typ='rt')

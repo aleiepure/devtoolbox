@@ -29,10 +29,10 @@ class ContrastCheckerView(Adw.Bin):
         self._check_wcag()
 
         # Signals
-        self._background_color_btn.connect("color-set", self._on_color_changed)
-        self._label_color_btn.connect("color-set", self._on_color_changed)
+        self._background_color_btn.connect("notify::rgba", self._on_color_changed)
+        self._label_color_btn.connect("notify::rgba", self._on_color_changed)
 
-    def _on_color_changed(self, user_data:GObject.GPointer):
+    def _on_color_changed(self, pspec: GObject.ParamSpec, user_data:GObject.GPointer):
         self._set_example()
         self._check_wcag()
 
