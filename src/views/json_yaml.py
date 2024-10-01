@@ -17,7 +17,7 @@ class JsonYamlView(Adw.Bin):
     _toast = Gtk.Template.Child()
     _title = Gtk.Template.Child()
     _direction_selector = Gtk.Template.Child()
-    _indents_spinner = Gtk.Template.Child()
+    _indents_row = Gtk.Template.Child()
     _input_area = Gtk.Template.Child()
     _output_area = Gtk.Template.Child()
 
@@ -33,7 +33,7 @@ class JsonYamlView(Adw.Bin):
 
         # Signals
         self._direction_selector.connect("toggled", self._on_direction_toggled)
-        self._indents_spinner.connect("value-changed", self._on_input_changed)
+        self._indents_row.connect("changed", self._on_input_changed)
         self._input_area.connect("text-changed", self._on_input_changed)
         self._input_area.connect("error", self._on_error)
         self._input_area.connect("view-cleared", self._on_view_cleared)
@@ -67,7 +67,7 @@ class JsonYamlView(Adw.Bin):
 
         # Setup task
         direction = self._direction_selector.get_left_btn_active()  # True: Json to yaml, False: Yaml to Json
-        indents = int(self._indents_spinner.get_value())
+        indents = int(self._indents_row.get_value())
         text = self._input_area.get_text()
         self._service.set_input_string(text)
         self._service.set_input_indents(indents)

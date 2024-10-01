@@ -9,29 +9,19 @@ template $ImageArea : Adw.Bin {
   Box {
     margin-top: 10;
     orientation: vertical;
-
-    styles [
-      "card",
-      "activatable",
-    ]
+    spacing: 6;
 
     Box {
       orientation: horizontal;
       halign: fill;
       hexpand: true;
 
-      styles [
-        "toolbar",
-      ]
-
       Label _name_lbl {
-        margin-bottom: 15;
-        margin-top: 15;
+        margin-bottom: 8;
+        margin-top: 8;
         margin-start: 8;
 
-        styles [
-          "label",
-        ]
+        styles ["heading"]
       }
 
       Box {
@@ -40,54 +30,46 @@ template $ImageArea : Adw.Bin {
         hexpand: true;
 
         Button _action_btn {
-          styles [
-            "suggested-action",
-          ]
+          styles ["accent"]
         }
 
         Separator _action_btn_separator {
-          styles [
-            "spacer",
-          ]
+          styles ["spacer"]
         }
 
         Box {
           orientation: horizontal;
-
-          styles [
-            "linked",
-          ]
+          margin-start: 6;
+          spacing: 6;
 
           Button _open_btn {
             valign: center;
-            child:
-            Adw.ButtonContent {
+            styles ["flat"]
+            child: Adw.ButtonContent {
               icon-name: "document-open-symbolic";
               label: _("Open");
-            }
-
-            ;
+            };
           }
 
           Button _save_btn {
             valign: center;
-            child:
-            Adw.ButtonContent {
+            styles ["flat"]
+            child: Adw.ButtonContent {
               icon-name: "floppy-symbolic";
               label: _("Save");
-            }
-
-            ;
+            };
           }
 
           Button _view_btn {
             valign: center;
+            styles ["flat"]
             icon-name: "eye-open-symbolic";
             tooltip-text: _("Open image in another program");
           }
 
           Button _clear_btn {
             valign: center;
+            styles ["flat"]
             icon-name: "edit-clear-symbolic";
             tooltip-text: _("Clear input");
           }
@@ -96,10 +78,11 @@ template $ImageArea : Adw.Bin {
     }
 
     Adw.ViewStack _stack {
+      styles ["card"]
+
       Adw.ViewStackPage {
         name: "image";
-        child:
-        Picture _imageview {
+        child: Picture _imageview {
           margin-top: 0;
           margin-bottom: 3;
           margin-start: 3;
@@ -107,23 +90,14 @@ template $ImageArea : Adw.Bin {
           can-shrink: true;
           keep-aspect-ratio: true;
 
-          styles [
-            "rounded-border",
-            "view",
-          ]
-        }
-
-        ;
+          styles ["rounded-border"]
+        };
       }
 
       Adw.ViewStackPage {
         name: "loading";
-        child:
-        Box {
-          styles [
-            "rounded-border",
-            "view",
-          ]
+        child: Box {
+          styles ["rounded-border"]
 
           orientation: vertical;
           margin-top: 0;
@@ -141,12 +115,9 @@ template $ImageArea : Adw.Bin {
               spinning: true;
             }
 
-            Label _loading_lbl {
-            }
+            Label _loading_lbl {}
           }
-        }
-
-        ;
+        };
       }
     }
   }

@@ -1,19 +1,18 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
 //
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $JsonYamlView : Adw.Bin {
+template $JsonYamlView: Adw.Bin {
   Adw.ToastOverlay _toast {
-    child:     ScrolledWindow {
-      child:       Adw.Clamp {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
         vexpand: true;
         maximum-size: 1200;
         tightening-threshold: 600;
-        child:
-        Box {
+
+        child: Box {
           orientation: vertical;
 
           $UtilityTitle _title {
@@ -43,25 +42,35 @@ template $JsonYamlView : Adw.Bin {
               }
             }
 
-            Adw.ActionRow {
+            Adw.SpinRow _indents_row {
               title: _("Indentations");
               subtitle: _("Number of spaces used for indentation");
               icon-name: "format-indent-more-symbolic";
-
-              [suffix]
-              SpinButton _indents_spinner {
-                valign: center;
-                adjustment:
-                Adjustment {
+              adjustment: Adjustment {
                   lower: 2;
                   upper: 8;
                   step-increment: 1;
                   value: 4;
-                }
-
-                ;
-              }
+                };
             }
+
+            // Adw.ActionRow {
+            //   title: _("Indentations");
+            //   subtitle: _("Number of spaces used for indentation");
+            //   icon-name: "format-indent-more-symbolic";
+
+            //   [suffix]
+            //   SpinButton _indents_spinner {
+            //     valign: center;
+
+            //     adjustment: Adjustment {
+            //       lower: 2;
+            //       upper: 8;
+            //       step-increment: 1;
+            //       value: 4;
+            //     };
+            //   }
+            // }
           }
 
           Separator {
@@ -98,14 +107,8 @@ template $JsonYamlView : Adw.Bin {
               text-wrap-mode: "none";
             }
           }
-        }
-
-        ;
-      }
-
-      ;
-    }
-
-    ;
+        };
+      };
+    };
   }
 }
