@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-01 16:36+0200\n"
-"PO-Revision-Date: 2023-06-18 12:21+0200\n"
-"Last-Translator: Alessandro Iepure <alessandro@iepure.me>\n"
+"PO-Revision-Date: 2024-10-01 14:47+0000\n"
+"Last-Translator: Alessandro Iepure <alessandro.iepure@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/it/>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Weblate 5.8-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -34,6 +34,8 @@ msgid ""
 "JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
 "Markdown;Image;"
 msgstr ""
+"JSON;YAML;YML;Convertitore;CRON;Parser;GZip;Compressore;Decompressore;Hash;"
+"Espressioni Regolari;Markdown;Immagine;"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:18
 msgid ""
@@ -136,9 +138,8 @@ msgid "Generate CRON expressions"
 msgstr "Genera espressioni CRON"
 
 #: src/window.py:155 src/window.py:162 src/window.py:169 src/window.py:176
-#, fuzzy
 msgid "Encoders & Decoders"
-msgstr "Codificatore e Decodificatore URL"
+msgstr "Codificatori e Decodificatori"
 
 #: src/window.py:157 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
@@ -776,30 +777,31 @@ msgstr ""
 "{xsd_error}"
 
 #: src/ui/window.blp:56
-#, fuzzy
 msgid "Show/hide searchbar"
-msgstr "Mostra/nascondi sidebar"
+msgstr "Mostra/nascondi barra laterale"
 
 #: src/ui/window.blp:62
 msgid "Favorite Tools"
-msgstr ""
+msgstr "Strumenti preferiti"
 
 #: src/ui/window.blp:71
 msgid "No Favorites"
-msgstr ""
+msgstr "Nessun preferito"
 
 #: src/ui/window.blp:72
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
 msgstr ""
+"Aggiungi qua i tuoi strumenti preferiti premendo il pulsante con la stella "
+"accanto al titolo"
 
 #: src/ui/window.blp:92
 msgid "Favorites"
-msgstr ""
+msgstr "Preferiti"
 
 #: src/ui/window.blp:121
 msgid "Search Tools…"
-msgstr ""
+msgstr "Cerca strumenti…"
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
@@ -976,29 +978,27 @@ msgstr "Crea CSR"
 
 #: src/ui/views/certificate_request_generator.blp:45
 msgid "Common Name (CN) *"
-msgstr ""
+msgstr "Nome comune (CN) *"
 
 #: src/ui/views/certificate_request_generator.blp:49
-#, fuzzy
 msgid "Country Name (C)"
-msgstr "Paese"
+msgstr "Paese (C)"
 
 #: src/ui/views/certificate_request_generator.blp:53
 msgid "State or Province Name (ST)"
-msgstr ""
+msgstr "Stato o Provincia (ST)"
 
 #: src/ui/views/certificate_request_generator.blp:57
-#, fuzzy
 msgid "Locality Name (L)"
-msgstr "Cognome *"
+msgstr "Località (L)"
 
 #: src/ui/views/certificate_request_generator.blp:61
 msgid "Organization Name (O)"
-msgstr ""
+msgstr "Organizzazione (O)"
 
 #: src/ui/views/certificate_request_generator.blp:65
 msgid "Organization Unit Name (OU)"
-msgstr ""
+msgstr "Unità organizzazione (OU)"
 
 #: src/ui/views/certificate_request_generator.blp:69
 msgid "Passphrase"
@@ -1878,7 +1878,7 @@ msgstr "Generale"
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Search Tools"
-msgstr ""
+msgstr "Cerca strumenti"
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"
