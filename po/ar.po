@@ -6,15 +6,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-01 16:36+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-10-01 22:55+0000\n"
+"Last-Translator: Amer Saw <amersaw@gmail.com>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/devtoolbox/"
+"devtoolbox/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 5.8-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -24,7 +28,7 @@ msgstr ""
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_dialog.blp:11
 msgid "Development tools at your fingertips"
-msgstr ""
+msgstr "أدوات المطور في متناول يدك"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
 msgid ""
@@ -38,119 +42,124 @@ msgid ""
 "again that website of which you don't recall the name just for a quick "
 "conversion, this is the right app for you."
 msgstr ""
+"إذا كنت تعبت من البحث المستمر عبر الإنترنت عن الأداة المناسبة، أو البحث عن "
+"موقع ويب لا تتذكر اسمه فقط من أجل التحويل من شيئ لآخر سريعاً فهذا هو التطبيق "
+"المناسب لك."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:22
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr ""
+"هذه مجموعة من الأدوات القوية وسهلة الإستخدام لحل مشكلات البرمجة اليومية "
+"الأكثر شيوعًا."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:25
 msgid "Includes:"
-msgstr ""
+msgstr "يتضمن:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid "JSON to YAML converter and vice-versa"
-msgstr ""
+msgstr "محول JSON إلى YAML والعكس"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:28
 msgid "CRON expressions parser"
-msgstr ""
+msgstr "محلل تعبيرات CRON"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:29
 msgid "GZip compressor and decompressor"
-msgstr ""
+msgstr "ضاغط وفك ضغط GZip"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Formatters for common programming languages"
-msgstr ""
+msgstr "مُنسيقات للغات البرمجة الشائعة"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:31
 msgid "Hash generators"
-msgstr ""
+msgstr "مولدات الهاش (البصمة)"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "Regex tester"
-msgstr ""
+msgstr "تجربة Regex"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:307
 #: src/ui/views/markdown_preview.blp:20
 msgid "Markdown Previewer"
-msgstr ""
+msgstr "معاينة Markdown"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "Image converters"
-msgstr ""
+msgstr "تحويل الصور"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Much more..."
-msgstr ""
+msgstr "والمزيد المزيد..."
 
 #: src/window.py:118 src/window.py:125 src/window.py:132 src/window.py:139
 #: src/window.py:146
 msgid "Converters"
-msgstr ""
+msgstr "المحولات"
 
 #: src/window.py:120 src/ui/views/json_yaml.blp:20
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr ""
+msgstr "تحويل مستندات JSON إلى YAML والعكس"
 
 #: src/window.py:124 src/ui/views/timestamp.blp:45
 msgid "Timestamp"
-msgstr ""
+msgstr "الوقت Timestamp"
 
 #: src/window.py:127 src/ui/views/timestamp.blp:21
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr ""
+msgstr "تحويل الوقت بصيغة UNIX من وإلى التواريخ العادية"
 
 #: src/window.py:131
 msgid "Number Bases"
-msgstr ""
+msgstr "أنظمة العد"
 
 #: src/window.py:134 src/ui/views/base_converter.blp:21
 msgid "Convert numbers between bases"
-msgstr ""
+msgstr "تحويل الأعداد بين انظمة العد المختلفة"
 
 #: src/window.py:138 src/ui/views/cron_converter.blp:21
 msgid "CRON Parser"
-msgstr ""
+msgstr "شارح CRON"
 
 #: src/window.py:141 src/ui/views/cron_converter.blp:22
 msgid "Convert CRON expressions to time and date"
-msgstr ""
+msgstr "تحويل تعبيرات CRON إلى الوقت والتاريخ"
 
 #: src/window.py:145 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
-msgstr ""
+msgstr "عكس CRON"
 
 #: src/window.py:148 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
-msgstr ""
+msgstr "توليد تعبيرات CRON"
 
 #: src/window.py:155 src/window.py:162 src/window.py:169 src/window.py:176
 msgid "Encoders & Decoders"
-msgstr ""
+msgstr "الترميز & فك الترميز"
 
 #: src/window.py:157 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
-msgstr ""
+msgstr "ترميز وفك ترميز الأحرف الخاصة باستخدام تنسيق HTML"
 
 #: src/window.py:164 src/ui/views/url_encoder.blp:21
 msgid "Encode and decode special characters inside URLs"
-msgstr ""
+msgstr "ترميز وفك ترميز الأحرف الخاصة داخل عناوين URL"
 
 #: src/window.py:171 src/ui/views/gzip_compressor.blp:21
 msgid "Compress and decompress files and texts using GZip"
-msgstr ""
+msgstr "ضغط وفك ضغط الملفات والنصوص باستخدام GZip"
 
 #: src/window.py:178 src/ui/views/jwt_decoder.blp:21
 msgid "Decode JWT tokens to header and payload"
-msgstr ""
+msgstr "فك ترميز رموز JWT إلى الرأسية والمحتوى"
 
 #: src/window.py:185 src/window.py:192 src/window.py:199 src/window.py:206
 #: src/window.py:213 src/window.py:220
 msgid "Formatters"
-msgstr ""
+msgstr "المنسقات"
 
 #: src/window.py:187 src/formatters/json.py:14
 msgid "Format JSON documents"
