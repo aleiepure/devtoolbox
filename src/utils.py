@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gdk, GLib
-from ruamel import yaml
+import ruamel.yaml
 from enum import Enum
 from lxml import etree
 from crontab import CronSlices
@@ -53,9 +53,10 @@ class Utils:
     @staticmethod
     def is_yaml(test_input) -> bool:
         try:
-            yaml.load(test_input, Loader=yaml.Loader)
+            yaml = ruamel.yaml.YAML(typ='rt')
+            yaml.load(test_input)
             return True
-        except yaml.YAMLError:
+        except ruamel.yaml.YAMLError:
             return False
 
     @staticmethod

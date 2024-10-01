@@ -4,21 +4,26 @@
     "build-commands": [],
     "modules": [
         {
-            "name": "python3-ruamel.yaml",
+            "name": "python3-ruamel.yaml.string",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ruamel.yaml\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ruamel.yaml.string\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/4b/5d/678d7d15071816cb9a5e015fcd090ddc59a6a195ce8965363313e2044595/ruamel.yaml-0.18.3-py3-none-any.whl",
-                    "sha256": "b5d119e1f9678cf90b58f64bbd2a4e78af76860ae39fab3e73323e622b462df9"
+                    "url": "https://files.pythonhosted.org/packages/57/db/4b74a29f5fd175aea3ff0d95f8230d9bb8a54e38d963c6f96065b9e2eef3/ruamel.yaml-0.18.5-py3-none-any.whl",
+                    "sha256": "a013ac02f99a69cdd6277d9664689eb1acba07069f912823177c5eced21a6ada"
                 },
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/46/ab/bab9eb1566cd16f060b54055dd39cf6a34bfa0240c53a7218c43e974295b/ruamel.yaml.clib-0.2.8.tar.gz",
                     "sha256": "beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/91/2a/b508237a7fcceab8a8724405480eb55d527523419c9dbcde369f954656ad/ruamel.yaml.string-0.1.1-py3-none-any.whl",
+                    "sha256": "eb146bcb42b116216638034a434e9cf3ae2a5d3933aa37183a9854b5f3ff42de"
                 }
             ]
         },
@@ -45,8 +50,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/4a/52/cccfc7a0d3bcf52cca6f6e1792786075df979346d638bf4cf5bc8bf2be3c/humanize-4.8.0-py3-none-any.whl",
-                    "sha256": "8bc9e2bb9315e61ec06bf690151ae35aeb65651ab091266941edf97c90836404"
+                    "url": "https://files.pythonhosted.org/packages/aa/2b/2ae0c789fd08d5b44e745726d08a17e6d3d7d09071d05473105edc7615f2/humanize-4.9.0-py3-none-any.whl",
+                    "sha256": "ce284a76d5b1377fd8836733b983bfb0b76f1aa1c090de2566fcf008d7f6ab16"
                 }
             ]
         },
@@ -149,8 +154,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/30/39/7305428d1c4f28282a4f5bdbef24e0f905d351f34cf351ceb131f5cddf78/lxml-4.9.3.tar.gz",
-                    "sha256": "48628bd53a426c9eb9bc066a923acaa0878d1e86129fd5359aee99285f4eed9c"
+                    "url": "https://files.pythonhosted.org/packages/84/14/c2070b5e37c650198de8328467dd3d1681e80986f81ba0fea04fc4ec9883/lxml-4.9.4.tar.gz",
+                    "sha256": "b1541e50b78e15fa06a2670157a1962ef06591d4c998b998047fff5e3236880e"
                 }
             ]
         },
@@ -210,8 +215,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f1/98/61276a753f078dd2f3171c9a69fd3f451d220e806b2b1cdca41b8e368b0f/markdown2-2.4.10-py2.py3-none-any.whl",
-                    "sha256": "e6105800483783831f5dc54f827aa5b44eb137ecef5a70293d8ecfbb4109ecc6"
+                    "url": "https://files.pythonhosted.org/packages/70/4c/674a82d120c2be454c792907fd81210f4d713eddb98c8b229c2c7f06bcf1/markdown2-2.4.12-py2.py3-none-any.whl",
+                    "sha256": "98f47591006f0ace0644cbece03fed6f3845513286f6c6e9f8bcf6a575174e2c"
                 }
             ]
         },
@@ -323,8 +328,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6b/19/0ecb8815e70d2a18acef86abecf6e20fb86147680a928a4f4f08c33a97cf/jsbeautifier-1.14.9.tar.gz",
-                    "sha256": "c738ebc36b47bd94e4ca6dd17a9004c3cc74edad582ca1d60e0e5d5945a63cb9"
+                    "url": "https://files.pythonhosted.org/packages/32/b0/c0812327b6158720aaefb3884caeaf2969b2eafd6b2a28ed306f421a6cd0/jsbeautifier-1.14.11.tar.gz",
+                    "sha256": "6b632581ea60dd1c133cd25a48ad187b4b91f526623c4b0fb5443ef805250505"
                 }
             ]
         },
@@ -347,8 +352,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/24/21/7d397a4b7934ff4028987914ac1044d3b7d52712f30e2ac7a2ae5bc86dd0/typing_extensions-4.8.0-py3-none-any.whl",
-                    "sha256": "8f92fc8806f9a6b641eaa5318da32b44d401efaac0f6678c9bc448ba3605faa0"
+                    "url": "https://files.pythonhosted.org/packages/b7/f4/6a90020cd2d93349b442bfcb657d0dc91eee65491600b2cb1d388bc98e6b/typing_extensions-4.9.0-py3-none-any.whl",
+                    "sha256": "af72aea155e91adfc61c3ae9e0e342dbc0cba726d6cba4b6c72c1f34e47291cd"
                 }
             ]
         },
@@ -390,13 +395,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f3/a6/e958a04db0e249cb74f0b088dc097cdea588ef954bef947dccf846db2173/cssbeautifier-1.14.9.tar.gz",
-                    "sha256": "2da432472f68170eb854aff97b16a24721f5090ee36af2e31199590a89e7f71f"
+                    "url": "https://files.pythonhosted.org/packages/6b/4f/a8cf92a39c5567cda13a68c9aef746398d639244d6790052126fcad9958a/cssbeautifier-1.14.11.tar.gz",
+                    "sha256": "40544c2b62bbcb64caa5e7f37a02df95654e5ce1bcacadac4ca1f3dc89c31513"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6b/19/0ecb8815e70d2a18acef86abecf6e20fb86147680a928a4f4f08c33a97cf/jsbeautifier-1.14.9.tar.gz",
-                    "sha256": "c738ebc36b47bd94e4ca6dd17a9004c3cc74edad582ca1d60e0e5d5945a63cb9"
+                    "url": "https://files.pythonhosted.org/packages/32/b0/c0812327b6158720aaefb3884caeaf2969b2eafd6b2a28ed306f421a6cd0/jsbeautifier-1.14.11.tar.gz",
+                    "sha256": "6b632581ea60dd1c133cd25a48ad187b4b91f526623c4b0fb5443ef805250505"
                 }
             ]
         }
