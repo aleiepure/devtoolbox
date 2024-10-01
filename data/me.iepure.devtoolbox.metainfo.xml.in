@@ -6,15 +6,15 @@ Copyright (C) 2022 - 2023 Alessandro Iepure
 SPDX-License-Identifier: CC0-1.0
 -->
 
-<component type="desktop">
+<component type="desktop-application">
 	<id>me.iepure.devtoolbox.desktop</id>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-or-later</project_license>
   <launchable type="desktop-id">me.iepure.devtoolbox.desktop</launchable>
-  <name translatable="no">Dev Toolbox</name>
+  <name translate="no">Dev Toolbox</name>
   <summary>Development tools at your fingertips</summary>
-  <developer_name translatable="no">Alessandro Iepure</developer_name>
-  <description>
+  <developer_name translate="no">Alessandro Iepure</developer_name>
+  <description translate="no">
     <p>If you're tired of endlessly looking online for the right tool, or to
       find again that website of which you don't recall the name just for a quick
       conversion, this is the right app for you.</p>
@@ -38,6 +38,7 @@ SPDX-License-Identifier: CC0-1.0
   <url type="homepage">https://github.com/aleiepure/devtoolbox</url>
   <url type="bugtracker">https://github.com/aleiepure/devtoolbox/issues</url>
   <url type="vcs-browser">https://github.com/aleiepure/devtoolbox</url>
+  <url type="translate">https://hosted.weblate.org/engage/devtoolbox/</url>
   <url type="contribute">https://github.com/aleiepure/devtoolbox/wiki/Contributing</url>
   <screenshots>
     <screenshot type="default">
@@ -53,7 +54,7 @@ SPDX-License-Identifier: CC0-1.0
       <image>https://raw.githubusercontent.com/aleiepure/devtoolbox/main/data/appstream/4.png</image>
     </screenshot>
   </screenshots>
-  <translation type="gettext">me.iepure.devtoolbox</translation>
+  <translation type="gettext">devtoolbox</translation>
   <content_rating type="oars-1.1"/>
   <recommends>
     <control>pointing</control>
@@ -61,11 +62,10 @@ SPDX-License-Identifier: CC0-1.0
   </recommends>
   <requires>
     <display_length compare="ge">700</display_length>
-    <display_width compare="ge">1050</display_width>
   </requires>
   <releases>
     <release version="1.1.1" date="2023-06-18">
-      <description>
+      <description translate="no">
         <p>What's new:</p>
         <ul>
           <li>Fixed various typos</li>
@@ -75,7 +75,7 @@ SPDX-License-Identifier: CC0-1.0
       </description>
     </release>
     <release version="1.1" date="2023-06-16">
-      <description>
+      <description translate="no">
         <p>What's new:</p>
         <ul>
           <li>Upgraded to GNOME platform 44</li>
@@ -98,7 +98,7 @@ SPDX-License-Identifier: CC0-1.0
       </description>
     </release>
     <release version="1.0.2" date="2023-03-08">
-      <description>
+      <description translate="no">
         <p>What's new:</p>
         <ul>
           <li>Window can be resized smaller than before</li>
@@ -107,7 +107,7 @@ SPDX-License-Identifier: CC0-1.0
       </description>
     </release>
     <release version="1.0.1" date="2023-03-07">
-      <description>
+      <description translate="no">
         <p>What's new:</p>
         <ul>
           <li>XML formater: can now open .ui files (@gregorni)</li>
@@ -120,7 +120,7 @@ SPDX-License-Identifier: CC0-1.0
       </description>
     </release>
     <release version="1.0" date="2023-02-25">
-      <description>
+      <description translate="no">
         <p>First release</p>
       </description>
     </release>
