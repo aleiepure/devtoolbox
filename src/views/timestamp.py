@@ -6,7 +6,7 @@ from gi.repository import Gtk, Adw, GObject
 from datetime import datetime
 from dateutil import tz as timez
 from zoneinfo import ZoneInfo
-from pytz import common_timezones
+from pytz import all_timezones
 from tzlocal import get_localzone_name
 
 
@@ -36,7 +36,7 @@ class TimestampView(Adw.Bin):
         if tz == "Europe/Kiev":
             tz = "Europe/Kyiv"
 
-        self._timezone_dropdown.set_selected(common_timezones.index(tz))
+        self._timezone_dropdown.set_selected(all_timezones.index(tz))
         time = datetime.now(tz = ZoneInfo(tz))
         self._timestamp_spin_area.set_value(time.timestamp())
         self._date_area.set_date(time.year, time.month, time.day, time.hour, time.minute, time.second)
@@ -51,7 +51,7 @@ class TimestampView(Adw.Bin):
 
     def _create_dropdown(self):
         string_list_items = "\n".ljust(11).join(
-            [f"<item>{time_zone}</item>" for time_zone in common_timezones]
+            [f"<item>{time_zone}</item>" for time_zone in all_timezones]
         )
 
         dropdown_ui = f"""<interface>
