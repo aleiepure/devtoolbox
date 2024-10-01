@@ -56,11 +56,48 @@ template $TimestampView : Adw.Bin {
 
           Adw.PreferencesGroup {
             margin-top: 10;
+            margin-bottom: 20;
 
             $EntryRow _iso_date {
               editable: "false";
               show-copy-btn: "true";
-              title: _("ISO date (ISO 8601/RFC 3339)");
+              title: _("ISO Date (ISO 8601/RFC 3339)");
+            }
+
+            $EntryRow _rfc2822_date {
+              editable: false;
+              show-copy-btn: true;
+              title: _("RFC 2822 Date");
+            }
+
+            $EntryRow _short_date {
+              editable: false;
+              show-copy-btn: true;
+              title: _("Short Date");
+            }
+
+            $EntryRow _short_time {
+              editable: false;
+              show-copy-btn: true;
+              title: _("Short Time");
+            }
+
+            $EntryRow _long_date {
+              editable: false;
+              show-copy-btn: true;
+              title: _("Long Date");
+            }
+
+            $EntryRow _long_time {
+              editable: false;
+              show-copy-btn: true;
+              title: _("Long Time");
+            }
+
+            $EntryRow _full_long_date {
+              editable: false;
+              show-copy-btn: true;
+              title: _("Full Long Date");
             }
           }
         };
