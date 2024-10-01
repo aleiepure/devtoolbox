@@ -6,18 +6,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-01 16:36+0200\n"
-"PO-Revision-Date: 2024-03-24 09:02+0000\n"
+"PO-Revision-Date: 2024-10-01 16:02+0000\n"
 "Last-Translator: 复予 <clonewith@qq.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
-"devtoolbox/devtoolbox/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
+"projects/devtoolbox/devtoolbox/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.8-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -34,6 +34,8 @@ msgid ""
 "JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
 "Markdown;Image;"
 msgstr ""
+"JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;M"
+"arkdown;Image;转换;解析工具;压缩工具;解压工具;哈希;正则表达式;图像;"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:18
 msgid ""
@@ -133,9 +135,8 @@ msgid "Generate CRON expressions"
 msgstr "生成CRON表达式"
 
 #: src/window.py:155 src/window.py:162 src/window.py:169 src/window.py:176
-#, fuzzy
 msgid "Encoders & Decoders"
-msgstr "URL 编码 & 解码工具"
+msgstr "编码 & 解码工具"
 
 #: src/window.py:157 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
@@ -770,39 +771,37 @@ msgstr ""
 "{xsd_error}"
 
 #: src/ui/window.blp:56
-#, fuzzy
 msgid "Show/hide searchbar"
-msgstr "显示/隐藏侧边栏"
+msgstr "显示/隐藏搜索栏"
 
 #: src/ui/window.blp:62
 msgid "Favorite Tools"
-msgstr ""
+msgstr "已收藏工具"
 
 #: src/ui/window.blp:71
 msgid "No Favorites"
-msgstr ""
+msgstr "暂无收藏"
 
 #: src/ui/window.blp:72
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
-msgstr ""
+msgstr "点击工具标题旁的星星来将其添加到这里"
 
 #: src/ui/window.blp:92
 msgid "Favorites"
-msgstr ""
+msgstr "收藏"
 
 #: src/ui/window.blp:121
 msgid "Search Tools…"
-msgstr ""
+msgstr "搜索工具…"
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
 msgstr "显示/隐藏侧边栏"
 
 #: src/ui/window.blp:186
-#, fuzzy
 msgid "_Keyboard Shortcuts"
-msgstr "显示快捷方式"
+msgstr "键盘快捷键 (_K)"
 
 #: src/ui/window.blp:191
 msgid "_About Dev Toolbox"
@@ -968,29 +967,27 @@ msgstr "创建 CSR"
 
 #: src/ui/views/certificate_request_generator.blp:45
 msgid "Common Name (CN) *"
-msgstr ""
+msgstr "常用名 (CN) *"
 
 #: src/ui/views/certificate_request_generator.blp:49
-#, fuzzy
 msgid "Country Name (C)"
-msgstr "国家"
+msgstr "国家或地区名 (C)"
 
 #: src/ui/views/certificate_request_generator.blp:53
 msgid "State or Province Name (ST)"
-msgstr ""
+msgstr "州或省名 (ST)"
 
 #: src/ui/views/certificate_request_generator.blp:57
-#, fuzzy
 msgid "Locality Name (L)"
-msgstr "姓 *"
+msgstr "地区名 (L)"
 
 #: src/ui/views/certificate_request_generator.blp:61
 msgid "Organization Name (O)"
-msgstr ""
+msgstr "组织名 (O)"
 
 #: src/ui/views/certificate_request_generator.blp:65
 msgid "Organization Unit Name (OU)"
-msgstr ""
+msgstr "组织单位名 (OU)"
 
 #: src/ui/views/certificate_request_generator.blp:69
 msgid "Passphrase"
@@ -1857,7 +1854,7 @@ msgstr "通用"
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Search Tools"
-msgstr ""
+msgstr "搜索工具"
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"
