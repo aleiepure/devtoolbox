@@ -11,6 +11,7 @@ sources = [
   'timestamp.py',
   'base_converter.py',
   'cron_converter.py',
+  'base64_encoder.py',
   'html_encoder.py',
   'url_encoder.py',
   'gzip_compressor.py',

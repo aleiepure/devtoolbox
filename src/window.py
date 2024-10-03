@@ -13,6 +13,7 @@ from .views.timestamp import TimestampView
 from .views.base_converter import BaseConverterView
 from .views.cron_converter import CronConverterView
 from .views.html_encoder import HtmlEncoderView
+from .views.base64_encoder import Base64EncoderView
 from .views.url_encoder import UrlEncoderView
 from .views.gzip_compressor import GzipCompressorView
 from .views.jwt_decoder import JwtDecoderView
@@ -156,6 +157,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "code-symbolic",
                 "tooltip": _("Encode and decode special characters using the HTML format"),
                 "child": HtmlEncoderView(),
+            },
+            "base64-encoder": {
+                "title": "Base64",
+                "category": _("Encoders & Decoders"),
+                "icon-name": "code-symbolic",
+                "tooltip": _("Encode and decode base64 strings"),
+                "child": Base64EncoderView(),
             },
             "url-encoder": {
                 "title": "URL",
