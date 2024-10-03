@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-01 16:36+0200\n"
-"PO-Revision-Date: 2024-10-02 23:15+0000\n"
+"PO-Revision-Date: 2024-10-04 10:15+0000\n"
 "Last-Translator: Amer Saw <amersaw@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/ar/>\n"
@@ -391,17 +391,15 @@ msgid "Unable to save image."
 msgstr "غير قادر على حفظ الصورة."
 
 #: src/widgets/text_area.py:169 src/widgets/text_file_area.py:203
-#, fuzzy
 msgid "Text files"
 msgstr "ملفات نصية"
 
 #: src/widgets/text_area.py:176 src/widgets/text_file_area.py:216
-#, fuzzy
 msgid "Accepted files"
 msgstr "الملفات المقبولة"
 
 #: src/widgets/text_area.py:197
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Loading a large file ({size})\n"
 "Might take a while, please wait..."
@@ -410,32 +408,27 @@ msgstr ""
 "قد يستغرق الأمر بعض الوقت، يرجى الانتظار..."
 
 #: src/widgets/text_area.py:204 src/widgets/text_file_area.py:251
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
 msgstr "غير قادر على فتح {file_path}: {file_content}."
 
 #: src/widgets/text_area.py:219
-#, fuzzy
 msgid "File is not UTF-8 encoded."
 msgstr "الملف ليس بتشفير UTF-8."
 
 #: src/widgets/text_file_area.py:190
-#, fuzzy
 msgid "All files"
 msgstr "جميع الملفات"
 
 #: src/widgets/text_file_area.py:197
-#, fuzzy
 msgid "Text files and images"
 msgstr "الملفات النصية والصور"
 
 #: src/widgets/text_file_area.py:209
-#, fuzzy
 msgid "Images"
 msgstr "الصور"
 
 #: src/widgets/text_file_area.py:288
-#, fuzzy
 msgid "Saving file..."
 msgstr "جارٍ حفظ الملف..."
 
@@ -463,12 +456,10 @@ msgid "Expand All"
 msgstr "توسيع الكل"
 
 #: src/views/certificate_parser.py:107 src/views/reverse_cron.py:184
-#, fuzzy
 msgid "Collapse All"
 msgstr "طي الكل"
 
 #: src/views/certificate_parser.py:147
-#, fuzzy
 msgid "Error: Cannot open this file because it is not a valid certificate."
 msgstr "خطأ: لا يمكن فتح هذا الملف لأنه ليس شهادة صالحة."
 
@@ -480,7 +471,7 @@ msgstr "الهوية: {identity}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:157
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Verified by: {verified_by}"
 msgstr "تم التحقق بواسطة: {verified_by}"
 
@@ -492,51 +483,43 @@ msgstr "تنتهي في: {expiration_date}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:165
-#, fuzzy
 msgid "Basic Constraints"
-msgstr "القيود الأساسية"
+msgstr "القيود الأساسية (Basic Constraints)"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:166
-#, fuzzy
 msgid "Extended Key Usage"
-msgstr "الاستخدام الموسع للمفتاح"
+msgstr "الاستخدام الموسع للمفتاح (Extended Key Usage)"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:167 src/views/certificate_parser.py:212
-#, fuzzy
 msgid "Subject Key Identifier"
-msgstr "معرف مفتاح الموضوع"
+msgstr "معرف مفتاح الموضوع (Subject Key Identifier)"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:168
-#, fuzzy
 msgid "Key Usage"
-msgstr "استخدام المفتاح"
+msgstr "استخدام المفتاح (Key Usage)"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:169
-#, fuzzy
 msgid "Subject Alternative Names"
-msgstr "الأسماء البديلة للموضوع"
+msgstr "الأسماء البديلة للموضوع (Subject Alternative Names)"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:173
-#, fuzzy
 msgid "Extension"
-msgstr "امتداد"
+msgstr "امتداد (Extension)"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:213
-#, fuzzy
 msgid "Certificate Fingerprints"
-msgstr "بصمات الشهادة"
+msgstr "بصمات الشهادة (Fingerprints)"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:216
-#, fuzzy
 msgid "Key Identifier"
-msgstr "معرف المفتاح"
+msgstr "معرف المفتاح (Key Identifier)"
 
 #. Toast messages
 #: src/views/certificate_request_generator.py:35
@@ -550,36 +533,31 @@ msgid "Open Key File"
 msgstr "فتح ملف مفتاح"
 
 #: src/views/certificate_request_generator.py:67
-#, fuzzy
 msgid "All Files"
 msgstr "جميع الملفات"
 
 #: src/views/certificate_request_generator.py:173
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:58
 #: src/views/image_converter.py:40
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Successfully saved as {save_path}"
 msgstr "تم الحفظ بنجاح باسم {save_path}"
 
 #: src/views/certificate_request_generator.py:188
-#, fuzzy
 msgid "Save key as"
 msgstr "حفظ المفتاح باسم"
 
 #: src/views/chmod_calculator.py:30
-#, fuzzy
 msgid "Invalid value. Please check again"
 msgstr "قيمة غير صالحة. يرجى التحقق مرة أخرى"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
 #: src/views/colorblindness_simulator.py:98
-#, fuzzy
 msgid "Loading simulation..."
 msgstr "جارٍ تحميل المحاكاة..."
 
 #: src/views/formatter.py:73
-#, fuzzy
 msgid ""
 "Text is not in the correct format. Check if you misspelled something or if "
 "all parentheses are closed."
@@ -588,12 +566,10 @@ msgstr ""
 "تم إغلاق جميع الأقواس."
 
 #: src/views/gzip_compressor.py:29
-#, fuzzy
 msgid "Cannot decompress from an image or a file"
 msgstr "لا يمكن فك الضغط من صورة أو ملف"
 
 #: src/views/gzip_compressor.py:126
-#, fuzzy
 msgid "Please save this file to view its contents"
 msgstr "الرجاء حفظ هذا الملف لعرض محتوياته"
 
@@ -618,7 +594,6 @@ msgstr ""
 "قمت بتنزيله من الإنترنت، فأعد تنزيله."
 
 #: src/views/json_validator.py:77 src/views/xml_validator.py:76
-#, fuzzy
 msgid "Valid!"
 msgstr "صالح!"
 
@@ -628,17 +603,16 @@ msgstr "متوافق مع المخطط المقدم."
 
 #: src/views/json_validator.py:87 src/views/json_validator.py:97
 #: src/views/xml_validator.py:86
-#, fuzzy
 msgid "Invalid!"
 msgstr "غير صالح!"
 
 #: src/views/json_validator.py:89
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "JSON is not compliant with the provided JSON scheme:\n"
 "{validation_error}"
 msgstr ""
-"JSON غير متوافق مع نظام JSON المقدم:\n"
+"النص المدخل غير متوافق مع المخطط المقدم:\n"
 "{validation_error}"
 
 #: src/views/json_validator.py:99
@@ -652,368 +626,308 @@ msgstr ""
 
 #: src/views/qrcode_generator.py:62 src/ui/views/qrcode_generator.blp:119
 #: src/ui/views/qrcode_generator.blp:127
-#, fuzzy
 msgid "Not Set"
 msgstr "غير محدد"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
-#, fuzzy
 msgid "st"
-msgstr "شارع"
+msgstr ""
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:210
-#, fuzzy
 msgid "nd"
-msgstr "اختصار الثاني"
+msgstr ""
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:213
-#, fuzzy
 msgid "rd"
-msgstr "ثالثا"
+msgstr ""
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:216
-#, fuzzy
 msgid "th"
-msgstr "ذ"
+msgstr ""
 
 #: src/views/reverse_cron.py:240 src/views/reverse_cron.py:354
 #: src/ui/views/reverse_cron.blp:295 src/ui/views/reverse_cron.blp:340
 #: src/ui/views/reverse_cron.blp:363
-#, fuzzy
 msgid "January"
-msgstr "يناير"
+msgstr "كانون الثاني"
 
 #: src/views/reverse_cron.py:241 src/views/reverse_cron.py:355
 #: src/ui/views/reverse_cron.blp:296 src/ui/views/reverse_cron.blp:341
 #: src/ui/views/reverse_cron.blp:364
-#, fuzzy
 msgid "February"
-msgstr "فبراير"
+msgstr "شباط"
 
 #: src/views/reverse_cron.py:242 src/views/reverse_cron.py:356
 #: src/ui/views/reverse_cron.blp:297 src/ui/views/reverse_cron.blp:342
 #: src/ui/views/reverse_cron.blp:365
-#, fuzzy
 msgid "March"
-msgstr "يمشي"
+msgstr "آذار"
 
 #: src/views/reverse_cron.py:243 src/views/reverse_cron.py:357
 #: src/ui/views/reverse_cron.blp:298 src/ui/views/reverse_cron.blp:343
 #: src/ui/views/reverse_cron.blp:366
-#, fuzzy
 msgid "April"
-msgstr "أبريل"
+msgstr "نيسان"
 
 #: src/views/reverse_cron.py:244 src/views/reverse_cron.py:358
 #: src/ui/views/reverse_cron.blp:299 src/ui/views/reverse_cron.blp:344
 #: src/ui/views/reverse_cron.blp:367
-#, fuzzy
 msgid "May"
-msgstr "يمكن"
+msgstr "أيار"
 
 #: src/views/reverse_cron.py:245 src/views/reverse_cron.py:359
 #: src/ui/views/reverse_cron.blp:300 src/ui/views/reverse_cron.blp:345
 #: src/ui/views/reverse_cron.blp:368
-#, fuzzy
 msgid "June"
-msgstr "يونيو"
+msgstr "حزيران"
 
 #: src/views/reverse_cron.py:246 src/views/reverse_cron.py:360
 #: src/ui/views/reverse_cron.blp:301 src/ui/views/reverse_cron.blp:346
 #: src/ui/views/reverse_cron.blp:369
-#, fuzzy
 msgid "July"
-msgstr "يوليو"
+msgstr "تموز"
 
 #: src/views/reverse_cron.py:247 src/views/reverse_cron.py:361
 #: src/ui/views/reverse_cron.blp:302 src/ui/views/reverse_cron.blp:347
 #: src/ui/views/reverse_cron.blp:370
-#, fuzzy
 msgid "August"
-msgstr "أغسطس"
+msgstr "آب"
 
 #: src/views/reverse_cron.py:248 src/views/reverse_cron.py:362
 #: src/ui/views/reverse_cron.blp:303 src/ui/views/reverse_cron.blp:348
 #: src/ui/views/reverse_cron.blp:371
-#, fuzzy
 msgid "September"
-msgstr "سبتمبر"
+msgstr "أيلول"
 
 #: src/views/reverse_cron.py:249 src/views/reverse_cron.py:363
 #: src/ui/views/reverse_cron.blp:304 src/ui/views/reverse_cron.blp:349
 #: src/ui/views/reverse_cron.blp:372
-#, fuzzy
 msgid "October"
-msgstr "أكتوبر"
+msgstr "تشرين الأول"
 
 #: src/views/reverse_cron.py:250 src/views/reverse_cron.py:364
 #: src/ui/views/reverse_cron.blp:305 src/ui/views/reverse_cron.blp:350
 #: src/ui/views/reverse_cron.blp:373
-#, fuzzy
 msgid "November"
-msgstr "نوفمبر"
+msgstr "تشرين الثاني"
 
 #: src/views/reverse_cron.py:251 src/views/reverse_cron.py:365
 #: src/ui/views/reverse_cron.blp:306 src/ui/views/reverse_cron.blp:351
 #: src/ui/views/reverse_cron.blp:374
-#, fuzzy
 msgid "December"
-msgstr "ديسمبر"
+msgstr "كانون الأول"
 
 #: src/views/reverse_cron.py:376 src/ui/views/reverse_cron.blp:422
 #: src/ui/views/reverse_cron.blp:446 src/ui/views/reverse_cron.blp:471
 #: src/ui/views/reverse_cron.blp:490
-#, fuzzy
 msgid "Sunday"
 msgstr "الأحد"
 
 #: src/views/reverse_cron.py:377 src/ui/views/reverse_cron.blp:416
 #: src/ui/views/reverse_cron.blp:440 src/ui/views/reverse_cron.blp:465
 #: src/ui/views/reverse_cron.blp:484
-#, fuzzy
 msgid "Monday"
 msgstr "الاثنين"
 
 #: src/views/reverse_cron.py:378 src/ui/views/reverse_cron.blp:417
 #: src/ui/views/reverse_cron.blp:441 src/ui/views/reverse_cron.blp:466
 #: src/ui/views/reverse_cron.blp:485
-#, fuzzy
 msgid "Tuesday"
-msgstr "يوم الثلاثاء"
+msgstr "الثلاثاء"
 
 #: src/views/reverse_cron.py:379 src/ui/views/reverse_cron.blp:418
 #: src/ui/views/reverse_cron.blp:442 src/ui/views/reverse_cron.blp:467
 #: src/ui/views/reverse_cron.blp:486
-#, fuzzy
 msgid "Wednesday"
 msgstr "الأربعاء"
 
 #: src/views/reverse_cron.py:380 src/ui/views/reverse_cron.blp:419
 #: src/ui/views/reverse_cron.blp:443 src/ui/views/reverse_cron.blp:468
 #: src/ui/views/reverse_cron.blp:487
-#, fuzzy
 msgid "Thursday"
-msgstr "يوم الخميس"
+msgstr "الخميس"
 
 #: src/views/reverse_cron.py:381 src/ui/views/reverse_cron.blp:420
 #: src/ui/views/reverse_cron.blp:444 src/ui/views/reverse_cron.blp:469
 #: src/ui/views/reverse_cron.blp:488
-#, fuzzy
 msgid "Friday"
-msgstr "جمعة"
+msgstr "الجمعة"
 
 #: src/views/reverse_cron.py:382 src/ui/views/reverse_cron.blp:421
 #: src/ui/views/reverse_cron.blp:445 src/ui/views/reverse_cron.blp:470
 #: src/ui/views/reverse_cron.blp:489
-#, fuzzy
 msgid "Saturday"
 msgstr "السبت"
 
 #: src/views/xml_validator.py:78
-#, fuzzy
 msgid "XML is compliant with the provided XSD schema."
 msgstr "XML متوافق مع مخطط XSD المقدم."
 
 #: src/views/xml_validator.py:88
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "XML is not compliant with the provided XSD scheme:\n"
 "{xsd_error}"
 msgstr ""
-"XML غير متوافق مع نظام XSD المقدم:\n"
+"XML غير متوافق مع مخطط XSD المقدم:\n"
 "{xsd_error}"
 
 #: src/ui/window.blp:56
-#, fuzzy
 msgid "Show/hide searchbar"
 msgstr "إظهار/إخفاء شريط البحث"
 
 #: src/ui/window.blp:62
-#, fuzzy
 msgid "Favorite Tools"
 msgstr "الأدوات المفضلة"
 
 #: src/ui/window.blp:71
-#, fuzzy
 msgid "No Favorites"
-msgstr "لا المفضلة"
+msgstr "لا يوجد عناصر مفضلة"
 
 #: src/ui/window.blp:72
-#, fuzzy
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
 msgstr "أضف أدواتك المفضلة هنا بالنقر على زر النجمة الموجود بجانب العنوان"
 
 #: src/ui/window.blp:92
-#, fuzzy
 msgid "Favorites"
 msgstr "المفضلة"
 
 #: src/ui/window.blp:121
-#, fuzzy
 msgid "Search Tools…"
 msgstr "أدوات البحث…"
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
-#, fuzzy
 msgid "Show/hide sidebar"
 msgstr "إظهار/إخفاء الشريط الجانبي"
 
 #: src/ui/window.blp:186
-#, fuzzy
 msgid "_Keyboard Shortcuts"
 msgstr "_اختصارات لوحة المفاتيح"
 
 #: src/ui/window.blp:191
-#, fuzzy
 msgid "_About Dev Toolbox"
 msgstr "_حول أدوات التطوير"
 
 #: src/ui/about_dialog.blp:10
-#, fuzzy
 msgid ""
 "Copyright © 2022 - 2023 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
-"حقوق الطبع والنشر © 2022 - 2023 أليساندرو إيبور\n"
-"بعض الرموز محمية بحقوق الطبع والنشر لمشروع جنوم"
+"حقوق الطبع والنشر © 2022 - 2023 Alessandro Iepure\n"
+"بعض الأيقونات محمية بحقوق الطبع والنشر لمشروع GNOME"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
 #: src/ui/about_dialog.blp:18
-#, fuzzy
 msgid "translator-credits"
-msgstr "اعتمادات المترجم"
+msgstr "عامر صوان (amersaw@gmail.com)"
 
 #: src/ui/widgets/date_area.blp:46 src/ui/views/timestamp.blp:49
-#, fuzzy
 msgid "Now"
 msgstr "الآن"
 
 #: src/ui/widgets/date_area.blp:47
-#, fuzzy
 msgid "Sets the current system date and time (local timezone)"
-msgstr "يضبط تاريخ ووقت النظام الحالي (المنطقة الزمنية المحلية)"
+msgstr "استخدام تاريخ ووقت النظام الحالي (المنطقة الزمنية المحلية)"
 
 #: src/ui/widgets/date_area.blp:66 src/ui/widgets/entry_row.blp:30
 #: src/ui/widgets/spin_area.blp:58 src/ui/widgets/text_area.blp:66
 #: src/ui/widgets/text_file_area.blp:82
-#, fuzzy
 msgid "Copy to clipboard"
 msgstr "نسخ إلى الحافظة"
 
 #: src/ui/widgets/date_area.blp:89
-#, fuzzy
 msgid "Year"
-msgstr "سنة"
+msgstr "السنة"
 
 #: src/ui/widgets/date_area.blp:122 src/ui/views/reverse_cron.blp:263
-#, fuzzy
 msgid "Month"
-msgstr "شهر"
+msgstr "الشهر"
 
 #: src/ui/widgets/date_area.blp:154 src/ui/views/reverse_cron.blp:186
-#, fuzzy
 msgid "Day"
-msgstr "يوم"
+msgstr "اليوم"
 
 #: src/ui/widgets/date_area.blp:192 src/ui/views/reverse_cron.blp:114
-#, fuzzy
 msgid "Hours"
-msgstr "ساعات"
+msgstr "الساعات"
 
 #: src/ui/widgets/date_area.blp:225 src/ui/views/reverse_cron.blp:44
-#, fuzzy
 msgid "Minutes"
-msgstr "دقائق"
+msgstr "الدقائق"
 
 #: src/ui/widgets/date_area.blp:257
-#, fuzzy
 msgid "Seconds"
-msgstr "ثواني"
+msgstr "الثواني"
 
 #: src/ui/widgets/entry_row.blp:20
-#, fuzzy
 msgid "Generate again"
 msgstr "توليد مرة أخرى"
 
 #: src/ui/widgets/entry_row.blp:40 src/ui/widgets/spin_area.blp:64
 #: src/ui/widgets/text_area.blp:73 src/ui/widgets/text_file_area.blp:89
-#, fuzzy
 msgid "Paste clipboard"
 msgstr "لصق الحافظة"
 
 #: src/ui/widgets/entry_row.blp:51 src/ui/widgets/image_area.blp:74
 #: src/ui/widgets/text_area.blp:80 src/ui/widgets/text_file_area.blp:96
-#, fuzzy
 msgid "Clear input"
 msgstr "مسح الإدخال"
 
 #: src/ui/widgets/image_area.blp:67 src/ui/widgets/text_file_area.blp:75
-#, fuzzy
 msgid "Open image in another program"
 msgstr "فتح الصورة في برنامج آخر"
 
 #: src/ui/widgets/theme_switcher.blp:29
-#, fuzzy
 msgid "Follow system style"
-msgstr "اتبع أسلوب النظام"
+msgstr "اتبع تنسيق النظام"
 
 #: src/ui/widgets/theme_switcher.blp:43
-#, fuzzy
 msgid "Light style"
-msgstr "أسلوب خفيف"
+msgstr "الوضع المضيئ"
 
 #: src/ui/widgets/theme_switcher.blp:57
-#, fuzzy
 msgid "Dark style"
-msgstr "أسلوب مظلم"
+msgstr "الوضع المظلم"
 
 #: src/ui/widgets/webview_area.blp:46
-#, fuzzy
 msgid "Open web page in another browser"
 msgstr "افتح صفحة الويب في متصفح آخر"
 
 #: src/ui/views/base_converter.blp:20
-#, fuzzy
 msgid "Number Bases Converter"
-msgstr "محول قواعد الأرقام"
+msgstr "محول أنظمة الأرقام"
 
 #: src/ui/views/base_converter.blp:31
-#, fuzzy
 msgid "Input numbers"
-msgstr "أرقام الإدخال"
+msgstr "الأرقام المدخلة"
 
 #: src/ui/views/base_converter.blp:34
-#, fuzzy
 msgid "Decimal"
-msgstr "عشري"
+msgstr "النظام العشري"
 
 #: src/ui/views/base_converter.blp:42
-#, fuzzy
 msgid "Binary"
-msgstr "ثنائي"
+msgstr "النظام الثنائي"
 
 #: src/ui/views/base_converter.blp:50
-#, fuzzy
 msgid "Octal"
-msgstr "ثماني"
+msgstr "النظام الثماني"
 
 #: src/ui/views/base_converter.blp:58
-#, fuzzy
 msgid "Hexadecimal"
-msgstr "سداسي عشري"
+msgstr "النظام الست عشري"
 
 #: src/ui/views/base_converter.blp:83
-#, fuzzy
 msgid ""
 "Typing an unaccepted character (i.e. 'A' in the decimal field) will cause "
 "all the fields to reset to 0."
 msgstr ""
-"ستؤدي كتابة حرف غير مقبول (أي \"A\" في الحقل العشري) إلى إعادة تعيين جميع "
+"ستؤدي كتابة حرف غير مقبول (مثل \"A\" في الحقل العشري) إلى إعادة تعيين جميع "
 "الحقول إلى 0."
 
 #: src/ui/views/certificate_parser.blp:31
@@ -1025,37 +939,30 @@ msgstr ""
 #: src/ui/views/lorem_generator.blp:31 src/ui/views/regex_tester.blp:31
 #: src/ui/views/text_inspector.blp:31 src/ui/views/timestamp.blp:31
 #: src/ui/views/url_encoder.blp:31 src/ui/views/uuid_generator.blp:31
-#, fuzzy
 msgid "Tool options"
 msgstr "خيارات الأداة"
 
 #: src/ui/views/certificate_parser.blp:34
-#, fuzzy
 msgid "Certificate"
 msgstr "شهادة"
 
 #: src/ui/views/certificate_parser.blp:35
-#, fuzzy
 msgid "Open a certificate file (pem, der, cer extensions)"
 msgstr "فتح ملف شهادة (امتدادات pem، der، cer)"
 
 #: src/ui/views/certificate_parser.blp:82
-#, fuzzy
 msgid "Open a certificate file to view its contents."
 msgstr "افتح ملف الشهادة لعرض محتوياته."
 
 #: src/ui/views/certificate_request_generator.blp:19
-#, fuzzy
 msgid "Certificate Signing Request Generator"
 msgstr "مولد طلب توقيع الشهادة"
 
 #: src/ui/views/certificate_request_generator.blp:31
-#, fuzzy
 msgid "Fill the information below"
 msgstr "املأ المعلومات أدناه"
 
 #: src/ui/views/certificate_request_generator.blp:32
-#, fuzzy
 msgid ""
 "Fill at least the required fields then press the 'Create CSR' button. An "
 "empty passphrase will generate an unecrypted CSR."
@@ -1064,360 +971,291 @@ msgstr ""
 "المرور الفارغة إلى إنشاء CSR غير مشفر."
 
 #: src/ui/views/certificate_request_generator.blp:39
-#, fuzzy
 msgid "Create CSR"
-msgstr "إنشاء المسؤولية الاجتماعية للشركات"
+msgstr "إنشاء CSR"
 
 #: src/ui/views/certificate_request_generator.blp:45
-#, fuzzy
 msgid "Common Name (CN) *"
 msgstr "الاسم الشائع (CN) *"
 
 #: src/ui/views/certificate_request_generator.blp:49
-#, fuzzy
 msgid "Country Name (C)"
-msgstr "اسم الدولة (ج)"
+msgstr "اسم الدولة (C)"
 
 #: src/ui/views/certificate_request_generator.blp:53
-#, fuzzy
 msgid "State or Province Name (ST)"
 msgstr "اسم الولاية أو المقاطعة (ST)"
 
 #: src/ui/views/certificate_request_generator.blp:57
-#, fuzzy
 msgid "Locality Name (L)"
-msgstr "اسم المنطقة (ل)"
+msgstr "اسم المنطقة (L)"
 
 #: src/ui/views/certificate_request_generator.blp:61
-#, fuzzy
 msgid "Organization Name (O)"
-msgstr "اسم المنظمة (س)"
+msgstr "اسم المنظمة (O)"
 
 #: src/ui/views/certificate_request_generator.blp:65
-#, fuzzy
 msgid "Organization Unit Name (OU)"
 msgstr "اسم الوحدة التنظيمية (OU)"
 
 #: src/ui/views/certificate_request_generator.blp:69
-#, fuzzy
 msgid "Passphrase"
 msgstr "عبارة المرور"
 
 #: src/ui/views/certificate_request_generator.blp:73
-#, fuzzy
 msgid "Key"
 msgstr "مفتاح"
 
 #: src/ui/views/certificate_request_generator.blp:74
-#, fuzzy
 msgid "Generate a new key or use and existing one"
 msgstr "قم بإنشاء مفتاح جديد أو استخدم المفتاح الموجود"
 
 #: src/ui/views/certificate_request_generator.blp:77
-#, fuzzy
 msgid "New"
 msgstr "جديد"
 
 #: src/ui/views/certificate_request_generator.blp:78
-#, fuzzy
 msgid "Exisisting"
 msgstr "موجود"
 
 #: src/ui/views/certificate_request_generator.blp:85
-#, fuzzy
 msgid "Key File *"
 msgstr "ملف المفتاح *"
 
 #: src/ui/views/certificate_request_generator.blp:86
-#, fuzzy
 msgid "Open the file containing the key you want to use"
 msgstr "افتح الملف الذي يحتوي على المفتاح الذي تريد استخدامه"
 
 #: src/ui/views/certificate_request_generator.blp:107
-#, fuzzy
 msgid "Key Size"
 msgstr "حجم المفتاح"
 
 #: src/ui/views/certificate_request_generator.blp:108
-#, fuzzy
 msgid "Size of the new key. It will be saved on the same path as the CSR."
 msgstr "حجم المفتاح الجديد سيتم حفظه على نفس المسار مثل CSR."
 
 #: src/ui/views/certificate_request_generator.blp:111
-#, fuzzy
 msgid "2048 bits"
 msgstr "2048 بت"
 
 #: src/ui/views/certificate_request_generator.blp:112
-#, fuzzy
 msgid "4096 bits"
 msgstr "4096 بت"
 
 #: src/ui/views/certificate_request_generator.blp:119
-#, fuzzy
 msgid "Key Save Location *"
 msgstr "موقع حفظ المفتاح *"
 
 #: src/ui/views/certificate_request_generator.blp:120
-#, fuzzy
 msgid "Save location for the generated key file"
-msgstr "حفظ الموقع لملف المفتاح الذي تم إنشاؤه"
+msgstr "المسار المحدد لحفظ ملف المفتاح الذي تم إنشاؤه"
 
 #: src/ui/views/chmod_calculator.blp:33
-#, fuzzy
 msgid "Permissions"
 msgstr "الأذونات"
 
 #: src/ui/views/chmod_calculator.blp:43
-#, fuzzy
 msgid "Owner"
-msgstr "مالك"
+msgstr "المالك"
 
 #: src/ui/views/chmod_calculator.blp:44
-#, fuzzy
 msgid "Group"
-msgstr "مجموعة"
+msgstr "المجموعة"
 
 #: src/ui/views/chmod_calculator.blp:45
-#, fuzzy
 msgid "Others"
 msgstr "أخرى"
 
 #: src/ui/views/chmod_calculator.blp:46
-#, fuzzy
 msgid "Read"
-msgstr "يقرأ"
+msgstr "قراءة"
 
 #: src/ui/views/chmod_calculator.blp:47
-#, fuzzy
 msgid "Write"
-msgstr "يكتب"
+msgstr "كتابة"
 
 #: src/ui/views/chmod_calculator.blp:48
-#, fuzzy
 msgid "Execute"
-msgstr "ينفذ"
+msgstr "تنفيذ"
 
 #: src/ui/views/chmod_calculator.blp:63
-#, fuzzy
 msgid "Numeric value"
 msgstr "القيمة الرقمية"
 
 #: src/ui/views/chmod_calculator.blp:71
-#, fuzzy
 msgid "Symbolic value"
 msgstr "قيمة رمزية"
 
 #: src/ui/views/colorblindness_simulator.blp:20
-#, fuzzy
 msgid "Color Blindness Simulator"
 msgstr "محاكاة عمى الألوان"
 
 #: src/ui/views/colorblindness_simulator.blp:34
-#, fuzzy
 msgid "Severity"
-msgstr "خطورة"
+msgstr "الخطورة"
 
 #: src/ui/views/colorblindness_simulator.blp:35
-#, fuzzy
 msgid "Severity of the anomaly"
 msgstr "خطورة الشذوذ"
 
 #: src/ui/views/colorblindness_simulator.blp:71
 #: src/ui/views/text_inspector.blp:39
-#, fuzzy
 msgid "Original"
-msgstr "إبداعي"
+msgstr "الأصل"
 
 #: src/ui/views/colorblindness_simulator.blp:78
-#, fuzzy
 msgid "Protanopia"
 msgstr "بروتانوبيا"
 
 #: src/ui/views/colorblindness_simulator.blp:88
-#, fuzzy
 msgid "Deuteranopia"
 msgstr "عمى مزدوج"
 
 #: src/ui/views/colorblindness_simulator.blp:92
-#, fuzzy
 msgid "Tritanopia"
 msgstr "تريتانوبيا"
 
 #: src/ui/views/contrast_checker.blp:34 src/ui/views/contrast_checker.blp:46
-#, fuzzy
 msgid "Text color"
 msgstr "لون النص"
 
 #: src/ui/views/contrast_checker.blp:35
-#, fuzzy
 msgid "Color used for the text"
 msgstr "اللون المستخدم للنص"
 
 #: src/ui/views/contrast_checker.blp:52 src/ui/views/contrast_checker.blp:64
-#, fuzzy
 msgid "Background color"
 msgstr "لون الخلفية"
 
 #: src/ui/views/contrast_checker.blp:53
-#, fuzzy
 msgid "Color used for the background"
 msgstr "اللون المستخدم للخلفية"
 
 #: src/ui/views/contrast_checker.blp:76
-#, fuzzy
 msgid "Example"
 msgstr "مثال"
 
 #: src/ui/views/contrast_checker.blp:88
-#, fuzzy
 msgid "Lorem ipsum dolor sit amet"
-msgstr "لوريم إيبسوم دولور يجلس أميت"
+msgstr "Lorem ipsum dolor sit amet"
 
 #: src/ui/views/contrast_checker.blp:96
-#, fuzzy
 msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
 msgstr "velit Laboris Excepteur aliqua nostrud dolore anim ad qui esse"
 
 #: src/ui/views/contrast_checker.blp:117 src/ui/views/contrast_checker.blp:148
-#, fuzzy
 msgid "AA"
-msgstr "أأ"
+msgstr "AA"
 
 #: src/ui/views/contrast_checker.blp:125 src/ui/views/contrast_checker.blp:187
-#, fuzzy
 msgid "small"
 msgstr "صغير"
 
 #: src/ui/views/contrast_checker.blp:156 src/ui/views/contrast_checker.blp:218
-#, fuzzy
 msgid "large"
 msgstr "كبير"
 
 #: src/ui/views/contrast_checker.blp:179 src/ui/views/contrast_checker.blp:210
-#, fuzzy
 msgid "AAA"
 msgstr "AAA"
 
 #: src/ui/views/cron_converter.blp:35
-#, fuzzy
 msgid "Number of dates"
 msgstr "عدد التواريخ"
 
 #: src/ui/views/cron_converter.blp:36
-#, fuzzy
 msgid "Number of dates to be generated (up to 20)"
 msgstr "عدد التواريخ التي سيتم إنشاؤها (حتى 20)"
 
 #: src/ui/views/cron_converter.blp:55
-#, fuzzy
 msgid "Output format"
 msgstr "تنسيق الإخراج"
 
 #: src/ui/views/cron_converter.blp:56
-#, fuzzy
 msgid ""
 "Format used to display generated dates (<a href=\"https://strftime.org/"
 "\">python syntax</a>)"
 msgstr ""
 "التنسيق المستخدم لعرض التواريخ التي تم إنشاؤها (<a href=\"https://strftime."
-"org/\">بناء جملة بايثون</a>)"
+"org/\">تنسيق بايثون</a>)"
 
 #: src/ui/views/cron_converter.blp:83
-#, fuzzy
 msgid "CRON expression"
-msgstr "تعبير كرون"
+msgstr "تعبير CRON"
 
 #: src/ui/views/cron_converter.blp:96
-#, fuzzy
 msgid "Dates"
-msgstr "بلح"
+msgstr "التواريخ"
 
 #: src/ui/views/formatter.blp:31 src/ui/views/json_yaml.blp:46
-#, fuzzy
 msgid "Indentations"
 msgstr "المسافات البادئة"
 
 #: src/ui/views/formatter.blp:32 src/ui/views/json_yaml.blp:47
-#, fuzzy
 msgid "Number of spaces used for indentation"
 msgstr "عدد المسافات المستخدمة للمسافة البادئة"
 
 #: src/ui/views/formatter.blp:61
-#, fuzzy
 msgctxt "verb/action"
 msgid "Format"
-msgstr "شكل"
+msgstr "التنسيق"
 
 #: src/ui/views/gzip_compressor.blp:20
-#, fuzzy
 msgid "GZip Compress & Decompress"
 msgstr "ضغط وفك ضغط GZip"
 
 #: src/ui/views/gzip_compressor.blp:34 src/ui/views/html_encoder.blp:34
 #: src/ui/views/json_yaml.blp:33 src/ui/views/url_encoder.blp:34
-#, fuzzy
 msgid "Direction"
-msgstr "اتجاه"
+msgstr "الاتجاه"
 
 #: src/ui/views/gzip_compressor.blp:35
-#, fuzzy
 msgid "Select the desired operation"
 msgstr "حدد العملية المطلوبة"
 
 #: src/ui/views/gzip_compressor.blp:40
-#, fuzzy
 msgid "Compress"
 msgstr "ضغط"
 
 #: src/ui/views/gzip_compressor.blp:41
-#, fuzzy
 msgid "Decompress"
 msgstr "فك الضغط"
 
 #: src/ui/views/gzip_compressor.blp:57 src/ui/views/hash_generator.blp:74
 #: src/ui/views/html_encoder.blp:58 src/ui/views/json_yaml.blp:87
 #: src/ui/views/url_encoder.blp:71
-#, fuzzy
 msgid "Input"
-msgstr "مدخل"
+msgstr "الدخل"
 
 #: src/ui/views/gzip_compressor.blp:66 src/ui/views/hash_generator.blp:83
 #: src/ui/views/html_encoder.blp:70 src/ui/views/json_yaml.blp:98
 #: src/ui/views/url_encoder.blp:82
-#, fuzzy
 msgid "Output"
-msgstr "الإخراج"
+msgstr "الخرج"
 
 #: src/ui/views/gzip_compressor.blp:94
-#, fuzzy
 msgid ""
 "The compression result and the expected decompression input are base64 "
 "encoded."
-msgstr "يتم ترميز نتيجة الضغط وإدخال إلغاء الضغط المتوقع بالأساس 64."
+msgstr "يتم ترميز نتيجة الضغط و إلغاء الضغط على أنه بترميز Base64."
 
 #: src/ui/views/hash_generator.blp:20
-#, fuzzy
 msgid "Hash Generator & Checker"
 msgstr "مولد التجزئة والمدقق"
 
 #: src/ui/views/hash_generator.blp:34
-#, fuzzy
 msgid "Hash to calculate"
-msgstr "التجزئة لحساب"
+msgstr "الرمز المراد حسابه"
 
 #: src/ui/views/hash_generator.blp:35
-#, fuzzy
 msgid "Choose the hash type to calculate"
-msgstr "اختر نوع التجزئة المراد حسابه"
+msgstr "اختر نوع الهاش المراد حسابه"
 
 #: src/ui/views/hash_generator.blp:43
-#, fuzzy
 msgid "Check for integrity"
 msgstr "التحقق من النزاهة"
 
 #: src/ui/views/hash_generator.blp:44
-#, fuzzy
 msgid ""
 "If enabled the calculated hash will be checked against another provided hash "
 "to verify integrity"
@@ -1426,347 +1264,279 @@ msgstr ""
 "سلامتها"
 
 #: src/ui/views/hash_generator.blp:55
-#, fuzzy
 msgid "Type the hash to check against"
-msgstr "اكتب التجزئة للتحقق منها"
+msgstr "اكتب الهاش للتحقق منه"
 
 #: src/ui/views/html_encoder.blp:20
-#, fuzzy
 msgid "HTML Encoder & Decoder"
-msgstr "تشفير وفك ترميز HTML"
+msgstr "ترميز وفك ترميز HTML"
 
 #: src/ui/views/html_encoder.blp:35 src/ui/views/url_encoder.blp:35
-#, fuzzy
 msgid "Select the desired encoding direction"
 msgstr "حدد اتجاه الترميز المطلوب"
 
 #: src/ui/views/html_encoder.blp:40 src/ui/views/url_encoder.blp:40
-#, fuzzy
 msgid "Encode"
-msgstr "تشفير"
+msgstr "ترميز"
 
 #: src/ui/views/html_encoder.blp:41 src/ui/views/url_encoder.blp:41
-#, fuzzy
 msgid "Decode"
-msgstr "فك التشفير"
+msgstr "فك ترميز"
 
 #: src/ui/views/image_converter.blp:34
-#, fuzzy
 msgctxt "noun"
 msgid "Format"
-msgstr "شكل"
+msgstr "التنسيق"
 
 #: src/ui/views/image_converter.blp:35
-#, fuzzy
 msgid "Select the desired output format"
-msgstr "حدد تنسيق الإخراج المطلوب"
+msgstr "حدد تنسيق الخرج المطلوب"
 
 #: src/ui/views/image_converter.blp:56
-#, fuzzy
 msgid "Image"
 msgstr "صورة"
 
 #: src/ui/views/image_converter.blp:58
-#, fuzzy
 msgid "Convert"
-msgstr "يتحول"
+msgstr "تحويل"
 
 #: src/ui/views/json_yaml.blp:19
-#, fuzzy
 msgid "JSON - YAML Converter"
-msgstr "JSON - محول YAML"
+msgstr "محول بين JSON و YAML"
 
 #: src/ui/views/json_yaml.blp:34
-#, fuzzy
 msgid "Specify what format is the input and the desired output"
-msgstr "حدد تنسيق الإدخال والإخراج المطلوب"
+msgstr "حدد تنسيق الإدخال والخرج المطلوبين"
 
 #: src/ui/views/jwt_decoder.blp:20
-#, fuzzy
 msgid "JWT tokens decoder"
-msgstr "وحدة فك ترميز الرموز المميزة JWT"
+msgstr "مفكك ترميز رموز JWT"
 
 #: src/ui/views/jwt_decoder.blp:30
-#, fuzzy
 msgid "Token"
-msgstr "رمز مميز"
+msgstr "JWT Token"
 
 #: src/ui/views/jwt_decoder.blp:48
-#, fuzzy
 msgid "Header"
-msgstr "رأس"
+msgstr "المقدمة"
 
 #: src/ui/views/jwt_decoder.blp:54
-#, fuzzy
 msgid "Payload"
-msgstr "الحمولة"
+msgstr "المحتوى"
 
 #: src/ui/views/lorem_generator.blp:20
-#, fuzzy
 msgid "Lorem Ipsum Generator"
 msgstr "مولد لوريم إيبسوم"
 
 #: src/ui/views/lorem_generator.blp:34
-#, fuzzy
 msgid "Begin with \"Lorem ipsum dolor sit amet\""
 msgstr "ابدأ بـ \"لوريم إيبسوم دولور سيت أميت\""
 
 #: src/ui/views/lorem_generator.blp:46 src/ui/views/uuid_generator.blp:51
-#, fuzzy
 msgid "Amount"
-msgstr "كمية"
+msgstr "المقدار"
 
 #: src/ui/views/lorem_generator.blp:50
-#, fuzzy
 msgid "Words"
 msgstr "كلمات"
 
 #: src/ui/views/lorem_generator.blp:51
-#, fuzzy
 msgid "Sentences"
 msgstr "الجمل"
 
 #: src/ui/views/lorem_generator.blp:52
-#, fuzzy
 msgid "Paragraphs"
 msgstr "الفقرات"
 
 #: src/ui/views/lorem_generator.blp:75
-#, fuzzy
 msgid "Generated text"
 msgstr "النص الذي تم إنشاؤه"
 
 #: src/ui/views/markdown_preview.blp:36
-#, fuzzy
 msgid "Markdown"
-msgstr "تخفيض السعر"
+msgstr "Markdown"
 
 #: src/ui/views/markdown_preview.blp:49
-#, fuzzy
 msgid "Preview"
 msgstr "معاينة"
 
 #: src/ui/views/qrcode_generator.blp:20
-#, fuzzy
 msgid "QR Code Generator"
-msgstr "مولد رمز الاستجابة السريعة"
+msgstr "مولد رمز QR"
 
 #: src/ui/views/qrcode_generator.blp:31 src/ui/views/reverse_cron.blp:31
-#, fuzzy
 msgid "Tool Options"
 msgstr "خيارات الأداة"
 
 #: src/ui/views/qrcode_generator.blp:32
-#, fuzzy
 msgid "Fill the required information and press 'generate'"
 msgstr "املأ المعلومات المطلوبة ثم اضغط على \"إنشاء\""
 
 #: src/ui/views/qrcode_generator.blp:39
-#, fuzzy
 msgid "Generate"
-msgstr "يولد"
+msgstr "إنشاء"
 
 #: src/ui/views/qrcode_generator.blp:45
-#, fuzzy
 msgid "Content type"
 msgstr "نوع المحتوى"
 
 #: src/ui/views/qrcode_generator.blp:46
-#, fuzzy
 msgid "Choose the content of the QR Code"
-msgstr "اختر محتوى رمز الاستجابة السريعة"
+msgstr "اختر محتوى رمز QR"
 
 #: src/ui/views/qrcode_generator.blp:49 src/ui/views/qrcode_generator.blp:57
-#, fuzzy
 msgid "Text/URL"
 msgstr "النص/عنوان URL"
 
 #: src/ui/views/qrcode_generator.blp:50
-#, fuzzy
 msgid "WiFi Network"
 msgstr "شبكة واي فاي"
 
 #: src/ui/views/qrcode_generator.blp:51
-#, fuzzy
 msgid "Contact"
-msgstr "اتصال"
+msgstr "جهة اتصال"
 
 #: src/ui/views/qrcode_generator.blp:64
-#, fuzzy
 msgid "Network Name (SSID)"
-msgstr "اسم الشبكة (SSID)"
+msgstr "شبكة وايفاي (SSID)"
 
 #: src/ui/views/qrcode_generator.blp:71
-#, fuzzy
 msgid "Network Encryption"
 msgstr "تشفير الشبكة"
 
 #: src/ui/views/qrcode_generator.blp:76
-#, fuzzy
 msgid "None"
-msgstr "لا أحد"
+msgstr "لا شيئ"
 
 #: src/ui/views/qrcode_generator.blp:82
-#, fuzzy
 msgid "Network Password"
 msgstr "كلمة مرور الشبكة"
 
 #: src/ui/views/qrcode_generator.blp:86
-#, fuzzy
 msgid "First Name *"
 msgstr "الاسم الأول *"
 
 #: src/ui/views/qrcode_generator.blp:93
-#, fuzzy
 msgid "Last Name *"
-msgstr "اسم العائلة *"
+msgstr "الكنية *"
 
 #: src/ui/views/qrcode_generator.blp:100
-#, fuzzy
 msgid "Phone Number"
-msgstr "رقم التليفون"
+msgstr "رقم الهاتف"
 
 #: src/ui/views/qrcode_generator.blp:107
-#, fuzzy
 msgid "Email"
-msgstr "بريد إلكتروني"
+msgstr "البريد الإلكتروني"
 
 #: src/ui/views/qrcode_generator.blp:114
-#, fuzzy
 msgid "Birthday"
-msgstr "عيد ميلاد"
+msgstr "تاريخ الميلاد"
 
 #: src/ui/views/qrcode_generator.blp:132
-#, fuzzy
 msgid "Select from calendar:"
 msgstr "اختر من التقويم:"
 
 #: src/ui/views/qrcode_generator.blp:143
-#, fuzzy
 msgid "URL"
 msgstr "عنوان URL"
 
 #: src/ui/views/qrcode_generator.blp:150
-#, fuzzy
 msgid "Address"
-msgstr "عنوان"
+msgstr "العنوان"
 
 #: src/ui/views/qrcode_generator.blp:153
 msgid "Street"
 msgstr "الشارع"
 
 #: src/ui/views/qrcode_generator.blp:159
-#, fuzzy
 msgid "City"
 msgstr "مدينة"
 
 #: src/ui/views/qrcode_generator.blp:165
-#, fuzzy
 msgid "State"
 msgstr "ولاية"
 
 #: src/ui/views/qrcode_generator.blp:171
-#, fuzzy
 msgid "ZIP Code"
 msgstr "الرمز البريدي"
 
 #: src/ui/views/qrcode_generator.blp:177
-#, fuzzy
 msgid "Country"
-msgstr "دولة"
+msgstr "الدولة"
 
 #: src/ui/views/qrcode_generator.blp:189
-#, fuzzy
 msgid "Generated QR Code"
-msgstr "تم إنشاء رمز الاستجابة السريعة"
+msgstr "تم إنشاء رمز QR"
 
 #: src/ui/views/random_generator.blp:20
-#, fuzzy
 msgid "Random Generator"
 msgstr "مولد عشوائي"
 
 #: src/ui/views/random_generator.blp:31
-#, fuzzy
 msgid "String"
-msgstr "خيط"
+msgstr "نص"
 
 #: src/ui/views/random_generator.blp:32
-#, fuzzy
 msgid "Generate a random string with the given options. ASCII characters only."
-msgstr "قم بإنشاء سلسلة عشوائية بالخيارات المحددة. أحرف ASCII فقط."
+msgstr "قم بإنشاء نصوص عشوائية بالخيارات المحددة. أحرف ASCII فقط."
 
 #: src/ui/views/random_generator.blp:35
-#, fuzzy
 msgid "Length"
-msgstr "طول"
+msgstr "الطول"
 
 #: src/ui/views/random_generator.blp:36
-#, fuzzy
 msgid "Length of the generated string"
-msgstr "طول السلسلة التي تم إنشاؤها"
+msgstr "طول النص التي تم إنشاؤها"
 
 #: src/ui/views/random_generator.blp:55
-#, fuzzy
 msgid "Uppercase letters (A-Z)"
-msgstr "الحروف الكبيرة (من الألف إلى الياء)"
+msgstr "الحروف الكبيرة (A-Z)"
 
 #: src/ui/views/random_generator.blp:65
-#, fuzzy
 msgid "Lowercase letters (a-z)"
-msgstr "الحروف الصغيرة (من الألف إلى الياء)"
+msgstr "الحروف الصغيرة (a-z)"
 
 #: src/ui/views/random_generator.blp:76
-#, fuzzy
 msgid "Numbers (0-9)"
 msgstr "الأرقام (0-9)"
 
 #: src/ui/views/random_generator.blp:87
-#, fuzzy
 msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 msgstr "الأحرف الخاصة (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 
 #: src/ui/views/random_generator.blp:101
-#, fuzzy
 msgid "Generated string"
-msgstr "سلسلة تم إنشاؤها"
+msgstr "النص المولد"
 
 #: src/ui/views/random_generator.blp:118
-#, fuzzy
 msgid "Number"
 msgstr "رقم"
 
 #: src/ui/views/random_generator.blp:119
-#, fuzzy
 msgid "Generate a random number in the given range"
 msgstr "توليد رقم عشوائي في النطاق المحدد"
 
 #: src/ui/views/random_generator.blp:122
-#, fuzzy
 msgid "Range"
-msgstr "يتراوح"
+msgstr "المجال"
 
 #: src/ui/views/random_generator.blp:123
-#, fuzzy
 msgid "Range in which to generate"
 msgstr "النطاق الذي سيتم توليده فيه"
 
 #: src/ui/views/random_generator.blp:169
-#, fuzzy
 msgid "Generated number"
 msgstr "الرقم الذي تم إنشاؤه"
 
 #: src/ui/views/regex_tester.blp:20
-#, fuzzy
 msgid "Regular Expression Tester"
-msgstr "اختبار التعبير العادي"
+msgstr "اختبار Regex"
 
 #: src/ui/views/regex_tester.blp:38
-#, fuzzy
 msgid "Regex to test"
-msgstr "Regex للاختبار"
+msgstr "نص Regex المراد اختباره"
 
 #: src/ui/views/reverse_cron.blp:54
-#, fuzzy
 msgid "Every minute"
 msgstr "كل دقيقة"
 
@@ -1778,115 +1548,95 @@ msgstr "كل دقيقة"
 #: src/ui/views/reverse_cron.blp:65 src/ui/views/reverse_cron.blp:135
 #: src/ui/views/reverse_cron.blp:207 src/ui/views/reverse_cron.blp:284
 #: src/ui/views/reverse_cron.blp:404
-#, fuzzy
 msgid "Every"
 msgstr "كل"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #: src/ui/views/reverse_cron.blp:71
-#, fuzzy
 msgid "minute(s) starting at minute"
-msgstr "دقيقة (دقائق) تبدأ من الدقيقة"
+msgstr "دقيقة (أو دقائق) تبدأ من الدقيقة"
 
 #: src/ui/views/reverse_cron.blp:84
-#, fuzzy
 msgid "Specific minute (choose one or many, no selection means every minute)"
 msgstr "دقيقة محددة (اختر واحدة أو أكثر، لا يوجد تحديد يعني كل دقيقة)"
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:99
-#, fuzzy
 msgid "Every minute between minute"
 msgstr "كل دقيقة بين دقيقة"
 
 #. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:105
-#, fuzzy
 msgid "and minute"
 msgstr "ودقيقة"
 
 #: src/ui/views/reverse_cron.blp:124
-#, fuzzy
 msgid "Every hour"
 msgstr "كل ساعة"
 
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
 #: src/ui/views/reverse_cron.blp:141
-#, fuzzy
 msgid "hour(s) starting at hour"
 msgstr "ساعة (ساعات) تبدأ من الساعة"
 
 #: src/ui/views/reverse_cron.blp:154
-#, fuzzy
 msgid "Specific hour (choose one or many, no selection means every hour)"
 msgstr "ساعة محددة (اختر واحدة أو أكثر، لا يوجد تحديد يعني كل ساعة)"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:170
-#, fuzzy
 msgid "Every hour between hour"
 msgstr "كل ساعة بين ساعة"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:177
-#, fuzzy
 msgid "and hour"
 msgstr "وساعة"
 
 #: src/ui/views/reverse_cron.blp:196
-#, fuzzy
 msgid "Every day"
 msgstr "كل يوم"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:213
-#, fuzzy
 msgid "day(s) starting on the"
 msgstr "يوم (أيام) تبدأ من"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:219
-#, fuzzy
 msgid "of the month"
 msgstr "من الشهر"
 
 #: src/ui/views/reverse_cron.blp:231
-#, fuzzy
 msgid ""
 "Specific day of month (choose one or many, no selection means every day)"
-msgstr "يوم محدد من الشهر (اختر واحدًا أو أكثر، لا يوجد تحديد يعني كل يوم)"
+msgstr "يوم محدد من الشهر (اختر واحدًا أو أكثر، لا تحدد أي شيئ لاختيار كل يوم)"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:247
-#, fuzzy
 msgid "Every day between the"
 msgstr "كل يوم بين"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:254
-#, fuzzy
 msgid "and the"
 msgstr "و"
 
 #: src/ui/views/reverse_cron.blp:273
-#, fuzzy
 msgid "Every month"
 msgstr "كل شهر"
 
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
 #: src/ui/views/reverse_cron.blp:290
-#, fuzzy
 msgid "month(s) starting in"
 msgstr "الشهر (الأشهر) بدءًا من"
 
 #: src/ui/views/reverse_cron.blp:319
-#, fuzzy
 msgid "Specific month (choose one or many, no selection means every month)"
 msgstr "شهر محدد (اختر واحدًا أو أكثر، لا يوجد اختيار يعني كل شهر)"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #: src/ui/views/reverse_cron.blp:335
-#, fuzzy
 msgid "Every month between"
 msgstr "كل شهر بين"
 
@@ -1897,23 +1647,19 @@ msgid "and"
 msgstr "و"
 
 #: src/ui/views/reverse_cron.blp:383
-#, fuzzy
 msgid "Weekday"
 msgstr "أيام الأسبوع"
 
 #: src/ui/views/reverse_cron.blp:393
-#, fuzzy
 msgid "Every weekday"
 msgstr "كل يوم من أيام الأسبوع"
 
 #. TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:410
-#, fuzzy
 msgid "weekday(s) starting on"
 msgstr "أيام الأسبوع (أيام) بدءًا من"
 
 #: src/ui/views/reverse_cron.blp:435
-#, fuzzy
 msgid "Specific weekday (choose one or many, no selection means every weekday)"
 msgstr ""
 "يوم محدد من أيام الأسبوع (اختر واحدًا أو أكثر، لا يوجد تحديد يعني كل يوم من "
@@ -1921,322 +1667,261 @@ msgstr ""
 
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:459
-#, fuzzy
 msgid "Every weekday between"
 msgstr "كل يوم من أيام الأسبوع بين"
 
 #: src/ui/views/reverse_cron.blp:499
-#, fuzzy
 msgid "Command to execute"
-msgstr "أمر بالتنفيذ"
+msgstr "الأمر المراد تنفيذه"
 
 #: src/ui/views/reverse_cron.blp:513
 msgid "CRON Expression"
 msgstr "تعبير CRON"
 
 #: src/ui/views/text_diff.blp:34
-#, fuzzy
 msgid "Old Text"
 msgstr "النص القديم"
 
 #: src/ui/views/text_diff.blp:45
-#, fuzzy
 msgid "New Text"
-msgstr "نص جديد"
+msgstr "النص الجديد"
 
 #: src/ui/views/text_diff.blp:57
-#, fuzzy
 msgid "Differences"
 msgstr "الاختلافات"
 
 #: src/ui/views/text_inspector.blp:34
-#, fuzzy
 msgid "Change case"
-msgstr "تغيير الحالة"
+msgstr "تغيير حالة الأحرف"
 
 #: src/ui/views/text_inspector.blp:35
-#, fuzzy
 msgid "Choose a case to apply to the text"
-msgstr "اختر حالة لتطبيقها على النص"
+msgstr "اختر حالة الأحرف لتطبيقها على النص"
 
 #: src/ui/views/text_inspector.blp:40
-#, fuzzy
 msgid "Sentence case"
 msgstr "حالة الجملة"
 
 #: src/ui/views/text_inspector.blp:41
-#, fuzzy
 msgid "lower case"
-msgstr "حالة صغيرة"
+msgstr "أحرف صغيرة"
 
 #: src/ui/views/text_inspector.blp:42
-#, fuzzy
 msgid "UPPERCASE"
 msgstr "أحرف كبيرة"
 
 #: src/ui/views/text_inspector.blp:43
-#, fuzzy
 msgid "Title Case"
-msgstr "حالة العنوان"
+msgstr "الأحرف الأولى من كل كلمة كبيرة"
 
 #: src/ui/views/text_inspector.blp:44
-#, fuzzy
 msgid "camelCase"
-msgstr "com.camelCase"
+msgstr "حالة camel (الكلمات ملتصقة، اول حرف صغير،واول حرف من كل كلمة كبير)"
 
 #: src/ui/views/text_inspector.blp:45
-#, fuzzy
 msgid "PascalCase"
-msgstr "باسكال كيس"
+msgstr "حال أحرف Pascal (الكلمات ملتصقة، بداية الكلمات حرف كبير)"
 
 #: src/ui/views/text_inspector.blp:46
 msgid "snake_case"
-msgstr "snake_case"
+msgstr "أحرف snake (الكلمات ملتصقة بحرف : _) كل الاحرف صغيرة"
 
 #: src/ui/views/text_inspector.blp:47
-#, fuzzy
 msgid "CONSTANT_CASE"
-msgstr "CONSTANT_CASE"
+msgstr "CONSTANT_CASE أحرف كبيرة موصولة بـ _"
 
 #: src/ui/views/text_inspector.blp:48
-#, fuzzy
 msgid "kebab-case"
-msgstr "حالة كباب"
+msgstr "حالة كباب (kebab-case)"
 
 #: src/ui/views/text_inspector.blp:49
-#, fuzzy
 msgid "COBOL-CASE"
-msgstr "حالة كوبول"
+msgstr "أحرف كوبول ( COBOL-CASE)"
 
 #: src/ui/views/text_inspector.blp:50
-#, fuzzy
 msgid "Train-Case"
-msgstr "حالة القطار"
+msgstr "أحرف القطال ( Train-Case)"
 
 #: src/ui/views/text_inspector.blp:51
-#, fuzzy
 msgid "aLtErNaTiNg CaSe"
-msgstr "حالة بديلة"
+msgstr "أحرف متذبذبة ( aLtErNaTiNg CaSe)"
 
 #: src/ui/views/text_inspector.blp:52
-#, fuzzy
 msgid "ReVeRsE aLtErNaTiNg CaSe"
-msgstr "حالة التبديل العكسي"
+msgstr "حالة التبديل العكسي ( ReVeRsE aLtErNaTiNg CaSe)"
 
 #: src/ui/views/text_inspector.blp:63
-#, fuzzy
 msgid "Information"
 msgstr "معلومة"
 
 #: src/ui/views/text_inspector.blp:66
-#, fuzzy
 msgid "Cursor"
 msgstr "المؤشر"
 
 #: src/ui/views/text_inspector.blp:80
-#, fuzzy
 msgid "Line:"
 msgstr "خط:"
 
 #: src/ui/views/text_inspector.blp:93
-#, fuzzy
 msgid "Column:"
 msgstr "عمود:"
 
 #: src/ui/views/text_inspector.blp:118
-#, fuzzy
 msgid "Characters:"
-msgstr "الشخصيات:"
+msgstr "عدد الأحرف:"
 
 #: src/ui/views/text_inspector.blp:131
-#, fuzzy
 msgid "Words:"
-msgstr "كلمات:"
+msgstr "عدد الكلمات:"
 
 #: src/ui/views/text_inspector.blp:144
-#, fuzzy
 msgid "Lines:"
-msgstr "الخطوط:"
+msgstr "عدد الأسطر:"
 
 #: src/ui/views/timestamp.blp:20
-#, fuzzy
 msgid "Timestamp Converter"
-msgstr "محول الطابع الزمني"
+msgstr "محول الأوقات"
 
 #: src/ui/views/timestamp.blp:34
-#, fuzzy
 msgid "Timezone"
 msgstr "المنطقة الزمنية"
 
 #: src/ui/views/timestamp.blp:35
-#, fuzzy
 msgid "Select the desired timezone"
 msgstr "حدد المنطقة الزمنية المطلوبة"
 
 #: src/ui/views/timestamp.blp:50
-#, fuzzy
 msgid "Sets the current system timestamp"
-msgstr "يضبط الطابع الزمني للنظام الحالي"
+msgstr "استخدام وقت النظام الحالي"
 
 #: src/ui/views/timestamp.blp:54
-#, fuzzy
 msgid "Date"
-msgstr "تاريخ"
+msgstr "التاريخ"
 
 #: src/ui/views/timestamp.blp:63
 msgid "ISO date (ISO 8601/RFC 3339)"
 msgstr "تاريخ ISO (ISO 8601/RFC 3339)"
 
 #: src/ui/views/url_encoder.blp:20
-#, fuzzy
 msgid "URL Encoder & Decoder"
 msgstr "أداة تشفير وفك ترميز URL"
 
 #: src/ui/views/url_encoder.blp:47
-#, fuzzy
 msgid "Space encoding"
-msgstr "ترميز الفضاء"
+msgstr "ترميز محرف المسافة"
 
 #: src/ui/views/url_encoder.blp:48
-#, fuzzy
 msgid "Select the desired encoding for the space character"
 msgstr "حدد الترميز المطلوب لحرف المسافة"
 
 #: src/ui/views/uuid_generator.blp:20
-#, fuzzy
 msgid "UUID Generator"
 msgstr "مولد UUID"
 
 #: src/ui/views/uuid_generator.blp:34
-#, fuzzy
 msgid "Version"
-msgstr "إصدار"
+msgstr "الإصدار"
 
 #: src/ui/views/uuid_generator.blp:35
-#, fuzzy
 msgid "Choose the UUID version to generate"
 msgstr "اختر إصدار UUID المراد إنشاؤه"
 
 #: src/ui/views/uuid_generator.blp:39
-#, fuzzy
 msgid "Version 1 (MAC address)"
 msgstr "الإصدار 1 (عنوان MAC)"
 
 #: src/ui/views/uuid_generator.blp:40
-#, fuzzy
 msgid "Version 3"
 msgstr "الإصدار 3"
 
 #: src/ui/views/uuid_generator.blp:41
-#, fuzzy
 msgid "Version 4 (Random)"
 msgstr "الإصدار 4 (عشوائي)"
 
 #: src/ui/views/uuid_generator.blp:42
-#, fuzzy
 msgid "Version 5"
 msgstr "الإصدار 5"
 
 #: src/ui/views/uuid_generator.blp:43
-#, fuzzy
 msgid "Version 6 (Gregorian Time)"
-msgstr "الإصدار 6 (التوقيت الغريغوري)"
+msgstr "الإصدار 6 (التوقيت الجورجي)"
 
 #: src/ui/views/uuid_generator.blp:44
-#, fuzzy
 msgid "Version 7 (UNIX Epoch)"
-msgstr "الإصدار 7 (عصر UNIX)"
+msgstr "‎الإصدار 7 (وقت UNIX)"
 
 #: src/ui/views/uuid_generator.blp:52
-#, fuzzy
 msgid "Number of UUIDs to be generated (up to 50)"
 msgstr "عدد UUIDs التي سيتم إنشاؤها (حتى 50)"
 
 #: src/ui/views/uuid_generator.blp:73
-#, fuzzy
 msgid "Generated UUIDs"
 msgstr "UUIDs التي تم إنشاؤها"
 
 #: src/ui/gtk/help-overlay.blp:15
-#, fuzzy
 msgctxt "shortcut window"
 msgid "General"
 msgstr "عام"
 
 #: src/ui/gtk/help-overlay.blp:18
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Search Tools"
 msgstr "أدوات البحث"
 
 #: src/ui/gtk/help-overlay.blp:23
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
 msgstr "إظهار الاختصارات"
 
 #: src/ui/gtk/help-overlay.blp:28
-#, fuzzy
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "يترك"
+msgstr "خروج"
 
 #: src/formatters/html.py:14
-#, fuzzy
 msgid "HTML Formatter"
 msgstr "منسق HTML"
 
 #: src/formatters/html.py:17
-#, fuzzy
 msgid "Type HTML code here"
 msgstr "اكتب كود HTML هنا"
 
 #: src/formatters/js.py:14
-#, fuzzy
 msgid "JavaScript Formatter"
-msgstr "جافا سكريبت المنسق"
+msgstr "منسق جافا سكريبت"
 
 #: src/formatters/js.py:17
-#, fuzzy
 msgid "Type JavaScript code here"
 msgstr "اكتب كود جافا سكريبت هنا"
 
 #: src/formatters/json.py:13
-#, fuzzy
 msgid "JSON Formatter"
-msgstr "تنسيق JSON"
+msgstr "منسق JSON"
 
 #: src/formatters/json.py:16
-#, fuzzy
 msgid "Type JSON code here"
 msgstr "اكتب رمز JSON هنا"
 
 #: src/formatters/sql.py:13
-#, fuzzy
 msgid "SQL Formatter"
 msgstr "منسق SQL"
 
 #: src/formatters/sql.py:16
-#, fuzzy
 msgid "Type SQL code here"
 msgstr "اكتب كود SQL هنا"
 
 #: src/formatters/xml.py:15
-#, fuzzy
 msgid "XML Formatter"
 msgstr "منسق XML"
 
 #: src/formatters/xml.py:18
-#, fuzzy
 msgid "Type XML code here"
 msgstr "اكتب رمز XML هنا"
 
 #: src/formatters/css.py:13
-#, fuzzy
 msgid "CSS Formatter"
 msgstr "منسق CSS"
 
 #: src/formatters/css.py:16
-#, fuzzy
 msgid "Type CSS here"
 msgstr "اكتب CSS هنا"
