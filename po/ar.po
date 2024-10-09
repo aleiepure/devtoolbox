@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-01 16:36+0200\n"
-"PO-Revision-Date: 2024-10-04 10:15+0000\n"
+"PO-Revision-Date: 2024-10-10 12:50+0000\n"
 "Last-Translator: Amer Saw <amersaw@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/ar/>\n"
@@ -23,7 +23,7 @@ msgstr ""
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
 msgid "@app-name@"
-msgstr ""
+msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_dialog.blp:11
@@ -632,22 +632,22 @@ msgstr "غير محدد"
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
 msgid "st"
-msgstr ""
+msgstr " "
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:210
 msgid "nd"
-msgstr ""
+msgstr " "
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:213
 msgid "rd"
-msgstr ""
+msgstr " "
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:216
 msgid "th"
-msgstr ""
+msgstr " "
 
 #: src/views/reverse_cron.py:240 src/views/reverse_cron.py:354
 #: src/ui/views/reverse_cron.blp:295 src/ui/views/reverse_cron.blp:340
@@ -1620,7 +1620,7 @@ msgstr "كل يوم بين"
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:254
 msgid "and the"
-msgstr "و"
+msgstr "و الـ"
 
 #: src/ui/views/reverse_cron.blp:273
 msgid "Every month"
