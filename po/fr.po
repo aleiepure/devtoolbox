@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-01 16:36+0200\n"
-"PO-Revision-Date: 2024-06-16 18:09+0000\n"
+"PO-Revision-Date: 2024-10-08 17:15+0000\n"
 "Last-Translator: SuperAtraction <superatraction@proton.me>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.8-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -91,14 +91,14 @@ msgid "Image converters"
 msgstr "Convertisseurs d'images"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
-#, fuzzy
 msgid "Much more..."
 msgstr "Beaucoup plus..."
 
 #: src/window.py:118 src/window.py:125 src/window.py:132 src/window.py:139
 #: src/window.py:146
+#, fuzzy
 msgid "Converters"
-msgstr ""
+msgstr "Convertisseurs"
 
 #: src/window.py:120 src/ui/views/json_yaml.blp:20
 msgid "Convert JSON documents to YAML and vice-versa"
@@ -139,7 +139,7 @@ msgstr "Générer des expressions CRON"
 
 #: src/window.py:155 src/window.py:162 src/window.py:169 src/window.py:176
 msgid "Encoders & Decoders"
-msgstr ""
+msgstr "Encodeurs et Décodeurs"
 
 #: src/window.py:157 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
@@ -189,7 +189,7 @@ msgstr "Formatage des documents CSS"
 #: src/window.py:229 src/window.py:236 src/window.py:243 src/window.py:250
 #: src/window.py:257 src/window.py:264
 msgid "Generators"
-msgstr ""
+msgstr "Générateurs"
 
 #: src/window.py:231 src/ui/views/hash_generator.blp:21
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
@@ -225,8 +225,9 @@ msgid "QR Code"
 msgstr "QR Code"
 
 #: src/window.py:266 src/ui/views/qrcode_generator.blp:21
+#, fuzzy
 msgid "Create custom QR Codes"
-msgstr ""
+msgstr "Créer des QR Codes"
 
 #: src/window.py:272 src/ui/views/text_inspector.blp:20
 msgid "Text Inspector & Case Converter"
@@ -236,27 +237,28 @@ msgstr ""
 #: src/window.py:301 src/window.py:308 src/ui/views/regex_tester.blp:50
 #: src/ui/views/text_inspector.blp:104 src/ui/views/text_inspector.blp:160
 msgid "Text"
-msgstr ""
+msgstr "Texte"
 
 #: src/window.py:275 src/ui/views/text_inspector.blp:21
 msgid "View statistics about text and change sentence cases"
-msgstr ""
+msgstr "Afficher des statistiques sur le texte et modifier les cas de figure"
 
 #: src/window.py:279
 msgid "Regex Tester"
-msgstr ""
+msgstr "Testeur Regex"
 
 #: src/window.py:282 src/ui/views/regex_tester.blp:21
 msgid "Find matching strings inside a text"
-msgstr ""
+msgstr "Recherche de chaînes de caractères correspondantes dans un texte"
 
 #: src/window.py:286 src/ui/views/text_diff.blp:20
 msgid "Text Diff"
 msgstr ""
 
 #: src/window.py:289 src/ui/views/text_diff.blp:21
+#, fuzzy
 msgid "Analyze two texts and find differences"
-msgstr ""
+msgstr "Analyser deux textes et trouver des différences"
 
 #: src/window.py:293 src/ui/views/xml_validator.blp:20
 msgid "XML Scheme Validator"
@@ -268,11 +270,12 @@ msgstr ""
 
 #: src/window.py:300 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
-msgstr ""
+msgstr "Validateur de schéma JSON"
 
 #: src/window.py:303 src/ui/views/json_validator.blp:20
+#, fuzzy
 msgid "Check a JSON file against a JSON schema"
-msgstr ""
+msgstr "Vérifier un fichier JSON par rapport à un schéma JSON"
 
 #: src/window.py:310 src/ui/views/markdown_preview.blp:21
 msgid "Preview markdown code as you type"
@@ -284,7 +287,7 @@ msgstr ""
 
 #: src/window.py:317 src/window.py:324 src/window.py:331
 msgid "Graphics"
-msgstr ""
+msgstr "Graphiques"
 
 #: src/window.py:319 src/ui/views/contrast_checker.blp:21
 msgid "Check a color combination for WCAG compliance"
@@ -300,11 +303,11 @@ msgstr ""
 
 #: src/window.py:330 src/ui/views/image_converter.blp:20
 msgid "Image Format Converter"
-msgstr ""
+msgstr "Convertisseur de format d'image"
 
 #: src/window.py:333 src/ui/views/image_converter.blp:21
 msgid "Convert images to different formats"
-msgstr ""
+msgstr "Convertir des images en différents formats"
 
 #: src/window.py:339 src/ui/views/certificate_parser.blp:20
 msgid "Certificate Parser"
@@ -312,11 +315,12 @@ msgstr ""
 
 #: src/window.py:340 src/window.py:347 src/views/certificate_parser.py:92
 msgid "Certificates"
-msgstr ""
+msgstr "Certificats"
 
 #: src/window.py:342 src/ui/views/certificate_parser.blp:21
+#, fuzzy
 msgid "View certificates contents"
-msgstr ""
+msgstr "Voir le contenu du certificat"
 
 #: src/window.py:346
 msgid "Certificate Signing Request"
@@ -330,21 +334,21 @@ msgstr ""
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:52
 #: src/widgets/text_file_area.py:61 src/widgets/text_file_area.py:173
 msgid "Opening file..."
-msgstr ""
+msgstr "Ouverture du fichier..."
 
 #: src/widgets/image_area.py:83 src/widgets/text_area.py:123
 #: src/widgets/text_file_area.py:137 src/views/certificate_parser.py:60
 msgid "Cannot open more than one file"
-msgstr ""
+msgstr "Impossible d'ouvrir plus d'un fichier"
 
 #: src/widgets/image_area.py:109
 msgid "Opening image..."
-msgstr ""
+msgstr "Ouverture de l'image..."
 
 #: src/widgets/image_area.py:116 src/widgets/text_area.py:159
 #: src/widgets/text_file_area.py:180 src/views/certificate_parser.py:81
 msgid "Open File"
-msgstr ""
+msgstr "Ouvrir un fichier"
 
 #: src/widgets/image_area.py:118 src/widgets/text_area.py:161
 #: src/widgets/text_file_area.py:182 src/views/certificate_parser.py:83
@@ -353,7 +357,7 @@ msgstr ""
 #: src/ui/widgets/text_file_area.blp:58 src/ui/views/certificate_parser.blp:52
 #: src/ui/views/certificate_request_generator.blp:99
 msgid "Open"
-msgstr ""
+msgstr "Ouvrir"
 
 #: src/widgets/image_area.py:119 src/widgets/image_area.py:169
 #: src/widgets/text_area.py:162 src/widgets/text_file_area.py:183
@@ -361,21 +365,21 @@ msgstr ""
 #: src/views/certificate_request_generator.py:61
 #: src/views/image_converter.py:61 src/views/qrcode_generator.py:173
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: src/widgets/image_area.py:127
 msgid "Supported Image Formats"
-msgstr ""
+msgstr "Formats d'images pris en charge"
 
 #: src/widgets/image_area.py:159
 msgid "Saving image..."
-msgstr ""
+msgstr "Sauvegarde de l'image..."
 
 #: src/widgets/image_area.py:166 src/widgets/text_file_area.py:295
 #: src/views/certificate_request_generator.py:121
 #: src/views/image_converter.py:58 src/views/qrcode_generator.py:170
 msgid "Save file as"
-msgstr ""
+msgstr "Enregistrer sous"
 
 #: src/widgets/image_area.py:168 src/widgets/text_file_area.py:297
 #: src/views/certificate_request_generator.py:122
@@ -384,19 +388,19 @@ msgstr ""
 #: src/ui/widgets/image_area.blp:59 src/ui/widgets/text_file_area.blp:67
 #: src/ui/views/certificate_request_generator.blp:133
 msgid "Save"
-msgstr ""
+msgstr "Enregistrer"
 
 #: src/widgets/image_area.py:193
 msgid "Unable to save image."
-msgstr ""
+msgstr "Impossible de sauvegarder l'image."
 
 #: src/widgets/text_area.py:169 src/widgets/text_file_area.py:203
 msgid "Text files"
-msgstr ""
+msgstr "Fichiers de texte"
 
 #: src/widgets/text_area.py:176 src/widgets/text_file_area.py:216
 msgid "Accepted files"
-msgstr ""
+msgstr "Fichiers acceptés"
 
 #: src/widgets/text_area.py:197
 #, python-brace-format
@@ -404,19 +408,21 @@ msgid ""
 "Loading a large file ({size})\n"
 "Might take a while, please wait..."
 msgstr ""
+"Chargement d'un gros fichier ({size})\n"
+"Cela peut prendre du temps, merci de patienter..."
 
 #: src/widgets/text_area.py:204 src/widgets/text_file_area.py:251
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr ""
+msgstr "Impossible d'ouvrir {file_path}: {file_content}."
 
 #: src/widgets/text_area.py:219
 msgid "File is not UTF-8 encoded."
-msgstr ""
+msgstr "Le fichier n'est pas encodé en UTF-8."
 
 #: src/widgets/text_file_area.py:190
 msgid "All files"
-msgstr ""
+msgstr "Tous les fichiers"
 
 #: src/widgets/text_file_area.py:197
 msgid "Text files and images"
