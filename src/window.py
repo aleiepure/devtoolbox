@@ -163,7 +163,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             "base64-encoder": {
                 "title": "Base64",
                 "category": _("Encoders & Decoders"),
-                "icon-name": "code-symbolic",
+                "icon-name": "base64-symbolic",
                 "tooltip": _("Encode and decode base64 strings"),
                 "child": Base64EncoderView(),
             },
