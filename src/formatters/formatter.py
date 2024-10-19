@@ -68,3 +68,7 @@ class Formatter(abc.ABC):
     @abc.abstractmethod
     def get_file_extensions(self) -> List[str]:
         pass
+    
+    @abc.abstractmethod
+    def get_action_button_name(self) -> str:
+        pass

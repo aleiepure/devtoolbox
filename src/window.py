@@ -44,6 +44,8 @@ from .formatters.html import HtmlFormatter
 from .formatters.js import JsFormatter
 from .formatters.css import CssFormatter
 
+from .formatters.css_minifier import CssMinifier
+
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
 class DevtoolboxWindow(Adw.ApplicationWindow):
@@ -187,48 +189,55 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "child": JwtDecoderView(),
             },
 
-            # Formatters
+            # Formatters and minifiers
             "json-formatter": {
                 "title": "JSON",
-                "category": _("Formatters"),
+                "category": _("Formatters & Minifiers"),
                 "icon-name": "json-symbolic",
                 "tooltip": _("Format JSON documents"),
                 "child": FormatterView(JsonFormatter()),
             },
             "sql-formatter": {
                 "title": "SQL",
-                "category": _("Formatters"),
+                "category": _("Formatters & Minifiers"),
                 "icon-name": "database-symbolic",
                 "tooltip": _("Format SQL documents"),
                 "child": FormatterView(SqlFormatter()),
             },
             "xml-formatter": {
                 "title": "XML",
-                "category": _("Formatters"),
+                "category": _("Formatters & Minifiers"),
                 "icon-name": "code-symbolic",
                 "tooltip": _("Format XML documents"),
                 "child": FormatterView(XmlFormatter()),
             },
             "html-formatter": {
                 "title": "HTML",
-                "category": _("Formatters"),
+                "category": _("Formatters & Minifiers"),
                 "icon-name": "html-symbolic",
                 "tooltip": _("Format HTML documents"),
                 "child": FormatterView(HtmlFormatter()),
             },
             "js-formatter": {
                 "title": "JavaScript",
-                "category": _("Formatters"),
+                "category": _("Formatters & Minifiers"),
                 "icon-name": "js-symbolic",
                 "tooltip": _("Format JavaScript documents"),
                 "child": FormatterView(JsFormatter()),
             },
             "css-formatter": {
                 "title": "CSS",
-                "category": _("Formatters"),
+                "category": _("Formatters & Minifiers"),
                 "icon-name": "css-symbolic",
                 "tooltip": _("Format CSS documents"),
                 "child": FormatterView(CssFormatter()),
+            },
+            "css-minifier": {
+                "title": "CSS Minifier",
+                "category": _("Formatters & Minifiers"),
+                "icon-name": "css-symbolic",
+                "tooltip": _("Minify CSS documents"),
+                "child": FormatterView(CssMinifier()),
             },
 
             # Generetors

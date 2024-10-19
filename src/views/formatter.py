@@ -30,6 +30,7 @@ class FormatterView(Adw.Bin):
         self._textarea.set_property("text-language-highlight", formatter.get_language())
         self._textarea.set_property("custom-file-extensions", formatter.get_file_extensions())
         self._textarea.set_text_language_highlight(formatter.get_language())
+        self._textarea.set_property("action-btn-name", formatter.get_action_button_name())
 
         # Signals
         self._indents_spinner.connect("value-changed", self._on_indents_changed)

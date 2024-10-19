@@ -7,8 +7,8 @@ using Adw 1;
 
 template $FormatterView : Adw.Bin {
   Adw.ToastOverlay _toast {
-    child:     ScrolledWindow {
-      child:       Adw.Clamp {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
         vexpand: true;
         maximum-size: 1200;
         tightening-threshold: 600;
@@ -16,8 +16,7 @@ template $FormatterView : Adw.Bin {
         Box {
           orientation: vertical;
 
-          $UtilityTitle _title {
-          }
+          $UtilityTitle _title {}
 
           Separator {
             margin-top: 10;
@@ -41,9 +40,7 @@ template $FormatterView : Adw.Bin {
                   upper: 8;
                   step-increment: 1;
                   value: 4;
-                }
-
-                ;
+                };
               }
             }
           }
@@ -58,7 +55,7 @@ template $FormatterView : Adw.Bin {
             show-copy-btn: "true";
             show-paste-btn: "true";
             show-open-btn: "true";
-            action-btn-name: C_("verb/action", "Format");
+            // action-btn-name: C_("verb/action", "Format");
             text-show-line-numbers: "true";
             text-highlight-current-line: "true";
             text-syntax-highlighting: "true";
@@ -67,14 +64,8 @@ template $FormatterView : Adw.Bin {
             margin-bottom: "10";
             text-wrap-mode: "none";
           }
-        }
-
-        ;
-      }
-
-      ;
-    }
-
-    ;
+        };
+      };
+    };
   }
 }

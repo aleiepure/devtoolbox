@@ -1,3 +1,4 @@
+
 # Copyright (C) 2022 - 2023 Alessandro Iepure
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
@@ -5,32 +6,23 @@
 from .formatter import Formatter
 from gettext import gettext as _, pgettext as C_
 from typing import List
-import sqlparse
+import rcssmin 
 
 
-class SqlFormatter(Formatter):
+class CssMinifier(Formatter):
 
-    _title = _("SQL Formatter")
-    _description = _("Format SQL documents")
-    _utility_name = "sql-formatter"
-    _textarea_name = _("Type SQL code here")
-    _language = "sql"
-    _extensions = ["sql"]
-    _action_btn_name = C_("verb/action", "Format")
+    _title = _("CSS Minifier")
+    _description = _("Minify CSS documents")
+    _utility_name = "css-minifier"
+    _textarea_name = _("Type CSS here")
+    _language = "css"
+    _extensions = ["css", "scss", "sass"]
+    _action_btn_name = C_("verb/action", "Minify")
 
     def _format(self, text:str, indents:int):
-        try:
-            return sqlparse.format(
-                text,
-                indent_width=indents,
-                keyword_case="upper",
-                identifier_case="lower",
-                reindent=True
-            )
-        except sqlparse.exceptions.SQLParseError:
-            return ""
+        return rcssmin.cssmin(text)
 
-    def is_correct(self, text:str):
+    def is_correct(self, text:str) -> bool:
         if isinstance(text, str):
             return True
         else:

@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from .formatter import Formatter
-from gettext import gettext as _
+from gettext import gettext as _, pgettext as C_
 from typing import List
 import cssbeautifier
 
@@ -16,6 +16,7 @@ class CssFormatter(Formatter):
     _textarea_name = _("Type CSS here")
     _language = "css"
     _extensions = ["css", "scss", "sass"]
+    _action_btn_name = C_("verb/action", "Format")
 
     def _format(self, text:str, indents:int):
         opts = cssbeautifier.default_options()
@@ -49,3 +50,6 @@ class CssFormatter(Formatter):
 
     def get_file_extensions(self) -> List[str]:
         return self._extensions
+
+    def get_action_button_name(self) -> str:
+        return self._action_btn_name
