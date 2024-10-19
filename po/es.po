@@ -6,11 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-01 16:36+0200\n"
-"PO-Revision-Date: 2023-07-06 12:53+0000\n"
-"Last-Translator: Óscar Fernández Díaz <oscfdezdz@users.noreply.hosted."
-"weblate.org>\n"
+"PO-Revision-Date: 2024-10-04 10:15+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/es/>\n"
 "Language: es\n"
@@ -18,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.8-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -35,6 +34,8 @@ msgid ""
 "JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
 "Markdown;Image;"
 msgstr ""
+"JSON;YAML;YML;Conversor;CRON;Parser;GZip;Compresor;Descompresor;Hash;Regex;Ma"
+"rkdown;Imagen;"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:18
 msgid ""
@@ -137,9 +138,8 @@ msgid "Generate CRON expressions"
 msgstr "Generar expresiones CRON"
 
 #: src/window.py:155 src/window.py:162 src/window.py:169 src/window.py:176
-#, fuzzy
 msgid "Encoders & Decoders"
-msgstr "Codificador y decodificador de URL"
+msgstr "Codificadores y decodificadores"
 
 #: src/window.py:157 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
@@ -778,30 +778,31 @@ msgstr ""
 "{xsd_error}"
 
 #: src/ui/window.blp:56
-#, fuzzy
 msgid "Show/hide searchbar"
-msgstr "Mostrar/ocultar barra lateral"
+msgstr "Mostrar/ocultar la barra de búsqueda"
 
 #: src/ui/window.blp:62
 msgid "Favorite Tools"
-msgstr ""
+msgstr "Herramientas favoritas"
 
 #: src/ui/window.blp:71
 msgid "No Favorites"
-msgstr ""
+msgstr "Sin favoritos"
 
 #: src/ui/window.blp:72
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
 msgstr ""
+"Añadir tus herramientas favoritas aquí haciendo clic en el botón de estrella "
+"junto al título"
 
 #: src/ui/window.blp:92
 msgid "Favorites"
-msgstr ""
+msgstr "Favoritos"
 
 #: src/ui/window.blp:121
 msgid "Search Tools…"
-msgstr ""
+msgstr "Buscar herramientas…"
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
@@ -978,29 +979,27 @@ msgstr "Crear CSR"
 
 #: src/ui/views/certificate_request_generator.blp:45
 msgid "Common Name (CN) *"
-msgstr ""
+msgstr "Nombre común (CN) *"
 
 #: src/ui/views/certificate_request_generator.blp:49
-#, fuzzy
 msgid "Country Name (C)"
-msgstr "País"
+msgstr "Nombre del país (C)"
 
 #: src/ui/views/certificate_request_generator.blp:53
 msgid "State or Province Name (ST)"
-msgstr ""
+msgstr "Nombre del estado o provincia (ST)"
 
 #: src/ui/views/certificate_request_generator.blp:57
-#, fuzzy
 msgid "Locality Name (L)"
-msgstr "Apellidos *"
+msgstr "Nombre de la localidad (L)"
 
 #: src/ui/views/certificate_request_generator.blp:61
 msgid "Organization Name (O)"
-msgstr ""
+msgstr "Nombre de la organización (O)"
 
 #: src/ui/views/certificate_request_generator.blp:65
 msgid "Organization Unit Name (OU)"
-msgstr ""
+msgstr "Nombre de la unidad organizativa (OU)"
 
 #: src/ui/views/certificate_request_generator.blp:69
 msgid "Passphrase"
@@ -1879,7 +1878,7 @@ msgstr "General"
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Search Tools"
-msgstr ""
+msgstr "Herramientas de búsqueda"
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"

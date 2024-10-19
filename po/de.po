@@ -6,15 +6,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-01 16:36+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-10-05 17:15+0000\n"
+"Last-Translator: Konstantin Tutsch <mail@konstantintutsch.com>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/devtoolbox/"
+"devtoolbox/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -24,13 +27,15 @@ msgstr ""
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_dialog.blp:11
 msgid "Development tools at your fingertips"
-msgstr ""
+msgstr "Entwicklungstools auf Knopfdruck"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
 msgid ""
 "JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
 "Markdown;Image;"
 msgstr ""
+"JSON;YAML;YML;Umwandler;CRON;Parser;GZip;Komprimierer;Dekomprimierer;Hash;Reg"
+"ex;Markdown;Bild;"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:18
 msgid ""
@@ -38,86 +43,91 @@ msgid ""
 "again that website of which you don't recall the name just for a quick "
 "conversion, this is the right app for you."
 msgstr ""
+"Wenn Sie es leid sind ständig online nach dem richtigen Tool oder der "
+"passenden Website zu suchen oder du einfach nur schnell etwas konvertieren "
+"möchtest ist das hier genau die richtige App für Sie."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:22
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr ""
+"Diese Anwendung ist eine Sammlung an mächtigen aber trotzdem simple "
+"Werkzeugen um alltägliche Probleme in der Softwareentwicklung zu lösen."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:25
 msgid "Includes:"
-msgstr ""
+msgstr "Enthält:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid "JSON to YAML converter and vice-versa"
-msgstr ""
+msgstr "Konvertierung zwischen JSON und YAML"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:28
 msgid "CRON expressions parser"
-msgstr ""
+msgstr "Verarbeiter für CRON-Ausdrücke"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:29
 msgid "GZip compressor and decompressor"
-msgstr ""
+msgstr "GZip Komprimierung sowie Entpackung"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Formatters for common programming languages"
-msgstr ""
+msgstr "Formatierer für gängige Programmiersprachen"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:31
 msgid "Hash generators"
-msgstr ""
+msgstr "Hash Generatoren"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "Regex tester"
-msgstr ""
+msgstr "RegEx Tests"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:307
 #: src/ui/views/markdown_preview.blp:20
 msgid "Markdown Previewer"
-msgstr ""
+msgstr "Markdown Vorschauen"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "Image converters"
-msgstr ""
+msgstr "Bildumwandler"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Much more..."
-msgstr ""
+msgstr "Und vieles mehr …"
 
 #: src/window.py:118 src/window.py:125 src/window.py:132 src/window.py:139
 #: src/window.py:146
 msgid "Converters"
-msgstr ""
+msgstr "Konvertierer"
 
 #: src/window.py:120 src/ui/views/json_yaml.blp:20
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr ""
+msgstr "YAML- und JSON-Dokumente konvertieren"
 
 #: src/window.py:124 src/ui/views/timestamp.blp:45
 msgid "Timestamp"
-msgstr ""
+msgstr "Zeitstempel"
 
 #: src/window.py:127 src/ui/views/timestamp.blp:21
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr ""
+msgstr "UNIX-Zeitstempel zu und von Daten konvertieren"
 
 #: src/window.py:131
 msgid "Number Bases"
-msgstr ""
+msgstr "Zahlenbasen"
 
 #: src/window.py:134 src/ui/views/base_converter.blp:21
 msgid "Convert numbers between bases"
-msgstr ""
+msgstr "Zahlen zwischen Basen umrechnen"
 
 #: src/window.py:138 src/ui/views/cron_converter.blp:21
 msgid "CRON Parser"
-msgstr ""
+msgstr "CRON-Verarbeitung"
 
 #: src/window.py:141 src/ui/views/cron_converter.blp:22
 msgid "Convert CRON expressions to time and date"
-msgstr ""
+msgstr "CRON-Ausdrücke in Zeitpunkte und Daten konvertieren"
 
 #: src/window.py:145 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
