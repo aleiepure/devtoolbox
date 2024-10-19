@@ -1,0 +1,93 @@
+// Copyright (C) 2022 - 2023 Alessandro Iepure
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
+using Gtk 4.0;
+using Adw 1;
+
+template $Base64EncoderView : Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child:     ScrolledWindow {
+      child:       Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+        child:
+        Box {
+          orientation: vertical;
+
+          $UtilityTitle _title {
+            title: _("Base64 Encoder & Decoder");
+            description: _("Encode and decode strings using the Base64 format");
+            tool-name: "base64-encoder";
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            title: _("Tool options");
+
+            Adw.ActionRow {
+              title: _("Direction");
+              subtitle: _("Select the desired encoding direction");
+              icon-name: "horizontal-arrows-symbolic";
+
+              [suffix]
+              $BinarySelector _direction_selector {
+                left-lbl: _("Encode");
+                right-lbl: _("Decode");
+                left-btn-active: "true";
+              }
+            }
+          }
+
+          Separator {
+            margin-top: 10;
+          }
+
+          Box {
+            orientation: horizontal;
+            homogeneous: true;
+            spacing: 10;
+            margin-bottom: 10;
+
+            $TextArea _input_area {
+              name: _("Input");
+              show-clear-btn: "true";
+              show-paste-btn: "true";
+              show-open-btn: "true";
+              use-default-text-extensions: "true";
+              text-show-line-numbers: "true";
+              text-syntax-highlighting: "false"; // Base64 input is plain text
+              text-language-highlight: "plain";
+              text-wrap-mode: "none";
+            }
+
+            $TextArea _output_area {
+              name: _("Output");
+              show-copy-btn: "true";
+              show-clear-btn: "false";
+              show-paste-btn: "false";
+              show-open-btn: "false";
+              text-editable: "false";
+              allow-drag-and-drop: "false";
+              text-show-line-numbers: "true";
+              text-syntax-highlighting: "false"; // Base64 output is plain text
+              text-language-highlight: "plain";
+              text-wrap-mode: "none";
+            }
+          }
+        }
+
+        ;
+      }
+
+      ;
+    }
+
+    ;
+  }
+}
