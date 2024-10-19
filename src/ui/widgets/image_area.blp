@@ -78,7 +78,7 @@ template $ImageArea : Adw.Bin {
     }
 
     Adw.ViewStack _stack {
-      styles ["card"]
+      styles ["view", "rounded-border"]
 
       Adw.ViewStackPage {
         name: "image";
@@ -90,20 +90,15 @@ template $ImageArea : Adw.Bin {
           can-shrink: true;
           keep-aspect-ratio: true;
 
-          styles ["rounded-border"]
+          styles ["view", "rounded-border"]
         };
       }
 
       Adw.ViewStackPage {
         name: "loading";
         child: Box {
-          styles ["rounded-border"]
-
+          styles ["view", "rounded-border"]
           orientation: vertical;
-          margin-top: 0;
-          margin-bottom: 3;
-          margin-start: 3;
-          margin-end: 3;
 
           Box {
             orientation: vertical;

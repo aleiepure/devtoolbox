@@ -125,37 +125,24 @@ template $TextFileArea : Adw.Bin {
       Adw.ViewStackPage {
         name: "image-area";
         child: Picture _imageview {
-          margin-top: 0;
-          margin-bottom: 3;
-          margin-start: 3;
-          margin-end: 3;
           can-shrink: true;
           keep-aspect-ratio: true;
 
-          styles ["rounded-border"]
+          styles ["view" ,"rounded-border"]
         };
       }
 
       Adw.ViewStackPage {
         name: "file-area";
-        child: $FileView _fileview {
-          margin-top: 0;
-          margin-bottom: 3;
-          margin-start: 3;
-          margin-end: 3;
-        };
+        child: $FileView _fileview {};
       }
 
       Adw.ViewStackPage {
         name: "loading";
         child: Box {
-          styles ["rounded-border"]
+          styles ["view", "rounded-border"]
 
           orientation: vertical;
-          margin-top: 0;
-          margin-bottom: 3;
-          margin-start: 3;
-          margin-end: 3;
 
           Box {
             orientation: vertical;
