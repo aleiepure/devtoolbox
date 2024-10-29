@@ -72,3 +72,7 @@ class Formatter(abc.ABC):
     @abc.abstractmethod
     def get_action_button_name(self) -> str:
         pass
+    
+    @abc.abstractmethod
+    def get_show_options(self) -> bool:
+        pass

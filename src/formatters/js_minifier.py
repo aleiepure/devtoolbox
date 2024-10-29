@@ -6,22 +6,22 @@
 from .formatter import Formatter
 from gettext import gettext as _, pgettext as C_
 from typing import List
-import rcssmin 
+import rjsmin
 
 
-class CssMinifier(Formatter):
+class JsMinifier(Formatter):
 
-    _title = _("CSS Minifier")
-    _description = _("Minify CSS documents")
-    _utility_name = "css-minifier"
-    _textarea_name = _("Type CSS here")
-    _language = "css"
-    _extensions = ["css", "scss", "sass"]
+    _title = _("JavaScript Minifier")
+    _description = _("Minify JS code")
+    _utility_name = "js-minifier"
+    _textarea_name = _("Type JS code here")
+    _language = "js"
+    _extensions = ["js", "mjs", "ts", "tsx"]
     _action_btn_name = C_("verb/action", "Minify")
     _show_options = False
 
     def _format(self, text:str, indents:int):
-        return rcssmin.cssmin(text)
+        return rjsmin.jsmin(text)
 
     def is_correct(self, text:str) -> bool:
         if isinstance(text, str):

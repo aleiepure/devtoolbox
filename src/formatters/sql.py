@@ -17,6 +17,7 @@ class SqlFormatter(Formatter):
     _language = "sql"
     _extensions = ["sql"]
     _action_btn_name = C_("verb/action", "Format")
+    _show_options = True
 
     def _format(self, text:str, indents:int):
         try:
@@ -60,3 +61,6 @@ class SqlFormatter(Formatter):
 
     def get_action_button_name(self) -> str:
         return self._action_btn_name
+    
+    def get_show_options(self) -> bool:
+        return self._show_options

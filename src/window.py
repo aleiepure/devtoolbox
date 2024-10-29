@@ -45,6 +45,7 @@ from .formatters.js import JsFormatter
 from .formatters.css import CssFormatter
 
 from .formatters.css_minifier import CssMinifier
+from .formatters.js_minifier import JsMinifier
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
@@ -238,6 +239,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "css-symbolic",
                 "tooltip": _("Minify CSS documents"),
                 "child": FormatterView(CssMinifier()),
+            },
+            "js-minifier": {
+                "title": "JavaScript Minifier",
+                "category": _("Formatters & Minifiers"),
+                "icon-name": "js-symbolic",
+                "tooltip": _("Minify JavaScript documents"),
+                "child": FormatterView(JsMinifier()),
             },
 
             # Generetors

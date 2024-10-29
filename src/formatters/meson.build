@@ -15,6 +15,7 @@ sources = [
   'js.py',
   'css.py',
   'css_minifier.py',
+  'js_minifier.py',
 ]
 
 install_data(sources, install_dir: formattersdir)

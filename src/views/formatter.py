@@ -15,6 +15,7 @@ class FormatterView(Adw.Bin):
     # Template elements
     _toast = Gtk.Template.Child()
     _title = Gtk.Template.Child()
+    _tool_options = Gtk.Template.Child()
     _indents_spinner = Gtk.Template.Child()
     _textarea = Gtk.Template.Child()
 
@@ -26,6 +27,7 @@ class FormatterView(Adw.Bin):
         self._title.set_property("title", formatter.get_title())
         self._title.set_property("description", formatter.get_description())
         self._title.set_property("tool-name", formatter.get_utility_name())
+        self._tool_options.set_property("visible", formatter.get_show_options())
         self._textarea.set_property("name", formatter.get_textarea_name())
         self._textarea.set_property("text-language-highlight", formatter.get_language())
         self._textarea.set_property("custom-file-extensions", formatter.get_file_extensions())

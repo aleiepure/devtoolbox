@@ -26,3 +26,4 @@ qrcode
 jsonschema==4.17.3
 cssbeautifier
 rcssmin
+rjsmin

@@ -17,6 +17,7 @@ class CssFormatter(Formatter):
     _language = "css"
     _extensions = ["css", "scss", "sass"]
     _action_btn_name = C_("verb/action", "Format")
+    _show_options = True
 
     def _format(self, text:str, indents:int):
         opts = cssbeautifier.default_options()
@@ -53,3 +54,6 @@ class CssFormatter(Formatter):
 
     def get_action_button_name(self) -> str:
         return self._action_btn_name
+    
+    def get_show_options(self) -> bool:
+        return self._show_options

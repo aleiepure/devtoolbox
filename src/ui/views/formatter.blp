@@ -23,7 +23,7 @@ template $FormatterView : Adw.Bin {
             margin-bottom: 10;
           }
 
-          Adw.PreferencesGroup {
+          Adw.PreferencesGroup _tool_options {
             title: _("Tool options");
 
             Adw.ActionRow {
@@ -46,6 +46,7 @@ template $FormatterView : Adw.Bin {
           }
 
           Separator {
+            visible: bind _tool_options.visible;
             margin-top: 10;
           }
 
