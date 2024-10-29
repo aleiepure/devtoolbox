@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: me.iepure.devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-29 11:22+0100\n"
+"POT-Creation-Date: 2024-10-29 12:50+0100\n"
 "PO-Revision-Date: 2023-08-21 01:57+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/devtoolbox/"
@@ -27,7 +27,7 @@ msgid "@app-name@"
 msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
-#: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_dialog.blp:11
+#: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
 msgid "Development tools at your fingertips"
 msgstr "Geliştirme araçları parmaklarınızın ucunda"
 
@@ -37,7 +37,7 @@ msgid ""
 "Markdown;Image;"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:18
+#: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
 "If you're tired of endlessly looking online for the right tool, or to find "
 "again that website of which you don't recall the name just for a quick "
@@ -47,7 +47,7 @@ msgstr ""
 "için adını hatırlamadığınız web sitesini tekrar bulmaktan sıkıldıysanız, bu "
 "uygulama tam sizin için."
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:22
+#: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
@@ -55,44 +55,44 @@ msgstr ""
 "Bu, en yaygın günlük geliştirme sorunlarını çözmek için güçlü ancak "
 "kullanımı kolay araçlardan oluşan bir koleksiyondur."
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:25
+#: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Includes:"
 msgstr "İçerir:"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:27
+#: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "JSON to YAML converter and vice-versa"
 msgstr "JSON belgelerini YAML biçimine, veya tam tersine dönüştürücü"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:28
+#: data/me.iepure.devtoolbox.metainfo.xml.in:33
 msgid "CRON expressions parser"
 msgstr "CRON ifadeleri ayrıştırıcı"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:29
+#: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "GZip compressor and decompressor"
 msgstr "GZip sıkıştırıcı ve açıcı"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:30
+#: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Formatters for common programming languages"
 msgstr "Yaygın programlama dilleri için biçimlendiriciler"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:31
+#: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Hash generators"
 msgstr "Özet oluşturucular"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:32
+#: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
 msgstr "Düzenli ifade sınayıcı"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:332
+#: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/window.py:332
 #: src/ui/views/markdown_preview.blp:20
 msgid "Markdown Previewer"
 msgstr "Markdown Ön İzleyici"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:34
+#: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
 msgstr "Resim dönüştürücüler"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:35
+#: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
 msgstr "Ve daha çoğu…"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-29 11:22+0100\n"
+"POT-Creation-Date: 2024-10-29 12:50+0100\n"
 "PO-Revision-Date: 2024-10-05 17:15+0000\n"
 "Last-Translator: Konstantin Tutsch <mail@konstantintutsch.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/devtoolbox/"
@@ -25,7 +25,7 @@ msgid "@app-name@"
 msgstr ""
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
-#: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_dialog.blp:11
+#: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
 msgid "Development tools at your fingertips"
 msgstr "Entwicklungstools auf Knopfdruck"
 
@@ -37,7 +37,7 @@ msgstr ""
 "JSON;YAML;YML;Umwandler;CRON;Parser;GZip;Komprimierer;Dekomprimierer;Hash;"
 "Regex;Markdown;Bild;"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:18
+#: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
 "If you're tired of endlessly looking online for the right tool, or to find "
 "again that website of which you don't recall the name just for a quick "
@@ -47,7 +47,7 @@ msgstr ""
 "passenden Website zu suchen oder du einfach nur schnell etwas konvertieren "
 "möchtest ist das hier genau die richtige App für Sie."
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:22
+#: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
@@ -55,44 +55,44 @@ msgstr ""
 "Diese Anwendung ist eine Sammlung an mächtigen aber trotzdem simple "
 "Werkzeugen um alltägliche Probleme in der Softwareentwicklung zu lösen."
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:25
+#: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Includes:"
 msgstr "Enthält:"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:27
+#: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "JSON to YAML converter and vice-versa"
 msgstr "Konvertierung zwischen JSON und YAML"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:28
+#: data/me.iepure.devtoolbox.metainfo.xml.in:33
 msgid "CRON expressions parser"
 msgstr "Verarbeiter für CRON-Ausdrücke"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:29
+#: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "GZip compressor and decompressor"
 msgstr "GZip Komprimierung sowie Entpackung"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:30
+#: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Formatters for common programming languages"
 msgstr "Formatierer für gängige Programmiersprachen"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:31
+#: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Hash generators"
 msgstr "Hash Generatoren"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:32
+#: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
 msgstr "RegEx Tests"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:332
+#: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/window.py:332
 #: src/ui/views/markdown_preview.blp:20
 msgid "Markdown Previewer"
 msgstr "Markdown Vorschauen"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:34
+#: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
 msgstr "Bildumwandler"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:35
+#: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
 msgstr "Und vieles mehr …"
 

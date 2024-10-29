@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-29 11:22+0100\n"
+"POT-Creation-Date: 2024-10-29 12:50+0100\n"
 "PO-Revision-Date: 2024-04-24 06:07+0000\n"
 "Last-Translator: hugoalh <hugoalh@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -25,7 +25,7 @@ msgid "@app-name@"
 msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
-#: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_dialog.blp:11
+#: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
 msgid "Development tools at your fingertips"
 msgstr "觸手可及的開發工具"
 
@@ -35,7 +35,7 @@ msgid ""
 "Markdown;Image;"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:18
+#: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
 "If you're tired of endlessly looking online for the right tool, or to find "
 "again that website of which you don't recall the name just for a quick "
@@ -44,50 +44,50 @@ msgstr ""
 "如果你厭倦了無休止境地在網絡上尋找合適的工具，或者只是為了快速轉換而再次查找"
 "你不記得名稱的網站，那麼這就是適合你的應用程式。"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:22
+#: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr "這是一組功能強大但易於使用的工具，用於解決最常見的日常開發問題。"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:25
+#: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Includes:"
 msgstr "包括："
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:27
+#: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "JSON to YAML converter and vice-versa"
 msgstr "JSON、YAML 互相轉換器"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:28
+#: data/me.iepure.devtoolbox.metainfo.xml.in:33
 msgid "CRON expressions parser"
 msgstr "CRON 表達式解析器"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:29
+#: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "GZip compressor and decompressor"
 msgstr "GZip 壓縮器與解壓縮器"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:30
+#: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Formatters for common programming languages"
 msgstr "常用程式語言的格式器"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:31
+#: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Hash generators"
 msgstr "雜湊值產生器"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:32
+#: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
 msgstr "正規表達式測試器"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:332
+#: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/window.py:332
 #: src/ui/views/markdown_preview.blp:20
 msgid "Markdown Previewer"
 msgstr "Markdown 預覽器"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:34
+#: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
 msgstr "圖片轉換器"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:35
+#: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
 msgstr "還有更多…"
 

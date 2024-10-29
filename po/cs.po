@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-29 11:22+0100\n"
+"POT-Creation-Date: 2024-10-29 12:50+0100\n"
 "PO-Revision-Date: 2023-06-25 23:24+0200\n"
 "Last-Translator: Amerey.eu <info@amerey.eu>\n"
 "Language-Team: \n"
@@ -24,7 +24,7 @@ msgid "@app-name@"
 msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
-#: data/me.iepure.devtoolbox.metainfo.xml.in:15 src/ui/about_dialog.blp:11
+#: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
 msgid "Development tools at your fingertips"
 msgstr "Vývojové nástroje na dosah ruky"
 
@@ -34,7 +34,7 @@ msgid ""
 "Markdown;Image;"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:18
+#: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
 "If you're tired of endlessly looking online for the right tool, or to find "
 "again that website of which you don't recall the name just for a quick "
@@ -44,7 +44,7 @@ msgstr ""
 "znovu najít web, jehož název si nepamatujete jen pro rychlou konverzi,toto "
 "je ta pravá aplikace pro vás."
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:22
+#: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
@@ -52,44 +52,44 @@ msgstr ""
 "Jedná se o sbírku výkonných, ale snadno použitelných nástrojů k řešení "
 "nejběžnějších každodenních problémů s vývojem."
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:25
+#: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Includes:"
 msgstr "Zahrnuje:"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:27
+#: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "JSON to YAML converter and vice-versa"
 msgstr "Převaděč JSON na YAML a naopak"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:28
+#: data/me.iepure.devtoolbox.metainfo.xml.in:33
 msgid "CRON expressions parser"
 msgstr "Parser výrazů CRON"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:29
+#: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "GZip compressor and decompressor"
 msgstr "Kompresor a dekompresor GZip"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:30
+#: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Formatters for common programming languages"
 msgstr "Formátovače pro běžné programovací jazyky"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:31
+#: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Hash generators"
 msgstr "Hash generátory"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:32
+#: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
 msgstr "Testování regulárního výrazu"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:332
+#: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/window.py:332
 #: src/ui/views/markdown_preview.blp:20
 msgid "Markdown Previewer"
 msgstr "Náhledy Markdown souborů"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:34
+#: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
 msgstr "Převaděče obrázků"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:35
+#: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
 msgstr "Mnohem více..."
 

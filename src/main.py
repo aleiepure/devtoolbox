@@ -107,7 +107,8 @@ class DevtoolboxApplication(Adw.Application):
             "SuperAtraction https://github.com/SuperAtraction",
             "Claudio https://github.com/K-eL",
             "mthw0 https://github.com/mthw0",
-            "Ismael Brendo https://github.com/Ismaelbrendo"
+            "Ismael Brendo https://github.com/Ismaelbrendo",
+            "Amer Sawan https://github.com/amersaw",
         ])
         about_dialog.present()
 
