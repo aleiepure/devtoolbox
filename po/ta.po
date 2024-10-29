@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-19 18:23+0200\n"
+"POT-Creation-Date: 2024-10-29 11:22+0100\n"
 "PO-Revision-Date: 2023-11-23 12:05+0000\n"
 "Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/devtoolbox/"
@@ -76,7 +76,7 @@ msgstr ""
 msgid "Regex tester"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:316
+#: data/me.iepure.devtoolbox.metainfo.xml.in:33 src/window.py:332
 #: src/ui/views/markdown_preview.blp:20
 msgid "Markdown Previewer"
 msgstr ""
@@ -89,236 +89,245 @@ msgstr ""
 msgid "Much more..."
 msgstr ""
 
-#: src/window.py:120 src/window.py:127 src/window.py:134 src/window.py:141
-#: src/window.py:148
+#: src/window.py:122 src/window.py:129 src/window.py:136 src/window.py:143
+#: src/window.py:150
 msgid "Converters"
 msgstr ""
 
-#: src/window.py:122 src/ui/views/json_yaml.blp:20
+#: src/window.py:124 src/ui/views/json_yaml.blp:20
 msgid "Convert JSON documents to YAML and vice-versa"
 msgstr ""
 
-#: src/window.py:126 src/ui/views/timestamp.blp:45
+#: src/window.py:128 src/ui/views/timestamp.blp:45
 msgid "Timestamp"
 msgstr ""
 
-#: src/window.py:129 src/ui/views/timestamp.blp:21
+#: src/window.py:131 src/ui/views/timestamp.blp:21
 msgid "Convert UNIX timestamps to and from plain dates"
 msgstr ""
 
-#: src/window.py:133
+#: src/window.py:135
 msgid "Number Bases"
 msgstr ""
 
-#: src/window.py:136 src/ui/views/base_converter.blp:21
+#: src/window.py:138 src/ui/views/base_converter.blp:21
 msgid "Convert numbers between bases"
 msgstr ""
 
-#: src/window.py:140 src/ui/views/cron_converter.blp:21
+#: src/window.py:142 src/ui/views/cron_converter.blp:21
 msgid "CRON Parser"
 msgstr ""
 
-#: src/window.py:143 src/ui/views/cron_converter.blp:22
+#: src/window.py:145 src/ui/views/cron_converter.blp:22
 msgid "Convert CRON expressions to time and date"
 msgstr ""
 
-#: src/window.py:147 src/ui/views/reverse_cron.blp:19
+#: src/window.py:149 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
 msgstr ""
 
-#: src/window.py:150 src/ui/views/reverse_cron.blp:20
+#: src/window.py:152 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
 msgstr ""
 
-#: src/window.py:157 src/window.py:164 src/window.py:171 src/window.py:178
+#: src/window.py:159 src/window.py:166 src/window.py:173 src/window.py:180
+#: src/window.py:187
 msgid "Encoders & Decoders"
 msgstr ""
 
-#: src/window.py:159 src/ui/views/html_encoder.blp:21
+#: src/window.py:161 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
 msgstr ""
 
-#: src/window.py:166 src/ui/views/url_encoder.blp:21
+#: src/window.py:168
+msgid "Encode and decode base64 strings"
+msgstr ""
+
+#: src/window.py:175 src/ui/views/url_encoder.blp:21
 msgid "Encode and decode special characters inside URLs"
 msgstr ""
 
-#: src/window.py:173 src/ui/views/gzip_compressor.blp:21
+#: src/window.py:182 src/ui/views/gzip_compressor.blp:21
 msgid "Compress and decompress files and texts using GZip"
 msgstr ""
 
-#: src/window.py:180 src/ui/views/jwt_decoder.blp:21
+#: src/window.py:189 src/ui/views/jwt_decoder.blp:21
 msgid "Decode JWT tokens to header and payload"
 msgstr ""
 
-#: src/window.py:187 src/window.py:194 src/window.py:201 src/window.py:208
-#: src/window.py:215 src/window.py:222 src/window.py:229
+#: src/window.py:196 src/window.py:203 src/window.py:210 src/window.py:217
+#: src/window.py:224 src/window.py:231 src/window.py:238 src/window.py:245
 msgid "Formatters & Minifiers"
 msgstr ""
 
-#: src/window.py:189 src/formatters/json.py:14
+#: src/window.py:198 src/formatters/json.py:14
 msgid "Format JSON documents"
 msgstr ""
 
-#: src/window.py:196 src/formatters/sql.py:14
+#: src/window.py:205 src/formatters/sql.py:14
 msgid "Format SQL documents"
 msgstr ""
 
-#: src/window.py:203 src/formatters/xml.py:16
+#: src/window.py:212 src/formatters/xml.py:16
 msgid "Format XML documents"
 msgstr ""
 
-#: src/window.py:210 src/formatters/html.py:15
+#: src/window.py:219 src/formatters/html.py:15
 msgid "Format HTML documents"
 msgstr ""
 
-#: src/window.py:217 src/formatters/js.py:15
+#: src/window.py:226 src/formatters/js.py:15
 msgid "Format JavaScript documents"
 msgstr ""
 
-#: src/window.py:224 src/formatters/css.py:14
+#: src/window.py:233 src/formatters/css.py:14
 msgid "Format CSS documents"
 msgstr ""
 
-#: src/window.py:231 src/formatters/css_minifier.py:15
+#: src/window.py:240 src/formatters/css_minifier.py:15
 msgid "Minify CSS documents"
 msgstr ""
 
-#: src/window.py:238 src/window.py:245 src/window.py:252 src/window.py:259
-#: src/window.py:266 src/window.py:273
+#: src/window.py:247
+msgid "Minify JavaScript documents"
+msgstr ""
+
+#: src/window.py:254 src/window.py:261 src/window.py:268 src/window.py:275
+#: src/window.py:282 src/window.py:289
 msgid "Generators"
 msgstr ""
 
-#: src/window.py:240 src/ui/views/hash_generator.blp:21
+#: src/window.py:256 src/ui/views/hash_generator.blp:21
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
 msgstr ""
 
-#: src/window.py:247 src/ui/views/lorem_generator.blp:21
+#: src/window.py:263 src/ui/views/lorem_generator.blp:21
 msgid "Generate lorem ipsum placeholder text"
 msgstr ""
 
-#: src/window.py:254 src/ui/views/uuid_generator.blp:21
+#: src/window.py:270 src/ui/views/uuid_generator.blp:21
 msgid "Generate Universally Unique IDs (UUID)"
 msgstr ""
 
-#: src/window.py:258
+#: src/window.py:274
 msgid "Random"
 msgstr ""
 
-#: src/window.py:261 src/ui/views/random_generator.blp:21
+#: src/window.py:277 src/ui/views/random_generator.blp:21
 msgid "Generate random numbers and strings"
 msgstr ""
 
-#: src/window.py:265 src/ui/views/chmod_calculator.blp:19
+#: src/window.py:281 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
 msgstr ""
 
-#: src/window.py:268 src/ui/views/chmod_calculator.blp:20
+#: src/window.py:284 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
 msgstr ""
 
-#: src/window.py:272
+#: src/window.py:288
 msgid "QR Code"
 msgstr ""
 
-#: src/window.py:275 src/ui/views/qrcode_generator.blp:21
+#: src/window.py:291 src/ui/views/qrcode_generator.blp:21
 msgid "Create custom QR Codes"
 msgstr ""
 
-#: src/window.py:281 src/ui/views/text_inspector.blp:20
+#: src/window.py:297 src/ui/views/text_inspector.blp:20
 msgid "Text Inspector & Case Converter"
 msgstr ""
 
-#: src/window.py:282 src/window.py:289 src/window.py:296 src/window.py:303
-#: src/window.py:310 src/window.py:317 src/ui/views/regex_tester.blp:50
+#: src/window.py:298 src/window.py:305 src/window.py:312 src/window.py:319
+#: src/window.py:326 src/window.py:333 src/ui/views/regex_tester.blp:50
 #: src/ui/views/text_inspector.blp:104 src/ui/views/text_inspector.blp:160
 msgid "Text"
 msgstr ""
 
-#: src/window.py:284 src/ui/views/text_inspector.blp:21
+#: src/window.py:300 src/ui/views/text_inspector.blp:21
 msgid "View statistics about text and change sentence cases"
 msgstr ""
 
-#: src/window.py:288
+#: src/window.py:304
 msgid "Regex Tester"
 msgstr ""
 
-#: src/window.py:291 src/ui/views/regex_tester.blp:21
+#: src/window.py:307 src/ui/views/regex_tester.blp:21
 msgid "Find matching strings inside a text"
 msgstr ""
 
-#: src/window.py:295 src/ui/views/text_diff.blp:20
+#: src/window.py:311 src/ui/views/text_diff.blp:20
 msgid "Text Diff"
 msgstr ""
 
-#: src/window.py:298 src/ui/views/text_diff.blp:21
+#: src/window.py:314 src/ui/views/text_diff.blp:21
 msgid "Analyze two texts and find differences"
 msgstr ""
 
-#: src/window.py:302 src/ui/views/xml_validator.blp:20
+#: src/window.py:318 src/ui/views/xml_validator.blp:20
 msgid "XML Scheme Validator"
 msgstr ""
 
-#: src/window.py:305 src/ui/views/xml_validator.blp:21
+#: src/window.py:321 src/ui/views/xml_validator.blp:21
 msgid "Check an XML file against an XSD schema"
 msgstr ""
 
-#: src/window.py:309 src/ui/views/json_validator.blp:19
+#: src/window.py:325 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
 msgstr ""
 
-#: src/window.py:312 src/ui/views/json_validator.blp:20
+#: src/window.py:328 src/ui/views/json_validator.blp:20
 msgid "Check a JSON file against a JSON schema"
 msgstr ""
 
-#: src/window.py:319 src/ui/views/markdown_preview.blp:21
+#: src/window.py:335 src/ui/views/markdown_preview.blp:21
 msgid "Preview markdown code as you type"
 msgstr ""
 
-#: src/window.py:325 src/ui/views/contrast_checker.blp:20
+#: src/window.py:341 src/ui/views/contrast_checker.blp:20
 msgid "Contrast Checker"
 msgstr ""
 
-#: src/window.py:326 src/window.py:333 src/window.py:340
+#: src/window.py:342 src/window.py:349 src/window.py:356
 msgid "Graphics"
 msgstr ""
 
-#: src/window.py:328 src/ui/views/contrast_checker.blp:21
+#: src/window.py:344 src/ui/views/contrast_checker.blp:21
 msgid "Check a color combination for WCAG compliance"
 msgstr ""
 
-#: src/window.py:332
+#: src/window.py:348
 msgid "Color Blindness"
 msgstr ""
 
-#: src/window.py:335 src/ui/views/colorblindness_simulator.blp:21
+#: src/window.py:351 src/ui/views/colorblindness_simulator.blp:21
 msgid "Simulate color blindness in images"
 msgstr ""
 
-#: src/window.py:339 src/ui/views/image_converter.blp:20
+#: src/window.py:355 src/ui/views/image_converter.blp:20
 msgid "Image Format Converter"
 msgstr ""
 
-#: src/window.py:342 src/ui/views/image_converter.blp:21
+#: src/window.py:358 src/ui/views/image_converter.blp:21
 msgid "Convert images to different formats"
 msgstr ""
 
-#: src/window.py:348 src/ui/views/certificate_parser.blp:20
+#: src/window.py:364 src/ui/views/certificate_parser.blp:20
 msgid "Certificate Parser"
 msgstr ""
 
-#: src/window.py:349 src/window.py:356 src/views/certificate_parser.py:92
+#: src/window.py:365 src/window.py:372 src/views/certificate_parser.py:92
 msgid "Certificates"
 msgstr ""
 
-#: src/window.py:351 src/ui/views/certificate_parser.blp:21
+#: src/window.py:367 src/ui/views/certificate_parser.blp:21
 msgid "View certificates contents"
 msgstr ""
 
-#: src/window.py:355
+#: src/window.py:371
 msgid "Certificate Signing Request"
 msgstr ""
 
-#: src/window.py:358 src/ui/views/certificate_request_generator.blp:20
+#: src/window.py:374 src/ui/views/certificate_request_generator.blp:20
 msgid "Generate certificate signing requests"
 msgstr ""
 
@@ -432,7 +441,7 @@ msgid "Unable to save {path}"
 msgstr ""
 
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
-#: src/views/certificate_request_generator.py:176 src/views/formatter.py:46
+#: src/views/certificate_request_generator.py:176 src/views/formatter.py:48
 #: src/views/gzip_compressor.py:67 src/views/hash_generator.py:60
 #: src/views/html_encoder.py:46 src/views/json_yaml.py:52
 #: src/views/url_encoder.py:48
@@ -551,7 +560,7 @@ msgstr ""
 msgid "Loading simulation..."
 msgstr ""
 
-#: src/views/formatter.py:74
+#: src/views/formatter.py:76
 msgid ""
 "Text is not in the correct format. Check if you misspelled something or if "
 "all parentheses are closed."
@@ -1927,7 +1936,19 @@ msgstr ""
 msgid "CSS Minifier"
 msgstr ""
 
-#: src/formatters/css_minifier.py:20
+#: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
+msgstr ""
+
+#: src/formatters/js_minifier.py:14
+msgid "JavaScript Minifier"
+msgstr ""
+
+#: src/formatters/js_minifier.py:15
+msgid "Minify JS code"
+msgstr ""
+
+#: src/formatters/js_minifier.py:17
+msgid "Type JS code here"
 msgstr ""

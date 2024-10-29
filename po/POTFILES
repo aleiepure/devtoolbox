@@ -119,3 +119,4 @@ src/formatters/sql.py
 src/formatters/xml.py
 src/formatters/css.py
 src/formatters/css_minifier.py
+src/formatters/js_minifier.py
