@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-29 12:50+0100\n"
-"PO-Revision-Date: 2024-10-04 10:15+0000\n"
+"PO-Revision-Date: 2024-10-30 12:07+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/es/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.8.2-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -147,9 +147,8 @@ msgid "Encode and decode special characters using the HTML format"
 msgstr "Codificar y descodificar caracteres especiales usando el formato HTML"
 
 #: src/window.py:168
-#, fuzzy
 msgid "Encode and decode base64 strings"
-msgstr "Codificar y descodificar caracteres especiales dentro de las URL"
+msgstr "Codificar y descodificar cadenas base64"
 
 #: src/window.py:175 src/ui/views/url_encoder.blp:21
 msgid "Encode and decode special characters inside URLs"
@@ -165,9 +164,8 @@ msgstr "Decodificar testigos JWT en cabecera y carga útil"
 
 #: src/window.py:196 src/window.py:203 src/window.py:210 src/window.py:217
 #: src/window.py:224 src/window.py:231 src/window.py:238 src/window.py:245
-#, fuzzy
 msgid "Formatters & Minifiers"
-msgstr "Formateadores"
+msgstr "Formateadores y reductores"
 
 #: src/window.py:198 src/formatters/json.py:14
 msgid "Format JSON documents"
@@ -194,14 +192,12 @@ msgid "Format CSS documents"
 msgstr "Formatear documentos CSS"
 
 #: src/window.py:240 src/formatters/css_minifier.py:15
-#, fuzzy
 msgid "Minify CSS documents"
-msgstr "Formatear documentos CSS"
+msgstr "Reducir documentos CSS"
 
 #: src/window.py:247
-#, fuzzy
 msgid "Minify JavaScript documents"
-msgstr "Formatear documentos JavaScript"
+msgstr "Reducir documentos JavaScript"
 
 #: src/window.py:254 src/window.py:261 src/window.py:268 src/window.py:275
 #: src/window.py:282 src/window.py:289
@@ -1823,26 +1819,24 @@ msgid "Date"
 msgstr "Fecha"
 
 #: src/ui/views/timestamp.blp:64
-#, fuzzy
 msgid "ISO Date (ISO 8601/RFC 3339)"
 msgstr "Fecha ISO (ISO 8601/RFC 3339)"
 
 #: src/ui/views/timestamp.blp:70
 msgid "RFC 2822 Date"
-msgstr ""
+msgstr "Fecha RFC 2822"
 
 #: src/ui/views/timestamp.blp:76
 msgid "Short Date"
-msgstr ""
+msgstr "Fecha abreviada"
 
 #: src/ui/views/timestamp.blp:82
 msgid "Short Time"
-msgstr ""
+msgstr "Hora abreviada"
 
 #: src/ui/views/timestamp.blp:88
-#, fuzzy
 msgid "Long Date"
-msgstr "Fecha"
+msgstr "Fecha larga"
 
 #: src/ui/views/timestamp.blp:94
 msgid "Long Time"
@@ -1850,7 +1844,7 @@ msgstr ""
 
 #: src/ui/views/timestamp.blp:100
 msgid "Full Long Date"
-msgstr ""
+msgstr "Fecha larga completa"
 
 #: src/ui/views/url_encoder.blp:20
 msgid "URL Encoder & Decoder"
@@ -1984,27 +1978,24 @@ msgstr "Escriba CSS aquí"
 
 #: src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
-msgstr ""
+msgstr "Reducción de CSS"
 
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
-msgstr ""
+msgstr "Reducir"
 
 #: src/formatters/js_minifier.py:14
-#, fuzzy
 msgid "JavaScript Minifier"
-msgstr "Formateador JavaScript"
+msgstr "Reducir JavaScript"
 
 #: src/formatters/js_minifier.py:15
-#, fuzzy
 msgid "Minify JS code"
-msgstr "Formatear documentos CSS"
+msgstr "Reducir código JS"
 
 #: src/formatters/js_minifier.py:17
-#, fuzzy
 msgid "Type JS code here"
-msgstr "Escriba aquí el código JSON"
+msgstr "Escribe aquí el código JS"
 
 #~ msgid "What's new:"
 #~ msgstr "Novedades:"
