@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-29 12:50+0100\n"
-"PO-Revision-Date: 2023-09-26 19:01+0000\n"
+"PO-Revision-Date: 2024-10-30 12:07+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.8.2-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -137,18 +137,16 @@ msgstr "Luo CRON-lausekkeita"
 
 #: src/window.py:159 src/window.py:166 src/window.py:173 src/window.py:180
 #: src/window.py:187
-#, fuzzy
 msgid "Encoders & Decoders"
-msgstr "URL-osoitteen koodaaja ja purkaja"
+msgstr "Enkooderit ja dekooderit"
 
 #: src/window.py:161 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
 msgstr "Koodaa ja pura erikoismerkkejä käyttäen HTML-muotoilua"
 
 #: src/window.py:168
-#, fuzzy
 msgid "Encode and decode base64 strings"
-msgstr "Koodaa ja pura erikoismerkkejä URL-osoitteiden sisälle"
+msgstr "Koodaa ja pura base64-merkkijonoja"
 
 #: src/window.py:175 src/ui/views/url_encoder.blp:21
 msgid "Encode and decode special characters inside URLs"
@@ -164,9 +162,8 @@ msgstr "Pura JWT-poletteja otsakkeeksi ja tietosisällöksi"
 
 #: src/window.py:196 src/window.py:203 src/window.py:210 src/window.py:217
 #: src/window.py:224 src/window.py:231 src/window.py:238 src/window.py:245
-#, fuzzy
 msgid "Formatters & Minifiers"
-msgstr "Muotoilijat"
+msgstr "Muotoilijat ja pienentäjät"
 
 #: src/window.py:198 src/formatters/json.py:14
 msgid "Format JSON documents"
@@ -193,14 +190,12 @@ msgid "Format CSS documents"
 msgstr "Muotoile CSS-asiakirjoja"
 
 #: src/window.py:240 src/formatters/css_minifier.py:15
-#, fuzzy
 msgid "Minify CSS documents"
-msgstr "Muotoile CSS-asiakirjoja"
+msgstr "Pienennä CSS-asiakirjoja"
 
 #: src/window.py:247
-#, fuzzy
 msgid "Minify JavaScript documents"
-msgstr "Muotoile JavaScript-asiakirjoja"
+msgstr "Pienennä JavaScript-asiakirjoja"
 
 #: src/window.py:254 src/window.py:261 src/window.py:268 src/window.py:275
 #: src/window.py:282 src/window.py:289
@@ -233,7 +228,7 @@ msgstr "Chmod-laskin"
 
 #: src/window.py:284 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
-msgstr ""
+msgstr "Laske arvot käyttöoikeuksien muokkaukseen chmodilla"
 
 #: src/window.py:288
 msgid "QR Code"
@@ -263,7 +258,7 @@ msgstr "Regex-testaus"
 
 #: src/window.py:307 src/ui/views/regex_tester.blp:21
 msgid "Find matching strings inside a text"
-msgstr ""
+msgstr "Löydä vastaavat merkkijonot tekstin seasta"
 
 #: src/window.py:311 src/ui/views/text_diff.blp:20
 msgid "Text Diff"
@@ -793,39 +788,37 @@ msgstr ""
 "{xsd_error}"
 
 #: src/ui/window.blp:56
-#, fuzzy
 msgid "Show/hide searchbar"
-msgstr "Näytä/piilota sivupalkki"
+msgstr "Näytä/piilota hakupalkki"
 
 #: src/ui/window.blp:62
 msgid "Favorite Tools"
-msgstr ""
+msgstr "Suosikkityökalut"
 
 #: src/ui/window.blp:71
 msgid "No Favorites"
-msgstr ""
+msgstr "Ei suosikkeja"
 
 #: src/ui/window.blp:72
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
-msgstr ""
+msgstr "Lisää suosikkityökalut tänne napsauttamalla tähteä nimen vierestä"
 
 #: src/ui/window.blp:92
 msgid "Favorites"
-msgstr ""
+msgstr "Suosikit"
 
 #: src/ui/window.blp:121
 msgid "Search Tools…"
-msgstr ""
+msgstr "Etsi työkaluja…"
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
 msgstr "Näytä/piilota sivupalkki"
 
 #: src/ui/window.blp:186
-#, fuzzy
 msgid "_Keyboard Shortcuts"
-msgstr "Näytä pikanäppäimet"
+msgstr "_Pikanäppäimet"
 
 #: src/ui/window.blp:191
 msgid "_About Dev Toolbox"
@@ -1012,11 +1005,11 @@ msgstr "Sukunimi *"
 
 #: src/ui/views/certificate_request_generator.blp:61
 msgid "Organization Name (O)"
-msgstr ""
+msgstr "Organisaation nimi (O)"
 
 #: src/ui/views/certificate_request_generator.blp:65
 msgid "Organization Unit Name (OU)"
-msgstr ""
+msgstr "Organisaatioyksikön nimi (OU)"
 
 #: src/ui/views/certificate_request_generator.blp:69
 msgid "Passphrase"
@@ -1821,34 +1814,32 @@ msgid "Date"
 msgstr "Päiväys"
 
 #: src/ui/views/timestamp.blp:64
-#, fuzzy
 msgid "ISO Date (ISO 8601/RFC 3339)"
 msgstr "ISO-päiväys (ISO 8601/RFC 3339)"
 
 #: src/ui/views/timestamp.blp:70
 msgid "RFC 2822 Date"
-msgstr ""
+msgstr "RFC 2822 -päiväys"
 
 #: src/ui/views/timestamp.blp:76
 msgid "Short Date"
-msgstr ""
+msgstr "Lyhyt päiväys"
 
 #: src/ui/views/timestamp.blp:82
 msgid "Short Time"
-msgstr ""
+msgstr "Lyhyt aika"
 
 #: src/ui/views/timestamp.blp:88
-#, fuzzy
 msgid "Long Date"
-msgstr "Päiväys"
+msgstr "Pitkä päiväys"
 
 #: src/ui/views/timestamp.blp:94
 msgid "Long Time"
-msgstr ""
+msgstr "Pitkä aika"
 
 #: src/ui/views/timestamp.blp:100
 msgid "Full Long Date"
-msgstr ""
+msgstr "Täysi pitkä päiväys"
 
 #: src/ui/views/url_encoder.blp:20
 msgid "URL Encoder & Decoder"
@@ -1914,7 +1905,7 @@ msgstr "Yleiset"
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Search Tools"
-msgstr ""
+msgstr "Etsi työkaluja"
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"
@@ -1982,27 +1973,24 @@ msgstr "Kirjoita CSS tähän"
 
 #: src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
-msgstr ""
+msgstr "CSS-pienentäjä"
 
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
-msgstr ""
+msgstr "Pienennä"
 
 #: src/formatters/js_minifier.py:14
-#, fuzzy
 msgid "JavaScript Minifier"
-msgstr "JavaScript-muotoilija"
+msgstr "JavaScript-pienentäjä"
 
 #: src/formatters/js_minifier.py:15
-#, fuzzy
 msgid "Minify JS code"
-msgstr "Muotoile CSS-asiakirjoja"
+msgstr "Pienennä JS-koodia"
 
 #: src/formatters/js_minifier.py:17
-#, fuzzy
 msgid "Type JS code here"
-msgstr "Kirjoita JSON-koodi tähän"
+msgstr "Kirjoita JS-koodi tähän"
 
 #~ msgid "What's new:"
 #~ msgstr "Uutta:"
