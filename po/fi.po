@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
-"POT-Creation-Date: 2024-10-29 12:50+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-30 15:58+0100\n"
 "PO-Revision-Date: 2024-10-30 12:07+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/devtoolbox/"
@@ -26,7 +26,8 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
-msgid "Development tools at your fingertips"
+#, fuzzy
+msgid "Dev tools at your fingertips"
 msgstr "Kehitystyökalut lähellä"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
@@ -825,8 +826,9 @@ msgid "_About Dev Toolbox"
 msgstr "_Tietoja - Dev Toolbox"
 
 #: src/ui/about_dialog.blp:10
+#, fuzzy
 msgid ""
-"Copyright © 2022 - 2023 Alessandro Iepure\n"
+"Copyright © 2022 - 2024 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
 "Tekijänoikeus © 2022 - 2023 Alessandro Iepure\n"

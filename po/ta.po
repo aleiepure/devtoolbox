@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-29 12:50+0100\n"
+"POT-Creation-Date: 2024-10-30 15:58+0100\n"
 "PO-Revision-Date: 2023-11-23 12:05+0000\n"
 "Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/devtoolbox/"
@@ -26,7 +26,8 @@ msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
-msgid "Development tools at your fingertips"
+#, fuzzy
+msgid "Dev tools at your fingertips"
 msgstr "உங்கள் விரல் நுனியில் மேம்பாட்டு கருவிகள்"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
@@ -808,7 +809,7 @@ msgstr ""
 
 #: src/ui/about_dialog.blp:10
 msgid ""
-"Copyright © 2022 - 2023 Alessandro Iepure\n"
+"Copyright © 2022 - 2024 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
 

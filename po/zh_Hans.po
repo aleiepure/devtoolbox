@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-29 12:50+0100\n"
+"POT-Creation-Date: 2024-10-30 15:58+0100\n"
 "PO-Revision-Date: 2024-10-01 16:02+0000\n"
 "Last-Translator: 复予 <clonewith@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -26,7 +26,8 @@ msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
-msgid "Development tools at your fingertips"
+#, fuzzy
+msgid "Dev tools at your fingertips"
 msgstr "触手可及的开发工具箱"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
@@ -825,8 +826,9 @@ msgid "_About Dev Toolbox"
 msgstr "关于 Dev Toolbox (_A)"
 
 #: src/ui/about_dialog.blp:10
+#, fuzzy
 msgid ""
-"Copyright © 2022 - 2023 Alessandro Iepure\n"
+"Copyright © 2022 - 2024 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
 "版权所有 © 2022 - 2023 Alessandro Iepure\n"

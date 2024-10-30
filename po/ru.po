@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-29 12:50+0100\n"
+"POT-Creation-Date: 2024-10-30 15:58+0100\n"
 "PO-Revision-Date: 2024-07-16 21:26+0000\n"
 "Last-Translator: Finnever <mr.finnever@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/devtoolbox/"
@@ -27,7 +27,8 @@ msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
-msgid "Development tools at your fingertips"
+#, fuzzy
+msgid "Dev tools at your fingertips"
 msgstr "Инструменты разработки у вас под рукой"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
@@ -834,8 +835,9 @@ msgid "_About Dev Toolbox"
 msgstr "_О программе"
 
 #: src/ui/about_dialog.blp:10
+#, fuzzy
 msgid ""
-"Copyright © 2022 - 2023 Alessandro Iepure\n"
+"Copyright © 2022 - 2024 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
 "Copyright © 2022 - 2023 Alessandro Iepure\n"
