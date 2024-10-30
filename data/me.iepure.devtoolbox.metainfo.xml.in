@@ -66,18 +66,18 @@ SPDX-License-Identifier: CC0-1.0
 
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/aleiepure/devtoolbox/main/data/appstream/app1.png</image>
+      <image>https://raw.githubusercontent.com/aleiepure/devtoolbox/main/data/screenshots/1.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/aleiepure/devtoolbox/main/data/appstream/app2.png</image>
+      <image>https://raw.githubusercontent.com/aleiepure/devtoolbox/main/data/screenshots/2.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/aleiepure/devtoolbox/main/data/appstream/app3.png</image>
+      <image>https://raw.githubusercontent.com/aleiepure/devtoolbox/main/data/screenshots/3.png</image>
     </screenshot>
   </screenshots>
 
   <releases>
-    <release version="1.2" date="2024-10-29">
+    <release version="1.2" date="2024-10-30">
       <description translate="no">
         <p>What's new:</p>
         <ul>
