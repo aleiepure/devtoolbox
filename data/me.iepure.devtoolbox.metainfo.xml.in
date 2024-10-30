@@ -13,7 +13,7 @@ SPDX-License-Identifier: CC0-1.0
 	<project_license>GPL-3.0-or-later</project_license>
 
   <name translate="no">Dev Toolbox</name>
-  <summary>Development tools at your fingertips</summary>
+  <summary>Dev tools at your fingertips</summary>
 
   <developer id="me.iepure">
     <name translate="no">Alessandro Iepure</name>

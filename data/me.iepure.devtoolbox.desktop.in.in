@@ -5,7 +5,7 @@
 [Desktop Entry]
 # TRANSLATORS: do not translate
 Name=@app-name@
-Comment=Development tools at your fingertips
+Comment=Dev tools at your fingertips
 Exec=devtoolbox
 Icon=me.iepure.devtoolbox
 Terminal=false
