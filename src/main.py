@@ -110,7 +110,7 @@ class DevtoolboxApplication(Adw.Application):
             "Ismael Brendo https://github.com/Ismaelbrendo",
             "Amer Sawan https://github.com/amersaw",
         ])
-        about_dialog.present()
+        about_dialog.present(self.props.active_window)
 
     def on_quit_action(self, widget, _):
         self.quit()
