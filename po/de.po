@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-30 15:58+0100\n"
 "PO-Revision-Date: 2024-10-31 09:34+0000\n"
-"Last-Translator: Dennis Lüke <dennis.lueke@pm.me>\n"
+"Last-Translator: Christian Backes <github@christianbackes.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/de/>\n"
 "Language: de\n"
@@ -104,7 +104,7 @@ msgstr "Konvertierer"
 
 #: src/window.py:124 src/ui/views/json_yaml.blp:20
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr "YAML- und JSON-Dokumente konvertieren"
+msgstr "JSON-Dokumente in YAML umwandeln und umgekehrt"
 
 #: src/window.py:128 src/ui/views/timestamp.blp:45
 msgid "Timestamp"
@@ -112,7 +112,7 @@ msgstr "Zeitstempel"
 
 #: src/window.py:131 src/ui/views/timestamp.blp:21
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr "UNIX-Zeitstempel zu und von Daten konvertieren"
+msgstr "UNIX Zeitstempel in und aus einfachem Datum umrechnen"
 
 #: src/window.py:135
 msgid "Number Bases"
@@ -124,15 +124,15 @@ msgstr "Zahlen zwischen Basen umrechnen"
 
 #: src/window.py:142 src/ui/views/cron_converter.blp:21
 msgid "CRON Parser"
-msgstr "CRON-Verarbeitung"
+msgstr "CRON Parser"
 
 #: src/window.py:145 src/ui/views/cron_converter.blp:22
 msgid "Convert CRON expressions to time and date"
-msgstr "CRON-Ausdrücke in Zeitpunkte und Daten konvertieren"
+msgstr "CRON-Ausdrücke in Zeit und Datum umwandeln"
 
 #: src/window.py:149 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
-msgstr ""
+msgstr "Reverse CRON"
 
 #: src/window.py:152 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
@@ -153,15 +153,15 @@ msgstr "Base64-Zeichenfolgen kodieren und dekodieren"
 
 #: src/window.py:175 src/ui/views/url_encoder.blp:21
 msgid "Encode and decode special characters inside URLs"
-msgstr ""
+msgstr "Sonderzeichen innerhalb von URLs kodieren und dekodieren"
 
 #: src/window.py:182 src/ui/views/gzip_compressor.blp:21
 msgid "Compress and decompress files and texts using GZip"
-msgstr ""
+msgstr "Dateien und Texte mit GZip komprimieren und dekomprimieren"
 
 #: src/window.py:189 src/ui/views/jwt_decoder.blp:21
 msgid "Decode JWT tokens to header and payload"
-msgstr ""
+msgstr "Dekodieren von JWT-Tokens für Header und Payload"
 
 #: src/window.py:196 src/window.py:203 src/window.py:210 src/window.py:217
 #: src/window.py:224 src/window.py:231 src/window.py:238 src/window.py:245
@@ -170,15 +170,15 @@ msgstr "Formatierer & Verkleinerer"
 
 #: src/window.py:198 src/formatters/json.py:14
 msgid "Format JSON documents"
-msgstr ""
+msgstr "Formatiere JSON Dateien"
 
 #: src/window.py:205 src/formatters/sql.py:14
 msgid "Format SQL documents"
-msgstr ""
+msgstr "Formatiere SQL Dateien"
 
 #: src/window.py:212 src/formatters/xml.py:16
 msgid "Format XML documents"
-msgstr ""
+msgstr "Formatiere XML Dateien"
 
 #: src/window.py:219 src/formatters/html.py:15
 msgid "Format HTML documents"
@@ -207,39 +207,39 @@ msgstr "Generatoren"
 
 #: src/window.py:256 src/ui/views/hash_generator.blp:21
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
-msgstr ""
+msgstr "MD5, SHA1, SHA256 und SHA512 Hashes berechnen und prüfen"
 
 #: src/window.py:263 src/ui/views/lorem_generator.blp:21
 msgid "Generate lorem ipsum placeholder text"
-msgstr ""
+msgstr "Generiere Lorem Ipsum als Platzhalter für Texte"
 
 #: src/window.py:270 src/ui/views/uuid_generator.blp:21
 msgid "Generate Universally Unique IDs (UUID)"
-msgstr ""
+msgstr "Generiere Universal Unique IDs (UUID)"
 
 #: src/window.py:274
 msgid "Random"
-msgstr ""
+msgstr "Zufall"
 
 #: src/window.py:277 src/ui/views/random_generator.blp:21
 msgid "Generate random numbers and strings"
-msgstr ""
+msgstr "Zufallszahlen und Strings generieren"
 
 #: src/window.py:281 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
-msgstr ""
+msgstr "Chmod Berechner"
 
 #: src/window.py:284 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
-msgstr ""
+msgstr "Errechne Werte zum modifizieren von Berechtigungen mit chmod"
 
 #: src/window.py:288
 msgid "QR Code"
-msgstr ""
+msgstr "QR Code"
 
 #: src/window.py:291 src/ui/views/qrcode_generator.blp:21
 msgid "Create custom QR Codes"
-msgstr ""
+msgstr "Benutzerdefinierte QR Codes erstellen"
 
 #: src/window.py:297 src/ui/views/text_inspector.blp:20
 msgid "Text Inspector & Case Converter"
