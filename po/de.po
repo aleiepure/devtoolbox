@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-30 15:58+0100\n"
-"PO-Revision-Date: 2024-10-31 09:34+0000\n"
+"PO-Revision-Date: 2024-11-01 10:00+0000\n"
 "Last-Translator: Christian Backes <github@christianbackes.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/de/>\n"
@@ -136,7 +136,7 @@ msgstr "Reverse CRON"
 
 #: src/window.py:152 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
-msgstr "CRON Ausdrücke erstellen"
+msgstr "CRON-Ausdrücke generieren"
 
 #: src/window.py:159 src/window.py:166 src/window.py:173 src/window.py:180
 #: src/window.py:187
@@ -145,7 +145,7 @@ msgstr "Kodierer & Dekodierer"
 
 #: src/window.py:161 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
-msgstr "Kodierung und Dekodierung von Sonderzeichen im HTML-Format"
+msgstr "Kodieren und Dekodieren von Sonderzeichen im HTML-Format"
 
 #: src/window.py:168
 msgid "Encode and decode base64 strings"
