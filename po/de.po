@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-30 15:58+0100\n"
-"PO-Revision-Date: 2024-10-05 17:15+0000\n"
-"Last-Translator: Konstantin Tutsch <mail@konstantintutsch.com>\n"
+"PO-Revision-Date: 2024-10-31 09:34+0000\n"
+"Last-Translator: Dennis Lüke <dennis.lueke@pm.me>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/de/>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.8.2-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -53,8 +53,8 @@ msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr ""
-"Diese Anwendung ist eine Sammlung an mächtigen aber trotzdem simple "
-"Werkzeugen um alltägliche Probleme in der Softwareentwicklung zu lösen."
+"Hier findest du eine Sammlung von Tools die dir die täglichen Probleme bei "
+"der Entwicklung einfacher machen."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Includes:"
@@ -62,19 +62,19 @@ msgstr "Enthält:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "JSON to YAML converter and vice-versa"
-msgstr "Konvertierung zwischen JSON und YAML"
+msgstr "JSON zu YAML Konverter in beide Richtungen"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33
 msgid "CRON expressions parser"
-msgstr "Verarbeiter für CRON-Ausdrücke"
+msgstr "Parser für CRON-Ausdrücke"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "GZip compressor and decompressor"
-msgstr "GZip Komprimierung sowie Entpackung"
+msgstr "GZIP Komprimierung und Entpacken"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Formatters for common programming languages"
-msgstr "Formatierer für gängige Programmiersprachen"
+msgstr "Formatierer für die gängigen Programmiersprachen"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Hash generators"
@@ -82,20 +82,20 @@ msgstr "Hash Generatoren"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
-msgstr "RegEx Tests"
+msgstr "Regex Tester"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/window.py:332
 #: src/ui/views/markdown_preview.blp:20
 msgid "Markdown Previewer"
-msgstr "Markdown Vorschauen"
+msgstr "Markdown Vorschau"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
-msgstr "Bildumwandler"
+msgstr "Bildkonverter"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
-msgstr "Und vieles mehr …"
+msgstr "und vieles mehr..."
 
 #: src/window.py:122 src/window.py:129 src/window.py:136 src/window.py:143
 #: src/window.py:150
@@ -136,20 +136,20 @@ msgstr ""
 
 #: src/window.py:152 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
-msgstr ""
+msgstr "CRON Ausdrücke erstellen"
 
 #: src/window.py:159 src/window.py:166 src/window.py:173 src/window.py:180
 #: src/window.py:187
 msgid "Encoders & Decoders"
-msgstr ""
+msgstr "Kodierer & Dekodierer"
 
 #: src/window.py:161 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
-msgstr ""
+msgstr "Kodierung und Dekodierung von Sonderzeichen im HTML-Format"
 
 #: src/window.py:168
 msgid "Encode and decode base64 strings"
-msgstr ""
+msgstr "Base64-Zeichenfolgen kodieren und dekodieren"
 
 #: src/window.py:175 src/ui/views/url_encoder.blp:21
 msgid "Encode and decode special characters inside URLs"
@@ -166,7 +166,7 @@ msgstr ""
 #: src/window.py:196 src/window.py:203 src/window.py:210 src/window.py:217
 #: src/window.py:224 src/window.py:231 src/window.py:238 src/window.py:245
 msgid "Formatters & Minifiers"
-msgstr ""
+msgstr "Formatierer & Verkleinerer"
 
 #: src/window.py:198 src/formatters/json.py:14
 msgid "Format JSON documents"
@@ -182,28 +182,28 @@ msgstr ""
 
 #: src/window.py:219 src/formatters/html.py:15
 msgid "Format HTML documents"
-msgstr ""
+msgstr "Formatiere HTML Dateien"
 
 #: src/window.py:226 src/formatters/js.py:15
 msgid "Format JavaScript documents"
-msgstr ""
+msgstr "Formatiere JavaScript Dateien"
 
 #: src/window.py:233 src/formatters/css.py:14
 msgid "Format CSS documents"
-msgstr ""
+msgstr "Formatieren CSS Dateien"
 
 #: src/window.py:240 src/formatters/css_minifier.py:15
 msgid "Minify CSS documents"
-msgstr ""
+msgstr "CSS Dateien verkleinern"
 
 #: src/window.py:247
 msgid "Minify JavaScript documents"
-msgstr ""
+msgstr "JavaScript Dateien verkleinern"
 
 #: src/window.py:254 src/window.py:261 src/window.py:268 src/window.py:275
 #: src/window.py:282 src/window.py:289
 msgid "Generators"
-msgstr ""
+msgstr "Generatoren"
 
 #: src/window.py:256 src/ui/views/hash_generator.blp:21
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
@@ -243,93 +243,94 @@ msgstr ""
 
 #: src/window.py:297 src/ui/views/text_inspector.blp:20
 msgid "Text Inspector & Case Converter"
-msgstr ""
+msgstr "Text Inspector & Groß-/Kleinschreibung Konverter"
 
 #: src/window.py:298 src/window.py:305 src/window.py:312 src/window.py:319
 #: src/window.py:326 src/window.py:333 src/ui/views/regex_tester.blp:50
 #: src/ui/views/text_inspector.blp:104 src/ui/views/text_inspector.blp:160
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
 #: src/window.py:300 src/ui/views/text_inspector.blp:21
+#, fuzzy
 msgid "View statistics about text and change sentence cases"
-msgstr ""
+msgstr "Anzeigen von Statistiken über Text und Ändern von Satzfällen"
 
 #: src/window.py:304
 msgid "Regex Tester"
-msgstr ""
+msgstr "Regex Tester"
 
 #: src/window.py:307 src/ui/views/regex_tester.blp:21
 msgid "Find matching strings inside a text"
-msgstr ""
+msgstr "Suche nach übereinstimmenden Zeichenfolgen innerhalb eines Textes"
 
 #: src/window.py:311 src/ui/views/text_diff.blp:20
 msgid "Text Diff"
-msgstr ""
+msgstr "Text Unterschied"
 
 #: src/window.py:314 src/ui/views/text_diff.blp:21
 msgid "Analyze two texts and find differences"
-msgstr ""
+msgstr "Analysiert zwei Texte und findet Unterschiede"
 
 #: src/window.py:318 src/ui/views/xml_validator.blp:20
 msgid "XML Scheme Validator"
-msgstr ""
+msgstr "XML Schema Tester"
 
 #: src/window.py:321 src/ui/views/xml_validator.blp:21
 msgid "Check an XML file against an XSD schema"
-msgstr ""
+msgstr "Testet ein XML Datei gegen ein XSD Schema"
 
 #: src/window.py:325 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
-msgstr ""
+msgstr "JSON Schema Tester"
 
 #: src/window.py:328 src/ui/views/json_validator.blp:20
 msgid "Check a JSON file against a JSON schema"
-msgstr ""
+msgstr "Testet eine JSON Datei gegen ein JSON Schema"
 
 #: src/window.py:335 src/ui/views/markdown_preview.blp:21
 msgid "Preview markdown code as you type"
-msgstr ""
+msgstr "Vorschau von Markdown-Code"
 
 #: src/window.py:341 src/ui/views/contrast_checker.blp:20
 msgid "Contrast Checker"
-msgstr ""
+msgstr "Kontrast Tester"
 
 #: src/window.py:342 src/window.py:349 src/window.py:356
 msgid "Graphics"
-msgstr ""
+msgstr "Grafiken"
 
 #: src/window.py:344 src/ui/views/contrast_checker.blp:21
 msgid "Check a color combination for WCAG compliance"
-msgstr ""
+msgstr "Überprüfung einer Farbkombination auf WCAG-Konformität"
 
 #: src/window.py:348
 msgid "Color Blindness"
-msgstr ""
+msgstr "Farbenblindheit"
 
 #: src/window.py:351 src/ui/views/colorblindness_simulator.blp:21
 msgid "Simulate color blindness in images"
-msgstr ""
+msgstr "Farbenblindheit in Bildern simulieren"
 
 #: src/window.py:355 src/ui/views/image_converter.blp:20
 msgid "Image Format Converter"
-msgstr ""
+msgstr "Bildformat-Konverter"
 
 #: src/window.py:358 src/ui/views/image_converter.blp:21
 msgid "Convert images to different formats"
-msgstr ""
+msgstr "Bilder in verschiedene Formate konvertieren"
 
 #: src/window.py:364 src/ui/views/certificate_parser.blp:20
 msgid "Certificate Parser"
-msgstr ""
+msgstr "Zertifikat-Parser"
 
 #: src/window.py:365 src/window.py:372 src/views/certificate_parser.py:92
 msgid "Certificates"
-msgstr ""
+msgstr "Zertifikate"
 
 #: src/window.py:367 src/ui/views/certificate_parser.blp:21
 msgid "View certificates contents"
-msgstr ""
+msgstr "Inhalt der Zertifikate anzeigen"
 
 #: src/window.py:371
 msgid "Certificate Signing Request"
@@ -343,21 +344,21 @@ msgstr ""
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:52
 #: src/widgets/text_file_area.py:61 src/widgets/text_file_area.py:173
 msgid "Opening file..."
-msgstr ""
+msgstr "Öffne Datei..."
 
 #: src/widgets/image_area.py:83 src/widgets/text_area.py:123
 #: src/widgets/text_file_area.py:137 src/views/certificate_parser.py:60
 msgid "Cannot open more than one file"
-msgstr ""
+msgstr "Es kann nicht mehr als eine Datei geöffnet werden"
 
 #: src/widgets/image_area.py:109
 msgid "Opening image..."
-msgstr ""
+msgstr "Öffne Bild..."
 
 #: src/widgets/image_area.py:116 src/widgets/text_area.py:159
 #: src/widgets/text_file_area.py:180 src/views/certificate_parser.py:81
 msgid "Open File"
-msgstr ""
+msgstr "Datei öffnen"
 
 #: src/widgets/image_area.py:118 src/widgets/text_area.py:161
 #: src/widgets/text_file_area.py:182 src/views/certificate_parser.py:83
@@ -366,7 +367,7 @@ msgstr ""
 #: src/ui/widgets/text_file_area.blp:58 src/ui/views/certificate_parser.blp:52
 #: src/ui/views/certificate_request_generator.blp:99
 msgid "Open"
-msgstr ""
+msgstr "Öffnen"
 
 #: src/widgets/image_area.py:119 src/widgets/image_area.py:169
 #: src/widgets/text_area.py:162 src/widgets/text_file_area.py:183
@@ -374,21 +375,21 @@ msgstr ""
 #: src/views/certificate_request_generator.py:61
 #: src/views/image_converter.py:61 src/views/qrcode_generator.py:173
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: src/widgets/image_area.py:127
 msgid "Supported Image Formats"
-msgstr ""
+msgstr "Unterstützte Bildformate"
 
 #: src/widgets/image_area.py:159
 msgid "Saving image..."
-msgstr ""
+msgstr "Speichere Bild..."
 
 #: src/widgets/image_area.py:166 src/widgets/text_file_area.py:295
 #: src/views/certificate_request_generator.py:121
 #: src/views/image_converter.py:58 src/views/qrcode_generator.py:170
 msgid "Save file as"
-msgstr ""
+msgstr "Datei speichern unter"
 
 #: src/widgets/image_area.py:168 src/widgets/text_file_area.py:297
 #: src/views/certificate_request_generator.py:122
@@ -397,19 +398,19 @@ msgstr ""
 #: src/ui/widgets/image_area.blp:59 src/ui/widgets/text_file_area.blp:67
 #: src/ui/views/certificate_request_generator.blp:133
 msgid "Save"
-msgstr ""
+msgstr "Speichern"
 
 #: src/widgets/image_area.py:193
 msgid "Unable to save image."
-msgstr ""
+msgstr "Bild konnte nicht gespeichert werden."
 
 #: src/widgets/text_area.py:169 src/widgets/text_file_area.py:203
 msgid "Text files"
-msgstr ""
+msgstr "Text Dateien"
 
 #: src/widgets/text_area.py:176 src/widgets/text_file_area.py:216
 msgid "Accepted files"
-msgstr ""
+msgstr "Akzeptierte Dateien"
 
 #: src/widgets/text_area.py:197
 #, python-brace-format
@@ -417,36 +418,38 @@ msgid ""
 "Loading a large file ({size})\n"
 "Might take a while, please wait..."
 msgstr ""
+"Lade eine große Datei ({size})\n"
+"Dies könnte kurz dauert, bitte warten..."
 
 #: src/widgets/text_area.py:204 src/widgets/text_file_area.py:251
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr ""
+msgstr "Kann {file_path} nicht öffnen: {file_content}."
 
 #: src/widgets/text_area.py:219
 msgid "File is not UTF-8 encoded."
-msgstr ""
+msgstr "Die Datei ist nicht UTF-8 kodiert."
 
 #: src/widgets/text_file_area.py:190
 msgid "All files"
-msgstr ""
+msgstr "Alle Datein"
 
 #: src/widgets/text_file_area.py:197
 msgid "Text files and images"
-msgstr ""
+msgstr "Textdateien und Bilder"
 
 #: src/widgets/text_file_area.py:209
 msgid "Images"
-msgstr ""
+msgstr "Bilder"
 
 #: src/widgets/text_file_area.py:288
 msgid "Saving file..."
-msgstr ""
+msgstr "Speichern der Datei..."
 
 #: src/widgets/text_file_area.py:327
 #, python-brace-format
 msgid "Unable to save {path}"
-msgstr ""
+msgstr "Kann nicht gespeichert werden {path}"
 
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
 #: src/views/certificate_request_generator.py:176 src/views/formatter.py:48
@@ -455,52 +458,54 @@ msgstr ""
 #: src/views/url_encoder.py:48
 #, python-brace-format
 msgid "Error: {error}"
-msgstr ""
+msgstr "Fehler: {error}"
 
 #: src/views/certificate_parser.py:65
 msgid "Unsupported file"
-msgstr ""
+msgstr "Nicht unterstützte Datei"
 
 #: src/views/certificate_parser.py:103 src/views/reverse_cron.py:180
 #: src/ui/views/certificate_parser.blp:103 src/ui/views/reverse_cron.blp:39
 msgid "Expand All"
-msgstr ""
+msgstr "Alle erweitern"
 
 #: src/views/certificate_parser.py:107 src/views/reverse_cron.py:184
 msgid "Collapse All"
-msgstr ""
+msgstr "Alle einklappen"
 
 #: src/views/certificate_parser.py:147
 msgid "Error: Cannot open this file because it is not a valid certificate."
 msgstr ""
+"Fehler: Diese Datei kann nicht geöffnet werden, da es sich nicht um ein "
+"gültiges Zertifikat handelt."
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:155
 #, python-brace-format
 msgid "Identity: {identity}"
-msgstr ""
+msgstr "Identität: {identity}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:157
 #, python-brace-format
 msgid "Verified by: {verified_by}"
-msgstr ""
+msgstr "Verifiziert von: {verified_by}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:159
 #, python-brace-format
 msgid "Expires: {expiration_date}"
-msgstr ""
+msgstr "Läuft ab: {expiration_date}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:165
 msgid "Basic Constraints"
-msgstr ""
+msgstr "Grundlegende Beschränkungen"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:166
 msgid "Extended Key Usage"
-msgstr ""
+msgstr "Erweiterte Schlüsselverwendung"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:167 src/views/certificate_parser.py:212
@@ -510,7 +515,7 @@ msgstr ""
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:168
 msgid "Key Usage"
-msgstr ""
+msgstr "Schlüsselnutzung"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:169
@@ -520,98 +525,103 @@ msgstr ""
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:173
 msgid "Extension"
-msgstr ""
+msgstr "Erweiterung"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:213
 msgid "Certificate Fingerprints"
-msgstr ""
+msgstr "Zertifikat Fingerabdrücke"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:216
 msgid "Key Identifier"
-msgstr ""
+msgstr "Schlüsselkennung"
 
 #. Toast messages
 #: src/views/certificate_request_generator.py:35
 #: src/views/colorblindness_simulator.py:26 src/views/gzip_compressor.py:27
 #: src/views/image_converter.py:23
 msgid "Open folder"
-msgstr ""
+msgstr "Ordner öffnen"
 
 #: src/views/certificate_request_generator.py:58
 msgid "Open Key File"
-msgstr ""
+msgstr "Schlüsseldatei öffnen"
 
 #: src/views/certificate_request_generator.py:67
 msgid "All Files"
-msgstr ""
+msgstr "Alle Dateien"
 
 #: src/views/certificate_request_generator.py:173
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:58
 #: src/views/image_converter.py:40
 #, python-brace-format
 msgid "Successfully saved as {save_path}"
-msgstr ""
+msgstr "Erfolgreich gespeichert als {save_path}"
 
 #: src/views/certificate_request_generator.py:188
 msgid "Save key as"
-msgstr ""
+msgstr "Schlüssel speichern als"
 
 #: src/views/chmod_calculator.py:30
 msgid "Invalid value. Please check again"
-msgstr ""
+msgstr "Ungültiger Wert. Bitte nochmals prüfen"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
 #: src/views/colorblindness_simulator.py:98
 msgid "Loading simulation..."
-msgstr ""
+msgstr "Simulation laden..."
 
 #: src/views/formatter.py:76
 msgid ""
 "Text is not in the correct format. Check if you misspelled something or if "
 "all parentheses are closed."
 msgstr ""
+"Der Text hat nicht das richtige Format. Prüfen Sie, ob Sie etwas falsch "
+"geschrieben haben oder ob alle Klammern geschlossen sind."
 
 #: src/views/gzip_compressor.py:29
 msgid "Cannot decompress from an image or a file"
-msgstr ""
+msgstr "Dekomprimierung aus einem Image oder einer Datei nicht möglich"
 
 #: src/views/gzip_compressor.py:126
 msgid "Please save this file to view its contents"
-msgstr ""
+msgstr "Bitte speichern Sie diese Datei, um ihre Inhalte anzuzeigen"
 
 #: src/views/hash_generator.py:125
 msgid "Hashes match!"
-msgstr ""
+msgstr "Die Hashes stimmen überein!"
 
 #: src/views/hash_generator.py:127
 msgid "The integrity is verified."
-msgstr ""
+msgstr "Die Integrität ist verifiziert."
 
 #: src/views/hash_generator.py:135
 msgid "Warning, integrity cannot be verified!"
-msgstr ""
+msgstr "Warnung, Integrität kann nicht überprüft werden!"
 
 #: src/views/hash_generator.py:137
 msgid ""
 "The calculated hash and the provided one do not match. Check again and if "
 "this is a file you downloaded from the Internet re-download it."
 msgstr ""
+"Der berechnete Hash-Wert und der angegebene Hash-Wert stimmen nicht überein. "
+"Überprüfen Sie die Datei erneut und laden Sie sie erneut herunter, wenn Sie "
+"sie aus dem Internet heruntergeladen haben."
 
 #: src/views/json_validator.py:77 src/views/xml_validator.py:76
 msgid "Valid!"
-msgstr ""
+msgstr "Gültig!"
 
 #: src/views/json_validator.py:79
 msgid "JSON is compliant with the provided JSON schema."
-msgstr ""
+msgstr "JSON ist mit dem bereitgestellten JSON-Schema konform."
 
 #: src/views/json_validator.py:87 src/views/json_validator.py:97
 #: src/views/xml_validator.py:86
 msgid "Invalid!"
-msgstr ""
+msgstr "Ungültig!"
 
 #: src/views/json_validator.py:89
 #, python-brace-format
@@ -619,6 +629,8 @@ msgid ""
 "JSON is not compliant with the provided JSON scheme:\n"
 "{validation_error}"
 msgstr ""
+"JSON ist nicht mit dem angegebenen JSON-Schema konform:\n"
+"{validation_error}"
 
 #: src/views/json_validator.py:99
 #, python-brace-format
@@ -626,11 +638,13 @@ msgid ""
 "Error in JSON schema:\n"
 "{schema_error}"
 msgstr ""
+"Fehler in JSON Schema:\n"
+"{schema_error}"
 
 #: src/views/qrcode_generator.py:62 src/ui/views/qrcode_generator.blp:119
 #: src/ui/views/qrcode_generator.blp:127
 msgid "Not Set"
-msgstr ""
+msgstr "Nicht eingestellt"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
