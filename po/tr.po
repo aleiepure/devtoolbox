@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: me.iepure.devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-30 15:58+0100\n"
-"PO-Revision-Date: 2023-08-21 01:57+0000\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"PO-Revision-Date: 2024-11-02 13:24+0000\n"
+"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/tr/>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.8.2\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #. TRANSLATORS: do not translate
@@ -28,7 +28,6 @@ msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
-#, fuzzy
 msgid "Dev tools at your fingertips"
 msgstr "Geliştirme araçları parmaklarınızın ucunda"
 
@@ -37,6 +36,9 @@ msgid ""
 "JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
 "Markdown;Image;"
 msgstr ""
+"JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;M"
+"arkdown;Image;dönüştürücü;ayırıcı;Sıkıştırıcı;Sağlama Toplamı;düzenli "
+"ifade;görüntü;"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -140,9 +142,8 @@ msgstr "CRON ifadeleri oluştur"
 
 #: src/window.py:159 src/window.py:166 src/window.py:173 src/window.py:180
 #: src/window.py:187
-#, fuzzy
 msgid "Encoders & Decoders"
-msgstr "URL Kodlayıcı ve Kod Çözücü"
+msgstr "Kodlayıcılar ve Kod Çözücüler"
 
 #: src/window.py:161 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
