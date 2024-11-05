@@ -6,6 +6,7 @@ from gi.repository import Gio, GObject
 import base64
 import binascii
 import gzip
+from io import BytesIO
 
 
 class GzipCompressorService():
@@ -34,17 +35,32 @@ class GzipCompressorService():
     def _compress_text(self, input_str:str):
         return base64.b64encode(gzip.compress(input_str.encode("utf-8"))).decode("utf-8")
 
-    def _compress_bytes(self, input_file_path:str):
-        output_file_path = Gio.File.new_tmp("me.iepure.devtoolbox.XXXXXX")[0].get_path()
-        with gzip.open(output_file_path, 'wb') as zip_file, open(input_file_path, "rb") as input_file:
-            zip_file.write(input_file.read())
+    # def _compress_bytes(self, input_file_path:str):
+    #     output_file_path = Gio.File.new_tmp("me.iepure.devtoolbox.XXXXXX")[0].get_path()
+    #     with gzip.open(output_file_path, 'wb') as zip_file, open(input_file_path, "rb") as input_file:
+    #         zip_file.write(input_file.read())
 
-        with gzip.open(output_file_path, 'rb') as zip_file:
-            return base64.b64encode(zip_file.read()).decode("utf-8")
+    #     with gzip.open(output_file_path, 'rb') as zip_file:
+    #         return base64.b64encode(zip_file.read()).decode("utf-8")
+    
+    def _compress_bytes(self, input_file_path: str):
+        with open(input_file_path, "rb") as input_file:
+            with BytesIO() as gzip_buffer:
+                with gzip.GzipFile(fileobj=gzip_buffer, mode='wb') as zip_file:
+                    zip_file.write(input_file.read())
+                
+                # Get the compressed data and encode it in base64
+                compressed_data = gzip_buffer.getvalue()
+                encoded_data = base64.b64encode(compressed_data).decode("utf-8")
+
+        return encoded_data
 
     def _decompress(self, input_str:str):
         try:
-            return gzip.decompress(base64.b64decode(input_str))
+            decoded_data = base64.b64decode(input_str.encode())
+            with gzip.open(BytesIO(decoded_data), 'rb') as zip_file:
+                decompressed_data = zip_file.read()
+                return decompressed_data
         except binascii.Error:
             return ""
 

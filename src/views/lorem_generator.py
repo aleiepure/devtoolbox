@@ -30,7 +30,7 @@ class LoremGeneratorView(Adw.Bin):
         # Signals
         self._begin_with_switch.connect("notify::active", self._on_begin_with_switch_changed)
         self._quantity_combo.connect("notify::selected", self._on_quantity_combo_changed)
-        self._quantity_spinner.connect("value-changed", self._on_quantity_spinner_changed)
+        self._quantity_spinner.connect("notify::value", self._on_quantity_spinner_changed)
 
     def _on_begin_with_switch_changed(self, pspec:GObject.ParamSpec, user_data:GObject.GPointer):
         self._generate_text()
@@ -38,7 +38,7 @@ class LoremGeneratorView(Adw.Bin):
     def _on_quantity_combo_changed(self, pspec:GObject.ParamSpec, user_data:GObject.GPointer):
         self._generate_text()
 
-    def _on_quantity_spinner_changed(self, user_data:GObject.GPointer):
+    def _on_quantity_spinner_changed(self, pspec: GObject.ParamSpec, user_data:GObject.GPointer):
         self._generate_text()
 
     def _generate_text(self):

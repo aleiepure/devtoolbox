@@ -24,9 +24,9 @@ class GzipCompressorView(Adw.Bin):
     _service = GzipCompressorService()
 
     # Toast messages
-    _file_saved_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH, button_label=_("Open folder"))
+    _file_saved_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH, button_label=_("Open image"))
     _error_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH)
-    _cannot_convert = Adw.Toast(title=_("Cannot decompress from an image or a file"), priority=Adw.ToastPriority.HIGH)
+    _cannot_convert_toast = Adw.Toast(title=_("Cannot decompress from an image or a file"), priority=Adw.ToastPriority.HIGH)
 
     def __init__(self):
         super().__init__()
@@ -48,19 +48,17 @@ class GzipCompressorView(Adw.Bin):
     def _on_toast_button_clicked(self, user_data:GObject.GPointer):
         app = Gio.Application.get_default()
         window = app.get_active_window()
-        full_msg = self._file_saved_toast.get_title()
-        full_path = full_msg[full_msg.index("/"):len(full_msg)]
-        folder_path = full_path[:full_path.rindex("/")]
-        Gtk.show_uri(window, "file://" + folder_path, Gdk.CURRENT_TIME)
+        Gtk.show_uri(window, "file://" + self._save_path, Gdk.CURRENT_TIME)
 
     def _on_file_saved(self, source_objcet:GObject.Object, file_path:str):
-        self._output_area.set_file_path(file_path)
-        self._file_saved_toast.set_title(_("Successfully saved as {save_path}").format(save_path=file_path))
+        self._file_saved_toast.set_title(_("Saved Successfully"))
         self._toast.add_toast(self._file_saved_toast)
+        self._save_path = file_path
 
     def _on_view_cleared(self, source_widget:GObject.Object):
         self._output_area.set_property("show-copy-btn" , True)
         self._output_area.set_property("show-save-btn" , False)
+        self._output_area.set_property("show-spinner", False)
         self._output_area.clear()
 
     def _on_error(self, source_widget:GObject.Object, error:str):

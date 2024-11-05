@@ -1,19 +1,18 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $CertificateParserView : Adw.Bin {
+template $CertificateParserView: Adw.Bin {
   Adw.ToastOverlay _toast {
-    child:     ScrolledWindow {
-      child:       Adw.Clamp {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
         vexpand: true;
         maximum-size: 1200;
         tightening-threshold: 600;
-        child:
-        Box {
+
+        child: Box {
           orientation: vertical;
 
           $UtilityTitle _title {
@@ -46,13 +45,11 @@ template $CertificateParserView : Adw.Bin {
 
                 Button _open_btn {
                   valign: center;
-                  child:
-                  Adw.ButtonContent {
+
+                  child: Adw.ButtonContent {
                     icon-name: "document-open-symbolic";
                     label: _("Open");
-                  }
-
-                  ;
+                  };
                 }
               }
             }
@@ -66,8 +63,8 @@ template $CertificateParserView : Adw.Bin {
           Adw.ViewStack _view_stack {
             Adw.ViewStackPage {
               name: "empty";
-              child:
-              Box {
+
+              child: Box {
                 valign: center;
                 vexpand: true;
                 orientation: vertical;
@@ -90,20 +87,18 @@ template $CertificateParserView : Adw.Bin {
 
             Adw.ViewStackPage {
               name: "certificate";
-              child:
-              Adw.PreferencesGroup _certificate_group {
+
+              child: Adw.PreferencesGroup _certificate_group {
                 margin-bottom: 10;
 
                 [header-suffix]
                 Button _expand_btn {
                   valign: center;
-                  child:
-                  Adw.ButtonContent {
+
+                  child: Adw.ButtonContent {
                     icon-name: "down-symbolic";
                     label: _("Expand All");
-                  }
-
-                  ;
+                  };
                 }
 
                 Label _identity_lbl {
@@ -136,19 +131,11 @@ template $CertificateParserView : Adw.Bin {
                   margin-bottom: 10;
                   hexpand: true;
                 }
-              }
-
-              ;
+              };
             }
           }
-        }
-
-        ;
-      }
-
-      ;
-    }
-
-    ;
+        };
+      };
+    };
   }
 }

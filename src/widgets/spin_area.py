@@ -49,7 +49,6 @@ class SpinArea(Adw.Bin):
         self.bind_property("show-action-btn", self._action_btn_separator, "visible", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("action-btn-name", self._action_btn, "label", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("action-btn-tooltip", self._action_btn, "tooltip-text", GObject.BindingFlags.SYNC_CREATE)
-        self._spinner.bind_property("spinning", self._spinner, "visible", GObject.BindingFlags.BIDIRECTIONAL)
         self._spinner.bind_property("visible", self._spinner_separator, "visible", GObject.BindingFlags.BIDIRECTIONAL)
         self._action_btn.bind_property("visible", self._action_btn_separator, "visible", GObject.BindingFlags.BIDIRECTIONAL)
 

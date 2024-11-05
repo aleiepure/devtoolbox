@@ -29,12 +29,12 @@ class CronConverterView(Adw.Bin):
         self._generate_dates()
 
         # Signals
-        self._dates_spinner.connect("value-changed", self._on_dates_value_changed)
+        self._dates_spinner.connect("notify::value", self._on_dates_value_changed)
         self._format_text.connect("changed", self._on_format_changed)
         self._expression.connect("changed", self._on_expression_changed)
         self._expression.connect("cleared", self._on_expression_cleared)
 
-    def _on_dates_value_changed(self, user_data:GObject.GPointer):
+    def _on_dates_value_changed(self, pspec: GObject.ParamSpec, user_data:GObject.GPointer):
         self._generate_dates()
 
     def _on_format_changed(self, source_widget:GObject.Object):

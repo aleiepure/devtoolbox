@@ -1,126 +1,132 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $HashGeneratorView : Adw.Bin {
-    Adw.ToastOverlay _toast {
-        child: ScrolledWindow {
-            child: Adw.Clamp {
-                vexpand: true;
-                maximum-size: 1200;
-                tightening-threshold: 600;
-                child: Box {
-                    orientation: vertical;
+template $HashGeneratorView: Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
 
-                    // Title
-                    $UtilityTitle _title {
-                        title: _("Hash Generator & Checker");
-                        description: _("Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity");
-                        tool-name: "hash-generator";
-                    }
-                    Separator {
-                        margin-top: 10;
-                        margin-bottom: 10;
-                    }
+        child: Box {
+          orientation: vertical;
+          // Title
+          $UtilityTitle _title {
+            title: _("Hash Generator & Checker");
+            description: _("Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity");
+            tool-name: "hash-generator";
+          }
 
-                    // Options
-                    Adw.PreferencesGroup _preference_group {
-                        title: _("Tool options");
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
 
-                        Adw.ComboRow _type_dropdown {
-                            title: _("Hash to calculate");
-                            subtitle: _("Choose the hash type to calculate");
-                            icon-name: "fingerprint";
-                            model: StringList {
-                                strings ["MD5", "SHA1", "SHA256", "SHA512"]
-                            };
-                        }
+          // Options
+          Adw.PreferencesGroup _preference_group {
+            title: _("Tool options");
 
-                        Adw.ActionRow {
-                            title: _("Check for integrity");
-                            subtitle: _("If enabled the calculated hash will be checked against another provided hash to verify integrity");
-                            icon-name: "check-plain";
-                            activatable-widget: _check_switch;
+            Adw.ComboRow _type_dropdown {
+              title: _("Hash to calculate");
+              subtitle: _("Choose the hash type to calculate");
+              icon-name: "fingerprint";
 
-                            Switch _check_switch {
-                                valign: center;
-                            }
-                        }
+              model: StringList {
+                strings [
+                  "MD5",
+                  "SHA1",
+                  "SHA256",
+                  "SHA512"
+                ]
+              };
+            }
 
-                        $EntryRow _check_entryrow {
-                              visible: bind _check_switch.active;
-                              title: _("Type the hash to check against");
-                              show-clear-btn: true;
-                              show-paste-btn: true;
-                              styles ["fake-action-row-bottom", "boxed-list"]
-                          }
+            Adw.SwitchRow _check_switch {
+              title: _("Check for integrity");
+              subtitle: _("If enabled the calculated hash will be checked against another provided hash to verify integrity");
+              icon-name: "check-plain";
+            }
 
-                    }
-                    Separator {
-                        margin-top: 10;
-                    }
+            $EntryRow _check_entryrow {
+              visible: bind _check_switch.active;
+              title: _("Type the hash to check against");
+              show-clear-btn: true;
+              show-paste-btn: true;
 
-                    // Text areas
-                    Box {
-                        orientation: horizontal;
-                        homogeneous: true;
-                        spacing: 10;
-                        margin-bottom: 10;
+              styles [
+                "fake-action-row-bottom",
+                "boxed-list"
+              ]
+            }
+          }
 
-                        $TextFileArea _input_area {
-                            name: _("Input");
-                            show-clear-btn: true;
-                            show-paste-btn: true;
-                            show-open-btn: true;
-                            use-all-files-extensions: true;
-                            text-wrap-mode: word-char;
-                        }
+          Separator {
+            margin-top: 10;
+          }
 
-                        $TextArea _output_area {
-                            name: _("Output");
-                            show-copy-btn: true;
-                            text-editable: false;
-                            allow-drag-and-drop: false;
-                            area-height: 100;
-                            text_wrap_mode: char;
-                        }
-                    }
+          // Text areas
+          Box {
+            orientation: horizontal;
+            homogeneous: true;
+            spacing: 10;
+            margin-bottom: 10;
 
-                    // Validation result
-                    Box _check_box {
-                        visible: false;
-                        orientation: horizontal;
-                        halign: center;
-                        margin-bottom: 15;
-                        margin-top: 5;
+            $TextFileArea _input_area {
+              name: _("Input");
+              show-clear-btn: true;
+              show-paste-btn: true;
+              show-open-btn: true;
+              use-all-files-extensions: true;
+              text-wrap-mode: word-char;
+            }
 
-                        Image _check_icon {
-                            pixel-size: 56;
-                            margin-end: 20;
-                        }
+            $TextArea _output_area {
+              name: _("Output");
+              show-copy-btn: true;
+              text-editable: false;
+              allow-drag-and-drop: false;
+              area-height: 100;
+              text_wrap_mode: char;
+            }
+          }
 
-                        Box {
-                            orientation: vertical;
-                            valign: center;
+          // Validation result
+          Box _check_box {
+            visible: false;
+            orientation: horizontal;
+            halign: center;
+            margin-bottom: 15;
+            margin-top: 5;
 
-                            Label _check_title_lbl {
-                                margin-bottom: 5;
-                                styles ["heading"]
-                            }
+            Image _check_icon {
+              pixel-size: 56;
+              margin-end: 20;
+            }
 
-                            Label _check_lbl {
-                                width-request: 100;
-                                wrap: true;
-                            }
+            Box {
+              orientation: vertical;
+              valign: center;
 
-                        }
-                    }
+              Label _check_title_lbl {
+                margin-bottom: 5;
 
-                };
-            };
+                styles [
+                  "heading"
+                ]
+              }
+
+              Label _check_lbl {
+                width-request: 100;
+                wrap: true;
+              }
+            }
+          }
         };
-    }
+      };
+    };
+  }
 }

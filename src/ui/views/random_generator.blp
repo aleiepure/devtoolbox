@@ -1,19 +1,18 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $RandomGeneratorView : Adw.Bin {
+template $RandomGeneratorView: Adw.Bin {
   Adw.ToastOverlay _toast {
-    child:     ScrolledWindow {
-      child:       Adw.Clamp {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
         vexpand: true;
         maximum-size: 1200;
         tightening-threshold: 600;
-        child:
-        Box {
+
+        child: Box {
           orientation: vertical;
 
           $UtilityTitle _title {
@@ -31,66 +30,41 @@ template $RandomGeneratorView : Adw.Bin {
             title: _("String");
             description: _("Generate a random string with the given options. ASCII characters only.");
 
-            Adw.ActionRow {
+            Adw.SpinRow _string_length_spinner {
               title: _("Length");
               subtitle: _("Length of the generated string");
               icon-name: "size-horizontally-symbolic";
 
-              [suffix]
-              SpinButton _string_length_spinner {
-                valign: center;
-                adjustment:
-                Adjustment {
-                  lower: 1;
-                  upper: 100;
-                  step-increment: 1;
-                  value: 10;
-                }
-
-                ;
-              }
+              adjustment: Adjustment {
+                lower: 1;
+                upper: 100;
+                step-increment: 1;
+                value: 10;
+              };
             }
 
-            Adw.ActionRow {
+            Adw.SwitchRow _string_uppercase_switch {
               title: _("Uppercase letters (A-Z)");
               icon-name: "text-symbolic";
-
-              [suffix]
-              Switch _string_uppercase_switch {
-                valign: center;
-              }
+              active: true;
             }
 
-            Adw.ActionRow {
+            Adw.SwitchRow _string_lowercase_switch {
               title: _("Lowercase letters (a-z)");
               icon-name: "lowercase-symbolic";
-
-              [suffix]
-              Switch _string_lowercase_switch {
-                valign: center;
-                active: true;
-              }
+              active: true;
             }
 
-            Adw.ActionRow {
+            Adw.SwitchRow _string_numbers_switch {
               title: _("Numbers (0-9)");
               icon-name: "hashtag-symbolic";
-
-              [suffix]
-              Switch _string_numbers_switch {
-                valign: center;
-                active: true;
-              }
+              active: true;
             }
 
-            Adw.ActionRow {
+            Adw.SwitchRow _string_special_chars_switch {
               title: _("Special characters (!\"#$%&amp;\'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)");
               icon-name: "symbols-symbolic";
-
-              [suffix]
-              Switch _string_special_chars_switch {
-                valign: center;
-              }
+              active: true;
             }
           }
 
@@ -118,47 +92,63 @@ template $RandomGeneratorView : Adw.Bin {
             title: _("Number");
             description: _("Generate a random number in the given range");
 
-            Adw.ActionRow {
-              title: _("Range");
-              subtitle: _("Range in which to generate");
-              icon-name: "size-horizontally-symbolic";
+            Adw.SpinRow _number_min_spinner {
+              title: _("Minimum");
+              subtitle: _("Minimum value of the generated number");
+              icon-name: "arrow-pointing-away-from-line-right";
 
-              [suffix]
-              Box {
-                orientation: horizontal;
-                spacing: 10;
-
-                SpinButton _number_min_spinner {
-                  valign: center;
-                  adjustment:
-                  Adjustment {
-                    lower: -10000000;
-                    upper: 10000000;
-                    step-increment: 1;
-                    value: 25;
-                  }
-
-                  ;
-                }
-
-                Label {
-                  label: "-";
-                }
-
-                SpinButton _number_max_spinner {
-                  valign: center;
-                  adjustment:
-                  Adjustment {
-                    lower: 0;
-                    upper: 10000000;
-                    step-increment: 1;
-                    value: 100;
-                  }
-
-                  ;
-                }
-              }
+              adjustment: Adjustment {
+                lower: -10000000;
+                upper: 10000000;
+                step-increment: 1;
+                value: 25;
+              };
             }
+
+            Adw.SpinRow _number_max_spinner {
+              title: _("Maximum");
+              subtitle: _("Maximum value of the generated number");
+              icon-name: "arrow-pointing-away-from-line-left";
+
+              adjustment: Adjustment {
+                lower: 0;
+                upper: 10000000;
+                step-increment: 1;
+                value: 100;
+              };
+            }
+
+            // Adw.ActionRow {
+            //   title: _("Range");
+            //   subtitle: _("Range in which to generate");
+            //   icon-name: "size-horizontally-symbolic";
+            //   [suffix]
+            //   Box {
+            //     orientation: horizontal;
+            //     spacing: 10;
+            //     SpinButton _number_min_spinner {
+            //       valign: center;
+            //       adjustment: Adjustment {
+            //         lower: -10000000;
+            //         upper: 10000000;
+            //         step-increment: 1;
+            //         value: 25;
+            //       };
+            //     }
+            //     Label {
+            //       label: "-";
+            //     }
+            //     SpinButton _number_max_spinner {
+            //       valign: center;
+            //       adjustment: Adjustment {
+            //         lower: 0;
+            //         upper: 10000000;
+            //         step-increment: 1;
+            //         value: 100;
+            //       };
+            //     }
+            //   }
+            // }
           }
 
           Adw.PreferencesGroup {
@@ -176,14 +166,8 @@ template $RandomGeneratorView : Adw.Bin {
               ]
             }
           }
-        }
-
-        ;
-      }
-
-      ;
-    }
-
-    ;
+        };
+      };
+    };
   }
 }

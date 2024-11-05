@@ -1,84 +1,109 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $SpinArea : Adw.Bin {
-    Adw.PreferencesGroup {
-        margin-top: 10;
+template $SpinArea: Adw.Bin {
+  Box {
+    margin-top: 10;
+    orientation: vertical;
+    spacing: 6;
 
-        Adw.PreferencesRow {
-            Box {
-                orientation: vertical;
+    Box {
+      orientation: horizontal;
+      halign: fill;
+      hexpand: true;
 
-                // Header
-                Box {
-                    orientation: horizontal;
-                    halign: fill;
-                    hexpand: true;
-                    styles ["toolbar"]
+      Label _name_lbl {
+        margin-bottom: 8;
+        margin-top: 8;
+        margin-start: 8;
 
-                    Label _name_lbl {
-                        margin-bottom: 8;
-                        margin-top: 8;
-                        margin-start: 8;
-                        styles ["label"]
-                    }
+        styles [
+          "heading"
+        ]
+      }
 
-                    Box {
-                        orientation: horizontal;
-                        halign: end;
-                        hexpand: true;
+      Box {
+        orientation: horizontal;
+        halign: end;
+        hexpand: true;
 
-                        Spinner _spinner {
-                            width-request: 16;
-                        }
-
-                        Separator _spinner_separator {
-                            styles ["spacer"]
-                        }
-
-                        Button _action_btn {
-                            styles ["suggested-action"]
-                        }
-
-                        Separator _action_btn_separator {
-                            styles ["spacer"]
-                        }
-
-                        Box {
-                            orientation: horizontal;
-                            styles ["linked"]
-
-                            Button _copy_btn {
-                                valign: center;
-                                icon-name: "edit-copy";
-                                tooltip-text: _("Copy to clipboard");
-                            }
-
-                            Button _paste_btn {
-                                valign: center;
-                                icon-name: "edit-paste";
-                                tooltip-text: _("Paste clipboard");
-                            }
-                        }
-                    }
-                }
-
-                // Content
-                SpinButton _spin_btn {
-                    styles ["rounded-border", "view"]
-                    numeric: true;
-                    update-policy: if_valid;
-                    adjustment: Adjustment {
-                        lower: 0;
-                        upper: 99999999999;
-                        step-increment: 1;
-                    };
-                }
-            }
+        Adw.Spinner _spinner {
+          width-request: 16;
         }
+
+        Separator _spinner_separator {
+          styles [
+            "spacer"
+          ]
+        }
+
+        Button _action_btn {
+          styles [
+            "accent"
+          ]
+        }
+
+        Separator _action_btn_separator {
+          styles [
+            "spacer"
+          ]
+        }
+
+        Box {
+          margin-start: 6;
+          spacing: 6;
+          orientation: horizontal;
+
+          Button _copy_btn {
+            valign: center;
+
+            styles [
+              "flat"
+            ]
+
+            icon-name: "edit-copy-symbolic";
+            tooltip-text: _("Copy to clipboard");
+          }
+
+          Button _paste_btn {
+            valign: center;
+
+            styles [
+              "flat"
+            ]
+
+            icon-name: "edit-paste-symbolic";
+            tooltip-text: _("Paste clipboard");
+          }
+        }
+      }
     }
+
+    Box {
+      styles [
+        "card"
+      ]
+
+      orientation: vertical;
+
+      SpinButton _spin_btn {
+        styles [
+          "rounded-border",
+          "view"
+        ]
+
+        numeric: true;
+        update-policy: if_valid;
+
+        adjustment: Adjustment {
+          lower: 0;
+          upper: 99999999999;
+          step-increment: 1;
+        };
+      }
+    }
+  }
 }

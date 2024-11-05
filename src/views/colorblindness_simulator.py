@@ -23,7 +23,7 @@ class ColorblindnessSimulatorView(Adw.Bin):
 
     _service = ColorblindnessSimulatorService()
 
-    _saved_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH, button_label=_("Open folder"))
+    _saved_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH, button_label=_("Open Image"))
 
     def __init__(self):
         super().__init__()
@@ -64,16 +64,16 @@ class ColorblindnessSimulatorView(Adw.Bin):
         self._simulate()
 
     def _on_saved(self, source_widget:GObject.Object, path:str):
-        self._saved_toast.set_title(_("Successfully saved as {save_path}").format(save_path=path))
+        self._saved_toast.set_title(_("Saved Successfully"))
         self._toast.add_toast(self._saved_toast)
+        self._save_path = path
 
     def _on_toast_btn_clicked(self, user_data:GObject.GPointer):
         app = Gio.Application.get_default()
         window = app.get_active_window()
-        full_msg = self._saved_toast.get_title()
-        full_path = full_msg[full_msg.index("/"):len(full_msg)]
-        folder_path = full_path[:full_path.rindex("/")]
-        Gtk.show_uri(window, "file://" + folder_path, Gdk.CURRENT_TIME)
+        app = Gio.Application.get_default()
+        window = app.get_active_window()
+        Gtk.show_uri(window, "file://" + self._save_path, Gdk.CURRENT_TIME)
 
     def _simulate(self):
 

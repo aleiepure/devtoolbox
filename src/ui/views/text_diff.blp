@@ -1,19 +1,18 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $TextDiffView : Adw.Bin {
+template $TextDiffView: Adw.Bin {
   Adw.ToastOverlay _toast {
-    child:     ScrolledWindow {
-      child:       Adw.Clamp {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
         vexpand: true;
         maximum-size: 1200;
         tightening-threshold: 600;
-        child:
-        Box {
+
+        child: Box {
           orientation: vertical;
 
           $UtilityTitle _title {
@@ -32,42 +31,38 @@ template $TextDiffView : Adw.Bin {
 
             $TextArea _old_textarea {
               name: _("Old Text");
-              show-copy-btn: "true";
-              show-clear-btn: "true";
-              show-paste-btn: "true";
-              show-open-btn: "true";
-              text-show-line-numbers: "true";
-              use-default-text-extensions: "true";
+              show-copy-btn: true;
+              show-clear-btn: true;
+              show-paste-btn: true;
+              show-open-btn: true;
+              text-show-line-numbers: true;
+              use-default-text-extensions: true;
+              text-highlight-current-line: true;
               text-wrap-mode: "word-char";
             }
 
             $TextArea _new_textarea {
               name: _("New Text");
-              show-copy-btn: "true";
-              show-clear-btn: "true";
-              show-paste-btn: "true";
-              show-open-btn: "true";
-              text-show-line-numbers: "true";
-              use-default-text-extensions: "true";
+              show-copy-btn: true;
+              show-clear-btn: true;
+              show-paste-btn: true;
+              show-open-btn: true;
+              text-show-line-numbers: true;
+              use-default-text-extensions: true;
+              text-highlight-current-line: true;
               text-wrap-mode: "word-char";
             }
           }
 
           $TextArea _diff_textarea {
             name: _("Differences");
-            show-copy-btn: "true";
-            text-editable: "false";
+            show-copy-btn: true;
+            text-editable: false;
             margin-bottom: "10";
             text-wrap-mode: "word-char";
           }
-        }
-
-        ;
-      }
-
-      ;
-    }
-
-    ;
+        };
+      };
+    };
   }
 }

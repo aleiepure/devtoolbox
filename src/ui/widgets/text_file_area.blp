@@ -1,11 +1,10 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $TextFileArea : Adw.Bin {
+template $TextFileArea: Adw.Bin {
   Box {
     margin-top: 10;
     orientation: vertical;
@@ -21,7 +20,9 @@ template $TextFileArea : Adw.Bin {
         margin-top: 8;
         margin-start: 8;
 
-        styles ["heading"]
+        styles [
+          "heading"
+        ]
       }
 
       Box {
@@ -29,20 +30,27 @@ template $TextFileArea : Adw.Bin {
         halign: end;
         hexpand: true;
 
-        Spinner _spinner {
+        
+        Adw.Spinner _spinner {
           width-request: 16;
         }
 
         Separator _spinner_separator {
-          styles ["spacer"]
+          styles [
+            "spacer"
+          ]
         }
 
         Button _action_btn {
-          styles ["accent"]
+          styles [
+            "accent"
+          ]
         }
 
         Separator _action_btn_separator {
-          styles ["spacer"]
+          styles [
+            "spacer"
+          ]
         }
 
         Box {
@@ -52,7 +60,11 @@ template $TextFileArea : Adw.Bin {
 
           Button _open_btn {
             valign: center;
-            styles ["flat"]
+
+            styles [
+              "flat"
+            ]
+
             child: Adw.ButtonContent {
               icon-name: "document-open-symbolic";
               label: _("Open");
@@ -61,7 +73,11 @@ template $TextFileArea : Adw.Bin {
 
           Button _save_btn {
             valign: center;
-            styles ["flat"]
+
+            styles [
+              "flat"
+            ]
+
             child: Adw.ButtonContent {
               icon-name: "floppy-symbolic";
               label: _("Save");
@@ -70,28 +86,44 @@ template $TextFileArea : Adw.Bin {
 
           Button _view_btn {
             valign: center;
-            styles ["flat"]
+
+            styles [
+              "flat"
+            ]
+
             icon-name: "eye-open-symbolic";
             tooltip-text: _("Open image in another program");
           }
 
           Button _copy_btn {
             valign: center;
-            styles ["flat"]
+
+            styles [
+              "flat"
+            ]
+
             icon-name: "edit-copy-symbolic";
             tooltip-text: _("Copy to clipboard");
           }
 
           Button _paste_btn {
             valign: center;
-            styles ["flat"]
+
+            styles [
+              "flat"
+            ]
+
             icon-name: "edit-paste-symbolic";
             tooltip-text: _("Paste clipboard");
           }
 
           Button _clear_btn {
             valign: center;
-            styles ["flat"]
+
+            styles [
+              "flat"
+            ]
+
             icon-name: "edit-clear-symbolic";
             tooltip-text: _("Clear input");
           }
@@ -100,10 +132,13 @@ template $TextFileArea : Adw.Bin {
     }
 
     Adw.ViewStack _stack {
-      styles ["card"]
+      styles [
+        "card"
+      ]
 
       Adw.ViewStackPage {
         name: "text-area";
+
         child: ScrolledWindow {
           child: $GtkSourceView _textview {
             auto-indent: true;
@@ -117,30 +152,41 @@ template $TextFileArea : Adw.Bin {
             right-margin: 12;
             bottom-margin: 12;
 
-            styles ["rounded-border"]
+            styles [
+              "rounded-border"
+            ]
           };
         };
       }
 
       Adw.ViewStackPage {
         name: "image-area";
+
         child: Picture _imageview {
           can-shrink: true;
           keep-aspect-ratio: true;
 
-          styles ["view" ,"rounded-border"]
+          styles [
+            "view",
+            "rounded-border"
+          ]
         };
       }
 
       Adw.ViewStackPage {
         name: "file-area";
+
         child: $FileView _fileview {};
       }
 
       Adw.ViewStackPage {
         name: "loading";
+
         child: Box {
-          styles ["view", "rounded-border"]
+          styles [
+            "view",
+            "rounded-border"
+          ]
 
           orientation: vertical;
 
@@ -150,12 +196,9 @@ template $TextFileArea : Adw.Bin {
             vexpand: true;
             spacing: 10;
 
-            Spinner {
-              spinning: true;
-            }
+            Adw.Spinner {}
 
-            Label _loading_lbl {
-            }
+            Label _loading_lbl {}
           }
         };
       }

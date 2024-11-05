@@ -4,13 +4,13 @@
  */
 
 
-pre { line-height: 125%; margin: 0; }
+/* pre { line-height: 125%; margin: 0; }
 td.linenos pre { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
 span.linenos { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
 td.linenos pre.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; } */
 .codehilite .hll { background-color: #404040 }
-.codehilite { background: #202020; color: #d0d0d0 }
+.codehilite  { background: #202020; color: #d0d0d0 }
 .codehilite .c { color: #999999; font-style: italic } /* Comment */
 .codehilite .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .codehilite .esc { color: #d0d0d0 } /* Escape */

@@ -1,84 +1,83 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $UuidGeneratorView : Adw.Bin {
-    Adw.ToastOverlay _toast {
-        child: ScrolledWindow {
-            child: Adw.Clamp {
-                vexpand: true;
-                maximum-size: 1200;
-                tightening-threshold: 600;
-                child: Box {
-                    orientation: vertical;
+template $UuidGeneratorView: Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
 
-                    // Title
-                    $UtilityTitle _title {
-                        title: _("UUID Generator");
-                        description: _("Generate Universally Unique IDs (UUID)");
-                        tool-name: "uuid-generator";
-                    }
-                    Separator {
-                        margin-top: 10;
-                        margin-bottom: 10;
-                    }
+        child: Box {
+          orientation: vertical;
+          // Title
+          $UtilityTitle _title {
+            title: _("UUID Generator");
+            description: _("Generate Universally Unique IDs (UUID)");
+            tool-name: "uuid-generator";
+          }
 
-                    // Options
-                    Adw.PreferencesGroup {
-                        title: _("Tool options");
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
 
-                        Adw.ComboRow _version_dropdown {
-                            title: _("Version");
-                            subtitle: _("Choose the UUID version to generate");
-                            icon-name: "list-large";
-                            model: StringList {
-                                strings [
-                                    _("Version 1 (MAC address)"),
-                                    _("Version 3"),
-                                    _("Version 4 (Random)"),
-                                    _("Version 5"),
-                                    _("Version 6 (Gregorian Time)"),
-                                    _("Version 7 (UNIX Epoch)")
-                                ]
-                            };
-                            selected: 2;
-                        }
+          // Options
+          Adw.PreferencesGroup {
+            title: _("Tool options");
 
-                        Adw.ActionRow {
-                            title: _("Amount");
-                            subtitle: _("Number of UUIDs to be generated (up to 50)");
-                            icon-name: "stacked-plates";
+            Adw.ComboRow _version_dropdown {
+              title: _("Version");
+              subtitle: _("Choose the UUID version to generate");
+              icon-name: "list-large";
 
-                            [suffix]
-                            SpinButton _amount_spinner {
-                                valign: center;
-                                adjustment: Adjustment {
-                                    lower: 1;
-                                    upper: 50;
-                                    step-increment: 1;
-                                    value: 15;
-                                };
-                            }
-                        }
-                    }
-                    Separator {
-                        margin-top: 10;
-                    }
+              model: StringList {
+                strings [
+                  _("Version 1 (MAC address)"),
+                  _("Version 3"),
+                  _("Version 4 (Random)"),
+                  _("Version 5"),
+                  _("Version 6 (Gregorian Time)"),
+                  _("Version 7 (UNIX Epoch)")
+                ]
+              };
 
-                    // Text area
-                    $TextArea _output_area {
-                        name: _("Generated UUIDs");
-                        show-copy-btn: true;
-                        text-editable: false;
-                        allow-drag-and-drop: false;
-                        margin-bottom: 10;
-                        text-wrap-mode: char;
-                    }
-                };
-            };
+              selected: 2;
+            }
+
+            Adw.SpinRow _amount_spinner {
+              title: _("Amount");
+              subtitle: _("Number of UUIDs to be generated (up to 50)");
+              icon-name: "stacked-plates";
+
+              adjustment: Adjustment {
+                lower: 1;
+                upper: 50;
+                step-increment: 1;
+                value: 15;
+              };
+            }
+          }
+
+          Separator {
+            margin-top: 10;
+          }
+
+          // Text area
+          $TextArea _output_area {
+            name: _("Generated UUIDs");
+            show-copy-btn: true;
+            text-editable: false;
+            allow-drag-and-drop: false;
+            margin-bottom: 10;
+            text-wrap-mode: char;
+          }
         };
-    }
+      };
+    };
+  }
 }

@@ -35,7 +35,7 @@ class FormatterView(Adw.Bin):
         self._textarea.set_property("action-btn-name", formatter.get_action_button_name())
 
         # Signals
-        self._indents_spinner.connect("value-changed", self._on_indents_changed)
+        self._indents_spinner.connect("notify::value", self._on_indents_changed)
         self._textarea.connect("action-clicked", self._on_format_clicked)
         self._textarea.connect("error", self._on_error)
         self._textarea.connect("view-cleared", self._on_view_cleared)
@@ -47,7 +47,7 @@ class FormatterView(Adw.Bin):
     def _on_error(self, source_widget:GObject.Object, error:str):
         self._toast.add_toast(Adw.Toast(title=_("Error: {error}").format(error=error), priority=Adw.ToastPriority.HIGH))
 
-    def _on_indents_changed(self, user_data:GObject.GPointer):
+    def _on_indents_changed(self, pspec: GObject.ParamSpec, user_data:GObject.GPointer):
         self._format_text()
 
     def _on_format_clicked(self, source_widget:GObject.Object):

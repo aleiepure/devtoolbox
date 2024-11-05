@@ -1,19 +1,18 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $HtmlEncoderView : Adw.Bin {
+template $HtmlEncoderView: Adw.Bin {
   Adw.ToastOverlay _toast {
-    child:     ScrolledWindow {
-      child:       Adw.Clamp {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
         vexpand: true;
         maximum-size: 1200;
         tightening-threshold: 600;
-        child:
-        Box {
+
+        child: Box {
           orientation: vertical;
 
           $UtilityTitle _title {
@@ -39,7 +38,7 @@ template $HtmlEncoderView : Adw.Bin {
               $BinarySelector _direction_selector {
                 left-lbl: _("Encode");
                 right-lbl: _("Decode");
-                left-btn-active: "true";
+                left-btn-active: true;
               }
             }
           }
@@ -56,38 +55,33 @@ template $HtmlEncoderView : Adw.Bin {
 
             $TextArea _input_area {
               name: _("Input");
-              show-clear-btn: "true";
-              show-paste-btn: "true";
-              show-open-btn: "true";
-              use-default-text-extensions: "true";
-              text-show-line-numbers: "true";
-              text-syntax-highlighting: "true";
+              show-clear-btn: true;
+              show-paste-btn: true;
+              show-open-btn: true;
+              use-default-text-extensions: true;
+              text-show-line-numbers: true;
+              text-syntax-highlighting: true;
               text-language-highlight: "html";
+              text-highlight-current-line: true;
               text-wrap-mode: "none";
             }
 
             $TextArea _output_area {
               name: _("Output");
-              show-copy-btn: "true";
-              show-clear-btn: "false";
-              show-paste-btn: "false";
-              show-open-btn: "false";
-              text-editable: "false";
-              allow-drag-and-drop: "false";
-              text-show-line-numbers: "true";
-              text-syntax-highlighting: "true";
+              show-copy-btn: true;
+              show-clear-btn: false;
+              show-paste-btn: false;
+              show-open-btn: false;
+              text-editable: false;
+              allow-drag-and-drop: false;
+              text-show-line-numbers: true;
+              text-syntax-highlighting: true;
               text-language-highlight: "html";
               text-wrap-mode: "none";
             }
           }
-        }
-
-        ;
-      }
-
-      ;
-    }
-
-    ;
+        };
+      };
+    };
   }
 }

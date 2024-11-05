@@ -1,19 +1,18 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $BaseConverterView : Adw.Bin {
+template $BaseConverterView: Adw.Bin {
   Adw.ToastOverlay _toast {
-    child:     ScrolledWindow {
-      child:       Adw.Clamp {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
         vexpand: true;
         maximum-size: 1200;
         tightening-threshold: 600;
-        child:
-        Box {
+
+        child: Box {
           orientation: vertical;
 
           $UtilityTitle _title {
@@ -83,14 +82,8 @@ template $BaseConverterView : Adw.Bin {
               label: _("Typing an unaccepted character (i.e. \'A\' in the decimal field) will cause all the fields to reset to 0.");
             }
           }
-        }
-
-        ;
-      }
-
-      ;
-    }
-
-    ;
+        };
+      };
+    };
   }
 }

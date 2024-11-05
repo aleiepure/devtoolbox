@@ -1,17 +1,17 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $ReverseCronView : Adw.Bin {
+template $ReverseCronView: Adw.Bin {
   Adw.ToastOverlay _toast {
     child: ScrolledWindow {
       child: Adw.Clamp {
         vexpand: true;
         maximum-size: 1200;
         tightening-threshold: 600;
+
         child: Box {
           orientation: vertical;
 
@@ -42,6 +42,7 @@ template $ReverseCronView : Adw.Bin {
 
             Adw.ExpanderRow _minutes_expander {
               title: _("Minutes");
+
               Box {
                 orientation: vertical;
                 spacing: 10;
@@ -50,12 +51,17 @@ template $ReverseCronView : Adw.Bin {
                 margin-bottom: 6;
 
                 CheckButton _minutes_every_btn {
-                  styles ["heading"]
+                  styles [
+                    "heading"
+                  ]
+
                   label: _("Every minute");
                   active: true;
                 }
+
                 CheckButton _minutes_every_x_btn {
                   group: _minutes_every_btn;
+
                   child: Box {
                     orientation: horizontal;
                     spacing: 6;
@@ -63,19 +69,30 @@ template $ReverseCronView : Adw.Bin {
                     Label {
                       // TRANSLATORS: part of "Every x minute(s) starting at minute y"
                       label: _("Every");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _minutes_every_x_dropdown {}
+
                     Label {
                       // TRANSLATORS: part of "Every x minute(s) starting at minute y"
                       label: _("minute(s) starting at minute");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _minutes_every_x_starting_dropdown {}
                   };
                 }
+
                 CheckButton _minutes_specific_btn {
                   group: _minutes_every_btn;
+
                   child: Box {
                     orientation: vertical;
                     spacing: 6;
@@ -83,13 +100,19 @@ template $ReverseCronView : Adw.Bin {
                     Label {
                       label: _("Specific minute (choose one or many, no selection means every minute)");
                       halign: start;
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     Grid _minutes_specific_grid {}
                   };
                 }
+
                 CheckButton _minutes_range_btn {
                   group: _minutes_every_btn;
+
                   child: Box {
                     orientation: horizontal;
                     spacing: 6;
@@ -97,21 +120,32 @@ template $ReverseCronView : Adw.Bin {
                     Label {
                       // TRANSLATORS: part of "Every minute between minute x and minute y"
                       label: _("Every minute between minute");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _minutes_range_x_dropdown {}
+
                     Label {
                       // TRANSLATORS: part of "Every second between minute x and minute y"
                       label: _("and minute");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _minutes_range_y_dropdown {}
                   };
                 }
               }
             }
+
             Adw.ExpanderRow _hours_expander {
               title: _("Hours");
+
               Box {
                 orientation: vertical;
                 spacing: 10;
@@ -120,12 +154,17 @@ template $ReverseCronView : Adw.Bin {
                 margin-bottom: 6;
 
                 CheckButton _hours_every_btn {
-                  styles ["heading"]
+                  styles [
+                    "heading"
+                  ]
+
                   label: _("Every hour");
                   active: true;
                 }
+
                 CheckButton _hours_every_x_btn {
                   group: _hours_every_btn;
+
                   child: Box {
                     orientation: horizontal;
                     spacing: 6;
@@ -133,19 +172,30 @@ template $ReverseCronView : Adw.Bin {
                     Label {
                       // TRANSLATORS: part of "Every x hour(s) starting at hour y"
                       label: _("Every");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _hours_every_x_dropdown {}
+
                     Label {
                       // TRANSLATORS: part of "Every x hour(s) starting at hour y"
                       label: _("hour(s) starting at hour");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _hours_every_x_starting_dropdown {}
                   };
                 }
+
                 CheckButton _hours_specific_btn {
                   group: _hours_every_btn;
+
                   child: Box {
                     orientation: vertical;
                     spacing: 6;
@@ -153,37 +203,52 @@ template $ReverseCronView : Adw.Bin {
                     Label {
                       label: _("Specific hour (choose one or many, no selection means every hour)");
                       halign: start;
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     Grid _hours_specific_grid {}
                   };
                 }
+
                 CheckButton _hours_range_btn {
                   group: _hours_every_btn;
+
                   child: Box {
                     orientation: horizontal;
                     spacing: 6;
 
-
                     Label {
                       // TRANSLATORS: part of "Every hour between hour x and hour y"
                       label: _("Every hour between hour");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _hours_range_x_dropdown {}
 
                     Label {
                       // TRANSLATORS: part of "Every hour between hour x and hour y"
                       label: _("and hour");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _hours_range_y_dropdown {}
                   };
                 }
               }
             }
+
             Adw.ExpanderRow _day_expander {
               title: _("Day");
+
               Box {
                 orientation: vertical;
                 spacing: 10;
@@ -192,12 +257,17 @@ template $ReverseCronView : Adw.Bin {
                 margin-bottom: 6;
 
                 CheckButton _day_every_btn {
-                  styles ["heading"]
+                  styles [
+                    "heading"
+                  ]
+
                   label: _("Every day");
                   active: true;
                 }
+
                 CheckButton _day_every_x_btn {
                   group: _day_every_btn;
+
                   child: Box {
                     orientation: horizontal;
                     spacing: 6;
@@ -205,24 +275,39 @@ template $ReverseCronView : Adw.Bin {
                     Label {
                       // TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
                       label: _("Every");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _day_every_x_dropdown {}
+
                     Label {
                       // TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
                       label: _("day(s) starting on the");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _day_every_x_starting_dropdown {}
+
                     Label {
                       // TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
                       label: _("of the month");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
                   };
                 }
+
                 CheckButton _day_specific_btn {
                   group: _day_every_btn;
+
                   child: Box {
                     orientation: vertical;
                     spacing: 6;
@@ -230,37 +315,52 @@ template $ReverseCronView : Adw.Bin {
                     Label {
                       label: _("Specific day of month (choose one or many, no selection means every day)");
                       halign: start;
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     Grid _day_specific_grid {}
                   };
                 }
+
                 CheckButton _day_range_btn {
                   group: _day_every_btn;
+
                   child: Box {
                     orientation: horizontal;
                     spacing: 6;
 
-
                     Label {
                       // TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
                       label: _("Every day between the");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _day_range_x_dropdown {}
 
                     Label {
                       // TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
                       label: _("and the");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _day_range_y_dropdown {}
                   };
                 }
               }
             }
+
             Adw.ExpanderRow _month_expander {
               title: _("Month");
+
               Box {
                 orientation: vertical;
                 spacing: 10;
@@ -269,12 +369,17 @@ template $ReverseCronView : Adw.Bin {
                 margin-bottom: 6;
 
                 CheckButton _month_every_btn {
-                  styles ["heading"]
+                  styles [
+                    "heading"
+                  ]
+
                   label: _("Every month");
                   active: true;
                 }
+
                 CheckButton _month_every_x_btn {
                   group: _month_every_btn;
+
                   child: Box {
                     orientation: horizontal;
                     spacing: 6;
@@ -282,17 +387,27 @@ template $ReverseCronView : Adw.Bin {
                     Label {
                       // TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
                       label: _("Every");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _month_every_x_dropdown {}
+
                     Label {
                       // TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
                       label: _("month(s) starting in");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _month_every_x_starting_dropdown {
                       model: StringList {
-                        strings [_("January"),
+                        strings [
+                          _("January"),
                           _("February"),
                           _("March"),
                           _("April"),
@@ -309,8 +424,10 @@ template $ReverseCronView : Adw.Bin {
                     }
                   };
                 }
+
                 CheckButton _month_specific_btn {
                   group: _month_every_btn;
+
                   child: Box {
                     orientation: vertical;
                     spacing: 6;
@@ -318,26 +435,36 @@ template $ReverseCronView : Adw.Bin {
                     Label {
                       label: _("Specific month (choose one or many, no selection means every month)");
                       halign: start;
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     Grid _month_specific_grid {}
                   };
                 }
+
                 CheckButton _month_range_btn {
                   group: _month_every_btn;
+
                   child: Box {
                     orientation: horizontal;
                     spacing: 6;
 
-
                     Label {
                       // TRANSLATORS: part of "Every month between x and y" with x and y list of months
                       label: _("Every month between");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _month_range_x_dropdown {
                       model: StringList {
-                        strings [_("January"),
+                        strings [
+                          _("January"),
                           _("February"),
                           _("March"),
                           _("April"),
@@ -356,11 +483,16 @@ template $ReverseCronView : Adw.Bin {
                     Label {
                       // TRANSLATORS: part of "Every month between x and y" with x and y list of months
                       label: _("and");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _month_range_y_dropdown {
                       model: StringList {
-                        strings [_("January"),
+                        strings [
+                          _("January"),
                           _("February"),
                           _("March"),
                           _("April"),
@@ -379,8 +511,10 @@ template $ReverseCronView : Adw.Bin {
                 }
               }
             }
+
             Adw.ExpanderRow _week_expander {
               title: _("Weekday");
+
               Box {
                 orientation: vertical;
                 spacing: 10;
@@ -389,12 +523,17 @@ template $ReverseCronView : Adw.Bin {
                 margin-bottom: 6;
 
                 CheckButton _week_every_btn {
-                  styles ["heading"]
+                  styles [
+                    "heading"
+                  ]
+
                   label: _("Every weekday");
                   active: true;
                 }
+
                 CheckButton _week_every_x_btn {
                   group: _week_every_btn;
+
                   child: Box {
                     orientation: horizontal;
                     spacing: 6;
@@ -402,14 +541,23 @@ template $ReverseCronView : Adw.Bin {
                     Label {
                       // TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
                       label: _("Every");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _week_every_x_dropdown {}
+
                     Label {
                       // TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
                       label: _("weekday(s) starting on");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _week_every_x_starting_dropdown {
                       model: StringList {
                         strings [
@@ -425,8 +573,10 @@ template $ReverseCronView : Adw.Bin {
                     }
                   };
                 }
+
                 CheckButton _week_specific_btn {
                   group: _week_every_btn;
+
                   child: Box {
                     orientation: vertical;
                     spacing: 6;
@@ -434,31 +584,95 @@ template $ReverseCronView : Adw.Bin {
                     Label {
                       label: _("Specific weekday (choose one or many, no selection means every weekday)");
                       halign: start;
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     Grid _week_specific_grid {
-                      CheckButton {label: _("Monday"); layout {row: 0; column: 0;}}
-                      CheckButton {label: _("Tuesday"); layout {row: 0; column: 1;}}
-                      CheckButton {label: _("Wednesday"); layout {row: 0; column: 2;}}
-                      CheckButton {label: _("Thursday"); layout {row: 0; column: 3;}}
-                      CheckButton {label: _("Friday"); layout {row: 0; column: 4;}}
-                      CheckButton {label: _("Saturday"); layout {row: 0; column: 5;}}
-                      CheckButton {label: _("Sunday"); layout {row: 0; column: 6;}}
+                      CheckButton {
+                        label: _("Monday");
+
+                        layout {
+                          row: 0;
+                          column: 0;
+                        }
+                      }
+
+                      CheckButton {
+                        label: _("Tuesday");
+
+                        layout {
+                          row: 0;
+                          column: 1;
+                        }
+                      }
+
+                      CheckButton {
+                        label: _("Wednesday");
+
+                        layout {
+                          row: 0;
+                          column: 2;
+                        }
+                      }
+
+                      CheckButton {
+                        label: _("Thursday");
+
+                        layout {
+                          row: 0;
+                          column: 3;
+                        }
+                      }
+
+                      CheckButton {
+                        label: _("Friday");
+
+                        layout {
+                          row: 0;
+                          column: 4;
+                        }
+                      }
+
+                      CheckButton {
+                        label: _("Saturday");
+
+                        layout {
+                          row: 0;
+                          column: 5;
+                        }
+                      }
+
+                      CheckButton {
+                        label: _("Sunday");
+
+                        layout {
+                          row: 0;
+                          column: 6;
+                        }
+                      }
                     }
                   };
                 }
+
                 CheckButton _week_range_btn {
                   group: _week_every_btn;
+
                   child: Box {
                     orientation: horizontal;
                     spacing: 6;
 
-
                     Label {
                       // TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
                       label: _("Every weekday between");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _week_range_x_dropdown {
                       model: StringList {
                         strings [
@@ -476,8 +690,12 @@ template $ReverseCronView : Adw.Bin {
                     Label {
                       // TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
                       label: _("and");
-                      styles ["heading"]
+
+                      styles [
+                        "heading"
+                      ]
                     }
+
                     DropDown _week_range_y_dropdown {
                       model: StringList {
                         strings [
@@ -495,12 +713,16 @@ template $ReverseCronView : Adw.Bin {
                 }
               }
             }
+
             $EntryRow _command_row {
               title: _("Command to execute");
               text: "devtoolbox";
               show-paste-btn: true;
               show-clear-btn: true;
-              styles ["monospace"]
+
+              styles [
+                "monospace"
+              ]
             }
           }
 
@@ -509,11 +731,16 @@ template $ReverseCronView : Adw.Bin {
           }
 
           Adw.PreferencesGroup {
+            margin-bottom: 10;
+
             $EntryRow _cron_expression_row {
               title: _("CRON Expression");
               editable: false;
               show-copy-btn: true;
-              styles ["monospace"]
+
+              styles [
+                "monospace"
+              ]
             }
           }
         };

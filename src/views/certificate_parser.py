@@ -76,12 +76,10 @@ class CertificateParserView(Adw.Bin):
         # Create a file chooser
         app = Gio.Application.get_default()
         window = app.get_active_window()
-        self._native = Gtk.FileChooserNative(
-            transient_for=window,
+        self._file_dialog = Gtk.FileDialog(
+            modal=True,
             title=_("Open File"),
-            action=Gtk.FileChooserAction.OPEN,
             accept_label=_("Open"),
-            cancel_label=_("Cancel")
         )
 
         # Set filters
@@ -90,11 +88,12 @@ class CertificateParserView(Adw.Bin):
         file_filter.add_suffix("der")
         file_filter.add_suffix("pem")
         file_filter.set_name(_("Certificates"))
-        self._native.add_filter(file_filter)
+        
+        filter_store = Gio.ListStore.new(Gtk.FileFilter)
+        filter_store.append(file_filter)
+        self._file_dialog.set_filters(filter_store)
 
-        # Signals and show dialog
-        self._native.connect("response", self._on_open_response)
-        self._native.show()
+        self._file_dialog.open(window, None, self._on_open_dialog_complete, None)
 
     def _on_expand_btn_clicked(self, user_data:GObject.GPointer):
 
@@ -117,14 +116,13 @@ class CertificateParserView(Adw.Bin):
             expander.set_expanded(self._is_expanded)
 
 
-    def _on_open_response(self, dialog:Gtk.NativeDialog, response:int):
-
-        # Load file
-        if response == Gtk.ResponseType.ACCEPT:
-            self._path_lbl.set_label(dialog.get_file().get_path())
-        self._native = None
-
-        # Re-enable open button
+    def _on_open_dialog_complete(self, source: GObject.Object, result: Gio.AsyncResult, user_data: GObject.GPointer):
+        try:
+            file = source.open_finish(result)
+            self._path_lbl.set_label(file.get_path())
+        except GLib.GError:
+            pass
+        
         self._open_btn.set_sensitive(True)
 
     def _on_file_opened(self, source_widget:GObject.Object, user_data:GObject.GPointer):

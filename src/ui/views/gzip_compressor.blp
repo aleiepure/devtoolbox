@@ -1,24 +1,23 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $GzipCompressorView : Adw.Bin {
+template $GzipCompressorView: Adw.Bin {
   Adw.ToastOverlay _toast {
-    child:     ScrolledWindow {
-      child:       Adw.Clamp {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
         vexpand: true;
         maximum-size: 1200;
         tightening-threshold: 600;
-        child:
-        Box {
+
+        child: Box {
           orientation: vertical;
 
           $UtilityTitle _title {
             title: _("GZip Compress & Decompress");
-            description: _("Compress and decompress files and texts using GZip");
+            description: _("Compress and decompress texts and images using GZip");
             tool-name: "gzip-compressor";
           }
 
@@ -39,7 +38,7 @@ template $GzipCompressorView : Adw.Bin {
               $BinarySelector _direction_selector {
                 left-lbl: _("Compress");
                 right-lbl: _("Decompress");
-                left-btn-active: "true";
+                left-btn-active: true;
               }
             }
           }
@@ -55,22 +54,24 @@ template $GzipCompressorView : Adw.Bin {
 
             $TextFileArea _input_area {
               name: _("Input");
-              show-clear-btn: "true";
-              show-paste-btn: "true";
-              show-open-btn: "true";
-              use-all-files-extensions: "true";
+              show-clear-btn: true;
+              show-paste-btn: true;
+              show-open-btn: true;
+              use-default-text-extensions: true;
+              use-default-image-extensions: true;
               text-wrap-mode: "word-char";
             }
 
             $TextFileArea _output_area {
               name: _("Output");
-              show-copy-btn: "true";
-              show-clear-btn: "false";
-              show-paste-btn: "false";
-              show-open-btn: "false";
-              text-editable: "false";
-              allow-drag-and-drop: "false";
+              show-copy-btn: true;
+              show-clear-btn: false;
+              show-paste-btn: false;
+              show-open-btn: false;
+              text-editable: false;
+              allow-drag-and-drop: false;
               text-wrap-mode: "char";
+              default-save-name: "decompressed-image.png";
             }
           }
 
@@ -86,22 +87,26 @@ template $GzipCompressorView : Adw.Bin {
 
             Image {
               margin-end: 5;
-              pixel-size: 16;
+              pixel-size: 24;
               icon-name: "info-symbolic";
             }
 
-            Label {
-              label: _("The compression result and the expected decompression input are base64 encoded.");
+            Box {
+              orientation: vertical;
+
+              Label {
+                label: _("The compression result and the expected decompression input are base64 encoded.");
+                halign: start;
+              }
+
+              Label {
+                label: _("May hang the app for large files, please wait.");
+                halign: start;
+              }
             }
           }
-        }
-
-        ;
-      }
-
-      ;
-    }
-
-    ;
+        };
+      };
+    };
   }
 }

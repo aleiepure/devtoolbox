@@ -1,19 +1,18 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $ContrastCheckerView : Adw.Bin {
+template $ContrastCheckerView: Adw.Bin {
   Adw.ToastOverlay _toast {
-    child:     ScrolledWindow {
-      child:       Adw.Clamp {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
         vexpand: true;
         maximum-size: 1200;
         tightening-threshold: 600;
-        child:
-        Box {
+
+        child: Box {
           orientation: vertical;
 
           $UtilityTitle _title {
@@ -41,6 +40,7 @@ template $ContrastCheckerView : Adw.Bin {
                 valign: center;
                 width-request: 100;
                 rgba: "#FFFFFF";
+
                 dialog: ColorDialog {
                   modal: true;
                   title: _("Text color");
@@ -59,6 +59,7 @@ template $ContrastCheckerView : Adw.Bin {
                 valign: center;
                 width-request: 100;
                 rgba: "#7A00E4";
+
                 dialog: ColorDialog {
                   modal: true;
                   title: _("Background color");
@@ -228,14 +229,8 @@ template $ContrastCheckerView : Adw.Bin {
               }
             }
           }
-        }
-
-        ;
-      }
-
-      ;
-    }
-
-    ;
+        };
+      };
+    };
   }
 }

@@ -32,6 +32,13 @@
   padding: 20px;
 }
 
+dropdown, dropdown box, dropdown > entry, dropdown > button {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  font-weight: normal;
+}
+
 /* Theme Switcher */
 /* Modified from https://gitlab.gnome.org/tijder/blueprintgtk */
 /* Original header below */

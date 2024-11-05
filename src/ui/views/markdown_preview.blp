@@ -1,19 +1,18 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $MarkdownPreviewView : Adw.Bin {
+template $MarkdownPreviewView: Adw.Bin {
   Adw.ToastOverlay _toast {
-    child:     ScrolledWindow {
-      child:       Adw.Clamp {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
         vexpand: true;
         maximum-size: 1200;
         tightening-threshold: 600;
-        child:
-        Box {
+
+        child: Box {
           orientation: vertical;
 
           $UtilityTitle _title {
@@ -34,14 +33,15 @@ template $MarkdownPreviewView : Adw.Bin {
 
             $TextArea _textarea {
               name: _("Markdown");
-              show-clear-btn: "true";
-              show-paste-btn: "true";
-              show-open-btn: "true";
-              show-copy-btn: "true";
-              use-custom-file-extensions: "true";
+              show-clear-btn: true;
+              show-paste-btn: true;
+              show-open-btn: true;
+              show-copy-btn: true;
+              use-custom-file-extensions: true;
               custom-file-extensions: "md";
-              text-show-line-numbers: "true";
-              text-syntax-highlighting: "true";
+              text-show-line-numbers: true;
+              text-syntax-highlighting: true;
+              text-highlight-current-line: true;
               text-wrap-mode: "word-char";
             }
 
@@ -49,14 +49,8 @@ template $MarkdownPreviewView : Adw.Bin {
               name: _("Preview");
             }
           }
-        }
-
-        ;
-      }
-
-      ;
-    }
-
-    ;
+        };
+      };
+    };
   }
 }

@@ -1,19 +1,18 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $TimestampView : Adw.Bin {
+template $TimestampView: Adw.Bin {
   Adw.ToastOverlay _toast {
-    child:     ScrolledWindow {
-      child:       Adw.Clamp {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
         vexpand: true;
         maximum-size: 1200;
         tightening-threshold: 600;
-        child:
-        Box {
+
+        child: Box {
           orientation: vertical;
 
           $UtilityTitle _title {
@@ -27,14 +26,8 @@ template $TimestampView : Adw.Bin {
             margin-bottom: 10;
           }
 
-          Adw.PreferencesGroup {
+          Adw.PreferencesGroup _tool_options {
             title: _("Tool options");
-
-            Adw.ActionRow _timezone_row {
-              title: _("Timezone");
-              subtitle: _("Select the desired timezone");
-              icon-name: "clock-alt-symbolic";
-            }
           }
 
           Separator {

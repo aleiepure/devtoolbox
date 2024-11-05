@@ -1,93 +1,98 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $JsonValidatorView : Adw.Bin {
-    Adw.ToastOverlay _toast {
-        child: ScrolledWindow {
-            child: Adw.Clamp {
-                vexpand: true;
-                maximum-size: 1200;
-                tightening-threshold: 600;
-                child: Box {
-                    orientation: vertical;
+template $JsonValidatorView: Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
 
-                    $UtilityTitle _title {
-                        title: _("JSON Schema Validator");
-                        description: _("Check a JSON file against a JSON schema");
-                        tool-name: "json-validator";
-                    }
+        child: Box {
+          orientation: vertical;
 
-                    Separator {
-                        margin-top: 10;
-                    }
+          $UtilityTitle _title {
+            title: _("JSON Schema Validator");
+            description: _("Check a JSON file against a JSON schema");
+            tool-name: "json-validator";
+          }
 
-                    Box {
-                        orientation: horizontal;
-                        homogeneous: true;
-                        spacing: 10;
-                        margin-bottom: 10;
+          Separator {
+            margin-top: 10;
+          }
 
-                        $TextArea _json_textarea {
-                            name: "JSON";
-                            show-clear-btn: "true";
-                            show-paste-btn: "true";
-                            show-open-btn: "true";
-                            show-copy-btn: "true";
-                            use-custom-file-extensions: "true";
-                            custom-file-extensions: "json";
-                            text-show-line-numbers: "true";
-                            text-syntax-highlighting: "true";
-                            text-wrap-mode: "none";
-                        }
+          Box {
+            orientation: horizontal;
+            homogeneous: true;
+            spacing: 10;
+            margin-bottom: 10;
 
-                        $TextArea _schema_textarea {
-                            name: "JSON Schema";
-                            show-clear-btn: "true";
-                            show-paste-btn: "true";
-                            show-open-btn: "true";
-                            show-copy-btn: "true";
-                            use-custom-file-extensions: "true";
-                            custom-file-extensions: "json";
-                            text-show-line-numbers: "true";
-                            text-syntax-highlighting: "true";
-                            text-wrap-mode: "none";
-                        }
-                    }
+            $TextArea _json_textarea {
+              name: "JSON";
+              show-clear-btn: true;
+              show-paste-btn: true;
+              show-open-btn: true;
+              show-copy-btn: true;
+              use-custom-file-extensions: true;
+              custom-file-extensions: "json";
+              text-show-line-numbers: true;
+              text-syntax-highlighting: true;
+              text-highlight-current-line: true;
+              text-wrap-mode: "none";
+            }
 
-                    Box _check_box {
-                        visible: false;
-                        orientation: horizontal;
-                        halign: center;
-                        margin-bottom: 15;
-                        margin-top: 5;
+            $TextArea _schema_textarea {
+              name: "JSON Schema";
+              show-clear-btn: true;
+              show-paste-btn: true;
+              show-open-btn: true;
+              show-copy-btn: true;
+              use-custom-file-extensions: true;
+              custom-file-extensions: "json";
+              text-show-line-numbers: true;
+              text-syntax-highlighting: true;
+              text-highlight-current-line: true;
+              text-wrap-mode: "none";
+            }
+          }
 
-                        Image _check_icon {
-                            pixel-size: 56;
-                            margin-end: 20;
-                        }
+          Box _check_box {
+            visible: false;
+            orientation: horizontal;
+            halign: center;
+            margin-bottom: 15;
+            margin-top: 5;
 
-                        Box {
-                            orientation: vertical;
-                            valign: center;
+            Image _check_icon {
+              pixel-size: 56;
+              margin-end: 20;
+            }
 
-                            Label _check_title_lbl {
-                                styles ["heading"]
-                                margin-bottom: 5;
-                            }
+            Box {
+              orientation: vertical;
+              valign: center;
 
-                            Label _check_lbl {
-                                justify: center;
-                                width-request: 100;
-                                wrap: true;
-                            }
-                        }
-                    }
-                };
-            };
+              Label _check_title_lbl {
+                styles [
+                  "heading"
+                ]
+
+                margin-bottom: 5;
+              }
+
+              Label _check_lbl {
+                justify: center;
+                width-request: 100;
+                wrap: true;
+              }
+            }
+          }
         };
-    }
+      };
+    };
+  }
 }

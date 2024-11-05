@@ -1,11 +1,10 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $WebviewArea : Adw.Bin {
+template $WebviewArea: Adw.Bin {
   Box _box {
     margin-top: 10;
     orientation: vertical;
@@ -21,7 +20,9 @@ template $WebviewArea : Adw.Bin {
         margin-top: 8;
         margin-start: 8;
 
-        styles ["heading"]
+        styles [
+          "heading"
+        ]
       }
 
       Box {
@@ -29,18 +30,22 @@ template $WebviewArea : Adw.Bin {
         halign: end;
         hexpand: true;
 
-        Spinner _spinner {
-        }
+        Adw.Spinner _spinner {}
 
         Separator _spinner_separator {
-          styles ["spacer"]
+          styles [
+            "spacer"
+          ]
         }
 
         Box {
           orientation: horizontal;
 
           Button _view_btn {
-            styles ["flat"]
+            styles [
+              "flat"
+            ]
+
             valign: center;
             icon-name: "eye-open-symbolic";
             tooltip-text: _("Open web page in another browser");

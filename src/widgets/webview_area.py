@@ -22,7 +22,7 @@ class WebviewArea(Adw.Bin):
     name = GObject.Property(type=str, default="")
     show_spinner = GObject.Property(type=bool, default=False)
 
-    _blank_html = '<html><body style="color-scheme: dark;background-color: #0d1117;"></body></html>'
+    _blank_html = '<html><body></body></html>'
 
     def __init__(self):
         super().__init__()
@@ -33,13 +33,14 @@ class WebviewArea(Adw.Bin):
         self._webview.set_vexpand(True)
         self._webview.set_hexpand(True)
         self._webview.load_html(self._blank_html, "")
+        self._webview.add_css_class("card")
+        self._webview.set_property("overflow", Gtk.Overflow.HIDDEN)
         self._box.append(self._webview)
 
         # Property binding
         self.bind_property("name", self._name_lbl, "label", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-spinner", self._spinner, "visible", GObject.BindingFlags.SYNC_CREATE)
         self.bind_property("show-spinner", self._spinner_separator, "visible", GObject.BindingFlags.SYNC_CREATE)
-        self._spinner.bind_property("spinning", self._spinner, "visible", GObject.BindingFlags.BIDIRECTIONAL)
         self._spinner.bind_property("visible", self._spinner_separator, "visible", GObject.BindingFlags.BIDIRECTIONAL)
 
         # Signals

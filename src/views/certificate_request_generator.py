@@ -2,8 +2,11 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, Gio, GObject, Gdk
+from gi.repository import Gtk, Adw, Gio, GObject, Gdk, GLib
 from typing import List
+import subprocess
+from gettext import gettext as _
+
 import subprocess
 
 
@@ -32,7 +35,7 @@ class CertificateRequestGeneratorView(Adw.Bin):
     _key_save_path = Gtk.Template.Child()
     _key_save_btn = Gtk.Template.Child()
 
-    _saved_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH, button_label=_("Open folder"))
+    _saved_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH, button_label=_("Open CSR"))
 
     def __init__(self):
         super().__init__()
@@ -53,30 +56,30 @@ class CertificateRequestGeneratorView(Adw.Bin):
         # Create a file chooser
         app = Gio.Application.get_default()
         window = app.get_active_window()
-        self._native = Gtk.FileChooserNative(
-            transient_for=window,
+        self._file_dialog = Gtk.FileDialog(
+            modal=True,
             title=_("Open Key File"),
-            action=Gtk.FileChooserAction.OPEN,
             accept_label=_("Open"),
-            cancel_label=_("Cancel")
         )
 
         # Set filters
         file_filter = Gtk.FileFilter()
         file_filter.add_suffix("*")
         file_filter.set_name(_("All Files"))
-        self._native.add_filter(file_filter)
+        
+        filter_store = Gio.ListStore.new(Gtk.FileFilter)
+        filter_store.append(file_filter)
+        self._file_dialog.set_filters(filter_store)
 
-        # Signals and show dialog
-        self._native.connect("response", self._on_open_response)
-        self._native.show()
+        self._file_dialog.open(window, None, self._on_open_dialog_complete, None)
 
-    def _on_open_response(self, dialog: Gtk.NativeDialog, response: int):
+    def _on_open_dialog_complete(self, source: GObject.Object, result: Gio.AsyncResult, user_data: GObject.GPointer):
 
-        # Show path
-        if response == Gtk.ResponseType.ACCEPT:
-            self._key_open_path.set_label(dialog.get_file().get_path())
-        self._native = None
+        try:
+            file = source.open_finish(result)
+            self._key_open_path.set_label(file.get_path())
+        except GLib.GError:
+            pass
 
         # Re-enable open button
         self._key_open_btn.set_sensitive(True)
@@ -117,9 +120,9 @@ class CertificateRequestGeneratorView(Adw.Bin):
             app = Gio.Application.get_default()
             window = app.get_active_window()
             self._file_dialog = Gtk.FileDialog(
-                modal=True,
-                title=_("Save file as"),
-                accept_label=_("Save"),
+                modal=True, 
+                title=_("Select save location"),
+                accept_label=_("Choose"),
                 initial_name=self._common_name_entry.get_text() + ".csr"
             )
             self._file_dialog.save(window, None, self._on_save_complete, key_args)
@@ -170,8 +173,9 @@ class CertificateRequestGeneratorView(Adw.Bin):
         # Call to OpenSSL
         openssl = subprocess.run(command, capture_output=True)
         if openssl.returncode == 0:
-            self._saved_toast.set_title(_("Successfully saved as {save_path}").format(save_path=save_file.peek_path()))
+            self._saved_toast.set_title(_("Saved Successfully"))
             self._toast.add_toast(self._saved_toast)
+            self._save_path = save_file.peek_path()
         else:
             self._toast.add_toast(Adw.Toast(title=_("Error: {error}").format(error=openssl.stderr.decode().strip()), priority=Adw.ToastPriority.HIGH))
             if openssl.stderr.decode().strip().startswith("Could not read private key from "):
@@ -198,7 +202,4 @@ class CertificateRequestGeneratorView(Adw.Bin):
     def _on_toast_btn_clicked(self, user_data:GObject.GPointer):
         app = Gio.Application.get_default()
         window = app.get_active_window()
-        full_msg = self._saved_toast.get_title()
-        full_path = full_msg[full_msg.index("/"):len(full_msg)]
-        folder_path = full_path[:full_path.rindex("/")]
-        Gtk.show_uri(window, "file://" + folder_path, Gdk.CURRENT_TIME)
+        Gtk.show_uri(window, "file://" + self._save_path, Gdk.CURRENT_TIME)

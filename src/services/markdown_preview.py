@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gio, GObject
+from gi.repository import Gio, GObject, Adw
 import markdown2
 
 
@@ -45,11 +45,15 @@ class MarkdownPreviewService():
         self._scrollpos_script = ""
 
         if not self._markdown_css:
-            gfile = Gio.File.new_for_uri("resource:///me/iepure/devtoolbox/markdown-preview/github-markdown-dark.css")
+            gfile = Gio.File.new_for_uri("resource:///me/iepure/devtoolbox/markdown-preview/github-markdown.css")
             self._markdown_css = gfile.load_contents(None)[1].decode("utf-8")
 
         if not self._code_colors:
-            gfile = Gio.File.new_for_uri("resource:///me/iepure/devtoolbox/markdown-preview/fenced-code-colors.css")
+            if Adw.StyleManager.get_default().get_dark():
+                gfile = Gio.File.new_for_uri("resource:///me/iepure/devtoolbox/markdown-preview/fenced-code-colors-dark.css")
+            else:
+                gfile = Gio.File.new_for_uri("resource:///me/iepure/devtoolbox/markdown-preview/fenced-code-colors-light.css")
+            
             self._code_colors = gfile.load_contents(None)[1].decode("utf-8")
 
         if not self._scrollpos_script:

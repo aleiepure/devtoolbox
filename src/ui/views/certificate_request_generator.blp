@@ -1,17 +1,17 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $CertificateRequestGeneratorView : Adw.Bin {
+template $CertificateRequestGeneratorView: Adw.Bin {
   Adw.ToastOverlay _toast {
     child: ScrolledWindow {
       child: Adw.Clamp {
         vexpand: true;
         maximum-size: 1200;
         tightening-threshold: 600;
+
         child: Box {
           orientation: vertical;
 
@@ -33,12 +33,15 @@ template $CertificateRequestGeneratorView : Adw.Bin {
 
             [header-suffix]
             Button _create_csr_btn {
-                styles ["suggested-action", "pill"]
+              styles [
+                "suggested-action",
+                "pill"
+              ]
 
-                child: Adw.ButtonContent {
-                    label: _("Create CSR");
-                    icon-name: "edit";
-                };
+              child: Adw.ButtonContent {
+                label: _("Create CSR");
+                icon-name: "edit";
+              };
             }
 
             Adw.EntryRow _common_name_entry {
@@ -84,7 +87,11 @@ template $CertificateRequestGeneratorView : Adw.Bin {
               visible: bind _key_type_selector.right-btn-active;
               title: _("Key File *");
               subtitle: _("Open the file containing the key you want to use");
-              styles ["fake-action-row-bottom"]
+
+              styles [
+                "fake-action-row-bottom"
+              ]
+
               Box {
                 orientation: horizontal;
 
@@ -94,6 +101,7 @@ template $CertificateRequestGeneratorView : Adw.Bin {
 
                 Button _key_open_btn {
                   valign: center;
+
                   child: Adw.ButtonContent {
                     icon-name: "document-open-symbolic";
                     label: _("Open");
@@ -106,7 +114,11 @@ template $CertificateRequestGeneratorView : Adw.Bin {
               visible: bind _key_type_selector.left-btn-active;
               title: _("Key Size");
               subtitle: _("Size of the new key. It will be saved on the same path as the CSR.");
-              styles ["fake-action-row-middle"]
+
+              styles [
+                "fake-action-row-middle"
+              ]
+
               $BinarySelector _key_size_selector {
                 left-lbl: _("2048 bits");
                 right-lbl: _("4096 bits");
@@ -118,7 +130,11 @@ template $CertificateRequestGeneratorView : Adw.Bin {
               visible: bind _key_type_selector.left-btn-active;
               title: _("Key Save Location *");
               subtitle: _("Save location for the generated key file");
-              styles ["fake-action-row-bottom"]
+
+              styles [
+                "fake-action-row-bottom"
+              ]
+
               Box {
                 orientation: horizontal;
 
@@ -128,14 +144,14 @@ template $CertificateRequestGeneratorView : Adw.Bin {
 
                 Button _key_save_btn {
                   valign: center;
+
                   child: Adw.ButtonContent {
-                    icon-name: "floppy-symbolic";
-                    label: _("Save");
+                    icon-name: "document-open";
+                    label: _("Choose");
                   };
                 }
               }
             }
-
           }
         };
       };

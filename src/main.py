@@ -11,7 +11,7 @@ gi.require_version("GtkSource", "5")
 gi.require_version('WebKit', '6.0')
 gi.require_version('Gcr', '4')
 
-from gi.repository import Gtk, Gio, Adw, GObject, GtkSource, Gdk
+from gi.repository import Gtk, Gio, Adw, GObject, GtkSource, GLib
 
 from .window import DevtoolboxWindow
 
@@ -27,6 +27,8 @@ from .widgets.entry_row import EntryRow
 from .widgets.webview_area import WebviewArea
 from .widgets.image_area import ImageArea
 from .widgets.theme_switcher import ThemeSwitcher
+
+import shutil
 
 
 class DevtoolboxApplication(Adw.Application):
@@ -74,6 +76,7 @@ class DevtoolboxApplication(Adw.Application):
         win = self.props.active_window
         if not win:
             win = DevtoolboxWindow(self.debug, application=self)
+            win.connect("close-request", self._on_close_request)
         win.present()
 
     def on_about_action(self, widget, _):
@@ -113,6 +116,9 @@ class DevtoolboxApplication(Adw.Application):
         about_dialog.present()
 
     def on_quit_action(self, widget, _):
+        # Clean up temp files
+        shutil.rmtree(GLib.get_tmp_dir(), ignore_errors=True)
+        
         self.quit()
 
     def create_action(self, name, callback, shortcuts=None):
@@ -129,6 +135,9 @@ class DevtoolboxApplication(Adw.Application):
         self.add_action(action)
         if shortcuts:
             self.set_accels_for_action(f"app.{name}", shortcuts)
+            
+    def _on_close_request(self, user_data: GObject.GPointer):
+        self.on_quit_action(None, None)
 
 def main(version, debug):
     """The application's entry point."""

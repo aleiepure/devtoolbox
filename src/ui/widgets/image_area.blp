@@ -1,11 +1,10 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $ImageArea : Adw.Bin {
+template $ImageArea: Adw.Bin {
   Box {
     margin-top: 10;
     orientation: vertical;
@@ -21,7 +20,9 @@ template $ImageArea : Adw.Bin {
         margin-top: 8;
         margin-start: 8;
 
-        styles ["heading"]
+        styles [
+          "heading"
+        ]
       }
 
       Box {
@@ -30,11 +31,15 @@ template $ImageArea : Adw.Bin {
         hexpand: true;
 
         Button _action_btn {
-          styles ["accent"]
+          styles [
+            "accent"
+          ]
         }
 
         Separator _action_btn_separator {
-          styles ["spacer"]
+          styles [
+            "spacer"
+          ]
         }
 
         Box {
@@ -44,7 +49,11 @@ template $ImageArea : Adw.Bin {
 
           Button _open_btn {
             valign: center;
-            styles ["flat"]
+
+            styles [
+              "flat"
+            ]
+
             child: Adw.ButtonContent {
               icon-name: "document-open-symbolic";
               label: _("Open");
@@ -53,7 +62,11 @@ template $ImageArea : Adw.Bin {
 
           Button _save_btn {
             valign: center;
-            styles ["flat"]
+
+            styles [
+              "flat"
+            ]
+
             child: Adw.ButtonContent {
               icon-name: "floppy-symbolic";
               label: _("Save");
@@ -62,14 +75,22 @@ template $ImageArea : Adw.Bin {
 
           Button _view_btn {
             valign: center;
-            styles ["flat"]
+
+            styles [
+              "flat"
+            ]
+
             icon-name: "eye-open-symbolic";
             tooltip-text: _("Open image in another program");
           }
 
           Button _clear_btn {
             valign: center;
-            styles ["flat"]
+
+            styles [
+              "flat"
+            ]
+
             icon-name: "edit-clear-symbolic";
             tooltip-text: _("Clear input");
           }
@@ -78,10 +99,15 @@ template $ImageArea : Adw.Bin {
     }
 
     Adw.ViewStack _stack {
-      styles ["view", "rounded-border"]
+      styles [
+        "view",
+        "rounded-border",
+        "card"
+      ]
 
       Adw.ViewStackPage {
         name: "image";
+
         child: Picture _imageview {
           margin-top: 0;
           margin-bottom: 3;
@@ -90,14 +116,22 @@ template $ImageArea : Adw.Bin {
           can-shrink: true;
           keep-aspect-ratio: true;
 
-          styles ["view", "rounded-border"]
+          styles [
+            "view",
+            "rounded-border"
+          ]
         };
       }
 
       Adw.ViewStackPage {
         name: "loading";
+
         child: Box {
-          styles ["view", "rounded-border"]
+          styles [
+            "view",
+            "rounded-border"
+          ]
+
           orientation: vertical;
 
           Box {
@@ -106,9 +140,7 @@ template $ImageArea : Adw.Bin {
             vexpand: true;
             spacing: 10;
 
-            Spinner {
-              spinning: true;
-            }
+            Adw.Spinner {}
 
             Label _loading_lbl {}
           }

@@ -135,10 +135,15 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="document-edit-symbolic.svg">../data/icons/symbolic/edit-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="css-symbolic.svg">../data/icons/symbolic/css-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="loupe-symbolic.svg">../data/icons/symbolic/loupe-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="padlock2-symbolic.svg">../data/icons/symbolic/padlock2-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="arrow-pointing-away-from-line-left-symbolic.svg">../data/icons/symbolic/arrow-pointing-away-from-line-left-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="arrow-pointing-away-from-line-right-symbolic.svg">../data/icons/symbolic/arrow-pointing-away-from-line-right-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="uppercase-symbolic.svg">../data/icons/symbolic/uppercase-symbolic.svg</file>
   </gresource>
   <gresource prefix="/me/iepure/devtoolbox/markdown-preview/">
-    <file alias="github-markdown-dark.css">../data/markdown-preview/github-markdown-dark.css</file>
-    <file alias="fenced-code-colors.css">../data/markdown-preview/fenced-code-colors.css</file>
+    <file alias="github-markdown.css">../data/markdown-preview/github-markdown.css</file>
+    <file alias="fenced-code-colors-dark.css">../data/markdown-preview/fenced-code-colors-dark.css</file>
+    <file alias="fenced-code-colors-light.css">../data/markdown-preview/fenced-code-colors-light.css</file>
     <file alias="scrollpos-script.js">../data/markdown-preview/scrollpos-script.js</file>
   </gresource>
 </gresources>

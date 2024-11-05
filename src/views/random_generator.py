@@ -33,26 +33,26 @@ class RandomGeneratorView(Adw.Bin):
         self._generate_number()
 
         # Signals
-        self._string_length_spinner.connect("value-changed", self._on_string_length_changed)
-        self._string_uppercase_switch.connect("state-set", self._on_string_option_changed)
-        self._string_lowercase_switch.connect("state-set", self._on_string_option_changed)
-        self._string_numbers_switch.connect("state-set", self._on_string_option_changed)
-        self._string_special_chars_switch.connect("state-set", self._on_string_option_changed)
+        self._string_length_spinner.connect("notify::value", self._on_string_length_changed)
+        self._string_uppercase_switch.connect("notify::active", self._on_string_option_changed)
+        self._string_lowercase_switch.connect("notify::active", self._on_string_option_changed)
+        self._string_numbers_switch.connect("notify::active", self._on_string_option_changed)
+        self._string_special_chars_switch.connect("notify::active", self._on_string_option_changed)
         self._random_string_row.connect("generate-clicked", self._on_string_generate_again)
-        self._number_min_spinner.connect("value-changed", self._on_number_bound_changed)
-        self._number_max_spinner.connect("value-changed", self._on_number_bound_changed)
+        self._number_min_spinner.connect("notify::value", self._on_number_bound_changed)
+        self._number_max_spinner.connect("notify::value", self._on_number_bound_changed)
         self._random_number_row.connect("generate-clicked", self._on_number_generate_again)
 
-    def _on_string_length_changed(self, user_data:GObject.GPointer):
+    def _on_string_length_changed(self, pspec:GObject.ParamSpec, user_data:GObject.GPointer):
         self._generate_string()
 
-    def _on_string_option_changed(self, state:bool, user_data:GObject.GPointer):
+    def _on_string_option_changed(self, pspec:GObject.ParamSpec, user_data:GObject.GPointer):
         self._generate_string()
 
     def _on_string_generate_again(self, widget:GObject.GPointer):
         self._generate_string()
 
-    def _on_number_bound_changed(self, user_data:GObject.GPointer):
+    def _on_number_bound_changed(self, pspec:GObject.ParamSpec, user_data:GObject.GPointer):
         self._generate_number()
 
     def _on_number_generate_again(self, widget:Gtk.Widget):
@@ -75,12 +75,12 @@ class RandomGeneratorView(Adw.Bin):
         random.shuffle(letters_list)
         letters = "".join(letters_list)
 
-        for i in range(0, self._string_length_spinner.get_value_as_int()):
+        for i in range(0, int(self._string_length_spinner.get_value())):
             rnd = random.randint(0, len(letters)-1)
             output += letters[rnd]
 
         self._random_string_row.set_text(output)
 
     def _generate_number(self):
-        rnd = random.randint(self._number_min_spinner.get_value_as_int(), self._number_max_spinner.get_value_as_int())
+        rnd = random.randint(int(self._number_min_spinner.get_value()), int(self._number_max_spinner.get_value()))
         self._random_number_row.set_text(str(rnd))

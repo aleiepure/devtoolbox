@@ -27,12 +27,17 @@ class MarkdownPreviewView(Adw.Bin):
         # Signals
         self._textarea.connect("text-changed", self._on_input_changed)
         self._textarea.connect("view-cleared", self._on_view_cleared)
+        Adw.StyleManager.get_default().connect("notify::dark", self._on_style_changed)
 
-    def _on_view_cleared(self, source_widget:GObject.Object):
+        self._load_markdown()
+
+    def _on_view_cleared(self, source_widget: GObject.Object):
         self._service.get_cancellable().cancel()
 
-
-    def _on_input_changed(self, source_widget:GObject.Object):
+    def _on_input_changed(self, source_widget: GObject.Object):
+        self._load_markdown()
+        
+    def _on_style_changed(self, pspec: GObject.ParamSpec, user_data: GObject.GPointer):
         self._load_markdown()
 
     def _load_markdown(self):
@@ -46,6 +51,6 @@ class MarkdownPreviewView(Adw.Bin):
         # Call task
         self._service.build_html_from_markdown_async(self, self._on_build_done)
 
-    def _on_build_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
+    def _on_build_done(self, source_widget: GObject.Object, result: Gio.AsyncResult, user_data: GObject.GPointer):
         html_path = self._service.async_finish(result, self)
         self._webarea.load_uri("file://" + html_path)

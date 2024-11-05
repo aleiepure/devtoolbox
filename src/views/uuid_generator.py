@@ -28,12 +28,12 @@ class UuidGeneratorView(Adw.Bin):
 
         # Signals
         self._version_dropdown.connect("notify::selected", self._on_version_changed)
-        self._amount_spinner.connect("value-changed", self._on_amount_changed)
+        self._amount_spinner.connect("notify::value", self._on_amount_changed)
 
-    def _on_version_changed(self, source_widget:GObject.Object, pspec:GObject.ParamSpec):
+    def _on_version_changed(self, pspec:GObject.ParamSpec, user_data:GObject.GPointer):
         self._generate()
 
-    def _on_amount_changed(self, user_data:GObject.GPointer):
+    def _on_amount_changed(self, pspec:GObject.ParamSpec, user_data:GObject.GPointer):
         self._generate()
 
     def _generate(self):
@@ -45,7 +45,7 @@ class UuidGeneratorView(Adw.Bin):
         # Setup task
         self._output_area.set_spinner_spin(True)
         self._service.set_version(self._version_dropdown.get_selected())
-        self._service.set_amount(self._amount_spinner.get_value_as_int())
+        self._service.set_amount(int(self._amount_spinner.get_value()))
 
         # Call task
         self._service.generate_async(self, self._on_generation_done)

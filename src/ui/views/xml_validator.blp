@@ -1,19 +1,18 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $XmlValidatorView : Adw.Bin {
+template $XmlValidatorView: Adw.Bin {
   Adw.ToastOverlay _toast {
-    child:     ScrolledWindow {
-      child:       Adw.Clamp {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
         vexpand: true;
         maximum-size: 1200;
         tightening-threshold: 600;
-        child:
-        Box {
+
+        child: Box {
           orientation: vertical;
 
           $UtilityTitle _title {
@@ -34,27 +33,29 @@ template $XmlValidatorView : Adw.Bin {
 
             $TextArea _xml_textarea {
               name: "XML";
-              show-clear-btn: "true";
-              show-paste-btn: "true";
-              show-open-btn: "true";
-              show-copy-btn: "true";
-              use-custom-file-extensions: "true";
+              show-clear-btn: true;
+              show-paste-btn: true;
+              show-open-btn: true;
+              show-copy-btn: true;
+              use-custom-file-extensions: true;
               custom-file-extensions: "xml";
-              text-show-line-numbers: "true";
-              text-syntax-highlighting: "true";
+              text-show-line-numbers: true;
+              text-syntax-highlighting: true;
+              text-highlight-current-line: true;
               text-wrap-mode: "none";
             }
 
             $TextArea _xsd_textarea {
               name: "XSD";
-              show-clear-btn: "true";
-              show-paste-btn: "true";
-              show-open-btn: "true";
-              show-copy-btn: "true";
-              use-custom-file-extensions: "true";
+              show-clear-btn: true;
+              show-paste-btn: true;
+              show-open-btn: true;
+              show-copy-btn: true;
+              use-custom-file-extensions: true;
               custom-file-extensions: "xsd";
-              text-show-line-numbers: "true";
-              text-syntax-highlighting: "true";
+              text-show-line-numbers: true;
+              text-syntax-highlighting: true;
+              text-highlight-current-line: true;
               text-wrap-mode: "none";
             }
           }
@@ -90,14 +91,8 @@ template $XmlValidatorView : Adw.Bin {
               }
             }
           }
-        }
-
-        ;
-      }
-
-      ;
-    }
-
-    ;
+        };
+      };
+    };
   }
 }

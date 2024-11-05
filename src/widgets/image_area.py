@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, Adw, GObject, Gio, Gdk, GdkPixbuf
+from gi.repository import Gtk, Adw, GObject, Gio, Gdk, GdkPixbuf, GLib
 from gettext import gettext as _
 from typing import List
 
@@ -33,7 +33,9 @@ class ImageArea(Adw.Bin):
     show_open_btn = GObject.Property(type=bool, default=False)
     loading_label = GObject.Property(type=str, default=_("Opening file..."))
     allow_drag_and_drop = GObject.Property(type=bool, default=False)
-    content_fit = GObject.Property(type=Gtk.ContentFit, default=Gtk.ContentFit.CONTAIN)
+    content_fit = GObject.Property(
+        type=Gtk.ContentFit, default=Gtk.ContentFit.CONTAIN)
+    default_save_name = GObject.Property(type=str, default="image.png")
 
     # Custom signals
     __gsignals__ = {
@@ -58,17 +60,28 @@ class ImageArea(Adw.Bin):
         self._imageview.add_controller(target)
 
         # Property binding
-        self.bind_property("name", self._name_lbl, "label", GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-action-btn", self._action_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-action-btn", self._action_btn_separator, "visible", GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("action-btn-name", self._action_btn, "label", GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-view-btn", self._view_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-clear-btn", self._clear_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-open-btn", self._open_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("show-save-btn", self._save_btn, "visible", GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("loading-label", self._loading_lbl, "label", GObject.BindingFlags.SYNC_CREATE)
-        self.bind_property("content-fit", self._imageview, "content-fit", GObject.BindingFlags.SYNC_CREATE)
-        self._action_btn.bind_property("visible", self._action_btn_separator, "visible", GObject.BindingFlags.BIDIRECTIONAL)
+        self.bind_property("name", self._name_lbl, "label",
+                           GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-action-btn", self._action_btn,
+                           "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-action-btn", self._action_btn_separator,
+                           "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("action-btn-name", self._action_btn,
+                           "label", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-view-btn", self._view_btn,
+                           "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-clear-btn", self._clear_btn,
+                           "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-open-btn", self._open_btn,
+                           "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("show-save-btn", self._save_btn,
+                           "visible", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("loading-label", self._loading_lbl,
+                           "label", GObject.BindingFlags.SYNC_CREATE)
+        self.bind_property("content-fit", self._imageview,
+                           "content-fit", GObject.BindingFlags.SYNC_CREATE)
+        self._action_btn.bind_property(
+            "visible", self._action_btn_separator, "visible", GObject.BindingFlags.BIDIRECTIONAL)
 
         # Signals
         self._view_btn.connect("clicked", self._on_view_clicked)
@@ -77,31 +90,32 @@ class ImageArea(Adw.Bin):
         self._save_btn.connect("clicked", self._on_save_clicked)
         self._action_btn.connect("clicked", self._on_action_clicked)
 
-    def _on_dnd_drop(self, drop_target:Gtk.DropTarget, value: Gdk.FileList, x:float, y:float, user_data:GObject.Object=None):
+    def _on_dnd_drop(self, drop_target: Gtk.DropTarget, value: Gdk.FileList, x: float, y: float, user_data: GObject.Object = None):
         files: List[Gio.File] = value.get_files()
         if len(files) != 1:
             self.emit("error", _("Cannot open more than one file"))
             return
         self._open_file(files[0])
 
-    def _on_action_clicked(self, user_data:GObject.GPointer):
+    def _on_action_clicked(self, user_data: GObject.GPointer):
         self.emit("action-clicked")
 
-    def _on_view_clicked(self, user_data:GObject.GPointer):
+    def _on_view_clicked(self, user_data: GObject.GPointer):
 
         if self.emit("view-clicked"):
             return
 
         app = Gio.Application.get_default()
         window = app.get_active_window()
-        Gtk.show_uri(window, self._imageview.get_file().get_uri(), Gdk.CURRENT_TIME)
+        Gtk.show_uri(window, self._imageview.get_file().get_uri(),
+                     Gdk.CURRENT_TIME)
 
-    def _on_clear_clicked(self, user_data:GObject.GPointer):
+    def _on_clear_clicked(self, user_data: GObject.GPointer):
         self._clear()
         self._open_btn.set_sensitive(True)
         self.emit("view-cleared")
 
-    def _on_open_clicked(self, user_data:GObject.GPointer):
+    def _on_open_clicked(self, user_data: GObject.GPointer):
 
         # Start loading animation and disable open button
         self._open_btn.set_sensitive(False)
@@ -111,36 +125,36 @@ class ImageArea(Adw.Bin):
         # Create a file chooser
         app = Gio.Application.get_default()
         window = app.get_active_window()
-        self._native = Gtk.FileChooserNative(
-            transient_for=window,
+        self._file_dialog = Gtk.FileDialog(
+            modal=True,
             title=_("Open File"),
-            action=Gtk.FileChooserAction.OPEN,
             accept_label=_("Open"),
-            cancel_label=_("Cancel")
         )
 
         # File filters
         image_file_filter = Gtk.FileFilter()
-        allowed_extensions = ["bmp", "gif", "jpg", "jpeg", "png", "tiff", "tif"]
+        allowed_extensions = ["bmp", "gif",
+                              "jpg", "jpeg", "png", "tiff", "tif"]
         for extension in allowed_extensions:
             image_file_filter.add_suffix(extension)
         image_file_filter.set_name(_("Supported Image Formats"))
-        self._native.add_filter(image_file_filter)
 
-        # Signals and show dialog
-        self._native.connect("response", self._on_open_response)
-        self._native.show()
+        filter_store = Gio.ListStore.new(Gtk.FileFilter)
+        filter_store.append(image_file_filter)
+        self._file_dialog.set_filters(filter_store)
 
-    def _on_open_response(self, dialog:Gtk.NativeDialog, response:int):
-        if response == Gtk.ResponseType.ACCEPT:
-            self._open_file(dialog.get_file())
-        else:
+        self._file_dialog.open(
+            window, None, self._on_open_dialog_complete, None)
+
+    def _on_open_dialog_complete(self, source: GObject.Object, result: Gio.AsyncResult, user_data: GObject.GPointer):
+        try:
+            file = source.open_finish(result)
+            self._open_file(file)
+        except GLib.GError:
             self._open_btn.set_sensitive(True)
             self._stack.set_visible_child_name("image")
 
-        self._native = None
-
-    def _open_file(self, file:Gio.File):
+    def _open_file(self, file: Gio.File):
         if file and self.allow_drag_and_drop:
             self._imageview.set_file(file)
             self._view_btn.set_visible(True)
@@ -149,7 +163,7 @@ class ImageArea(Adw.Bin):
         self._open_btn.set_sensitive(True)
         self._stack.set_visible_child_name("image")
 
-    def _on_save_clicked(self, user_data:GObject.GPointer):
+    def _on_save_clicked(self, user_data: GObject.GPointer):
 
         if self.emit("save-clicked"):
             return
@@ -161,39 +175,25 @@ class ImageArea(Adw.Bin):
 
         app = Gio.Application.get_default()
         window = app.get_active_window()
-        self._native = Gtk.FileChooserNative(
-            transient_for=window,
+        self._file_dialog = Gtk.FileDialog(
+            modal=True,
             title=_("Save file as"),
-            action=Gtk.FileChooserAction.SAVE,
             accept_label=_("Save"),
-            cancel_label=_("Cancel"),
+            initial_name=self.default_save_name
         )
-        self._native.connect("response", self._on_save_response)
-        self._native.show()
+        self._file_dialog.save(
+            window, None, self._on_save_dialog_complete, None)
 
-    def _on_save_response(self, dialog:Gtk.NativeDialog, response:int):
-        if response == Gtk.ResponseType.ACCEPT:
-            self._save_file(dialog.get_file())
-        else:
+    def _on_save_dialog_complete(self, source: GObject.Object, result: Gio.AsyncResult, user_data: GObject.GPointer):
+        try: 
+            file = source.save_finish(result)
+            self._imageview.get_file().copy(file, Gio.FileCopyFlags.OVERWRITE, None, None, None)
             self._save_btn.set_sensitive(True)
             self._stack.set_visible_child_name("image")
-
-        self._native = None
-
-    def _save_file(self, destination:Gio.File):
-        self._save_destination_file = destination
-        self._imageview.get_file().copy_async(destination, Gio.FileCopyFlags.OVERWRITE, 0, None, None, None, self._on_save_file_complete, None)
-
-    def _on_save_file_complete(self, source_file:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer=None):
-        res = source_file.copy_finish(result)
-
-        self._save_btn.set_sensitive(True)
-        self._stack.set_visible_child_name("image")
-        if not res:
-            self.emit("error", _("Unable to save image."))
-            return
-
-        self.emit("saved", self._save_destination_file.get_path())
+            self.emit("saved", file.get_path())
+        except GLib.GError:
+            self._save_btn.set_sensitive(True)
+            self._stack.set_visible_child_name("image")
 
     def _clear(self):
         self._view_btn.set_visible(False)
@@ -202,13 +202,13 @@ class ImageArea(Adw.Bin):
         self._imageview.set_file(None)
         self._action_btn.set_sensitive(True)
 
-    def set_file(self, file:Gio.File):
+    def set_file(self, file: Gio.File):
         self._imageview.set_file(file)
 
     def clear(self):
         self._clear()
 
-    def set_file(self, file:Gio.File):
+    def set_file(self, file: Gio.File):
         self._view_btn.set_visible(True)
         self._save_btn.set_visible(True)
         self._imageview.set_file(file)
@@ -216,13 +216,13 @@ class ImageArea(Adw.Bin):
     def get_file(self) -> Gio.File:
         return self._imageview.get_file()
 
-    def set_visible_view(self, view_name:str):
+    def set_visible_view(self, view_name: str):
         self._stack.set_visible_child_name(view_name)
 
-    def set_loading_lbl(self, loading_lbl:str):
+    def set_loading_lbl(self, loading_lbl: str):
         self.loading_label = loading_lbl
 
-    def set_action_btn_sensitive(self, sensitive:bool):
+    def set_action_btn_sensitive(self, sensitive: bool):
         self._action_btn.set_sensitive(sensitive)
 
     def set_pixbuf(self, pixbuf: GdkPixbuf.Pixbuf):

@@ -1,86 +1,80 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
-
 using Gtk 4.0;
 using Adw 1;
 
-template $LoremGeneratorView : Adw.Bin {
-    Adw.ToastOverlay _toast {
-        child: ScrolledWindow {
-            child: Adw.Clamp {
-                vexpand: true;
-                maximum-size: 1200;
-                tightening-threshold: 600;
-                child: Box {
-                    orientation: vertical;
+template $LoremGeneratorView: Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
 
-                    // Title
-                    $UtilityTitle _title {
-                        title: _("Lorem Ipsum Generator");
-                        description: _("Generate lorem ipsum placeholder text");
-                        tool-name: "lorem-generator";
-                    }
-                    Separator {
-                        margin-top: 10;
-                        margin-bottom: 10;
-                    }
+        child: Box {
+          orientation: vertical;
+          // Title
+          $UtilityTitle _title {
+            title: _("Lorem Ipsum Generator");
+            description: _("Generate lorem ipsum placeholder text");
+            tool-name: "lorem-generator";
+          }
 
-                    // Options
-                    Adw.PreferencesGroup {
-                        title: _("Tool options");
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
 
-                        Adw.ActionRow {
-                            title: _("Begin with \"Lorem ipsum dolor sit amet\"");
-                            icon-name: "text-direction-ltr";
-                            activatable-widget: _begin_with_switch;
+          // Options
+          Adw.PreferencesGroup {
+            title: _("Tool options");
 
-                            [suffix]
-                            Switch _begin_with_switch {
-                                active: true;
-                                valign: center;
-                            }
-                        }
+            Adw.SwitchRow _begin_with_switch {
+              title: _("Begin with \"Lorem ipsum dolor sit amet\"");
+              icon-name: "text-direction-ltr";
+              active: true;
+            }
 
-                        Adw.ComboRow _quantity_combo {
-                            title: _("Amount");
-                            icon-name: "stacked-plates";
-                            model: StringList {
-                                strings [
-                                    _("Words"),
-                                    _("Sentences"),
-                                    _("Paragraphs")
-                                ]
-                            };
+            Adw.SpinRow _quantity_spinner {
+              title: _("Amount");
+              icon-name: "stacked-plates";
 
-                            [suffix]
-                            SpinButton _quantity_spinner {
-                                margin-start: 10;
-                                valign: center;
-                                adjustment: Adjustment {
-                                    lower: 1;
-                                    upper: 999;
-                                    step-increment: 1;
-                                    value: 5;
-                                };
-                            }
-                        }
-                    }
-                    Separator {
-                        margin-top: 10;
-                    }
+              adjustment: Adjustment {
+                lower: 1;
+                upper: 999;
+                step-increment: 1;
+                value: 5;
+              };
 
-                    // Text area
-                    $TextArea _output_area {
-                        name: _("Generated text");
-                        show-copy-btn: true;
-                        text-editable: false;
-                        allow-drag-and-drop: false;
-                        margin-bottom: 10;
-                        text-wrap-mode: word;
-                    }
+              [suffix]
+              DropDown _quantity_combo {
+                model: StringList {
+                  strings [
+                    _("Words"),
+                    _("Sentences"),
+                    _("Paragraphs")
+                  ]
                 };
-            };
+              }
+            }
+          }
+
+          Separator {
+            margin-top: 10;
+          }
+
+          // Text area
+          $TextArea _output_area {
+            name: _("Generated text");
+            show-copy-btn: true;
+            text-editable: false;
+            allow-drag-and-drop: false;
+            margin-bottom: 10;
+            text-wrap-mode: word;
+          }
         };
-    }
+      };
+    };
+  }
 }

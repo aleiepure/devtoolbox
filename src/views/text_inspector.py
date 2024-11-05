@@ -39,6 +39,9 @@ class TextInspectorView(Adw.Bin):
         self._service.get_cancellable().cancel()
 
     def _on_case_changed(self, source_widget:GObject.Object, pspec:GObject.ParamSpec):
+        
+        if self._textarea.get_text() == "":
+            return
 
         # Stop previous tasks
         self._service.get_cancellable().cancel()
