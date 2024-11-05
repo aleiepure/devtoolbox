@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: me.iepure.devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-10-30 15:58+0100\n"
-"PO-Revision-Date: 2023-08-21 01:57+0000\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"PO-Revision-Date: 2024-11-03 14:00+0000\n"
+"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/tr/>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.8.2\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #. TRANSLATORS: do not translate
@@ -28,7 +28,6 @@ msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
-#, fuzzy
 msgid "Dev tools at your fingertips"
 msgstr "Geliştirme araçları parmaklarınızın ucunda"
 
@@ -37,6 +36,9 @@ msgid ""
 "JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
 "Markdown;Image;"
 msgstr ""
+"JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;M"
+"arkdown;Image;dönüştürücü;ayırıcı;Sıkıştırıcı;Sağlama Toplamı;düzenli "
+"ifade;görüntü;"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -140,18 +142,16 @@ msgstr "CRON ifadeleri oluştur"
 
 #: src/window.py:159 src/window.py:166 src/window.py:173 src/window.py:180
 #: src/window.py:187
-#, fuzzy
 msgid "Encoders & Decoders"
-msgstr "URL Kodlayıcı ve Kod Çözücü"
+msgstr "Kodlayıcılar ve Kod Çözücüler"
 
 #: src/window.py:161 src/ui/views/html_encoder.blp:21
 msgid "Encode and decode special characters using the HTML format"
 msgstr "HTML biçimini kullanarak özel karakterleri kodlayın ve kodunu çözün"
 
 #: src/window.py:168
-#, fuzzy
 msgid "Encode and decode base64 strings"
-msgstr "URLʼlerin içindeki özel karakterleri kodlayın ve kodunu çözün"
+msgstr "Base64 dizgelerini kodla ve kodunu çöz"
 
 #: src/window.py:175 src/ui/views/url_encoder.blp:21
 msgid "Encode and decode special characters inside URLs"
@@ -167,9 +167,8 @@ msgstr "JWT jetonlarını başlığa ve yüke kodunu çözün"
 
 #: src/window.py:196 src/window.py:203 src/window.py:210 src/window.py:217
 #: src/window.py:224 src/window.py:231 src/window.py:238 src/window.py:245
-#, fuzzy
 msgid "Formatters & Minifiers"
-msgstr "Biçimlendiriciler"
+msgstr "Biçimlendiriciler ve Küçültücüler"
 
 #: src/window.py:198 src/formatters/json.py:14
 msgid "Format JSON documents"
@@ -196,14 +195,12 @@ msgid "Format CSS documents"
 msgstr "CSS belgelerini biçimlendir"
 
 #: src/window.py:240 src/formatters/css_minifier.py:15
-#, fuzzy
 msgid "Minify CSS documents"
-msgstr "CSS belgelerini biçimlendir"
+msgstr "CSS belgelerini küçült"
 
 #: src/window.py:247
-#, fuzzy
 msgid "Minify JavaScript documents"
-msgstr "JavaScript belgelerini biçimlendir"
+msgstr "JavaScript belgelerini küçült"
 
 #: src/window.py:254 src/window.py:261 src/window.py:268 src/window.py:275
 #: src/window.py:282 src/window.py:289
@@ -797,30 +794,31 @@ msgstr ""
 "{xsd_error}"
 
 #: src/ui/window.blp:56
-#, fuzzy
 msgid "Show/hide searchbar"
 msgstr "Kenar çubuğunu göster/gizle"
 
 #: src/ui/window.blp:62
 msgid "Favorite Tools"
-msgstr ""
+msgstr "Gözde Araçlar"
 
 #: src/ui/window.blp:71
 msgid "No Favorites"
-msgstr ""
+msgstr "Gözde Yok"
 
 #: src/ui/window.blp:72
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
 msgstr ""
+"Başlığın yanındaki yıldız düğmesine tıklayarak gözde araçlarınızı buraya "
+"ekleyin"
 
 #: src/ui/window.blp:92
 msgid "Favorites"
-msgstr ""
+msgstr "Gözdeler"
 
 #: src/ui/window.blp:121
 msgid "Search Tools…"
-msgstr ""
+msgstr "Arama Araçları…"
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
@@ -835,12 +833,11 @@ msgid "_About Dev Toolbox"
 msgstr "Dev Toolbox _Hakkında"
 
 #: src/ui/about_dialog.blp:10
-#, fuzzy
 msgid ""
 "Copyright © 2022 - 2024 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
-"Telif Hakkı © 2022 - 2023 Alessandro Iepure\n"
+"Telif Hakkı © 2022 - 2024 Alessandro Iepure\n"
 "Kimi simgelerin telif hakkı GNOME Projesi'ne aittir"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
@@ -998,29 +995,27 @@ msgstr "CSR Oluştur"
 
 #: src/ui/views/certificate_request_generator.blp:45
 msgid "Common Name (CN) *"
-msgstr ""
+msgstr "Yaygın Ad (CN) *"
 
 #: src/ui/views/certificate_request_generator.blp:49
-#, fuzzy
 msgid "Country Name (C)"
-msgstr "Ülke"
+msgstr "Ülke Adı (C)"
 
 #: src/ui/views/certificate_request_generator.blp:53
 msgid "State or Province Name (ST)"
-msgstr ""
+msgstr "Eyalet ya da İl Adı (ST)"
 
 #: src/ui/views/certificate_request_generator.blp:57
-#, fuzzy
 msgid "Locality Name (L)"
-msgstr "Soyad *"
+msgstr "Yöre Adı (L)"
 
 #: src/ui/views/certificate_request_generator.blp:61
 msgid "Organization Name (O)"
-msgstr ""
+msgstr "Kuruluş Adı (O)"
 
 #: src/ui/views/certificate_request_generator.blp:65
 msgid "Organization Unit Name (OU)"
-msgstr ""
+msgstr "Kuruluş Birim Adı (OU)"
 
 #: src/ui/views/certificate_request_generator.blp:69
 msgid "Passphrase"
@@ -1629,7 +1624,7 @@ msgstr "günde bir, ayın şu gününden başlayarak"
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:219
 msgid "of the month"
-msgstr " "
+msgstr "ay"
 
 #: src/ui/views/reverse_cron.blp:231
 msgid ""
@@ -1650,7 +1645,7 @@ msgstr "ve"
 
 #: src/ui/views/reverse_cron.blp:273
 msgid "Every month"
-msgstr "her ay"
+msgstr "Hey ay"
 
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
 #: src/ui/views/reverse_cron.blp:290
@@ -1827,34 +1822,32 @@ msgid "Date"
 msgstr "Tarih"
 
 #: src/ui/views/timestamp.blp:64
-#, fuzzy
 msgid "ISO Date (ISO 8601/RFC 3339)"
-msgstr "ISO tarih (ISO 8601/RFC 3339)"
+msgstr "ISO Tarih (ISO 8601/RFC 3339)"
 
 #: src/ui/views/timestamp.blp:70
 msgid "RFC 2822 Date"
-msgstr ""
+msgstr "RFC 2822 Tarih"
 
 #: src/ui/views/timestamp.blp:76
 msgid "Short Date"
-msgstr ""
+msgstr "Kısa Tarih"
 
 #: src/ui/views/timestamp.blp:82
 msgid "Short Time"
-msgstr ""
+msgstr "Kısa zaman"
 
 #: src/ui/views/timestamp.blp:88
-#, fuzzy
 msgid "Long Date"
-msgstr "Tarih"
+msgstr "Uzun Tarih"
 
 #: src/ui/views/timestamp.blp:94
 msgid "Long Time"
-msgstr ""
+msgstr "Uzun Zaman"
 
 #: src/ui/views/timestamp.blp:100
 msgid "Full Long Date"
-msgstr ""
+msgstr "Tam Uzun Tarih"
 
 #: src/ui/views/url_encoder.blp:20
 msgid "URL Encoder & Decoder"
@@ -1920,7 +1913,7 @@ msgstr "Genel"
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Search Tools"
-msgstr ""
+msgstr "Arama Araçları"
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"
@@ -1984,31 +1977,28 @@ msgstr "CSS Biçimlendirici"
 
 #: src/formatters/css.py:16 src/formatters/css_minifier.py:17
 msgid "Type CSS here"
-msgstr "CSS'i buraya yazın"
+msgstr "CSS kodunu buraya yazın"
 
 #: src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
-msgstr ""
+msgstr "CSS Küçültücü"
 
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
-msgstr ""
+msgstr "Küçült"
 
 #: src/formatters/js_minifier.py:14
-#, fuzzy
 msgid "JavaScript Minifier"
-msgstr "JavaScript Biçimlendirici"
+msgstr "JavaScript küçültücü"
 
 #: src/formatters/js_minifier.py:15
-#, fuzzy
 msgid "Minify JS code"
-msgstr "CSS belgelerini biçimlendir"
+msgstr "JS kodunu küçült"
 
 #: src/formatters/js_minifier.py:17
-#, fuzzy
 msgid "Type JS code here"
-msgstr "JSON kodunu buraya yazın"
+msgstr "JS kodunu buraya yazın"
 
 #~ msgid "What's new:"
 #~ msgstr "Neler yeni:"
