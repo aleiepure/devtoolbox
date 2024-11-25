@@ -77,6 +77,16 @@ SPDX-License-Identifier: CC0-1.0
   </screenshots>
 
   <releases>
+    <release version="1.2.1" date="2024-11-25">
+      <description translate="no">
+        <p>What's new:</p>
+        <ul>
+          <li>About Dialog is now modal (thanks @lo2dev)</li>
+          <li>Improved UI consistency, enhanced tool options, modernized dialogs, and added visual updates across the app</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.2" date="2024-10-30">
       <description translate="no">
         <p>What's new:</p>
