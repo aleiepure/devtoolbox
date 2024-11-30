@@ -4,6 +4,7 @@
 
 import sys
 import gi
+from pathlib import Path
 
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
@@ -117,8 +118,10 @@ class DevtoolboxApplication(Adw.Application):
 
     def on_quit_action(self, widget, _):
         # Clean up temp files
-        shutil.rmtree(GLib.get_tmp_dir(), ignore_errors=True)
         
+        tmp_files =  Path(GLib.get_tmp_dir()).glob('me.iepure.devtoolbox*')
+        for tmp_file in tmp_files:
+            tmp_file.unlink(missing_ok=True)
         self.quit()
 
     def create_action(self, name, callback, shortcuts=None):
