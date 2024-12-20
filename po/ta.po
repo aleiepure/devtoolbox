@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-11-25 14:45+0100\n"
-"PO-Revision-Date: 2023-11-23 12:05+0000\n"
-"Last-Translator: \"K.B.Dharun Krishna\" <kbdharunkrishna@gmail.com>\n"
+"PO-Revision-Date: 2024-12-20 00:00+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/ta/>\n"
 "Language: ta\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.2.1-rc\n"
+"X-Generator: Weblate 5.9.2-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -26,15 +26,14 @@ msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
-#, fuzzy
 msgid "Dev tools at your fingertips"
-msgstr "உங்கள் விரல் நுனியில் மேம்பாட்டு கருவிகள்"
+msgstr "உங்கள் விரல் நுனியில் தேவ் கருவிகள்"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
 msgid ""
 "JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
 "Markdown;Image;"
-msgstr ""
+msgstr "JSON;"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -42,315 +41,324 @@ msgid ""
 "again that website of which you don't recall the name just for a quick "
 "conversion, this is the right app for you."
 msgstr ""
+"சரியான கருவிக்காக ஆன்லைனில் முடிவில்லாமல் பார்ப்பதில் நீங்கள் சோர்வாக இருந்தால், அல்லது "
+"விரைவான மாற்றத்திற்கான பெயரை நீங்கள் நினைவுபடுத்தாத அந்த வலைத்தளத்தை மீண்டும் கண்டுபிடிக்க, "
+"இது உங்களுக்கு சரியான பயன்பாடாகும்."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr ""
+"இது மிகவும் பொதுவான அன்றாட மேம்பாட்டு சிக்கல்களைத் தீர்க்க சக்திவாய்ந்த மற்றும் எளிமையான "
+"பயன்படுத்தக்கூடிய கருவிகளின் தொகுப்பாகும்."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Includes:"
-msgstr ""
+msgstr "உள்ளடக்கியது:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "JSON to YAML converter and vice-versa"
-msgstr ""
+msgstr "சாதொபொகு பெறுநர் YAML மாற்றி மற்றும் நேர்மாறாக"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33
 msgid "CRON expressions parser"
-msgstr ""
+msgstr "க்ரோன் எக்ச்பிரசன்ச் பார்சர்"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "GZip compressor and decompressor"
-msgstr ""
+msgstr "GZIP அமுக்கி மற்றும் டிகம்பிரசர்"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Formatters for common programming languages"
-msgstr ""
+msgstr "பொதுவான நிரலாக்க மொழிகளுக்கான வடிவங்கள்"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Hash generators"
-msgstr ""
+msgstr "ஆச் செனரேட்டர்கள்"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
-msgstr ""
+msgstr "ரீசெக்ச் சோதனையாளர்"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/window.py:332
 #: src/ui/views/markdown_preview.blp:19
 msgid "Markdown Previewer"
-msgstr ""
+msgstr "மார்க் பேரூர் முன்னோட்டம்"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
-msgstr ""
+msgstr "பட மாற்றிகள்"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
-msgstr ""
+msgstr "இன்னும் ..."
 
 #: src/window.py:122 src/window.py:129 src/window.py:136 src/window.py:143
 #: src/window.py:150
 msgid "Converters"
-msgstr ""
+msgstr "மாற்றிகள்"
 
 #: src/window.py:124 src/ui/views/json_yaml.blp:20
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr ""
+msgstr "சாதொபொகு ஆவணங்களை YAML ஆக மாற்றவும், நேர்மாறாகவும்"
 
 #: src/window.py:128 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
-msgstr ""
+msgstr "நேர முத்திரை"
 
 #: src/window.py:131 src/ui/views/timestamp.blp:20
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr ""
+msgstr "யூனிக்ச் நேர முத்திரைகளை வெற்று தேதிகளிலிருந்து மாற்றவும்"
 
 #: src/window.py:135
 msgid "Number Bases"
-msgstr ""
+msgstr "எண் தளங்கள்"
 
 #: src/window.py:138 src/ui/views/base_converter.blp:20
 msgid "Convert numbers between bases"
-msgstr ""
+msgstr "தளங்களுக்கு இடையில் எண்களை மாற்றவும்"
 
 #: src/window.py:142 src/ui/views/cron_converter.blp:20
 msgid "CRON Parser"
-msgstr ""
+msgstr "க்ரோன் பாகுபடுத்தி"
 
 #: src/window.py:145 src/ui/views/cron_converter.blp:21
 msgid "Convert CRON expressions to time and date"
-msgstr ""
+msgstr "CRON வெளிப்பாடுகளை நேரம் மற்றும் தேதிக்கு மாற்றவும்"
 
 #: src/window.py:149 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
-msgstr ""
+msgstr "தலைகீழ் கிரான்"
 
 #: src/window.py:152 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
-msgstr ""
+msgstr "CRON வெளிப்பாடுகளை உருவாக்குங்கள்"
 
 #: src/window.py:159 src/window.py:166 src/window.py:173 src/window.py:180
 #: src/window.py:187
 msgid "Encoders & Decoders"
-msgstr ""
+msgstr "குறியாக்கிகள் & டிகோடர்கள்"
 
 #: src/window.py:161 src/ui/views/html_encoder.blp:20
 msgid "Encode and decode special characters using the HTML format"
 msgstr ""
+"உஉகுமொ வடிவமைப்பைப் பயன்படுத்தி சிறப்பு எழுத்துக்களை குறியாக்கம் செய்து டிகோட் செய்யுங்கள்"
 
 #: src/window.py:168
 msgid "Encode and decode base64 strings"
-msgstr ""
+msgstr "BASE64 சரங்களை குறியாக்கம் செய்து டிகோட் செய்யுங்கள்"
 
 #: src/window.py:175 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
 msgstr ""
+"முகவரி களுக்குள் சிறப்பு எழுத்துக்களை குறியாக்கம் செய்து டிகோட் செய்யுங்கள்"
 
 #: src/window.py:182
 msgid "Compress and decompress files and texts using GZip"
-msgstr ""
+msgstr "GZIP ஐப் பயன்படுத்தி கோப்புகள் மற்றும் உரைகளை சுருக்கவும் குறைக்கவும்"
 
 #: src/window.py:189 src/ui/views/jwt_decoder.blp:20
 msgid "Decode JWT tokens to header and payload"
-msgstr ""
+msgstr "தலைப்பு மற்றும் பேலோடிற்கு JWT டோக்கன்களை டிகோட் செய்யுங்கள்"
 
 #: src/window.py:196 src/window.py:203 src/window.py:210 src/window.py:217
 #: src/window.py:224 src/window.py:231 src/window.py:238 src/window.py:245
 msgid "Formatters & Minifiers"
-msgstr ""
+msgstr "ஃபார்மேட்டர்கள் & மினிஃபையர்கள்"
 
 #: src/window.py:198 src/formatters/json.py:14
 msgid "Format JSON documents"
-msgstr ""
+msgstr "சாதொபொகு ஆவணங்களை வடிவமைக்கவும்"
 
 #: src/window.py:205 src/formatters/sql.py:14
 msgid "Format SQL documents"
-msgstr ""
+msgstr "கவிமொ ஆவணங்களை வடிவமைக்கவும்"
 
 #: src/window.py:212 src/formatters/xml.py:16
 msgid "Format XML documents"
-msgstr ""
+msgstr "எக்ச்எம்எல் ஆவணங்களை வடிவமைக்கவும்"
 
 #: src/window.py:219 src/formatters/html.py:15
 msgid "Format HTML documents"
-msgstr ""
+msgstr "உஉகுமொ ஆவணங்களை வடிவமைக்கவும்"
 
 #: src/window.py:226 src/formatters/js.py:15
 msgid "Format JavaScript documents"
-msgstr ""
+msgstr "சாவாச்கிரிப்ட் ஆவணங்களை வடிவமைக்கவும்"
 
 #: src/window.py:233 src/formatters/css.py:14
 msgid "Format CSS documents"
-msgstr ""
+msgstr "சிஎச்எச் ஆவணங்களை வடிவமைக்கவும்"
 
 #: src/window.py:240 src/formatters/css_minifier.py:15
 msgid "Minify CSS documents"
-msgstr ""
+msgstr "சிஎச்எச் ஆவணங்களை குறிக்கவும்"
 
 #: src/window.py:247
 msgid "Minify JavaScript documents"
-msgstr ""
+msgstr "சாவாச்கிரிப்ட் ஆவணங்களைக் குறிக்கவும்"
 
 #: src/window.py:254 src/window.py:261 src/window.py:268 src/window.py:275
 #: src/window.py:282 src/window.py:289
 msgid "Generators"
-msgstr ""
+msgstr "செனரேட்டர்கள்"
 
 #: src/window.py:256 src/ui/views/hash_generator.blp:20
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
 msgstr ""
+"MD5, SHA1, SHA256, மற்றும் SHA512 ஆச்களைக் கணக்கிட்டு ஒருமைப்பாட்டை சரிபார்க்கவும்"
 
 #: src/window.py:263 src/ui/views/lorem_generator.blp:20
 msgid "Generate lorem ipsum placeholder text"
-msgstr ""
+msgstr "வாடிக்கையாளரின் மிகவும் ஒதுக்கிட உரையை உருவாக்குங்கள்"
 
 #: src/window.py:270 src/ui/views/uuid_generator.blp:20
 msgid "Generate Universally Unique IDs (UUID)"
-msgstr ""
+msgstr "உலகளாவிய தனித்துவமான ஐடிகளை (UUID) உருவாக்குங்கள்"
 
 #: src/window.py:274
 msgid "Random"
-msgstr ""
+msgstr "சீரற்ற"
 
 #: src/window.py:277 src/ui/views/random_generator.blp:20
 msgid "Generate random numbers and strings"
-msgstr ""
+msgstr "சீரற்ற எண்கள் மற்றும் சரங்களை உருவாக்குங்கள்"
 
 #: src/window.py:281 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
-msgstr ""
+msgstr "CHMOD கால்குலேட்டர்"
 
 #: src/window.py:284 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
-msgstr ""
+msgstr "CHMOD உடன் அனுமதிகளை மாற்ற மதிப்புகளைக் கணக்கிடுங்கள்"
 
 #: src/window.py:288
 msgid "QR Code"
-msgstr ""
+msgstr "QR குறியீடு"
 
 #: src/window.py:291 src/ui/views/qrcode_generator.blp:20
 msgid "Create custom QR Codes"
-msgstr ""
+msgstr "தனிப்பயன் QR குறியீடுகளை உருவாக்கவும்"
 
 #: src/window.py:297 src/ui/views/text_inspector.blp:19
 msgid "Text Inspector & Case Converter"
-msgstr ""
+msgstr "உரை ஆய்வாளர் & வழக்கு மாற்றி"
 
 #: src/window.py:298 src/window.py:305 src/window.py:312 src/window.py:319
 #: src/window.py:326 src/window.py:333 src/ui/views/regex_tester.blp:49
 #: src/ui/views/text_inspector.blp:107 src/ui/views/text_inspector.blp:164
 msgid "Text"
-msgstr ""
+msgstr "உரை"
 
 #: src/window.py:300 src/ui/views/text_inspector.blp:20
 msgid "View statistics about text and change sentence cases"
-msgstr ""
+msgstr "உரை பற்றிய புள்ளிவிவரங்களைக் காண்க மற்றும் வாக்கிய வழக்குகளை மாற்றவும்"
 
 #: src/window.py:304
 msgid "Regex Tester"
-msgstr ""
+msgstr "ரீசெக்ச் சோதனையாளர்"
 
 #: src/window.py:307 src/ui/views/regex_tester.blp:20
 msgid "Find matching strings inside a text"
-msgstr ""
+msgstr "ஒரு உரைக்குள் பொருந்தக்கூடிய சரங்களைக் கண்டறியவும்"
 
 #: src/window.py:311 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
-msgstr ""
+msgstr "உரை வேறுபாடு"
 
 #: src/window.py:314 src/ui/views/text_diff.blp:20
 msgid "Analyze two texts and find differences"
-msgstr ""
+msgstr "இரண்டு நூல்களை பகுப்பாய்வு செய்து வேறுபாடுகளைக் கண்டறியவும்"
 
 #: src/window.py:318 src/ui/views/xml_validator.blp:19
 msgid "XML Scheme Validator"
-msgstr ""
+msgstr "எக்ச்எம்எல் ச்கீமா வேலிடேட்டர்"
 
 #: src/window.py:321 src/ui/views/xml_validator.blp:20
 msgid "Check an XML file against an XSD schema"
-msgstr ""
+msgstr "எக்ச்எச்டி திட்டத்திற்கு எதிராக எக்ச்எம்எல் கோப்பை சரிபார்க்கவும்"
 
 #: src/window.py:325 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
-msgstr ""
+msgstr "சாதொபொகு ச்கீமா வேலிடேட்டர்"
 
 #: src/window.py:328 src/ui/views/json_validator.blp:20
 msgid "Check a JSON file against a JSON schema"
-msgstr ""
+msgstr "சாதொபொகு திட்டத்திற்கு எதிராக சாதொபொகு கோப்பை சரிபார்க்கவும்"
 
 #: src/window.py:335 src/ui/views/markdown_preview.blp:20
 msgid "Preview markdown code as you type"
 msgstr ""
+"நீங்கள் தட்டச்சு செய்யும் போது மார்க் பேரூர் குறியீட்டை முன்னோட்டமிடுங்கள்"
 
 #: src/window.py:341 src/ui/views/contrast_checker.blp:19
 msgid "Contrast Checker"
-msgstr ""
+msgstr "மாறுபட்ட சரிபார்ப்பு"
 
 #: src/window.py:342 src/window.py:349 src/window.py:356
 msgid "Graphics"
-msgstr ""
+msgstr "கிராபிக்ச்"
 
 #: src/window.py:344 src/ui/views/contrast_checker.blp:20
 msgid "Check a color combination for WCAG compliance"
-msgstr ""
+msgstr "WCAG இணக்கத்திற்கு வண்ண கலவையை சரிபார்க்கவும்"
 
 #: src/window.py:348
 msgid "Color Blindness"
-msgstr ""
+msgstr "வண்ண குருட்டுத்தன்மை"
 
 #: src/window.py:351 src/ui/views/colorblindness_simulator.blp:20
 msgid "Simulate color blindness in images"
-msgstr ""
+msgstr "படங்களில் வண்ண குருட்டுத்தன்மையை உருவகப்படுத்துங்கள்"
 
 #: src/window.py:355 src/ui/views/image_converter.blp:19
 msgid "Image Format Converter"
-msgstr ""
+msgstr "பட வடிவமைப்பு மாற்றி"
 
 #: src/window.py:358 src/ui/views/image_converter.blp:20
 msgid "Convert images to different formats"
-msgstr ""
+msgstr "படங்களை வெவ்வேறு வடிவங்களாக மாற்றவும்"
 
 #: src/window.py:364 src/ui/views/certificate_parser.blp:19
 msgid "Certificate Parser"
-msgstr ""
+msgstr "சான்றிதழ் பாகுபடுத்தி"
 
 #: src/window.py:365 src/window.py:372 src/views/certificate_parser.py:90
 msgid "Certificates"
-msgstr ""
+msgstr "சான்றிதழ்கள்"
 
 #: src/window.py:367 src/ui/views/certificate_parser.blp:20
 msgid "View certificates contents"
-msgstr ""
+msgstr "சான்றிதழ்கள் உள்ளடக்கங்களைக் காண்க"
 
 #: src/window.py:371
 msgid "Certificate Signing Request"
-msgstr ""
+msgstr "சான்றிதழ் கையொப்பமிடும் கோரிக்கை"
 
 #: src/window.py:374 src/ui/views/certificate_request_generator.blp:20
 msgid "Generate certificate signing requests"
-msgstr ""
+msgstr "சான்றிதழ் கையொப்பமிடும் கோரிக்கைகளை உருவாக்குங்கள்"
 
 #. change view and save previous
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:54
 #: src/widgets/text_file_area.py:62 src/widgets/text_file_area.py:200
 msgid "Opening file..."
-msgstr ""
+msgstr "கோப்பு திறக்கும் ..."
 
 #: src/widgets/image_area.py:96 src/widgets/text_area.py:147
 #: src/widgets/text_file_area.py:162 src/views/certificate_parser.py:60
 msgid "Cannot open more than one file"
-msgstr ""
+msgstr "ஒன்றுக்கு மேற்பட்ட கோப்புகளைத் திறக்க முடியாது"
 
 #: src/widgets/image_area.py:123
 msgid "Opening image..."
-msgstr ""
+msgstr "திறக்கும் படம் ..."
 
 #: src/widgets/image_area.py:130 src/widgets/text_area.py:184
 #: src/widgets/text_file_area.py:207 src/views/certificate_parser.py:81
 msgid "Open File"
-msgstr ""
+msgstr "கோப்பை திற"
 
 #: src/widgets/image_area.py:131 src/widgets/text_area.py:185
 #: src/widgets/text_file_area.py:208 src/views/certificate_parser.py:82
@@ -359,35 +367,35 @@ msgstr ""
 #: src/ui/widgets/text_file_area.blp:70 src/ui/views/certificate_parser.blp:51
 #: src/ui/views/certificate_request_generator.blp:107
 msgid "Open"
-msgstr ""
+msgstr "திற"
 
 #: src/widgets/image_area.py:140
 msgid "Supported Image Formats"
-msgstr ""
+msgstr "ஆதரிக்கப்பட்ட பட வடிவங்கள்"
 
 #: src/widgets/image_area.py:173
 msgid "Saving image..."
-msgstr ""
+msgstr "படத்தை சேமிக்கும் ..."
 
 #: src/widgets/image_area.py:180 src/widgets/text_file_area.py:328
 #: src/views/image_converter.py:51 src/views/qrcode_generator.py:188
 msgid "Save file as"
-msgstr ""
+msgstr "கோப்பை சேமி"
 
 #: src/widgets/image_area.py:181 src/widgets/text_file_area.py:329
 #: src/views/certificate_request_generator.py:193
 #: src/views/image_converter.py:52 src/views/qrcode_generator.py:189
 #: src/ui/widgets/image_area.blp:72 src/ui/widgets/text_file_area.blp:83
 msgid "Save"
-msgstr ""
+msgstr "சேமி"
 
 #: src/widgets/text_area.py:194 src/widgets/text_file_area.py:230
 msgid "Text files"
-msgstr ""
+msgstr "உரை கோப்புகள்"
 
 #: src/widgets/text_area.py:201 src/widgets/text_file_area.py:243
 msgid "Accepted files"
-msgstr ""
+msgstr "ஏற்றுக்கொள்ளப்பட்ட கோப்புகள்"
 
 #: src/widgets/text_area.py:222
 #, python-brace-format
@@ -395,36 +403,38 @@ msgid ""
 "Loading a large file ({size})\n"
 "Might take a while, please wait..."
 msgstr ""
+"ஒரு பெரிய கோப்பை ஏற்றுகிறது ({size})\n"
+" சிறிது நேரம் ஆகலாம், தயவுசெய்து காத்திருங்கள் ..."
 
 #: src/widgets/text_area.py:230 src/widgets/text_file_area.py:280
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr ""
+msgstr "{file_path}: {file_content book திறக்க முடியவில்லை."
 
 #: src/widgets/text_area.py:246
 msgid "File is not UTF-8 encoded."
-msgstr ""
+msgstr "கோப்பு UTF-8 குறியிடப்படவில்லை."
 
 #: src/widgets/text_file_area.py:217
 msgid "All files"
-msgstr ""
+msgstr "அனைத்து கோப்புகள்"
 
 #: src/widgets/text_file_area.py:224
 msgid "Text files and images"
-msgstr ""
+msgstr "உரை கோப்புகள் மற்றும் படங்கள்"
 
 #: src/widgets/text_file_area.py:236
 msgid "Images"
-msgstr ""
+msgstr "படங்கள்"
 
 #: src/widgets/text_file_area.py:321
 msgid "Saving file..."
-msgstr ""
+msgstr "சேமிப்பு கோப்பு ..."
 
 #: src/widgets/text_file_area.py:360
 #, python-brace-format
 msgid "Unable to save {path}"
-msgstr ""
+msgstr "{path}"
 
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
 #: src/views/certificate_request_generator.py:180 src/views/formatter.py:48
@@ -433,178 +443,182 @@ msgstr ""
 #: src/views/url_encoder.py:48
 #, python-brace-format
 msgid "Error: {error}"
-msgstr ""
+msgstr "பிழை: {error}"
 
 #: src/views/certificate_parser.py:65
 msgid "Unsupported file"
-msgstr ""
+msgstr "ஆதரிக்கப்படாத கோப்பு"
 
 #: src/views/certificate_parser.py:102 src/views/reverse_cron.py:180
 #: src/ui/views/certificate_parser.blp:100 src/ui/views/reverse_cron.blp:39
 msgid "Expand All"
-msgstr ""
+msgstr "அனைத்தையும் விரிவாக்குங்கள்"
 
 #: src/views/certificate_parser.py:106 src/views/reverse_cron.py:184
 msgid "Collapse All"
-msgstr ""
+msgstr "அனைத்தையும் சரக்கு"
 
 #: src/views/certificate_parser.py:145
 msgid "Error: Cannot open this file because it is not a valid certificate."
-msgstr ""
+msgstr "பிழை: இந்த கோப்பை திறக்க முடியாது, ஏனெனில் இது சரியான சான்றிதழ் அல்ல."
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:153
 #, python-brace-format
 msgid "Identity: {identity}"
-msgstr ""
+msgstr "அடையாளம்: {identity}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:155
 #, python-brace-format
 msgid "Verified by: {verified_by}"
-msgstr ""
+msgstr "சரிபார்க்கப்பட்டது: {verified_by}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:157
 #, python-brace-format
 msgid "Expires: {expiration_date}"
-msgstr ""
+msgstr "காலாவதியாகிறது: {expiration_date}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:163
 msgid "Basic Constraints"
-msgstr ""
+msgstr "அடிப்படை தடைகள்"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:164
 msgid "Extended Key Usage"
-msgstr ""
+msgstr "நீட்டிக்கப்பட்ட முக்கிய பயன்பாடு"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:165 src/views/certificate_parser.py:210
 msgid "Subject Key Identifier"
-msgstr ""
+msgstr "பொருள் விசை அடையாளங்காட்டி"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:166
 msgid "Key Usage"
-msgstr ""
+msgstr "முக்கிய பயன்பாடு"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:167
 msgid "Subject Alternative Names"
-msgstr ""
+msgstr "மாற்று பெயர்கள்"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:171
 msgid "Extension"
-msgstr ""
+msgstr "நீட்டிப்பு"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:211
 msgid "Certificate Fingerprints"
-msgstr ""
+msgstr "சான்றிதழ் கைரேகைகள்"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:214
 msgid "Key Identifier"
-msgstr ""
+msgstr "முக்கிய அடையாளங்காட்டி"
 
 #: src/views/certificate_request_generator.py:38
 msgid "Open CSR"
-msgstr ""
+msgstr "திறந்த சமூக பொறுப்புணர்வு"
 
 #: src/views/certificate_request_generator.py:61
 msgid "Open Key File"
-msgstr ""
+msgstr "விசை கோப்பைத் திறக்கவும்"
 
 #: src/views/certificate_request_generator.py:68
 msgid "All Files"
-msgstr ""
+msgstr "அனைத்து கோப்புகள்"
 
 #: src/views/certificate_request_generator.py:124
 msgid "Select save location"
-msgstr ""
+msgstr "இருப்பிடத்தைச் சேமி என்பதைத் தேர்ந்தெடுக்கவும்"
 
 #: src/views/certificate_request_generator.py:125
 #: src/ui/views/certificate_request_generator.blp:150
 msgid "Choose"
-msgstr ""
+msgstr "தேர்வு"
 
 #: src/views/certificate_request_generator.py:176
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:54
 #: src/views/image_converter.py:41 src/views/qrcode_generator.py:206
 msgid "Saved Successfully"
-msgstr ""
+msgstr "வெற்றிகரமாக சேமிக்கப்பட்டது"
 
 #: src/views/certificate_request_generator.py:192
 msgid "Save key as"
-msgstr ""
+msgstr "விசையை சேமிக்கவும்"
 
 #: src/views/chmod_calculator.py:30
 msgid "Invalid value. Please check again"
-msgstr ""
+msgstr "தவறான மதிப்பு. மீண்டும் சரிபார்க்கவும்"
 
 #: src/views/colorblindness_simulator.py:26 src/views/image_converter.py:24
 #: src/views/qrcode_generator.py:43
 msgid "Open Image"
-msgstr ""
+msgstr "திறந்த படம்"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
 #: src/views/colorblindness_simulator.py:98
 msgid "Loading simulation..."
-msgstr ""
+msgstr "ஏற்றுதல் உருவகப்படுத்துதல் ..."
 
 #: src/views/formatter.py:76
 msgid ""
 "Text is not in the correct format. Check if you misspelled something or if "
 "all parentheses are closed."
 msgstr ""
+"உரை சரியான வடிவத்தில் இல்லை. நீங்கள் எதையாவது தவறாக எழுதினீர்களா அல்லது அனைத்து "
+"அடைப்புக்குறிப்புகள் மூடப்பட்டிருந்தால் சரிபார்க்கவும்."
 
 #. Toast messages
 #: src/views/gzip_compressor.py:27
 msgid "Open image"
-msgstr ""
+msgstr "திறந்த படத்தை"
 
 #: src/views/gzip_compressor.py:29
 msgid "Cannot decompress from an image or a file"
-msgstr ""
+msgstr "ஒரு படம் அல்லது கோப்பிலிருந்து குறைக்க முடியாது"
 
 #: src/views/gzip_compressor.py:124
 msgid "Please save this file to view its contents"
-msgstr ""
+msgstr "இந்த கோப்பை அதன் உள்ளடக்கங்களைக் காண சேமிக்கவும்"
 
 #: src/views/hash_generator.py:125
 msgid "Hashes match!"
-msgstr ""
+msgstr "ஆச்கள் போட்டி!"
 
 #: src/views/hash_generator.py:127
 msgid "The integrity is verified."
-msgstr ""
+msgstr "ஒருமைப்பாடு சரிபார்க்கப்பட்டது."
 
 #: src/views/hash_generator.py:135
 msgid "Warning, integrity cannot be verified!"
-msgstr ""
+msgstr "எச்சரிக்கை, ஒருமைப்பாட்டை சரிபார்க்க முடியாது!"
 
 #: src/views/hash_generator.py:137
 msgid ""
 "The calculated hash and the provided one do not match. Check again and if "
 "this is a file you downloaded from the Internet re-download it."
 msgstr ""
+"கணக்கிடப்பட்ட ஆச் மற்றும் வழங்கப்பட்டவை பொருந்தவில்லை. மீண்டும் சரிபார்க்கவும், இது "
+"இணையத்திலிருந்து பதிவிறக்கம் செய்த கோப்பு என்றால் அதை மீண்டும் ஏற்றவும்."
 
 #: src/views/json_validator.py:77 src/views/xml_validator.py:76
 msgid "Valid!"
-msgstr ""
+msgstr "செல்லுபடியாகும்!"
 
 #: src/views/json_validator.py:79
 msgid "JSON is compliant with the provided JSON schema."
-msgstr ""
+msgstr "வழங்கப்பட்ட சாதொபொகு திட்டத்திற்கு சாதொபொகு இணங்குகிறது."
 
 #: src/views/json_validator.py:87 src/views/json_validator.py:97
 #: src/views/xml_validator.py:86
 msgid "Invalid!"
-msgstr ""
+msgstr "தவறானது!"
 
 #: src/views/json_validator.py:89
 #, python-brace-format
@@ -612,6 +626,8 @@ msgid ""
 "JSON is not compliant with the provided JSON scheme:\n"
 "{validation_error}"
 msgstr ""
+"வழங்கப்பட்ட சாதொபொகு திட்டத்துடன் சாதொபொகு இணங்கவில்லை:\n"
+" {validation_error}"
 
 #: src/views/json_validator.py:99
 #, python-brace-format
@@ -619,149 +635,151 @@ msgid ""
 "Error in JSON schema:\n"
 "{schema_error}"
 msgstr ""
+"சாதொபொகு திட்டத்தில் பிழை:\n"
+" {schema_error}"
 
 #: src/views/qrcode_generator.py:71 src/ui/views/qrcode_generator.blp:113
 #: src/ui/views/qrcode_generator.blp:122
 msgid "Not Set"
-msgstr ""
+msgstr "அமைக்கப்படவில்லை"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
 msgid "st"
-msgstr ""
+msgstr "ச்டம்ப்"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:210
 msgid "nd"
-msgstr ""
+msgstr "nd"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:213
 msgid "rd"
-msgstr ""
+msgstr "Rd"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:216
 msgid "th"
-msgstr ""
+msgstr "வது"
 
 #: src/views/reverse_cron.py:240 src/views/reverse_cron.py:354
 #: src/ui/views/reverse_cron.blp:410 src/ui/views/reverse_cron.blp:467
 #: src/ui/views/reverse_cron.blp:495
 msgid "January"
-msgstr ""
+msgstr "மா-தை"
 
 #: src/views/reverse_cron.py:241 src/views/reverse_cron.py:355
 #: src/ui/views/reverse_cron.blp:411 src/ui/views/reverse_cron.blp:468
 #: src/ui/views/reverse_cron.blp:496
 msgid "February"
-msgstr ""
+msgstr "தை-மாசி"
 
 #: src/views/reverse_cron.py:242 src/views/reverse_cron.py:356
 #: src/ui/views/reverse_cron.blp:412 src/ui/views/reverse_cron.blp:469
 #: src/ui/views/reverse_cron.blp:497
 msgid "March"
-msgstr ""
+msgstr "மா-பங்குனி"
 
 #: src/views/reverse_cron.py:243 src/views/reverse_cron.py:357
 #: src/ui/views/reverse_cron.blp:413 src/ui/views/reverse_cron.blp:470
 #: src/ui/views/reverse_cron.blp:498
 msgid "April"
-msgstr ""
+msgstr "ப-சித்திரை"
 
 #: src/views/reverse_cron.py:244 src/views/reverse_cron.py:358
 #: src/ui/views/reverse_cron.blp:414 src/ui/views/reverse_cron.blp:471
 #: src/ui/views/reverse_cron.blp:499
 msgid "May"
-msgstr ""
+msgstr "சி-வைகாசி"
 
 #: src/views/reverse_cron.py:245 src/views/reverse_cron.py:359
 #: src/ui/views/reverse_cron.blp:415 src/ui/views/reverse_cron.blp:472
 #: src/ui/views/reverse_cron.blp:500
 msgid "June"
-msgstr ""
+msgstr "வை-ஆனி"
 
 #: src/views/reverse_cron.py:246 src/views/reverse_cron.py:360
 #: src/ui/views/reverse_cron.blp:416 src/ui/views/reverse_cron.blp:473
 #: src/ui/views/reverse_cron.blp:501
 msgid "July"
-msgstr ""
+msgstr "ஆ-ஆடி"
 
 #: src/views/reverse_cron.py:247 src/views/reverse_cron.py:361
 #: src/ui/views/reverse_cron.blp:417 src/ui/views/reverse_cron.blp:474
 #: src/ui/views/reverse_cron.blp:502
 msgid "August"
-msgstr ""
+msgstr "ஆ-ஆவணி"
 
 #: src/views/reverse_cron.py:248 src/views/reverse_cron.py:362
 #: src/ui/views/reverse_cron.blp:418 src/ui/views/reverse_cron.blp:475
 #: src/ui/views/reverse_cron.blp:503
 msgid "September"
-msgstr ""
+msgstr "ஆ-புரட்டாசி"
 
 #: src/views/reverse_cron.py:249 src/views/reverse_cron.py:363
 #: src/ui/views/reverse_cron.blp:419 src/ui/views/reverse_cron.blp:476
 #: src/ui/views/reverse_cron.blp:504
 msgid "October"
-msgstr ""
+msgstr "பு-ஐப்பசி"
 
 #: src/views/reverse_cron.py:250 src/views/reverse_cron.py:364
 #: src/ui/views/reverse_cron.blp:420 src/ui/views/reverse_cron.blp:477
 #: src/ui/views/reverse_cron.blp:505
 msgid "November"
-msgstr ""
+msgstr "ஐ-கார்த்திகை"
 
 #: src/views/reverse_cron.py:251 src/views/reverse_cron.py:365
 #: src/ui/views/reverse_cron.blp:421 src/ui/views/reverse_cron.blp:478
 #: src/ui/views/reverse_cron.blp:506
 msgid "December"
-msgstr ""
+msgstr "கா-மார்கழி"
 
 #: src/views/reverse_cron.py:376 src/ui/views/reverse_cron.blp:570
 #: src/ui/views/reverse_cron.blp:649 src/ui/views/reverse_cron.blp:685
 #: src/ui/views/reverse_cron.blp:708
 msgid "Sunday"
-msgstr ""
+msgstr "ஞாயிற்றுக்கிழமை"
 
 #: src/views/reverse_cron.py:377 src/ui/views/reverse_cron.blp:564
 #: src/ui/views/reverse_cron.blp:595 src/ui/views/reverse_cron.blp:679
 #: src/ui/views/reverse_cron.blp:702
 msgid "Monday"
-msgstr ""
+msgstr "திங்கள்"
 
 #: src/views/reverse_cron.py:378 src/ui/views/reverse_cron.blp:565
 #: src/ui/views/reverse_cron.blp:604 src/ui/views/reverse_cron.blp:680
 #: src/ui/views/reverse_cron.blp:703
 msgid "Tuesday"
-msgstr ""
+msgstr "செவ்வாய்க்கிழமை"
 
 #: src/views/reverse_cron.py:379 src/ui/views/reverse_cron.blp:566
 #: src/ui/views/reverse_cron.blp:613 src/ui/views/reverse_cron.blp:681
 #: src/ui/views/reverse_cron.blp:704
 msgid "Wednesday"
-msgstr ""
+msgstr "புதன்கிழமை"
 
 #: src/views/reverse_cron.py:380 src/ui/views/reverse_cron.blp:567
 #: src/ui/views/reverse_cron.blp:622 src/ui/views/reverse_cron.blp:682
 #: src/ui/views/reverse_cron.blp:705
 msgid "Thursday"
-msgstr ""
+msgstr "வியாழக்கிழமை"
 
 #: src/views/reverse_cron.py:381 src/ui/views/reverse_cron.blp:568
 #: src/ui/views/reverse_cron.blp:631 src/ui/views/reverse_cron.blp:683
 #: src/ui/views/reverse_cron.blp:706
 msgid "Friday"
-msgstr ""
+msgstr "வெள்ளிக்கிழமை"
 
 #: src/views/reverse_cron.py:382 src/ui/views/reverse_cron.blp:569
 #: src/ui/views/reverse_cron.blp:640 src/ui/views/reverse_cron.blp:684
 #: src/ui/views/reverse_cron.blp:707
 msgid "Saturday"
-msgstr ""
+msgstr "காரிக்கிழமை"
 
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
-msgstr ""
+msgstr "எக்ச்எம்எல் வழங்கப்பட்ட எக்ச்எச்டி திட்டத்துடன் இணங்குகிறது."
 
 #: src/views/xml_validator.py:88
 #, python-brace-format
@@ -769,156 +787,164 @@ msgid ""
 "XML is not compliant with the provided XSD scheme:\n"
 "{xsd_error}"
 msgstr ""
+"வழங்கப்பட்ட எக்ச்எச்டி திட்டத்துடன் எக்ச்எம்எல் இணங்கவில்லை:\n"
+" {xsd_error}"
 
 #: src/ui/window.blp:56
 msgid "Show/hide searchbar"
-msgstr ""
+msgstr "தேடல் பட்டியைக் காட்டவும்/மறைக்கவும்"
 
 #: src/ui/window.blp:62
 msgid "Favorite Tools"
-msgstr ""
+msgstr "பிடித்த கருவிகள்"
 
 #: src/ui/window.blp:71
 msgid "No Favorites"
-msgstr ""
+msgstr "பிடித்தவை இல்லை"
 
 #: src/ui/window.blp:72
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
 msgstr ""
+"தலைப்புக்கு அருகில் உள்ள நட்சத்திர பொத்தானைக் சொடுக்கு செய்வதன் மூலம் உங்களுக்கு பிடித்த "
+"கருவிகளை இங்கே சேர்க்கவும்"
 
 #: src/ui/window.blp:92
 msgid "Favorites"
-msgstr ""
+msgstr "பிடித்தவை"
 
 #: src/ui/window.blp:121
 msgid "Search Tools…"
-msgstr ""
+msgstr "கருவிகளைத் தேடுங்கள்…"
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
-msgstr ""
+msgstr "பக்கப்பட்டியைக் காட்டு/மறைக்க"
 
 #: src/ui/window.blp:186
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "விசைப்பலகை குறுக்குவழிகள்"
 
 #: src/ui/window.blp:191
 msgid "_About Dev Toolbox"
-msgstr ""
+msgstr "Dev கருவிப்பெட்டி விழிப்புணர்வு"
 
 #: src/ui/about_dialog.blp:10
 msgid ""
 "Copyright © 2022 - 2024 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
+"பதிப்புரிமை © 2022 - 2024 அலெசாண்ட்ரோ IEPURE\n"
+" சில சின்னங்கள் க்னோம் திட்டத்தின் பதிப்புரிமை"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
 #: src/ui/about_dialog.blp:18
 msgid "translator-credits"
-msgstr ""
+msgstr "மொழிபெயர்ப்பாளர்-வரவு"
 
 #: src/ui/widgets/date_area.blp:39 src/ui/views/timestamp.blp:42
 msgid "Now"
-msgstr ""
+msgstr "இப்போது"
 
 #: src/ui/widgets/date_area.blp:40
 msgid "Sets the current system date and time"
-msgstr ""
+msgstr "தற்போதைய கணினி தேதி மற்றும் நேரத்தை அமைக்கிறது"
 
 #: src/ui/widgets/date_area.blp:55 src/ui/widgets/entry_row.blp:30
 #: src/ui/widgets/spin_area.blp:68 src/ui/widgets/text_area.blp:66
 #: src/ui/widgets/text_file_area.blp:106
 msgid "Copy to clipboard"
-msgstr ""
+msgstr "கிளிப்போர்டுக்கு நகலெடுக்கவும்"
 
 #: src/ui/widgets/date_area.blp:79
 msgid "Year"
-msgstr ""
+msgstr "ஆண்டு"
 
 #: src/ui/widgets/date_area.blp:110 src/ui/views/reverse_cron.blp:362
 msgid "Month"
-msgstr ""
+msgstr "மாதம்"
 
 #: src/ui/widgets/date_area.blp:140 src/ui/views/reverse_cron.blp:250
 msgid "Day"
-msgstr ""
+msgstr "நாள்"
 
 #: src/ui/widgets/date_area.blp:176 src/ui/views/reverse_cron.blp:147
 msgid "Hours"
-msgstr ""
+msgstr "மணி"
 
 #: src/ui/widgets/date_area.blp:207 src/ui/views/reverse_cron.blp:44
 msgid "Minutes"
-msgstr ""
+msgstr "நிமிடங்கள்"
 
 #: src/ui/widgets/date_area.blp:237
 msgid "Seconds"
-msgstr ""
+msgstr "நொடிகள்"
 
 #: src/ui/widgets/entry_row.blp:20
 msgid "Generate again"
-msgstr ""
+msgstr "மீண்டும் உருவாக்குங்கள்"
 
 #: src/ui/widgets/entry_row.blp:40 src/ui/widgets/spin_area.blp:79
 #: src/ui/widgets/text_area.blp:73 src/ui/widgets/text_file_area.blp:117
 msgid "Paste clipboard"
-msgstr ""
+msgstr "கிளிப்போர்டை ஒட்டவும்"
 
 #: src/ui/widgets/entry_row.blp:51 src/ui/widgets/image_area.blp:95
 #: src/ui/widgets/text_area.blp:80 src/ui/widgets/text_file_area.blp:128
 msgid "Clear input"
-msgstr ""
+msgstr "உள்ளீட்டை அழிக்கவும்"
 
 #: src/ui/widgets/image_area.blp:84 src/ui/widgets/text_file_area.blp:95
 msgid "Open image in another program"
-msgstr ""
+msgstr "மற்றொரு நிரலில் படத்தைத் திறக்கவும்"
 
 #: src/ui/widgets/theme_switcher.blp:29
 msgid "Follow system style"
-msgstr ""
+msgstr "கணினி பாணியைப் பின்பற்றுங்கள்"
 
 #: src/ui/widgets/theme_switcher.blp:43
 msgid "Light style"
-msgstr ""
+msgstr "ஒளி நடை"
 
 #: src/ui/widgets/theme_switcher.blp:57
 msgid "Dark style"
-msgstr ""
+msgstr "இருண்ட நடை"
 
 #: src/ui/widgets/webview_area.blp:51
 msgid "Open web page in another browser"
-msgstr ""
+msgstr "மற்றொரு உலாவியில் வலைப்பக்கத்தைத் திறக்கவும்"
 
 #: src/ui/views/base_converter.blp:19
 msgid "Number Bases Converter"
-msgstr ""
+msgstr "எண் தளங்கள் மாற்றி"
 
 #: src/ui/views/base_converter.blp:30
 msgid "Input numbers"
-msgstr ""
+msgstr "உள்ளீட்டு எண்கள்"
 
 #: src/ui/views/base_converter.blp:33
 msgid "Decimal"
-msgstr ""
+msgstr "தசம"
 
 #: src/ui/views/base_converter.blp:41
 msgid "Binary"
-msgstr ""
+msgstr "இருமம்"
 
 #: src/ui/views/base_converter.blp:49
 msgid "Octal"
-msgstr ""
+msgstr "ஆக்டல்"
 
 #: src/ui/views/base_converter.blp:57
 msgid "Hexadecimal"
-msgstr ""
+msgstr "எக்சாடெசிமல்"
 
 #: src/ui/views/base_converter.blp:82
 msgid ""
 "Typing an unaccepted character (i.e. 'A' in the decimal field) will cause "
 "all the fields to reset to 0."
 msgstr ""
+"ஏற்றுக்கொள்ளப்படாத தன்மையைத் தட்டச்சு செய்வது (அதாவது தசம புலத்தில் 'ஏ') அனைத்து புலங்களும்"
+" 0 ஆக மீட்டமைக்கப்படும்."
 
 #: src/ui/views/certificate_parser.blp:30
 #: src/ui/views/colorblindness_simulator.blp:31
@@ -930,618 +956,628 @@ msgstr ""
 #: src/ui/views/text_inspector.blp:31 src/ui/views/timestamp.blp:30
 #: src/ui/views/url_encoder.blp:30 src/ui/views/uuid_generator.blp:31
 msgid "Tool options"
-msgstr ""
+msgstr "கருவி விருப்பங்கள்"
 
 #: src/ui/views/certificate_parser.blp:33
 msgid "Certificate"
-msgstr ""
+msgstr "சான்றிதழ்"
 
 #: src/ui/views/certificate_parser.blp:34
 msgid "Open a certificate file (pem, der, cer extensions)"
-msgstr ""
+msgstr "ஒரு சான்றிதழ் கோப்பைத் திறக்கவும் (PEM, DER, CER நீட்டிப்புகள்)"
 
 #: src/ui/views/certificate_parser.blp:79
 msgid "Open a certificate file to view its contents."
-msgstr ""
+msgstr "அதன் உள்ளடக்கங்களைக் காண ஒரு சான்றிதழ் கோப்பைத் திறக்கவும்."
 
 #: src/ui/views/certificate_request_generator.blp:19
 msgid "Certificate Signing Request Generator"
-msgstr ""
+msgstr "சான்றிதழ் கையொப்பமிடுதல் கோரிக்கை செனரேட்டர்"
 
 #: src/ui/views/certificate_request_generator.blp:31
 msgid "Fill the information below"
-msgstr ""
+msgstr "கீழே உள்ள தகவல்களை நிரப்பவும்"
 
 #: src/ui/views/certificate_request_generator.blp:32
 msgid ""
 "Fill at least the required fields then press the 'Create CSR' button. An "
 "empty passphrase will generate an unecrypted CSR."
 msgstr ""
+"குறைந்தபட்சம் தேவையான புலங்களை நிரப்பவும், பின்னர் 'CSR ஐ உருவாக்கு' பொத்தானை அழுத்தவும்"
+". வெற்று கடவுச்சொல் ஒரு நிர்ணயிக்கப்படாத சி.எச்.ஆரை உருவாக்கும்."
 
 #: src/ui/views/certificate_request_generator.blp:42
 msgid "Create CSR"
-msgstr ""
+msgstr "சி.எச்.ஆரை உருவாக்கவும்"
 
 #: src/ui/views/certificate_request_generator.blp:48
 msgid "Common Name (CN) *"
-msgstr ""
+msgstr "பொதுவான பெயர் (சி.என்) *"
 
 #: src/ui/views/certificate_request_generator.blp:52
 msgid "Country Name (C)"
-msgstr ""
+msgstr "நாட்டின் பெயர் (சி)"
 
 #: src/ui/views/certificate_request_generator.blp:56
 msgid "State or Province Name (ST)"
-msgstr ""
+msgstr "மாநில அல்லது மாகாண பெயர் (எச்.டி)"
 
 #: src/ui/views/certificate_request_generator.blp:60
 msgid "Locality Name (L)"
-msgstr ""
+msgstr "வட்டாரத்தின் பெயர் (எல்)"
 
 #: src/ui/views/certificate_request_generator.blp:64
 msgid "Organization Name (O)"
-msgstr ""
+msgstr "அமைப்பு பெயர் (ஓ)"
 
 #: src/ui/views/certificate_request_generator.blp:68
 msgid "Organization Unit Name (OU)"
-msgstr ""
+msgstr "அமைப்பு அலகு பெயர் (OU)"
 
 #: src/ui/views/certificate_request_generator.blp:72
 msgid "Passphrase"
-msgstr ""
+msgstr "கடவுச்சொல்"
 
 #: src/ui/views/certificate_request_generator.blp:76
 msgid "Key"
-msgstr ""
+msgstr "விசை"
 
 #: src/ui/views/certificate_request_generator.blp:77
 msgid "Generate a new key or use and existing one"
-msgstr ""
+msgstr "புதிய விசை அல்லது பயன்பாடு மற்றும் இருக்கும் ஒன்றை உருவாக்குங்கள்"
 
 #: src/ui/views/certificate_request_generator.blp:80
 msgid "New"
-msgstr ""
+msgstr "புதிய"
 
 #: src/ui/views/certificate_request_generator.blp:81
 msgid "Exisisting"
-msgstr ""
+msgstr "உள்ளது"
 
 #: src/ui/views/certificate_request_generator.blp:88
 msgid "Key File *"
-msgstr ""
+msgstr "விசை கோப்பு *"
 
 #: src/ui/views/certificate_request_generator.blp:89
 msgid "Open the file containing the key you want to use"
-msgstr ""
+msgstr "நீங்கள் பயன்படுத்த விரும்பும் விசையைக் கொண்ட கோப்பைத் திறக்கவும்"
 
 #: src/ui/views/certificate_request_generator.blp:115
 msgid "Key Size"
-msgstr ""
+msgstr "முக்கிய அளவு"
 
 #: src/ui/views/certificate_request_generator.blp:116
 msgid "Size of the new key. It will be saved on the same path as the CSR."
-msgstr ""
+msgstr "புதிய விசையின் அளவு. இது சி.எச்.ஆரின் அதே பாதையில் சேமிக்கப்படும்."
 
 #: src/ui/views/certificate_request_generator.blp:123
 msgid "2048 bits"
-msgstr ""
+msgstr "2048 பிட்கள்"
 
 #: src/ui/views/certificate_request_generator.blp:124
 msgid "4096 bits"
-msgstr ""
+msgstr "4096 பிட்கள்"
 
 #: src/ui/views/certificate_request_generator.blp:131
 msgid "Key Save Location *"
-msgstr ""
+msgstr "விசை சேமிப்பு இடம் *"
 
 #: src/ui/views/certificate_request_generator.blp:132
 msgid "Save location for the generated key file"
-msgstr ""
+msgstr "உருவாக்கப்பட்ட விசை கோப்பிற்கான இருப்பிடத்தை சேமிக்கவும்"
 
 #: src/ui/views/chmod_calculator.blp:33
 msgid "Permissions"
-msgstr ""
+msgstr "அனுமதிகள்"
 
 #: src/ui/views/chmod_calculator.blp:45
 msgid "Owner"
-msgstr ""
+msgstr "உரிமையாளர்"
 
 #: src/ui/views/chmod_calculator.blp:58
 msgid "Group"
-msgstr ""
+msgstr "குழு"
 
 #: src/ui/views/chmod_calculator.blp:71
 msgid "Others"
-msgstr ""
+msgstr "மற்றவர்கள்"
 
 #: src/ui/views/chmod_calculator.blp:84
 msgid "Read"
-msgstr ""
+msgstr "படிக்க"
 
 #: src/ui/views/chmod_calculator.blp:97
 msgid "Write"
-msgstr ""
+msgstr "எழுதுங்கள்"
 
 #: src/ui/views/chmod_calculator.blp:110
 msgid "Execute"
-msgstr ""
+msgstr "செயல்படுத்தவும்"
 
 #: src/ui/views/chmod_calculator.blp:251
 msgid "Numeric value"
-msgstr ""
+msgstr "எண் மதிப்பு"
 
 #: src/ui/views/chmod_calculator.blp:263
 msgid "Symbolic value"
-msgstr ""
+msgstr "குறியீட்டு மதிப்பு"
 
 #: src/ui/views/colorblindness_simulator.blp:19
 msgid "Color Blindness Simulator"
-msgstr ""
+msgstr "வண்ண குருட்டுத்தன்மை சிமுலேட்டர்"
 
 #: src/ui/views/colorblindness_simulator.blp:34
 msgid "Severity"
-msgstr ""
+msgstr "தீவிரம்"
 
 #: src/ui/views/colorblindness_simulator.blp:35
 msgid "Severity of the anomaly"
-msgstr ""
+msgstr "ஒழுங்கின்மையின் தீவிரம்"
 
 #: src/ui/views/colorblindness_simulator.blp:72
 #: src/ui/views/text_inspector.blp:41
 msgid "Original"
-msgstr ""
+msgstr "அசல்"
 
 #: src/ui/views/colorblindness_simulator.blp:79
 msgid "Protanopia"
-msgstr ""
+msgstr "முன்னுரிமை"
 
 #: src/ui/views/colorblindness_simulator.blp:90
 msgid "Deuteranopia"
-msgstr ""
+msgstr "மோண்டக்சன்"
 
 #: src/ui/views/colorblindness_simulator.blp:95
 msgid "Tritanopia"
-msgstr ""
+msgstr "டெட்டனோபியா"
 
 #: src/ui/views/contrast_checker.blp:33 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
-msgstr ""
+msgstr "உரை நிறம்"
 
 #: src/ui/views/contrast_checker.blp:34
 msgid "Color used for the text"
-msgstr ""
+msgstr "உரைக்கு பயன்படுத்தப்படும் வண்ணம்"
 
 #: src/ui/views/contrast_checker.blp:52 src/ui/views/contrast_checker.blp:65
 msgid "Background color"
-msgstr ""
+msgstr "பின்னணி நிறம்"
 
 #: src/ui/views/contrast_checker.blp:53
 msgid "Color used for the background"
-msgstr ""
+msgstr "பின்னணிக்கு பயன்படுத்தப்படும் வண்ணம்"
 
 #: src/ui/views/contrast_checker.blp:77
 msgid "Example"
-msgstr ""
+msgstr "எடுத்துக்காட்டு"
 
 #: src/ui/views/contrast_checker.blp:89
 msgid "Lorem ipsum dolor sit amet"
-msgstr ""
+msgstr "லோரெம் மிகவும் கேரட்"
 
 #: src/ui/views/contrast_checker.blp:97
 msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
-msgstr ""
+msgstr "இருக்கும் நபரிடம் சில நாச்ட்ரட் வலி தவிர வேலை செய்ய விரும்புகிறது"
 
 #: src/ui/views/contrast_checker.blp:118 src/ui/views/contrast_checker.blp:149
 msgid "AA"
-msgstr ""
+msgstr "Aa"
 
 #: src/ui/views/contrast_checker.blp:126 src/ui/views/contrast_checker.blp:188
 msgid "small"
-msgstr ""
+msgstr "சிறிய"
 
 #: src/ui/views/contrast_checker.blp:157 src/ui/views/contrast_checker.blp:219
 msgid "large"
-msgstr ""
+msgstr "பெரிய"
 
 #: src/ui/views/contrast_checker.blp:180 src/ui/views/contrast_checker.blp:211
 msgid "AAA"
-msgstr ""
+msgstr "AAA"
 
 #: src/ui/views/cron_converter.blp:34
 msgid "Number of dates"
-msgstr ""
+msgstr "தேதிகளின் எண்ணிக்கை"
 
 #: src/ui/views/cron_converter.blp:35
 msgid "Number of dates to be generated (up to 20)"
-msgstr ""
+msgstr "உருவாக்கப்பட வேண்டிய தேதிகளின் எண்ணிக்கை (20 வரை)"
 
 #: src/ui/views/cron_converter.blp:47
 msgid "Output format"
-msgstr ""
+msgstr "வெளியீட்டு வடிவம்"
 
 #: src/ui/views/cron_converter.blp:48
 msgid ""
 "Format used to display generated dates (<a href=\"https://strftime.org/"
 "\">python syntax</a>)"
 msgstr ""
+"உருவாக்கப்பட்ட தேதிகளைக் காண்பிக்கப் பயன்படுத்தப்படும் வடிவம் (<a href = "
+"\"https://strftime.org/\"> பைதான் தொடரியல் </a>)"
 
 #: src/ui/views/cron_converter.blp:76
 msgid "CRON expression"
-msgstr ""
+msgstr "க்ரோன் வெளிப்பாடு"
 
 #: src/ui/views/cron_converter.blp:89
 msgid "Dates"
-msgstr ""
+msgstr "தேதிகள்"
 
 #: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:46
 msgid "Indentations"
-msgstr ""
+msgstr "உள்தள்ளல்கள்"
 
 #: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:47
 msgid "Number of spaces used for indentation"
-msgstr ""
+msgstr "உள்தள்ளலுக்கு பயன்படுத்தப்படும் இடங்களின் எண்ணிக்கை"
 
 #: src/ui/views/gzip_compressor.blp:19
 msgid "GZip Compress & Decompress"
-msgstr ""
+msgstr "Gzip அமுக்கவும், டிகம்பிரச்"
 
 #: src/ui/views/gzip_compressor.blp:20
 msgid "Compress and decompress texts and images using GZip"
-msgstr ""
+msgstr "GZIP ஐப் பயன்படுத்தி உரைகள் மற்றும் படங்களை சுருக்கவும் குறைக்கவும்"
 
 #: src/ui/views/gzip_compressor.blp:33 src/ui/views/html_encoder.blp:33
 #: src/ui/views/json_yaml.blp:33 src/ui/views/url_encoder.blp:33
 msgid "Direction"
-msgstr ""
+msgstr "திசை"
 
 #: src/ui/views/gzip_compressor.blp:34
 msgid "Select the desired operation"
-msgstr ""
+msgstr "விரும்பிய செயல்பாட்டைத் தேர்ந்தெடுக்கவும்"
 
 #: src/ui/views/gzip_compressor.blp:39
 msgid "Compress"
-msgstr ""
+msgstr "சுருக்க"
 
 #: src/ui/views/gzip_compressor.blp:40
 msgid "Decompress"
-msgstr ""
+msgstr "குறைக்கவும்"
 
 #: src/ui/views/gzip_compressor.blp:56 src/ui/views/hash_generator.blp:79
 #: src/ui/views/html_encoder.blp:57 src/ui/views/json_yaml.blp:70
 #: src/ui/views/url_encoder.blp:70
 msgid "Input"
-msgstr ""
+msgstr "உள்ளீடு"
 
 #: src/ui/views/gzip_compressor.blp:66 src/ui/views/hash_generator.blp:88
 #: src/ui/views/html_encoder.blp:70 src/ui/views/json_yaml.blp:82
 #: src/ui/views/url_encoder.blp:81
 msgid "Output"
-msgstr ""
+msgstr "வெளியீடு"
 
 #: src/ui/views/gzip_compressor.blp:98
 msgid ""
 "The compression result and the expected decompression input are base64 "
 "encoded."
 msgstr ""
+"சுருக்க முடிவு மற்றும் எதிர்பார்க்கப்படும் டிகம்பரச்சன் உள்ளீடு ஆகியவை BASE64 "
+"குறியிடப்பட்டவை."
 
 #: src/ui/views/gzip_compressor.blp:103
 msgid "May hang the app for large files, please wait."
 msgstr ""
+"பெரிய கோப்புகளுக்கான பயன்பாட்டைத் தொங்கவிடலாம், தயவுசெய்து காத்திருங்கள்."
 
 #: src/ui/views/hash_generator.blp:19
 msgid "Hash Generator & Checker"
-msgstr ""
+msgstr "ஆச் செனரேட்டர் & செக்கர்"
 
 #: src/ui/views/hash_generator.blp:34
 msgid "Hash to calculate"
-msgstr ""
+msgstr "கணக்கிட ஆச்"
 
 #: src/ui/views/hash_generator.blp:35
 msgid "Choose the hash type to calculate"
-msgstr ""
+msgstr "கணக்கிட ஆச் வகையைத் தேர்வுசெய்க"
 
 #: src/ui/views/hash_generator.blp:49
 msgid "Check for integrity"
-msgstr ""
+msgstr "ஒருமைப்பாட்டை சரிபார்க்கவும்"
 
 #: src/ui/views/hash_generator.blp:50
 msgid ""
 "If enabled the calculated hash will be checked against another provided hash "
 "to verify integrity"
 msgstr ""
+"இயக்கப்பட்டால், கணக்கிடப்பட்ட ஆச் ஒருமைப்பாட்டை சரிபார்க்க வழங்கப்பட்ட மற்றொரு ஆசுக்கு எதிராக "
+"சரிபார்க்கப்படும்"
 
 #: src/ui/views/hash_generator.blp:56
 msgid "Type the hash to check against"
-msgstr ""
+msgstr "எதிராக சரிபார்க்க ஆச் தட்டச்சு செய்க"
 
 #: src/ui/views/html_encoder.blp:19
 msgid "HTML Encoder & Decoder"
-msgstr ""
+msgstr "உஉகுமொ குறியாக்கி & டிகோடர்"
 
 #: src/ui/views/html_encoder.blp:34 src/ui/views/url_encoder.blp:34
 msgid "Select the desired encoding direction"
-msgstr ""
+msgstr "விரும்பிய குறியாக்க திசையைத் தேர்ந்தெடுக்கவும்"
 
 #: src/ui/views/html_encoder.blp:39 src/ui/views/url_encoder.blp:39
 msgid "Encode"
-msgstr ""
+msgstr "குறியாக்கம்"
 
 #: src/ui/views/html_encoder.blp:40 src/ui/views/url_encoder.blp:40
 msgid "Decode"
-msgstr ""
+msgstr "டிகோட்"
 
 #: src/ui/views/image_converter.blp:34
 msgctxt "noun"
 msgid "Format"
-msgstr ""
+msgstr "வடிவம்"
 
 #: src/ui/views/image_converter.blp:35
 msgid "Select the desired output format"
-msgstr ""
+msgstr "விரும்பிய வெளியீட்டு வடிவமைப்பைத் தேர்ந்தெடுக்கவும்"
 
 #: src/ui/views/image_converter.blp:58
 msgid "Image"
-msgstr ""
+msgstr "படம்"
 
 #: src/ui/views/image_converter.blp:60
 msgid "Convert"
-msgstr ""
+msgstr "மாற்றவும்"
 
 #: src/ui/views/image_converter.blp:64
 msgid "converted-image"
-msgstr ""
+msgstr "மாற்றப்பட்ட-படம்"
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
-msgstr ""
+msgstr "சாதொபொகு - YAML மாற்றி"
 
 #: src/ui/views/json_yaml.blp:34
 msgid "Specify what format is the input and the desired output"
-msgstr ""
+msgstr "உள்ளீடு மற்றும் விரும்பிய வெளியீடு என்ன வடிவம் என்பதைக் குறிப்பிடவும்"
 
 #: src/ui/views/jwt_decoder.blp:19
 msgid "JWT tokens decoder"
-msgstr ""
+msgstr "JWT டோக்கன்ச் டிகோடர்"
 
 #: src/ui/views/jwt_decoder.blp:29
 msgid "Token"
-msgstr ""
+msgstr "கிள்ளாக்கு"
 
 #: src/ui/views/jwt_decoder.blp:47
 msgid "Header"
-msgstr ""
+msgstr "தலைப்பி"
 
 #: src/ui/views/jwt_decoder.blp:53
 msgid "Payload"
-msgstr ""
+msgstr "தாங்குசுமை"
 
 #: src/ui/views/lorem_generator.blp:19
 msgid "Lorem Ipsum Generator"
-msgstr ""
+msgstr "லோரெம் வெரி செனரேட்டர்"
 
 #: src/ui/views/lorem_generator.blp:34
 msgid "Begin with \"Lorem ipsum dolor sit amet\""
-msgstr ""
+msgstr "\"லோரெம் வெரி கேரட்\" உடன் தொடங்குங்கள்"
 
 #: src/ui/views/lorem_generator.blp:40 src/ui/views/uuid_generator.blp:53
 msgid "Amount"
-msgstr ""
+msgstr "தொகை"
 
 #: src/ui/views/lorem_generator.blp:54
 msgid "Words"
-msgstr ""
+msgstr "சொற்கள்"
 
 #: src/ui/views/lorem_generator.blp:55
 msgid "Sentences"
-msgstr ""
+msgstr "வாக்கியங்கள்"
 
 #: src/ui/views/lorem_generator.blp:56
 msgid "Paragraphs"
-msgstr ""
+msgstr "பத்திகள்"
 
 #: src/ui/views/lorem_generator.blp:69
 msgid "Generated text"
-msgstr ""
+msgstr "உருவாக்கப்பட்ட உரை"
 
 #: src/ui/views/markdown_preview.blp:35
 msgid "Markdown"
-msgstr ""
+msgstr "மார்க் பேரூர்"
 
 #: src/ui/views/markdown_preview.blp:49
 msgid "Preview"
-msgstr ""
+msgstr "முன்னோட்டம்"
 
 #: src/ui/views/qrcode_generator.blp:19
 msgid "QR Code Generator"
-msgstr ""
+msgstr "QR குறியீடு செனரேட்டர்"
 
 #: src/ui/views/qrcode_generator.blp:31 src/ui/views/reverse_cron.blp:31
 msgid "Tool Options"
-msgstr ""
+msgstr "கருவி விருப்பங்கள்"
 
 #: src/ui/views/qrcode_generator.blp:32
 msgid "Fill the required information and press 'generate'"
-msgstr ""
+msgstr "தேவையான தகவல்களை நிரப்பி, 'உருவாக்கு' என்பதை அழுத்தவும்"
 
 #: src/ui/views/qrcode_generator.blp:35
 msgid "Content type"
-msgstr ""
+msgstr "உள்ளடக்க வகை"
 
 #: src/ui/views/qrcode_generator.blp:36
 msgid "Choose the content of the QR Code"
-msgstr ""
+msgstr "QR குறியீட்டின் உள்ளடக்கத்தைத் தேர்வுசெய்க"
 
 #: src/ui/views/qrcode_generator.blp:41 src/ui/views/qrcode_generator.blp:49
 msgid "Text/URL"
-msgstr ""
+msgstr "உரை/url"
 
 #: src/ui/views/qrcode_generator.blp:42
 msgid "WiFi Network"
-msgstr ""
+msgstr "வைஃபை பிணையம்"
 
 #: src/ui/views/qrcode_generator.blp:43
 msgid "Contact"
-msgstr ""
+msgstr "தொடர்பு"
 
 #: src/ui/views/qrcode_generator.blp:56
 msgid "Network Name (SSID)"
-msgstr ""
+msgstr "பிணைய பெயர் (எச்.எச்.ஐ.டி)"
 
 #: src/ui/views/qrcode_generator.blp:63
 msgid "Network Encryption"
-msgstr ""
+msgstr "பிணைய குறியாக்கம்"
 
 #: src/ui/views/qrcode_generator.blp:70
 msgid "None"
-msgstr ""
+msgstr "எதுவுமில்லை"
 
 #: src/ui/views/qrcode_generator.blp:76
 msgid "Network Password"
-msgstr ""
+msgstr "பிணைய கடவுச்சொல்"
 
 #: src/ui/views/qrcode_generator.blp:80
 msgid "First Name *"
-msgstr ""
+msgstr "முதல் பெயர் *"
 
 #: src/ui/views/qrcode_generator.blp:87
 msgid "Last Name *"
-msgstr ""
+msgstr "கடைசி பெயர் *"
 
 #: src/ui/views/qrcode_generator.blp:94
 msgid "Phone Number"
-msgstr ""
+msgstr "தொலைபேசி எண்"
 
 #: src/ui/views/qrcode_generator.blp:101
 msgid "Email"
-msgstr ""
+msgstr "மின்னஞ்சல்"
 
 #: src/ui/views/qrcode_generator.blp:108
 msgid "Birthday"
-msgstr ""
+msgstr "பிறந்த நாள்"
 
 #: src/ui/views/qrcode_generator.blp:127
 msgid "Select from calendar:"
-msgstr ""
+msgstr "காலெண்டரிலிருந்து தேர்ந்தெடுக்கவும்:"
 
 #: src/ui/views/qrcode_generator.blp:138
 msgid "URL"
-msgstr ""
+msgstr "முகவரி"
 
 #: src/ui/views/qrcode_generator.blp:145
 msgid "Address"
-msgstr ""
+msgstr "முகவரி"
 
 #: src/ui/views/qrcode_generator.blp:148
 msgid "Street"
-msgstr ""
+msgstr "தெரு"
 
 #: src/ui/views/qrcode_generator.blp:155
 msgid "City"
-msgstr ""
+msgstr "நகரம்"
 
 #: src/ui/views/qrcode_generator.blp:162
 msgid "State"
-msgstr ""
+msgstr "மாநிலம்"
 
 #: src/ui/views/qrcode_generator.blp:169
 msgid "ZIP Code"
-msgstr ""
+msgstr "சிப் குறியீடு"
 
 #: src/ui/views/qrcode_generator.blp:176
 msgid "Country"
-msgstr ""
+msgstr "நாடு"
 
 #: src/ui/views/qrcode_generator.blp:186
 msgid "Generated QR Code"
-msgstr ""
+msgstr "உருவாக்கப்பட்ட QR குறியீடு"
 
 #: src/ui/views/qrcode_generator.blp:193
 msgid "qr-code.png"
-msgstr ""
+msgstr "qr-code.png"
 
 #: src/ui/views/qrcode_generator.blp:195
 msgid "Generate"
-msgstr ""
+msgstr "உருவாக்கு"
 
 #: src/ui/views/random_generator.blp:19
 msgid "Random Generator"
-msgstr ""
+msgstr "சீரற்ற செனரேட்டர்"
 
 #: src/ui/views/random_generator.blp:30
 msgid "String"
-msgstr ""
+msgstr "சரம்"
 
 #: src/ui/views/random_generator.blp:31
 msgid "Generate a random string with the given options. ASCII characters only."
 msgstr ""
+"கொடுக்கப்பட்ட விருப்பங்களுடன் ஒரு சீரற்ற சரத்தை உருவாக்கவும். ASCII எழுத்துக்கள் மட்டுமே."
 
 #: src/ui/views/random_generator.blp:34
 msgid "Length"
-msgstr ""
+msgstr "நீளம்"
 
 #: src/ui/views/random_generator.blp:35
 msgid "Length of the generated string"
-msgstr ""
+msgstr "உருவாக்கப்பட்ட சரத்தின் நீளம்"
 
 #: src/ui/views/random_generator.blp:47
 msgid "Uppercase letters (A-Z)"
-msgstr ""
+msgstr "பெரிய எழுத்துக்கள் (A-Z)"
 
 #: src/ui/views/random_generator.blp:53
 msgid "Lowercase letters (a-z)"
-msgstr ""
+msgstr "சிறிய எழுத்துக்கள் (A-Z)"
 
 #: src/ui/views/random_generator.blp:59
 msgid "Numbers (0-9)"
-msgstr ""
+msgstr "எண்கள் (0-9)"
 
 #: src/ui/views/random_generator.blp:65
 msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
-msgstr ""
+msgstr "சிறப்பு எழுத்துக்கள் (!"
 
 #: src/ui/views/random_generator.blp:75
 msgid "Generated string"
-msgstr ""
+msgstr "உருவாக்கப்பட்ட சரம்"
 
 #: src/ui/views/random_generator.blp:92
 msgid "Number"
-msgstr ""
+msgstr "எண்"
 
 #: src/ui/views/random_generator.blp:93
 msgid "Generate a random number in the given range"
-msgstr ""
+msgstr "கொடுக்கப்பட்ட வரம்பில் ஒரு சீரற்ற எண்ணை உருவாக்கவும்"
 
 #: src/ui/views/random_generator.blp:96
 msgid "Minimum"
-msgstr ""
+msgstr "சிறுமம்"
 
 #: src/ui/views/random_generator.blp:97
 msgid "Minimum value of the generated number"
-msgstr ""
+msgstr "உருவாக்கப்பட்ட எண்ணின் குறைந்தபட்ச மதிப்பு"
 
 #: src/ui/views/random_generator.blp:109
 msgid "Maximum"
-msgstr ""
+msgstr "பெருமம்"
 
 #: src/ui/views/random_generator.blp:110
 msgid "Maximum value of the generated number"
-msgstr ""
+msgstr "உருவாக்கப்பட்ட எண்ணின் அதிகபட்ச மதிப்பு"
 
 #: src/ui/views/random_generator.blp:159
 msgid "Generated number"
-msgstr ""
+msgstr "உருவாக்கப்பட்ட எண்"
 
 #: src/ui/views/regex_tester.blp:19
 msgid "Regular Expression Tester"
-msgstr ""
+msgstr "வழக்கமான வெளிப்பாடு சோதனையாளர்"
 
 #: src/ui/views/regex_tester.blp:37
 msgid "Regex to test"
-msgstr ""
+msgstr "சோதிக்க வழக்கவெளி"
 
 #: src/ui/views/reverse_cron.blp:58
 msgid "Every minute"
-msgstr ""
+msgstr "ஒவ்வொரு நிமிடமும்"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
@@ -1552,420 +1588,429 @@ msgstr ""
 #: src/ui/views/reverse_cron.blp:277 src/ui/views/reverse_cron.blp:389
 #: src/ui/views/reverse_cron.blp:543
 msgid "Every"
-msgstr ""
+msgstr "ஒவ்வொன்றும்"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #: src/ui/views/reverse_cron.blp:82
 msgid "minute(s) starting at minute"
-msgstr ""
+msgstr "நிமிடத்தில் தொடங்கி மணித்துளி (கள்)"
 
 #: src/ui/views/reverse_cron.blp:101
 msgid "Specific minute (choose one or many, no selection means every minute)"
 msgstr ""
+"குறிப்பிட்ட மணித்துளி (ஒன்று அல்லது பலவற்றைத் தேர்வுசெய்க, ஒவ்வொரு நிமிடமும் தேர்வு என்பது"
+" அர்த்தம்)"
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:122
 msgid "Every minute between minute"
-msgstr ""
+msgstr "நிமிடத்திற்கு இடையில் ஒவ்வொரு நிமிடமும்"
 
 #. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:133
 msgid "and minute"
-msgstr ""
+msgstr "மற்றும் மணித்துளி"
 
 #: src/ui/views/reverse_cron.blp:161
 msgid "Every hour"
-msgstr ""
+msgstr "ஒவ்வொரு மணி நேரமும்"
 
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
 #: src/ui/views/reverse_cron.blp:185
 msgid "hour(s) starting at hour"
-msgstr ""
+msgstr "மணிநேரத்தில் தொடங்கி மணி (கள்)"
 
 #: src/ui/views/reverse_cron.blp:204
 msgid "Specific hour (choose one or many, no selection means every hour)"
 msgstr ""
+"குறிப்பிட்ட மணிநேரம் (ஒன்று அல்லது பலவற்றைத் தேர்வுசெய்க, ஒவ்வொரு மணி நேரமும் தேர்வு "
+"இல்லை)"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:225
 msgid "Every hour between hour"
-msgstr ""
+msgstr "ஒவ்வொரு மணி நேரத்திற்கும் இடையில்"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:236
 msgid "and hour"
-msgstr ""
+msgstr "மற்றும் மணி"
 
 #: src/ui/views/reverse_cron.blp:264
 msgid "Every day"
-msgstr ""
+msgstr "தினமும்"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:288
 msgid "day(s) starting on the"
-msgstr ""
+msgstr "நாள் (கள்) தொடங்கி"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:299
 msgid "of the month"
-msgstr ""
+msgstr "மாதத்தின்"
 
 #: src/ui/views/reverse_cron.blp:316
 msgid ""
 "Specific day of month (choose one or many, no selection means every day)"
 msgstr ""
+"மாதத்தின் குறிப்பிட்ட நாள் (ஒன்று அல்லது பலவற்றைத் தேர்வுசெய்க, எந்த தேர்வும் ஒவ்வொரு நாளும் "
+"அர்த்தம்)"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:337
 msgid "Every day between the"
-msgstr ""
+msgstr "ஒவ்வொரு நாளும் இடையில்"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:348
 msgid "and the"
-msgstr ""
+msgstr "மற்றும்"
 
 #: src/ui/views/reverse_cron.blp:376
 msgid "Every month"
-msgstr ""
+msgstr "ஒவ்வொரு திங்களும்"
 
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
 #: src/ui/views/reverse_cron.blp:400
 msgid "month(s) starting in"
-msgstr ""
+msgstr "மாதம் (கள்) தொடங்குகிறது"
 
 #: src/ui/views/reverse_cron.blp:436
 msgid "Specific month (choose one or many, no selection means every month)"
 msgstr ""
+"குறிப்பிட்ட மாதம் (ஒன்று அல்லது பலவற்றைத் தேர்வுசெய்க, ஒவ்வொரு மாதமும் தேர்வு இல்லை)"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #: src/ui/views/reverse_cron.blp:457
 msgid "Every month between"
-msgstr ""
+msgstr "ஒவ்வொரு மாதமும் இடையில்"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:485 src/ui/views/reverse_cron.blp:692
 msgid "and"
-msgstr ""
+msgstr "மற்றும்"
 
 #: src/ui/views/reverse_cron.blp:516
 msgid "Weekday"
-msgstr ""
+msgstr "வார நாள்"
 
 #: src/ui/views/reverse_cron.blp:530
 msgid "Every weekday"
-msgstr ""
+msgstr "ஒவ்வொரு வாரமும்"
 
 #. TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:554
 msgid "weekday(s) starting on"
-msgstr ""
+msgstr "வார நாள் (கள்) தொடங்கி"
 
 #: src/ui/views/reverse_cron.blp:585
 msgid "Specific weekday (choose one or many, no selection means every weekday)"
 msgstr ""
+"குறிப்பிட்ட வார நாள் (ஒன்று அல்லது பலவற்றைத் தேர்வுசெய்க, ஒவ்வொரு வாரமும் தேர்வு என்பது "
+"அர்த்தம்)"
 
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:669
 msgid "Every weekday between"
-msgstr ""
+msgstr "இடையில் ஒவ்வொரு வாரமும்"
 
 #: src/ui/views/reverse_cron.blp:718
 msgid "Command to execute"
-msgstr ""
+msgstr "செயல்படுத்த கட்டளை"
 
 #: src/ui/views/reverse_cron.blp:737
 msgid "CRON Expression"
-msgstr ""
+msgstr "க்ரோன் வெளிப்பாடு"
 
 #: src/ui/views/text_diff.blp:33
 msgid "Old Text"
-msgstr ""
+msgstr "பழைய உரை"
 
 #: src/ui/views/text_diff.blp:45
 msgid "New Text"
-msgstr ""
+msgstr "புதிய உரை"
 
 #: src/ui/views/text_diff.blp:58
 msgid "Differences"
-msgstr ""
+msgstr "வேறுபாடுகள்"
 
 #: src/ui/views/text_inspector.blp:34
 msgid "Change case"
-msgstr ""
+msgstr "வழக்கு மாற்றவும்"
 
 #: src/ui/views/text_inspector.blp:35
 msgid "Choose a case to apply to the text"
-msgstr ""
+msgstr "உரைக்கு விண்ணப்பிக்க ஒரு வழக்கைத் தேர்வுசெய்க"
 
 #: src/ui/views/text_inspector.blp:42
 msgid "Sentence case"
-msgstr ""
+msgstr "தண்டனை வழக்கு"
 
 #: src/ui/views/text_inspector.blp:43
 msgid "lower case"
-msgstr ""
+msgstr "கீழ் வழக்கு"
 
 #: src/ui/views/text_inspector.blp:44
 msgid "UPPERCASE"
-msgstr ""
+msgstr "பெரிய எழுத்து"
 
 #: src/ui/views/text_inspector.blp:45
 msgid "Title Case"
-msgstr ""
+msgstr "தலைப்பு வழக்கு"
 
 #: src/ui/views/text_inspector.blp:46
 msgid "camelCase"
-msgstr ""
+msgstr "ஒட்டக கேச்"
 
 #: src/ui/views/text_inspector.blp:47
 msgid "PascalCase"
-msgstr ""
+msgstr "பாச்கால்கேச்"
 
 #: src/ui/views/text_inspector.blp:48
 msgid "snake_case"
-msgstr ""
+msgstr "பாம்பு_கச்"
 
 #: src/ui/views/text_inspector.blp:49
 msgid "CONSTANT_CASE"
-msgstr ""
+msgstr "Contantion_case"
 
 #: src/ui/views/text_inspector.blp:50
 msgid "kebab-case"
-msgstr ""
+msgstr "கபாப்-வழக்கு"
 
 #: src/ui/views/text_inspector.blp:51
 msgid "COBOL-CASE"
-msgstr ""
+msgstr "கோபோல்-வழக்கு"
 
 #: src/ui/views/text_inspector.blp:52
 msgid "Train-Case"
-msgstr ""
+msgstr "ரயில் வழக்கு"
 
 #: src/ui/views/text_inspector.blp:53
 msgid "aLtErNaTiNg CaSe"
-msgstr ""
+msgstr "மாற்று வழக்கு"
 
 #: src/ui/views/text_inspector.blp:54
 msgid "ReVeRsE aLtErNaTiNg CaSe"
-msgstr ""
+msgstr "மாற்று வழக்கு"
 
 #: src/ui/views/text_inspector.blp:66
 msgid "Information"
-msgstr ""
+msgstr "தகவல்"
 
 #: src/ui/views/text_inspector.blp:69
 msgid "Cursor"
-msgstr ""
+msgstr "கர்சர்"
 
 #: src/ui/views/text_inspector.blp:83
 msgid "Line:"
-msgstr ""
+msgstr "வரி:"
 
 #: src/ui/views/text_inspector.blp:96
 msgid "Column:"
-msgstr ""
+msgstr "நெடுவரிசை:"
 
 #: src/ui/views/text_inspector.blp:121
 msgid "Characters:"
-msgstr ""
+msgstr "எழுத்துக்கள்:"
 
 #: src/ui/views/text_inspector.blp:134
 msgid "Words:"
-msgstr ""
+msgstr "சொற்கள்:"
 
 #: src/ui/views/text_inspector.blp:147
 msgid "Lines:"
-msgstr ""
+msgstr "கோடுகள்:"
 
 #: src/ui/views/timestamp.blp:19
 msgid "Timestamp Converter"
-msgstr ""
+msgstr "நேர முத்திரை மாற்றி"
 
 #: src/ui/views/timestamp.blp:43
 msgid "Sets the current system timestamp"
-msgstr ""
+msgstr "தற்போதைய கணினி நேர முத்திரையை அமைக்கிறது"
 
 #: src/ui/views/timestamp.blp:47
 msgid "Date"
-msgstr ""
+msgstr "திகதி"
 
 #: src/ui/views/timestamp.blp:57
 msgid "ISO Date (ISO 8601/RFC 3339)"
-msgstr ""
+msgstr "ஐஎச்ஓ தேதி (ஐஎச்ஓ 8601/ஆர்எஃப்சி 3339)"
 
 #: src/ui/views/timestamp.blp:63
 msgid "RFC 2822 Date"
-msgstr ""
+msgstr "RFC 2822 தேதி"
 
 #: src/ui/views/timestamp.blp:69
 msgid "Short Date"
-msgstr ""
+msgstr "குறுகிய தேதி"
 
 #: src/ui/views/timestamp.blp:75
 msgid "Short Time"
-msgstr ""
+msgstr "குறுகிய நேரம்"
 
 #: src/ui/views/timestamp.blp:81
 msgid "Long Date"
-msgstr ""
+msgstr "நீண்ட தேதி"
 
 #: src/ui/views/timestamp.blp:87
 msgid "Long Time"
-msgstr ""
+msgstr "நீண்ட நேரம்"
 
 #: src/ui/views/timestamp.blp:93
 msgid "Full Long Date"
-msgstr ""
+msgstr "முழு நீண்ட தேதி"
 
 #: src/ui/views/url_encoder.blp:19
 msgid "URL Encoder & Decoder"
-msgstr ""
+msgstr "முகவரி குறியாக்கி & டிகோடர்"
 
 #: src/ui/views/url_encoder.blp:46
 msgid "Space encoding"
-msgstr ""
+msgstr "விண்வெளி குறியாக்கம்"
 
 #: src/ui/views/url_encoder.blp:47
 msgid "Select the desired encoding for the space character"
-msgstr ""
+msgstr "விண்வெளி எழுத்துக்கு விரும்பிய குறியாக்கத்தைத் தேர்ந்தெடுக்கவும்"
 
 #: src/ui/views/uuid_generator.blp:19
 msgid "UUID Generator"
-msgstr ""
+msgstr "UUID செனரேட்டர்"
 
 #: src/ui/views/uuid_generator.blp:34
 msgid "Version"
-msgstr ""
+msgstr "பதிப்பு"
 
 #: src/ui/views/uuid_generator.blp:35
 msgid "Choose the UUID version to generate"
-msgstr ""
+msgstr "உருவாக்க UUID பதிப்பைத் தேர்வுசெய்க"
 
 #: src/ui/views/uuid_generator.blp:40
 msgid "Version 1 (MAC address)"
-msgstr ""
+msgstr "பதிப்பு 1 (மேக் முகவரி)"
 
 #: src/ui/views/uuid_generator.blp:41
 msgid "Version 3"
-msgstr ""
+msgstr "பதிப்பு 3"
 
 #: src/ui/views/uuid_generator.blp:42
 msgid "Version 4 (Random)"
-msgstr ""
+msgstr "பதிப்பு 4 (சீரற்ற)"
 
 #: src/ui/views/uuid_generator.blp:43
 msgid "Version 5"
-msgstr ""
+msgstr "பதிப்பு 5"
 
 #: src/ui/views/uuid_generator.blp:44
 msgid "Version 6 (Gregorian Time)"
-msgstr ""
+msgstr "பதிப்பு 6 (கிரிகோரியன் நேரம்)"
 
 #: src/ui/views/uuid_generator.blp:45
 msgid "Version 7 (UNIX Epoch)"
-msgstr ""
+msgstr "பதிப்பு 7 (யுனிக்ச் சகாப்தம்)"
 
 #: src/ui/views/uuid_generator.blp:54
 msgid "Number of UUIDs to be generated (up to 50)"
-msgstr ""
+msgstr "உருவாக்கப்பட வேண்டிய UUID களின் எண்ணிக்கை (50 வரை)"
 
 #: src/ui/views/uuid_generator.blp:72
 msgid "Generated UUIDs"
-msgstr ""
+msgstr "உருவாக்கப்பட்ட UUIDS"
 
 #: src/ui/gtk/help-overlay.blp:15
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "பொது"
 
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Search Tools"
-msgstr ""
+msgstr "கருவிகளைத் தேடுங்கள்"
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "குறுக்குவழிகளைக் காட்டு"
 
 #: src/ui/gtk/help-overlay.blp:28
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "வெளியேறு"
 
 #: src/formatters/html.py:14
 msgid "HTML Formatter"
-msgstr ""
+msgstr "உஉகுமொ FORMATTER"
 
 #: src/formatters/html.py:17
 msgid "Type HTML code here"
-msgstr ""
+msgstr "உஉகுமொ குறியீட்டை இங்கே தட்டச்சு செய்க"
 
 #: src/formatters/html.py:20 src/formatters/js.py:20 src/formatters/json.py:19
 #: src/formatters/sql.py:19 src/formatters/xml.py:21 src/formatters/css.py:19
 msgctxt "verb/action"
 msgid "Format"
-msgstr ""
+msgstr "வடிவம்"
 
 #: src/formatters/js.py:14
 msgid "JavaScript Formatter"
-msgstr ""
+msgstr "சாவாச்கிரிப்ட் ஃபார்மேட்டர்"
 
 #: src/formatters/js.py:17
 msgid "Type JavaScript code here"
-msgstr ""
+msgstr "சாவாச்கிரிப்ட் குறியீட்டை இங்கே தட்டச்சு செய்க"
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
-msgstr ""
+msgstr "சாதொபொகு FORMATTER"
 
 #: src/formatters/json.py:16
 msgid "Type JSON code here"
-msgstr ""
+msgstr "சாதொபொகு குறியீட்டை இங்கே தட்டச்சு செய்க"
 
 #: src/formatters/sql.py:13
 msgid "SQL Formatter"
-msgstr ""
+msgstr "கவிமொ FORMATTER"
 
 #: src/formatters/sql.py:16
 msgid "Type SQL code here"
-msgstr ""
+msgstr "கவிமொ குறியீட்டை இங்கே தட்டச்சு செய்க"
 
 #: src/formatters/xml.py:15
 msgid "XML Formatter"
-msgstr ""
+msgstr "எக்ச்எம்எல் ஃபார்மேட்டர்"
 
 #: src/formatters/xml.py:18
 msgid "Type XML code here"
-msgstr ""
+msgstr "எக்ச்எம்எல் குறியீட்டை இங்கே தட்டச்சு செய்க"
 
 #: src/formatters/css.py:13
 msgid "CSS Formatter"
-msgstr ""
+msgstr "சிஎச்எச் FORMATTER"
 
 #: src/formatters/css.py:16 src/formatters/css_minifier.py:17
 msgid "Type CSS here"
-msgstr ""
+msgstr "சிஎச்எச் ஐ இங்கே தட்டச்சு செய்க"
 
 #: src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
-msgstr ""
+msgstr "சிஎச்எச் தவறி"
 
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
-msgstr ""
+msgstr "குறைக்க"
 
 #: src/formatters/js_minifier.py:14
 msgid "JavaScript Minifier"
-msgstr ""
+msgstr "சாவாச்கிரிப்ட் மினிஃபயர்"
 
 #: src/formatters/js_minifier.py:15
 msgid "Minify JS code"
-msgstr ""
+msgstr "JS குறியீட்டைக் குறைக்கவும்"
 
 #: src/formatters/js_minifier.py:17
 msgid "Type JS code here"
-msgstr ""
+msgstr "JS குறியீட்டை இங்கே தட்டச்சு செய்க"
