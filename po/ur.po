@@ -6,15 +6,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-11-25 14:45+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-12-29 06:00+0000\n"
+"Last-Translator: Nyx-4 <241463@students.au.edu.pk>\n"
+"Language-Team: Urdu <https://hosted.weblate.org/projects/devtoolbox/"
+"devtoolbox/ur/>\n"
 "Language: ur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -46,12 +49,13 @@ msgid ""
 msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
+#, fuzzy
 msgid "Includes:"
-msgstr ""
+msgstr "شامل:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "JSON to YAML converter and vice-versa"
-msgstr ""
+msgstr "JSON سے YAML اور اس کے برعکس"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33
 msgid "CRON expressions parser"
@@ -84,7 +88,7 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
-msgstr ""
+msgstr "اور بہت کچھ..."
 
 #: src/window.py:122 src/window.py:129 src/window.py:136 src/window.py:143
 #: src/window.py:150
