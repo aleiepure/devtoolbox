@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-25 14:45+0100\n"
-"PO-Revision-Date: 2023-06-25 23:24+0200\n"
-"Last-Translator: Amerey.eu <info@amerey.eu>\n"
+"PO-Revision-Date: 2025-01-07 16:53+0100\n"
+"Last-Translator: Amerey <info@amerey.eu>\n"
 "Language-Team: \n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -25,7 +25,6 @@ msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
-#, fuzzy
 msgid "Dev tools at your fingertips"
 msgstr "Vývojové nástroje na dosah ruky"
 
@@ -34,6 +33,8 @@ msgid ""
 "JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
 "Markdown;Image;"
 msgstr ""
+"JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
+"Markdown;Image;"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -137,18 +138,16 @@ msgstr "Generování CRON výrazů"
 
 #: src/window.py:159 src/window.py:166 src/window.py:173 src/window.py:180
 #: src/window.py:187
-#, fuzzy
 msgid "Encoders & Decoders"
-msgstr "Kodér a dekodér URL"
+msgstr "Kodéry a dekodéry"
 
 #: src/window.py:161 src/ui/views/html_encoder.blp:20
 msgid "Encode and decode special characters using the HTML format"
 msgstr "Kódování a dekódování speciálních znaků pomocí formátu HTML"
 
 #: src/window.py:168
-#, fuzzy
 msgid "Encode and decode base64 strings"
-msgstr "Kódování a dekódování speciálních znaků v adresách URL"
+msgstr "Kódování a dekódování řetězců base64"
 
 #: src/window.py:175 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
@@ -164,9 +163,8 @@ msgstr "Dekódování tokenů JWT na záhlaví a datovou část"
 
 #: src/window.py:196 src/window.py:203 src/window.py:210 src/window.py:217
 #: src/window.py:224 src/window.py:231 src/window.py:238 src/window.py:245
-#, fuzzy
 msgid "Formatters & Minifiers"
-msgstr "Formátovače"
+msgstr "Formátování a minimalizace"
 
 #: src/window.py:198 src/formatters/json.py:14
 msgid "Format JSON documents"
@@ -193,14 +191,12 @@ msgid "Format CSS documents"
 msgstr "Formátování dokumentů CSS"
 
 #: src/window.py:240 src/formatters/css_minifier.py:15
-#, fuzzy
 msgid "Minify CSS documents"
-msgstr "Formátování dokumentů CSS"
+msgstr "Minifikování dokumentů CSS"
 
 #: src/window.py:247
-#, fuzzy
 msgid "Minify JavaScript documents"
-msgstr "Formátování dokumentů JavaScript"
+msgstr "Minifikování dokumentů JavaScript"
 
 #: src/window.py:254 src/window.py:261 src/window.py:268 src/window.py:275
 #: src/window.py:282 src/window.py:289
@@ -523,9 +519,8 @@ msgid "Key Identifier"
 msgstr "Identifikátor klíče"
 
 #: src/views/certificate_request_generator.py:38
-#, fuzzy
 msgid "Open CSR"
-msgstr "Otevřít"
+msgstr "Otevřít CSR"
 
 #: src/views/certificate_request_generator.py:61
 msgid "Open Key File"
@@ -536,20 +531,19 @@ msgid "All Files"
 msgstr "Všechny soubory"
 
 #: src/views/certificate_request_generator.py:124
-#, fuzzy
 msgid "Select save location"
-msgstr "Vyberte požadovanou operaci"
+msgstr "Vyberte místo uložení"
 
 #: src/views/certificate_request_generator.py:125
 #: src/ui/views/certificate_request_generator.blp:150
 msgid "Choose"
-msgstr ""
+msgstr "Vybrat"
 
 #: src/views/certificate_request_generator.py:176
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:54
 #: src/views/image_converter.py:41 src/views/qrcode_generator.py:206
 msgid "Saved Successfully"
-msgstr ""
+msgstr "Úspěšně uloženo"
 
 #: src/views/certificate_request_generator.py:192
 msgid "Save key as"
@@ -561,9 +555,8 @@ msgstr "Neplatná hodnota. Zkontrolujte prosím znovu"
 
 #: src/views/colorblindness_simulator.py:26 src/views/image_converter.py:24
 #: src/views/qrcode_generator.py:43
-#, fuzzy
 msgid "Open Image"
-msgstr "Otevírání obrázku..."
+msgstr "Otevřít obrázek"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
@@ -581,9 +574,8 @@ msgstr ""
 
 #. Toast messages
 #: src/views/gzip_compressor.py:27
-#, fuzzy
 msgid "Open image"
-msgstr "Otevírání obrázku..."
+msgstr "Otevřít obrázek"
 
 #: src/views/gzip_compressor.py:29
 msgid "Cannot decompress from an image or a file"
@@ -797,30 +789,31 @@ msgstr ""
 "{xsd_error}"
 
 #: src/ui/window.blp:56
-#, fuzzy
 msgid "Show/hide searchbar"
-msgstr "Zobrazit/skrýt postranní panel"
+msgstr "Zobrazit/skrýt vyhledávací panel"
 
 #: src/ui/window.blp:62
 msgid "Favorite Tools"
-msgstr ""
+msgstr "Oblíbené nástroje"
 
 #: src/ui/window.blp:71
 msgid "No Favorites"
-msgstr ""
+msgstr "Žádné oblíbené nástroje"
 
 #: src/ui/window.blp:72
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
 msgstr ""
+"Zde přidejte své oblíbené nástroje kliknutím na tlačítko s hvězdičkou vedle "
+"názvu"
 
 #: src/ui/window.blp:92
 msgid "Favorites"
-msgstr ""
+msgstr "Oblíbené"
 
 #: src/ui/window.blp:121
 msgid "Search Tools…"
-msgstr ""
+msgstr "Vyhledávací nástroje…"
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
@@ -835,12 +828,11 @@ msgid "_About Dev Toolbox"
 msgstr "O aplikaci Dev Toolbox"
 
 #: src/ui/about_dialog.blp:10
-#, fuzzy
 msgid ""
 "Copyright © 2022 - 2024 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
-"Copyright © 2022 - 2023 Alessandro Iepure\n"
+"Copyright © 2022 - 2024 Alessandro Iepure\n"
 "Některé ikony jsou chráněny autorským právem projektu GNOME"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
@@ -853,9 +845,8 @@ msgid "Now"
 msgstr "Nyní"
 
 #: src/ui/widgets/date_area.blp:40
-#, fuzzy
 msgid "Sets the current system date and time"
-msgstr "Nastaví aktuální systémové datum a čas (místní časové pásmo)"
+msgstr "Nastaví aktuální systémové datum a čas"
 
 #: src/ui/widgets/date_area.blp:55 src/ui/widgets/entry_row.blp:30
 #: src/ui/widgets/spin_area.blp:68 src/ui/widgets/text_area.blp:66
@@ -998,29 +989,27 @@ msgstr "Vytvořit CSR"
 
 #: src/ui/views/certificate_request_generator.blp:48
 msgid "Common Name (CN) *"
-msgstr ""
+msgstr "Obecný název (CN) *"
 
 #: src/ui/views/certificate_request_generator.blp:52
-#, fuzzy
 msgid "Country Name (C)"
-msgstr "Země"
+msgstr "Název země (C)"
 
 #: src/ui/views/certificate_request_generator.blp:56
 msgid "State or Province Name (ST)"
-msgstr ""
+msgstr "Jméno státu nebo provincie (ST)"
 
 #: src/ui/views/certificate_request_generator.blp:60
-#, fuzzy
 msgid "Locality Name (L)"
-msgstr "Příjmení *"
+msgstr "Název lokality (L)"
 
 #: src/ui/views/certificate_request_generator.blp:64
 msgid "Organization Name (O)"
-msgstr ""
+msgstr "Jméno organizace (O)"
 
 #: src/ui/views/certificate_request_generator.blp:68
 msgid "Organization Unit Name (OU)"
-msgstr ""
+msgstr "Název jednotky organizace (OU)"
 
 #: src/ui/views/certificate_request_generator.blp:72
 msgid "Passphrase"
@@ -1224,7 +1213,6 @@ msgid "GZip Compress & Decompress"
 msgstr "Komprimovat a dekomprimovat GZip"
 
 #: src/ui/views/gzip_compressor.blp:20
-#, fuzzy
 msgid "Compress and decompress texts and images using GZip"
 msgstr "Komprimování a dekomprimování souborů a textů pomocí GZip"
 
@@ -1265,7 +1253,7 @@ msgstr "Výsledek komprese a očekávaný vstup dekomprese jsou kódovány base6
 
 #: src/ui/views/gzip_compressor.blp:103
 msgid "May hang the app for large files, please wait."
-msgstr ""
+msgstr "Aplikace může u velkých souborů přestat reagovat, čekejte prosím."
 
 #: src/ui/views/hash_generator.blp:19
 msgid "Hash Generator & Checker"
@@ -1330,7 +1318,7 @@ msgstr "Převést"
 
 #: src/ui/views/image_converter.blp:64
 msgid "converted-image"
-msgstr ""
+msgstr "konvertovaný obrázek"
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
@@ -1498,7 +1486,7 @@ msgstr "Vygenerovaný QR Kód"
 
 #: src/ui/views/qrcode_generator.blp:193
 msgid "qr-code.png"
-msgstr ""
+msgstr "qr-code.png"
 
 #: src/ui/views/qrcode_generator.blp:195
 msgid "Generate"
@@ -1554,19 +1542,19 @@ msgstr "Generování náhodného čísla v daném rozsahu"
 
 #: src/ui/views/random_generator.blp:96
 msgid "Minimum"
-msgstr ""
+msgstr "Minimum"
 
 #: src/ui/views/random_generator.blp:97
 msgid "Minimum value of the generated number"
-msgstr ""
+msgstr "Minimální hodnota generovaného čísla"
 
 #: src/ui/views/random_generator.blp:109
 msgid "Maximum"
-msgstr ""
+msgstr "Maximum"
 
 #: src/ui/views/random_generator.blp:110
 msgid "Maximum value of the generated number"
-msgstr ""
+msgstr "Maximální hodnota generovaného čísla"
 
 #: src/ui/views/random_generator.blp:159
 msgid "Generated number"
@@ -1840,34 +1828,32 @@ msgid "Date"
 msgstr "Datum"
 
 #: src/ui/views/timestamp.blp:57
-#, fuzzy
 msgid "ISO Date (ISO 8601/RFC 3339)"
 msgstr "Datum ISO (ISO 8601/RFC 3339)"
 
 #: src/ui/views/timestamp.blp:63
 msgid "RFC 2822 Date"
-msgstr ""
+msgstr "Datum RFC 2822"
 
 #: src/ui/views/timestamp.blp:69
 msgid "Short Date"
-msgstr ""
+msgstr "Krátké datum"
 
 #: src/ui/views/timestamp.blp:75
 msgid "Short Time"
-msgstr ""
+msgstr "Krátký formát času"
 
 #: src/ui/views/timestamp.blp:81
-#, fuzzy
 msgid "Long Date"
-msgstr "Datum"
+msgstr "Dlouhé datum"
 
 #: src/ui/views/timestamp.blp:87
 msgid "Long Time"
-msgstr ""
+msgstr "Dlouhý formát času"
 
 #: src/ui/views/timestamp.blp:93
 msgid "Full Long Date"
-msgstr ""
+msgstr "Úplné dlouhé datum"
 
 #: src/ui/views/url_encoder.blp:19
 msgid "URL Encoder & Decoder"
@@ -1933,7 +1919,7 @@ msgstr "Obecné"
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Search Tools"
-msgstr ""
+msgstr "Nástroje pro vyhledávání"
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"
@@ -2001,27 +1987,24 @@ msgstr "Zde zadejte kód CSS"
 
 #: src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
-msgstr ""
+msgstr "Minifikátor CSS"
 
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
-msgstr ""
+msgstr "Minifikovat"
 
 #: src/formatters/js_minifier.py:14
-#, fuzzy
 msgid "JavaScript Minifier"
-msgstr "Formátování JavaScript"
+msgstr "Minifikátor JavaScriptu"
 
 #: src/formatters/js_minifier.py:15
-#, fuzzy
 msgid "Minify JS code"
-msgstr "Formátování dokumentů CSS"
+msgstr "Minifikujte kód JS"
 
 #: src/formatters/js_minifier.py:17
-#, fuzzy
 msgid "Type JS code here"
-msgstr "Zde zadejte kód JSON"
+msgstr "Zde zadejte kód JS"
 
 #~ msgid "Cancel"
 #~ msgstr "Zrušit"
