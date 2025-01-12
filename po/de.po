@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-11-25 14:45+0100\n"
-"PO-Revision-Date: 2024-12-28 05:07+0000\n"
-"Last-Translator: \"Sebastian K.\" <sebastian.k@mailbox.org>\n"
+"PO-Revision-Date: 2025-01-13 12:00+0000\n"
+"Last-Translator: Nino678190 <superwauzi@gmx.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/de/>\n"
 "Language: de\n"
@@ -1619,25 +1619,27 @@ msgstr "Alle Stunde"
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
 #: src/ui/views/reverse_cron.blp:185
 msgid "hour(s) starting at hour"
-msgstr ""
+msgstr "Stunde(n) startet bei Stunde"
 
 #: src/ui/views/reverse_cron.blp:204
 msgid "Specific hour (choose one or many, no selection means every hour)"
 msgstr ""
+"Bestimmte Stunde(Wähle eine oder mehrere, keine Auswahl meint alle Stunden)"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:225
+#, fuzzy
 msgid "Every hour between hour"
-msgstr ""
+msgstr "Jede Stunde zwischen Stunde"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:236
 msgid "and hour"
-msgstr ""
+msgstr "und Stunde"
 
 #: src/ui/views/reverse_cron.blp:264
 msgid "Every day"
-msgstr ""
+msgstr "Jeden Tag"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:288
@@ -1686,15 +1688,15 @@ msgstr ""
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:485 src/ui/views/reverse_cron.blp:692
 msgid "and"
-msgstr ""
+msgstr "und"
 
 #: src/ui/views/reverse_cron.blp:516
 msgid "Weekday"
-msgstr ""
+msgstr "Wochentag"
 
 #: src/ui/views/reverse_cron.blp:530
 msgid "Every weekday"
-msgstr ""
+msgstr "Jeder Wochentag"
 
 #. TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:554
@@ -1720,15 +1722,15 @@ msgstr ""
 
 #: src/ui/views/text_diff.blp:33
 msgid "Old Text"
-msgstr ""
+msgstr "Alter Text"
 
 #: src/ui/views/text_diff.blp:45
 msgid "New Text"
-msgstr ""
+msgstr "Neuer Text"
 
 #: src/ui/views/text_diff.blp:58
 msgid "Differences"
-msgstr ""
+msgstr "Unterschiede"
 
 #: src/ui/views/text_inspector.blp:34
 msgid "Change case"
@@ -1792,71 +1794,72 @@ msgstr ""
 
 #: src/ui/views/text_inspector.blp:66
 msgid "Information"
-msgstr ""
+msgstr "Information"
 
 #: src/ui/views/text_inspector.blp:69
+#, fuzzy
 msgid "Cursor"
-msgstr ""
+msgstr "Cursor"
 
 #: src/ui/views/text_inspector.blp:83
 msgid "Line:"
-msgstr ""
+msgstr "Linie:"
 
 #: src/ui/views/text_inspector.blp:96
 msgid "Column:"
-msgstr ""
+msgstr "Spalte:"
 
 #: src/ui/views/text_inspector.blp:121
 msgid "Characters:"
-msgstr ""
+msgstr "Zeichen:"
 
 #: src/ui/views/text_inspector.blp:134
 msgid "Words:"
-msgstr ""
+msgstr "Wörter:"
 
 #: src/ui/views/text_inspector.blp:147
 msgid "Lines:"
-msgstr ""
+msgstr "Linien:"
 
 #: src/ui/views/timestamp.blp:19
 msgid "Timestamp Converter"
-msgstr ""
+msgstr "Zeitstempelumwandler"
 
 #: src/ui/views/timestamp.blp:43
 msgid "Sets the current system timestamp"
-msgstr ""
+msgstr "Setzt den aktuellen Systemzeitstempel"
 
 #: src/ui/views/timestamp.blp:47
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: src/ui/views/timestamp.blp:57
 msgid "ISO Date (ISO 8601/RFC 3339)"
-msgstr ""
+msgstr "ISO Datum(ISO 8601/RFC 3339)"
 
 #: src/ui/views/timestamp.blp:63
 msgid "RFC 2822 Date"
-msgstr ""
+msgstr "RFC 2822 Datum"
 
 #: src/ui/views/timestamp.blp:69
 msgid "Short Date"
-msgstr ""
+msgstr "Kurzes Datum"
 
 #: src/ui/views/timestamp.blp:75
 msgid "Short Time"
-msgstr ""
+msgstr "Kurze Zeit"
 
 #: src/ui/views/timestamp.blp:81
 msgid "Long Date"
-msgstr ""
+msgstr "Langes Datum"
 
 #: src/ui/views/timestamp.blp:87
 msgid "Long Time"
-msgstr ""
+msgstr "Lange Zeit"
 
 #: src/ui/views/timestamp.blp:93
 msgid "Full Long Date"
-msgstr ""
+msgstr "Ganzes langes Datum"
 
 #: src/ui/views/url_encoder.blp:19
 msgid "URL Encoder & Decoder"
@@ -1872,11 +1875,11 @@ msgstr ""
 
 #: src/ui/views/uuid_generator.blp:19
 msgid "UUID Generator"
-msgstr ""
+msgstr "UUID Generator"
 
 #: src/ui/views/uuid_generator.blp:34
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #: src/ui/views/uuid_generator.blp:35
 msgid "Choose the UUID version to generate"
