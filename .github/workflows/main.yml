@@ -1,20 +1,18 @@
 on:
   push:
+    branches: [main]
   pull_request:
-    branches: 
-      - main
 name: Build
 jobs:   
   flatpak:
     name: "Build Flatpak"
     runs-on: ubuntu-latest
     container:
-      image: bilelmoussaoui/flatpak-github-actions:gnome-43
+      image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-47
       options: --privileged
     steps:
-    - uses: fsfe/reuse-action@v1.2.0
-    - uses: actions/checkout@v3
-    - uses: flatpak/flatpak-github-actions/flatpak-builder@v5
+    - uses: actions/checkout@v4
+    - uses: flathub-infra/flatpak-github-actions/flatpak-builder@master
       with:
         bundle: devtoolbox-devel.flatpak
         manifest-path: me.iepure.devtoolbox.json

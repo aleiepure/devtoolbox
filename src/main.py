@@ -113,6 +113,21 @@ class DevtoolboxApplication(Adw.Application):
             "mthw0 https://github.com/mthw0",
             "Ismael Brendo https://github.com/Ismaelbrendo",
             "Amer Sawan https://github.com/amersaw",
+            "Konstantin Tutsch https://github.com/konstantintutsch",
+            "Finnever https://github.com/MrFinnever",
+            "Nyx https://github.com/nyx-4",
+            "Christian Backes https://github.com/inpector",
+            "twlvnn https://github.com/twlvnn",
+            "Angelo Rafael https://github.com/lo2dev",
+            "DJKnaeckebrot https://github.com/lo2dev",
+            "Djalim Simaila https://github.com/DjalimSimaila",
+            "TamilNeram https://github.com/TamilNeram",
+            "Emilio Sepúlveda M. https://github.com/emisep",
+            "Chris Heywood https://github.com/cheywood",
+            "John Peter Sa https://github.com/johnpetersa19",
+            "Nino678190 https://github.com/Nino678190",
+            "Sebastian K. https://github.com/spktkpkt",
+            "PonyLucky https://github.com/PonyLucky"
         ])
         about_dialog.present(self.props.active_window)
 
