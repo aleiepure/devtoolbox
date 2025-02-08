@@ -27,7 +27,7 @@ class HtmlFormatter(Formatter):
 
         doc_root = html.fromstring(text)
         etree.indent(doc_root, space=indent_str)
-        return etree.tostring(doc_root, encoding='unicode', pretty_print=True)
+        return etree.tostring(doc_root, method='html', encoding='unicode', pretty_print=True)
 
     def is_correct(self, text:str) -> bool:
         if isinstance(text, str):
