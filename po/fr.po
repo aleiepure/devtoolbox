@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-11-25 14:45+0100\n"
-"PO-Revision-Date: 2024-10-08 17:15+0000\n"
-"Last-Translator: SuperAtraction <superatraction@proton.me>\n"
+"PO-Revision-Date: 2025-01-08 09:01+0000\n"
+"Last-Translator: PonyLucky <louis.margot.44@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/fr/>\n"
 "Language: fr\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
 msgid "@app-name@"
-msgstr ""
+msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
@@ -35,6 +35,8 @@ msgid ""
 "JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
 "Markdown;Image;"
 msgstr ""
+"JSON;YAML;YML;Convertion;CRON;Parseur;GZip;Compresseur;Décompresseur;Hash;Regex;Markdown;Image;"
+""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -167,7 +169,7 @@ msgstr "Décoder les jetons JWT en en-tête et charge utile"
 #: src/window.py:196 src/window.py:203 src/window.py:210 src/window.py:217
 #: src/window.py:224 src/window.py:231 src/window.py:238 src/window.py:245
 msgid "Formatters & Minifiers"
-msgstr ""
+msgstr "Formateurs et minimiseurs"
 
 #: src/window.py:198 src/formatters/json.py:14
 msgid "Format JSON documents"
@@ -248,7 +250,7 @@ msgstr "Créer des QR Codes"
 
 #: src/window.py:297 src/ui/views/text_inspector.blp:19
 msgid "Text Inspector & Case Converter"
-msgstr ""
+msgstr "Inspecteur de texte et convertisseur de majuscules"
 
 #: src/window.py:298 src/window.py:305 src/window.py:312 src/window.py:319
 #: src/window.py:326 src/window.py:333 src/ui/views/regex_tester.blp:49
@@ -270,7 +272,7 @@ msgstr "Recherche de chaînes de caractères correspondantes dans un texte"
 
 #: src/window.py:311 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
-msgstr ""
+msgstr "Différence de texte"
 
 #: src/window.py:314 src/ui/views/text_diff.blp:20
 #, fuzzy
@@ -279,11 +281,11 @@ msgstr "Analyser deux textes et trouver des différences"
 
 #: src/window.py:318 src/ui/views/xml_validator.blp:19
 msgid "XML Scheme Validator"
-msgstr ""
+msgstr "Validateur de schéma XML"
 
 #: src/window.py:321 src/ui/views/xml_validator.blp:20
 msgid "Check an XML file against an XSD schema"
-msgstr ""
+msgstr "Vérifier un fichier XML à partir d'un schéma XSD"
 
 #: src/window.py:325 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
@@ -296,11 +298,11 @@ msgstr "Vérifier un fichier JSON par rapport à un schéma JSON"
 
 #: src/window.py:335 src/ui/views/markdown_preview.blp:20
 msgid "Preview markdown code as you type"
-msgstr ""
+msgstr "Prévisualiser le code markdown lors de l'écriture"
 
 #: src/window.py:341 src/ui/views/contrast_checker.blp:19
 msgid "Contrast Checker"
-msgstr ""
+msgstr "Vérificateur de constraste"
 
 #: src/window.py:342 src/window.py:349 src/window.py:356
 msgid "Graphics"
@@ -308,15 +310,15 @@ msgstr "Graphiques"
 
 #: src/window.py:344 src/ui/views/contrast_checker.blp:20
 msgid "Check a color combination for WCAG compliance"
-msgstr ""
+msgstr "Vérifier la conformité d'une combinaison de couleurs avec les WCAG"
 
 #: src/window.py:348
 msgid "Color Blindness"
-msgstr ""
+msgstr "Daltonisme"
 
 #: src/window.py:351 src/ui/views/colorblindness_simulator.blp:20
 msgid "Simulate color blindness in images"
-msgstr ""
+msgstr "Simuler le daltonisme sur des images"
 
 #: src/window.py:355 src/ui/views/image_converter.blp:19
 msgid "Image Format Converter"
@@ -328,7 +330,7 @@ msgstr "Convertir des images en différents formats"
 
 #: src/window.py:364 src/ui/views/certificate_parser.blp:19
 msgid "Certificate Parser"
-msgstr ""
+msgstr "Analyseur de certificat"
 
 #: src/window.py:365 src/window.py:372 src/views/certificate_parser.py:90
 msgid "Certificates"
@@ -340,12 +342,14 @@ msgid "View certificates contents"
 msgstr "Voir le contenu du certificat"
 
 #: src/window.py:371
+#, fuzzy
 msgid "Certificate Signing Request"
-msgstr ""
+msgstr "Demande de signature de certificat"
 
 #: src/window.py:374 src/ui/views/certificate_request_generator.blp:20
+#, fuzzy
 msgid "Generate certificate signing requests"
-msgstr ""
+msgstr "Générer des demandes de signature de certificat"
 
 #. change view and save previous
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:54
@@ -416,7 +420,7 @@ msgstr ""
 #: src/widgets/text_area.py:230 src/widgets/text_file_area.py:280
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr "Impossible d'ouvrir {file_path}: {file_content}."
+msgstr "Impossible d'ouvrir {file_path} : {file_content}."
 
 #: src/widgets/text_area.py:246
 msgid "File is not UTF-8 encoded."
@@ -428,20 +432,20 @@ msgstr "Tous les fichiers"
 
 #: src/widgets/text_file_area.py:224
 msgid "Text files and images"
-msgstr ""
+msgstr "Fichiers texte et images"
 
 #: src/widgets/text_file_area.py:236
 msgid "Images"
-msgstr ""
+msgstr "Images"
 
 #: src/widgets/text_file_area.py:321
 msgid "Saving file..."
-msgstr ""
+msgstr "Sauvegarde du fichier…"
 
 #: src/widgets/text_file_area.py:360
 #, python-brace-format
 msgid "Unable to save {path}"
-msgstr ""
+msgstr "Sauvegarde impossible : {path}"
 
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
 #: src/views/certificate_request_generator.py:180 src/views/formatter.py:48
@@ -450,181 +454,186 @@ msgstr ""
 #: src/views/url_encoder.py:48
 #, python-brace-format
 msgid "Error: {error}"
-msgstr ""
+msgstr "Erreur : {error}"
 
 #: src/views/certificate_parser.py:65
 msgid "Unsupported file"
-msgstr ""
+msgstr "Fichier non pris en charge"
 
 #: src/views/certificate_parser.py:102 src/views/reverse_cron.py:180
 #: src/ui/views/certificate_parser.blp:100 src/ui/views/reverse_cron.blp:39
 msgid "Expand All"
-msgstr ""
+msgstr "Tout développer"
 
 #: src/views/certificate_parser.py:106 src/views/reverse_cron.py:184
 msgid "Collapse All"
-msgstr ""
+msgstr "Tout réduire"
 
 #: src/views/certificate_parser.py:145
 msgid "Error: Cannot open this file because it is not a valid certificate."
 msgstr ""
+"Erreur : Impossible d'ouvrir ce fichier car il ne s'agit pas d'un certificat "
+"valide."
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:153
 #, python-brace-format
 msgid "Identity: {identity}"
-msgstr ""
+msgstr "Identité : {identity}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:155
 #, python-brace-format
 msgid "Verified by: {verified_by}"
-msgstr ""
+msgstr "Vérifié par : {verified_by}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:157
 #, python-brace-format
 msgid "Expires: {expiration_date}"
-msgstr ""
+msgstr "Expire le : {expiration_date}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:163
 msgid "Basic Constraints"
-msgstr ""
+msgstr "Contraintes de base"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:164
 msgid "Extended Key Usage"
-msgstr ""
+msgstr "Utilisation étendue des clés"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:165 src/views/certificate_parser.py:210
+#, fuzzy
 msgid "Subject Key Identifier"
-msgstr ""
+msgstr "Identifiant clé du sujet"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:166
 msgid "Key Usage"
-msgstr ""
+msgstr "Utilisation de la clef"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:167
 msgid "Subject Alternative Names"
-msgstr ""
+msgstr "Noms alternatifs du sujet"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:171
 msgid "Extension"
-msgstr ""
+msgstr "Extension"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:211
 msgid "Certificate Fingerprints"
-msgstr ""
+msgstr "Empreintes du certificat"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:214
 msgid "Key Identifier"
-msgstr ""
+msgstr "Identifiant de la clé"
 
 #: src/views/certificate_request_generator.py:38
-#, fuzzy
 msgid "Open CSR"
-msgstr "Ouvrir"
+msgstr "Ouvrir le CSR"
 
 #: src/views/certificate_request_generator.py:61
 msgid "Open Key File"
-msgstr ""
+msgstr "Ouvrir le fichier de clés"
 
 #: src/views/certificate_request_generator.py:68
 msgid "All Files"
-msgstr ""
+msgstr "Tous les fichiers"
 
 #: src/views/certificate_request_generator.py:124
 msgid "Select save location"
-msgstr ""
+msgstr "Sélectionner l'emplacement de sauvegarde"
 
 #: src/views/certificate_request_generator.py:125
 #: src/ui/views/certificate_request_generator.blp:150
 msgid "Choose"
-msgstr ""
+msgstr "Choisir"
 
 #: src/views/certificate_request_generator.py:176
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:54
 #: src/views/image_converter.py:41 src/views/qrcode_generator.py:206
 msgid "Saved Successfully"
-msgstr ""
+msgstr "Sauvegarde réussie"
 
 #: src/views/certificate_request_generator.py:192
 msgid "Save key as"
-msgstr ""
+msgstr "Enregistrer la clé sous"
 
 #: src/views/chmod_calculator.py:30
 msgid "Invalid value. Please check again"
-msgstr ""
+msgstr "Valeur incorrecte. Veuillez réessayer"
 
 #: src/views/colorblindness_simulator.py:26 src/views/image_converter.py:24
 #: src/views/qrcode_generator.py:43
-#, fuzzy
 msgid "Open Image"
-msgstr "Ouverture de l'image..."
+msgstr "Ouvrir l'image…"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
 #: src/views/colorblindness_simulator.py:98
 msgid "Loading simulation..."
-msgstr ""
+msgstr "Chargement de la simulation…"
 
 #: src/views/formatter.py:76
 msgid ""
 "Text is not in the correct format. Check if you misspelled something or if "
 "all parentheses are closed."
 msgstr ""
+"Le texte n'est pas sous le bon format. Vérifiez si vous avez fait une faute "
+"d'orthographe ou si toutes les parenthèses sont fermées."
 
 #. Toast messages
 #: src/views/gzip_compressor.py:27
-#, fuzzy
 msgid "Open image"
-msgstr "Ouverture de l'image..."
+msgstr "Ouverture de l'image…"
 
 #: src/views/gzip_compressor.py:29
 msgid "Cannot decompress from an image or a file"
-msgstr ""
+msgstr "Impossible de décompresser à partir d'une image ou d'un fichier"
 
 #: src/views/gzip_compressor.py:124
 msgid "Please save this file to view its contents"
-msgstr ""
+msgstr "Veuillez enregistrer ce fichier pour en visualiser le contenu"
 
 #: src/views/hash_generator.py:125
 msgid "Hashes match!"
-msgstr ""
+msgstr "Les hashs correspondent !"
 
 #: src/views/hash_generator.py:127
 msgid "The integrity is verified."
-msgstr ""
+msgstr "L'intégrité est vérifiée."
 
 #: src/views/hash_generator.py:135
 msgid "Warning, integrity cannot be verified!"
-msgstr ""
+msgstr "Attention, l'intégrité ne peut être vérifiée !"
 
 #: src/views/hash_generator.py:137
 msgid ""
 "The calculated hash and the provided one do not match. Check again and if "
 "this is a file you downloaded from the Internet re-download it."
 msgstr ""
+"Le hash calculé et celui fourni ne correspondent pas. Vérifiez à nouveau et, "
+"s'il s'agit d'un fichier que vous avez téléchargé sur l'internet, "
+"téléchargez-le à nouveau."
 
 #: src/views/json_validator.py:77 src/views/xml_validator.py:76
 msgid "Valid!"
-msgstr ""
+msgstr "Valide !"
 
 #: src/views/json_validator.py:79
 msgid "JSON is compliant with the provided JSON schema."
-msgstr ""
+msgstr "Le JSON est conforme au schéma JSON fourni."
 
 #: src/views/json_validator.py:87 src/views/json_validator.py:97
 #: src/views/xml_validator.py:86
 msgid "Invalid!"
-msgstr ""
+msgstr "Invalide !"
 
 #: src/views/json_validator.py:89
 #, python-brace-format
@@ -632,6 +641,8 @@ msgid ""
 "JSON is not compliant with the provided JSON scheme:\n"
 "{validation_error}"
 msgstr ""
+"JSON n'est pas conforme au schéma JSON fourni :\n"
+"{validation_error}"
 
 #: src/views/json_validator.py:99
 #, python-brace-format
@@ -639,11 +650,13 @@ msgid ""
 "Error in JSON schema:\n"
 "{schema_error}"
 msgstr ""
+"Erreur dans le schéma JSON :\n"
+"{schema_error}"
 
 #: src/views/qrcode_generator.py:71 src/ui/views/qrcode_generator.blp:113
 #: src/ui/views/qrcode_generator.blp:122
 msgid "Not Set"
-msgstr ""
+msgstr "Non spécifié"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
@@ -669,119 +682,119 @@ msgstr ""
 #: src/ui/views/reverse_cron.blp:410 src/ui/views/reverse_cron.blp:467
 #: src/ui/views/reverse_cron.blp:495
 msgid "January"
-msgstr ""
+msgstr "Janvier"
 
 #: src/views/reverse_cron.py:241 src/views/reverse_cron.py:355
 #: src/ui/views/reverse_cron.blp:411 src/ui/views/reverse_cron.blp:468
 #: src/ui/views/reverse_cron.blp:496
 msgid "February"
-msgstr ""
+msgstr "Février"
 
 #: src/views/reverse_cron.py:242 src/views/reverse_cron.py:356
 #: src/ui/views/reverse_cron.blp:412 src/ui/views/reverse_cron.blp:469
 #: src/ui/views/reverse_cron.blp:497
 msgid "March"
-msgstr ""
+msgstr "Mars"
 
 #: src/views/reverse_cron.py:243 src/views/reverse_cron.py:357
 #: src/ui/views/reverse_cron.blp:413 src/ui/views/reverse_cron.blp:470
 #: src/ui/views/reverse_cron.blp:498
 msgid "April"
-msgstr ""
+msgstr "Avril"
 
 #: src/views/reverse_cron.py:244 src/views/reverse_cron.py:358
 #: src/ui/views/reverse_cron.blp:414 src/ui/views/reverse_cron.blp:471
 #: src/ui/views/reverse_cron.blp:499
 msgid "May"
-msgstr ""
+msgstr "Mai"
 
 #: src/views/reverse_cron.py:245 src/views/reverse_cron.py:359
 #: src/ui/views/reverse_cron.blp:415 src/ui/views/reverse_cron.blp:472
 #: src/ui/views/reverse_cron.blp:500
 msgid "June"
-msgstr ""
+msgstr "Juin"
 
 #: src/views/reverse_cron.py:246 src/views/reverse_cron.py:360
 #: src/ui/views/reverse_cron.blp:416 src/ui/views/reverse_cron.blp:473
 #: src/ui/views/reverse_cron.blp:501
 msgid "July"
-msgstr ""
+msgstr "Juillet"
 
 #: src/views/reverse_cron.py:247 src/views/reverse_cron.py:361
 #: src/ui/views/reverse_cron.blp:417 src/ui/views/reverse_cron.blp:474
 #: src/ui/views/reverse_cron.blp:502
 msgid "August"
-msgstr ""
+msgstr "Août"
 
 #: src/views/reverse_cron.py:248 src/views/reverse_cron.py:362
 #: src/ui/views/reverse_cron.blp:418 src/ui/views/reverse_cron.blp:475
 #: src/ui/views/reverse_cron.blp:503
 msgid "September"
-msgstr ""
+msgstr "Septembre"
 
 #: src/views/reverse_cron.py:249 src/views/reverse_cron.py:363
 #: src/ui/views/reverse_cron.blp:419 src/ui/views/reverse_cron.blp:476
 #: src/ui/views/reverse_cron.blp:504
 msgid "October"
-msgstr ""
+msgstr "Octobre"
 
 #: src/views/reverse_cron.py:250 src/views/reverse_cron.py:364
 #: src/ui/views/reverse_cron.blp:420 src/ui/views/reverse_cron.blp:477
 #: src/ui/views/reverse_cron.blp:505
 msgid "November"
-msgstr ""
+msgstr "Novembre"
 
 #: src/views/reverse_cron.py:251 src/views/reverse_cron.py:365
 #: src/ui/views/reverse_cron.blp:421 src/ui/views/reverse_cron.blp:478
 #: src/ui/views/reverse_cron.blp:506
 msgid "December"
-msgstr ""
+msgstr "Décembre"
 
 #: src/views/reverse_cron.py:376 src/ui/views/reverse_cron.blp:570
 #: src/ui/views/reverse_cron.blp:649 src/ui/views/reverse_cron.blp:685
 #: src/ui/views/reverse_cron.blp:708
 msgid "Sunday"
-msgstr ""
+msgstr "Dimanche"
 
 #: src/views/reverse_cron.py:377 src/ui/views/reverse_cron.blp:564
 #: src/ui/views/reverse_cron.blp:595 src/ui/views/reverse_cron.blp:679
 #: src/ui/views/reverse_cron.blp:702
 msgid "Monday"
-msgstr ""
+msgstr "Lundi"
 
 #: src/views/reverse_cron.py:378 src/ui/views/reverse_cron.blp:565
 #: src/ui/views/reverse_cron.blp:604 src/ui/views/reverse_cron.blp:680
 #: src/ui/views/reverse_cron.blp:703
 msgid "Tuesday"
-msgstr ""
+msgstr "Mardi"
 
 #: src/views/reverse_cron.py:379 src/ui/views/reverse_cron.blp:566
 #: src/ui/views/reverse_cron.blp:613 src/ui/views/reverse_cron.blp:681
 #: src/ui/views/reverse_cron.blp:704
 msgid "Wednesday"
-msgstr ""
+msgstr "Mercredi"
 
 #: src/views/reverse_cron.py:380 src/ui/views/reverse_cron.blp:567
 #: src/ui/views/reverse_cron.blp:622 src/ui/views/reverse_cron.blp:682
 #: src/ui/views/reverse_cron.blp:705
 msgid "Thursday"
-msgstr ""
+msgstr "Jeudi"
 
 #: src/views/reverse_cron.py:381 src/ui/views/reverse_cron.blp:568
 #: src/ui/views/reverse_cron.blp:631 src/ui/views/reverse_cron.blp:683
 #: src/ui/views/reverse_cron.blp:706
 msgid "Friday"
-msgstr ""
+msgstr "Vendredi"
 
 #: src/views/reverse_cron.py:382 src/ui/views/reverse_cron.blp:569
 #: src/ui/views/reverse_cron.blp:640 src/ui/views/reverse_cron.blp:684
 #: src/ui/views/reverse_cron.blp:707
 msgid "Saturday"
-msgstr ""
+msgstr "Samedi"
 
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
-msgstr ""
+msgstr "Le XML est conforme au schéma XSD fourni."
 
 #: src/views/xml_validator.py:88
 #, python-brace-format
@@ -789,18 +802,20 @@ msgid ""
 "XML is not compliant with the provided XSD scheme:\n"
 "{xsd_error}"
 msgstr ""
+"Le XML n'est pas conforme au schéma XSD fourni :\n"
+"{xsd_error}"
 
 #: src/ui/window.blp:56
 msgid "Show/hide searchbar"
-msgstr ""
+msgstr "Afficher/cacher la barre de recherche"
 
 #: src/ui/window.blp:62
 msgid "Favorite Tools"
-msgstr ""
+msgstr "Outils Favoris"
 
 #: src/ui/window.blp:71
 msgid "No Favorites"
-msgstr ""
+msgstr "Aucun Favori"
 
 #: src/ui/window.blp:72
 msgid ""

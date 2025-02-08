@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-11-25 14:45+0100\n"
-"PO-Revision-Date: 2024-10-30 12:07+0000\n"
+"PO-Revision-Date: 2025-01-01 18:00+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.2-dev\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -26,15 +26,16 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
-#, fuzzy
 msgid "Dev tools at your fingertips"
-msgstr "Kehitystyökalut lähellä"
+msgstr "Kehitystyökalut lähelläsi"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
 msgid ""
 "JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
 "Markdown;Image;"
 msgstr ""
+"JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;Markdown;Image;tiiviste;muunnin;"
+""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -519,9 +520,8 @@ msgid "Key Identifier"
 msgstr "Avaimen tunniste"
 
 #: src/views/certificate_request_generator.py:38
-#, fuzzy
 msgid "Open CSR"
-msgstr "Avaa"
+msgstr "Avaa CSR"
 
 #: src/views/certificate_request_generator.py:61
 msgid "Open Key File"
@@ -532,20 +532,19 @@ msgid "All Files"
 msgstr "Kaikki tiedostot"
 
 #: src/views/certificate_request_generator.py:124
-#, fuzzy
 msgid "Select save location"
-msgstr "Valitse haluamasi toimenpide"
+msgstr "Valitse tallennussijainti"
 
 #: src/views/certificate_request_generator.py:125
 #: src/ui/views/certificate_request_generator.blp:150
 msgid "Choose"
-msgstr ""
+msgstr "Valitse"
 
 #: src/views/certificate_request_generator.py:176
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:54
 #: src/views/image_converter.py:41 src/views/qrcode_generator.py:206
 msgid "Saved Successfully"
-msgstr ""
+msgstr "Tallennus onnistui"
 
 #: src/views/certificate_request_generator.py:192
 msgid "Save key as"
@@ -557,9 +556,8 @@ msgstr "Virheellinen arvo. Tarkista se"
 
 #: src/views/colorblindness_simulator.py:26 src/views/image_converter.py:24
 #: src/views/qrcode_generator.py:43
-#, fuzzy
 msgid "Open Image"
-msgstr "Avataan kuvaa..."
+msgstr "Avaa kuva"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
@@ -577,9 +575,8 @@ msgstr ""
 
 #. Toast messages
 #: src/views/gzip_compressor.py:27
-#, fuzzy
 msgid "Open image"
-msgstr "Avataan kuvaa..."
+msgstr "Avaa kuva"
 
 #: src/views/gzip_compressor.py:29
 msgid "Cannot decompress from an image or a file"
@@ -830,12 +827,11 @@ msgid "_About Dev Toolbox"
 msgstr "_Tietoja - Dev Toolbox"
 
 #: src/ui/about_dialog.blp:10
-#, fuzzy
 msgid ""
 "Copyright © 2022 - 2024 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
-"Tekijänoikeus © 2022 - 2023 Alessandro Iepure\n"
+"Tekijänoikeus © 2022 - 2024 Alessandro Iepure\n"
 "Joidenkin kuvakkeiden tekijänoikeus kuuluu GNOME-projektille"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
@@ -848,9 +844,8 @@ msgid "Now"
 msgstr "Nyt"
 
 #: src/ui/widgets/date_area.blp:40
-#, fuzzy
 msgid "Sets the current system date and time"
-msgstr "Asettaa järjestelmän nykyisen päivän ja ajan (paikallinen aikavyöhyke)"
+msgstr "Asettaa järjestelmän nykyisen päivän ja ajan"
 
 #: src/ui/widgets/date_area.blp:55 src/ui/widgets/entry_row.blp:30
 #: src/ui/widgets/spin_area.blp:68 src/ui/widgets/text_area.blp:66
@@ -1220,9 +1215,8 @@ msgid "GZip Compress & Decompress"
 msgstr "GZipin pakkaus ja purku"
 
 #: src/ui/views/gzip_compressor.blp:20
-#, fuzzy
 msgid "Compress and decompress texts and images using GZip"
-msgstr "Pakkaa pura tiedostoja sekä tekstiä GZipiä käyttäen"
+msgstr "Pakkaa ja pura tekstiä sekä kuvia GZipiä käyttäen"
 
 #: src/ui/views/gzip_compressor.blp:33 src/ui/views/html_encoder.blp:33
 #: src/ui/views/json_yaml.blp:33 src/ui/views/url_encoder.blp:33
@@ -1492,7 +1486,7 @@ msgstr "Luotu QR-koodi"
 
 #: src/ui/views/qrcode_generator.blp:193
 msgid "qr-code.png"
-msgstr ""
+msgstr "qr-koodi.png"
 
 #: src/ui/views/qrcode_generator.blp:195
 msgid "Generate"
