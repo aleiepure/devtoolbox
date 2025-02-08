@@ -77,6 +77,16 @@ SPDX-License-Identifier: CC0-1.0
   </screenshots>
 
   <releases>
+    <release version="1.2.2" date="2025-02-08">
+      <description translate="no">
+        <p>What's new:</p>
+        <ul>
+          <li>HTML Formatter: Fixed an issue that generated invalid markup from valid input (thanks @cheywood)</li>
+          <li>Fixed an issues that deleted other apps' temporary files when running outside Flatpak (thanks @DjalimSimaila)</li> 
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.2.1" date="2024-11-25">
       <description translate="no">
         <p>What's new:</p>
