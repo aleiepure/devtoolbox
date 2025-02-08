@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-11-25 14:45+0100\n"
-"PO-Revision-Date: 2024-10-01 14:47+0000\n"
+"PO-Revision-Date: 2025-02-08 11:13+0000\n"
 "Last-Translator: Alessandro Iepure <alessandro.iepure@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/it/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -26,7 +26,6 @@ msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
-#, fuzzy
 msgid "Dev tools at your fingertips"
 msgstr "Strumenti di sviluppo a portata di mano"
 
@@ -148,9 +147,8 @@ msgid "Encode and decode special characters using the HTML format"
 msgstr "Codifica e decodifica caratteri speciali usando il formato HTML"
 
 #: src/window.py:168
-#, fuzzy
 msgid "Encode and decode base64 strings"
-msgstr "Codifica e decodifica caratteri speciali dentro URL"
+msgstr "Codifica e decodifica stringhe base64"
 
 #: src/window.py:175 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
@@ -166,9 +164,8 @@ msgstr "Decodifica token JWT in header e payload"
 
 #: src/window.py:196 src/window.py:203 src/window.py:210 src/window.py:217
 #: src/window.py:224 src/window.py:231 src/window.py:238 src/window.py:245
-#, fuzzy
 msgid "Formatters & Minifiers"
-msgstr "Formattatori"
+msgstr "Formattatori e minimizzatori"
 
 #: src/window.py:198 src/formatters/json.py:14
 msgid "Format JSON documents"
@@ -195,14 +192,12 @@ msgid "Format CSS documents"
 msgstr "Formatta documenti CSS"
 
 #: src/window.py:240 src/formatters/css_minifier.py:15
-#, fuzzy
 msgid "Minify CSS documents"
-msgstr "Formatta documenti CSS"
+msgstr "Minimizza documenti CSS"
 
 #: src/window.py:247
-#, fuzzy
 msgid "Minify JavaScript documents"
-msgstr "Formatta documenti JavaScript"
+msgstr "Minimizza documenti JavaScript"
 
 #: src/window.py:254 src/window.py:261 src/window.py:268 src/window.py:275
 #: src/window.py:282 src/window.py:289
@@ -525,9 +520,8 @@ msgid "Key Identifier"
 msgstr "Identificatore chiave"
 
 #: src/views/certificate_request_generator.py:38
-#, fuzzy
 msgid "Open CSR"
-msgstr "Apri"
+msgstr "Apri CSR"
 
 #: src/views/certificate_request_generator.py:61
 msgid "Open Key File"
@@ -538,20 +532,19 @@ msgid "All Files"
 msgstr "Tutti i file"
 
 #: src/views/certificate_request_generator.py:124
-#, fuzzy
 msgid "Select save location"
-msgstr "Seleziona l'operazione desiderata"
+msgstr "Seleziona il percorso di salvataggio"
 
 #: src/views/certificate_request_generator.py:125
 #: src/ui/views/certificate_request_generator.blp:150
 msgid "Choose"
-msgstr ""
+msgstr "Scegli"
 
 #: src/views/certificate_request_generator.py:176
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:54
 #: src/views/image_converter.py:41 src/views/qrcode_generator.py:206
 msgid "Saved Successfully"
-msgstr ""
+msgstr "Salvato con successo"
 
 #: src/views/certificate_request_generator.py:192
 msgid "Save key as"
@@ -563,9 +556,8 @@ msgstr "Valore non valido. Per favore ricontrolla"
 
 #: src/views/colorblindness_simulator.py:26 src/views/image_converter.py:24
 #: src/views/qrcode_generator.py:43
-#, fuzzy
 msgid "Open Image"
-msgstr "Apertura in corso di un immagine..."
+msgstr "Apri immagine"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
@@ -583,9 +575,8 @@ msgstr ""
 
 #. Toast messages
 #: src/views/gzip_compressor.py:27
-#, fuzzy
 msgid "Open image"
-msgstr "Apertura in corso di un immagine..."
+msgstr "Apri immagine"
 
 #: src/views/gzip_compressor.py:29
 msgid "Cannot decompress from an image or a file"
@@ -838,12 +829,11 @@ msgid "_About Dev Toolbox"
 msgstr "_Informazioni su Dev Toolbox"
 
 #: src/ui/about_dialog.blp:10
-#, fuzzy
 msgid ""
 "Copyright © 2022 - 2024 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
-"Copyright © 2022 - 2023 Alessandro Iepure\n"
+"Copyright © 2022 - 2024 Alessandro Iepure\n"
 "Alcune icone sono copyright del Progetto GNOME"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
@@ -856,9 +846,8 @@ msgid "Now"
 msgstr "Ora"
 
 #: src/ui/widgets/date_area.blp:40
-#, fuzzy
 msgid "Sets the current system date and time"
-msgstr "Imposta data e ora correnti del sistema (fuso orario locale)"
+msgstr "Imposta data e ora correnti del sistema"
 
 #: src/ui/widgets/date_area.blp:55 src/ui/widgets/entry_row.blp:30
 #: src/ui/widgets/spin_area.blp:68 src/ui/widgets/text_area.blp:66
@@ -1227,9 +1216,8 @@ msgid "GZip Compress & Decompress"
 msgstr "Compressore e de-compressore GZip"
 
 #: src/ui/views/gzip_compressor.blp:20
-#, fuzzy
 msgid "Compress and decompress texts and images using GZip"
-msgstr "Comprimi e de-comprimi file e testi usando GZip"
+msgstr "Comprimi e de-comprimi file e immagini usando GZip"
 
 #: src/ui/views/gzip_compressor.blp:33 src/ui/views/html_encoder.blp:33
 #: src/ui/views/json_yaml.blp:33 src/ui/views/url_encoder.blp:33
@@ -1271,6 +1259,7 @@ msgstr ""
 #: src/ui/views/gzip_compressor.blp:103
 msgid "May hang the app for large files, please wait."
 msgstr ""
+"Potrebbe rendere l'app non responsiva con file grandi, per favore attendi."
 
 #: src/ui/views/hash_generator.blp:19
 msgid "Hash Generator & Checker"
@@ -1335,7 +1324,7 @@ msgstr "Converti"
 
 #: src/ui/views/image_converter.blp:64
 msgid "converted-image"
-msgstr ""
+msgstr "immagine-convertita"
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
@@ -1503,7 +1492,7 @@ msgstr "Codice QR generato"
 
 #: src/ui/views/qrcode_generator.blp:193
 msgid "qr-code.png"
-msgstr ""
+msgstr "codice-qr.png"
 
 #: src/ui/views/qrcode_generator.blp:195
 msgid "Generate"
@@ -1560,19 +1549,19 @@ msgstr "Genera un numero casuale nell'intervallo specificato"
 
 #: src/ui/views/random_generator.blp:96
 msgid "Minimum"
-msgstr ""
+msgstr "Minimo"
 
 #: src/ui/views/random_generator.blp:97
 msgid "Minimum value of the generated number"
-msgstr ""
+msgstr "Valore minimo del numero generato"
 
 #: src/ui/views/random_generator.blp:109
 msgid "Maximum"
-msgstr ""
+msgstr "Massimo"
 
 #: src/ui/views/random_generator.blp:110
 msgid "Maximum value of the generated number"
-msgstr ""
+msgstr "Valore massimo del numero generato"
 
 #: src/ui/views/random_generator.blp:159
 msgid "Generated number"
@@ -1847,34 +1836,32 @@ msgid "Date"
 msgstr "Data"
 
 #: src/ui/views/timestamp.blp:57
-#, fuzzy
 msgid "ISO Date (ISO 8601/RFC 3339)"
 msgstr "Data in formato ISO (ISO 8601/RFC 3339)"
 
 #: src/ui/views/timestamp.blp:63
 msgid "RFC 2822 Date"
-msgstr ""
+msgstr "Data formato RFC 2822"
 
 #: src/ui/views/timestamp.blp:69
 msgid "Short Date"
-msgstr ""
+msgstr "Data corta"
 
 #: src/ui/views/timestamp.blp:75
 msgid "Short Time"
-msgstr ""
+msgstr "Ora corta"
 
 #: src/ui/views/timestamp.blp:81
-#, fuzzy
 msgid "Long Date"
-msgstr "Data"
+msgstr "Data lunga"
 
 #: src/ui/views/timestamp.blp:87
 msgid "Long Time"
-msgstr ""
+msgstr "Ora lunga"
 
 #: src/ui/views/timestamp.blp:93
 msgid "Full Long Date"
-msgstr ""
+msgstr "Data lunga completa"
 
 #: src/ui/views/url_encoder.blp:19
 msgid "URL Encoder & Decoder"
@@ -2008,27 +1995,24 @@ msgstr "Scrivi il codice CSS qui"
 
 #: src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
-msgstr ""
+msgstr "Minimizzatore CSS"
 
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
-msgstr ""
+msgstr "Minimizza"
 
 #: src/formatters/js_minifier.py:14
-#, fuzzy
 msgid "JavaScript Minifier"
-msgstr "Formattatore JavaScript"
+msgstr "Minimizzatore JavaScript"
 
 #: src/formatters/js_minifier.py:15
-#, fuzzy
 msgid "Minify JS code"
-msgstr "Formatta documenti CSS"
+msgstr "Minimizza codice JS"
 
 #: src/formatters/js_minifier.py:17
-#, fuzzy
 msgid "Type JS code here"
-msgstr "Scrivi il codice JSON qui"
+msgstr "Scrivi il codice JS qui"
 
 #~ msgid "Cancel"
 #~ msgstr "Annulla"
