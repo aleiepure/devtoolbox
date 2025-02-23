@@ -7,6 +7,18 @@ from gi.repository import Gio, GObject
 import ruamel.yaml
 import json
 
+import datetime
+
+class ExtendedJSONEncoder(json.JSONEncoder):
+
+    def default(self, value):
+        if isinstance(value, datetime.datetime):
+            return value.timestamp()
+        if isinstance(value, datetime.date):
+            return value.strftime("%Y-%m-%d")
+        if isinstance(value, ruamel.yaml.comments.CommentedSet):
+            return list(value)
+        return super().default(value)
 
 class JsonYamlService():
 
@@ -34,10 +46,12 @@ class JsonYamlService():
 
     def _convert_yaml_to_json(self, yaml_str:str, indents:int) -> str:
         yaml = ruamel.yaml.YAML(typ='rt')
+
         return json.dumps(
             yaml.load(yaml_str),
             indent=indents,
-            ensure_ascii=False
+            ensure_ascii=False,
+            cls=ExtendedJSONEncoder,
         )
 
     def convert_json_to_yaml_async(self, caller:GObject.Object, callback:callable):
