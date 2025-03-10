@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-11-25 14:45+0100\n"
-"PO-Revision-Date: 2024-11-20 22:08+0000\n"
+"PO-Revision-Date: 2025-02-17 16:38+0000\n"
 "Last-Translator: 复予 <clonewith@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/devtoolbox/devtoolbox/zh_Hans/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 5.10.1-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -144,9 +144,8 @@ msgid "Encode and decode special characters using the HTML format"
 msgstr "用HTML格式编码和解码特殊字符"
 
 #: src/window.py:168
-#, fuzzy
 msgid "Encode and decode base64 strings"
-msgstr "编码和解码URL中的特殊字符"
+msgstr "编码与解码 Base64 字符串"
 
 #: src/window.py:175 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
@@ -162,9 +161,8 @@ msgstr "将 JWT 令牌解码到标头与负载"
 
 #: src/window.py:196 src/window.py:203 src/window.py:210 src/window.py:217
 #: src/window.py:224 src/window.py:231 src/window.py:238 src/window.py:245
-#, fuzzy
 msgid "Formatters & Minifiers"
-msgstr "格式器"
+msgstr "格式化与简化工具"
 
 #: src/window.py:198 src/formatters/json.py:14
 msgid "Format JSON documents"
@@ -191,14 +189,12 @@ msgid "Format CSS documents"
 msgstr "格式化CSS文档"
 
 #: src/window.py:240 src/formatters/css_minifier.py:15
-#, fuzzy
 msgid "Minify CSS documents"
-msgstr "格式化CSS文档"
+msgstr "简化 CSS 文档"
 
 #: src/window.py:247
-#, fuzzy
 msgid "Minify JavaScript documents"
-msgstr "格式化JS文档"
+msgstr "简化 JavaScript 文档"
 
 #: src/window.py:254 src/window.py:261 src/window.py:268 src/window.py:275
 #: src/window.py:282 src/window.py:289
@@ -520,9 +516,8 @@ msgid "Key Identifier"
 msgstr "密钥标识"
 
 #: src/views/certificate_request_generator.py:38
-#, fuzzy
 msgid "Open CSR"
-msgstr "打开"
+msgstr "打开 CSR"
 
 #: src/views/certificate_request_generator.py:61
 msgid "Open Key File"
@@ -533,20 +528,19 @@ msgid "All Files"
 msgstr "所有文件"
 
 #: src/views/certificate_request_generator.py:124
-#, fuzzy
 msgid "Select save location"
-msgstr "选择待执行操作"
+msgstr "选择保存位置"
 
 #: src/views/certificate_request_generator.py:125
 #: src/ui/views/certificate_request_generator.blp:150
 msgid "Choose"
-msgstr ""
+msgstr "选择"
 
 #: src/views/certificate_request_generator.py:176
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:54
 #: src/views/image_converter.py:41 src/views/qrcode_generator.py:206
 msgid "Saved Successfully"
-msgstr ""
+msgstr "保存成功"
 
 #: src/views/certificate_request_generator.py:192
 msgid "Save key as"
@@ -558,9 +552,8 @@ msgstr "数值无效。请重新检查"
 
 #: src/views/colorblindness_simulator.py:26 src/views/image_converter.py:24
 #: src/views/qrcode_generator.py:43
-#, fuzzy
 msgid "Open Image"
-msgstr "打开图片..."
+msgstr "打开图像"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
@@ -576,9 +569,8 @@ msgstr "文本格式不正确。请检查拼写是否出错，及圆括号是否
 
 #. Toast messages
 #: src/views/gzip_compressor.py:27
-#, fuzzy
 msgid "Open image"
-msgstr "打开图片..."
+msgstr "打开图像"
 
 #: src/views/gzip_compressor.py:29
 msgid "Cannot decompress from an image or a file"
@@ -829,12 +821,11 @@ msgid "_About Dev Toolbox"
 msgstr "关于 Dev Toolbox (_A)"
 
 #: src/ui/about_dialog.blp:10
-#, fuzzy
 msgid ""
 "Copyright © 2022 - 2024 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
-"版权所有 © 2022 - 2023 Alessandro Iepure\n"
+"版权所有 © 2022 - 2024 Alessandro Iepure\n"
 "一些图标的版权由 The GNOME Project 所有"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
@@ -847,9 +838,8 @@ msgid "Now"
 msgstr "现在"
 
 #: src/ui/widgets/date_area.blp:40
-#, fuzzy
 msgid "Sets the current system date and time"
-msgstr "设置当前系统日期与时间（本地时区）"
+msgstr "设置当前系统日期与时间"
 
 #: src/ui/widgets/date_area.blp:55 src/ui/widgets/entry_row.blp:30
 #: src/ui/widgets/spin_area.blp:68 src/ui/widgets/text_area.blp:66
@@ -1215,9 +1205,8 @@ msgid "GZip Compress & Decompress"
 msgstr "GZip 压缩 & 解压缩"
 
 #: src/ui/views/gzip_compressor.blp:20
-#, fuzzy
 msgid "Compress and decompress texts and images using GZip"
-msgstr "用GZip压缩和解压文件和文本"
+msgstr "用 GZip 压缩和解压文本与图像"
 
 #: src/ui/views/gzip_compressor.blp:33 src/ui/views/html_encoder.blp:33
 #: src/ui/views/json_yaml.blp:33 src/ui/views/url_encoder.blp:33
@@ -1256,7 +1245,7 @@ msgstr "压缩结果与预期的解压缩输入使用 Base64 编码。"
 
 #: src/ui/views/gzip_compressor.blp:103
 msgid "May hang the app for large files, please wait."
-msgstr ""
+msgstr "大文件可能会导致应用失去响应，请稍候。"
 
 #: src/ui/views/hash_generator.blp:19
 msgid "Hash Generator & Checker"
@@ -1319,7 +1308,7 @@ msgstr "转换"
 
 #: src/ui/views/image_converter.blp:64
 msgid "converted-image"
-msgstr ""
+msgstr "converted-image"
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
@@ -1487,7 +1476,7 @@ msgstr "生成的二维码"
 
 #: src/ui/views/qrcode_generator.blp:193
 msgid "qr-code.png"
-msgstr ""
+msgstr "qr-code.png"
 
 #: src/ui/views/qrcode_generator.blp:195
 msgid "Generate"
@@ -1543,19 +1532,19 @@ msgstr "生成给定范围内的随机数"
 
 #: src/ui/views/random_generator.blp:96
 msgid "Minimum"
-msgstr ""
+msgstr "最小值"
 
 #: src/ui/views/random_generator.blp:97
 msgid "Minimum value of the generated number"
-msgstr ""
+msgstr "生成数字的最小值"
 
 #: src/ui/views/random_generator.blp:109
 msgid "Maximum"
-msgstr ""
+msgstr "最大值"
 
 #: src/ui/views/random_generator.blp:110
 msgid "Maximum value of the generated number"
-msgstr ""
+msgstr "生成数字的最大值"
 
 #: src/ui/views/random_generator.blp:159
 msgid "Generated number"
@@ -1822,34 +1811,32 @@ msgid "Date"
 msgstr "日期"
 
 #: src/ui/views/timestamp.blp:57
-#, fuzzy
 msgid "ISO Date (ISO 8601/RFC 3339)"
 msgstr "ISO 日期 (ISO 8601/RFC 3339)"
 
 #: src/ui/views/timestamp.blp:63
 msgid "RFC 2822 Date"
-msgstr ""
+msgstr "RFC 2822 标准日期"
 
 #: src/ui/views/timestamp.blp:69
 msgid "Short Date"
-msgstr ""
+msgstr "短日期"
 
 #: src/ui/views/timestamp.blp:75
 msgid "Short Time"
-msgstr ""
+msgstr "短时间"
 
 #: src/ui/views/timestamp.blp:81
-#, fuzzy
 msgid "Long Date"
-msgstr "日期"
+msgstr "长日期"
 
 #: src/ui/views/timestamp.blp:87
 msgid "Long Time"
-msgstr ""
+msgstr "长时间"
 
 #: src/ui/views/timestamp.blp:93
 msgid "Full Long Date"
-msgstr ""
+msgstr "完整长日期"
 
 #: src/ui/views/url_encoder.blp:19
 msgid "URL Encoder & Decoder"
@@ -1983,27 +1970,24 @@ msgstr "在这里输入 CSS 代码"
 
 #: src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
-msgstr ""
+msgstr "CSS 简化器"
 
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
-msgstr ""
+msgstr "简化"
 
 #: src/formatters/js_minifier.py:14
-#, fuzzy
 msgid "JavaScript Minifier"
-msgstr "JavaScript 格式化工具"
+msgstr "JavaScript 简化工具"
 
 #: src/formatters/js_minifier.py:15
-#, fuzzy
 msgid "Minify JS code"
-msgstr "格式化CSS文档"
+msgstr "简化 JS 代码"
 
 #: src/formatters/js_minifier.py:17
-#, fuzzy
 msgid "Type JS code here"
-msgstr "在这里输入 JSON 代码"
+msgstr "在这里输入 JS 代码"
 
 #~ msgid "Cancel"
 #~ msgstr "取消"
