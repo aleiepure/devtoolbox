@@ -77,6 +77,15 @@ SPDX-License-Identifier: CC0-1.0
   </screenshots>
 
   <releases>
+    <release version="1.2.3" date="2025-03-12">
+      <description translate="no">
+        <p>What's new:</p>
+        <ul>
+          <li>JSON-YAML converter: support YAML's date, timestamp, and set formats when converting to JSON (thanks @mateusza)</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.2.2" date="2025-02-08">
       <description translate="no">
         <p>What's new:</p>
