@@ -47,11 +47,10 @@
                 "mv /app/bin/devtoolbox /app/bin/devtoolbox-bin",
                 "install -Dm755 /app/devtoolbox/devtoolbox-run-script /app/bin/devtoolbox"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://github.com/aleiepure/devtoolbox",
-                    "branch": "main"
+                    "type": "dir",
+                    "path": ".."
                 }
             ]
         }
