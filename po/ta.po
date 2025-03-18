@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-11-25 14:45+0100\n"
-"PO-Revision-Date: 2024-12-20 00:00+0000\n"
+"PO-Revision-Date: 2025-03-18 01:01+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/ta/>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9.2-dev\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
 msgid "@app-name@"
-msgstr "@app-name@"
+msgstr "வளர்கருவிப்பெட்டி"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
@@ -409,7 +409,7 @@ msgstr ""
 #: src/widgets/text_area.py:230 src/widgets/text_file_area.py:280
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr "{file_path}: {file_content book திறக்க முடியவில்லை."
+msgstr "{file_path}: {file_content} திறக்க முடியவில்லை."
 
 #: src/widgets/text_area.py:246
 msgid "File is not UTF-8 encoded."
@@ -1533,7 +1533,7 @@ msgstr "எண்கள் (0-9)"
 
 #: src/ui/views/random_generator.blp:65
 msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
-msgstr "சிறப்பு எழுத்துக்கள் (!"
+msgstr "சிறப்பு எழுத்துக்கள் (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 
 #: src/ui/views/random_generator.blp:75
 msgid "Generated string"
@@ -1665,7 +1665,7 @@ msgstr "ஒவ்வொரு நாளும் இடையில்"
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:348
 msgid "and the"
-msgstr "மற்றும்"
+msgstr "மற்றும் அந்த"
 
 #: src/ui/views/reverse_cron.blp:376
 msgid "Every month"
