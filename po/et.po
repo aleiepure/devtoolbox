@@ -6,25 +6,28 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2024-11-25 14:45+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-04-01 22:01+0000\n"
+"Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
+"devtoolbox/et/>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
 msgid "@app-name@"
-msgstr ""
+msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
 msgid "Dev tools at your fingertips"
-msgstr ""
+msgstr "Kümned arendustarvikud ühes rakenduses"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
 msgid ""
@@ -399,28 +402,28 @@ msgstr ""
 
 #: src/widgets/text_area.py:246
 msgid "File is not UTF-8 encoded."
-msgstr ""
+msgstr "Fail ei ole UTF-8 kodeeringus."
 
 #: src/widgets/text_file_area.py:217
 msgid "All files"
-msgstr ""
+msgstr "Kõik failid"
 
 #: src/widgets/text_file_area.py:224
 msgid "Text files and images"
-msgstr ""
+msgstr "Tekstifailid ja pildid"
 
 #: src/widgets/text_file_area.py:236
 msgid "Images"
-msgstr ""
+msgstr "Pildid"
 
 #: src/widgets/text_file_area.py:321
 msgid "Saving file..."
-msgstr ""
+msgstr "Salvestan faili..."
 
 #: src/widgets/text_file_area.py:360
 #, python-brace-format
 msgid "Unable to save {path}"
-msgstr ""
+msgstr "„{path}“ asukohta salvestamine ei õnnestunud"
 
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
 #: src/views/certificate_request_generator.py:180 src/views/formatter.py:48
@@ -429,42 +432,44 @@ msgstr ""
 #: src/views/url_encoder.py:48
 #, python-brace-format
 msgid "Error: {error}"
-msgstr ""
+msgstr "Viga: {error}"
 
 #: src/views/certificate_parser.py:65
 msgid "Unsupported file"
-msgstr ""
+msgstr "Mittetoetatud fail"
 
 #: src/views/certificate_parser.py:102 src/views/reverse_cron.py:180
 #: src/ui/views/certificate_parser.blp:100 src/ui/views/reverse_cron.blp:39
 msgid "Expand All"
-msgstr ""
+msgstr "Laienda kõik"
 
 #: src/views/certificate_parser.py:106 src/views/reverse_cron.py:184
 msgid "Collapse All"
-msgstr ""
+msgstr "Ahenda kõik"
 
 #: src/views/certificate_parser.py:145
 msgid "Error: Cannot open this file because it is not a valid certificate."
 msgstr ""
+"Vaiga: kuna tegemist pole korrektse sertifikaadiga, siis selle faili avamine "
+"ei õnnestu."
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:153
 #, python-brace-format
 msgid "Identity: {identity}"
-msgstr ""
+msgstr "Identiteet: {identity}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:155
 #, python-brace-format
 msgid "Verified by: {verified_by}"
-msgstr ""
+msgstr "Verifitseerija: {verified_by}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:157
 #, python-brace-format
 msgid "Expires: {expiration_date}"
-msgstr ""
+msgstr "Aegub: {expiration_date}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:163
@@ -984,47 +989,48 @@ msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:72
 msgid "Passphrase"
-msgstr ""
+msgstr "Salafraas"
 
 #: src/ui/views/certificate_request_generator.blp:76
 msgid "Key"
-msgstr ""
+msgstr "Võti"
 
 #: src/ui/views/certificate_request_generator.blp:77
 msgid "Generate a new key or use and existing one"
-msgstr ""
+msgstr "Loo uus võti või kasuta olemasolevat"
 
 #: src/ui/views/certificate_request_generator.blp:80
 msgid "New"
-msgstr ""
+msgstr "Uus"
 
 #: src/ui/views/certificate_request_generator.blp:81
 msgid "Exisisting"
-msgstr ""
+msgstr "Olemasolev"
 
 #: src/ui/views/certificate_request_generator.blp:88
 msgid "Key File *"
-msgstr ""
+msgstr "Võtmefail *"
 
 #: src/ui/views/certificate_request_generator.blp:89
 msgid "Open the file containing the key you want to use"
-msgstr ""
+msgstr "Ava fail, milles leiduvat võtit tahad kasutada"
 
 #: src/ui/views/certificate_request_generator.blp:115
 msgid "Key Size"
-msgstr ""
+msgstr "Võtme pikkus"
 
 #: src/ui/views/certificate_request_generator.blp:116
 msgid "Size of the new key. It will be saved on the same path as the CSR."
 msgstr ""
+"Uue võtme pikkus. Salvestatakse sertifikaaditaotlusega samasse asukohta."
 
 #: src/ui/views/certificate_request_generator.blp:123
 msgid "2048 bits"
-msgstr ""
+msgstr "2048 bitti"
 
 #: src/ui/views/certificate_request_generator.blp:124
 msgid "4096 bits"
-msgstr ""
+msgstr "4096 bitti"
 
 #: src/ui/views/certificate_request_generator.blp:131
 msgid "Key Save Location *"
@@ -1874,22 +1880,22 @@ msgstr ""
 #: src/ui/gtk/help-overlay.blp:15
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Üldised"
 
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Search Tools"
-msgstr ""
+msgstr "Otsingutarvikud"
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Näita kiirklahve"
 
 #: src/ui/gtk/help-overlay.blp:28
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Välju"
 
 #: src/formatters/html.py:14
 msgid "HTML Formatter"
