@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
-"POT-Creation-Date: 2024-11-25 14:45+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-25 14:43+0200\n"
 "PO-Revision-Date: 2025-02-17 16:38+0000\n"
 "Last-Translator: 复予 <clonewith@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -331,7 +331,7 @@ msgstr "查看证书内容"
 msgid "Certificate Signing Request"
 msgstr "证书签名请求"
 
-#: src/window.py:374 src/ui/views/certificate_request_generator.blp:20
+#: src/window.py:374 src/ui/views/certificate_request_generator.blp:23
 msgid "Generate certificate signing requests"
 msgstr "生成证书签名请求"
 
@@ -357,10 +357,10 @@ msgstr "打开文件"
 
 #: src/widgets/image_area.py:131 src/widgets/text_area.py:185
 #: src/widgets/text_file_area.py:208 src/views/certificate_parser.py:82
-#: src/views/certificate_request_generator.py:62
+#: src/views/certificate_request_generator.py:82
 #: src/ui/widgets/image_area.blp:59 src/ui/widgets/text_area.blp:58
 #: src/ui/widgets/text_file_area.blp:70 src/ui/views/certificate_parser.blp:51
-#: src/ui/views/certificate_request_generator.blp:107
+#: src/ui/views/certificate_request_generator.blp:117
 msgid "Open"
 msgstr "打开"
 
@@ -378,7 +378,7 @@ msgid "Save file as"
 msgstr "文件另存为"
 
 #: src/widgets/image_area.py:181 src/widgets/text_file_area.py:329
-#: src/views/certificate_request_generator.py:193
+#: src/views/certificate_request_generator.py:215
 #: src/views/image_converter.py:52 src/views/qrcode_generator.py:189
 #: src/ui/widgets/image_area.blp:72 src/ui/widgets/text_file_area.blp:83
 msgid "Save"
@@ -432,10 +432,10 @@ msgid "Unable to save {path}"
 msgstr "不能保存到 {path}"
 
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
-#: src/views/certificate_request_generator.py:180 src/views/formatter.py:48
-#: src/views/gzip_compressor.py:65 src/views/hash_generator.py:60
-#: src/views/html_encoder.py:46 src/views/json_yaml.py:52
-#: src/views/url_encoder.py:48
+#: src/views/certificate_request_generator.py:201 src/views/formatter.py:48
+#: src/views/gzip_compressor.py:74 src/views/hash_generator.py:60
+#: src/views/html_encoder.py:52 src/views/json_yaml.py:61
+#: src/views/url_encoder.py:63
 #, python-brace-format
 msgid "Error: {error}"
 msgstr "错误: {error}"
@@ -515,34 +515,34 @@ msgstr "证书指纹"
 msgid "Key Identifier"
 msgstr "密钥标识"
 
-#: src/views/certificate_request_generator.py:38
+#: src/views/certificate_request_generator.py:40
 msgid "Open CSR"
 msgstr "打开 CSR"
 
-#: src/views/certificate_request_generator.py:61
+#: src/views/certificate_request_generator.py:81
 msgid "Open Key File"
 msgstr "打开密钥文件"
 
-#: src/views/certificate_request_generator.py:68
+#: src/views/certificate_request_generator.py:88
 msgid "All Files"
 msgstr "所有文件"
 
-#: src/views/certificate_request_generator.py:124
+#: src/views/certificate_request_generator.py:145
 msgid "Select save location"
 msgstr "选择保存位置"
 
-#: src/views/certificate_request_generator.py:125
-#: src/ui/views/certificate_request_generator.blp:150
+#: src/views/certificate_request_generator.py:146
+#: src/ui/views/certificate_request_generator.blp:163
 msgid "Choose"
 msgstr "选择"
 
-#: src/views/certificate_request_generator.py:176
-#: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:54
+#: src/views/certificate_request_generator.py:197
+#: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:63
 #: src/views/image_converter.py:41 src/views/qrcode_generator.py:206
 msgid "Saved Successfully"
 msgstr "保存成功"
 
-#: src/views/certificate_request_generator.py:192
+#: src/views/certificate_request_generator.py:214
 msgid "Save key as"
 msgstr "将密钥另存为"
 
@@ -567,16 +567,15 @@ msgid ""
 "all parentheses are closed."
 msgstr "文本格式不正确。请检查拼写是否出错，及圆括号是否都已闭合。"
 
-#. Toast messages
-#: src/views/gzip_compressor.py:27
+#: src/views/gzip_compressor.py:28
 msgid "Open image"
 msgstr "打开图像"
 
-#: src/views/gzip_compressor.py:29
+#: src/views/gzip_compressor.py:31
 msgid "Cannot decompress from an image or a file"
 msgstr "无法从图像或文件解压缩"
 
-#: src/views/gzip_compressor.py:124
+#: src/views/gzip_compressor.py:134
 msgid "Please save this file to view its contents"
 msgstr "请保存此文件以查看其内容"
 
@@ -791,11 +790,11 @@ msgstr "显示/隐藏搜索栏"
 msgid "Favorite Tools"
 msgstr "已收藏工具"
 
-#: src/ui/window.blp:71
+#: src/ui/window.blp:72
 msgid "No Favorites"
 msgstr "暂无收藏"
 
-#: src/ui/window.blp:72
+#: src/ui/window.blp:73
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
 msgstr "点击工具标题旁的星星来将其添加到这里"
@@ -959,98 +958,99 @@ msgstr "打开证书文件（pem, der, cer 格式）"
 msgid "Open a certificate file to view its contents."
 msgstr "打开证书文件以查看其内容。"
 
-#: src/ui/views/certificate_request_generator.blp:19
+#: src/ui/views/certificate_request_generator.blp:22
 msgid "Certificate Signing Request Generator"
 msgstr "证书签名请求生成器"
 
-#: src/ui/views/certificate_request_generator.blp:31
+#: src/ui/views/certificate_request_generator.blp:34
 msgid "Fill the information below"
 msgstr "填写以下信息"
 
-#: src/ui/views/certificate_request_generator.blp:32
+#: src/ui/views/certificate_request_generator.blp:35
 msgid ""
 "Fill at least the required fields then press the 'Create CSR' button. An "
 "empty passphrase will generate an unecrypted CSR."
 msgstr ""
 "填写所需字段，然后按下“创建 CSR”按钮。若密码留空，则会生成未加密的 CSR。"
 
-#: src/ui/views/certificate_request_generator.blp:42
+#: src/ui/views/certificate_request_generator.blp:46
 msgid "Create CSR"
 msgstr "创建 CSR"
 
-#: src/ui/views/certificate_request_generator.blp:48
+#: src/ui/views/certificate_request_generator.blp:52
 msgid "Common Name (CN) *"
 msgstr "常用名 (CN) *"
 
-#: src/ui/views/certificate_request_generator.blp:52
+#: src/ui/views/certificate_request_generator.blp:56
 msgid "Country Name (C)"
 msgstr "国家或地区名 (C)"
 
-#: src/ui/views/certificate_request_generator.blp:56
+#: src/ui/views/certificate_request_generator.blp:60
 msgid "State or Province Name (ST)"
 msgstr "州或省名 (ST)"
 
-#: src/ui/views/certificate_request_generator.blp:60
+#: src/ui/views/certificate_request_generator.blp:64
 msgid "Locality Name (L)"
 msgstr "地区名 (L)"
 
-#: src/ui/views/certificate_request_generator.blp:64
+#: src/ui/views/certificate_request_generator.blp:68
 msgid "Organization Name (O)"
 msgstr "组织名 (O)"
 
-#: src/ui/views/certificate_request_generator.blp:68
+#: src/ui/views/certificate_request_generator.blp:72
 msgid "Organization Unit Name (OU)"
 msgstr "组织单位名 (OU)"
 
-#: src/ui/views/certificate_request_generator.blp:72
+#: src/ui/views/certificate_request_generator.blp:76
 msgid "Passphrase"
 msgstr "密码"
 
-#: src/ui/views/certificate_request_generator.blp:76
+#: src/ui/views/certificate_request_generator.blp:80
 msgid "Key"
 msgstr "密钥"
 
-#: src/ui/views/certificate_request_generator.blp:77
+#: src/ui/views/certificate_request_generator.blp:81
 msgid "Generate a new key or use and existing one"
 msgstr "生成新密钥或使用已有的"
 
-#: src/ui/views/certificate_request_generator.blp:80
+#: src/ui/views/certificate_request_generator.blp:88
 msgid "New"
 msgstr "新建"
 
-#: src/ui/views/certificate_request_generator.blp:81
-msgid "Exisisting"
+#: src/ui/views/certificate_request_generator.blp:92
+#, fuzzy
+msgid "Existing"
 msgstr "已有"
 
-#: src/ui/views/certificate_request_generator.blp:88
+#: src/ui/views/certificate_request_generator.blp:98
 msgid "Key File *"
 msgstr "密钥文件 *"
 
-#: src/ui/views/certificate_request_generator.blp:89
+#: src/ui/views/certificate_request_generator.blp:99
 msgid "Open the file containing the key you want to use"
 msgstr "打开含有待使用密钥的文件"
 
-#: src/ui/views/certificate_request_generator.blp:115
+#: src/ui/views/certificate_request_generator.blp:124
 msgid "Key Size"
 msgstr "密钥大小"
 
-#: src/ui/views/certificate_request_generator.blp:116
+#: src/ui/views/certificate_request_generator.blp:125
 msgid "Size of the new key. It will be saved on the same path as the CSR."
 msgstr "新密钥的大小。将会与 CSR 保存在相同路径。"
 
-#: src/ui/views/certificate_request_generator.blp:123
+#: src/ui/views/certificate_request_generator.blp:134
 msgid "2048 bits"
 msgstr "2048 比特"
 
-#: src/ui/views/certificate_request_generator.blp:124
+#: src/ui/views/certificate_request_generator.blp:138
 msgid "4096 bits"
 msgstr "4096 比特"
 
-#: src/ui/views/certificate_request_generator.blp:131
+#: src/ui/views/certificate_request_generator.blp:144
 msgid "Key Save Location *"
 msgstr "密钥保存位置 *"
 
-#: src/ui/views/certificate_request_generator.blp:132
+#: src/ui/views/certificate_request_generator.blp:145
 msgid "Save location for the generated key file"
 msgstr "生成密钥文件的保存位置"
 
@@ -1192,11 +1192,11 @@ msgstr "CRON 表达式"
 msgid "Dates"
 msgstr "日期"
 
-#: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:46
+#: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:52
 msgid "Indentations"
 msgstr "缩进"
 
-#: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:47
+#: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:53
 msgid "Number of spaces used for indentation"
 msgstr "缩进使用的空格数"
 
@@ -1217,33 +1217,33 @@ msgstr "方向"
 msgid "Select the desired operation"
 msgstr "选择待执行操作"
 
-#: src/ui/views/gzip_compressor.blp:39
+#: src/ui/views/gzip_compressor.blp:43
 msgid "Compress"
 msgstr "压缩"
 
-#: src/ui/views/gzip_compressor.blp:40
+#: src/ui/views/gzip_compressor.blp:47
 msgid "Decompress"
 msgstr "解压缩"
 
-#: src/ui/views/gzip_compressor.blp:56 src/ui/views/hash_generator.blp:79
-#: src/ui/views/html_encoder.blp:57 src/ui/views/json_yaml.blp:70
-#: src/ui/views/url_encoder.blp:70
+#: src/ui/views/gzip_compressor.blp:63 src/ui/views/hash_generator.blp:79
+#: src/ui/views/html_encoder.blp:64 src/ui/views/json_yaml.blp:76
+#: src/ui/views/url_encoder.blp:84
 msgid "Input"
 msgstr "输入"
 
-#: src/ui/views/gzip_compressor.blp:66 src/ui/views/hash_generator.blp:88
-#: src/ui/views/html_encoder.blp:70 src/ui/views/json_yaml.blp:82
-#: src/ui/views/url_encoder.blp:81
+#: src/ui/views/gzip_compressor.blp:73 src/ui/views/hash_generator.blp:88
+#: src/ui/views/html_encoder.blp:77 src/ui/views/json_yaml.blp:88
+#: src/ui/views/url_encoder.blp:95
 msgid "Output"
 msgstr "输出"
 
-#: src/ui/views/gzip_compressor.blp:98
+#: src/ui/views/gzip_compressor.blp:105
 msgid ""
 "The compression result and the expected decompression input are base64 "
 "encoded."
 msgstr "压缩结果与预期的解压缩输入使用 Base64 编码。"
 
-#: src/ui/views/gzip_compressor.blp:103
+#: src/ui/views/gzip_compressor.blp:110
 msgid "May hang the app for large files, please wait."
 msgstr "大文件可能会导致应用失去响应，请稍候。"
 
@@ -1281,11 +1281,11 @@ msgstr "HTML 编码 & 解码工具"
 msgid "Select the desired encoding direction"
 msgstr "选择编码方向"
 
-#: src/ui/views/html_encoder.blp:39 src/ui/views/url_encoder.blp:39
+#: src/ui/views/html_encoder.blp:43 src/ui/views/url_encoder.blp:43
 msgid "Encode"
 msgstr "编码"
 
-#: src/ui/views/html_encoder.blp:40 src/ui/views/url_encoder.blp:40
+#: src/ui/views/html_encoder.blp:47 src/ui/views/url_encoder.blp:47
 msgid "Decode"
 msgstr "解码"
 
@@ -1317,6 +1317,14 @@ msgstr "JSON - YAML 转换工具"
 #: src/ui/views/json_yaml.blp:34
 msgid "Specify what format is the input and the desired output"
 msgstr "指定输入与期望输出的格式"
+
+#: src/ui/views/json_yaml.blp:42
+msgid "JSON → YAML"
+msgstr ""
+
+#: src/ui/views/json_yaml.blp:46
+msgid "YAML → JSON"
+msgstr ""
 
 #: src/ui/views/jwt_decoder.blp:19
 msgid "JWT tokens decoder"
@@ -1842,11 +1850,11 @@ msgstr "完整长日期"
 msgid "URL Encoder & Decoder"
 msgstr "URL 编码 & 解码工具"
 
-#: src/ui/views/url_encoder.blp:46
+#: src/ui/views/url_encoder.blp:53
 msgid "Space encoding"
 msgstr "空格编码方式"
 
-#: src/ui/views/url_encoder.blp:47
+#: src/ui/views/url_encoder.blp:54
 msgid "Select the desired encoding for the space character"
 msgstr "选择空格字符的编码方式"
 

@@ -6,7 +6,6 @@ src/main.py
 src/window.py
 src/utils.py
 
-src/widgets/binary_selector.py
 src/widgets/date_area.py
 src/widgets/entry_row.py
 src/widgets/file_view.py
@@ -50,7 +49,6 @@ src/views/xml_validator.py
 src/ui/window.blp
 src/ui/about_dialog.blp
 
-src/ui/widgets/binary_selector.blp
 src/ui/widgets/date_area.blp
 src/ui/widgets/entry_row.blp
 src/ui/widgets/file_view.blp

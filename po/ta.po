@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
-"POT-Creation-Date: 2024-11-25 14:45+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-25 14:43+0200\n"
 "PO-Revision-Date: 2025-03-18 01:01+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/devtoolbox/"
@@ -151,8 +151,7 @@ msgstr "BASE64 சரங்களை குறியாக்கம் செய
 
 #: src/window.py:175 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
-msgstr ""
-"முகவரி களுக்குள் சிறப்பு எழுத்துக்களை குறியாக்கம் செய்து டிகோட் செய்யுங்கள்"
+msgstr "முகவரி களுக்குள் சிறப்பு எழுத்துக்களை குறியாக்கம் செய்து டிகோட் செய்யுங்கள்"
 
 #: src/window.py:182
 msgid "Compress and decompress files and texts using GZip"
@@ -289,8 +288,7 @@ msgstr "சாதொபொகு திட்டத்திற்கு எத�
 
 #: src/window.py:335 src/ui/views/markdown_preview.blp:20
 msgid "Preview markdown code as you type"
-msgstr ""
-"நீங்கள் தட்டச்சு செய்யும் போது மார்க் பேரூர் குறியீட்டை முன்னோட்டமிடுங்கள்"
+msgstr "நீங்கள் தட்டச்சு செய்யும் போது மார்க் பேரூர் குறியீட்டை முன்னோட்டமிடுங்கள்"
 
 #: src/window.py:341 src/ui/views/contrast_checker.blp:19
 msgid "Contrast Checker"
@@ -336,7 +334,7 @@ msgstr "சான்றிதழ்கள் உள்ளடக்கங்க�
 msgid "Certificate Signing Request"
 msgstr "சான்றிதழ் கையொப்பமிடும் கோரிக்கை"
 
-#: src/window.py:374 src/ui/views/certificate_request_generator.blp:20
+#: src/window.py:374 src/ui/views/certificate_request_generator.blp:23
 msgid "Generate certificate signing requests"
 msgstr "சான்றிதழ் கையொப்பமிடும் கோரிக்கைகளை உருவாக்குங்கள்"
 
@@ -362,10 +360,10 @@ msgstr "கோப்பை திற"
 
 #: src/widgets/image_area.py:131 src/widgets/text_area.py:185
 #: src/widgets/text_file_area.py:208 src/views/certificate_parser.py:82
-#: src/views/certificate_request_generator.py:62
+#: src/views/certificate_request_generator.py:82
 #: src/ui/widgets/image_area.blp:59 src/ui/widgets/text_area.blp:58
 #: src/ui/widgets/text_file_area.blp:70 src/ui/views/certificate_parser.blp:51
-#: src/ui/views/certificate_request_generator.blp:107
+#: src/ui/views/certificate_request_generator.blp:117
 msgid "Open"
 msgstr "திற"
 
@@ -383,7 +381,7 @@ msgid "Save file as"
 msgstr "கோப்பை சேமி"
 
 #: src/widgets/image_area.py:181 src/widgets/text_file_area.py:329
-#: src/views/certificate_request_generator.py:193
+#: src/views/certificate_request_generator.py:215
 #: src/views/image_converter.py:52 src/views/qrcode_generator.py:189
 #: src/ui/widgets/image_area.blp:72 src/ui/widgets/text_file_area.blp:83
 msgid "Save"
@@ -437,10 +435,10 @@ msgid "Unable to save {path}"
 msgstr "{path}"
 
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
-#: src/views/certificate_request_generator.py:180 src/views/formatter.py:48
-#: src/views/gzip_compressor.py:65 src/views/hash_generator.py:60
-#: src/views/html_encoder.py:46 src/views/json_yaml.py:52
-#: src/views/url_encoder.py:48
+#: src/views/certificate_request_generator.py:201 src/views/formatter.py:48
+#: src/views/gzip_compressor.py:74 src/views/hash_generator.py:60
+#: src/views/html_encoder.py:52 src/views/json_yaml.py:61
+#: src/views/url_encoder.py:63
 #, python-brace-format
 msgid "Error: {error}"
 msgstr "பிழை: {error}"
@@ -520,34 +518,34 @@ msgstr "சான்றிதழ் கைரேகைகள்"
 msgid "Key Identifier"
 msgstr "முக்கிய அடையாளங்காட்டி"
 
-#: src/views/certificate_request_generator.py:38
+#: src/views/certificate_request_generator.py:40
 msgid "Open CSR"
 msgstr "திறந்த சமூக பொறுப்புணர்வு"
 
-#: src/views/certificate_request_generator.py:61
+#: src/views/certificate_request_generator.py:81
 msgid "Open Key File"
 msgstr "விசை கோப்பைத் திறக்கவும்"
 
-#: src/views/certificate_request_generator.py:68
+#: src/views/certificate_request_generator.py:88
 msgid "All Files"
 msgstr "அனைத்து கோப்புகள்"
 
-#: src/views/certificate_request_generator.py:124
+#: src/views/certificate_request_generator.py:145
 msgid "Select save location"
 msgstr "இருப்பிடத்தைச் சேமி என்பதைத் தேர்ந்தெடுக்கவும்"
 
-#: src/views/certificate_request_generator.py:125
-#: src/ui/views/certificate_request_generator.blp:150
+#: src/views/certificate_request_generator.py:146
+#: src/ui/views/certificate_request_generator.blp:163
 msgid "Choose"
 msgstr "தேர்வு"
 
-#: src/views/certificate_request_generator.py:176
-#: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:54
+#: src/views/certificate_request_generator.py:197
+#: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:63
 #: src/views/image_converter.py:41 src/views/qrcode_generator.py:206
 msgid "Saved Successfully"
 msgstr "வெற்றிகரமாக சேமிக்கப்பட்டது"
 
-#: src/views/certificate_request_generator.py:192
+#: src/views/certificate_request_generator.py:214
 msgid "Save key as"
 msgstr "விசையை சேமிக்கவும்"
 
@@ -574,16 +572,15 @@ msgstr ""
 "உரை சரியான வடிவத்தில் இல்லை. நீங்கள் எதையாவது தவறாக எழுதினீர்களா அல்லது அனைத்து "
 "அடைப்புக்குறிப்புகள் மூடப்பட்டிருந்தால் சரிபார்க்கவும்."
 
-#. Toast messages
-#: src/views/gzip_compressor.py:27
+#: src/views/gzip_compressor.py:28
 msgid "Open image"
 msgstr "திறந்த படத்தை"
 
-#: src/views/gzip_compressor.py:29
+#: src/views/gzip_compressor.py:31
 msgid "Cannot decompress from an image or a file"
 msgstr "ஒரு படம் அல்லது கோப்பிலிருந்து குறைக்க முடியாது"
 
-#: src/views/gzip_compressor.py:124
+#: src/views/gzip_compressor.py:134
 msgid "Please save this file to view its contents"
 msgstr "இந்த கோப்பை அதன் உள்ளடக்கங்களைக் காண சேமிக்கவும்"
 
@@ -798,11 +795,11 @@ msgstr "தேடல் பட்டியைக் காட்டவும்/
 msgid "Favorite Tools"
 msgstr "பிடித்த கருவிகள்"
 
-#: src/ui/window.blp:71
+#: src/ui/window.blp:72
 msgid "No Favorites"
 msgstr "பிடித்தவை இல்லை"
 
-#: src/ui/window.blp:72
+#: src/ui/window.blp:73
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
 msgstr ""
@@ -943,8 +940,8 @@ msgid ""
 "Typing an unaccepted character (i.e. 'A' in the decimal field) will cause "
 "all the fields to reset to 0."
 msgstr ""
-"ஏற்றுக்கொள்ளப்படாத தன்மையைத் தட்டச்சு செய்வது (அதாவது தசம புலத்தில் 'ஏ') அனைத்து புலங்களும்"
-" 0 ஆக மீட்டமைக்கப்படும்."
+"ஏற்றுக்கொள்ளப்படாத தன்மையைத் தட்டச்சு செய்வது (அதாவது தசம புலத்தில் 'ஏ') அனைத்து "
+"புலங்களும் 0 ஆக மீட்டமைக்கப்படும்."
 
 #: src/ui/views/certificate_parser.blp:30
 #: src/ui/views/colorblindness_simulator.blp:31
@@ -970,99 +967,100 @@ msgstr "ஒரு சான்றிதழ் கோப்பைத் திற
 msgid "Open a certificate file to view its contents."
 msgstr "அதன் உள்ளடக்கங்களைக் காண ஒரு சான்றிதழ் கோப்பைத் திறக்கவும்."
 
-#: src/ui/views/certificate_request_generator.blp:19
+#: src/ui/views/certificate_request_generator.blp:22
 msgid "Certificate Signing Request Generator"
 msgstr "சான்றிதழ் கையொப்பமிடுதல் கோரிக்கை செனரேட்டர்"
 
-#: src/ui/views/certificate_request_generator.blp:31
+#: src/ui/views/certificate_request_generator.blp:34
 msgid "Fill the information below"
 msgstr "கீழே உள்ள தகவல்களை நிரப்பவும்"
 
-#: src/ui/views/certificate_request_generator.blp:32
+#: src/ui/views/certificate_request_generator.blp:35
 msgid ""
 "Fill at least the required fields then press the 'Create CSR' button. An "
 "empty passphrase will generate an unecrypted CSR."
 msgstr ""
-"குறைந்தபட்சம் தேவையான புலங்களை நிரப்பவும், பின்னர் 'CSR ஐ உருவாக்கு' பொத்தானை அழுத்தவும்"
-". வெற்று கடவுச்சொல் ஒரு நிர்ணயிக்கப்படாத சி.எச்.ஆரை உருவாக்கும்."
+"குறைந்தபட்சம் தேவையான புலங்களை நிரப்பவும், பின்னர் 'CSR ஐ உருவாக்கு' பொத்தானை "
+"அழுத்தவும். வெற்று கடவுச்சொல் ஒரு நிர்ணயிக்கப்படாத சி.எச்.ஆரை உருவாக்கும்."
 
-#: src/ui/views/certificate_request_generator.blp:42
+#: src/ui/views/certificate_request_generator.blp:46
 msgid "Create CSR"
 msgstr "சி.எச்.ஆரை உருவாக்கவும்"
 
-#: src/ui/views/certificate_request_generator.blp:48
+#: src/ui/views/certificate_request_generator.blp:52
 msgid "Common Name (CN) *"
 msgstr "பொதுவான பெயர் (சி.என்) *"
 
-#: src/ui/views/certificate_request_generator.blp:52
+#: src/ui/views/certificate_request_generator.blp:56
 msgid "Country Name (C)"
 msgstr "நாட்டின் பெயர் (சி)"
 
-#: src/ui/views/certificate_request_generator.blp:56
+#: src/ui/views/certificate_request_generator.blp:60
 msgid "State or Province Name (ST)"
 msgstr "மாநில அல்லது மாகாண பெயர் (எச்.டி)"
 
-#: src/ui/views/certificate_request_generator.blp:60
+#: src/ui/views/certificate_request_generator.blp:64
 msgid "Locality Name (L)"
 msgstr "வட்டாரத்தின் பெயர் (எல்)"
 
-#: src/ui/views/certificate_request_generator.blp:64
+#: src/ui/views/certificate_request_generator.blp:68
 msgid "Organization Name (O)"
 msgstr "அமைப்பு பெயர் (ஓ)"
 
-#: src/ui/views/certificate_request_generator.blp:68
+#: src/ui/views/certificate_request_generator.blp:72
 msgid "Organization Unit Name (OU)"
 msgstr "அமைப்பு அலகு பெயர் (OU)"
 
-#: src/ui/views/certificate_request_generator.blp:72
+#: src/ui/views/certificate_request_generator.blp:76
 msgid "Passphrase"
 msgstr "கடவுச்சொல்"
 
-#: src/ui/views/certificate_request_generator.blp:76
+#: src/ui/views/certificate_request_generator.blp:80
 msgid "Key"
 msgstr "விசை"
 
-#: src/ui/views/certificate_request_generator.blp:77
+#: src/ui/views/certificate_request_generator.blp:81
 msgid "Generate a new key or use and existing one"
 msgstr "புதிய விசை அல்லது பயன்பாடு மற்றும் இருக்கும் ஒன்றை உருவாக்குங்கள்"
 
-#: src/ui/views/certificate_request_generator.blp:80
+#: src/ui/views/certificate_request_generator.blp:88
 msgid "New"
 msgstr "புதிய"
 
-#: src/ui/views/certificate_request_generator.blp:81
-msgid "Exisisting"
+#: src/ui/views/certificate_request_generator.blp:92
+#, fuzzy
+msgid "Existing"
 msgstr "உள்ளது"
 
-#: src/ui/views/certificate_request_generator.blp:88
+#: src/ui/views/certificate_request_generator.blp:98
 msgid "Key File *"
 msgstr "விசை கோப்பு *"
 
-#: src/ui/views/certificate_request_generator.blp:89
+#: src/ui/views/certificate_request_generator.blp:99
 msgid "Open the file containing the key you want to use"
 msgstr "நீங்கள் பயன்படுத்த விரும்பும் விசையைக் கொண்ட கோப்பைத் திறக்கவும்"
 
-#: src/ui/views/certificate_request_generator.blp:115
+#: src/ui/views/certificate_request_generator.blp:124
 msgid "Key Size"
 msgstr "முக்கிய அளவு"
 
-#: src/ui/views/certificate_request_generator.blp:116
+#: src/ui/views/certificate_request_generator.blp:125
 msgid "Size of the new key. It will be saved on the same path as the CSR."
 msgstr "புதிய விசையின் அளவு. இது சி.எச்.ஆரின் அதே பாதையில் சேமிக்கப்படும்."
 
-#: src/ui/views/certificate_request_generator.blp:123
+#: src/ui/views/certificate_request_generator.blp:134
 msgid "2048 bits"
 msgstr "2048 பிட்கள்"
 
-#: src/ui/views/certificate_request_generator.blp:124
+#: src/ui/views/certificate_request_generator.blp:138
 msgid "4096 bits"
 msgstr "4096 பிட்கள்"
 
-#: src/ui/views/certificate_request_generator.blp:131
+#: src/ui/views/certificate_request_generator.blp:144
 msgid "Key Save Location *"
 msgstr "விசை சேமிப்பு இடம் *"
 
-#: src/ui/views/certificate_request_generator.blp:132
+#: src/ui/views/certificate_request_generator.blp:145
 msgid "Save location for the generated key file"
 msgstr "உருவாக்கப்பட்ட விசை கோப்பிற்கான இருப்பிடத்தை சேமிக்கவும்"
 
@@ -1192,8 +1190,8 @@ msgid ""
 "Format used to display generated dates (<a href=\"https://strftime.org/"
 "\">python syntax</a>)"
 msgstr ""
-"உருவாக்கப்பட்ட தேதிகளைக் காண்பிக்கப் பயன்படுத்தப்படும் வடிவம் (<a href = "
-"\"https://strftime.org/\"> பைதான் தொடரியல் </a>)"
+"உருவாக்கப்பட்ட தேதிகளைக் காண்பிக்கப் பயன்படுத்தப்படும் வடிவம் (<a href = \"https://"
+"strftime.org/\"> பைதான் தொடரியல் </a>)"
 
 #: src/ui/views/cron_converter.blp:76
 msgid "CRON expression"
@@ -1203,11 +1201,11 @@ msgstr "க்ரோன் வெளிப்பாடு"
 msgid "Dates"
 msgstr "தேதிகள்"
 
-#: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:46
+#: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:52
 msgid "Indentations"
 msgstr "உள்தள்ளல்கள்"
 
-#: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:47
+#: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:53
 msgid "Number of spaces used for indentation"
 msgstr "உள்தள்ளலுக்கு பயன்படுத்தப்படும் இடங்களின் எண்ணிக்கை"
 
@@ -1228,27 +1226,27 @@ msgstr "திசை"
 msgid "Select the desired operation"
 msgstr "விரும்பிய செயல்பாட்டைத் தேர்ந்தெடுக்கவும்"
 
-#: src/ui/views/gzip_compressor.blp:39
+#: src/ui/views/gzip_compressor.blp:43
 msgid "Compress"
 msgstr "சுருக்க"
 
-#: src/ui/views/gzip_compressor.blp:40
+#: src/ui/views/gzip_compressor.blp:47
 msgid "Decompress"
 msgstr "குறைக்கவும்"
 
-#: src/ui/views/gzip_compressor.blp:56 src/ui/views/hash_generator.blp:79
-#: src/ui/views/html_encoder.blp:57 src/ui/views/json_yaml.blp:70
-#: src/ui/views/url_encoder.blp:70
+#: src/ui/views/gzip_compressor.blp:63 src/ui/views/hash_generator.blp:79
+#: src/ui/views/html_encoder.blp:64 src/ui/views/json_yaml.blp:76
+#: src/ui/views/url_encoder.blp:84
 msgid "Input"
 msgstr "உள்ளீடு"
 
-#: src/ui/views/gzip_compressor.blp:66 src/ui/views/hash_generator.blp:88
-#: src/ui/views/html_encoder.blp:70 src/ui/views/json_yaml.blp:82
-#: src/ui/views/url_encoder.blp:81
+#: src/ui/views/gzip_compressor.blp:73 src/ui/views/hash_generator.blp:88
+#: src/ui/views/html_encoder.blp:77 src/ui/views/json_yaml.blp:88
+#: src/ui/views/url_encoder.blp:95
 msgid "Output"
 msgstr "வெளியீடு"
 
-#: src/ui/views/gzip_compressor.blp:98
+#: src/ui/views/gzip_compressor.blp:105
 msgid ""
 "The compression result and the expected decompression input are base64 "
 "encoded."
@@ -1256,10 +1254,9 @@ msgstr ""
 "சுருக்க முடிவு மற்றும் எதிர்பார்க்கப்படும் டிகம்பரச்சன் உள்ளீடு ஆகியவை BASE64 "
 "குறியிடப்பட்டவை."
 
-#: src/ui/views/gzip_compressor.blp:103
+#: src/ui/views/gzip_compressor.blp:110
 msgid "May hang the app for large files, please wait."
-msgstr ""
-"பெரிய கோப்புகளுக்கான பயன்பாட்டைத் தொங்கவிடலாம், தயவுசெய்து காத்திருங்கள்."
+msgstr "பெரிய கோப்புகளுக்கான பயன்பாட்டைத் தொங்கவிடலாம், தயவுசெய்து காத்திருங்கள்."
 
 #: src/ui/views/hash_generator.blp:19
 msgid "Hash Generator & Checker"
@@ -1297,11 +1294,11 @@ msgstr "உஉகுமொ குறியாக்கி & டிகோடர�
 msgid "Select the desired encoding direction"
 msgstr "விரும்பிய குறியாக்க திசையைத் தேர்ந்தெடுக்கவும்"
 
-#: src/ui/views/html_encoder.blp:39 src/ui/views/url_encoder.blp:39
+#: src/ui/views/html_encoder.blp:43 src/ui/views/url_encoder.blp:43
 msgid "Encode"
 msgstr "குறியாக்கம்"
 
-#: src/ui/views/html_encoder.blp:40 src/ui/views/url_encoder.blp:40
+#: src/ui/views/html_encoder.blp:47 src/ui/views/url_encoder.blp:47
 msgid "Decode"
 msgstr "டிகோட்"
 
@@ -1333,6 +1330,14 @@ msgstr "சாதொபொகு - YAML மாற்றி"
 #: src/ui/views/json_yaml.blp:34
 msgid "Specify what format is the input and the desired output"
 msgstr "உள்ளீடு மற்றும் விரும்பிய வெளியீடு என்ன வடிவம் என்பதைக் குறிப்பிடவும்"
+
+#: src/ui/views/json_yaml.blp:42
+msgid "JSON → YAML"
+msgstr ""
+
+#: src/ui/views/json_yaml.blp:46
+msgid "YAML → JSON"
+msgstr ""
 
 #: src/ui/views/jwt_decoder.blp:19
 msgid "JWT tokens decoder"
@@ -1598,8 +1603,8 @@ msgstr "நிமிடத்தில் தொடங்கி மணித்�
 #: src/ui/views/reverse_cron.blp:101
 msgid "Specific minute (choose one or many, no selection means every minute)"
 msgstr ""
-"குறிப்பிட்ட மணித்துளி (ஒன்று அல்லது பலவற்றைத் தேர்வுசெய்க, ஒவ்வொரு நிமிடமும் தேர்வு என்பது"
-" அர்த்தம்)"
+"குறிப்பிட்ட மணித்துளி (ஒன்று அல்லது பலவற்றைத் தேர்வுசெய்க, ஒவ்வொரு நிமிடமும் தேர்வு "
+"என்பது அர்த்தம்)"
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:122
@@ -1868,11 +1873,11 @@ msgstr "முழு நீண்ட தேதி"
 msgid "URL Encoder & Decoder"
 msgstr "முகவரி குறியாக்கி & டிகோடர்"
 
-#: src/ui/views/url_encoder.blp:46
+#: src/ui/views/url_encoder.blp:53
 msgid "Space encoding"
 msgstr "விண்வெளி குறியாக்கம்"
 
-#: src/ui/views/url_encoder.blp:47
+#: src/ui/views/url_encoder.blp:54
 msgid "Select the desired encoding for the space character"
 msgstr "விண்வெளி எழுத்துக்கு விரும்பிய குறியாக்கத்தைத் தேர்ந்தெடுக்கவும்"
 

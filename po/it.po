@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
-"POT-Creation-Date: 2024-11-25 14:45+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-25 14:43+0200\n"
 "PO-Revision-Date: 2025-02-08 11:13+0000\n"
 "Last-Translator: Alessandro Iepure <alessandro.iepure@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/devtoolbox/"
@@ -334,7 +334,7 @@ msgstr "Vedi il contenuto di certificati"
 msgid "Certificate Signing Request"
 msgstr "Certificate Signing Request"
 
-#: src/window.py:374 src/ui/views/certificate_request_generator.blp:20
+#: src/window.py:374 src/ui/views/certificate_request_generator.blp:23
 msgid "Generate certificate signing requests"
 msgstr "Genera certificate signing requests"
 
@@ -360,10 +360,10 @@ msgstr "Apri file"
 
 #: src/widgets/image_area.py:131 src/widgets/text_area.py:185
 #: src/widgets/text_file_area.py:208 src/views/certificate_parser.py:82
-#: src/views/certificate_request_generator.py:62
+#: src/views/certificate_request_generator.py:82
 #: src/ui/widgets/image_area.blp:59 src/ui/widgets/text_area.blp:58
 #: src/ui/widgets/text_file_area.blp:70 src/ui/views/certificate_parser.blp:51
-#: src/ui/views/certificate_request_generator.blp:107
+#: src/ui/views/certificate_request_generator.blp:117
 msgid "Open"
 msgstr "Apri"
 
@@ -381,7 +381,7 @@ msgid "Save file as"
 msgstr "Salva con nome"
 
 #: src/widgets/image_area.py:181 src/widgets/text_file_area.py:329
-#: src/views/certificate_request_generator.py:193
+#: src/views/certificate_request_generator.py:215
 #: src/views/image_converter.py:52 src/views/qrcode_generator.py:189
 #: src/ui/widgets/image_area.blp:72 src/ui/widgets/text_file_area.blp:83
 msgid "Save"
@@ -435,10 +435,10 @@ msgid "Unable to save {path}"
 msgstr "Impossibile salvare il file {path}"
 
 #: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
-#: src/views/certificate_request_generator.py:180 src/views/formatter.py:48
-#: src/views/gzip_compressor.py:65 src/views/hash_generator.py:60
-#: src/views/html_encoder.py:46 src/views/json_yaml.py:52
-#: src/views/url_encoder.py:48
+#: src/views/certificate_request_generator.py:201 src/views/formatter.py:48
+#: src/views/gzip_compressor.py:74 src/views/hash_generator.py:60
+#: src/views/html_encoder.py:52 src/views/json_yaml.py:61
+#: src/views/url_encoder.py:63
 #, python-brace-format
 msgid "Error: {error}"
 msgstr "Errore: {error}"
@@ -519,34 +519,34 @@ msgstr "Impronte digitali certificato"
 msgid "Key Identifier"
 msgstr "Identificatore chiave"
 
-#: src/views/certificate_request_generator.py:38
+#: src/views/certificate_request_generator.py:40
 msgid "Open CSR"
 msgstr "Apri CSR"
 
-#: src/views/certificate_request_generator.py:61
+#: src/views/certificate_request_generator.py:81
 msgid "Open Key File"
 msgstr "Apri file chiave"
 
-#: src/views/certificate_request_generator.py:68
+#: src/views/certificate_request_generator.py:88
 msgid "All Files"
 msgstr "Tutti i file"
 
-#: src/views/certificate_request_generator.py:124
+#: src/views/certificate_request_generator.py:145
 msgid "Select save location"
 msgstr "Seleziona il percorso di salvataggio"
 
-#: src/views/certificate_request_generator.py:125
-#: src/ui/views/certificate_request_generator.blp:150
+#: src/views/certificate_request_generator.py:146
+#: src/ui/views/certificate_request_generator.blp:163
 msgid "Choose"
 msgstr "Scegli"
 
-#: src/views/certificate_request_generator.py:176
-#: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:54
+#: src/views/certificate_request_generator.py:197
+#: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:63
 #: src/views/image_converter.py:41 src/views/qrcode_generator.py:206
 msgid "Saved Successfully"
 msgstr "Salvato con successo"
 
-#: src/views/certificate_request_generator.py:192
+#: src/views/certificate_request_generator.py:214
 msgid "Save key as"
 msgstr "Salva chiave con nome"
 
@@ -573,16 +573,15 @@ msgstr ""
 "Il testo non è nel formato corretto. Controlla se hai sbagliato a scrivere "
 "qualcosa o se tutte le parentesi sono chiuse."
 
-#. Toast messages
-#: src/views/gzip_compressor.py:27
+#: src/views/gzip_compressor.py:28
 msgid "Open image"
 msgstr "Apri immagine"
 
-#: src/views/gzip_compressor.py:29
+#: src/views/gzip_compressor.py:31
 msgid "Cannot decompress from an image or a file"
 msgstr "Impossibile de-comprimere da un'immagine o un file"
 
-#: src/views/gzip_compressor.py:124
+#: src/views/gzip_compressor.py:134
 msgid "Please save this file to view its contents"
 msgstr "Per favore salva questo file per vedere il suo contenuto"
 
@@ -797,11 +796,11 @@ msgstr "Mostra/nascondi barra laterale"
 msgid "Favorite Tools"
 msgstr "Strumenti preferiti"
 
-#: src/ui/window.blp:71
+#: src/ui/window.blp:72
 msgid "No Favorites"
 msgstr "Nessun preferito"
 
-#: src/ui/window.blp:72
+#: src/ui/window.blp:73
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
 msgstr ""
@@ -969,15 +968,15 @@ msgstr "Apri un file certificato (estensioni pem, der, cer)"
 msgid "Open a certificate file to view its contents."
 msgstr "Apri un file certificato per vederne il contenuto."
 
-#: src/ui/views/certificate_request_generator.blp:19
+#: src/ui/views/certificate_request_generator.blp:22
 msgid "Certificate Signing Request Generator"
 msgstr "Generatore richieste di firma certificato (CSR)"
 
-#: src/ui/views/certificate_request_generator.blp:31
+#: src/ui/views/certificate_request_generator.blp:34
 msgid "Fill the information below"
 msgstr "Completa le informazioni sottostanti"
 
-#: src/ui/views/certificate_request_generator.blp:32
+#: src/ui/views/certificate_request_generator.blp:35
 msgid ""
 "Fill at least the required fields then press the 'Create CSR' button. An "
 "empty passphrase will generate an unecrypted CSR."
@@ -985,84 +984,85 @@ msgstr ""
 "Completa almeno i campi obbligatori e poi premi il pulsante 'Crea CSR'. Una "
 "passphrase vuota genererà una richiesta non criptata."
 
-#: src/ui/views/certificate_request_generator.blp:42
+#: src/ui/views/certificate_request_generator.blp:46
 msgid "Create CSR"
 msgstr "Crea CSR"
 
-#: src/ui/views/certificate_request_generator.blp:48
+#: src/ui/views/certificate_request_generator.blp:52
 msgid "Common Name (CN) *"
 msgstr "Nome comune (CN) *"
 
-#: src/ui/views/certificate_request_generator.blp:52
+#: src/ui/views/certificate_request_generator.blp:56
 msgid "Country Name (C)"
 msgstr "Paese (C)"
 
-#: src/ui/views/certificate_request_generator.blp:56
+#: src/ui/views/certificate_request_generator.blp:60
 msgid "State or Province Name (ST)"
 msgstr "Stato o Provincia (ST)"
 
-#: src/ui/views/certificate_request_generator.blp:60
+#: src/ui/views/certificate_request_generator.blp:64
 msgid "Locality Name (L)"
 msgstr "Località (L)"
 
-#: src/ui/views/certificate_request_generator.blp:64
+#: src/ui/views/certificate_request_generator.blp:68
 msgid "Organization Name (O)"
 msgstr "Organizzazione (O)"
 
-#: src/ui/views/certificate_request_generator.blp:68
+#: src/ui/views/certificate_request_generator.blp:72
 msgid "Organization Unit Name (OU)"
 msgstr "Unità organizzazione (OU)"
 
-#: src/ui/views/certificate_request_generator.blp:72
+#: src/ui/views/certificate_request_generator.blp:76
 msgid "Passphrase"
 msgstr "Passphrase"
 
-#: src/ui/views/certificate_request_generator.blp:76
+#: src/ui/views/certificate_request_generator.blp:80
 msgid "Key"
 msgstr "Chiave"
 
-#: src/ui/views/certificate_request_generator.blp:77
+#: src/ui/views/certificate_request_generator.blp:81
 msgid "Generate a new key or use and existing one"
 msgstr "Genera una nuova chiave o usane una già esistente"
 
-#: src/ui/views/certificate_request_generator.blp:80
+#: src/ui/views/certificate_request_generator.blp:88
 msgid "New"
 msgstr "Nuova"
 
-#: src/ui/views/certificate_request_generator.blp:81
-msgid "Exisisting"
+#: src/ui/views/certificate_request_generator.blp:92
+#, fuzzy
+msgid "Existing"
 msgstr "Esistente"
 
-#: src/ui/views/certificate_request_generator.blp:88
+#: src/ui/views/certificate_request_generator.blp:98
 msgid "Key File *"
 msgstr "File chiave *"
 
-#: src/ui/views/certificate_request_generator.blp:89
+#: src/ui/views/certificate_request_generator.blp:99
 msgid "Open the file containing the key you want to use"
 msgstr "Apri il file contenente la chiave che vuoi usare"
 
-#: src/ui/views/certificate_request_generator.blp:115
+#: src/ui/views/certificate_request_generator.blp:124
 msgid "Key Size"
 msgstr "Dimensione chiave"
 
-#: src/ui/views/certificate_request_generator.blp:116
+#: src/ui/views/certificate_request_generator.blp:125
 msgid "Size of the new key. It will be saved on the same path as the CSR."
 msgstr ""
 "Dimensione della nuova chiave. Sarà salvata nello stesso percorso della CSR."
 
-#: src/ui/views/certificate_request_generator.blp:123
+#: src/ui/views/certificate_request_generator.blp:134
 msgid "2048 bits"
 msgstr "2048 bit"
 
-#: src/ui/views/certificate_request_generator.blp:124
+#: src/ui/views/certificate_request_generator.blp:138
 msgid "4096 bits"
 msgstr "4096 bit"
 
-#: src/ui/views/certificate_request_generator.blp:131
+#: src/ui/views/certificate_request_generator.blp:144
 msgid "Key Save Location *"
 msgstr "Percorso salvataggio della chiave *"
 
-#: src/ui/views/certificate_request_generator.blp:132
+#: src/ui/views/certificate_request_generator.blp:145
 msgid "Save location for the generated key file"
 msgstr "Percorso salvataggio del file chiave generato"
 
@@ -1203,11 +1203,11 @@ msgstr "Expressione CRON"
 msgid "Dates"
 msgstr "Date"
 
-#: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:46
+#: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:52
 msgid "Indentations"
 msgstr "Indentazioni"
 
-#: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:47
+#: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:53
 msgid "Number of spaces used for indentation"
 msgstr "Numero di spazio da usare per l'indentazione"
 
@@ -1228,27 +1228,27 @@ msgstr "Direzione"
 msgid "Select the desired operation"
 msgstr "Seleziona l'operazione desiderata"
 
-#: src/ui/views/gzip_compressor.blp:39
+#: src/ui/views/gzip_compressor.blp:43
 msgid "Compress"
 msgstr "Comprimi"
 
-#: src/ui/views/gzip_compressor.blp:40
+#: src/ui/views/gzip_compressor.blp:47
 msgid "Decompress"
 msgstr "De-comprimi"
 
-#: src/ui/views/gzip_compressor.blp:56 src/ui/views/hash_generator.blp:79
-#: src/ui/views/html_encoder.blp:57 src/ui/views/json_yaml.blp:70
-#: src/ui/views/url_encoder.blp:70
+#: src/ui/views/gzip_compressor.blp:63 src/ui/views/hash_generator.blp:79
+#: src/ui/views/html_encoder.blp:64 src/ui/views/json_yaml.blp:76
+#: src/ui/views/url_encoder.blp:84
 msgid "Input"
 msgstr "Input"
 
-#: src/ui/views/gzip_compressor.blp:66 src/ui/views/hash_generator.blp:88
-#: src/ui/views/html_encoder.blp:70 src/ui/views/json_yaml.blp:82
-#: src/ui/views/url_encoder.blp:81
+#: src/ui/views/gzip_compressor.blp:73 src/ui/views/hash_generator.blp:88
+#: src/ui/views/html_encoder.blp:77 src/ui/views/json_yaml.blp:88
+#: src/ui/views/url_encoder.blp:95
 msgid "Output"
 msgstr "Output"
 
-#: src/ui/views/gzip_compressor.blp:98
+#: src/ui/views/gzip_compressor.blp:105
 msgid ""
 "The compression result and the expected decompression input are base64 "
 "encoded."
@@ -1256,7 +1256,7 @@ msgstr ""
 "Il risultato della compressione e l'input atteso per la de-compressione sono "
 "codificati in base64."
 
-#: src/ui/views/gzip_compressor.blp:103
+#: src/ui/views/gzip_compressor.blp:110
 msgid "May hang the app for large files, please wait."
 msgstr ""
 "Potrebbe rendere l'app non responsiva con file grandi, per favore attendi."
@@ -1297,11 +1297,11 @@ msgstr "Codificatore e Decodificatore HTML"
 msgid "Select the desired encoding direction"
 msgstr "Seleziona la direzione di codifica desiderata"
 
-#: src/ui/views/html_encoder.blp:39 src/ui/views/url_encoder.blp:39
+#: src/ui/views/html_encoder.blp:43 src/ui/views/url_encoder.blp:43
 msgid "Encode"
 msgstr "Codifica"
 
-#: src/ui/views/html_encoder.blp:40 src/ui/views/url_encoder.blp:40
+#: src/ui/views/html_encoder.blp:47 src/ui/views/url_encoder.blp:47
 msgid "Decode"
 msgstr "Decodifica"
 
@@ -1333,6 +1333,14 @@ msgstr "Convertitore JSON - YAML"
 #: src/ui/views/json_yaml.blp:34
 msgid "Specify what format is the input and the desired output"
 msgstr "Specifica il formato di input e dell'output desiderato"
+
+#: src/ui/views/json_yaml.blp:42
+msgid "JSON → YAML"
+msgstr ""
+
+#: src/ui/views/json_yaml.blp:46
+msgid "YAML → JSON"
+msgstr ""
 
 #: src/ui/views/jwt_decoder.blp:19
 msgid "JWT tokens decoder"
@@ -1867,11 +1875,11 @@ msgstr "Data lunga completa"
 msgid "URL Encoder & Decoder"
 msgstr "Codificatore e Decodificatore URL"
 
-#: src/ui/views/url_encoder.blp:46
+#: src/ui/views/url_encoder.blp:53
 msgid "Space encoding"
 msgstr "Codifica spazio"
 
-#: src/ui/views/url_encoder.blp:47
+#: src/ui/views/url_encoder.blp:54
 msgid "Select the desired encoding for the space character"
 msgstr "Seleziona la codifica desiderata per il carattere spazio"
 
