@@ -73,9 +73,6 @@ class SpinArea(Adw.Bin):
             self._on_paste_done,
             None
         )
-        # print("clipboard content object", clipboard.get_content())
-        # print("clipboard content", clipboard.get_content().get_value())
-        # self._spin_btn.set_value(clipboard.get_content().get_value())
 
     def _on_paste_done(self, clipboard:Gdk.Clipboard, res, data:GObject.GPointer):
         text = clipboard.read_text_finish(res)
