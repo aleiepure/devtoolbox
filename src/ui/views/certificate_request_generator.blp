@@ -5,6 +5,9 @@ using Gtk 4.0;
 using Adw 1;
 
 template $CertificateRequestGeneratorView: Adw.Bin {
+
+  map => $_on_map();
+
   Adw.ToastOverlay _toast {
     child: ScrolledWindow {
       child: Adw.Clamp {
@@ -33,8 +36,9 @@ template $CertificateRequestGeneratorView: Adw.Bin {
 
             [header-suffix]
             Button _create_csr_btn {
+              valign: center;
               styles [
-                "suggested-action",
+                "accent",
                 "pill"
               ]
 
@@ -76,15 +80,21 @@ template $CertificateRequestGeneratorView: Adw.Bin {
               title: _("Key");
               subtitle: _("Generate a new key or use and existing one");
 
-              $BinarySelector _key_type_selector {
-                left-lbl: _("New");
-                right-lbl: _("Exisisting");
-                left-btn-active: true;
+              Adw.ToggleGroup _key_type_selector {
+                valign: center;
+                notify::active => $_on_key_type_changed();
+
+                Adw.Toggle {
+                  label: _("New");
+                }
+
+                Adw.Toggle {
+                  label: _("Existing");
+                }
               }
             }
 
             Adw.ActionRow _key_open_row {
-              visible: bind _key_type_selector.right-btn-active;
               title: _("Key File *");
               subtitle: _("Open the file containing the key you want to use");
 
@@ -110,8 +120,7 @@ template $CertificateRequestGeneratorView: Adw.Bin {
               }
             }
 
-            Adw.ActionRow {
-              visible: bind _key_type_selector.left-btn-active;
+            Adw.ActionRow _key_size_row {
               title: _("Key Size");
               subtitle: _("Size of the new key. It will be saved on the same path as the CSR.");
 
@@ -119,15 +128,19 @@ template $CertificateRequestGeneratorView: Adw.Bin {
                 "fake-action-row-middle"
               ]
 
-              $BinarySelector _key_size_selector {
-                left-lbl: _("2048 bits");
-                right-lbl: _("4096 bits");
-                left-btn-active: true;
+              Adw.ToggleGroup _key_size_selector {
+                valign: center;
+                Adw.Toggle {
+                  label: _("2048 bits");
+                }
+
+                Adw.Toggle {
+                  label: _("4096 bits");
+                }
               }
             }
 
             Adw.ActionRow _key_save_row {
-              visible: bind _key_type_selector.left-btn-active;
               title: _("Key Save Location *");
               subtitle: _("Save location for the generated key file");
 

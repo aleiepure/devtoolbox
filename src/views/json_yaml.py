@@ -32,15 +32,24 @@ class JsonYamlView(Adw.Bin):
         self._output_area.set_text_language_highlight("yaml")
 
         # Signals
-        self._direction_selector.connect("toggled", self._on_direction_toggled)
+        # self._direction_selector.connect("toggled", self._on_direction_toggled)
+        self._direction_selector.connect("notify::active", self._on_direction_toggled)
         self._indents_row.connect("changed", self._on_input_changed)
         self._input_area.connect("text-changed", self._on_input_changed)
         self._input_area.connect("error", self._on_error)
         self._input_area.connect("view-cleared", self._on_view_cleared)
         self._output_area.connect("error", self._on_error)
 
-    def _on_direction_toggled(self, source_widget:GObject.Object):
-        if self._direction_selector.get_left_btn_active() == True:
+    # def _on_direction_toggled(self, source_widget:GObject.Object):
+    #     if self._direction_selector.get_left_btn_active() == True:
+    #         self._input_area.set_text_language_highlight("json")
+    #         self._output_area.set_text_language_highlight("yaml")
+    #     else:
+    #         self._input_area.set_text_language_highlight("yaml")
+    #         self._output_area.set_text_language_highlight("json")
+    #     self._convert()
+    def _on_direction_toggled(self, pspec: GObject.ParamSpec, user_data: GObject.GPointer):
+        if self._direction_selector.get_active() == 0:
             self._input_area.set_text_language_highlight("json")
             self._output_area.set_text_language_highlight("yaml")
         else:
@@ -66,7 +75,7 @@ class JsonYamlView(Adw.Bin):
         self._input_area.remove_css_class("border-red")
 
         # Setup task
-        direction = self._direction_selector.get_left_btn_active()  # True: Json to yaml, False: Yaml to Json
+        direction = True if self._direction_selector.get_active() == 0 else False  # True: Json to yaml, False: Yaml to Json
         indents = int(self._indents_row.get_value())
         text = self._input_area.get_text()
         self._service.set_input_string(text)

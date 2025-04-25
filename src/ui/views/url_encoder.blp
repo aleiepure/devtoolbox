@@ -35,10 +35,17 @@ template $UrlEncoderView: Adw.Bin {
               icon-name: "horizontal-arrows-symbolic";
 
               [suffix]
-              $BinarySelector _direction_selector {
-                left-lbl: _("Encode");
-                right-lbl: _("Decode");
-                left-btn-active: true;
+              Adw.ToggleGroup _direction_selector {
+                valign: center;
+                notify::active => $_on_direction_changed();
+
+                Adw.Toggle {
+                  label: _("Encode");
+                }
+
+                Adw.Toggle {
+                  label: _("Decode");
+                }
               }
             }
 
@@ -48,10 +55,17 @@ template $UrlEncoderView: Adw.Bin {
               icon-name: "spacebar-symbolic";
 
               [suffix]
-              $BinarySelector _space_encoding_selector {
-                left-lbl: "+";
-                right-lbl: "%20";
-                left-btn-active: true;
+              Adw.ToggleGroup _space_encoding_selector {
+                valign: center;
+                notify::active => $_on_space_encoding_changed();
+
+                Adw.Toggle {
+                  label: "+";
+                }
+
+                Adw.Toggle {
+                  label: "%20";
+                }
               }
             }
           }

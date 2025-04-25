@@ -35,10 +35,17 @@ template $GzipCompressorView: Adw.Bin {
               icon-name: "horizontal-arrows-symbolic";
 
               [suffix]
-              $BinarySelector _direction_selector {
-                left-lbl: _("Compress");
-                right-lbl: _("Decompress");
-                left-btn-active: true;
+              Adw.ToggleGroup _direction_selector {
+                valign: center;
+                notify::active => $_on_direction_changed();
+
+                Adw.Toggle {
+                  label: _("Compress");
+                }
+
+                Adw.Toggle {
+                  label: _("Decompress");
+                }
               }
             }
           }

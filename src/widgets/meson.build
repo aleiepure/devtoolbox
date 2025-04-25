@@ -12,7 +12,6 @@ sources = [
   'file_view.py',
   'text_file_area.py',
   'sidebar_item.py',
-  'binary_selector.py',
   'spin_area.py',
   'date_area.py',
   'entry_row.py',

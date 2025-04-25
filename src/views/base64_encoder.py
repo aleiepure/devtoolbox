@@ -26,11 +26,15 @@ class Base64EncoderView(Adw.Bin):
         self._output_area.set_text_language_highlight("plain")
 
         # Signals
-        self._direction_selector.connect("toggled", self._on_input_changed)
+        # self._direction_selector.connect("toggled", self._on_input_changed)
+        self._direction_selector.connect("notify::active", self._on_direction_changed)
         self._input_area.connect("text-changed", self._on_input_changed)
         self._input_area.connect("error", self._on_error)
         self._input_area.connect("view-cleared", self._on_view_cleared)
         self._output_area.connect("error", self._on_error)
+
+    def _on_direction_changed(self, pspec: GObject.ParamSpec, user_data: GObject.GPointer):
+        self._convert()
 
     def _on_input_changed(self, source_widget: GObject.Object):
         self._convert()
@@ -53,7 +57,7 @@ class Base64EncoderView(Adw.Bin):
         self._service.set_input(text)
 
         # Call task
-        if self._direction_selector.get_left_btn_active():  # True: encode, False: decode
+        if self._direction_selector.get_active() == 0:  # True: encode, False: decode
             self._output_area.set_spinner_spin(True)
             self._service.encode_async(self, self._on_async_done)
         else:

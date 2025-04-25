@@ -35,10 +35,15 @@ template $Base64EncoderView: Adw.Bin {
               icon-name: "horizontal-arrows-symbolic";
 
               [suffix]
-              $BinarySelector _direction_selector {
-                left-lbl: _("Encode");
-                right-lbl: _("Decode");
-                left-btn-active: true;
+              Adw.ToggleGroup _direction_selector {
+                valign: center;
+                Adw.Toggle {
+                  label: _("Encode");
+                }
+
+                Adw.Toggle {
+                  label: _("Decode");
+                }
               }
             }
           }

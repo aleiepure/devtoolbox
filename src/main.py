@@ -21,7 +21,6 @@ from .widgets.text_area import TextArea
 from .widgets.file_view import FileView
 from .widgets.text_file_area import TextFileArea
 from .widgets.sidebar_item import SidebarItem
-from .widgets.binary_selector import BinarySelector
 from .widgets.spin_area import SpinArea
 from .widgets.date_area import DateArea
 from .widgets.entry_row import EntryRow
@@ -45,7 +44,6 @@ class DevtoolboxApplication(Adw.Application):
         FileView,
         TextFileArea,
         SidebarItem,
-        BinarySelector,
         SpinArea,
         DateArea,
         EntryRow,

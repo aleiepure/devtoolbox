@@ -30,12 +30,14 @@ class CertificateRequestGeneratorView(Adw.Bin):
     _key_open_row = Gtk.Template.Child()
     _key_open_path = Gtk.Template.Child()
     _key_open_btn = Gtk.Template.Child()
+    _key_size_row = Gtk.Template.Child()
     _key_size_selector = Gtk.Template.Child()
     _key_save_row = Gtk.Template.Child()
     _key_save_path = Gtk.Template.Child()
     _key_save_btn = Gtk.Template.Child()
 
-    _saved_toast = Adw.Toast(priority=Adw.ToastPriority.HIGH, button_label=_("Open CSR"))
+    _saved_toast = Adw.Toast(
+        priority=Adw.ToastPriority.HIGH, button_label=_("Open CSR"))
 
     def __init__(self):
         super().__init__()
@@ -46,6 +48,24 @@ class CertificateRequestGeneratorView(Adw.Bin):
         self._create_csr_btn.connect("clicked", self._on_create_csr_clicked)
         self._common_name_entry.connect("changed", self._on_entry_changed)
         self._saved_toast.connect("button-clicked", self._on_toast_btn_clicked)
+
+    @Gtk.Template.Callback()
+    def _on_map(self, user_data: object | None) -> None:
+        if self._key_type_selector.get_active() == 0:
+            self._key_open_row.set_visible(False)
+            self._key_save_row.set_visible(True)
+            self._key_size_row.set_visible(True)
+        else:
+            self._key_open_row.set_visible(True)
+            self._key_save_row.set_visible(False)
+            self._key_size_row.set_visible(False)
+
+    @Gtk.Template.Callback()
+    def _on_key_type_changed(
+            self,
+            pspec: GObject.GParamSpec,
+            user_data: GObject.GPointer = None) -> None:
+        self._on_map(user_data)
 
     def _on_key_open_clicked(self, user_data: GObject.GPointer):
 
@@ -66,12 +86,13 @@ class CertificateRequestGeneratorView(Adw.Bin):
         file_filter = Gtk.FileFilter()
         file_filter.add_suffix("*")
         file_filter.set_name(_("All Files"))
-        
+
         filter_store = Gio.ListStore.new(Gtk.FileFilter)
         filter_store.append(file_filter)
         self._file_dialog.set_filters(filter_store)
 
-        self._file_dialog.open(window, None, self._on_open_dialog_complete, None)
+        self._file_dialog.open(
+            window, None, self._on_open_dialog_complete, None)
 
     def _on_open_dialog_complete(self, source: GObject.Object, result: Gio.AsyncResult, user_data: GObject.GPointer):
 
@@ -92,11 +113,11 @@ class CertificateRequestGeneratorView(Adw.Bin):
             self._common_name_entry.add_css_class("border-red")
             has_errors = True
 
-        if (self._key_type_selector.get_right_btn_active() and len(self._key_open_path.get_label()) <= 0):
+        if (self._key_type_selector.get_active() == 1 and len(self._key_open_path.get_label()) <= 0):
             self._key_open_row.add_css_class("border-red")
             has_errors = True
 
-        if (self._key_type_selector.get_left_btn_active() and len(self._key_save_path.get_label()) <= 0):
+        if (self._key_type_selector.get_active() == 0 and len(self._key_save_path.get_label()) <= 0):
             self._key_save_row.add_css_class("border-red")
             has_errors = True
 
@@ -108,8 +129,8 @@ class CertificateRequestGeneratorView(Adw.Bin):
         if not self._field_checks():
 
             # Determine key type
-            if self._key_type_selector.get_left_btn_active():
-                if self._key_size_selector.get_left_btn_active():
+            if self._key_type_selector.get_active() == 0:
+                if self._key_size_selector.get_active() == 0:
                     key_args = ["-newkey", "rsa:2048"]
                 else:
                     key_args = ["-newkey", "rsa:4096"]
@@ -120,12 +141,13 @@ class CertificateRequestGeneratorView(Adw.Bin):
             app = Gio.Application.get_default()
             window = app.get_active_window()
             self._file_dialog = Gtk.FileDialog(
-                modal=True, 
+                modal=True,
                 title=_("Select save location"),
                 accept_label=_("Choose"),
                 initial_name=self._common_name_entry.get_text() + ".csr"
             )
-            self._file_dialog.save(window, None, self._on_save_complete, key_args)
+            self._file_dialog.save(
+                window, None, self._on_save_complete, key_args)
 
     def _on_save_complete(self, source: GObject.Object, result: Gio.AsyncResult, user_data: List = None):
 
@@ -141,10 +163,9 @@ class CertificateRequestGeneratorView(Adw.Bin):
         command.append("-out")
         command.append(save_file.peek_path())
 
-        if self._key_type_selector.get_left_btn_active():
+        if self._key_type_selector.get_active() == 0:
             command.append("-keyout")
             command.append(self._key_save_path.get_label())
-
 
         if len(self._password_entry.get_text()) > 0:
             command.append("-passin")
@@ -177,7 +198,8 @@ class CertificateRequestGeneratorView(Adw.Bin):
             self._toast.add_toast(self._saved_toast)
             self._save_path = save_file.peek_path()
         else:
-            self._toast.add_toast(Adw.Toast(title=_("Error: {error}").format(error=openssl.stderr.decode().strip()), priority=Adw.ToastPriority.HIGH))
+            self._toast.add_toast(Adw.Toast(title=_("Error: {error}").format(
+                error=openssl.stderr.decode().strip()), priority=Adw.ToastPriority.HIGH))
             if openssl.stderr.decode().strip().startswith("Could not read private key from "):
                 self._key_open_row.add_css_class("border-red")
 
@@ -199,7 +221,7 @@ class CertificateRequestGeneratorView(Adw.Bin):
         save_file = source.save_finish(result)
         self._key_save_path.set_label(save_file.peek_path())
 
-    def _on_toast_btn_clicked(self, user_data:GObject.GPointer):
+    def _on_toast_btn_clicked(self, user_data: GObject.GPointer):
         app = Gio.Application.get_default()
         window = app.get_active_window()
         Gtk.show_uri(window, "file://" + self._save_path, Gdk.CURRENT_TIME)

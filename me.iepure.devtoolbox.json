@@ -1,7 +1,7 @@
 {
     "id" : "me.iepure.devtoolbox",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "47",
+    "runtime-version" : "48",
     "sdk" : "org.gnome.Sdk",
     "command" : "devtoolbox",
     "separate-locales": false,

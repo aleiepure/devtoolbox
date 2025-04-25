@@ -35,10 +35,16 @@ template $JsonYamlView: Adw.Bin {
               icon-name: "horizontal-arrows-symbolic";
 
               [suffix]
-              $BinarySelector _direction_selector {
-                left-lbl: "JSON → YAML";
-                right-lbl: "YAML → JSON";
-                left-btn-active: true;
+              Adw.ToggleGroup _direction_selector {
+                valign: center;
+                
+                Adw.Toggle {
+                  label: _("JSON → YAML");
+                }
+
+                Adw.Toggle {
+                  label: _("YAML → JSON");
+                }
               }
             }
 
