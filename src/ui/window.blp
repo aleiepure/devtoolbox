@@ -1,5 +1,5 @@
 // Copyright (C) 2022 - 2023 Alessandro Iepure
-//
+// 
 // SPDX-License-Identifier: GPL-3.0-or-later
 using Gtk 4.0;
 using Adw 1;
@@ -63,15 +63,15 @@ template $DevtoolboxWindow: Adw.ApplicationWindow {
 
           popover: Popover {
             child: Adw.ViewStack _fav_stack {
+              width-request: 300;
+
               Adw.ViewStackPage {
                 name: 'empty';
 
-                child: Adw.Clamp {
-                  child: Adw.StatusPage {
-                    title: _("No Favorites");
-                    description: _("Add your favorite tools here by clicking the star button beside the title");
-                    icon-name: 'starred';
-                  };
+                child: Adw.StatusPage {
+                  title: _("No Favorites");
+                  description: _("Add your favorite tools here by clicking the star button beside the title");
+                  icon-name: 'starred';
                 };
               }
 
