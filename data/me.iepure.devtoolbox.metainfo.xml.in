@@ -77,6 +77,16 @@ SPDX-License-Identifier: CC0-1.0
   </screenshots>
 
   <releases>
+    <release version="1.2.4" date="2025-04-25">
+      <description translate="no">
+        <p>What's new:</p>
+        <ul>
+          <li>Updated to GNOME 48 platform</li>
+          <li>UI uses new libadwaita 1.7 widgets</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.2.3" date="2025-03-12">
       <description translate="no">
         <p>What's new:</p>
