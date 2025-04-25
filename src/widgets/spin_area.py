@@ -67,8 +67,24 @@ class SpinArea(Adw.Bin):
         clipboard.set(text)
 
     def _on_paste_clicked(self, user_data:GObject.GPointer):
-        clipboard   = Gdk.Display.get_clipboard(Gdk.Display.get_default())
-        self._spin_btn.set_value(clipboard.get_content().get_value())
+        clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
+        clipboard.read_text_async(
+            None,
+            self._on_paste_done,
+            None
+        )
+        # print("clipboard content object", clipboard.get_content())
+        # print("clipboard content", clipboard.get_content().get_value())
+        # self._spin_btn.set_value(clipboard.get_content().get_value())
+
+    def _on_paste_done(self, clipboard:Gdk.Clipboard, res, data:GObject.GPointer):
+        text = clipboard.read_text_finish(res)
+        if text:
+            try:
+                value = int(text)
+                self._spin_btn.set_value(value)
+            except ValueError:
+                pass
 
     def _on_value_changed(self, user_data:GObject.GPointer):
         self.emit("value-changed")
