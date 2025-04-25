@@ -12,7 +12,7 @@ jobs:
       options: --privileged
     steps:
     - uses: actions/checkout@v4
-    - uses: flathub-infra/flatpak-github-actions/flatpak-builder@master
+    - uses: flathub-infra/flatpak-github-actions/flatpak-builder@v6
       with:
         bundle: devtoolbox-devel.flatpak
         manifest-path: me.iepure.devtoolbox.json
