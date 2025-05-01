@@ -21,10 +21,21 @@ class TextDiffView(Adw.Bin):
     def __init__(self):
         super().__init__()
 
-        self._tag_line_removed = self._diff_textarea.get_buffer().create_tag("line-removed", background="#5d2a2a")
-        self._tag_line_added = self._diff_textarea.get_buffer().create_tag("line-added", background="#494f3b")
-        self._tag_removed = self._diff_textarea.get_buffer().create_tag("removed", background="#7d2121")
-        self._tag_added = self._diff_textarea.get_buffer().create_tag("added", background="#5b7822")
+        self._tag_line_removed_dark = self._diff_textarea.get_buffer().create_tag("line-removed-dark", background="#5d2a2a")
+        self._tag_line_added_dark = self._diff_textarea.get_buffer().create_tag("line-added-dark", background="#494f3b")
+        self._tag_removed_dark = self._diff_textarea.get_buffer().create_tag("removed-dark", background="#7d2121")
+        self._tag_added_dark = self._diff_textarea.get_buffer().create_tag("added-dark", background="#5b7822")
+
+        self._tag_line_removed = self._diff_textarea.get_buffer().create_tag("line-removed", background="#f2b8b8")
+        self._tag_line_added = self._diff_textarea.get_buffer().create_tag("line-added", background="#d9e6c3")
+        self._tag_removed = self._diff_textarea.get_buffer().create_tag("removed", background="#d07a7a")
+        self._tag_added = self._diff_textarea.get_buffer().create_tag("added", background="#a8c65f")
+
+        style_manager = Adw.StyleManager.get_default()
+        self._current_theme = "dark" if style_manager.get_dark() else "light"
+
+        # Connect to theme change signal
+        style_manager.connect("notify::dark", self._on_theme_changed)
 
         self._diff()
 
@@ -62,20 +73,28 @@ class TextDiffView(Adw.Bin):
         self._tag_text(items_to_tag)
         self._diff_textarea.set_spinner_spin(False)
 
+    def _on_theme_changed(self, style_manager, param):
+        self._current_theme = "dark" if style_manager.get_dark() else "light"
+        self._diff()  # Reapply tags based on the new theme
+
     def _tag_text(self, items_to_tag:List[Dict]):
         for item in items_to_tag:
-            if item["length"] != -1: # line
+            if item["length"] != -1:  # line
                 start_gtext_iter = self._diff_textarea.get_buffer().get_iter_at_line(item["line"])[1]
                 end_gtext_iter = self._diff_textarea.get_buffer().get_iter_at_line_offset(item["line"], item["length"]+1)[1]
                 if item["tag"] == "+":
-                    self._diff_textarea.get_buffer().apply_tag(self._tag_line_added, start_gtext_iter, end_gtext_iter)
+                    tag = self._tag_line_added if self._current_theme == "light" else self._tag_line_added_dark
+                    self._diff_textarea.get_buffer().apply_tag(tag, start_gtext_iter, end_gtext_iter)
                 else:
-                    self._diff_textarea.get_buffer().apply_tag(self._tag_line_removed, start_gtext_iter, end_gtext_iter)
-            else: # chars
+                    tag = self._tag_line_removed if self._current_theme == "light" else self._tag_line_removed_dark
+                    self._diff_textarea.get_buffer().apply_tag(tag, start_gtext_iter, end_gtext_iter)
+            else:  # chars
                 for char in item["chars_to_tag"]:
                     start_gtext_iter = self._diff_textarea.get_buffer().get_iter_at_line_offset(item["line"], char)[1]
                     end_gtext_iter = self._diff_textarea.get_buffer().get_iter_at_line_offset(item["line"], char+1)[1]
                     if item["tag"] == "+":
-                        self._diff_textarea.get_buffer().apply_tag(self._tag_added, start_gtext_iter, end_gtext_iter)
+                        tag = self._tag_added if self._current_theme == "light" else self._tag_added_dark
+                        self._diff_textarea.get_buffer().apply_tag(tag, start_gtext_iter, end_gtext_iter)
                     else:
-                        self._diff_textarea.get_buffer().apply_tag(self._tag_removed, start_gtext_iter, end_gtext_iter)
+                        tag = self._tag_removed if self._current_theme == "light" else self._tag_removed_dark
+                        self._diff_textarea.get_buffer().apply_tag(tag, start_gtext_iter, end_gtext_iter)
