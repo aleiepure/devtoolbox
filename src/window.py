@@ -518,7 +518,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             header_label.set_halign(Gtk.Align.START)
             header_label.set_valign(Gtk.Align.CENTER)
             header_label.add_css_class("heading")
-            header_label.add_css_class("dim-label")
+            header_label.add_css_class("dimmed")
             header_label.set_margin_start(12)
             header_label.set_margin_bottom(6)
 

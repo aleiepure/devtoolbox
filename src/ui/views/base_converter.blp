@@ -53,10 +53,26 @@ template $BaseConverterView: Adw.Bin {
               show-clear-btn: "true";
             }
 
-            $EntryRow _hex {
+            $EntryRow _hex {              
               title: _("Hexadecimal");
               input-purpose: "number";
               text: "0";
+              show-copy-btn: "true";
+              show-clear-btn: "true";
+            }
+
+            $EntryRow _ascii {
+              title: _("ASCII");
+              input-purpose: "alpha";
+              max-length: 1;
+              show-copy-btn: "true";
+              show-clear-btn: "true";
+            }
+
+            $EntryRow _utf8 {
+              title: _("UTF-8");
+              input-purpose: "alpha";
+              max-length: 1;
               show-copy-btn: "true";
               show-clear-btn: "true";
             }
@@ -69,7 +85,7 @@ template $BaseConverterView: Adw.Bin {
             margin-top: 10;
 
             styles [
-              "dim-label",
+              "dimmed",
             ]
 
             Image {
