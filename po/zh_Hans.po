@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-25 14:43+0200\n"
+"POT-Creation-Date: 2025-05-03 18:02+0200\n"
 "PO-Revision-Date: 2025-02-17 16:38+0000\n"
 "Last-Translator: 复予 <clonewith@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -373,13 +373,13 @@ msgid "Saving image..."
 msgstr "保存图片..."
 
 #: src/widgets/image_area.py:180 src/widgets/text_file_area.py:328
-#: src/views/image_converter.py:51 src/views/qrcode_generator.py:188
+#: src/views/image_converter.py:51 src/views/qrcode_generator.py:183
 msgid "Save file as"
 msgstr "文件另存为"
 
 #: src/widgets/image_area.py:181 src/widgets/text_file_area.py:329
 #: src/views/certificate_request_generator.py:215
-#: src/views/image_converter.py:52 src/views/qrcode_generator.py:189
+#: src/views/image_converter.py:52 src/views/qrcode_generator.py:184
 #: src/ui/widgets/image_area.blp:72 src/ui/widgets/text_file_area.blp:83
 msgid "Save"
 msgstr "保存"
@@ -431,7 +431,8 @@ msgstr "正在保存文件..."
 msgid "Unable to save {path}"
 msgstr "不能保存到 {path}"
 
-#: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
+#: src/views/base64_encoder.py:51 src/views/certificate_parser.py:60
+#: src/views/certificate_parser.py:65
 #: src/views/certificate_request_generator.py:201 src/views/formatter.py:48
 #: src/views/gzip_compressor.py:74 src/views/hash_generator.py:60
 #: src/views/html_encoder.py:52 src/views/json_yaml.py:61
@@ -538,7 +539,7 @@ msgstr "选择"
 
 #: src/views/certificate_request_generator.py:197
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:63
-#: src/views/image_converter.py:41 src/views/qrcode_generator.py:206
+#: src/views/image_converter.py:41 src/views/qrcode_generator.py:201
 msgid "Saved Successfully"
 msgstr "保存成功"
 
@@ -579,19 +580,19 @@ msgstr "无法从图像或文件解压缩"
 msgid "Please save this file to view its contents"
 msgstr "请保存此文件以查看其内容"
 
-#: src/views/hash_generator.py:125
+#: src/views/hash_generator.py:165
 msgid "Hashes match!"
 msgstr "哈希值匹配！"
 
-#: src/views/hash_generator.py:127
+#: src/views/hash_generator.py:167
 msgid "The integrity is verified."
 msgstr "完整性已验证。"
 
-#: src/views/hash_generator.py:135
+#: src/views/hash_generator.py:175
 msgid "Warning, integrity cannot be verified!"
 msgstr "警告，无法验证完整性！"
 
-#: src/views/hash_generator.py:137
+#: src/views/hash_generator.py:177
 msgid ""
 "The calculated hash and the provided one do not match. Check again and if "
 "this is a file you downloaded from the Internet re-download it."
@@ -928,13 +929,31 @@ msgstr "八进制"
 msgid "Hexadecimal"
 msgstr "十六进制"
 
-#: src/ui/views/base_converter.blp:82
+#: src/ui/views/base_converter.blp:65
+msgid "ASCII"
+msgstr ""
+
+#: src/ui/views/base_converter.blp:73
+msgid "UTF-8"
+msgstr ""
+
+#: src/ui/views/base_converter.blp:98
 msgid ""
 "Typing an unaccepted character (i.e. 'A' in the decimal field) will cause "
 "all the fields to reset to 0."
 msgstr "输入无法接受的字符（例如十进制字段中的“A”）会使所有字段全部重置为 0。"
 
-#: src/ui/views/certificate_parser.blp:30
+#: src/ui/views/base64_encoder.blp:19
+#, fuzzy
+msgid "Base64 Encoder & Decoder"
+msgstr "URL 编码 & 解码工具"
+
+#: src/ui/views/base64_encoder.blp:20
+#, fuzzy
+msgid "Encode and decode strings using the Base64 format"
+msgstr "用HTML格式编码和解码特殊字符"
+
+#: src/ui/views/base64_encoder.blp:30 src/ui/views/certificate_parser.blp:30
 #: src/ui/views/colorblindness_simulator.blp:31
 #: src/ui/views/contrast_checker.blp:30 src/ui/views/cron_converter.blp:31
 #: src/ui/views/formatter.blp:26 src/ui/views/gzip_compressor.blp:30
@@ -945,6 +964,47 @@ msgstr "输入无法接受的字符（例如十进制字段中的“A”）会�
 #: src/ui/views/url_encoder.blp:30 src/ui/views/uuid_generator.blp:31
 msgid "Tool options"
 msgstr "工具选项"
+
+#: src/ui/views/base64_encoder.blp:33 src/ui/views/gzip_compressor.blp:33
+#: src/ui/views/html_encoder.blp:33 src/ui/views/json_yaml.blp:33
+#: src/ui/views/url_encoder.blp:33
+msgid "Direction"
+msgstr "方向"
+
+#: src/ui/views/base64_encoder.blp:34 src/ui/views/html_encoder.blp:34
+#: src/ui/views/url_encoder.blp:34
+msgid "Select the desired encoding direction"
+msgstr "选择编码方向"
+
+#: src/ui/views/base64_encoder.blp:41 src/ui/views/html_encoder.blp:43
+#: src/ui/views/url_encoder.blp:43
+msgid "Encode"
+msgstr "编码"
+
+#: src/ui/views/base64_encoder.blp:45 src/ui/views/html_encoder.blp:47
+#: src/ui/views/url_encoder.blp:47
+msgid "Decode"
+msgstr "解码"
+
+#: src/ui/views/base64_encoder.blp:51
+msgid "URL Safe"
+msgstr ""
+
+#: src/ui/views/base64_encoder.blp:52
+msgid "Use URL safe Base64 processing"
+msgstr ""
+
+#: src/ui/views/base64_encoder.blp:68 src/ui/views/gzip_compressor.blp:63
+#: src/ui/views/hash_generator.blp:83 src/ui/views/html_encoder.blp:64
+#: src/ui/views/json_yaml.blp:76 src/ui/views/url_encoder.blp:84
+msgid "Input"
+msgstr "输入"
+
+#: src/ui/views/base64_encoder.blp:80 src/ui/views/gzip_compressor.blp:73
+#: src/ui/views/hash_generator.blp:92 src/ui/views/html_encoder.blp:77
+#: src/ui/views/json_yaml.blp:88 src/ui/views/url_encoder.blp:95
+msgid "Output"
+msgstr "输出"
 
 #: src/ui/views/certificate_parser.blp:33
 msgid "Certificate"
@@ -1208,11 +1268,6 @@ msgstr "GZip 压缩 & 解压缩"
 msgid "Compress and decompress texts and images using GZip"
 msgstr "用 GZip 压缩和解压文本与图像"
 
-#: src/ui/views/gzip_compressor.blp:33 src/ui/views/html_encoder.blp:33
-#: src/ui/views/json_yaml.blp:33 src/ui/views/url_encoder.blp:33
-msgid "Direction"
-msgstr "方向"
-
 #: src/ui/views/gzip_compressor.blp:34
 msgid "Select the desired operation"
 msgstr "选择待执行操作"
@@ -1224,18 +1279,6 @@ msgstr "压缩"
 #: src/ui/views/gzip_compressor.blp:47
 msgid "Decompress"
 msgstr "解压缩"
-
-#: src/ui/views/gzip_compressor.blp:63 src/ui/views/hash_generator.blp:79
-#: src/ui/views/html_encoder.blp:64 src/ui/views/json_yaml.blp:76
-#: src/ui/views/url_encoder.blp:84
-msgid "Input"
-msgstr "输入"
-
-#: src/ui/views/gzip_compressor.blp:73 src/ui/views/hash_generator.blp:88
-#: src/ui/views/html_encoder.blp:77 src/ui/views/json_yaml.blp:88
-#: src/ui/views/url_encoder.blp:95
-msgid "Output"
-msgstr "输出"
 
 #: src/ui/views/gzip_compressor.blp:105
 msgid ""
@@ -1259,35 +1302,23 @@ msgstr "计算的哈希值"
 msgid "Choose the hash type to calculate"
 msgstr "选择计算的哈希值类型"
 
-#: src/ui/views/hash_generator.blp:49
+#: src/ui/views/hash_generator.blp:53
 msgid "Check for integrity"
 msgstr "检查完整性"
 
-#: src/ui/views/hash_generator.blp:50
+#: src/ui/views/hash_generator.blp:54
 msgid ""
 "If enabled the calculated hash will be checked against another provided hash "
 "to verify integrity"
 msgstr "若启用，则会将计算出的哈希值与提供的哈希值校对，以验证完整性"
 
-#: src/ui/views/hash_generator.blp:56
+#: src/ui/views/hash_generator.blp:60
 msgid "Type the hash to check against"
 msgstr "输入用于核对的哈希值"
 
 #: src/ui/views/html_encoder.blp:19
 msgid "HTML Encoder & Decoder"
 msgstr "HTML 编码 & 解码工具"
-
-#: src/ui/views/html_encoder.blp:34 src/ui/views/url_encoder.blp:34
-msgid "Select the desired encoding direction"
-msgstr "选择编码方向"
-
-#: src/ui/views/html_encoder.blp:43 src/ui/views/url_encoder.blp:43
-msgid "Encode"
-msgstr "编码"
-
-#: src/ui/views/html_encoder.blp:47 src/ui/views/url_encoder.blp:47
-msgid "Decode"
-msgstr "解码"
 
 #: src/ui/views/image_converter.blp:34
 msgctxt "noun"

@@ -19,6 +19,7 @@ src/widgets/utility_title.py
 src/widgets/webview_area.py
 
 src/views/base_converter.py
+src/views/base64_encoder.py
 src/views/certificate_parser.py
 src/views/certificate_request_generator.py
 src/views/chmod_calculator.py
@@ -61,6 +62,7 @@ src/ui/widgets/utility_title.blp
 src/ui/widgets/webview_area.blp
 
 src/ui/views/base_converter.blp
+src/ui/views/base64_encoder.blp
 src/ui/views/certificate_parser.blp
 src/ui/views/certificate_request_generator.blp
 src/ui/views/chmod_calculator.blp
@@ -90,6 +92,7 @@ src/ui/views/xml_validator.blp
 
 src/ui/gtk/help-overlay.blp
 
+src/services/base64_encoder.py
 src/services/certificate_parser.py
 src/services/colorblindness_simulator.py
 src/services/cron_converter.py

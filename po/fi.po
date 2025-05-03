@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-25 14:43+0200\n"
+"POT-Creation-Date: 2025-05-03 18:02+0200\n"
 "PO-Revision-Date: 2025-03-11 18:33+0000\n"
 "Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/devtoolbox/"
@@ -376,13 +376,13 @@ msgid "Saving image..."
 msgstr "Tallennetaan kuvaa..."
 
 #: src/widgets/image_area.py:180 src/widgets/text_file_area.py:328
-#: src/views/image_converter.py:51 src/views/qrcode_generator.py:188
+#: src/views/image_converter.py:51 src/views/qrcode_generator.py:183
 msgid "Save file as"
 msgstr "Tallenna nimellä"
 
 #: src/widgets/image_area.py:181 src/widgets/text_file_area.py:329
 #: src/views/certificate_request_generator.py:215
-#: src/views/image_converter.py:52 src/views/qrcode_generator.py:189
+#: src/views/image_converter.py:52 src/views/qrcode_generator.py:184
 #: src/ui/widgets/image_area.blp:72 src/ui/widgets/text_file_area.blp:83
 msgid "Save"
 msgstr "Tallenna"
@@ -434,7 +434,8 @@ msgstr "Tallennetaan tiedostoa..."
 msgid "Unable to save {path}"
 msgstr "Ei voitu tallentaa {path}"
 
-#: src/views/certificate_parser.py:60 src/views/certificate_parser.py:65
+#: src/views/base64_encoder.py:51 src/views/certificate_parser.py:60
+#: src/views/certificate_parser.py:65
 #: src/views/certificate_request_generator.py:201 src/views/formatter.py:48
 #: src/views/gzip_compressor.py:74 src/views/hash_generator.py:60
 #: src/views/html_encoder.py:52 src/views/json_yaml.py:61
@@ -542,7 +543,7 @@ msgstr "Valitse"
 
 #: src/views/certificate_request_generator.py:197
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:63
-#: src/views/image_converter.py:41 src/views/qrcode_generator.py:206
+#: src/views/image_converter.py:41 src/views/qrcode_generator.py:201
 msgid "Saved Successfully"
 msgstr "Tallennus onnistui"
 
@@ -585,19 +586,19 @@ msgstr "Ei voi purkaa kuvasta tai tiedostosta"
 msgid "Please save this file to view its contents"
 msgstr "Tallenna tämä tiedosto nähdäksesi sen sisällön"
 
-#: src/views/hash_generator.py:125
+#: src/views/hash_generator.py:165
 msgid "Hashes match!"
 msgstr "Tiivisteet vastaavat toisiaan!"
 
-#: src/views/hash_generator.py:127
+#: src/views/hash_generator.py:167
 msgid "The integrity is verified."
 msgstr "Eheys on vahvistettu."
 
-#: src/views/hash_generator.py:135
+#: src/views/hash_generator.py:175
 msgid "Warning, integrity cannot be verified!"
 msgstr "Varoitus, eheyttä ei voi vahvistaa!"
 
-#: src/views/hash_generator.py:137
+#: src/views/hash_generator.py:177
 msgid ""
 "The calculated hash and the provided one do not match. Check again and if "
 "this is a file you downloaded from the Internet re-download it."
@@ -934,7 +935,15 @@ msgstr "Oktaali"
 msgid "Hexadecimal"
 msgstr "Heksadesimaali"
 
-#: src/ui/views/base_converter.blp:82
+#: src/ui/views/base_converter.blp:65
+msgid "ASCII"
+msgstr ""
+
+#: src/ui/views/base_converter.blp:73
+msgid "UTF-8"
+msgstr ""
+
+#: src/ui/views/base_converter.blp:98
 msgid ""
 "Typing an unaccepted character (i.e. 'A' in the decimal field) will cause "
 "all the fields to reset to 0."
@@ -942,7 +951,17 @@ msgstr ""
 "Virheellisen merkin (esim. \"A\" desimaalikenttään) kirjoittaminen kenttään "
 "nollaa kaikki kentät."
 
-#: src/ui/views/certificate_parser.blp:30
+#: src/ui/views/base64_encoder.blp:19
+#, fuzzy
+msgid "Base64 Encoder & Decoder"
+msgstr "URL-osoitteen koodaaja ja purkaja"
+
+#: src/ui/views/base64_encoder.blp:20
+#, fuzzy
+msgid "Encode and decode strings using the Base64 format"
+msgstr "Koodaa ja pura erikoismerkkejä käyttäen HTML-muotoilua"
+
+#: src/ui/views/base64_encoder.blp:30 src/ui/views/certificate_parser.blp:30
 #: src/ui/views/colorblindness_simulator.blp:31
 #: src/ui/views/contrast_checker.blp:30 src/ui/views/cron_converter.blp:31
 #: src/ui/views/formatter.blp:26 src/ui/views/gzip_compressor.blp:30
@@ -953,6 +972,47 @@ msgstr ""
 #: src/ui/views/url_encoder.blp:30 src/ui/views/uuid_generator.blp:31
 msgid "Tool options"
 msgstr "Työkalun valinnat"
+
+#: src/ui/views/base64_encoder.blp:33 src/ui/views/gzip_compressor.blp:33
+#: src/ui/views/html_encoder.blp:33 src/ui/views/json_yaml.blp:33
+#: src/ui/views/url_encoder.blp:33
+msgid "Direction"
+msgstr "Suunta"
+
+#: src/ui/views/base64_encoder.blp:34 src/ui/views/html_encoder.blp:34
+#: src/ui/views/url_encoder.blp:34
+msgid "Select the desired encoding direction"
+msgstr "Valitse haluamasi koodaussuunta"
+
+#: src/ui/views/base64_encoder.blp:41 src/ui/views/html_encoder.blp:43
+#: src/ui/views/url_encoder.blp:43
+msgid "Encode"
+msgstr ""
+
+#: src/ui/views/base64_encoder.blp:45 src/ui/views/html_encoder.blp:47
+#: src/ui/views/url_encoder.blp:47
+msgid "Decode"
+msgstr ""
+
+#: src/ui/views/base64_encoder.blp:51
+msgid "URL Safe"
+msgstr ""
+
+#: src/ui/views/base64_encoder.blp:52
+msgid "Use URL safe Base64 processing"
+msgstr ""
+
+#: src/ui/views/base64_encoder.blp:68 src/ui/views/gzip_compressor.blp:63
+#: src/ui/views/hash_generator.blp:83 src/ui/views/html_encoder.blp:64
+#: src/ui/views/json_yaml.blp:76 src/ui/views/url_encoder.blp:84
+msgid "Input"
+msgstr "Syöte"
+
+#: src/ui/views/base64_encoder.blp:80 src/ui/views/gzip_compressor.blp:73
+#: src/ui/views/hash_generator.blp:92 src/ui/views/html_encoder.blp:77
+#: src/ui/views/json_yaml.blp:88 src/ui/views/url_encoder.blp:95
+msgid "Output"
+msgstr "Tuloste"
 
 #: src/ui/views/certificate_parser.blp:33
 msgid "Certificate"
@@ -1216,11 +1276,6 @@ msgstr "GZipin pakkaus ja purku"
 msgid "Compress and decompress texts and images using GZip"
 msgstr "Pakkaa ja pura tekstiä sekä kuvia GZipiä käyttäen"
 
-#: src/ui/views/gzip_compressor.blp:33 src/ui/views/html_encoder.blp:33
-#: src/ui/views/json_yaml.blp:33 src/ui/views/url_encoder.blp:33
-msgid "Direction"
-msgstr "Suunta"
-
 #: src/ui/views/gzip_compressor.blp:34
 msgid "Select the desired operation"
 msgstr "Valitse haluamasi toimenpide"
@@ -1232,18 +1287,6 @@ msgstr "Pakkaa"
 #: src/ui/views/gzip_compressor.blp:47
 msgid "Decompress"
 msgstr "Pura"
-
-#: src/ui/views/gzip_compressor.blp:63 src/ui/views/hash_generator.blp:79
-#: src/ui/views/html_encoder.blp:64 src/ui/views/json_yaml.blp:76
-#: src/ui/views/url_encoder.blp:84
-msgid "Input"
-msgstr "Syöte"
-
-#: src/ui/views/gzip_compressor.blp:73 src/ui/views/hash_generator.blp:88
-#: src/ui/views/html_encoder.blp:77 src/ui/views/json_yaml.blp:88
-#: src/ui/views/url_encoder.blp:95
-msgid "Output"
-msgstr "Tuloste"
 
 #: src/ui/views/gzip_compressor.blp:105
 msgid ""
@@ -1267,11 +1310,11 @@ msgstr "Tiiviste laskettavaksi"
 msgid "Choose the hash type to calculate"
 msgstr "Valitse laskettavan tiivisteen tyyppi"
 
-#: src/ui/views/hash_generator.blp:49
+#: src/ui/views/hash_generator.blp:53
 msgid "Check for integrity"
 msgstr "Tarkista eheys"
 
-#: src/ui/views/hash_generator.blp:50
+#: src/ui/views/hash_generator.blp:54
 msgid ""
 "If enabled the calculated hash will be checked against another provided hash "
 "to verify integrity"
@@ -1279,25 +1322,13 @@ msgstr ""
 "Jos käytössä, laskettu hajautus verrataan toiseen annettuun hajautukseen "
 "eheyden varmistamiseksi"
 
-#: src/ui/views/hash_generator.blp:56
+#: src/ui/views/hash_generator.blp:60
 msgid "Type the hash to check against"
 msgstr "Kirjoita tiiviste, jota vasten tarkistetaan"
 
 #: src/ui/views/html_encoder.blp:19
 msgid "HTML Encoder & Decoder"
 msgstr "HTML:n kooderi ja purkaja"
-
-#: src/ui/views/html_encoder.blp:34 src/ui/views/url_encoder.blp:34
-msgid "Select the desired encoding direction"
-msgstr "Valitse haluamasi koodaussuunta"
-
-#: src/ui/views/html_encoder.blp:43 src/ui/views/url_encoder.blp:43
-msgid "Encode"
-msgstr ""
-
-#: src/ui/views/html_encoder.blp:47 src/ui/views/url_encoder.blp:47
-msgid "Decode"
-msgstr ""
 
 #: src/ui/views/image_converter.blp:34
 msgctxt "noun"

@@ -117,15 +117,12 @@ class QRCodeGeneratorView(Adw.Bin):
                 # WIFI:S:<SSID>;T:<WEP|WPA|blank>;P:<PASSWORD>;;;
                 match self._wifi_encryption_combo.get_selected():
                     case 0:  # WPA
-                        encryption = f"T:WPA;P:{
-                            self._wifi_password_entry.get_text()}"
+                        encryption = f"T:WPA;P:{self._wifi_password_entry.get_text()}"
                     case 1:  # WEP
-                        encryption = f"T:WEP;P:{
-                            self._wifi_password_entry.get_text()}"
+                        encryption = f"T:WEP;P:{self._wifi_password_entry.get_text()}"
                     case 2:  # None
                         encryption = ";"
-                wifi = f"WIFI:S:{self._wifi_ssid_entry.get_text()};{
-                    encryption};;"
+                wifi = f"WIFI:S:{self._wifi_ssid_entry.get_text()};{encryption};;"
                 img = qrcode.make(
                     wifi, image_factory=qrcode.image.svg.SvgPathFillImage)
             case 2:  # contact
@@ -143,8 +140,7 @@ class QRCodeGeneratorView(Adw.Bin):
                     return
 
                 contact = "BEGIN:VCARD\nVERSION:4.0\n"
-                contact += f"FN:{self._contact_last_name_entry.get_text()
-                                 },{self._contact_first_name_entry.get_text()}\n"
+                contact += f"FN:{self._contact_last_name_entry.get_text()},{self._contact_first_name_entry.get_text()}\n"
 
                 # Optional fields
                 if self._contact_phone_entry.get_text():
@@ -152,8 +148,7 @@ class QRCodeGeneratorView(Adw.Bin):
                 if self._contact_email_entry.get_text():
                     contact += f"EMAIL:{self._contact_email_entry.get_text()}\n"
                 if not self._contact_birthday_not_set_btn.get_active():
-                    contact += f"BDAY:{
-                        self._contact_birthday_calendar.get_date().format('%Y%m%d')}\n"
+                    contact += f"BDAY:{self._contact_birthday_calendar.get_date().format('%Y%m%d')}\n"
                 if self._contact_url_entry.get_text():
                     contact += f"URL:{self._contact_url_entry.get_text()}\n"
                 if self._contact_address_street_entry.get_text():
