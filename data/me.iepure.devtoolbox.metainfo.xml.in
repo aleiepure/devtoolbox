@@ -77,6 +77,16 @@ SPDX-License-Identifier: CC0-1.0
   </screenshots>
 
   <releases>
+    <release version="1.2.5" date="2025-05-03">
+      <description translate="no">
+        <p>What's new:</p>
+        <ul>
+          <li>Text diff: highlight colors now change with the applied theme</li>
+          <li>Base converter: added convertion for ASCII and UTF8 characters</li>
+          <li>Base64: added support for base64url processing</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
     <release version="1.2.4" date="2025-04-25">
       <description translate="no">
         <p>What's new:</p>
