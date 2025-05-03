@@ -85,6 +85,14 @@ class HashGeneratorView(Adw.Bin):
                 self._calculate_sha256(text)
             case 3: # SHA512
                 self._calculate_sha512(text)
+            case 4: # SHA3-256
+                self._calculate_sha3_256(text)
+            case 5: # SHA3-512
+                self._calculate_sha3_512(text)
+            case 6: # Adler32
+                self._calculate_adler32(text)
+            case 7: # CRC32
+                self._calculate_crc32(text)
 
     def _calculate_md5(self, text:str):
         if self._input_area.get_visible_view() == "text-area" and len(text) > 0:
@@ -117,6 +125,38 @@ class HashGeneratorView(Adw.Bin):
             self._output_area.clear()
         elif self._input_area.get_visible_view() == "image-area" or self._input_area.get_visible_view() == "file-area":
             self._service.hash_file_with_sha512_async(self, self._on_async_done)
+            
+    def _calculate_sha3_256(self, text:str):
+        if self._input_area.get_visible_view() == "text-area" and len(text) > 0:
+            self._service.hash_text_with_sha3_256_async(self, self._on_async_done)
+        elif self._input_area.get_visible_view() == "text-area" and len(text) == 0:
+            self._output_area.clear()
+        elif self._input_area.get_visible_view() == "image-area" or self._input_area.get_visible_view() == "file-area":
+            self._service.hash_file_with_sha3_256_async(self, self._on_async_done)
+
+    def _calculate_sha3_512(self, text:str):
+        if self._input_area.get_visible_view() == "text-area" and len(text) > 0:
+            self._service.hash_text_with_sha3_512_async(self, self._on_async_done)
+        elif self._input_area.get_visible_view() == "text-area" and len(text) == 0:
+            self._output_area.clear()
+        elif self._input_area.get_visible_view() == "image-area" or self._input_area.get_visible_view() == "file-area":
+            self._service.hash_file_with_sha3_512_async(self, self._on_async_done)
+
+    def _calculate_adler32(self, text:str):
+        if self._input_area.get_visible_view() == "text-area" and len(text) > 0:
+            self._service.hash_text_with_adler32_async(self, self._on_async_done)
+        elif self._input_area.get_visible_view() == "text-area" and len(text) == 0:
+            self._output_area.clear()
+        elif self._input_area.get_visible_view() == "image-area" or self._input_area.get_visible_view() == "file-area":
+            self._service.hash_file_with_adler32_async(self, self._on_async_done)
+
+    def _calculate_crc32(self, text:str):
+        if self._input_area.get_visible_view() == "text-area" and len(text) > 0:
+            self._service.hash_text_with_crc32_async(self, self._on_async_done)
+        elif self._input_area.get_visible_view() == "text-area" and len(text) == 0:
+            self._output_area.clear()
+        elif self._input_area.get_visible_view() == "image-area" or self._input_area.get_visible_view() == "file-area":
+            self._service.hash_file_with_crc32_async(self, self._on_async_done)
 
     def _check_hash(self):
         if self._check_entryrow.get_text() == self._output_area.get_text():
