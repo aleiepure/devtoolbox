@@ -46,6 +46,12 @@ template $Base64EncoderView: Adw.Bin {
                 }
               }
             }
+
+            Adw.SwitchRow _url_safe_switch {
+              title: _("URL Safe");
+              subtitle: _("Use URL safe Base64 processing");
+              icon-name: "chain-link";
+            }
           }
 
           Separator {

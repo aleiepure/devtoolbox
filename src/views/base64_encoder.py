@@ -1,7 +1,6 @@
 from gi.repository import Gtk, Adw, Gio, GObject
 from gettext import gettext as _
 
-from ..utils import Utils
 from ..services.base64_encoder import Base64EncoderService
 
 
@@ -13,6 +12,7 @@ class Base64EncoderView(Adw.Bin):
     _toast = Gtk.Template.Child()
     _title = Gtk.Template.Child()
     _direction_selector = Gtk.Template.Child()
+    _url_safe_switch = Gtk.Template.Child()
     _input_area = Gtk.Template.Child()
     _output_area = Gtk.Template.Child()
 
@@ -28,12 +28,17 @@ class Base64EncoderView(Adw.Bin):
         # Signals
         # self._direction_selector.connect("toggled", self._on_input_changed)
         self._direction_selector.connect("notify::active", self._on_direction_changed)
+        self._url_safe_switch.connect("notify::active", self._on_direction_changed)
         self._input_area.connect("text-changed", self._on_input_changed)
         self._input_area.connect("error", self._on_error)
         self._input_area.connect("view-cleared", self._on_view_cleared)
         self._output_area.connect("error", self._on_error)
 
     def _on_direction_changed(self, pspec: GObject.ParamSpec, user_data: GObject.GPointer):
+        self._convert()
+        
+    def _on_url_safe_changed(self, pspec: GObject.ParamSpec, user_data: GObject.GPointer):
+        self._service.set_url_safe(self._url_safe_switch.get_active())
         self._convert()
 
     def _on_input_changed(self, source_widget: GObject.Object):

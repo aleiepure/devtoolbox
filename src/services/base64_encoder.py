@@ -6,6 +6,7 @@ class Base64EncoderService:
 
     def __init__(self):
         self._cancellable = Gio.Cancellable()
+        self._url_safe = False
 
     def _encode_thread(self, task: Gio.Task, source_object: GObject.Object, task_data: object, cancelable: Gio.Cancellable):
         if task.return_error_if_cancelled():
@@ -20,9 +21,13 @@ class Base64EncoderService:
         task.return_value(outcome)
 
     def _encode(self, input: str) -> str:
+        if self._url_safe:
+            return base64.urlsafe_b64encode(input.encode()).decode()
         return base64.b64encode(input.encode()).decode()
 
     def _decode(self, input: str) -> str:
+        if self._url_safe:
+            return base64.urlsafe_b64decode(input.encode()).decode()
         return base64.b64decode(input.encode()).decode()
 
     def encode_async(self, caller: GObject.Object, callback: callable):
@@ -46,3 +51,6 @@ class Base64EncoderService:
 
     def set_input(self, input_str: str):
         self._input = input_str
+
+    def set_url_safe(self, url_safe: bool):
+        self._url_safe = url_safe
