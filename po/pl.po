@@ -6,27 +6,29 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-05-03 18:02+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-06-09 12:01+0000\n"
+"Last-Translator: Jan Bukalski <bukalski@proton.me>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/devtoolbox/"
+"devtoolbox/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
 msgid "@app-name@"
-msgstr ""
+msgstr "Przybornik"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
 msgid "Dev tools at your fingertips"
-msgstr ""
+msgstr "Narzędzia deweloperskie na wyciągnięcie ręki"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
 msgid ""
@@ -40,62 +42,68 @@ msgid ""
 "again that website of which you don't recall the name just for a quick "
 "conversion, this is the right app for you."
 msgstr ""
+"Jeśli jesteś zmęczony niekończącym się szukaniem w Internecie odpowiedniego "
+"narzędzia lub ponownym znalezieniem strony internetowej, której nazwy nie "
+"pamiętasz, tylko w celu szybkiej konwersji, ta aplikacja jest właśnie dla "
+"Ciebie."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr ""
+"Jest to zbiór potężnych, ale prostych w użyciu narzędzi do rozwiązywania "
+"najczęstszych codziennych problemów programistycznych."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Includes:"
-msgstr ""
+msgstr "Zawiera:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "JSON to YAML converter and vice-versa"
-msgstr ""
+msgstr "Konwerter JSON na YAML i odwrotnie"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33
 msgid "CRON expressions parser"
-msgstr ""
+msgstr "Parser wyrażeń CRON"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "GZip compressor and decompressor"
-msgstr ""
+msgstr "Kompresor i dekompresor GZip"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Formatters for common programming languages"
-msgstr ""
+msgstr "Formatyzatory dla popularnych języków programowania"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Hash generators"
-msgstr ""
+msgstr "Generatory Hashy"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
-msgstr ""
+msgstr "Tester Regex"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/window.py:332
 #: src/ui/views/markdown_preview.blp:19
 msgid "Markdown Previewer"
-msgstr ""
+msgstr "Podgląd Markdown"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
-msgstr ""
+msgstr "Konwertery obrazu"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
-msgstr ""
+msgstr "Wiele więcej..."
 
 #: src/window.py:122 src/window.py:129 src/window.py:136 src/window.py:143
 #: src/window.py:150
 msgid "Converters"
-msgstr ""
+msgstr "Konwertery"
 
 #: src/window.py:124 src/ui/views/json_yaml.blp:20
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr ""
+msgstr "Konwersja dokumentów JSON na YAML i odwrotnie"
 
 #: src/window.py:128 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
@@ -103,7 +111,7 @@ msgstr ""
 
 #: src/window.py:131 src/ui/views/timestamp.blp:20
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr ""
+msgstr "Konwersja znaczników czasu UNIX do i ze zwykłych dat"
 
 #: src/window.py:135
 msgid "Number Bases"
@@ -111,44 +119,44 @@ msgstr ""
 
 #: src/window.py:138 src/ui/views/base_converter.blp:20
 msgid "Convert numbers between bases"
-msgstr ""
+msgstr "Konwersja liczb między bazami"
 
 #: src/window.py:142 src/ui/views/cron_converter.blp:20
 msgid "CRON Parser"
-msgstr ""
+msgstr "Parser CRON"
 
 #: src/window.py:145 src/ui/views/cron_converter.blp:21
 msgid "Convert CRON expressions to time and date"
-msgstr ""
+msgstr "Konwersja wyrażeń CRON na czas i datę"
 
 #: src/window.py:149 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
-msgstr ""
+msgstr "Odwrócony CRON"
 
 #: src/window.py:152 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
-msgstr ""
+msgstr "Generowanie wyrażeń CRON"
 
 #: src/window.py:159 src/window.py:166 src/window.py:173 src/window.py:180
 #: src/window.py:187
 msgid "Encoders & Decoders"
-msgstr ""
+msgstr "Kodery i dekodery"
 
 #: src/window.py:161 src/ui/views/html_encoder.blp:20
 msgid "Encode and decode special characters using the HTML format"
-msgstr ""
+msgstr "Kodowanie i dekodowanie znaków specjalnych przy użyciu formatu HTML"
 
 #: src/window.py:168
 msgid "Encode and decode base64 strings"
-msgstr ""
+msgstr "Kodowanie i dekodowanie ciągów base64"
 
 #: src/window.py:175 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
-msgstr ""
+msgstr "Kodowanie i dekodowanie znaków specjalnych w adresach URL"
 
 #: src/window.py:182
 msgid "Compress and decompress files and texts using GZip"
-msgstr ""
+msgstr "Kompresja i dekompresja plików i tekstów przy użyciu GZip"
 
 #: src/window.py:189 src/ui/views/jwt_decoder.blp:20
 msgid "Decode JWT tokens to header and payload"
@@ -157,39 +165,39 @@ msgstr ""
 #: src/window.py:196 src/window.py:203 src/window.py:210 src/window.py:217
 #: src/window.py:224 src/window.py:231 src/window.py:238 src/window.py:245
 msgid "Formatters & Minifiers"
-msgstr ""
+msgstr "Formatyzatory i minifikatory"
 
 #: src/window.py:198 src/formatters/json.py:14
 msgid "Format JSON documents"
-msgstr ""
+msgstr "Formatowanie dokumentów JSON"
 
 #: src/window.py:205 src/formatters/sql.py:14
 msgid "Format SQL documents"
-msgstr ""
+msgstr "Formatowanie dokumentów SQL"
 
 #: src/window.py:212 src/formatters/xml.py:16
 msgid "Format XML documents"
-msgstr ""
+msgstr "Formatowanie dokumentów XML"
 
 #: src/window.py:219 src/formatters/html.py:15
 msgid "Format HTML documents"
-msgstr ""
+msgstr "Formatowanie dokumentów HTML"
 
 #: src/window.py:226 src/formatters/js.py:15
 msgid "Format JavaScript documents"
-msgstr ""
+msgstr "Formatowanie dokumentów JavaScript"
 
 #: src/window.py:233 src/formatters/css.py:14
 msgid "Format CSS documents"
-msgstr ""
+msgstr "Formatowanie dokumentów CSS"
 
 #: src/window.py:240 src/formatters/css_minifier.py:15
 msgid "Minify CSS documents"
-msgstr ""
+msgstr "Zminimalizuj dokumenty CSS"
 
 #: src/window.py:247
 msgid "Minify JavaScript documents"
-msgstr ""
+msgstr "Zminimalizuj dokumenty JavaScript"
 
 #: src/window.py:254 src/window.py:261 src/window.py:268 src/window.py:275
 #: src/window.py:282 src/window.py:289
