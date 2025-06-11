@@ -138,7 +138,8 @@ class Utils:
 
     @staticmethod
     def is_numeric_chmod(value: int) -> bool:
-        return value >= 0 and value <=777
+        return (len(str(value)) <= 4 and
+                all(digit in "01234567" for digit in str(value)))
 
     @staticmethod
     def is_symbolic_chmod(value: str) -> bool:
@@ -148,13 +149,13 @@ class Utils:
         string = list(value)
         if (string[0] in ['-', 'r'] and
             string[1] in ['-', 'w'] and
-            string[2] in ['-', 'x'] and
+            string[2] in ['-', 'x', 's', 'S'] and
             string[3] in ['-', 'r'] and
             string[4] in ['-', 'w'] and
-            string[5] in ['-', 'x'] and
+            string[5] in ['-', 'x', 's', 'S'] and
             string[6] in ['-', 'r'] and
             string[7] in ['-', 'w'] and
-            string[8] in ['-', 'x']):
+            string[8] in ['-', 'x', 't', 'T']):
             return True
         else:
             return False
