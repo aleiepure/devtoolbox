@@ -1,0 +1,312 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $ColorConverterView: Adw.Bin {
+  Adw.ToastOverlay _toast {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+
+          $UtilityTitle _title {
+            title: _("Color Converter");
+            description: _("Convert a color between common formats");
+            tool-name: "color-converter";
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            title: _("Tool options");
+
+            Adw.ActionRow {
+              title: _("Format");
+              subtitle: _("Output format used for color values");
+              icon-name: "list-large";
+
+              [suffix]
+              Adw.ToggleGroup _format_selector {
+                valign: center;
+
+                Adw.Toggle {
+                  name: "web";
+                  label: _("Web");
+                }
+
+                Adw.Toggle {
+                  name: "web-legacy";
+                  label: _("Web (Legacy)");
+                }
+
+                Adw.Toggle {
+                  name: "percent";
+                  label: _("Percent");
+                }
+
+                Adw.Toggle {
+                  name: "normalized";
+                  label: _("Normalized");
+                }
+
+                Adw.Toggle {
+                  name: "nbit";
+                  label: "N-Bit";
+                }
+              }
+            }
+
+            Adw.ActionRow _angle_selector_row {
+              title: _("Angle Unit");
+              subtitle: _("Unit used for angle component");
+              icon-name: "timer-symbolic";
+              visible: false;
+
+              [suffix]
+              Adw.ToggleGroup _angle_selector {
+                valign: center;
+
+                Adw.Toggle {
+                  name: "deg";
+                  label: _("Degrees");
+                }
+
+                Adw.Toggle {
+                  name: "rad";
+                  label: _("Radians");
+                }
+
+                Adw.Toggle {
+                  name: "grad";
+                  label: _("Gradians");
+                }
+
+                Adw.Toggle {
+                  name: "turn";
+                  label: _("Turns");
+                }
+
+                Adw.Toggle {
+                  name: "follow";
+                  label: _("Follow Format");
+                }
+              }
+            }
+
+            Adw.SpinRow _bits_spinner {
+              title: _("Bits");
+              subtitle: _("Bit precision of color values");
+              icon-name: "spacebar-symbolic";
+              visible: false;
+
+              adjustment: Adjustment {
+                lower: 2;
+                upper: 32;
+                step-increment: 2;
+                value: 8;
+              };
+            }
+          }
+
+          Separator {
+            margin-top: 10;
+            margin-bottom: 10;
+          }
+
+          Adw.PreferencesGroup {
+            title: _("Values");
+
+            Adw.ActionRow {
+              title: _("Color");
+              icon-name: "color-select-symbolic";
+              activatable-widget: _color_btn;
+
+              [suffix]
+              ColorDialogButton _color_btn {
+                valign: center;
+                width-request: 100;
+                rgba: "#FFFFFF";
+
+                dialog: ColorDialog {
+                  modal: true;
+                  title: _("Color");
+                };
+              }
+            }
+
+            $EntryRow _hex {
+              title: _("Hex");
+              input-purpose: "alpha";
+              text: "#ffffff";
+              styles [
+                "monospace",
+              ]
+              show-copy-btn: "true";
+              show-clear-btn: "true";
+            }
+
+            Adw.ActionRow _rgb_row {
+              subtitle: _("RGB");
+              visible: false;
+
+
+              Box {
+                orientation: horizontal;
+                margin-start: 20;
+                styles [
+                  "color-row",
+                ]
+
+                $EntryRow _rgb_red {
+                  title: _("Red");
+                  input-purpose: "number";
+                  text: "0";
+                  show-copy-btn: "true";
+                  show-clear-btn: "true";
+                }
+
+                $EntryRow _rgb_green {
+                  title: _("Green");
+                  input-purpose: "number";
+                  text: "0";
+                  show-copy-btn: "true";
+                  show-clear-btn: "true";
+                }
+
+                $EntryRow _rgb_blue {
+                  title: _("Blue");
+                  input-purpose: "number";
+                  text: "0";
+                  show-copy-btn: "true";
+                  show-clear-btn: "true";
+                }
+              }
+            }
+
+            Adw.ActionRow _hsv_row {
+              subtitle: _("HSV");
+              visible: false;
+
+              Box {
+                orientation: horizontal;
+                margin-start: 20;
+                styles [
+                  "color-row",
+                ]
+
+                $EntryRow _hsv_hue {
+                  title: _("Hue");
+                  input-purpose: "number";
+                  text: "0";
+                  show-copy-btn: "true";
+                  show-clear-btn: "true";
+                }
+
+                $EntryRow _hsv_sat {
+                  title: _("Saturation");
+                  input-purpose: "number";
+                  text: "0";
+                  show-copy-btn: "true";
+                  show-clear-btn: "true";
+                }
+
+                $EntryRow _hsv_val {
+                  title: _("Value");
+                  input-purpose: "number";
+                  text: "0";
+                  show-copy-btn: "true";
+                  show-clear-btn: "true";
+                }
+              }
+            }
+
+            Adw.ActionRow _hsl_row {
+              subtitle: _("HSL");
+              visible: false;
+
+              Box {
+                orientation: horizontal;
+                margin-start: 20;
+                styles [
+                  "color-row",
+                ]
+
+                $EntryRow _hsl_hue {
+                  title: _("Hue");
+                  input-purpose: "number";
+                  text: "0";
+                  show-copy-btn: "true";
+                  show-clear-btn: "true";
+                }
+
+                $EntryRow _hsl_sat {
+                  title: _("Saturation");
+                  input-purpose: "number";
+                  text: "0";
+                  show-copy-btn: "true";
+                  show-clear-btn: "true";
+                }
+
+                $EntryRow _hsl_lit {
+                  title: _("Lightness");
+                  input-purpose: "number";
+                  text: "0";
+                  show-copy-btn: "true";
+                  show-clear-btn: "true";
+                }
+              }
+            }
+
+            $EntryRow _alpha {
+              title: _("Alpha");
+              visible: false;
+              input-purpose: "number";
+              text: "0";
+              show-copy-btn: "true";
+              show-clear-btn: "true";
+            }
+
+            $EntryRow _rgb_web {
+              title: _("RGB");
+              input-purpose: "alpha";
+              text: "";
+              styles [
+                "monospace",
+              ]
+              show-copy-btn: "true";
+              show-clear-btn: "true";
+            }
+
+            $EntryRow _hsl_web {
+              title: _("HSL");
+              input-purpose: "alpha";
+              text: "";
+              styles [
+                "monospace",
+              ]
+              show-copy-btn: "true";
+              show-clear-btn: "true";
+            }
+
+            $EntryRow _hwb_web {
+              title: _("HWB");
+              input-purpose: "alpha";
+              text: "";
+              styles [
+                "monospace",
+              ]
+              show-copy-btn: "true";
+              show-clear-btn: "true";
+            }
+          }
+        };
+      };
+    };
+  }
+}

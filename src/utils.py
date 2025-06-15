@@ -7,6 +7,7 @@ import ruamel.yaml
 from enum import Enum
 from lxml import etree
 from crontab import CronSlices
+import math
 import json
 import base64
 import jwt
@@ -135,6 +136,78 @@ class Utils:
         except Exception as e:
             print(e)
             return False
+
+    @staticmethod
+    def format_decimal(value: float, decimals: int = 2) -> str:
+        return f"{value:.{decimals}f}".rstrip('0').rstrip('.')
+
+    @staticmethod
+    def normalized_to_uint8(value: float) -> int:
+        if value < 0 or value > 1.0:
+            raise ValueError("value must be between 0 and 1")
+        return round(value * 255.0)
+
+    @staticmethod
+    def normalized_to_uintn(value: float, bits: int) -> int:
+        if value < 0 or value > 1.0:
+            raise ValueError("value must be between 0 and 1")
+        if bits < 1:
+            raise ValueError("bits must be atleast 1")
+        return round(value * (2 ** bits - 1))
+
+    @staticmethod
+    def uintn_to_normalized(value: int, bits: int) -> float:
+        max_value = (2 ** bits) - 1
+        if value < 0 or value > max_value:
+            raise ValueError("value must be between 0 and 2^bits-1")
+        if bits < 1:
+            raise ValueError("bits must be atleast 1")
+        return value / max_value
+
+    @staticmethod
+    def normalized_to_percent(value: float) -> float:
+        if value < 0 or value > 1.0:
+            raise ValueError("value must be between 0 and 1")
+        return value * 100.0
+
+    @staticmethod
+    def percent_to_normalized(value: float) -> float:
+        if value < 0 or value > 100.0:
+            raise ValueError("value must be between 0 and 100")
+        return value / 100.0
+
+    @staticmethod
+    def normalized_to_deg(value: float) -> float:
+        if value < 0.0 or value > 1.0:
+            raise ValueError("value must be between 0.0 and 1.0")
+        return value * 360.0
+
+    @staticmethod
+    def deg_to_normalized(value: float) -> float:
+        value %= 360.0
+        return value / 360.0
+
+    @staticmethod
+    def normalized_to_rad(value: float) -> float:
+        if value < 0.0 or value > 1.0:
+            raise ValueError("value must be between 0.0 and 1.0")
+        return value * math.pi * 2.0
+
+    @staticmethod
+    def rad_to_normalized(value: float) -> float:
+        value %= math.pi * 2.0
+        return value / (math.pi * 2.0)
+
+    @staticmethod
+    def normalized_to_grad(value: float) -> float:
+        if value < 0.0 or value > 1.0:
+            raise ValueError("value must be between 0.0 and 1.0")
+        return value * 400.0
+
+    @staticmethod
+    def grad_to_normalized(value: float) -> float:
+        value %= 400.0
+        return value / 400.0
 
     @staticmethod
     def is_numeric_chmod(value: int) -> bool:

@@ -25,6 +25,7 @@ sources = [
   'text_diff.py',
   'xml_validator.py',
   'markdown_preview.py',
+  'color_converter.py',
   'contrast_checker.py',
   'colorblindness_simulator.py',
   'image_converter.py',
