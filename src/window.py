@@ -186,7 +186,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "title": "JWT",
                 "category": _("Encoders & Decoders"),
                 "icon-name": "key-symbolic",
-                "tooltip": _("Decode JWT tokens to header and payload"),
+                "tooltip": _("Decode and encode JWT tokens"),
                 "child": JwtDecoderView(),
             },
 

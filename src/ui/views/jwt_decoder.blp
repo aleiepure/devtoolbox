@@ -16,9 +16,100 @@ template $JwtDecoderView: Adw.Bin {
           orientation: vertical;
 
           $UtilityTitle _title {
-            title: _("JWT tokens decoder");
-            description: _("Decode JWT tokens to header and payload");
+            title: _("JWT Decode & Encode");
+            description: _("Decode and encode JWT tokens");
             tool-name: "jwt-decoder";
+          }
+
+          Separator {
+            margin-top: 10;
+          }
+
+          Adw.PreferencesGroup {
+            title: _("Tool options");
+
+            Adw.ActionRow {
+              title: _("Verify Signature");
+              subtitle: _("Verify signature or sign JWT");
+              icon-name: "certificate-parser-symbolic";
+
+              [suffix]
+              Adw.ToggleGroup _signature_selector {
+                valign: center;
+                Adw.Toggle {
+                  name: "ignore";
+                  label: _("Ignore");
+                }
+
+                Adw.Toggle {
+                  name: "symmetric";
+                  label: _("Symmetric");
+                }
+
+                Adw.Toggle {
+                  name: "asymmetric";
+                  label: _("Asymmetric");
+                }
+              }
+            }
+
+            Adw.ActionRow _key_encoding_selector_row {
+              title: _("Key Encoding");
+              subtitle: _("Select the encoding of the key");
+              icon-name: "key-symbolic";
+              visible: false;
+
+              [suffix]
+              Adw.ToggleGroup _key_encoding_selector {
+                valign: center;
+                Adw.Toggle {
+                  name: "utf8";
+                  label: _("UTF-8");
+                }
+
+                Adw.Toggle {
+                  name: "base64url";
+                  label: _("Base64URL");
+                }
+              }
+            }
+
+            $EntryRow _key_row {
+              title: _("Key");
+              text: "";
+              visible: false;
+              show-copy-btn: true;
+              show-paste-btn: true;
+              show-clear-btn: true;
+
+              styles [
+                "monospace"
+              ]
+            }
+          }
+
+          Box _asymmetric_box {
+            orientation: horizontal;
+            homogeneous: true;
+            spacing: 10;
+            margin-bottom: 10;
+            visible:false;
+
+            $TextArea _public_key_area {
+              name: _("Public Key (PEM)");
+              show-copy-btn: true;
+              show-paste-btn: true;
+              show-clear-btn: true;
+              text-wrap-mode: "none";
+            }
+
+            $TextArea _private_key_area {
+              name: _("Private Key (PEM)");
+              show-copy-btn: true;
+              show-paste-btn: true;
+              show-clear-btn: true;
+              text-wrap-mode: "none";
+            }
           }
 
           Separator {
@@ -27,8 +118,9 @@ template $JwtDecoderView: Adw.Bin {
 
           $TextArea _token_area {
             name: _("Token");
-            show-clear-btn: "true";
-            show-paste-btn: "true";
+            show-copy-btn: true;
+            show-paste-btn: true;
+            show-clear-btn: true;
             area-height: "100";
             text-wrap-mode: "char";
           }
@@ -45,13 +137,17 @@ template $JwtDecoderView: Adw.Bin {
 
             $TextArea _header_area {
               name: _("Header");
-              show-copy-btn: "true";
+              show-copy-btn: true;
+              show-paste-btn: true;
+              show-clear-btn: true;
               text-wrap-mode: "none";
             }
 
             $TextArea _payload_area {
               name: _("Payload");
-              show-copy-btn: "true";
+              show-copy-btn: true;
+              show-paste-btn: true;
+              show-clear-btn: true;
               text-wrap-mode: "none";
             }
           }
