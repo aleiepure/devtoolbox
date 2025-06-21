@@ -7,25 +7,29 @@
             "name": "python3-ruamel.yaml",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ruamel.yaml\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ruamel.yaml==0.18.14\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/73/67/8ece580cc363331d9a53055130f86b096bf16e38156e33b1d3014fffda6b/ruamel.yaml-0.18.6-py3-none-any.whl",
-                    "sha256": "57b53ba33def16c4f3d807c0ccbc00f8a6081827e81ba2491691b76882d0c636"
+                    "url": "https://files.pythonhosted.org/packages/af/6d/6fe4805235e193aad4aaf979160dd1f3c487c57d48b810c816e6e842171b/ruamel.yaml-0.18.14-py3-none-any.whl",
+                    "sha256": "710ff198bb53da66718c7db27eec4fbcc9aa6ca7204e4c1df2f282b6fe5eb6b2"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/55/b3/e2531a050758b717c969cbf76c103b75d8a01e11af931b94ba656117fbe9/ruamel.yaml.clib-0.2.8-cp312-cp312-manylinux_2_24_aarch64.whl",
-                    "sha256": "1dc67314e7e1086c9fdf2680b7b6c2be1c0d8e3a8279f2e993ca2a7545fecf62",
-                    "only-arches": ["aarch64"]
+                    "url": "https://files.pythonhosted.org/packages/ec/b0/b850385604334c2ce90e3ee1013bd911aedf058a934905863a6ea95e9eb4/ruamel.yaml.clib-0.2.12-cp312-cp312-manylinux2014_aarch64.whl",
+                    "sha256": "943f32bc9dedb3abff9879edc134901df92cfce2c3d5c9348f172f62eb2d771d",
+                    "only-arches": [
+                        "aarch64"
+                    ]
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/30/d3/5fe978cd01a61c12efd24d65fa68c6f28f28c8073a06cf11db3a854390ca/ruamel.yaml.clib-0.2.8-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_28_x86_64.whl",
-                    "sha256": "d176b57452ab5b7028ac47e7b3cf644bcfdc8cacfecf7e71759f7f51a59e5c92",
-                    "only-arches": ["x86_64"]
+                    "url": "https://files.pythonhosted.org/packages/44/d0/3f68a86e006448fb6c005aee66565b9eb89014a70c491d70c08de597f8e4/ruamel.yaml.clib-0.2.12-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+                    "sha256": "95c3829bb364fdb8e0332c9931ecf57d9be3519241323c5274bd82f709cebc0c",
+                    "only-arches": [
+                        "x86_64"
+                    ]
                 }
             ]
         },
@@ -33,13 +37,13 @@
             "name": "python3-python-dateutil",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"python-dateutil\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"python-dateutil==2.9.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
-                    "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+                    "url": "https://files.pythonhosted.org/packages/13/7f/98d6f9ca8b731506c85785bbb8806c01f5966a4df6d68c0d1cf3b16967e1/python_dateutil-2.9.0-py2.py3-none-any.whl",
+                    "sha256": "cbf2f1da5e6083ac2fbfd4da39a25f34312230110440f424a14c7558bb85d82e"
                 }
             ]
         },
@@ -47,13 +51,13 @@
             "name": "python3-humanize",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"humanize\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"humanize==4.12.3\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/92/75/4bc3e242ad13f2e6c12e0b0401ab2c5e5c6f0d7da37ec69bc808e24e0ccb/humanize-4.11.0-py3-none-any.whl",
-                    "sha256": "b53caaec8532bcb2fff70c8826f904c35943f8cecaca29d272d9df38092736c0"
+                    "url": "https://files.pythonhosted.org/packages/a0/1e/62a2ec3104394a2975a2629eec89276ede9dbe717092f6966fcf963e1bf0/humanize-4.12.3-py3-none-any.whl",
+                    "sha256": "2cbf6370af06568fa6d2da77c86edb7886f3160ecd19ee1ffef07979efc597f6"
                 }
             ]
         },
@@ -61,7 +65,7 @@
             "name": "python3-python-crontab",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"python-crontab\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"python-crontab==3.2.0\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -71,8 +75,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
-                    "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+                    "url": "https://files.pythonhosted.org/packages/13/7f/98d6f9ca8b731506c85785bbb8806c01f5966a4df6d68c0d1cf3b16967e1/python_dateutil-2.9.0-py2.py3-none-any.whl",
+                    "sha256": "cbf2f1da5e6083ac2fbfd4da39a25f34312230110440f424a14c7558bb85d82e"
                 }
             ]
         },
@@ -80,7 +84,7 @@
             "name": "python3-croniter",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"croniter\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"croniter==4.0.0\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -90,8 +94,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
-                    "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+                    "url": "https://files.pythonhosted.org/packages/13/7f/98d6f9ca8b731506c85785bbb8806c01f5966a4df6d68c0d1cf3b16967e1/python_dateutil-2.9.0-py2.py3-none-any.whl",
+                    "sha256": "cbf2f1da5e6083ac2fbfd4da39a25f34312230110440f424a14c7558bb85d82e"
                 },
                 {
                     "type": "file",
@@ -101,35 +105,16 @@
             ]
         },
         {
-            "name": "python3-python-crontab",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"python-crontab\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/3b/91/832fb3b3a1f62bd2ab4924f6be0c7736c9bc4f84d3b153b74efcf6d4e4a1/python_crontab-3.2.0-py3-none-any.whl",
-                    "sha256": "82cb9b6a312d41ff66fd3caf3eed7115c28c195bfb50711bc2b4b9592feb9fe5"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
-                    "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
-                }
-            ]
-        },
-        {
             "name": "python3-pyjwt",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyjwt\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyjwt==2.10.1\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/79/84/0fdf9b18ba31d69877bd39c9cd6052b47f3761e9910c15de788e519f079f/PyJWT-2.9.0-py3-none-any.whl",
-                    "sha256": "3b02fb0f44517787776cf48f2ae25d8e14f300e6d7545a4315cee571a415e850"
+                    "url": "https://files.pythonhosted.org/packages/61/ad/689f02752eeec26aed679477e80e632ef1b682313be70793d798c1d5fc8f/PyJWT-2.10.1-py3-none-any.whl",
+                    "sha256": "dcdd193e30abefd5debf142f9adfcdd2b58004e644f25406ffaebd50bd98dacb"
                 }
             ]
         },
@@ -137,13 +122,13 @@
             "name": "python3-sqlparse",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sqlparse\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sqlparse==0.5.3\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5d/a5/b2860373aa8de1e626b2bdfdd6df4355f0565b47e51f7d0c54fe70faf8fe/sqlparse-0.5.1-py3-none-any.whl",
-                    "sha256": "773dcbf9a5ab44a090f3441e2180efe2560220203dc2f8c0b0fa141e18b505e4"
+                    "url": "https://files.pythonhosted.org/packages/a9/5c/bfd6bd0bf979426d405cc6e71eceb8701b148b16c21d2dc3c261efc61c7b/sqlparse-0.5.3-py3-none-any.whl",
+                    "sha256": "cf2196ed3418f3ba5de6af7e82c694a9fbdbfecccdfc72e281548517081f16ca"
                 }
             ]
         },
@@ -151,13 +136,24 @@
             "name": "python3-lxml",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml\" --no-build-isolation"
+                "pip3 install --verbose --ignore-installed --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"lxml==5.4.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e7/6b/20c3a4b24751377aaa6307eb230b66701024012c29dd374999cc92983269/lxml-5.3.0.tar.gz",
-                    "sha256": "4e109ca30d1edec1ac60cdbe341905dc3b8f55b16855e03a54aaf59e51ec8c6f"
+                    "url": "https://files.pythonhosted.org/packages/ad/36/239820114bf1d71f38f12208b9c58dec033cbcf80101cde006b9bde5cffd/lxml-5.4.0-cp312-cp312-manylinux_2_28_x86_64.whl",
+                    "sha256": "79d5bfa9c1b455336f52343130b2067164040604e41f6dc4d8313867ed540079",
+                    "only-arches": [
+                        "x86_64"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/24/a2/8263f351b4ffe0ed3e32ea7b7830f845c795349034f912f490180d88a877/lxml-5.4.0-cp312-cp312-manylinux_2_28_aarch64.whl",
+                    "sha256": "c5681160758d3f6ac5b4fea370495c48aac0989d6a0f01bb9a72ad8ef5ab75c4",
+                    "only-arches": [
+                        "aarch64"
+                    ]
                 }
             ]
         },
@@ -165,7 +161,7 @@
             "name": "python3-python-lorem",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"python-lorem\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"python-lorem==1.3.0.post3\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -179,13 +175,13 @@
             "name": "python3-uuid6",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"uuid6\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"uuid6==2025.0.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d3/3e/4ae6af487ce5781ed71d5fe10aca72e7cbc4d4f45afc31b120287082a8dd/uuid6-2024.7.10-py3-none-any.whl",
-                    "sha256": "93432c00ba403751f722829ad21759ff9db051dea140bf81493271e8e4dd18b7"
+                    "url": "https://files.pythonhosted.org/packages/0a/50/4da47101af45b6cfa291559577993b52ee4399b3cd54ba307574a11e4f3a/uuid6-2025.0.0-py3-none-any.whl",
+                    "sha256": "2c73405ff5333c7181443958c6865e0d1b9b816bb160549e8d80ba186263cb3a"
                 }
             ]
         },
@@ -193,18 +189,38 @@
             "name": "python3-textstat",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"textstat\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"textstat==0.7.7\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/52/34/839a8cb56f145abf2da52ba4607b0e45b79fa018cb154fcba149fb76f179/pyphen-0.16.0-py3-none-any.whl",
-                    "sha256": "b4a4c6d7d5654b698b5fc68123148bb799b3debe0175d1d5dc3edfe93066fc4c"
+                    "url": "https://files.pythonhosted.org/packages/fa/ff/617bdeab02c2ce0384e64a5bb00ec479322dbf019491def68af6a860733d/cmudict-1.0.32-py3-none-any.whl",
+                    "sha256": "b9323664d49d128193c480ec97a3270ab2162469289bb26e950d13b2ef661c41"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/11/df/bb284dfb23890319ace2a416a5a39e77e29b8f52f5d80bc13b12dc1fc1f5/textstat-0.7.4-py3-none-any.whl",
-                    "sha256": "53a36cbcf4d21312d28cdc5a316917031667a57303e375a184d83fd52b95a407"
+                    "url": "https://files.pythonhosted.org/packages/20/b0/36bd937216ec521246249be3bf9855081de4c5e06a0c9b4219dbeda50373/importlib_metadata-8.7.0-py3-none-any.whl",
+                    "sha256": "e5dd1551894c77868a30651cef00984d50e1002d06942a7101d34870c5f02afd"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/a4/ed/1f1afb2e9e7f38a545d628f864d562a5ae64fe6f7a10e28ffb9b185b4e89/importlib_resources-6.5.2-py3-none-any.whl",
+                    "sha256": "789cfdc3ed28c78b67a06acb8126751ced69a3d5f79c095a98298cd8a760ccec"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/7b/1f/c2142d2edf833a90728e5cdeb10bdbdc094dde8dbac078cee0cf33f5e11b/pyphen-0.17.2-py3-none-any.whl",
+                    "sha256": "3a07fb017cb2341e1d9ff31b8634efb1ae4dc4b130468c7c39dd3d32e7c3affd"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/90/7c/c5506dab41cc67acef5e6554bdac0bc9953e7f3e91cf6103cbdff200d1c5/textstat-0.7.7-py3-none-any.whl",
+                    "sha256": "103296f6a6f7451a4f56f78a5fd2ff184574a80e63886229f988cb4cc688270b"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/2e/54/647ade08bf0db230bfea292f893923872fd20be6ac6f53b2b936ba839d75/zipp-3.23.0-py3-none-any.whl",
+                    "sha256": "071652d6115ed432f5ce1d34c336c0adfd6a884660d1e9712a256d3d3bd4b14e"
                 }
             ]
         },
@@ -212,37 +228,13 @@
             "name": "python3-markdown2",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"markdown2\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"markdown2==2.5.3\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/30/2b/8653ae6d18e20183fc6051fd2e10cd0c46e16a6b71eb34edef8d465dc969/markdown2-2.5.1-py2.py3-none-any.whl",
-                    "sha256": "190ae60a4bd0425c60c863bede18a9f3d45b1cbf3fbc9f40b4fac336ff2c520b"
-                }
-            ]
-        },
-        {
-            "name": "python3-meson-python",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"meson-python\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/7d/ec/40c0ddd29ef4daa6689a2b9c5ced47d5b58fa54ae149b19e9a97f4979c8c/meson_python-0.17.1-py3-none-any.whl",
-                    "sha256": "30a75c52578ef14aff8392677b09c39346e0a24d2b2c6204b8ed30583c11269c"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/08/aa/cc0199a5f0ad350994d660967a8efb233fe0416e4639146c089643407ce6/packaging-24.1-py3-none-any.whl",
-                    "sha256": "5b8f2217dbdbd2f7f384c41c628544e6d52f2d0f53c6d0c3ea61aa5d1d7ff124"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e8/61/9dd3e68d2b6aa40a5fc678662919be3c3a7bf22cba5a6b4437619b77e156/pyproject_metadata-0.9.0-py3-none-any.whl",
-                    "sha256": "fc862aab066a2e87734333293b0af5845fe8ac6cb69c451a41551001e923be0b"
+                    "url": "https://files.pythonhosted.org/packages/84/37/0a13c83ccf5365b8e08ea572dfbc04b8cb87cadd359b2451a567f5248878/markdown2-2.5.3-py3-none-any.whl",
+                    "sha256": "a8ebb7e84b8519c37bf7382b3db600f1798a22c245bfd754a1f87ca8d7ea63b3"
                 }
             ]
         },
@@ -250,13 +242,24 @@
             "name": "python3-numpy",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"numpy\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"numpy==2.1.2\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/4b/d1/8a730ea07f4a37d94f9172f4ce1d81064b7a64766b460378be278952de75/numpy-2.1.2.tar.gz",
-                    "sha256": "13532a088217fa624c99b843eeb54640de23b3414b14aa66d023805eb731066c"
+                    "url": "https://files.pythonhosted.org/packages/9b/b4/e3c7e6fab0f77fff6194afa173d1f2342073d91b1d3b4b30b17c3fb4407a/numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+                    "sha256": "6d95f286b8244b3649b477ac066c6906fbb2905f8ac19b170e2175d3d799f4df",
+                    "only-arches": [
+                        "x86_64"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/c4/a7/af3329fda3c3ec31d9b650e42bbcd3422fc62a765cbb1405fde4177a0996/numpy-2.1.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+                    "sha256": "1b8cde4f11f0a975d1fd59373b32e2f5a562ade7cde4f85b7137f3de8fbb29a0",
+                    "only-arches": [
+                        "aarch64"
+                    ]
                 }
             ]
         },
@@ -264,13 +267,24 @@
             "name": "python3-Pillow",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"Pillow\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"Pillow==11.2.1\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a5/26/0d95c04c868f6bdb0c447e3ee2de5564411845e36a858cfd63766bc7b563/pillow-11.0.0.tar.gz",
-                    "sha256": "72bacbaf24ac003fea9bff9837d1eedb6088758d41e100c1552930151f677739"
+                    "url": "https://files.pythonhosted.org/packages/fe/7c/d8b1330458e4d2f3f45d9508796d7caf0c0d3764c00c823d10f6f1a3b76d/pillow-11.2.1-cp312-cp312-manylinux_2_28_x86_64.whl",
+                    "sha256": "b2dbea1012ccb784a65349f57bbc93730b96e85b42e9bf7b01ef40443db720b4",
+                    "only-arches": [
+                        "x86_64"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/e4/3a/427e4cb0b9e177efbc1a84798ed20498c4f233abde003c06d2650a6d60cb/pillow-11.2.1-cp312-cp312-manylinux_2_28_aarch64.whl",
+                    "sha256": "3e645b020f3209a0181a418bffe7b4a93171eef6c4ef6cc20980b30bebf17b7d",
+                    "only-arches": [
+                        "aarch64"
+                    ]
                 }
             ]
         },
@@ -278,7 +292,7 @@
             "name": "python3-daltonlens",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"daltonlens\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"daltonlens==0.1.5\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -288,13 +302,35 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/4b/d1/8a730ea07f4a37d94f9172f4ce1d81064b7a64766b460378be278952de75/numpy-2.1.2.tar.gz",
-                    "sha256": "13532a088217fa624c99b843eeb54640de23b3414b14aa66d023805eb731066c"
+                    "url": "https://files.pythonhosted.org/packages/9b/b4/e3c7e6fab0f77fff6194afa173d1f2342073d91b1d3b4b30b17c3fb4407a/numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+                    "sha256": "6d95f286b8244b3649b477ac066c6906fbb2905f8ac19b170e2175d3d799f4df",
+                    "only-arches": [
+                        "x86_64"
+                    ]
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a5/26/0d95c04c868f6bdb0c447e3ee2de5564411845e36a858cfd63766bc7b563/pillow-11.0.0.tar.gz",
-                    "sha256": "72bacbaf24ac003fea9bff9837d1eedb6088758d41e100c1552930151f677739"
+                    "url": "https://files.pythonhosted.org/packages/c4/a7/af3329fda3c3ec31d9b650e42bbcd3422fc62a765cbb1405fde4177a0996/numpy-2.1.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+                    "sha256": "1b8cde4f11f0a975d1fd59373b32e2f5a562ade7cde4f85b7137f3de8fbb29a0",
+                    "only-arches": [
+                        "aarch64"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/fe/7c/d8b1330458e4d2f3f45d9508796d7caf0c0d3764c00c823d10f6f1a3b76d/pillow-11.2.1-cp312-cp312-manylinux_2_28_x86_64.whl",
+                    "sha256": "b2dbea1012ccb784a65349f57bbc93730b96e85b42e9bf7b01ef40443db720b4",
+                    "only-arches": [
+                        "x86_64"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/e4/3a/427e4cb0b9e177efbc1a84798ed20498c4f233abde003c06d2650a6d60cb/pillow-11.2.1-cp312-cp312-manylinux_2_28_aarch64.whl",
+                    "sha256": "3e645b020f3209a0181a418bffe7b4a93171eef6c4ef6cc20980b30bebf17b7d",
+                    "only-arches": [
+                        "aarch64"
+                    ]
                 }
             ]
         },
@@ -302,7 +338,7 @@
             "name": "python3-asn1crypto",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"asn1crypto\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"asn1crypto==1.5.1\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -316,13 +352,13 @@
             "name": "python3-pytz",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pytz\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pytz==2025.2\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/11/c3/005fcca25ce078d2cc29fd559379817424e94885510568bc1bc53d7d5846/pytz-2024.2-py2.py3-none-any.whl",
-                    "sha256": "31c7c1817eb7fae7ca4b8c7ee50c72f93aa2dd863de768e1ef4245d426aa0725"
+                    "url": "https://files.pythonhosted.org/packages/81/c4/34e93fe5f5429d7570ec1fa436f1986fb1f00c3e0f43a589fe2bbcd22c3f/pytz-2025.2-py2.py3-none-any.whl",
+                    "sha256": "5ddf76296dd8c44c26eb8f4b6f35488f3ccbf6fbbd7adee0b7262d43f0ec2f00"
                 }
             ]
         },
@@ -330,13 +366,13 @@
             "name": "python3-tzlocal",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"tzlocal\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"tzlocal==5.3.1\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/97/3f/c4c51c55ff8487f2e6d0e618dba917e3c3ee2caae6cf0fbb59c9b1876f2e/tzlocal-5.2-py3-none-any.whl",
-                    "sha256": "49816ef2fe65ea8ac19d19aa7a1ae0551c834303d5014c6d5a62e4cbda8047b8"
+                    "url": "https://files.pythonhosted.org/packages/c2/14/e2a54fabd4f08cd7af1c07030603c3356b74da07f7cc056e600436edfa17/tzlocal-5.3.1-py3-none-any.whl",
+                    "sha256": "eb1a66c3ef5847adf7a834f1be0800581b683b5608e74f86ecbcef8ab91bb85d"
                 }
             ]
         },
@@ -344,18 +380,18 @@
             "name": "python3-jsbeautifier",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"jsbeautifier\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"jsbeautifier==1.15.4\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/3d/85/7b5c2fac7fdc37d959fab714b13b9acb75884490dcc0e8b1dc5e64105084/EditorConfig-0.12.4.tar.gz",
-                    "sha256": "24857fa1793917dd9ccf0c7810a07e05404ce9b823521c7dce22a4fb5d125f80"
+                    "url": "https://files.pythonhosted.org/packages/96/fd/a40c621ff207f3ce8e484aa0fc8ba4eb6e3ecf52e15b42ba764b457a9550/editorconfig-0.17.1-py3-none-any.whl",
+                    "sha256": "1eda9c2c0db8c16dbd50111b710572a5e6de934e39772de1959d41f64fc17c82"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/69/3e/dd37e1a7223247e3ef94714abf572415b89c4e121c4af48e9e4c392e2ca0/jsbeautifier-1.15.1.tar.gz",
-                    "sha256": "ebd733b560704c602d744eafc839db60a1ee9326e30a2a80c4adb8718adc1b24"
+                    "url": "https://files.pythonhosted.org/packages/2d/14/1c65fccf8413d5f5c6e8425f84675169654395098000d8bddc4e9d3390e1/jsbeautifier-1.15.4-py3-none-any.whl",
+                    "sha256": "72f65de312a3f10900d7685557f84cb61a9733c50dcc27271a39f5b0051bf528"
                 }
             ]
         },
@@ -363,13 +399,13 @@
             "name": "python3-qrcode",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"qrcode\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"qrcode==8.2\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/74/ab/df8d889fd01139db68ae9e5cb5c8f0ea016823559a6ecb427582d52b07dc/qrcode-8.0-py3-none-any.whl",
-                    "sha256": "9fc05f03305ad27a709eb742cf3097fa19e6f6f93bb9e2f039c0979190f6f1b1"
+                    "url": "https://files.pythonhosted.org/packages/dd/b8/d2d6d731733f51684bbf76bf34dab3b70a9148e8f2cef2bb544fccec681a/qrcode-8.2-py3-none-any.whl",
+                    "sha256": "16e64e0716c14960108e85d853062c9e8bba5ca8252c0b4d0231b9df4060ff4f"
                 }
             ]
         },
@@ -377,23 +413,49 @@
             "name": "python3-jsonschema",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"jsonschema==4.17.3\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"jsonschema==4.24.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6a/21/5b6702a7f963e95456c0de2d495f67bf5fd62840ac655dc451586d23d39a/attrs-24.2.0-py3-none-any.whl",
-                    "sha256": "81921eb96de3191c8258c199618104dd27ac608d9366f5e35d011eae1867ede2"
+                    "url": "https://files.pythonhosted.org/packages/77/06/bb80f5f86020c4551da315d78b3ab75e8228f89f0162f2c3a819e407941a/attrs-25.3.0-py3-none-any.whl",
+                    "sha256": "427318ce031701fea540783410126f03899a97ffc6f61596ad581ac2e40e3bc3"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c1/97/c698bd9350f307daad79dd740806e1a59becd693bd11443a0f531e3229b3/jsonschema-4.17.3-py3-none-any.whl",
-                    "sha256": "a870ad254da1a8ca84b6a2905cac29d265f805acc57af304784962a2aa6508f6"
+                    "url": "https://files.pythonhosted.org/packages/a2/3d/023389198f69c722d039351050738d6755376c8fd343e91dc493ea485905/jsonschema-4.24.0-py3-none-any.whl",
+                    "sha256": "a462455f19f5faf404a7902952b6f0e3ce868f3ee09a359b05eca6673bd8412d"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ce/3a/5031723c09068e9c8c2f0bc25c3a9245f2b1d1aea8396c787a408f2b95ca/pyrsistent-0.20.0.tar.gz",
-                    "sha256": "4c48f78f62ab596c679086084d0dd13254ae4f3d6c72a83ffdf5ebdef8f265a4"
+                    "url": "https://files.pythonhosted.org/packages/01/0e/b27cdbaccf30b890c40ed1da9fd4a3593a5cf94dae54fb34f8a4b74fcd3f/jsonschema_specifications-2025.4.1-py3-none-any.whl",
+                    "sha256": "4653bffbd6584f7de83a67e0d620ef16900b390ddc7939d56684d6c81e33f1af"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/c1/b1/3baf80dc6d2b7bc27a95a67752d0208e410351e3feb4eb78de5f77454d8d/referencing-0.36.2-py3-none-any.whl",
+                    "sha256": "e8699adbbf8b5c7de96d8ffa0eb5c158b3beafce084968e2ea8bb08c6794dcd0"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/7a/95/dd6b91cd4560da41df9d7030a038298a67d24f8ca38e150562644c829c48/rpds_py-0.25.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+                    "sha256": "2c2cd1a4b0c2b8c5e31ffff50d09f39906fe351389ba143c195566056c13a7ea",
+                    "only-arches": [
+                        "x86_64"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/69/3c/93d2ef941b04898011e5d6eaa56a1acf46a3b4c9f4b3ad1bbcbafa0bee1f/rpds_py-0.25.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+                    "sha256": "a714bf6e5e81b0e570d01f56e0c89c6375101b8463999ead3a93a5d2a4af91fa",
+                    "only-arches": [
+                        "aarch64"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/69/e0/552843e0d356fbb5256d21449fa957fa4eff3bbc135a74a691ee70c7c5da/typing_extensions-4.14.0-py3-none-any.whl",
+                    "sha256": "a1514509136dd0b477638fc68d6a91497af5076466ad0fa6c338e44e359944af"
                 }
             ]
         },
@@ -401,23 +463,23 @@
             "name": "python3-cssbeautifier",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"cssbeautifier\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"cssbeautifier==1.15.4\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/3d/85/7b5c2fac7fdc37d959fab714b13b9acb75884490dcc0e8b1dc5e64105084/EditorConfig-0.12.4.tar.gz",
-                    "sha256": "24857fa1793917dd9ccf0c7810a07e05404ce9b823521c7dce22a4fb5d125f80"
+                    "url": "https://files.pythonhosted.org/packages/63/51/ef6c5628e46092f0a54c7cee69acc827adc6b6aab57b55d344fefbdf28f1/cssbeautifier-1.15.4-py3-none-any.whl",
+                    "sha256": "78c84d5e5378df7d08622bbd0477a1abdbd209680e95480bf22f12d5701efc98"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e5/66/9bfd2d69fb4479d38439076132a620972939f7949015563dce5e61d29a8b/cssbeautifier-1.15.1.tar.gz",
-                    "sha256": "9f7064362aedd559c55eeecf6b6bed65e05f33488dcbe39044f0403c26e1c006"
+                    "url": "https://files.pythonhosted.org/packages/96/fd/a40c621ff207f3ce8e484aa0fc8ba4eb6e3ecf52e15b42ba764b457a9550/editorconfig-0.17.1-py3-none-any.whl",
+                    "sha256": "1eda9c2c0db8c16dbd50111b710572a5e6de934e39772de1959d41f64fc17c82"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/69/3e/dd37e1a7223247e3ef94714abf572415b89c4e121c4af48e9e4c392e2ca0/jsbeautifier-1.15.1.tar.gz",
-                    "sha256": "ebd733b560704c602d744eafc839db60a1ee9326e30a2a80c4adb8718adc1b24"
+                    "url": "https://files.pythonhosted.org/packages/2d/14/1c65fccf8413d5f5c6e8425f84675169654395098000d8bddc4e9d3390e1/jsbeautifier-1.15.4-py3-none-any.whl",
+                    "sha256": "72f65de312a3f10900d7685557f84cb61a9733c50dcc27271a39f5b0051bf528"
                 }
             ]
         },
@@ -425,13 +487,24 @@
             "name": "python3-rcssmin",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"rcssmin\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"rcssmin==1.2.1\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/54/ea/97b6a726af92460b096283a8f906860327f946b4fb86c2a810697646236f/rcssmin-1.1.3.tar.gz",
-                    "sha256": "cc66240a760476e4c014bf647650a5c5a1bd9b26734c3fc389a190ebff0bfd60"
+                    "url": "https://files.pythonhosted.org/packages/89/10/1d78ee36ecf2fa1b0241c1aca13d29ae5487ae4243cc553b6212d5301a34/rcssmin-1.2.1-cp312-cp312-manylinux1_x86_64.whl",
+                    "sha256": "1209c690e5c1ab781816078d3d7e4dfc8dc024a65c60327441b8d4296d8d750c",
+                    "only-arches": [
+                        "x86_64"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/fb/2e/1b3286eadee31b5ae4307ba69528e4a81d03034c0e06bcd98fc3e32ea2d3/rcssmin-1.2.1-cp312-cp312-manylinux2014_aarch64.whl",
+                    "sha256": "9d89acb97605cef0c6f36b2bf2fe942abbfce8a809171258bff6d2f5064fcff0",
+                    "only-arches": [
+                        "aarch64"
+                    ]
                 }
             ]
         },
@@ -439,13 +512,24 @@
             "name": "python3-rjsmin",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"rjsmin\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"rjsmin==1.2.4\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/79/f5/f6bb9865991d417a9ef6bbbaad28b6e998dbfb3058ac21af92e93d0f05ae/rjsmin-1.2.3.tar.gz",
-                    "sha256": "1388b52493a4c04fbc970a2d757c301fa05a3c37640314c2ce9dfc8d8a730cc6"
+                    "url": "https://files.pythonhosted.org/packages/f1/db/97a18a7c497835afef0efbb59ea39bfdbc9e9168d7c3e6e37305ee96d9e0/rjsmin-1.2.4-cp312-cp312-manylinux1_x86_64.whl",
+                    "sha256": "7f2ee075d0d589c978ea210c234e92161a99ebd6bbf6eebaa25cff5383deda45",
+                    "only-arches": [
+                        "x86_64"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/84/b9/aa8e4bf9d4e840d44a2c54dc0482177afd290c3f1d4508c9a2dee31e8e7b/rjsmin-1.2.4-cp312-cp312-manylinux2014_aarch64.whl",
+                    "sha256": "7fd8412349a577104e1ddfd75179fac4906ea22b920f8ae8e2b6e6388dac41ce",
+                    "only-arches": [
+                        "aarch64"
+                    ]
                 }
             ]
         }

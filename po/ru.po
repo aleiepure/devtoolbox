@@ -804,7 +804,7 @@ msgid ""
 "{xsd_error}"
 msgstr ""
 "XML не соответствует предоставленной XSD-схеме:\n"
-"{xsd_error}"Use the web editor or the command line to resolve conflicts before continuing.
+"{xsd_error}"
 
 #: src/ui/window.blp:56
 msgid "Show/hide searchbar"

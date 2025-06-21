@@ -74,10 +74,9 @@ In the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Contributing), you ca
 
 ## License
 
-Copyright (C) 2022 - 2023 Dev Toolbox Developers\
+Copyright (C) 2022 - 2025 Dev Toolbox Developers\
 This application comes with absolutely no warranty. See the GNU General Public License, version 3 or later for details. A [copy of the license](./LICENSES/GPL-3.0-or-later.txt)
 can be found in the [LICENSES/](./LICENSES/) folder.
 
 Most of the symbolic icons are copyright of the GNOME Project.\
-The libraries used are the copyright of the respective copyright holders.\
-This project is [REUSE](https://reuse.software/) compliant.
+The libraries used are the copyright of the respective copyright holders.
