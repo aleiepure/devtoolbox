@@ -10,8 +10,11 @@ SPDX-License-Identifier: GPL-3.0-or-later
 </div>
 
 <div align="center">
-  <a href="https://github.com/aleiepure/devtoolbox/actions/workflows/main.yml" title="Build flatpak action">
-    <img src="https://github.com/aleiepure/devtoolbox/actions/workflows/main.yml/badge.svg" alt="CI workflow status"/>
+  <a href="https://github.com/aleiepure/devtoolbox/actions/workflows/build-x86.yml" title="Build x86">
+    <img src="https://github.com/aleiepure/devtoolbox/actions/workflows/build-x86.yml/badge.svg" alt="x86 build status"/>
+  </a>
+  <a href="https://github.com/aleiepure/devtoolbox/actions/workflows/build-arm64.yml" title="Build arm64">
+    <img src="https://github.com/aleiepure/devtoolbox/actions/workflows/build-arm64.yml/badge.svg" alt="arm64 build status"/>
   </a>
   <a href="https://github.com/aleiepure/devtoolbox/blob/main/LICENSES/GPL-3.0-or-later.txt">
     <img src="https://img.shields.io/badge/License-GPL--3.0-blue.svg" alt="GPL 3 License">
@@ -74,7 +77,7 @@ In the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Contributing), you ca
 
 ## License
 
-Copyright (C) 2022 - 2025 Dev Toolbox Developers\
+Copyright (C) 2022 - 2025 Alessandro Iepure\
 This application comes with absolutely no warranty. See the GNU General Public License, version 3 or later for details. A [copy of the license](./LICENSES/GPL-3.0-or-later.txt)
 can be found in the [LICENSES/](./LICENSES/) folder.
 
