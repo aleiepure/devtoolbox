@@ -73,10 +73,12 @@ class TimestampView(Adw.Bin):
             [f"<item>{time_zone}</item>" for time_zone in all_timezones]
         )
 
+        title = _("Timezone")
+        subtitle = _("Select the desired timezone")
         dropdown_ui = f"""<interface>
-  <object class="AdwComboRow" id="drop-down">
-    <property name="title">{_("Timezone")}</property>
-    <property name="subtitle">{_("Select the desired timezone")}</property>
+<object class="AdwComboRow" id="drop-down">
+    <property name="title">{title}</property>
+    <property name="subtitle">{subtitle}</property>
     <property name="icon-name">clock-alt-symbolic</property>
     <property name="model">
       <object class="GtkStringList">

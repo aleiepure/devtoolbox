@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-03 18:02+0200\n"
+"POT-Creation-Date: 2025-06-21 16:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,8 +29,11 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
 msgid ""
-"JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
-"Markdown;Image;"
+"JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;Validate;Validator;Converter;"
+"Convert;Timestamp;bmp;gif;icns;jpeg;png;tiff;webp;Image;Base;Parser;CRON;"
+"GZip;Compressor;Decompressor;Hash;Regex;Compare;URL;Minify;Generator;"
+"Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;"
+"Lorem;Ipsum;"
 msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
@@ -182,12 +185,24 @@ msgstr ""
 msgid "Format CSS documents"
 msgstr ""
 
+#: src/window.py:237 src/formatters/css_minifier.py:14
+msgid "CSS Minifier"
+msgstr ""
+
 #: src/window.py:240 src/formatters/css_minifier.py:15
 msgid "Minify CSS documents"
 msgstr ""
 
+#: src/window.py:244 src/formatters/js_minifier.py:14
+msgid "JavaScript Minifier"
+msgstr ""
+
 #: src/window.py:247
 msgid "Minify JavaScript documents"
+msgstr ""
+
+#: src/window.py:253
+msgid "Hash"
 msgstr ""
 
 #: src/window.py:254 src/window.py:261 src/window.py:268 src/window.py:275
@@ -756,6 +771,14 @@ msgstr ""
 msgid "Saturday"
 msgstr ""
 
+#: src/views/timestamp.py:76
+msgid "Timezone"
+msgstr ""
+
+#: src/views/timestamp.py:77
+msgid "Select the desired timezone"
+msgstr ""
+
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
 msgstr ""
@@ -806,7 +829,7 @@ msgstr ""
 
 #: src/ui/about_dialog.blp:10
 msgid ""
-"Copyright © 2022 - 2024 Alessandro Iepure\n"
+"Copyright © 2022 - 2025 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
 
@@ -1314,6 +1337,10 @@ msgstr ""
 
 #: src/ui/views/image_converter.blp:64
 msgid "converted-image"
+msgstr ""
+
+#: src/ui/views/json_validator.blp:49
+msgid "JSON Schema"
 msgstr ""
 
 #: src/ui/views/json_yaml.blp:19
@@ -1982,17 +2009,9 @@ msgstr ""
 msgid "Type CSS here"
 msgstr ""
 
-#: src/formatters/css_minifier.py:14
-msgid "CSS Minifier"
-msgstr ""
-
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
-msgstr ""
-
-#: src/formatters/js_minifier.py:14
-msgid "JavaScript Minifier"
 msgstr ""
 
 #: src/formatters/js_minifier.py:15
