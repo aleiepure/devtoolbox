@@ -234,14 +234,14 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "child": FormatterView(CssFormatter()),
             },
             "css-minifier": {
-                "title": "CSS Minifier",
+                "title": _("CSS Minifier"),
                 "category": _("Formatters & Minifiers"),
                 "icon-name": "css-symbolic",
                 "tooltip": _("Minify CSS documents"),
                 "child": FormatterView(CssMinifier()),
             },
             "js-minifier": {
-                "title": "JavaScript Minifier",
+                "title": _("JavaScript Minifier"),
                 "category": _("Formatters & Minifiers"),
                 "icon-name": "js-symbolic",
                 "tooltip": _("Minify JavaScript documents"),
@@ -250,7 +250,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
 
             # Generetors
             "hash-generator": {
-                "title": "Hash",
+                "title": _("Hash"),
                 "category": _("Generators"),
                 "icon-name": "hash-symbolic",
                 "tooltip": _("Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"),
