@@ -10,11 +10,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 </div>
 
 <div align="center">
-  <a href="https://github.com/aleiepure/devtoolbox/actions/workflows/build-x86.yml" title="Build x86">
-    <img src="https://github.com/aleiepure/devtoolbox/actions/workflows/build-x86.yml/badge.svg" alt="x86 build status"/>
-  </a>
-  <a href="https://github.com/aleiepure/devtoolbox/actions/workflows/build-arm64.yml" title="Build arm64">
-    <img src="https://github.com/aleiepure/devtoolbox/actions/workflows/build-arm64.yml/badge.svg" alt="arm64 build status"/>
+  <a href="https://github.com/aleiepure/devtoolbox/actions/workflows/build.yml" title="Build">
+    <img src="https://github.com/aleiepure/devtoolbox/actions/workflows/build.yml/badge.svg" alt="Build status"/>
   </a>
   <a href="https://github.com/aleiepure/devtoolbox/blob/main/LICENSES/GPL-3.0-or-later.txt">
     <img src="https://img.shields.io/badge/License-GPL--3.0-blue.svg" alt="GPL 3 License">
