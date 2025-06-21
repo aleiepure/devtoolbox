@@ -1,45 +1,39 @@
-# Turkish translation of me.iepure.devtoolbox.
-# Copyright (C) 2023 me.iepure.devtoolbox's copyright holder
-# SPDX-License-Identifier: GPL-3.0-or-later
-#
-# Finnever <mr.finnever@gmail.com>, 2025.
-# David Sultaniiazov <x1z53@alt-gnome.ru>, 2025.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the devtoolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-14 20:27+0300\n"
-"PO-Revision-Date: 2025-05-14 20:28+0300\n"
-"Last-Translator: David Sultaniiazov <x1z53@alt-gnome.ru>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/devtoolbox/"
-"devtoolbox/ru/>\n"
-"Language: ru\n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
+"POT-Creation-Date: 2025-05-03 18:02+0200\n"
+"PO-Revision-Date: 2025-06-15 06:01+0000\n"
+"Last-Translator: ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Kabyle <https://hosted.weblate.org/projects/devtoolbox/"
+"devtoolbox/kab/>\n"
+"Language: kab\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Gtranslator 48.0\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
 msgid "@app-name@"
-msgstr "@app-name@"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
 msgid "Dev tools at your fingertips"
-msgstr "Инструменты разработки наготове"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
 msgid ""
 "JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
 "Markdown;Image;"
 msgstr ""
-"JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
-"Markdown;Image;"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -47,332 +41,315 @@ msgid ""
 "again that website of which you don't recall the name just for a quick "
 "conversion, this is the right app for you."
 msgstr ""
-"Если вам надоело бесконечно искать в Интернете нужный инструмент или снова "
-"искать тот сайт, название которого вы не помните, только для быстрого "
-"преобразования, это приложение для вас."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr ""
-"Это коллекция мощных и в то же время простых в использовании инструментов "
-"для решения наиболее распространенных повседневных проблем разработки."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Includes:"
-msgstr "Включает:"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "JSON to YAML converter and vice-versa"
-msgstr "Конвертер из JSON в YAML и наоборот"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33
 msgid "CRON expressions parser"
-msgstr "Парсер выражений CRON"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "GZip compressor and decompressor"
-msgstr "Компрессор и распаковщик GZip"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Formatters for common programming languages"
-msgstr "Форматировщики для распространённых языков программирования"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Hash generators"
-msgstr "Генераторы хэша"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
-msgstr "Проверка регулярных выражений"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/window.py:332
 #: src/ui/views/markdown_preview.blp:19
 msgid "Markdown Previewer"
-msgstr "Предпросмотрщик Markdown-файлов"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
-msgstr "Конвертеры изображений"
+msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
-msgstr "Многое другое..."
+msgstr ""
 
 #: src/window.py:122 src/window.py:129 src/window.py:136 src/window.py:143
 #: src/window.py:150
 msgid "Converters"
-msgstr "Конвертеры"
+msgstr "Iselkaten"
 
 #: src/window.py:124 src/ui/views/json_yaml.blp:20
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr "Преобразует JSON-документы в YAML и наоборот"
+msgstr ""
 
 #: src/window.py:128 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
-msgstr "Временная метка"
+msgstr ""
 
 #: src/window.py:131 src/ui/views/timestamp.blp:20
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr "Преобразует временные метки UNIX в простые даты и обратно"
+msgstr ""
 
 #: src/window.py:135
 msgid "Number Bases"
-msgstr "Системы счисления"
+msgstr ""
 
 #: src/window.py:138 src/ui/views/base_converter.blp:20
 msgid "Convert numbers between bases"
-msgstr "Преобразует числа между системами счисления с разным основанием"
+msgstr ""
 
 #: src/window.py:142 src/ui/views/cron_converter.blp:20
 msgid "CRON Parser"
-msgstr "Парсер CRON"
+msgstr ""
 
 #: src/window.py:145 src/ui/views/cron_converter.blp:21
 msgid "Convert CRON expressions to time and date"
-msgstr "Преобразует выражения CRON во время или дату"
+msgstr ""
 
 #: src/window.py:149 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
-msgstr "Обратный CRON"
+msgstr ""
 
 #: src/window.py:152 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
-msgstr "Генератор CRON-выражений"
+msgstr ""
 
 #: src/window.py:159 src/window.py:166 src/window.py:173 src/window.py:180
 #: src/window.py:187
 msgid "Encoders & Decoders"
-msgstr "Кодировщики и декодировщики"
+msgstr ""
 
 #: src/window.py:161 src/ui/views/html_encoder.blp:20
 msgid "Encode and decode special characters using the HTML format"
-msgstr "Кодирует и декодирует специальные символы, используя HTML формат"
+msgstr ""
 
 #: src/window.py:168
 msgid "Encode and decode base64 strings"
-msgstr "Кодирует и декодирует base64-строки"
+msgstr ""
 
 #: src/window.py:175 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
-msgstr "Кодирует и декодирует специальные символы в URL-адресах"
+msgstr ""
 
 #: src/window.py:182
 msgid "Compress and decompress files and texts using GZip"
-msgstr "Сжимает и распаковывает файлы и тексты с помощью GZip"
+msgstr ""
 
 #: src/window.py:189 src/ui/views/jwt_decoder.blp:20
 msgid "Decode JWT tokens to header and payload"
-msgstr "Декодирует токены JWT в заголовок и полезные данные"
+msgstr ""
 
 #: src/window.py:196 src/window.py:203 src/window.py:210 src/window.py:217
 #: src/window.py:224 src/window.py:231 src/window.py:238 src/window.py:245
 msgid "Formatters & Minifiers"
-msgstr "Форматировщики и сжиматели"
+msgstr ""
 
 #: src/window.py:198 src/formatters/json.py:14
 msgid "Format JSON documents"
-msgstr "Форматирует JSON-документы"
+msgstr ""
 
 #: src/window.py:205 src/formatters/sql.py:14
 msgid "Format SQL documents"
-msgstr "Форматирует SQL-документы"
+msgstr ""
 
 #: src/window.py:212 src/formatters/xml.py:16
 msgid "Format XML documents"
-msgstr "Форматирует XML-документы"
+msgstr ""
 
 #: src/window.py:219 src/formatters/html.py:15
 msgid "Format HTML documents"
-msgstr "Форматирует HTML-документы"
+msgstr ""
 
 #: src/window.py:226 src/formatters/js.py:15
 msgid "Format JavaScript documents"
-msgstr "Форматирует JavaaScript-документы"
+msgstr ""
 
 #: src/window.py:233 src/formatters/css.py:14
 msgid "Format CSS documents"
-msgstr "Форматирует CSS-документы"
-
-#: src/window.py:237 src/formatters/css_minifier.py:14
-msgid "CSS Minifier"
-msgstr "Сжиматель CSS"
+msgstr ""
 
 #: src/window.py:240 src/formatters/css_minifier.py:15
 msgid "Minify CSS documents"
-msgstr "Минимизирует CSS-документы"
-
-#: src/window.py:244 src/formatters/js_minifier.py:14
-msgid "JavaScript Minifier"
-msgstr "Сжиматель JavaScript"
+msgstr ""
 
 #: src/window.py:247
 msgid "Minify JavaScript documents"
-msgstr "Минимизирует JavaaScript-документы"
-
-#: src/window.py:253
-msgid "Hash"
-msgstr "Хэш"
+msgstr ""
 
 #: src/window.py:254 src/window.py:261 src/window.py:268 src/window.py:275
 #: src/window.py:282 src/window.py:289
 msgid "Generators"
-msgstr "Генераторы"
+msgstr ""
 
 #: src/window.py:256 src/ui/views/hash_generator.blp:20
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
-msgstr "Вычисляет хэши MD5, SHA1, SHA256 и SHA512 и проверяет их целостность"
+msgstr ""
 
 #: src/window.py:263 src/ui/views/lorem_generator.blp:20
 msgid "Generate lorem ipsum placeholder text"
-msgstr "Генерирует заполняющий текст lorem ipsum"
+msgstr ""
 
 #: src/window.py:270 src/ui/views/uuid_generator.blp:20
 msgid "Generate Universally Unique IDs (UUID)"
-msgstr "Генерирует Универсальные Уникальные ID (UUID)"
+msgstr ""
 
 #: src/window.py:274
 msgid "Random"
-msgstr "Генератор случайных значений"
+msgstr ""
 
 #: src/window.py:277 src/ui/views/random_generator.blp:20
 msgid "Generate random numbers and strings"
-msgstr "Генерирует случайные числа и строки"
+msgstr ""
 
 #: src/window.py:281 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
-msgstr "Калькулятор Chmod"
+msgstr ""
 
 #: src/window.py:284 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
-msgstr "Рассчитывает значения для изменения прав доступа с помощью chmod"
+msgstr ""
 
 #: src/window.py:288
 msgid "QR Code"
-msgstr "QR-код"
+msgstr ""
 
 #: src/window.py:291 src/ui/views/qrcode_generator.blp:20
 msgid "Create custom QR Codes"
-msgstr "Создание собственных QR-кодов"
+msgstr ""
 
 #: src/window.py:297 src/ui/views/text_inspector.blp:19
 msgid "Text Inspector & Case Converter"
-msgstr "Инспектор текста и преобразователь регистра"
+msgstr ""
 
 #: src/window.py:298 src/window.py:305 src/window.py:312 src/window.py:319
 #: src/window.py:326 src/window.py:333 src/ui/views/regex_tester.blp:49
 #: src/ui/views/text_inspector.blp:107 src/ui/views/text_inspector.blp:164
 msgid "Text"
-msgstr "Текст"
+msgstr "Aḍris"
 
 #: src/window.py:300 src/ui/views/text_inspector.blp:20
 msgid "View statistics about text and change sentence cases"
-msgstr "Просмотр статистики текста и изменение регистра предложений"
+msgstr ""
 
 #: src/window.py:304
 msgid "Regex Tester"
-msgstr "Проверка регулярных выражений"
+msgstr ""
 
 #: src/window.py:307 src/ui/views/regex_tester.blp:20
 msgid "Find matching strings inside a text"
-msgstr "Находит совпадающие строки внутри текста"
+msgstr ""
 
 #: src/window.py:311 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
-msgstr "Сравнение текста"
+msgstr ""
 
 #: src/window.py:314 src/ui/views/text_diff.blp:20
 msgid "Analyze two texts and find differences"
-msgstr "Анализирует два текста и находит отличия"
+msgstr ""
 
 #: src/window.py:318 src/ui/views/xml_validator.blp:19
 msgid "XML Scheme Validator"
-msgstr "Валидатор XML-схем"
+msgstr ""
 
 #: src/window.py:321 src/ui/views/xml_validator.blp:20
 msgid "Check an XML file against an XSD schema"
-msgstr "Проверка XML-файла на соответствие XSD-схеме"
+msgstr ""
 
 #: src/window.py:325 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
-msgstr "Валидатор JSON-схем"
+msgstr ""
 
 #: src/window.py:328 src/ui/views/json_validator.blp:20
 msgid "Check a JSON file against a JSON schema"
-msgstr "Проверка JSON-файла на соответствие JSON-схеме"
+msgstr ""
 
 #: src/window.py:335 src/ui/views/markdown_preview.blp:20
 msgid "Preview markdown code as you type"
-msgstr "Предварительный просмотр Markdown-кода во время набора текста"
+msgstr ""
 
 #: src/window.py:341 src/ui/views/contrast_checker.blp:19
 msgid "Contrast Checker"
-msgstr "Проверка контрастности"
+msgstr ""
 
 #: src/window.py:342 src/window.py:349 src/window.py:356
 msgid "Graphics"
-msgstr "Графика"
+msgstr "Udlifen"
 
 #: src/window.py:344 src/ui/views/contrast_checker.blp:20
 msgid "Check a color combination for WCAG compliance"
-msgstr "Проверка сочетания цветов на соответствие требованиям WCAG"
+msgstr ""
 
 #: src/window.py:348
 msgid "Color Blindness"
-msgstr "Дальтонизм"
+msgstr ""
 
 #: src/window.py:351 src/ui/views/colorblindness_simulator.blp:20
 msgid "Simulate color blindness in images"
-msgstr "Имитация дальтонизма на изображений"
+msgstr ""
 
 #: src/window.py:355 src/ui/views/image_converter.blp:19
 msgid "Image Format Converter"
-msgstr "Конвертер форматов изображений"
+msgstr ""
 
 #: src/window.py:358 src/ui/views/image_converter.blp:20
 msgid "Convert images to different formats"
-msgstr "Преобразует изображения в разные форматы"
+msgstr ""
 
 #: src/window.py:364 src/ui/views/certificate_parser.blp:19
 msgid "Certificate Parser"
-msgstr "Анализатор сертификатов"
+msgstr ""
 
 #: src/window.py:365 src/window.py:372 src/views/certificate_parser.py:90
 msgid "Certificates"
-msgstr "Сертификаты"
+msgstr "Iselkinen"
 
 #: src/window.py:367 src/ui/views/certificate_parser.blp:20
 msgid "View certificates contents"
-msgstr "Просмотр содержимого сертификатов"
+msgstr ""
 
 #: src/window.py:371
 msgid "Certificate Signing Request"
-msgstr "Запрос на подпись сертификата"
+msgstr ""
 
 #: src/window.py:374 src/ui/views/certificate_request_generator.blp:23
 msgid "Generate certificate signing requests"
-msgstr "Создание запросов на подпись сертификата"
+msgstr ""
 
 #. change view and save previous
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:54
 #: src/widgets/text_file_area.py:62 src/widgets/text_file_area.py:200
 msgid "Opening file..."
-msgstr "Открыть файл..."
+msgstr ""
 
 #: src/widgets/image_area.py:96 src/widgets/text_area.py:147
 #: src/widgets/text_file_area.py:162 src/views/certificate_parser.py:60
 msgid "Cannot open more than one file"
-msgstr "Невозможно открыть более одного файла"
+msgstr ""
 
 #: src/widgets/image_area.py:123
 msgid "Opening image..."
-msgstr "Открыть изображение..."
+msgstr ""
 
 #: src/widgets/image_area.py:130 src/widgets/text_area.py:184
 #: src/widgets/text_file_area.py:207 src/views/certificate_parser.py:81
 msgid "Open File"
-msgstr "Открыть файл"
+msgstr "Ldi afaylu"
 
 #: src/widgets/image_area.py:131 src/widgets/text_area.py:185
 #: src/widgets/text_file_area.py:208 src/views/certificate_parser.py:82
@@ -381,35 +358,35 @@ msgstr "Открыть файл"
 #: src/ui/widgets/text_file_area.blp:70 src/ui/views/certificate_parser.blp:51
 #: src/ui/views/certificate_request_generator.blp:117
 msgid "Open"
-msgstr "Открыть"
+msgstr "Ldi"
 
 #: src/widgets/image_area.py:140
 msgid "Supported Image Formats"
-msgstr "Поддерживаемые форматы изображений"
+msgstr ""
 
 #: src/widgets/image_area.py:173
 msgid "Saving image..."
-msgstr "Сохранить изображение..."
+msgstr ""
 
 #: src/widgets/image_area.py:180 src/widgets/text_file_area.py:328
 #: src/views/image_converter.py:51 src/views/qrcode_generator.py:183
 msgid "Save file as"
-msgstr "Сохранить файл как"
+msgstr ""
 
 #: src/widgets/image_area.py:181 src/widgets/text_file_area.py:329
 #: src/views/certificate_request_generator.py:215
 #: src/views/image_converter.py:52 src/views/qrcode_generator.py:184
 #: src/ui/widgets/image_area.blp:72 src/ui/widgets/text_file_area.blp:83
 msgid "Save"
-msgstr "Сохранить"
+msgstr "Sekles"
 
 #: src/widgets/text_area.py:194 src/widgets/text_file_area.py:230
 msgid "Text files"
-msgstr "Текстовые файлы"
+msgstr "Ifuyla n uḍris"
 
 #: src/widgets/text_area.py:201 src/widgets/text_file_area.py:243
 msgid "Accepted files"
-msgstr "Допустимые файлы"
+msgstr ""
 
 #: src/widgets/text_area.py:222
 #, python-brace-format
@@ -417,38 +394,36 @@ msgid ""
 "Loading a large file ({size})\n"
 "Might take a while, please wait..."
 msgstr ""
-"Загрузка большого файла ({size})\n"
-"Это может занять некоторое время, пожалуйста, подождите..."
 
 #: src/widgets/text_area.py:230 src/widgets/text_file_area.py:280
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr "Невозможно открыть {file_path}: {file_content}."
+msgstr ""
 
 #: src/widgets/text_area.py:246
 msgid "File is not UTF-8 encoded."
-msgstr "Файл не в кодировке UTF-8."
+msgstr ""
 
 #: src/widgets/text_file_area.py:217
 msgid "All files"
-msgstr "Все файлы"
+msgstr "Akk ifuyla"
 
 #: src/widgets/text_file_area.py:224
 msgid "Text files and images"
-msgstr "Текстовые файлы и изображения"
+msgstr ""
 
 #: src/widgets/text_file_area.py:236
 msgid "Images"
-msgstr "Изображения"
+msgstr "Tugniwin"
 
 #: src/widgets/text_file_area.py:321
 msgid "Saving file..."
-msgstr "Сохранение файла..."
+msgstr ""
 
 #: src/widgets/text_file_area.py:360
 #, python-brace-format
 msgid "Unable to save {path}"
-msgstr "Невозможно сохранить {path}"
+msgstr ""
 
 #: src/views/base64_encoder.py:51 src/views/certificate_parser.py:60
 #: src/views/certificate_parser.py:65
@@ -458,183 +433,177 @@ msgstr "Невозможно сохранить {path}"
 #: src/views/url_encoder.py:63
 #, python-brace-format
 msgid "Error: {error}"
-msgstr "Ошибка: {error}"
+msgstr ""
 
 #: src/views/certificate_parser.py:65
 msgid "Unsupported file"
-msgstr "Неподдерживаемый файл"
+msgstr ""
 
 #: src/views/certificate_parser.py:102 src/views/reverse_cron.py:180
 #: src/ui/views/certificate_parser.blp:100 src/ui/views/reverse_cron.blp:39
 msgid "Expand All"
-msgstr "Развернуть всё"
+msgstr ""
 
 #: src/views/certificate_parser.py:106 src/views/reverse_cron.py:184
 msgid "Collapse All"
-msgstr "Свернуть всё"
+msgstr ""
 
 #: src/views/certificate_parser.py:145
 msgid "Error: Cannot open this file because it is not a valid certificate."
 msgstr ""
-"Ошибка: Невозможно открыть этот файл, потому что это недействительный "
-"сертификат."
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:153
 #, python-brace-format
 msgid "Identity: {identity}"
-msgstr "Подлинность: {identity}"
+msgstr ""
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:155
 #, python-brace-format
 msgid "Verified by: {verified_by}"
-msgstr "Проверен: {verified_by}"
+msgstr ""
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:157
 #, python-brace-format
 msgid "Expires: {expiration_date}"
-msgstr "Истекает: {expiration_date}"
+msgstr ""
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:163
 msgid "Basic Constraints"
-msgstr "Основные ограничения"
+msgstr ""
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:164
 msgid "Extended Key Usage"
-msgstr "Расширенное использование ключа"
+msgstr ""
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:165 src/views/certificate_parser.py:210
 msgid "Subject Key Identifier"
-msgstr "Идентификатор ключа субъекта"
+msgstr ""
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:166
 msgid "Key Usage"
-msgstr "Использование ключа"
+msgstr ""
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:167
 msgid "Subject Alternative Names"
-msgstr "Альтернативные имена субъекта"
+msgstr ""
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:171
 msgid "Extension"
-msgstr "Расширение"
+msgstr ""
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:211
 msgid "Certificate Fingerprints"
-msgstr "Отпечатки сертификата"
+msgstr ""
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:214
 msgid "Key Identifier"
-msgstr "Идентификатор ключа полномочий"
+msgstr ""
 
 #: src/views/certificate_request_generator.py:40
 msgid "Open CSR"
-msgstr "Открыть CSR"
+msgstr "Ldi CSR"
 
 #: src/views/certificate_request_generator.py:81
 msgid "Open Key File"
-msgstr "Открыть файл ключа"
+msgstr ""
 
 #: src/views/certificate_request_generator.py:88
 msgid "All Files"
-msgstr "Все файлы"
+msgstr "Akk ifuyla"
 
 #: src/views/certificate_request_generator.py:145
 msgid "Select save location"
-msgstr "Выберите путь для сохранения"
+msgstr ""
 
 #: src/views/certificate_request_generator.py:146
 #: src/ui/views/certificate_request_generator.blp:163
 msgid "Choose"
-msgstr "Выбрать"
+msgstr "Fren"
 
 #: src/views/certificate_request_generator.py:197
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:63
 #: src/views/image_converter.py:41 src/views/qrcode_generator.py:201
 msgid "Saved Successfully"
-msgstr "Сохранено успешно"
+msgstr ""
 
 #: src/views/certificate_request_generator.py:214
 msgid "Save key as"
-msgstr "Сохранить ключ как"
+msgstr ""
 
 #: src/views/chmod_calculator.py:30
 msgid "Invalid value. Please check again"
-msgstr "Недопустимое значение. Пожалуйста, проверьте ещё раз"
+msgstr ""
 
 #: src/views/colorblindness_simulator.py:26 src/views/image_converter.py:24
 #: src/views/qrcode_generator.py:43
 msgid "Open Image"
-msgstr "Открыть изображение"
+msgstr "Ldi tugna"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
 #: src/views/colorblindness_simulator.py:98
 msgid "Loading simulation..."
-msgstr "Загрузка симуляции..."
+msgstr ""
 
 #: src/views/formatter.py:76
 msgid ""
 "Text is not in the correct format. Check if you misspelled something or if "
 "all parentheses are closed."
 msgstr ""
-"Текст имеет неправильный формат. Проверьте, не ошиблись ли вы в чём-то или "
-"закрыты ли все скобки."
 
 #: src/views/gzip_compressor.py:28
 msgid "Open image"
-msgstr "Открыть изображение"
+msgstr ""
 
 #: src/views/gzip_compressor.py:31
 msgid "Cannot decompress from an image or a file"
-msgstr "Невозможно распаковать изображение или файл"
+msgstr ""
 
 #: src/views/gzip_compressor.py:134
 msgid "Please save this file to view its contents"
-msgstr "Пожалуйста, сохраните этот файл, чтобы просмотреть его содержимое"
+msgstr ""
 
 #: src/views/hash_generator.py:165
 msgid "Hashes match!"
-msgstr "Хэши совпадают!"
+msgstr ""
 
 #: src/views/hash_generator.py:167
 msgid "The integrity is verified."
-msgstr "Целостность проверена."
+msgstr ""
 
 #: src/views/hash_generator.py:175
 msgid "Warning, integrity cannot be verified!"
-msgstr "Внимание, целостность не может быть проверена!"
+msgstr ""
 
 #: src/views/hash_generator.py:177
 msgid ""
 "The calculated hash and the provided one do not match. Check again and if "
 "this is a file you downloaded from the Internet re-download it."
 msgstr ""
-"Вычисленный и предоставленный хэши не совпадают. Проверьте ещё раз и, если "
-"это файл загружен из Интернета, скачайте его повторно."
 
 #: src/views/json_validator.py:77 src/views/xml_validator.py:76
 msgid "Valid!"
-msgstr "Действительный!"
+msgstr ""
 
 #: src/views/json_validator.py:79
 msgid "JSON is compliant with the provided JSON schema."
-msgstr "JSON соответствует предоставленной JSON-схеме."
+msgstr ""
 
 #: src/views/json_validator.py:87 src/views/json_validator.py:97
 #: src/views/xml_validator.py:86
 msgid "Invalid!"
-msgstr "Недействительный!"
+msgstr ""
 
 #: src/views/json_validator.py:89
 #, python-brace-format
@@ -642,8 +611,6 @@ msgid ""
 "JSON is not compliant with the provided JSON scheme:\n"
 "{validation_error}"
 msgstr ""
-"JSON не соответствует предоставленной JSON-схеме:\n"
-"{validation_error}"
 
 #: src/views/json_validator.py:99
 #, python-brace-format
@@ -651,151 +618,149 @@ msgid ""
 "Error in JSON schema:\n"
 "{schema_error}"
 msgstr ""
-"Ошибка в JSON-схеме:\n"
-"{schema_error}"
 
 #: src/views/qrcode_generator.py:71 src/ui/views/qrcode_generator.blp:113
 #: src/ui/views/qrcode_generator.blp:122
 msgid "Not Set"
-msgstr "Не задано"
+msgstr ""
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
 msgid "st"
-msgstr "-ое"
+msgstr ""
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:210
 msgid "nd"
-msgstr "-ое"
+msgstr ""
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:213
 msgid "rd"
-msgstr "-е"
+msgstr ""
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:216
 msgid "th"
-msgstr "-е"
+msgstr ""
 
 #: src/views/reverse_cron.py:240 src/views/reverse_cron.py:354
 #: src/ui/views/reverse_cron.blp:410 src/ui/views/reverse_cron.blp:467
 #: src/ui/views/reverse_cron.blp:495
 msgid "January"
-msgstr "Январь"
+msgstr "Yennayer"
 
 #: src/views/reverse_cron.py:241 src/views/reverse_cron.py:355
 #: src/ui/views/reverse_cron.blp:411 src/ui/views/reverse_cron.blp:468
 #: src/ui/views/reverse_cron.blp:496
 msgid "February"
-msgstr "Февраль"
+msgstr "Fuṛar"
 
 #: src/views/reverse_cron.py:242 src/views/reverse_cron.py:356
 #: src/ui/views/reverse_cron.blp:412 src/ui/views/reverse_cron.blp:469
 #: src/ui/views/reverse_cron.blp:497
 msgid "March"
-msgstr "Март"
+msgstr "Meɣres"
 
 #: src/views/reverse_cron.py:243 src/views/reverse_cron.py:357
 #: src/ui/views/reverse_cron.blp:413 src/ui/views/reverse_cron.blp:470
 #: src/ui/views/reverse_cron.blp:498
 msgid "April"
-msgstr "Апрель"
+msgstr "Yebrir"
 
 #: src/views/reverse_cron.py:244 src/views/reverse_cron.py:358
 #: src/ui/views/reverse_cron.blp:414 src/ui/views/reverse_cron.blp:471
 #: src/ui/views/reverse_cron.blp:499
 msgid "May"
-msgstr "Май"
+msgstr "Mayyu"
 
 #: src/views/reverse_cron.py:245 src/views/reverse_cron.py:359
 #: src/ui/views/reverse_cron.blp:415 src/ui/views/reverse_cron.blp:472
 #: src/ui/views/reverse_cron.blp:500
 msgid "June"
-msgstr "Июнь"
+msgstr "Yunyu"
 
 #: src/views/reverse_cron.py:246 src/views/reverse_cron.py:360
 #: src/ui/views/reverse_cron.blp:416 src/ui/views/reverse_cron.blp:473
 #: src/ui/views/reverse_cron.blp:501
 msgid "July"
-msgstr "Июль"
+msgstr "Yulyu"
 
 #: src/views/reverse_cron.py:247 src/views/reverse_cron.py:361
 #: src/ui/views/reverse_cron.blp:417 src/ui/views/reverse_cron.blp:474
 #: src/ui/views/reverse_cron.blp:502
 msgid "August"
-msgstr "Август"
+msgstr "Ɣuct"
 
 #: src/views/reverse_cron.py:248 src/views/reverse_cron.py:362
 #: src/ui/views/reverse_cron.blp:418 src/ui/views/reverse_cron.blp:475
 #: src/ui/views/reverse_cron.blp:503
 msgid "September"
-msgstr "Сентябрь"
+msgstr "Cṭembeṛ"
 
 #: src/views/reverse_cron.py:249 src/views/reverse_cron.py:363
 #: src/ui/views/reverse_cron.blp:419 src/ui/views/reverse_cron.blp:476
 #: src/ui/views/reverse_cron.blp:504
 msgid "October"
-msgstr "Октябрь"
+msgstr "Tubeṛ"
 
 #: src/views/reverse_cron.py:250 src/views/reverse_cron.py:364
 #: src/ui/views/reverse_cron.blp:420 src/ui/views/reverse_cron.blp:477
 #: src/ui/views/reverse_cron.blp:505
 msgid "November"
-msgstr "Ноябрь"
+msgstr "Wambeṛ"
 
 #: src/views/reverse_cron.py:251 src/views/reverse_cron.py:365
 #: src/ui/views/reverse_cron.blp:421 src/ui/views/reverse_cron.blp:478
 #: src/ui/views/reverse_cron.blp:506
 msgid "December"
-msgstr "Декабрь"
+msgstr "Duǧembeṛ"
 
 #: src/views/reverse_cron.py:376 src/ui/views/reverse_cron.blp:570
 #: src/ui/views/reverse_cron.blp:649 src/ui/views/reverse_cron.blp:685
 #: src/ui/views/reverse_cron.blp:708
 msgid "Sunday"
-msgstr "Воскресенье"
+msgstr "Acer"
 
 #: src/views/reverse_cron.py:377 src/ui/views/reverse_cron.blp:564
 #: src/ui/views/reverse_cron.blp:595 src/ui/views/reverse_cron.blp:679
 #: src/ui/views/reverse_cron.blp:702
 msgid "Monday"
-msgstr "Понедельник"
+msgstr "Arim"
 
 #: src/views/reverse_cron.py:378 src/ui/views/reverse_cron.blp:565
 #: src/ui/views/reverse_cron.blp:604 src/ui/views/reverse_cron.blp:680
 #: src/ui/views/reverse_cron.blp:703
 msgid "Tuesday"
-msgstr "Вторник"
+msgstr "Aram"
 
 #: src/views/reverse_cron.py:379 src/ui/views/reverse_cron.blp:566
 #: src/ui/views/reverse_cron.blp:613 src/ui/views/reverse_cron.blp:681
 #: src/ui/views/reverse_cron.blp:704
 msgid "Wednesday"
-msgstr "Среда"
+msgstr "Ahad"
 
 #: src/views/reverse_cron.py:380 src/ui/views/reverse_cron.blp:567
 #: src/ui/views/reverse_cron.blp:622 src/ui/views/reverse_cron.blp:682
 #: src/ui/views/reverse_cron.blp:705
 msgid "Thursday"
-msgstr "Четверг"
+msgstr "Amhad"
 
 #: src/views/reverse_cron.py:381 src/ui/views/reverse_cron.blp:568
 #: src/ui/views/reverse_cron.blp:631 src/ui/views/reverse_cron.blp:683
 #: src/ui/views/reverse_cron.blp:706
 msgid "Friday"
-msgstr "Пятница"
+msgstr "Sem"
 
 #: src/views/reverse_cron.py:382 src/ui/views/reverse_cron.blp:569
 #: src/ui/views/reverse_cron.blp:640 src/ui/views/reverse_cron.blp:684
 #: src/ui/views/reverse_cron.blp:707
 msgid "Saturday"
-msgstr "Суббота"
+msgstr "Sed"
 
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
-msgstr "XML соответствует предоставленной XSD-схеме."
+msgstr ""
 
 #: src/views/xml_validator.py:88
 #, python-brace-format
@@ -803,157 +768,150 @@ msgid ""
 "XML is not compliant with the provided XSD scheme:\n"
 "{xsd_error}"
 msgstr ""
-"XML не соответствует предоставленной XSD-схеме:\n"
-"{xsd_error}"Use the web editor or the command line to resolve conflicts before continuing.
 
 #: src/ui/window.blp:56
 msgid "Show/hide searchbar"
-msgstr "Показать/скрыть поиск"
+msgstr ""
 
 #: src/ui/window.blp:62
 msgid "Favorite Tools"
-msgstr "Избранные инструменты"
+msgstr ""
 
 #: src/ui/window.blp:72
 msgid "No Favorites"
-msgstr "Нет избранных"
+msgstr ""
 
 #: src/ui/window.blp:73
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
 msgstr ""
-"Добавляйте инструменты в избранное, нажимая на звёздочку рядом с названием"
 
 #: src/ui/window.blp:92
 msgid "Favorites"
-msgstr "Избранное"
+msgstr ""
 
 #: src/ui/window.blp:121
 msgid "Search Tools…"
-msgstr "Поиск инструментов…"
+msgstr "Ifecka n unadi…"
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
-msgstr "Показать/скрыть боковую панель"
+msgstr ""
 
 #: src/ui/window.blp:186
 msgid "_Keyboard Shortcuts"
-msgstr "_Комбинации клавиш"
+msgstr ""
 
 #: src/ui/window.blp:191
 msgid "_About Dev Toolbox"
-msgstr "_О Dev Toolbox"
+msgstr ""
 
 #: src/ui/about_dialog.blp:10
 msgid ""
 "Copyright © 2022 - 2024 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
-"Copyright © 2022 - 2024 Alessandro Iepure\n"
-"Некоторые значки являются собственностью проекта GNOME"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
 #: src/ui/about_dialog.blp:18
 msgid "translator-credits"
-msgstr ""
-"Finnever https://github.com/MrFinnever\n"
-"Sultaniiazov David <x1z53@alt-gnome.ru>"
+msgstr "Athmane MOKRAOUI <butterflyoffire@protonmail.com>, 2025"
 
 #: src/ui/widgets/date_area.blp:39 src/ui/views/timestamp.blp:42
 msgid "Now"
-msgstr "Сейчас"
+msgstr "Tura"
 
 #: src/ui/widgets/date_area.blp:40
 msgid "Sets the current system date and time"
-msgstr "Устанавливает текущую системную дату и время"
+msgstr ""
 
 #: src/ui/widgets/date_area.blp:55 src/ui/widgets/entry_row.blp:30
 #: src/ui/widgets/spin_area.blp:68 src/ui/widgets/text_area.blp:66
 #: src/ui/widgets/text_file_area.blp:106
 msgid "Copy to clipboard"
-msgstr "Скопировать в буфер обмена"
+msgstr ""
 
 #: src/ui/widgets/date_area.blp:79
 msgid "Year"
-msgstr "Год"
+msgstr "Aseggas"
 
 #: src/ui/widgets/date_area.blp:110 src/ui/views/reverse_cron.blp:362
 msgid "Month"
-msgstr "Месяц"
+msgstr "Ayyur"
 
 #: src/ui/widgets/date_area.blp:140 src/ui/views/reverse_cron.blp:250
 msgid "Day"
-msgstr "День"
+msgstr "Ass"
 
 #: src/ui/widgets/date_area.blp:176 src/ui/views/reverse_cron.blp:147
 msgid "Hours"
-msgstr "Час"
+msgstr "Isragen"
 
 #: src/ui/widgets/date_area.blp:207 src/ui/views/reverse_cron.blp:44
 msgid "Minutes"
-msgstr "Минуты"
+msgstr ""
 
 #: src/ui/widgets/date_area.blp:237
 msgid "Seconds"
-msgstr "Секунды"
+msgstr "Tasinin"
 
 #: src/ui/widgets/entry_row.blp:20
 msgid "Generate again"
-msgstr "Сгенерировать снова"
+msgstr ""
 
 #: src/ui/widgets/entry_row.blp:40 src/ui/widgets/spin_area.blp:79
 #: src/ui/widgets/text_area.blp:73 src/ui/widgets/text_file_area.blp:117
 msgid "Paste clipboard"
-msgstr "Вставить из буфера обмена"
+msgstr ""
 
 #: src/ui/widgets/entry_row.blp:51 src/ui/widgets/image_area.blp:95
 #: src/ui/widgets/text_area.blp:80 src/ui/widgets/text_file_area.blp:128
 msgid "Clear input"
-msgstr "Удалить"
+msgstr ""
 
 #: src/ui/widgets/image_area.blp:84 src/ui/widgets/text_file_area.blp:95
 msgid "Open image in another program"
-msgstr "Открыть изображение в другой программе"
+msgstr ""
 
 #: src/ui/widgets/theme_switcher.blp:29
 msgid "Follow system style"
-msgstr "Как в системе"
+msgstr ""
 
 #: src/ui/widgets/theme_switcher.blp:43
 msgid "Light style"
-msgstr "Светлая тема"
+msgstr ""
 
 #: src/ui/widgets/theme_switcher.blp:57
 msgid "Dark style"
-msgstr "Тёмная тема"
+msgstr ""
 
 #: src/ui/widgets/webview_area.blp:51
 msgid "Open web page in another browser"
-msgstr "Открыть веб-страницу в другом браузере"
+msgstr ""
 
 #: src/ui/views/base_converter.blp:19
 msgid "Number Bases Converter"
-msgstr "Конвертер систем счисления"
+msgstr ""
 
 #: src/ui/views/base_converter.blp:30
 msgid "Input numbers"
-msgstr "Введите числа"
+msgstr ""
 
 #: src/ui/views/base_converter.blp:33
 msgid "Decimal"
-msgstr "Десятичное"
+msgstr ""
 
 #: src/ui/views/base_converter.blp:41
 msgid "Binary"
-msgstr "Двоичное"
+msgstr ""
 
 #: src/ui/views/base_converter.blp:49
 msgid "Octal"
-msgstr "Восьмеричное"
+msgstr ""
 
 #: src/ui/views/base_converter.blp:57
 msgid "Hexadecimal"
-msgstr "Шестнадцатеричное"
+msgstr ""
 
 #: src/ui/views/base_converter.blp:65
 msgid "ASCII"
@@ -968,16 +926,14 @@ msgid ""
 "Typing an unaccepted character (i.e. 'A' in the decimal field) will cause "
 "all the fields to reset to 0."
 msgstr ""
-"Ввод недопустимого символа (например, «А» в десятичном поле) приведёт к "
-"сбросу всех полей в 0."
 
 #: src/ui/views/base64_encoder.blp:19
 msgid "Base64 Encoder & Decoder"
-msgstr "Кодировщик и декодировщик Base64"
+msgstr ""
 
 #: src/ui/views/base64_encoder.blp:20
 msgid "Encode and decode strings using the Base64 format"
-msgstr "Кодирует и декодирует специальные символы, используя формат Base64"
+msgstr ""
 
 #: src/ui/views/base64_encoder.blp:30 src/ui/views/certificate_parser.blp:30
 #: src/ui/views/colorblindness_simulator.blp:31
@@ -989,249 +945,247 @@ msgstr "Кодирует и декодирует специальные симв
 #: src/ui/views/text_inspector.blp:31 src/ui/views/timestamp.blp:30
 #: src/ui/views/url_encoder.blp:30 src/ui/views/uuid_generator.blp:31
 msgid "Tool options"
-msgstr "Опции инструмента"
+msgstr ""
 
 #: src/ui/views/base64_encoder.blp:33 src/ui/views/gzip_compressor.blp:33
 #: src/ui/views/html_encoder.blp:33 src/ui/views/json_yaml.blp:33
 #: src/ui/views/url_encoder.blp:33
 msgid "Direction"
-msgstr "Направление"
+msgstr "Tanila"
 
 #: src/ui/views/base64_encoder.blp:34 src/ui/views/html_encoder.blp:34
 #: src/ui/views/url_encoder.blp:34
 msgid "Select the desired encoding direction"
-msgstr "Выберите желаемое направление кодирования"
+msgstr ""
 
 #: src/ui/views/base64_encoder.blp:41 src/ui/views/html_encoder.blp:43
 #: src/ui/views/url_encoder.blp:43
 msgid "Encode"
-msgstr "Кодировать"
+msgstr ""
 
 #: src/ui/views/base64_encoder.blp:45 src/ui/views/html_encoder.blp:47
 #: src/ui/views/url_encoder.blp:47
 msgid "Decode"
-msgstr "Декодировать"
+msgstr ""
 
 #: src/ui/views/base64_encoder.blp:51
 msgid "URL Safe"
-msgstr "URL-безопасный режим"
+msgstr ""
 
 #: src/ui/views/base64_encoder.blp:52
 msgid "Use URL safe Base64 processing"
-msgstr "Используйте URL-безопасную обработку Base64"
+msgstr ""
 
 #: src/ui/views/base64_encoder.blp:68 src/ui/views/gzip_compressor.blp:63
 #: src/ui/views/hash_generator.blp:83 src/ui/views/html_encoder.blp:64
 #: src/ui/views/json_yaml.blp:76 src/ui/views/url_encoder.blp:84
 msgid "Input"
-msgstr "Ввод"
+msgstr ""
 
 #: src/ui/views/base64_encoder.blp:80 src/ui/views/gzip_compressor.blp:73
 #: src/ui/views/hash_generator.blp:92 src/ui/views/html_encoder.blp:77
 #: src/ui/views/json_yaml.blp:88 src/ui/views/url_encoder.blp:95
 msgid "Output"
-msgstr "Вывод"
+msgstr ""
 
 #: src/ui/views/certificate_parser.blp:33
 msgid "Certificate"
-msgstr "Сертификат"
+msgstr "Aselkin"
 
 #: src/ui/views/certificate_parser.blp:34
 msgid "Open a certificate file (pem, der, cer extensions)"
-msgstr "Откройте файл сертификата (расширения pem, der, cer)"
+msgstr ""
 
 #: src/ui/views/certificate_parser.blp:79
 msgid "Open a certificate file to view its contents."
-msgstr "Откройте файл сертификата, чтобы просмотреть его содержимое."
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:22
 msgid "Certificate Signing Request Generator"
-msgstr "Генератор запросов на подпись сертификата"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:34
 msgid "Fill the information below"
-msgstr "Заполните информацию ниже"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:35
 msgid ""
 "Fill at least the required fields then press the 'Create CSR' button. An "
 "empty passphrase will generate an unecrypted CSR."
 msgstr ""
-"Заполните как минимум обязательные поля и нажмите кнопку «Создать CSR». "
-"Пустая парольная фраза создаст незашифрованный CSR."
 
 #: src/ui/views/certificate_request_generator.blp:46
 msgid "Create CSR"
-msgstr "Создать CSR"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:52
 msgid "Common Name (CN) *"
-msgstr "Имя (CN) *"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:56
 msgid "Country Name (C)"
-msgstr "Страна (C)"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:60
 msgid "State or Province Name (ST)"
-msgstr "Область или край (ST)"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:64
 msgid "Locality Name (L)"
-msgstr "Населённый пункт (L)"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:68
 msgid "Organization Name (O)"
-msgstr "Название организации (O)"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:72
 msgid "Organization Unit Name (OU)"
-msgstr "Отдел (OU)"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:76
 msgid "Passphrase"
-msgstr "Парольная фраза"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:80
 msgid "Key"
-msgstr "Ключ"
+msgstr "Tasarut"
 
 #: src/ui/views/certificate_request_generator.blp:81
 msgid "Generate a new key or use and existing one"
-msgstr "Создать новый ключ или использовать существующий"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:88
 msgid "New"
-msgstr "Новый"
+msgstr "Amaynut"
 
 #: src/ui/views/certificate_request_generator.blp:92
 msgid "Existing"
-msgstr "Существующий"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:98
 msgid "Key File *"
-msgstr "Файл с ключом *"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:99
 msgid "Open the file containing the key you want to use"
-msgstr "Откройте файл, содержащий ключ, который вы хотите использовать"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:124
 msgid "Key Size"
-msgstr "Размер ключа"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:125
 msgid "Size of the new key. It will be saved on the same path as the CSR."
-msgstr "Размер нового ключа. Он будет сохранён по тому же пути, что и CSR."
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:134
 msgid "2048 bits"
-msgstr "2048 бит"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:138
 msgid "4096 bits"
-msgstr "4096 бит"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:144
 msgid "Key Save Location *"
-msgstr "Путь сохранения ключа *"
+msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:145
 msgid "Save location for the generated key file"
-msgstr "Расположение сгенерированного файла ключа"
+msgstr ""
 
 #: src/ui/views/chmod_calculator.blp:33
 msgid "Permissions"
-msgstr "Права доступа"
+msgstr "Tasirag"
 
 #: src/ui/views/chmod_calculator.blp:45
 msgid "Owner"
-msgstr "Владелец"
+msgstr ""
 
 #: src/ui/views/chmod_calculator.blp:58
 msgid "Group"
-msgstr "Группа"
+msgstr "Agraw"
 
 #: src/ui/views/chmod_calculator.blp:71
 msgid "Others"
-msgstr "Остальные"
+msgstr ""
 
 #: src/ui/views/chmod_calculator.blp:84
 msgid "Read"
-msgstr "Чтение"
+msgstr ""
 
 #: src/ui/views/chmod_calculator.blp:97
 msgid "Write"
-msgstr "Запись"
+msgstr "Tira"
 
 #: src/ui/views/chmod_calculator.blp:110
 msgid "Execute"
-msgstr "Исполнение"
+msgstr ""
 
 #: src/ui/views/chmod_calculator.blp:251
 msgid "Numeric value"
-msgstr "Числовое значение"
+msgstr ""
 
 #: src/ui/views/chmod_calculator.blp:263
 msgid "Symbolic value"
-msgstr "Символическое значение"
+msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:19
 msgid "Color Blindness Simulator"
-msgstr "Симулятор дальтонизма"
+msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:34
 msgid "Severity"
-msgstr "Тяжесть"
+msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:35
 msgid "Severity of the anomaly"
-msgstr "Степень тяжести аномалии"
+msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:72
 #: src/ui/views/text_inspector.blp:41
 msgid "Original"
-msgstr "Оригинал"
+msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:79
 msgid "Protanopia"
-msgstr "Протанопия"
+msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:90
 msgid "Deuteranopia"
-msgstr "Дойтеранопия"
+msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:95
 msgid "Tritanopia"
-msgstr "Тританопия"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:33 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
-msgstr "Цвет текста"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:34
 msgid "Color used for the text"
-msgstr "Цвет, используемый для текста"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:52 src/ui/views/contrast_checker.blp:65
 msgid "Background color"
-msgstr "Цвет фона"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:53
 msgid "Color used for the background"
-msgstr "Цвет, используемый для фона"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:77
 msgid "Example"
-msgstr "Пример"
+msgstr "Amedya"
 
 #: src/ui/views/contrast_checker.blp:89
 msgid "Lorem ipsum dolor sit amet"
-msgstr "Lorem ipsum dolor sit amet"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:97
 msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
-msgstr "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:118 src/ui/views/contrast_checker.blp:149
 msgid "AA"
@@ -1239,11 +1193,11 @@ msgstr "AA"
 
 #: src/ui/views/contrast_checker.blp:126 src/ui/views/contrast_checker.blp:188
 msgid "small"
-msgstr "маленький"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:157 src/ui/views/contrast_checker.blp:219
 msgid "large"
-msgstr "большой"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:180 src/ui/views/contrast_checker.blp:211
 msgid "AAA"
@@ -1251,189 +1205,178 @@ msgstr "AAA"
 
 #: src/ui/views/cron_converter.blp:34
 msgid "Number of dates"
-msgstr "Количество дат"
+msgstr ""
 
 #: src/ui/views/cron_converter.blp:35
 msgid "Number of dates to be generated (up to 20)"
-msgstr "Количество генерируемых дат (до 20)"
+msgstr ""
 
 #: src/ui/views/cron_converter.blp:47
 msgid "Output format"
-msgstr "Выходной формат"
+msgstr ""
 
 #: src/ui/views/cron_converter.blp:48
 msgid ""
 "Format used to display generated dates (<a href=\"https://strftime.org/"
 "\">python syntax</a>)"
 msgstr ""
-"Формат, используемый для отображения сгенерированных дат (<a href=\"https://"
-"strftime.org/\">синтаксис Python</a>)"
 
 #: src/ui/views/cron_converter.blp:76
 msgid "CRON expression"
-msgstr "CRON-выражение"
+msgstr ""
 
 #: src/ui/views/cron_converter.blp:89
 msgid "Dates"
-msgstr "Даты"
+msgstr ""
 
 #: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:52
 msgid "Indentations"
-msgstr "Отступы"
+msgstr ""
 
 #: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:53
 msgid "Number of spaces used for indentation"
-msgstr "Количество пробелов, используемых для отступов"
+msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:19
 msgid "GZip Compress & Decompress"
-msgstr "GZip сжатие и распаковка"
+msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:20
 msgid "Compress and decompress texts and images using GZip"
-msgstr "Сжимает и распаковывает тексты и изображения с помощью GZip"
+msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:34
 msgid "Select the desired operation"
-msgstr "Выберите нужную операцию"
+msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:43
 msgid "Compress"
-msgstr "Сжатие"
+msgstr "Tussda"
 
 #: src/ui/views/gzip_compressor.blp:47
 msgid "Decompress"
-msgstr "Распаковка"
+msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:105
 msgid ""
 "The compression result and the expected decompression input are base64 "
 "encoded."
 msgstr ""
-"Результат сжатия и ожидаемые входные данные распаковки закодированы в "
-"формате Base64."
 
 #: src/ui/views/gzip_compressor.blp:110
 msgid "May hang the app for large files, please wait."
 msgstr ""
-"Возможно, приложение зависает из-за больших файлов, пожалуйста, подождите."
 
 #: src/ui/views/hash_generator.blp:19
 msgid "Hash Generator & Checker"
-msgstr "Генератор и проверка хэша"
+msgstr ""
 
 #: src/ui/views/hash_generator.blp:34
 msgid "Hash to calculate"
-msgstr "Хэш для вычисления"
+msgstr ""
 
 #: src/ui/views/hash_generator.blp:35
 msgid "Choose the hash type to calculate"
-msgstr "Выберите тип хэша для расчёта"
+msgstr ""
 
 #: src/ui/views/hash_generator.blp:53
 msgid "Check for integrity"
-msgstr "Проверка на целостность"
+msgstr ""
 
 #: src/ui/views/hash_generator.blp:54
 msgid ""
 "If enabled the calculated hash will be checked against another provided hash "
 "to verify integrity"
 msgstr ""
-"Если эта опция включена, вычисленный хэш будет сверяться с другим "
-"предоставленным хэшем для проверки целостности"
 
 #: src/ui/views/hash_generator.blp:60
 msgid "Type the hash to check against"
-msgstr "Введите хэш для проверки"
+msgstr ""
 
 #: src/ui/views/html_encoder.blp:19
 msgid "HTML Encoder & Decoder"
-msgstr "Кодировщик и декодировщик HTML"
+msgstr ""
 
 #: src/ui/views/image_converter.blp:34
 msgctxt "noun"
 msgid "Format"
-msgstr "Формат"
+msgstr ""
 
 #: src/ui/views/image_converter.blp:35
 msgid "Select the desired output format"
-msgstr "Выберите желаемый формат вывода"
+msgstr ""
 
 #: src/ui/views/image_converter.blp:58
 msgid "Image"
-msgstr "Изображение"
+msgstr "Tugna"
 
 #: src/ui/views/image_converter.blp:60
 msgid "Convert"
-msgstr "Конвертировать"
+msgstr "Aselket"
 
 #: src/ui/views/image_converter.blp:64
 msgid "converted-image"
-msgstr "converted-image"
-
-#: src/ui/views/json_validator.blp:49
-msgid "JSON Schema"
-msgstr "Схема JSON"
+msgstr ""
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
-msgstr "JSON - YAML конвертер"
+msgstr ""
 
 #: src/ui/views/json_yaml.blp:34
 msgid "Specify what format is the input and the desired output"
-msgstr "Укажите формат ввода и желаемый вывод"
+msgstr ""
 
 #: src/ui/views/json_yaml.blp:42
 msgid "JSON → YAML"
-msgstr "JSON → YAML"
+msgstr ""
 
 #: src/ui/views/json_yaml.blp:46
 msgid "YAML → JSON"
-msgstr "YAML → JSON"
+msgstr ""
 
 #: src/ui/views/jwt_decoder.blp:19
 msgid "JWT tokens decoder"
-msgstr "Декодировщик токенов JWT"
+msgstr ""
 
 #: src/ui/views/jwt_decoder.blp:29
 msgid "Token"
-msgstr "Токен"
+msgstr ""
 
 #: src/ui/views/jwt_decoder.blp:47
 msgid "Header"
-msgstr "Заголовок"
+msgstr ""
 
 #: src/ui/views/jwt_decoder.blp:53
 msgid "Payload"
-msgstr "Полезные данные"
+msgstr ""
 
 #: src/ui/views/lorem_generator.blp:19
 msgid "Lorem Ipsum Generator"
-msgstr "Генератор Lorem Ipsum"
+msgstr ""
 
 #: src/ui/views/lorem_generator.blp:34
 msgid "Begin with \"Lorem ipsum dolor sit amet\""
-msgstr "Начинать с «Lorem ipsum dolor sit amet»"
+msgstr ""
 
 #: src/ui/views/lorem_generator.blp:40 src/ui/views/uuid_generator.blp:53
 msgid "Amount"
-msgstr "Количество"
+msgstr ""
 
 #: src/ui/views/lorem_generator.blp:54
 msgid "Words"
-msgstr "Слова"
+msgstr "Awalen"
 
 #: src/ui/views/lorem_generator.blp:55
 msgid "Sentences"
-msgstr "Предложения"
+msgstr ""
 
 #: src/ui/views/lorem_generator.blp:56
 msgid "Paragraphs"
-msgstr "Абзацы"
+msgstr "Tiseddarin"
 
 #: src/ui/views/lorem_generator.blp:69
 msgid "Generated text"
-msgstr "Сгенерированный текст"
+msgstr ""
 
 #: src/ui/views/markdown_preview.blp:35
 msgid "Markdown"
@@ -1441,111 +1384,111 @@ msgstr "Markdown"
 
 #: src/ui/views/markdown_preview.blp:49
 msgid "Preview"
-msgstr "Предпросмотр"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:19
 msgid "QR Code Generator"
-msgstr "Генератор QR-кодов"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:31 src/ui/views/reverse_cron.blp:31
 msgid "Tool Options"
-msgstr "Опции инструмента"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:32
 msgid "Fill the required information and press 'generate'"
-msgstr "Заполните необходимую информацию и нажмите «Сгенерировать»"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:35
 msgid "Content type"
-msgstr "Тип содержимого"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:36
 msgid "Choose the content of the QR Code"
-msgstr "Выберите содержимое QR-кода"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:41 src/ui/views/qrcode_generator.blp:49
 msgid "Text/URL"
-msgstr "Tекст/URL-адрес"
+msgstr "Aḍris/URL"
 
 #: src/ui/views/qrcode_generator.blp:42
 msgid "WiFi Network"
-msgstr "Сеть Wi-Fi"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:43
 msgid "Contact"
-msgstr "Контакт"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:56
 msgid "Network Name (SSID)"
-msgstr "Имя сети (SSID)"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:63
 msgid "Network Encryption"
-msgstr "Сетевое шифрование"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:70
 msgid "None"
-msgstr "Нет"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:76
 msgid "Network Password"
-msgstr "Сетевой пароль"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:80
 msgid "First Name *"
-msgstr "Имя *"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:87
 msgid "Last Name *"
-msgstr "Фамилия *"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:94
 msgid "Phone Number"
-msgstr "Номер телефона"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:101
 msgid "Email"
-msgstr "Электронная почта"
+msgstr "Imayl"
 
 #: src/ui/views/qrcode_generator.blp:108
 msgid "Birthday"
-msgstr "День рождения"
+msgstr "Amulli"
 
 #: src/ui/views/qrcode_generator.blp:127
 msgid "Select from calendar:"
-msgstr "Выбрать из календаря:"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:138
 msgid "URL"
-msgstr "URL-адрес"
+msgstr "URL"
 
 #: src/ui/views/qrcode_generator.blp:145
 msgid "Address"
-msgstr "Адрес"
+msgstr "Tansa"
 
 #: src/ui/views/qrcode_generator.blp:148
 msgid "Street"
-msgstr "Улица"
+msgstr "Azniq"
 
 #: src/ui/views/qrcode_generator.blp:155
 msgid "City"
-msgstr "Город"
+msgstr "Tiɣremt"
 
 #: src/ui/views/qrcode_generator.blp:162
 msgid "State"
-msgstr "Область (штат)"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:169
 msgid "ZIP Code"
-msgstr "Почтовый индекс"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:176
 msgid "Country"
-msgstr "Страна"
+msgstr "Tamurt"
 
 #: src/ui/views/qrcode_generator.blp:186
 msgid "Generated QR Code"
-msgstr "Сгенерированный QR-код"
+msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:193
 msgid "qr-code.png"
@@ -1553,88 +1496,87 @@ msgstr "qr-code.png"
 
 #: src/ui/views/qrcode_generator.blp:195
 msgid "Generate"
-msgstr "Сгенерировать"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:19
 msgid "Random Generator"
-msgstr "Случайный генератор"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:30
 msgid "String"
-msgstr "Строка"
+msgstr "Azrir"
 
 #: src/ui/views/random_generator.blp:31
 msgid "Generate a random string with the given options. ASCII characters only."
 msgstr ""
-"Генерирует случайную строку с заданными параметрами. Только символы ASCII."
 
 #: src/ui/views/random_generator.blp:34
 msgid "Length"
-msgstr "Длина"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:35
 msgid "Length of the generated string"
-msgstr "Длина сгенерированной строки"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:47
 msgid "Uppercase letters (A-Z)"
-msgstr "Прописные буквы (A-Z)"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:53
 msgid "Lowercase letters (a-z)"
-msgstr "Строчные буквы (a-z)"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:59
 msgid "Numbers (0-9)"
-msgstr "Числа (0-9)"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:65
 msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
-msgstr "Специальные символы (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:75
 msgid "Generated string"
-msgstr "Сгенерированная строка"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:92
 msgid "Number"
-msgstr "Число"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:93
 msgid "Generate a random number in the given range"
-msgstr "Генерирует случайное число в заданном диапазоне"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:96
 msgid "Minimum"
-msgstr "Минимум"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:97
 msgid "Minimum value of the generated number"
-msgstr "Минимальное число, которое может быть сгенерировано"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:109
 msgid "Maximum"
-msgstr "Максимум"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:110
 msgid "Maximum value of the generated number"
-msgstr "Максимальное число, которое может быть сгенерировано"
+msgstr ""
 
 #: src/ui/views/random_generator.blp:159
 msgid "Generated number"
-msgstr "Сгенерированное число"
+msgstr ""
 
 #: src/ui/views/regex_tester.blp:19
 msgid "Regular Expression Tester"
-msgstr "Проверка регулярных выражений"
+msgstr ""
 
 #: src/ui/views/regex_tester.blp:37
 msgid "Regex to test"
-msgstr "Выражение для проверка"
+msgstr ""
 
 #: src/ui/views/reverse_cron.blp:58
 msgid "Every minute"
-msgstr "Каждую минуту"
+msgstr ""
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
@@ -1645,178 +1587,168 @@ msgstr "Каждую минуту"
 #: src/ui/views/reverse_cron.blp:277 src/ui/views/reverse_cron.blp:389
 #: src/ui/views/reverse_cron.blp:543
 msgid "Every"
-msgstr "Каждую"
+msgstr ""
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #: src/ui/views/reverse_cron.blp:82
 msgid "minute(s) starting at minute"
-msgstr "минуту(ы) начиная с минуты"
+msgstr ""
 
 #: src/ui/views/reverse_cron.blp:101
 msgid "Specific minute (choose one or many, no selection means every minute)"
 msgstr ""
-"Конкретная минута (выберите одну или несколько, отсутствие выбора означает "
-"каждую минуту)"
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:122
 msgid "Every minute between minute"
-msgstr "Каждую минуту между минутой"
+msgstr ""
 
 #. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:133
 msgid "and minute"
-msgstr "и минутой"
+msgstr ""
 
 #: src/ui/views/reverse_cron.blp:161
 msgid "Every hour"
-msgstr "Каждый час"
+msgstr ""
 
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
 #: src/ui/views/reverse_cron.blp:185
 msgid "hour(s) starting at hour"
-msgstr "час(ы), начиная с часа"
+msgstr ""
 
 #: src/ui/views/reverse_cron.blp:204
 msgid "Specific hour (choose one or many, no selection means every hour)"
 msgstr ""
-"Конкретный час (выберите один или несколько, отсутствие выбора означает "
-"каждый час)"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:225
 msgid "Every hour between hour"
-msgstr "Каждый час между часом"
+msgstr ""
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:236
 msgid "and hour"
-msgstr "и часом"
+msgstr ""
 
 #: src/ui/views/reverse_cron.blp:264
 msgid "Every day"
-msgstr "Каждый день"
+msgstr ""
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:288
 msgid "day(s) starting on the"
-msgstr "день (дни), начиная с"
+msgstr ""
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:299
 msgid "of the month"
-msgstr "числа месяца"
+msgstr ""
 
 #: src/ui/views/reverse_cron.blp:316
 msgid ""
 "Specific day of month (choose one or many, no selection means every day)"
 msgstr ""
-"Конкретный день месяца (выберите один или несколько, отсутствие выбора "
-"означает каждый день)"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:337
 msgid "Every day between the"
-msgstr "Каждый день между"
+msgstr ""
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:348
 msgid "and the"
-msgstr "днём и"
+msgstr ""
 
 #: src/ui/views/reverse_cron.blp:376
 msgid "Every month"
-msgstr "Каждый месяц"
+msgstr ""
 
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
 #: src/ui/views/reverse_cron.blp:400
 msgid "month(s) starting in"
-msgstr "месяц(ы) начиная с"
+msgstr ""
 
 #: src/ui/views/reverse_cron.blp:436
 msgid "Specific month (choose one or many, no selection means every month)"
 msgstr ""
-"Конкретный месяц (выберите один или несколько, отсутствие выбора означает "
-"каждый месяц)"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #: src/ui/views/reverse_cron.blp:457
 msgid "Every month between"
-msgstr "Каждый месяц между"
+msgstr ""
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:485 src/ui/views/reverse_cron.blp:692
 msgid "and"
-msgstr "и"
+msgstr "d"
 
 #: src/ui/views/reverse_cron.blp:516
 msgid "Weekday"
-msgstr "Будние дни"
+msgstr "Ass n dduṛt"
 
 #: src/ui/views/reverse_cron.blp:530
 msgid "Every weekday"
-msgstr "По будням"
+msgstr ""
 
 #. TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:554
 msgid "weekday(s) starting on"
-msgstr "будний день (будние дни) начиная с"
+msgstr ""
 
 #: src/ui/views/reverse_cron.blp:585
 msgid "Specific weekday (choose one or many, no selection means every weekday)"
 msgstr ""
-"Конкретный день недели (выберите один или несколько, отсутствие выбора "
-"означает каждый будний день)"
 
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:669
 msgid "Every weekday between"
-msgstr "Каждый будний день"
+msgstr ""
 
 #: src/ui/views/reverse_cron.blp:718
 msgid "Command to execute"
-msgstr "Команда для запуска"
+msgstr ""
 
 #: src/ui/views/reverse_cron.blp:737
 msgid "CRON Expression"
-msgstr "CRON-выражение"
+msgstr ""
 
 #: src/ui/views/text_diff.blp:33
 msgid "Old Text"
-msgstr "Старый текст"
+msgstr ""
 
 #: src/ui/views/text_diff.blp:45
 msgid "New Text"
-msgstr "Новый текст"
+msgstr ""
 
 #: src/ui/views/text_diff.blp:58
 msgid "Differences"
-msgstr "Отличия"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:34
 msgid "Change case"
-msgstr "Изменить регистр текста"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:35
 msgid "Choose a case to apply to the text"
-msgstr "Выберите регистр для применения к тексту"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:42
 msgid "Sentence case"
-msgstr "Первая заглавная"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:43
 msgid "lower case"
-msgstr "строчные буквы"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:44
 msgid "UPPERCASE"
-msgstr "ПРОПИСНЫЕ БУКВЫ"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:45
 msgid "Title Case"
-msgstr "Каждое Слово С Заглавной"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:46
 msgid "camelCase"
@@ -1832,235 +1764,243 @@ msgstr "snake_case"
 
 #: src/ui/views/text_inspector.blp:49
 msgid "CONSTANT_CASE"
-msgstr "CONSTANT_CASE"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:50
 msgid "kebab-case"
-msgstr "kebab-case"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:51
 msgid "COBOL-CASE"
-msgstr "COBOL-CASE"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:52
 msgid "Train-Case"
-msgstr "Train-Case"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:53
 msgid "aLtErNaTiNg CaSe"
-msgstr "aLtErNaTiNg CaSe"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:54
 msgid "ReVeRsE aLtErNaTiNg CaSe"
-msgstr "ReVeRsE aLtErNaTiNg CaSe"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:66
 msgid "Information"
-msgstr "Информация"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:69
 msgid "Cursor"
-msgstr "Курсор"
+msgstr "Taḥnaccaḍṭ"
 
 #: src/ui/views/text_inspector.blp:83
 msgid "Line:"
-msgstr "Строка:"
+msgstr "Izirig:"
 
 #: src/ui/views/text_inspector.blp:96
 msgid "Column:"
-msgstr "Столбец:"
+msgstr ""
 
 #: src/ui/views/text_inspector.blp:121
 msgid "Characters:"
-msgstr "Символов:"
+msgstr "Isekkilen:"
 
 #: src/ui/views/text_inspector.blp:134
 msgid "Words:"
-msgstr "Слов:"
+msgstr "Awalen:"
 
 #: src/ui/views/text_inspector.blp:147
 msgid "Lines:"
-msgstr "Строк:"
+msgstr ""
 
 #: src/ui/views/timestamp.blp:19
 msgid "Timestamp Converter"
-msgstr "Конвертер временных меток"
+msgstr ""
 
 #: src/ui/views/timestamp.blp:43
 msgid "Sets the current system timestamp"
-msgstr "Устанавливает текущую системную метку времени"
+msgstr ""
 
 #: src/ui/views/timestamp.blp:47
 msgid "Date"
-msgstr "Дата"
+msgstr "Azemz"
 
 #: src/ui/views/timestamp.blp:57
 msgid "ISO Date (ISO 8601/RFC 3339)"
-msgstr "Дата ISO (ISO 8601/RFC 3339)"
+msgstr ""
 
 #: src/ui/views/timestamp.blp:63
 msgid "RFC 2822 Date"
-msgstr "Дата RFC 2822"
+msgstr ""
 
 #: src/ui/views/timestamp.blp:69
 msgid "Short Date"
-msgstr "Короткая дата"
+msgstr ""
 
 #: src/ui/views/timestamp.blp:75
 msgid "Short Time"
-msgstr "Короткое время"
+msgstr ""
 
 #: src/ui/views/timestamp.blp:81
 msgid "Long Date"
-msgstr "Длинная дата"
+msgstr ""
 
 #: src/ui/views/timestamp.blp:87
 msgid "Long Time"
-msgstr "Длинное время"
+msgstr ""
 
 #: src/ui/views/timestamp.blp:93
 msgid "Full Long Date"
-msgstr "Полная длинная дата"
+msgstr ""
 
 #: src/ui/views/url_encoder.blp:19
 msgid "URL Encoder & Decoder"
-msgstr "Кодировщик и декодировщик URL-адреса"
+msgstr ""
 
 #: src/ui/views/url_encoder.blp:53
 msgid "Space encoding"
-msgstr "Кодирование пробела"
+msgstr ""
 
 #: src/ui/views/url_encoder.blp:54
 msgid "Select the desired encoding for the space character"
-msgstr "Выберите нужную кодировку для символа пробела"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:19
 msgid "UUID Generator"
-msgstr "Генератор UUID"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:34
 msgid "Version"
-msgstr "Версия"
+msgstr "Lqem"
 
 #: src/ui/views/uuid_generator.blp:35
 msgid "Choose the UUID version to generate"
-msgstr "Выберите версию UUID для генерации"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:40
 msgid "Version 1 (MAC address)"
-msgstr "Версия 1 (MAC-адрес)"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:41
 msgid "Version 3"
-msgstr "Версия 3"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:42
 msgid "Version 4 (Random)"
-msgstr "Версия 4 (Случайно)"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:43
 msgid "Version 5"
-msgstr "Версия 5"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:44
 msgid "Version 6 (Gregorian Time)"
-msgstr "Версия 6 (Григорианское время)"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:45
 msgid "Version 7 (UNIX Epoch)"
-msgstr "Версия 7 (UNIX-эпоха)"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:54
 msgid "Number of UUIDs to be generated (up to 50)"
-msgstr "Количество генерируемых UUID (до 50)"
+msgstr ""
 
 #: src/ui/views/uuid_generator.blp:72
 msgid "Generated UUIDs"
-msgstr "Сгенерированные UUID"
+msgstr ""
 
 #: src/ui/gtk/help-overlay.blp:15
 msgctxt "shortcut window"
 msgid "General"
-msgstr "Общее"
+msgstr "Amatu"
 
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Search Tools"
-msgstr "Поиск иснтрументов"
+msgstr ""
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr "Показать сокращения"
+msgstr ""
 
 #: src/ui/gtk/help-overlay.blp:28
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Выйти"
+msgstr "Ffeɣ"
 
 #: src/formatters/html.py:14
 msgid "HTML Formatter"
-msgstr "Форматировщик HTML"
+msgstr ""
 
 #: src/formatters/html.py:17
 msgid "Type HTML code here"
-msgstr "Введите HTML-код здесь"
+msgstr ""
 
 #: src/formatters/html.py:20 src/formatters/js.py:20 src/formatters/json.py:19
 #: src/formatters/sql.py:19 src/formatters/xml.py:21 src/formatters/css.py:19
 msgctxt "verb/action"
 msgid "Format"
-msgstr "Форматировать"
+msgstr ""
 
 #: src/formatters/js.py:14
 msgid "JavaScript Formatter"
-msgstr "Форматировщик JavaScript"
+msgstr ""
 
 #: src/formatters/js.py:17
 msgid "Type JavaScript code here"
-msgstr "Введите JavaScript-код здесь"
+msgstr ""
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
-msgstr "Форматировщик JSON"
+msgstr ""
 
 #: src/formatters/json.py:16
 msgid "Type JSON code here"
-msgstr "Введите JSON-код здесь"
+msgstr ""
 
 #: src/formatters/sql.py:13
 msgid "SQL Formatter"
-msgstr "Форматировщик SQL"
+msgstr ""
 
 #: src/formatters/sql.py:16
 msgid "Type SQL code here"
-msgstr "Введите SQL-код здесь"
+msgstr ""
 
 #: src/formatters/xml.py:15
 msgid "XML Formatter"
-msgstr "Форматировщик XML"
+msgstr ""
 
 #: src/formatters/xml.py:18
 msgid "Type XML code here"
-msgstr "Введите XML-код здесь"
+msgstr ""
 
 #: src/formatters/css.py:13
 msgid "CSS Formatter"
-msgstr "Форматировщик CSS"
+msgstr ""
 
 #: src/formatters/css.py:16 src/formatters/css_minifier.py:17
 msgid "Type CSS here"
-msgstr "Введите CSS здесь"
+msgstr ""
+
+#: src/formatters/css_minifier.py:14
+msgid "CSS Minifier"
+msgstr ""
 
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
-msgstr "Сжать"
+msgstr ""
+
+#: src/formatters/js_minifier.py:14
+msgid "JavaScript Minifier"
+msgstr ""
 
 #: src/formatters/js_minifier.py:15
 msgid "Minify JS code"
-msgstr "Сжать JS-кода"
+msgstr ""
 
 #: src/formatters/js_minifier.py:17
 msgid "Type JS code here"
-msgstr "Введите JS-код здесь"
+msgstr ""
