@@ -2,14 +2,22 @@ on:
   push:
     branches: [main]
   pull_request:
+
 name: Build
+
 jobs:   
-  x86:
-    name: "Build Flatpak (x86)"
-    runs-on: ubuntu-24.04
+  flatpak:
+    name: "Build Flatpak"
     container:
       image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-48
       options: --privileged
+    strategy:
+      matrix:
+        variant:
+          - arch: x86_64
+            runner: ubuntu-24.04
+          - arch: aarch64
+            runner: ubuntu-24.04-arm
     steps:
     - uses: actions/checkout@v4
     - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
@@ -17,16 +25,5 @@ jobs:
         bundle: devtoolbox-devel.flatpak
         manifest-path: me.iepure.devtoolbox.json
         cache-key: flatpak-builder-${{ github.sha }}
-  arm64:
-    name: "Build Flatpak (arm64)"
-    runs-on: ubuntu-24.04-arm
-    container:
-      image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-48
-      options: --privileged
-    steps:
-    - uses: actions/checkout@v4
-    - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
-      with:
-        bundle: devtoolbox-devel.flatpak
-        manifest-path: me.iepure.devtoolbox.json
-        cache-key: flatpak-builder-${{ github.sha }}
+        arch: ${{ matrix.variant.arch }}
+        verbose: true
