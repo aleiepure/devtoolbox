@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gtk, GObject
+from gi.repository import Gtk, GObject, Pango
 
 
 class SidebarItem(Gtk.ListBoxRow):
@@ -35,7 +35,13 @@ class SidebarItem(Gtk.ListBoxRow):
         icon = Gtk.Image()
         icon.set_from_icon_name(self.icon_name)
         grid.attach(icon, 0, 0, 1, 1)
-        grid.attach(Gtk.Label(label=self.title, xalign=0.0), 1, 0, 1, 1)
+        grid.attach(Gtk.Label(
+            label=self.title, 
+            xalign=0.0, 
+            lines=2, 
+            wrap=True, 
+            ellipsize=Pango.EllipsizeMode.END
+        ), 1, 0, 1, 1)
         self.set_child(grid)
         self.set_tooltip_text(self.tool_tip)
 
