@@ -37,8 +37,8 @@ template $JwtDecoderView: Adw.Bin {
               Adw.ToggleGroup _signature_selector {
                 valign: center;
                 Adw.Toggle {
-                  name: "ignore";
-                  label: _("Ignore");
+                  name: "off";
+                  label: _("Off");
                 }
 
                 Adw.Toggle {
@@ -64,12 +64,12 @@ template $JwtDecoderView: Adw.Bin {
                 valign: center;
                 Adw.Toggle {
                   name: "utf8";
-                  label: _("UTF-8");
+                  label: "UTF-8";
                 }
 
                 Adw.Toggle {
                   name: "base64url";
-                  label: _("Base64URL");
+                  label: "Base64URL";
                 }
               }
             }

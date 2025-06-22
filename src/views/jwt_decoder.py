@@ -122,17 +122,17 @@ class JwtDecoderView(Adw.Bin):
                 self._payload_area.add_css_class("border-red")
                 self._toast.add_toast(self._invalid_toast)
 
-    def _on_signature_selector(self, *_):
+    def _on_signature_selector(self, *__):
         is_symmetric = self._signature_selector.get_active_name() == "symmetric"
         is_asymmetric = self._signature_selector.get_active_name() == "asymmetric"
-        if self._signature_selector.get_active_name() == "ignore":
+        if self._signature_selector.get_active_name() == "off":
             self._check_box.set_visible(False)
         self._key_encoding_selector_row.set_visible(is_symmetric)
         self._key_row.set_visible(is_symmetric)
         self._asymmetric_box.set_visible(is_asymmetric)
         self._on_token_changed(self._token_area)
 
-    def _on_key_row_changed(self, *_):
+    def _on_key_row_changed(self, *__):
         if (self._key_encoding_selector.get_active_name() == "base64url"
                 and not Utils.is_base64url(urlparse.unquote(self._key_row.get_text()) + "==")):
             self._key_row.add_css_class("border-red")
@@ -170,9 +170,9 @@ class JwtDecoderView(Adw.Bin):
         if outcome:
             self._check_box.set_visible(True)
             self._check_icon.set_from_icon_name("check-round-outline")
-            self._check_title_lbl.set_text(_("Signature is valid!"))
+            self._check_title_lbl.set_text(_("Signature is Valid!"))
             self._check_lbl.set_wrap(False)
-            self._check_lbl.set_text(_("The validity of the JWT signature is verified."))
+            self._check_lbl.set_text(_("The JWT signature was verified successfully."))
             self._check_icon.remove_css_class("warning")
             self._check_title_lbl.remove_css_class("warning")
             self._check_icon.add_css_class("success")
@@ -180,11 +180,11 @@ class JwtDecoderView(Adw.Bin):
         else:
             self._check_box.set_visible(True)
             self._check_icon.set_from_icon_name("warning")
-            self._check_title_lbl.set_text(_("Warning, signature is invalid!"))
+            self._check_title_lbl.set_text(_("Warning, Signature is Invalid!"))
             self._check_lbl.set_wrap(True)
             self._check_lbl.set_text(
-                _("The JWT signature does not match the key. "
-                  "Check if the selected key encoding is correct, otherwise the JWT is not correctly signed."))
+                _("The JWT signature doesn't match the provided key. "
+                  "Please verify the key encoding or ensure the token was signed correctly."))
             self._check_icon.remove_css_class("success")
             self._check_title_lbl.remove_css_class("success")
             self._check_icon.add_css_class("warning")
