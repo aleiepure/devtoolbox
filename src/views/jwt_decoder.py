@@ -27,8 +27,12 @@ class JwtDecoderView(Adw.Bin):
     _asymmetric_box = Gtk.Template.Child()
     _public_key_area = Gtk.Template.Child()
     _private_key_area = Gtk.Template.Child()
+    _check_box = Gtk.Template.Child()
+    _check_icon = Gtk.Template.Child()
+    _check_title_lbl = Gtk.Template.Child()
+    _check_lbl = Gtk.Template.Child()
 
-    _invalid_signature_toast = Adw.Toast(title=_("Signature is invalid"))
+    _invalid_toast = Adw.Toast(title=_("Invalid value. Please check again"))
 
     _service = JwtDecoderService()
 
@@ -74,6 +78,7 @@ class JwtDecoderView(Adw.Bin):
             self._header_area.set_spinner_spin(False)
             self._payload_area.set_spinner_spin(False)
             self._token_area.add_css_class("border-red")
+            self._toast.add_toast(self._invalid_toast)
         else:
             self._on_view_cleared(self._token_area)
 
@@ -112,12 +117,16 @@ class JwtDecoderView(Adw.Bin):
         else:
             if not Utils.is_json(header):
                 self._header_area.add_css_class("border-red")
+                self._toast.add_toast(self._invalid_toast)
             if not Utils.is_json(payload):
                 self._payload_area.add_css_class("border-red")
+                self._toast.add_toast(self._invalid_toast)
 
     def _on_signature_selector(self, *_):
         is_symmetric = self._signature_selector.get_active_name() == "symmetric"
         is_asymmetric = self._signature_selector.get_active_name() == "asymmetric"
+        if self._signature_selector.get_active_name() == "ignore":
+            self._check_box.set_visible(False)
         self._key_encoding_selector_row.set_visible(is_symmetric)
         self._key_row.set_visible(is_symmetric)
         self._asymmetric_box.set_visible(is_asymmetric)
@@ -127,6 +136,7 @@ class JwtDecoderView(Adw.Bin):
         if (self._key_encoding_selector.get_active_name() == "base64url"
                 and not Utils.is_base64url(urlparse.unquote(self._key_row.get_text()) + "==")):
             self._key_row.add_css_class("border-red")
+            self._toast.add_toast(self._invalid_toast)
             return
         self._key_row.remove_css_class("border-red")
         self._on_token_changed(self._token_area)
@@ -140,6 +150,7 @@ class JwtDecoderView(Adw.Bin):
         else:
             self._header_area.set_text("")
             self._token_area.add_css_class("border-red")
+            self._toast.add_toast(self._invalid_toast)
         self._header_area.handler_unblock(self._header_area_handler)
 
     def _on_payload_decode_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
@@ -151,16 +162,33 @@ class JwtDecoderView(Adw.Bin):
         else:
             self._header_area.set_text("")
             self._token_area.add_css_class("border-red")
+            self._toast.add_toast(self._invalid_toast)
         self._payload_area.handler_unblock(self._payload_area_handler)
 
     def _on_verify_signature_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
         outcome = self._service.task_finish(result, self)
         if outcome:
-            self._toast.dismiss_all()
-            self._token_area.remove_css_class("border-red")
+            self._check_box.set_visible(True)
+            self._check_icon.set_from_icon_name("check-round-outline")
+            self._check_title_lbl.set_text(_("Signature is valid!"))
+            self._check_lbl.set_wrap(False)
+            self._check_lbl.set_text(_("The validity of the JWT signature is verified."))
+            self._check_icon.remove_css_class("warning")
+            self._check_title_lbl.remove_css_class("warning")
+            self._check_icon.add_css_class("success")
+            self._check_title_lbl.add_css_class("success")
         else:
-            self._toast.add_toast(self._invalid_signature_toast)
-            self._token_area.add_css_class("border-red")
+            self._check_box.set_visible(True)
+            self._check_icon.set_from_icon_name("warning")
+            self._check_title_lbl.set_text(_("Warning, signature is invalid!"))
+            self._check_lbl.set_wrap(True)
+            self._check_lbl.set_text(
+                _("The JWT signature does not match the key. "
+                  "Check if the selected key encoding is correct, otherwise the JWT is not correctly signed."))
+            self._check_icon.remove_css_class("success")
+            self._check_title_lbl.remove_css_class("success")
+            self._check_icon.add_css_class("warning")
+            self._check_title_lbl.add_css_class("warning")
 
     def _on_token_encode_done(self, source_widget:GObject.Object, result:Gio.AsyncResult, user_data:GObject.GPointer):
         outcome = self._service.task_finish(result, self)
@@ -172,11 +200,13 @@ class JwtDecoderView(Adw.Bin):
             self._token_area.set_text("")
             self._header_area.add_css_class("border-red")
             self._payload_area.add_css_class("border-red")
+            self._toast.add_toast(self._invalid_toast)
         self._token_area.handler_unblock(self._token_area_handler)
 
     def _reset_areas(self):
         # Stop previous tasks
         self._service.get_cancellable().cancel()
+        self._check_box.set_visible(False)
         self._token_area.set_spinner_spin(False)
         self._header_area.set_spinner_spin(False)
         self._payload_area.set_spinner_spin(False)
