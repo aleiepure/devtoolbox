@@ -14,7 +14,7 @@ template $ColorConverterView: Adw.Bin {
 
           $UtilityTitle _title {
             title: _("Color Converter");
-            description: _("Convert a color between common formats");
+            description: _("Convert colors between formats");
             tool-name: "color-converter";
           }
 
@@ -26,83 +26,42 @@ template $ColorConverterView: Adw.Bin {
           Adw.PreferencesGroup {
             title: _("Tool options");
 
-            Adw.ActionRow {
+            Adw.ComboRow _format_combo {
               title: _("Format");
-              subtitle: _("Output format used for color values");
+              subtitle: _("Output format for color values");
               icon-name: "list-large";
 
-              [suffix]
-              Adw.ToggleGroup _format_selector {
-                valign: center;
-
-                Adw.Toggle {
-                  name: "web";
-                  label: _("Web");
-                }
-
-                Adw.Toggle {
-                  name: "web-legacy";
-                  label: _("Web (Legacy)");
-                }
-
-                Adw.Toggle {
-                  name: "percent";
-                  label: _("Percent");
-                }
-
-                Adw.Toggle {
-                  name: "normalized";
-                  label: _("Normalized");
-                }
-
-                Adw.Toggle {
-                  name: "nbit";
-                  label: "N-Bit";
-                }
-              }
+              model: StringList {
+                strings [
+                  _("Web"),
+                  _("Web (Legacy)"),
+                  _("Percent"),
+                  _("Normalized"),
+                  "N-Bit"
+                ]
+              };
             }
 
-            Adw.ActionRow _angle_selector_row {
+            Adw.ComboRow _angle_combo {
               title: _("Angle Unit");
               subtitle: _("Unit used for angle component");
-              icon-name: "timer-symbolic";
-              visible: false;
+              icon-name: "timer";
 
-              [suffix]
-              Adw.ToggleGroup _angle_selector {
-                valign: center;
-
-                Adw.Toggle {
-                  name: "deg";
-                  label: _("Degrees");
-                }
-
-                Adw.Toggle {
-                  name: "rad";
-                  label: _("Radians");
-                }
-
-                Adw.Toggle {
-                  name: "grad";
-                  label: _("Gradians");
-                }
-
-                Adw.Toggle {
-                  name: "turn";
-                  label: _("Turns");
-                }
-
-                Adw.Toggle {
-                  name: "follow";
-                  label: _("Follow Format");
-                }
-              }
+              model: StringList {
+                strings [
+                  _("Degrees"),
+                  _("Radians"),
+                  _("Gradians"),
+                  _("Turns"),
+                  _("Follow Format")
+                ]
+              };
             }
 
             Adw.SpinRow _bits_spinner {
               title: _("Bits");
-              subtitle: _("Bit precision of color values");
-              icon-name: "spacebar-symbolic";
+              subtitle: _("Bits precision for color values");
+              icon-name: "stacked-plates";
               visible: false;
 
               adjustment: Adjustment {
@@ -124,7 +83,7 @@ template $ColorConverterView: Adw.Bin {
 
             Adw.ActionRow {
               title: _("Color");
-              icon-name: "color-select-symbolic";
+              icon-name: "color-select";
               activatable-widget: _color_btn;
 
               [suffix]
@@ -152,9 +111,11 @@ template $ColorConverterView: Adw.Bin {
             }
 
             Adw.ActionRow _rgb_row {
-              subtitle: _("RGB");
+              subtitle: "RGB";
               visible: false;
-
+              styles [
+                "property",
+              ]
 
               Box {
                 orientation: horizontal;
@@ -190,8 +151,11 @@ template $ColorConverterView: Adw.Bin {
             }
 
             Adw.ActionRow _hsv_row {
-              subtitle: _("HSV");
+              subtitle: "HSV";
               visible: false;
+              styles [
+                "property",
+              ]
 
               Box {
                 orientation: horizontal;
@@ -227,8 +191,11 @@ template $ColorConverterView: Adw.Bin {
             }
 
             Adw.ActionRow _hsl_row {
-              subtitle: _("HSL");
+              subtitle: "HSL";
               visible: false;
+              styles [
+                "property",
+              ]
 
               Box {
                 orientation: horizontal;
@@ -273,7 +240,7 @@ template $ColorConverterView: Adw.Bin {
             }
 
             $EntryRow _rgb_web {
-              title: _("RGB");
+              title: "RGB";
               input-purpose: "alpha";
               text: "";
               styles [
@@ -284,7 +251,7 @@ template $ColorConverterView: Adw.Bin {
             }
 
             $EntryRow _hsl_web {
-              title: _("HSL");
+              title: "HSL";
               input-purpose: "alpha";
               text: "";
               styles [

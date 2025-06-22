@@ -3,6 +3,23 @@ from gettext import gettext as _
 from ..utils import Utils
 import colorsys
 from color_parser_py import ColorParser
+from enum import IntEnum
+
+
+class Format(IntEnum):
+    WEB = 0
+    WEB_LEGACY = 1
+    PERCENT = 2
+    NORMALIZED = 3
+    NBIT = 4
+
+
+class AngleUnit(IntEnum):
+    DEG = 0
+    RAD = 1
+    GRAD = 2
+    TURN = 3
+    FOLLOW = 4
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/views/color_converter.ui")
@@ -13,9 +30,8 @@ class ColorConverterView(Adw.Bin):
     _title = Gtk.Template.Child()
 
     _color_btn = Gtk.Template.Child()
-    _format_selector = Gtk.Template.Child()
-    _angle_selector = Gtk.Template.Child()
-    _angle_selector_row = Gtk.Template.Child()
+    _format_combo = Gtk.Template.Child()
+    _angle_combo = Gtk.Template.Child()
     _bits_spinner = Gtk.Template.Child()
     _hex = Gtk.Template.Child()
     _rgb_row = Gtk.Template.Child()
@@ -47,8 +63,8 @@ class ColorConverterView(Adw.Bin):
         self._color = Gdk.RGBA(*([1.0] * 4))
 
         # Signals
-        self._format_selector_handler = self._format_selector.connect("notify::active-name", self._on_format_selector)
-        self._angle_selector_handler = self._angle_selector.connect("notify::active-name", self._on_angle_selector)
+        self._format_combo_handler = self._format_combo.connect("notify::selected", self._on_format_combo)
+        self._angle_combo_handler = self._angle_combo.connect("notify::selected", self._on_angle_combo)
         self._bits_spinner_handler = self._bits_spinner.connect("notify::value", self._on_bits_spinner)
         self._color_btn_handler = self._color_btn.connect("notify::rgba", self._on_color_btn)
         self._hex_handler = self._hex.connect("notify::text", self._on_hex_changed)
@@ -67,23 +83,23 @@ class ColorConverterView(Adw.Bin):
         self._alpha_handler = self._alpha.connect("notify::text", self._on_alpha_changed)
 
         # Restore Tool Settings
-        stored_format = self._settings.get_string("color-converter-format")
-        stored_angle = self._settings.get_string("color-converter-angle")
+        stored_format = self._settings.get_int("color-converter-format")
+        stored_angle = self._settings.get_int("color-converter-angle")
         stored_bits = self._settings.get_int("color-converter-bits")
-        self._format_selector.set_active_name(stored_format)
-        self._angle_selector.set_active_name(stored_angle)
+        self._format_combo.set_selected(stored_format)
+        self._angle_combo.set_selected(stored_angle)
         self._bits_spinner.set_value(stored_bits)
 
         self._update_all_visible()
 
 
-    def _on_format_selector(self, *_):
-        selected = self._format_selector.get_active_name()
-        self._settings.set_string("color-converter-format", selected)
+    def _on_format_combo(self, *__):
+        selected = self._format_combo.get_selected()
+        self._settings.set_int("color-converter-format", selected)
 
         # Make relevant UI visible
-        is_web = selected in ("web", "web-legacy")
-        is_legacy = selected == "web-legacy"
+        is_web = selected in (Format.WEB, Format.WEB_LEGACY)
+        is_legacy = selected == Format.WEB_LEGACY
         self._rgb_web.set_visible(is_web)
         self._hsl_web.set_visible(is_web)
         self._hwb_web.set_visible(is_web and not is_legacy)
@@ -91,17 +107,17 @@ class ColorConverterView(Adw.Bin):
         self._hsv_row.set_visible(not is_web)
         self._hsl_row.set_visible(not is_web)
         self._alpha.set_visible(not is_web)
-        self._angle_selector_row.set_visible(not is_web)
-        self._bits_spinner.set_visible(selected == "nbit")
+        self._angle_combo.set_visible(not is_web)
+        self._bits_spinner.set_visible(selected == Format.NBIT)
 
         self._update_all_visible("color", "hex")
 
 
-    def _on_angle_selector(self, *_):
-        selected = self._angle_selector.get_active_name()
-        self._settings.set_string("color-converter-angle", selected)
+    def _on_angle_combo(self, *__):
+        selected = self._angle_combo.get_selected()
+        self._settings.set_int("color-converter-angle", selected)
 
-        h, *_ = self._get_hsv()
+        h, *__ = self._get_hsv()
         self._hsv_hue.handler_block(self._hsv_hue_handler)
         self._hsl_hue.handler_block(self._hsl_hue_handler)
         self._hsv_hue.set_text(self._format_angle(h))
@@ -110,39 +126,39 @@ class ColorConverterView(Adw.Bin):
         self._hsl_hue.handler_unblock(self._hsl_hue_handler)
 
 
-    def _on_bits_spinner(self, *_):
+    def _on_bits_spinner(self, *__):
         value = int(self._bits_spinner.get_value())
         self._settings.set_int("color-converter-bits", value)
 
         self._update_values()
 
 
-    def _on_color_btn(self, *_):
+    def _on_color_btn(self, *__):
         self._color = self._color_btn.get_rgba()
         self._update_all_visible("color")
 
 
-    def _on_hex_changed(self, *_):
+    def _on_hex_changed(self, *__):
         self._parse_input(self._hex.get_text(), self._hex)
         self._update_all_visible("hex")
 
 
-    def _on_rgb_web_changed(self, *_):
+    def _on_rgb_web_changed(self, *__):
         self._parse_input(self._rgb_web.get_text(), self._rgb_web)
         self._update_all_visible("rgb")
 
 
-    def _on_hsl_web_changed(self, *_):
+    def _on_hsl_web_changed(self, *__):
         self._parse_input(self._hsl_web.get_text(), self._hsl_web)
         self._update_all_visible("hsl")
 
 
-    def _on_hwb_web_changed(self, *_):
+    def _on_hwb_web_changed(self, *__):
         self._parse_input(self._hwb_web.get_text(), self._hwb_web)
         self._update_all_visible("hwb")
 
 
-    def _on_rgb_changed(self, *_):
+    def _on_rgb_changed(self, *__):
         r = self._parse_number(self._rgb_red.get_text(), self._rgb_red)
         g = self._parse_number(self._rgb_green.get_text(), self._rgb_green)
         b = self._parse_number(self._rgb_blue.get_text(), self._rgb_blue)
@@ -152,7 +168,7 @@ class ColorConverterView(Adw.Bin):
         self._update_all_visible("rgb", "alpha")
 
 
-    def _on_hsv_changed(self, *_):
+    def _on_hsv_changed(self, *__):
         h = self._parse_angle(self._hsv_hue.get_text(), self._hsv_hue)
         s = self._parse_number(self._hsv_sat.get_text(), self._hsv_sat)
         v = self._parse_number(self._hsv_val.get_text(), self._hsv_val)
@@ -163,7 +179,7 @@ class ColorConverterView(Adw.Bin):
         self._update_all_visible("hsv", "alpha")
 
 
-    def _on_hsl_changed(self, *_):
+    def _on_hsl_changed(self, *__):
         h = self._parse_angle(self._hsl_hue.get_text(), self._hsl_hue)
         s = self._parse_number(self._hsl_sat.get_text(), self._hsl_sat)
         l = self._parse_number(self._hsl_lit.get_text(), self._hsl_lit)
@@ -174,7 +190,7 @@ class ColorConverterView(Adw.Bin):
         self._update_all_visible("hsl", "alpha")
 
 
-    def _on_alpha_changed(self, *_):
+    def _on_alpha_changed(self, *__):
         alpha = self._parse_number(self._alpha.get_text(), self._alpha)
         if alpha is not None:
             self._color.alpha = alpha
@@ -188,10 +204,10 @@ class ColorConverterView(Adw.Bin):
         if "hex" not in exclude:
             self._update_hex()
 
-        match self._format_selector.get_active_name():
-            case "web":
+        match self._format_combo.get_selected():
+            case Format.WEB:
                 self._update_web(*exclude)
-            case "web-legacy":
+            case Format.WEB_LEGACY:
                 self._update_web_legacy(*exclude)
             case _:
                 self._update_values(*exclude)
@@ -338,10 +354,10 @@ class ColorConverterView(Adw.Bin):
 
     def _parse_number(self, parsable, input_field) -> float | None:
         try:
-            match self._format_selector.get_active_name():
-                case "nbit":
+            match self._format_combo.get_selected():
+                case Format.NBIT:
                     parsed = Utils.uintn_to_normalized(int(parsable), int(self._bits_spinner.get_value()))
-                case "percent":
+                case Format.PERCENT:
                     parsed = Utils.percent_to_normalized(float(parsable))
                 case _:
                     parsed = float(parsable)
@@ -356,14 +372,14 @@ class ColorConverterView(Adw.Bin):
 
     def _parse_angle(self, parsable, input_field) -> float | None:
         try:
-            match self._angle_selector.get_active_name():
-                case "deg":
+            match self._angle_combo.get_selected():
+                case AngleUnit.DEG:
                     parsed = Utils.deg_to_normalized(float(parsable))
-                case "rad":
+                case AngleUnit.RAD:
                     parsed = Utils.rad_to_normalized(float(parsable))
-                case "grad":
+                case AngleUnit.GRAD:
                     parsed = Utils.grad_to_normalized(float(parsable))
-                case "turn":
+                case AngleUnit.TURN:
                     parsed = float(parsable) % 1.0
                 case _:
                     parsed = self._parse_number(parsable, input_field)
@@ -377,31 +393,31 @@ class ColorConverterView(Adw.Bin):
 
 
     def _format_value(self, value: float) -> str:
-        match self._format_selector.get_active_name():
-            case "percent":
+        match self._format_combo.get_selected():
+            case Format.PERCENT:
                 return Utils.format_decimal(Utils.normalized_to_percent(value))
-            case "nbit":
+            case Format.NBIT:
                 return str(Utils.normalized_to_uintn(value, int(self._bits_spinner.get_value())))
             case _:
                 return Utils.format_decimal(value, 4)
 
 
     def _format_angle(self, angle: float) -> str:
-        match self._angle_selector.get_active_name():
-            case "deg":
+        match self._angle_combo.get_selected():
+            case AngleUnit.DEG:
                 return self._format_angle_int_dec(Utils.normalized_to_deg(angle))
-            case "rad":
+            case AngleUnit.RAD:
                 return Utils.format_decimal(Utils.normalized_to_rad(angle), 3)
-            case "grad":
+            case AngleUnit.GRAD:
                 return self._format_angle_int_dec(Utils.normalized_to_grad(angle))
-            case "turn":
+            case AngleUnit.TURN:
                 return Utils.format_decimal(angle, 4)
             case _:
                 return self._format_value(angle)
 
 
     def _format_angle_int_dec(self, angle: float) -> str:
-        if self._format_selector.get_active_name() == "nbit":
+        if self._format_combo.get_selected() == Format.NBIT:
             return str(round(angle))
         else:
             return Utils.format_decimal(angle)

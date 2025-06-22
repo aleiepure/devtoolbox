@@ -110,7 +110,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="checkerboard-big-symbolic.svg">../data/icons/symbolic/checkerboard-big-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="color-symbolic.svg">../data/icons/symbolic/color-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="color-select-symbolic.svg">../data/icons/symbolic/color-select-symbolic.svg</file>
-    <file preprocess="xml-stripblanks" alias="no-eye-symbolic.svg">../data/icons/symbolic/no-eye-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="weight-symbolic.svg">../data/icons/symbolic/weight-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="image-symbolic.svg">../data/icons/symbolic/image-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="info-symbolic.svg">../data/icons/symbolic/info-symbolic.svg</file>

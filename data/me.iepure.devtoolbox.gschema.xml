@@ -37,14 +37,14 @@ SPDX-License-Identifier: GPL-3.0-or-later
 		</key>
 
 		<!-- Color Converter -->
-		<key name="color-converter-format" type="s">
-			<default>"web"</default>
+		<key name="color-converter-format" type="i">
+			<default>0</default>
 		</key>
 		<key name="color-converter-bits" type="i">
 			<default>8</default>
 		</key>
-		<key name="color-converter-angle" type="s">
-			<default>"deg"</default>
+		<key name="color-converter-angle" type="i">
+			<default>0</default>
 		</key>
 
 	</schema>

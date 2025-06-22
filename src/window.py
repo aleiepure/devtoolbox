@@ -342,7 +342,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "title": _("Color Converter"),
                 "category": _("Graphics"),
                 "icon-name": "color-symbolic",
-                "tooltip": _("Convert a color between common formats"),
+                "tooltip": _("Convert colors between formats"),
                 "child": ColorConverterView(),
             },
             "contrast-checker": {
@@ -355,7 +355,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             "colorblind-sim": {
                 "title": _("Color Blindness"),
                 "category": _("Graphics"),
-                "icon-name": "no-eye-symbolic",
+                "icon-name": "eye-open-symbolic",
                 "tooltip": _("Simulate color blindness in images"),
                 "child": ColorblindnessSimulatorView(),
             },

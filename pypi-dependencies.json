@@ -242,7 +242,7 @@
             "name": "python3-color-parser-py",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"color-parser-py\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"color-parser-py==0.1.6\" --no-build-isolation"
             ],
             "sources": [
                 {
