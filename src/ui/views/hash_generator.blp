@@ -105,15 +105,16 @@ template $HashGeneratorView: Adw.Bin {
             halign: center;
             margin-bottom: 15;
             margin-top: 5;
-
+            spacing: 20;
+            
             Image _check_icon {
               pixel-size: 56;
-              margin-end: 20;
             }
 
             Box {
               orientation: vertical;
               valign: center;
+              homogeneous: true;
 
               Label _check_title_lbl {
                 margin-bottom: 5;
@@ -126,6 +127,7 @@ template $HashGeneratorView: Adw.Bin {
               Label _check_lbl {
                 width-request: 100;
                 wrap: true;
+                lines: 3;
               }
             }
           }

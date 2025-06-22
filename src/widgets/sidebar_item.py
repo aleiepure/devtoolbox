@@ -15,7 +15,7 @@ class SidebarItem(Gtk.ListBoxRow):
     tool_tip = GObject.Property(type=str, default="")
     category = GObject.Property(type=str, default="")
 
-    def __init__(self, tool_name:str, title:str, icon_name:str, tool_tip:str, category: str):
+    def __init__(self, tool_name: str, title: str, icon_name: str, tool_tip: str, category: str):
         super().__init__()
 
         self.tool_name = tool_name
@@ -36,10 +36,10 @@ class SidebarItem(Gtk.ListBoxRow):
         icon.set_from_icon_name(self.icon_name)
         grid.attach(icon, 0, 0, 1, 1)
         grid.attach(Gtk.Label(
-            label=self.title, 
-            xalign=0.0, 
-            lines=2, 
-            wrap=True, 
+            label=self.title,
+            xalign=0.0,
+            lines=2,
+            wrap=True,
             ellipsize=Pango.EllipsizeMode.END
         ), 1, 0, 1, 1)
         self.set_child(grid)
