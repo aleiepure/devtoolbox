@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Adw, Gtk, Gio, GLib
-from gettext import gettext as _
+from gettext import gettext as _, pgettext as C_
 
 from .widgets.sidebar_item import SidebarItem
 from .widgets.theme_switcher import ThemeSwitcher
@@ -123,6 +123,19 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "horizontal-arrows-symbolic",
                 "tooltip": _("Convert JSON documents to YAML and vice-versa"),
                 "child": JsonYamlView(),
+                "keywords": [
+                    "json",
+                    "yaml",
+                    "yml",
+                    C_("search keyword", "parse"),
+                    C_("search keyword", "converter"),
+                    C_("search keyword", "convert"),
+                    C_("search keyword", "format"),
+                    C_("search keyword", "document"),
+                    C_("search keyword", "spaces"),
+                    C_("search keyword", "indentation"),
+                    C_("search keyword", "indent")
+                ]
             },
             "timestamp": {
                 "title": _("Timestamp"),
@@ -130,6 +143,35 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "calendar-symbolic",
                 "tooltip": _("Convert UNIX timestamps to and from plain dates"),
                 "child": TimestampView(),
+                "keywords": [
+                    C_("search keyword", "epoch"),
+                    C_("search keyword", "time"),
+                    C_("search keyword", "format"),
+                    C_("search keyword", "parse"),
+                    C_("search keyword", "datetime"),
+                    C_("search keyword", "calendar"),
+                    C_("search keyword", "timestamp"),
+                    "unix",
+                    C_("search keyword", "date"),
+                    C_("search keyword", "converter"),
+                    C_("search keyword", "convert"),
+                    C_("search keyword", "format"),
+                    C_("search keyword", "short"),
+                    C_("search keyword", "long"),
+                    "ISO",
+                    "RFC",
+                    C_("search keyword", "year"),
+                    C_("search keyword", "month"),
+                    C_("search keyword", "day"),
+                    C_("search keyword", "hour"),
+                    C_("search keyword", "hours"),
+                    C_("search keyword", "minute"),
+                    C_("search keyword", "minutes"),
+                    C_("search keyword", "second"),
+                    C_("search keyword", "seconds"),
+                    C_("search keyword", "timezone"),
+                    C_("search keyword", "now"),
+                ]
             },
             "base-converter": {
                 "title": _("Number Bases"),
@@ -137,6 +179,21 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "hashtag-symbolic",
                 "tooltip": _("Convert numbers between bases"),
                 "child": BaseConverterView(),
+                "keywords": [
+                    C_("search keyword", "representation"),
+                    C_("search keyword", "base"),
+                    C_("search keyword", "converter"),
+                    C_("search keyword", "convert"),
+                    C_("search keyword", "number"),
+                    C_("search keyword", "binary"),
+                    C_("search keyword", "octal"),
+                    C_("search keyword", "decimal"),
+                    C_("search keyword", "hexadecimal"),
+                    C_("search keyword", "integer"),
+                    "ascii",
+                    "utf-8",
+                    "utf8"
+                ]
             },
             "cron": {
                 "title": _("CRON Parser"),
@@ -144,6 +201,18 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "timer-symbolic",
                 "tooltip": _("Convert CRON expressions to time and date"),
                 "child": CronConverterView(),
+                "keywords": [
+                    "cron",
+                    C_("search keyword", "schedule"),
+                    C_("search keyword", "parser"),
+                    C_("search keyword", "expression"),
+                    C_("search keyword", "convert"),
+                    C_("search keyword", "time"),
+                    C_("search keyword", "date"),
+                    C_("search keyword", "job"),
+                    "linux",
+                    "unix",
+                ]
             },
             "reverse-cron": {
                 "title": _("Reverse CRON"),
@@ -151,6 +220,18 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "timer-reverse-symbolic",
                 "tooltip": _("Generate CRON expressions"),
                 "child": ReverseCronView(),
+                "keywords": [
+                    "cron",
+                    C_("search keyword", "schedule"),
+                    C_("search keyword", "parser"),
+                    C_("search keyword", "expression"),
+                    C_("search keyword", "convert"),
+                    C_("search keyword", "time"),
+                    C_("search keyword", "date"),
+                    C_("search keyword", "job"),
+                    "linux",
+                    "unix",
+                ]
             },
 
             # Encoders
@@ -160,6 +241,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "code-symbolic",
                 "tooltip": _("Encode and decode special characters using the HTML format"),
                 "child": HtmlEncoderView(),
+                "keywords": [
+                    "html",
+                    C_("search keyword", "escape"),
+                    "web",
+                    C_("search keyword", "markup"),
+                    C_("search keyword", "text"),
+                ]
             },
             "base64-encoder": {
                 "title": "Base64",
@@ -167,6 +255,12 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "base64-symbolic",
                 "tooltip": _("Encode and decode base64 strings"),
                 "child": Base64EncoderView(),
+                "keywords": [
+                    "base64",
+                    C_("search keyword", "string"),
+                    C_("search keyword", "text"),
+                    C_("search keyword", "data"),
+                ]
             },
             "url-encoder": {
                 "title": "URL",
@@ -174,6 +268,15 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "chain-link-symbolic",
                 "tooltip": _("Encode and decode special characters inside URLs"),
                 "child": UrlEncoderView(),
+                "keywords": [
+                    C_("search keyword", "url"),
+                    C_("search keyword", "unescape"),
+                    C_("search keyword", "web"),
+                    C_("search keyword", "link"),
+                    C_("search keyword", "address"),
+                    C_("search keyword", "uri"),
+                    C_("search keyword", "query"),
+                ]
             },
             "gzip-compressor": {
                 "title": "GZip",
@@ -181,6 +284,16 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "shoe-box-symbolic",
                 "tooltip": _("Compress and decompress files and texts using GZip"),
                 "child": GzipCompressorView(),
+                "keywords": [
+                    C_("search keyword", "unarchive"),
+                    C_("search keyword", "file"),
+                    C_("search keyword", "text"),
+                    C_("search keyword", "string"),
+                    C_("search keyword", "zip"),
+                    C_("search keyword", "unzip"),
+                    C_("search keyword", "decompression"),
+                    C_("search keyword", "decompressor")
+                ]
             },
             "jwt-decoder": {
                 "title": "JWT",
@@ -188,6 +301,15 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "key-symbolic",
                 "tooltip": _("Decode JWT tokens to header and payload"),
                 "child": JwtDecoderView(),
+                "keywords": [
+                    C_("search keyword", "json web token"),
+                    C_("search keyword", "header"),
+                    C_("search keyword", "payload"),
+                    C_("search keyword", "signature"),
+                    C_("search keyword", "authentication"),
+                    C_("search keyword", "authorization"),
+                    C_("search keyword", "security"),
+                ]
             },
 
             # Formatters and minifiers
@@ -197,6 +319,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "json-symbolic",
                 "tooltip": _("Format JSON documents"),
                 "child": FormatterView(JsonFormatter()),
+                "keywords": [
+                    C_("search keyword", "pretty"),
+                    C_("search keyword", "indent"),
+                    C_("search keyword", "beautify"),
+                    C_("search keyword", "parse"),
+                    C_("search keyword", "data"),
+                ]
             },
             "sql-formatter": {
                 "title": "SQL",
@@ -204,6 +333,14 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "database-symbolic",
                 "tooltip": _("Format SQL documents"),
                 "child": FormatterView(SqlFormatter()),
+                "keywords": [
+                    C_("search keyword", "pretty"),
+                    C_("search keyword", "indent"),
+                    C_("search keyword", "beautify"),
+                    C_("search keyword", "query"),
+                    C_("search keyword", "database"),
+                    C_("search keyword", "statement"),
+                ]
             },
             "xml-formatter": {
                 "title": "XML",
@@ -211,6 +348,14 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "code-symbolic",
                 "tooltip": _("Format XML documents"),
                 "child": FormatterView(XmlFormatter()),
+                "keywords": [
+                    C_("search keyword", "pretty"),
+                    C_("search keyword", "indent"),
+                    C_("search keyword", "beautify"),
+                    C_("search keyword", "markup"),
+                    C_("search keyword", "document"),
+                    C_("search keyword", "data"),
+                ]
             },
             "html-formatter": {
                 "title": "HTML",
@@ -218,6 +363,15 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "html-symbolic",
                 "tooltip": _("Format HTML documents"),
                 "child": FormatterView(HtmlFormatter()),
+                "keywords": [
+                    C_("search keyword", "pretty"),
+                    C_("search keyword", "indent"),
+                    C_("search keyword", "beautify"),
+                    C_("search keyword", "markup"),
+                    C_("search keyword", "minify"),
+                    C_("search keyword", "web"),
+                    C_("search keyword", "document"),
+                ]
             },
             "js-formatter": {
                 "title": "JavaScript",
@@ -225,6 +379,14 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "js-symbolic",
                 "tooltip": _("Format JavaScript documents"),
                 "child": FormatterView(JsFormatter()),
+                "keywords": [
+                    "js",
+                    C_("search keyword", "pretty"),
+                    C_("search keyword", "indent"),
+                    C_("search keyword", "beautify"),
+                    C_("search keyword", "minify"),
+                    C_("search keyword", "code"),
+                ]
             },
             "css-formatter": {
                 "title": "CSS",
@@ -232,6 +394,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "css-symbolic",
                 "tooltip": _("Format CSS documents"),
                 "child": FormatterView(CssFormatter()),
+                "keywords": [
+                    C_("search keyword", "pretty"),
+                    C_("search keyword", "indent"),
+                    C_("search keyword", "beautify"),
+                    C_("search keyword", "minify"),
+                    C_("search keyword", "stylesheet"),
+                ]
             },
             "css-minifier": {
                 "title": _("CSS Minifier"),
@@ -239,6 +408,14 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "css-symbolic",
                 "tooltip": _("Minify CSS documents"),
                 "child": FormatterView(CssMinifier()),
+                "keywords": [
+                    C_("search keyword", "minify"),
+                    C_("search keyword", "compress"),
+                    C_("search keyword", "style"),
+                    C_("search keyword", "stylesheet"),
+                    C_("search keyword", "reduce"),
+                    C_("search keyword", "size"),
+                ]
             },
             "js-minifier": {
                 "title": _("JavaScript Minifier"),
@@ -246,15 +423,31 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "js-symbolic",
                 "tooltip": _("Minify JavaScript documents"),
                 "child": FormatterView(JsMinifier()),
+                "keywords": [
+                    "js",
+                    C_("search keyword", "minify"),
+                    C_("search keyword", "compress"),
+                    C_("search keyword", "reduce"),
+                    C_("search keyword", "size"),
+                    C_("search keyword", "script"),
+                    C_("search keyword", "code"),
+                ]
             },
 
-            # Generetors
+            # Generators
             "hash-generator": {
                 "title": _("Hash"),
                 "category": _("Generators"),
                 "icon-name": "hash-symbolic",
                 "tooltip": _("Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"),
                 "child": HashGeneratorView(),
+                "keywords": [
+                    C_("search keyword", "checksum"),
+                    C_("search keyword", "digest"),
+                    C_("search keyword", "generate"),
+                    C_("search keyword", "security"),
+                    C_("search keyword", "cryptography"),
+                ]
             },
             "lorem-generator": {
                 "title": "Lorem Ipsum",
@@ -262,6 +455,12 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "newspaper-symbolic",
                 "tooltip": _("Generate lorem ipsum placeholder text"),
                 "child": LoremGeneratorView(),
+                "keywords": [
+                    C_("search keyword", "dummy"),
+                    C_("search keyword", "sample"),
+                    C_("search keyword", "filler"),
+                    C_("search keyword", "latin"),
+                ]
             },
             "uuid-generator": {
                 "title": "UUID",
@@ -269,6 +468,11 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "fingerprint-symbolic",
                 "tooltip": _("Generate Universally Unique IDs (UUID)"),
                 "child": UuidGeneratorView(),
+                "keywords": [
+                    "guid",
+                    C_("search keyword", "identifier"),
+                    C_("search keyword", "random"),
+                ]
             },
             "random-generator": {
                 "title": _("Random"),
@@ -276,6 +480,12 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "dice3-symbolic",
                 "tooltip": _("Generate random numbers and strings"),
                 "child": RandomGeneratorView(),
+                "keywords": [
+                    C_("search keyword", "password"),
+                    C_("search keyword", "token"),
+                    C_("search keyword", "entropy"),
+                    C_("search keyword", "secure"),
+                ]
             },
             "chmod": {
                 "title": _("Chmod Calculator"),
@@ -283,6 +493,14 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "general-properties-symbolic",
                 "tooltip": _("Calculate values to modify permissions with chmod"),
                 "child": ChmodCalculatorView(),
+                "keywords": [
+                    C_("search keyword", "file"),
+                    C_("search keyword", "unix"),
+                    C_("search keyword", "linux"),
+                    C_("search keyword", "calculate"),
+                    C_("search keyword", "mode"),
+                    C_("search keyword", "access"),
+                ]
             },
             "qrcode": {
                 "title": _("QR Code"),
@@ -290,6 +508,12 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "qr-code-symbolic",
                 "tooltip": _("Create custom QR Codes"),
                 "child": QRCodeGeneratorView(),
+                "keywords": [
+                    C_("search keyword", "qrcode"),
+                    C_("search keyword", "barcode"),
+                    C_("search keyword", "image"),
+                    C_("search keyword", "matrix"),
+                ]
             },
 
             # Text
@@ -299,6 +523,17 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "text-inspector-symbolic",
                 "tooltip": _("View statistics about text and change sentence cases"),
                 "child": TextInspectorView(),
+                "keywords": [
+                    C_("search keyword", "analyze"),
+                    C_("search keyword", "convert"),
+                    C_("search keyword", "uppercase"),
+                    C_("search keyword", "lowercase"),
+                    C_("search keyword", "capitalize"),
+                    C_("search keyword", "count"),
+                    C_("search keyword", "words"),
+                    C_("search keyword", "characters"),
+                    C_("search keyword", "lines"),
+                ]
             },
             "regex-tester": {
                 "title": _("Regex Tester"),
@@ -306,6 +541,11 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "regex-symbolic",
                 "tooltip": _("Find matching strings inside a text"),
                 "child": RegexTesterView(),
+                "keywords": [
+                    C_("search keyword", "expression"),
+                    C_("search keyword", "pattern"),
+                    C_("search keyword", "search"),
+                ]
             },
             "text-diff": {
                 "title": _("Text Diff"),
@@ -313,6 +553,12 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "open-book-symbolic",
                 "tooltip": _("Analyze two texts and find differences"),
                 "child": TextDiffView(),
+                "keywords": [
+                    C_("search keyword", "difference"),
+                    C_("search keyword", "compare"),
+                    C_("search keyword", "changes"),
+                    C_("search keyword", "modification"),
+                ]
             },
             "xml-validator": {
                 "title": _("XML Scheme Validator"),
@@ -320,6 +566,11 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "xml-check-symbolic",
                 "tooltip": _("Check an XML file against an XSD schema"),
                 "child": XmlValidatorView(),
+                "keywords": [
+                    C_("search keyword", "validate"),
+                    C_("search keyword", "markup"),
+                    C_("search keyword", "document"),
+                ]
             },
             "json-validator": {
                 "title": _("JSON Schema Validator"),
@@ -327,6 +578,11 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "json-check-symbolic",
                 "tooltip": _("Check a JSON file against a JSON schema"),
                 "child": JsonValidatorView(),
+                "keywords": [
+                    C_("search keyword", "validate"),
+                    C_("search keyword", "data"),
+                    C_("search keyword", "document"),
+                ]
             },
             "markdown-preview": {
                 "title": _("Markdown Previewer"),
@@ -334,6 +590,11 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "markdown-symbolic",
                 "tooltip": _("Preview markdown code as you type"),
                 "child": MarkdownPreviewView(),
+                "keywords": [
+                    C_("search keyword", "render"),
+                    C_("search keyword", "markup"),
+                    C_("search keyword", "md"),
+                ]
             },
 
             # Graphics
@@ -343,6 +604,10 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "image-adjust-contrast-symbolic",
                 "tooltip": _("Check a color combination for WCAG compliance"),
                 "child": ContrastCheckerView(),
+                "keywords": [
+                    C_("search keyword", "accessibility"),
+                    C_("search keyword", "ratio"),
+                ]
             },
             "colorblind-sim": {
                 "title": _("Color Blindness"),
@@ -350,6 +615,14 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "color-symbolic",
                 "tooltip": _("Simulate color blindness in images"),
                 "child": ColorblindnessSimulatorView(),
+                "keywords": [
+                    C_("search keyword", "simulation"),
+                    C_("search keyword", "daltonism"),
+                    C_("search keyword", "protanopia"),
+                    C_("search keyword", "deuteranopia"),
+                    C_("search keyword", "tritanopia"),
+                    C_("search keyword", "vision"),
+                ]
             },
             "image-converter": {
                 "title": _("Image Format Converter"),
@@ -357,6 +630,16 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "image-symbolic",
                 "tooltip": _("Convert images to different formats"),
                 "child": ImageConverterView(),
+                "keywords": [
+                "image",
+                    C_("search keyword", "jpg"),
+                    C_("search keyword", "jpeg"),
+                    C_("search keyword", "png"),
+                    C_("search keyword", "bmp"),
+                    C_("search keyword", "gif"),
+                    C_("search keyword", "webp"),
+                    C_("search keyword", "picture"),
+                ]
             },
 
             # Certificates
@@ -366,6 +649,17 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "certificate-parser-symbolic",
                 "tooltip": _("View certificates contents"),
                 "child": CertificateParserView(),
+                "keywords": [
+                    "x509",
+                    "pem",
+                    "crt",
+                    "ssl",
+                    "tls",
+                    C_("search keyword", "key"),
+                    C_("search keyword", "security"),
+                    C_("search keyword", "public key"),
+                    C_("search keyword", "cryptography"),
+                ]
             },
             "csr-generator": {
                 "title": _("Certificate Signing Request"),
@@ -373,6 +667,16 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "csr-symbolic",
                 "tooltip": _("Generate certificate signing requests"),
                 "child": CertificateRequestGeneratorView(),
+                "keywords": [
+                    "csr",
+                    "ssl",
+                    "tls",
+                    "x509",
+                    "pem",
+                    C_("search keyword", "key"),
+                    C_("search keyword", "security"),
+                    C_("search keyword", "cryptography"),
+                ]
             },
         }
 
@@ -386,36 +690,38 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 category=self._tools[t]["category"]))
             self._content_stack.add_named(self._tools[t]["child"], t)
 
-        self._sidebar.set_header_func(self._create_sidebar_headers, None, None)
-        self._sidebar.set_filter_func(self._filter_func, None, None)
+            self._sidebar.set_header_func(
+                self._create_sidebar_headers, None, None)
+            self._sidebar.set_filter_func(self._filter_func, None, None)
 
-        # Populate favorites
-        self._populate_favorites()
-        if self._favorites.get_row_at_index(0) is not None:
-            self._fav_stack.set_visible_child_name("filled")
+            # Populate favorites
+            self._populate_favorites()
+            if self._favorites.get_row_at_index(0) is not None:
+                self._fav_stack.set_visible_child_name("filled")
 
-        # Select row for visible content
-        try:
-            index = list(self._tools.keys()).index(
-                self._settings.get_string("last-tool"))
-            if index == 0:
+            # Select row for visible content
+            try:
+                index = list(self._tools.keys()).index(
+               self._settings.get_string("last-tool"))
+                if index == 0:
+                    self._sidebar.select_row(self._sidebar.get_first_child())
+                else:
+                    self._sidebar.select_row(
+                        self._sidebar.get_row_at_index(index))
+            except ValueError:
                 self._sidebar.select_row(self._sidebar.get_first_child())
-            else:
-                self._sidebar.select_row(self._sidebar.get_row_at_index(index))
-        except ValueError:
-            self._sidebar.select_row(self._sidebar.get_first_child())
 
-        # Restore last state
-        self._settings.bind("window-width", self,
-                            "default-width", Gio.SettingsBindFlags.DEFAULT)
-        self._settings.bind("window-height", self,
-                            "default-height", Gio.SettingsBindFlags.DEFAULT)
-        self._settings.bind("window-maximized", self,
-                            "maximized", Gio.SettingsBindFlags.DEFAULT)
-        self._settings.bind("sidebar-open", self._toggle_sidebar_btn,
-                            "active", Gio.SettingsBindFlags.DEFAULT)
-        self._settings.bind("last-tool", self._content_stack,
-                            "visible-child-name", Gio.SettingsBindFlags.DEFAULT)
+                # Restore last state
+                self._settings.bind("window-width", self,
+                    "default-width", Gio.SettingsBindFlags.DEFAULT)
+                self._settings.bind("window-height", self,
+                    "default-height", Gio.SettingsBindFlags.DEFAULT)
+                self._settings.bind("window-maximized", self,
+                    "maximized", Gio.SettingsBindFlags.DEFAULT)
+                self._settings.bind("sidebar-open", self._toggle_sidebar_btn,
+                    "active", Gio.SettingsBindFlags.DEFAULT)
+                self._settings.bind("last-tool", self._content_stack,
+                    "visible-child-name", Gio.SettingsBindFlags.DEFAULT)
 
     @Gtk.Template.Callback()
     def _on_favorite_row_activated(self, list_box: Gtk.ListBox, row: Gtk.ListBoxRow) -> None:
@@ -514,7 +820,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
         """
 
         if before is None or before.get_category() != row.get_category():
-            header_label = Gtk.Label(label=row.get_category())
+            header_label= Gtk.Label(label=row.get_category())
             header_label.set_halign(Gtk.Align.START)
             header_label.set_valign(Gtk.Align.CENTER)
             header_label.add_css_class("heading")
@@ -527,7 +833,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
 
             row.set_header(header_label)
 
-    @Gtk.Template.Callback()
+    @ Gtk.Template.Callback()
     def _on_searchentry_search_changed(self, user_data: object | None) -> None:
         """
         Callback for "search-changed" signal.
@@ -556,8 +862,24 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             bool with the result
         """
 
-        if (self._search_entry.get_text().lower() in row.get_title().lower() or
-                self._search_entry.get_text().lower() in row.get_tool_tip().lower()):
+        search_query= self._search_entry.get_text().lower()
+        if not search_query:
+            return True
+
+        tool_name= row.get_tool_name()
+        tool_data= self._tools.get(tool_name, {})
+
+        title= row.get_title().lower()
+        tooltip= row.get_tool_tip().lower()
+        category= row.get_category().lower()
+        keywords= " ".join(tool_data.get("keywords", [])).lower()
+
+        if (
+            search_query in title or
+            search_query in tooltip or
+            search_query in category or
+            search_query in keywords
+        ):
             return True
 
         return False
@@ -575,7 +897,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
 
         self._favorites.remove_all()
 
-        favorite_tools = self._settings.get_strv('favorites')
+        favorite_tools= self._settings.get_strv('favorites')
         if len(favorite_tools) == 0:
             self._fav_stack.set_visible_child_name('empty')
         else:
@@ -583,11 +905,11 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             for t in self._tools:
                 if t in favorite_tools:
                     self._favorites.append(
-                        SidebarItem(
-                            tool_name=t,
-                            title=self._tools[t]["title"],
-                            icon_name=self._tools[t]["icon-name"],
-                            tool_tip=self._tools[t]["tooltip"],
-                            category=self._tools[t]["category"]
-                        )
-                    )
+                                SidebarItem(
+                                        tool_name=t,
+                                        title=self._tools[t]["title"],
+                                        icon_name=self._tools[t]["icon-name"],
+                                        tool_tip=self._tools[t]["tooltip"],
+                                        category=self._tools[t]["category"]
+                                    )
+                                )
