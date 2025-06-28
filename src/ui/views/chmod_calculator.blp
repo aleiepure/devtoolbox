@@ -37,6 +37,106 @@ template $ChmodCalculatorView: Adw.Bin {
                 column-homogeneous: true;
                 column-spacing: 10;
                 row-spacing: 10;
+                margin-end: 40;
+                margin-top: 10;
+                margin-bottom: 10;
+
+                Label {
+                  label: _("Special");
+
+                  layout {
+                    column: 1;
+                    row: 0;
+                  }
+
+                  styles [
+                    "heading"
+                  ]
+                }
+
+                Label {
+                  label: "Setuid";
+
+                  layout {
+                    column: 0;
+                    row: 1;
+                  }
+
+                  styles [
+                    "heading"
+                  ]
+                }
+
+                Label {
+                  label: "Setgid";
+
+                  layout {
+                    column: 0;
+                    row: 2;
+                  }
+
+                  styles [
+                    "heading"
+                  ]
+                }
+
+                Label {
+                  label: "Sticky";
+
+                  layout {
+                    column: 0;
+                    row: 3;
+                  }
+
+                  styles [
+                    "heading"
+                  ]
+                }
+
+                CheckButton _special_setuid_btn {
+                  halign: center;
+
+                  layout {
+                    column: 1;
+                    row: 1;
+                  }
+
+                  styles [
+                    "heading"
+                  ]
+                }
+
+                CheckButton _special_setgid_btn {
+                  halign: center;
+
+                  layout {
+                    column: 1;
+                    row: 2;
+                  }
+
+                  styles [
+                    "heading"
+                  ]
+                }
+
+                CheckButton _special_sticky_btn {
+                  halign: center;
+
+                  layout {
+                    column: 1;
+                    row: 3;
+                  }
+
+                  styles [
+                    "heading"
+                  ]
+                }
+              }
+
+              Grid {
+                column-homogeneous: true;
+                column-spacing: 10;
+                row-spacing: 10;
                 margin-end: 10;
                 margin-top: 10;
                 margin-bottom: 10;
