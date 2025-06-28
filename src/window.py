@@ -605,6 +605,17 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 "icon-name": "color-symbolic",
                 "tooltip": _("Convert colors between formats"),
                 "child": ColorConverterView(),
+                "keywords": [
+                    C_("search keyword", "rgb"),
+                    C_("search keyword", "rgba"),
+                    C_("search keyword", "hex"),
+                    C_("search keyword", "hsl"),
+                    C_("search keyword", "hsv"),
+                    C_("search keyword", "cmyk"),
+                    C_("search keyword", "format"),
+                    C_("search keyword", "conversion"),
+                    C_("search keyword", "palette"),
+                ]
             },
             "contrast-checker": {
                 "title": _("Contrast Checker"),
