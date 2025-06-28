@@ -49,6 +49,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/views/text_diff.ui</file>
     <file preprocess="xml-stripblanks">ui/views/xml_validator.ui</file>
     <file preprocess="xml-stripblanks">ui/views/markdown_preview.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/color_converter.ui</file>
     <file preprocess="xml-stripblanks">ui/views/contrast_checker.ui</file>
     <file preprocess="xml-stripblanks">ui/views/colorblindness_simulator.ui</file>
     <file preprocess="xml-stripblanks">ui/views/image_converter.ui</file>
@@ -108,6 +109,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks" alias="image-adjust-contrast-symbolic.svg">../data/icons/symbolic/image-adjust-contrast-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="checkerboard-big-symbolic.svg">../data/icons/symbolic/checkerboard-big-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="color-symbolic.svg">../data/icons/symbolic/color-symbolic.svg</file>
+    <file preprocess="xml-stripblanks" alias="color-select-symbolic.svg">../data/icons/symbolic/color-select-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="weight-symbolic.svg">../data/icons/symbolic/weight-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="image-symbolic.svg">../data/icons/symbolic/image-symbolic.svg</file>
     <file preprocess="xml-stripblanks" alias="info-symbolic.svg">../data/icons/symbolic/info-symbolic.svg</file>

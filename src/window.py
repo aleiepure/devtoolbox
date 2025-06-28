@@ -26,6 +26,7 @@ from .views.regex_tester import RegexTesterView
 from .views.text_diff import TextDiffView
 from .views.xml_validator import XmlValidatorView
 from .views.markdown_preview import MarkdownPreviewView
+from .views.color_converter import ColorConverterView
 from .views.contrast_checker import ContrastCheckerView
 from .views.colorblindness_simulator import ColorblindnessSimulatorView
 from .views.image_converter import ImageConverterView
@@ -598,6 +599,13 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             },
 
             # Graphics
+            "color-converter": {
+                "title": _("Color Converter"),
+                "category": _("Graphics"),
+                "icon-name": "color-symbolic",
+                "tooltip": _("Convert colors between formats"),
+                "child": ColorConverterView(),
+            },
             "contrast-checker": {
                 "title": _("Contrast Checker"),
                 "category": _("Graphics"),
@@ -612,7 +620,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             "colorblind-sim": {
                 "title": _("Color Blindness"),
                 "category": _("Graphics"),
-                "icon-name": "color-symbolic",
+                "icon-name": "eye-open-symbolic",
                 "tooltip": _("Simulate color blindness in images"),
                 "child": ColorblindnessSimulatorView(),
                 "keywords": [

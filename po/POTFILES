@@ -24,6 +24,7 @@ src/views/certificate_parser.py
 src/views/certificate_request_generator.py
 src/views/chmod_calculator.py
 src/views/colorblindness_simulator.py
+src/views/color_converter.py
 src/views/contrast_checker.py
 src/views/cron_converter.py
 src/views/formatter.py
@@ -67,6 +68,7 @@ src/ui/views/certificate_parser.blp
 src/ui/views/certificate_request_generator.blp
 src/ui/views/chmod_calculator.blp
 src/ui/views/colorblindness_simulator.blp
+src/ui/views/color_converter.blp
 src/ui/views/contrast_checker.blp
 src/ui/views/cron_converter.blp
 src/ui/views/formatter.blp

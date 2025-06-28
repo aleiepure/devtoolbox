@@ -32,6 +32,10 @@
   padding: 20px;
 }
 
+.color-row {
+  margin-right: -12px;
+}
+
 dropdown, dropdown box, dropdown > entry, dropdown > button {
   background-color: transparent;
   box-shadow: none;

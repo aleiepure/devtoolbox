@@ -239,6 +239,31 @@
             ]
         },
         {
+            "name": "python3-color-parser-py",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"color-parser-py==0.1.6\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/fa/6b/42b0419c32abc85622f10eef7d1780106cebd63c21c5696f7845dc156b48/color_parser_py-0.1.6-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+                    "sha256": "d97eae59dce0319f6b8a23851e01f6c62b2be6d163fa663c21051dd426246c5d",
+                    "only-arches": [
+                        "aarch64"
+                    ]
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/1a/42/4f93a170927db85b3501965e39716ff7fdc6f9d44b8a88d5016d2dfb26cf/color_parser_py-0.1.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+                    "sha256": "0adc83ad766717a1f4f140850adedd0a2365d50f814ab4c50feb673760e24321",
+                    "only-arches": [
+                        "x86_64"
+                    ]
+                }
+            ]
+        },
+        {
             "name": "python3-numpy",
             "buildsystem": "simple",
             "build-commands": [
