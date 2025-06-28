@@ -105,6 +105,14 @@ class Utils:
             return False
 
     @staticmethod
+    def is_base64url(text:str) -> bool:
+        try:
+            base64.urlsafe_b64decode(text)
+            return True
+        except Exception:
+            return False
+
+    @staticmethod
     def is_jwt_token(token:str) -> bool:
         try:
             jwt.decode(token, options={"verify_signature": False})

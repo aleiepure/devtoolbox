@@ -11,6 +11,7 @@ python-crontab==3.2.0
 croniter==4.0.0
 
 pyjwt==2.10.1
+cryptography==45.0.4
 
 sqlparse==0.5.3
 
