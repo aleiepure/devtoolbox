@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-03 18:02+0200\n"
+"POT-Creation-Date: 2025-06-28 18:38+0200\n"
 "PO-Revision-Date: 2024-04-24 06:07+0000\n"
 "Last-Translator: hugoalh <hugoalh@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -32,8 +32,11 @@ msgstr "觸手可及的開發工具"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
 msgid ""
-"JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;Regex;"
-"Markdown;Image;"
+"JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;Validate;Validator;Converter;"
+"Convert;Timestamp;bmp;gif;icns;jpeg;png;tiff;webp;Image;Base;Parser;CRON;"
+"GZip;Compressor;Decompressor;Hash;Regex;Compare;URL;Minify;Generator;"
+"Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;"
+"Lorem;Ipsum;"
 msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
@@ -79,7 +82,7 @@ msgstr "雜湊值產生器"
 msgid "Regex tester"
 msgstr "正規表達式測試器"
 
-#: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/window.py:332
+#: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/window.py:589
 #: src/ui/views/markdown_preview.blp:19
 msgid "Markdown Previewer"
 msgstr "Markdown 預覽器"
@@ -92,250 +95,1029 @@ msgstr "圖片轉換器"
 msgid "Much more..."
 msgstr "還有更多…"
 
-#: src/window.py:122 src/window.py:129 src/window.py:136 src/window.py:143
-#: src/window.py:150
+#: src/window.py:123 src/window.py:143 src/window.py:179 src/window.py:201
+#: src/window.py:220
 msgid "Converters"
 msgstr "轉換器"
 
-#: src/window.py:124 src/ui/views/json_yaml.blp:20
+#: src/window.py:125 src/ui/views/json_yaml.blp:20
 msgid "Convert JSON documents to YAML and vice-versa"
 msgstr "將 JSON 和 YAML 文件互相轉換"
 
-#: src/window.py:128 src/ui/views/timestamp.blp:38
+#: src/window.py:131 src/window.py:151 src/window.py:327
+msgctxt "search keyword"
+msgid "parse"
+msgstr ""
+
+#: src/window.py:132 src/window.py:157 src/window.py:186
+#, fuzzy
+msgctxt "search keyword"
+msgid "converter"
+msgstr "轉換器"
+
+#: src/window.py:133 src/window.py:158 src/window.py:187 src/window.py:210
+#: src/window.py:229 src/window.py:529
+#, fuzzy
+msgctxt "search keyword"
+msgid "convert"
+msgstr "轉換"
+
+#: src/window.py:134 src/window.py:150 src/window.py:159 src/window.py:615
+#, fuzzy
+msgctxt "search keyword"
+msgid "format"
+msgstr "格式"
+
+#: src/window.py:135 src/window.py:357 src/window.py:374 src/window.py:573
+#: src/window.py:585
+msgctxt "search keyword"
+msgid "document"
+msgstr ""
+
+#: src/window.py:136
+msgctxt "search keyword"
+msgid "spaces"
+msgstr ""
+
+#: src/window.py:137
+#, fuzzy
+msgctxt "search keyword"
+msgid "indentation"
+msgstr "縮排"
+
+#: src/window.py:138 src/window.py:325 src/window.py:339 src/window.py:354
+#: src/window.py:369 src/window.py:386 src/window.py:400
+msgctxt "search keyword"
+msgid "indent"
+msgstr ""
+
+#: src/window.py:142 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
 msgstr "時間戳"
 
-#: src/window.py:131 src/ui/views/timestamp.blp:20
+#: src/window.py:145 src/ui/views/timestamp.blp:20
 msgid "Convert UNIX timestamps to and from plain dates"
 msgstr "將 UNIX 時間戳與普通日期互相轉換"
 
-#: src/window.py:135
+#: src/window.py:148
+msgctxt "search keyword"
+msgid "epoch"
+msgstr ""
+
+#: src/window.py:149 src/window.py:211 src/window.py:230
+msgctxt "search keyword"
+msgid "time"
+msgstr ""
+
+#: src/window.py:152
+msgctxt "search keyword"
+msgid "datetime"
+msgstr ""
+
+#: src/window.py:153
+msgctxt "search keyword"
+msgid "calendar"
+msgstr ""
+
+#: src/window.py:154
+#, fuzzy
+msgctxt "search keyword"
+msgid "timestamp"
+msgstr "時間戳"
+
+#: src/window.py:156 src/window.py:212 src/window.py:231
+msgctxt "search keyword"
+msgid "date"
+msgstr ""
+
+#: src/window.py:160
+msgctxt "search keyword"
+msgid "short"
+msgstr ""
+
+#: src/window.py:161
+msgctxt "search keyword"
+msgid "long"
+msgstr ""
+
+#: src/window.py:164
+msgctxt "search keyword"
+msgid "year"
+msgstr ""
+
+#: src/window.py:165
+#, fuzzy
+msgctxt "search keyword"
+msgid "month"
+msgstr "月"
+
+#: src/window.py:166
+#, fuzzy
+msgctxt "search keyword"
+msgid "day"
+msgstr "五月"
+
+#: src/window.py:167
+msgctxt "search keyword"
+msgid "hour"
+msgstr ""
+
+#: src/window.py:168
+#, fuzzy
+msgctxt "search keyword"
+msgid "hours"
+msgstr "小時"
+
+#: src/window.py:169
+#, fuzzy
+msgctxt "search keyword"
+msgid "minute"
+msgstr "分鐘"
+
+#: src/window.py:170
+#, fuzzy
+msgctxt "search keyword"
+msgid "minutes"
+msgstr "分鐘"
+
+#: src/window.py:171
+#, fuzzy
+msgctxt "search keyword"
+msgid "second"
+msgstr "秒"
+
+#: src/window.py:172
+#, fuzzy
+msgctxt "search keyword"
+msgid "seconds"
+msgstr "秒"
+
+#: src/window.py:173
+msgctxt "search keyword"
+msgid "timezone"
+msgstr ""
+
+#: src/window.py:174
+#, fuzzy
+msgctxt "search keyword"
+msgid "now"
+msgstr "現在"
+
+#: src/window.py:178
 msgid "Number Bases"
 msgstr "基數"
 
-#: src/window.py:138 src/ui/views/base_converter.blp:20
+#: src/window.py:181 src/ui/views/base_converter.blp:20
 msgid "Convert numbers between bases"
 msgstr "在基數之間轉換數字"
 
-#: src/window.py:142 src/ui/views/cron_converter.blp:20
+#: src/window.py:184
+#, fuzzy
+msgctxt "search keyword"
+msgid "representation"
+msgstr "縮排"
+
+#: src/window.py:185
+msgctxt "search keyword"
+msgid "base"
+msgstr ""
+
+#: src/window.py:188
+#, fuzzy
+msgctxt "search keyword"
+msgid "number"
+msgstr "數字"
+
+#: src/window.py:189
+msgctxt "search keyword"
+msgid "binary"
+msgstr ""
+
+#: src/window.py:190
+msgctxt "search keyword"
+msgid "octal"
+msgstr ""
+
+#: src/window.py:191
+msgctxt "search keyword"
+msgid "decimal"
+msgstr ""
+
+#: src/window.py:192
+msgctxt "search keyword"
+msgid "hexadecimal"
+msgstr ""
+
+#: src/window.py:193
+msgctxt "search keyword"
+msgid "integer"
+msgstr ""
+
+#: src/window.py:200 src/ui/views/cron_converter.blp:20
 msgid "CRON Parser"
 msgstr "CRON 解析器"
 
-#: src/window.py:145 src/ui/views/cron_converter.blp:21
+#: src/window.py:203 src/ui/views/cron_converter.blp:21
 msgid "Convert CRON expressions to time and date"
 msgstr "將 CRON 表達式轉換為時間和日期"
 
-#: src/window.py:149 src/ui/views/reverse_cron.blp:19
+#: src/window.py:207 src/window.py:226
+msgctxt "search keyword"
+msgid "schedule"
+msgstr ""
+
+#: src/window.py:208 src/window.py:227
+msgctxt "search keyword"
+msgid "parser"
+msgstr ""
+
+#: src/window.py:209 src/window.py:228 src/window.py:546
+#, fuzzy
+msgctxt "search keyword"
+msgid "expression"
+msgstr "CRON 表達式"
+
+#: src/window.py:213 src/window.py:232
+msgctxt "search keyword"
+msgid "job"
+msgstr ""
+
+#: src/window.py:219 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
 msgstr "逆向 CRON"
 
-#: src/window.py:152 src/ui/views/reverse_cron.blp:20
+#: src/window.py:222 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
 msgstr "產生 CRON 表達式"
 
-#: src/window.py:159 src/window.py:166 src/window.py:173 src/window.py:180
-#: src/window.py:187
+#: src/window.py:241 src/window.py:255 src/window.py:268 src/window.py:284
+#: src/window.py:301
 #, fuzzy
 msgid "Encoders & Decoders"
 msgstr "HTML 編碼器和解碼器"
 
-#: src/window.py:161 src/ui/views/html_encoder.blp:20
+#: src/window.py:243 src/ui/views/html_encoder.blp:20
 msgid "Encode and decode special characters using the HTML format"
 msgstr "使用 HTML 格式對特殊字元進行編碼和解碼"
 
-#: src/window.py:168
+#: src/window.py:247
+msgctxt "search keyword"
+msgid "escape"
+msgstr ""
+
+#: src/window.py:249 src/window.py:356 src/window.py:371 src/window.py:572
+#: src/window.py:596
+msgctxt "search keyword"
+msgid "markup"
+msgstr ""
+
+#: src/window.py:250 src/window.py:262 src/window.py:291
+msgctxt "search keyword"
+msgid "text"
+msgstr ""
+
+#: src/window.py:257
 #, fuzzy
 msgid "Encode and decode base64 strings"
 msgstr "對網址中的特殊字元進行編碼和解碼"
 
-#: src/window.py:175 src/ui/views/url_encoder.blp:20
+#: src/window.py:261 src/window.py:292
+#, fuzzy
+msgctxt "search keyword"
+msgid "string"
+msgstr "字串"
+
+#: src/window.py:263 src/window.py:328 src/window.py:358 src/window.py:584
+msgctxt "search keyword"
+msgid "data"
+msgstr ""
+
+#: src/window.py:270 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
 msgstr "對網址中的特殊字元進行編碼和解碼"
 
-#: src/window.py:182
+#: src/window.py:273
+msgctxt "search keyword"
+msgid "url"
+msgstr ""
+
+#: src/window.py:274
+msgctxt "search keyword"
+msgid "unescape"
+msgstr ""
+
+#: src/window.py:275 src/window.py:373
+msgctxt "search keyword"
+msgid "web"
+msgstr ""
+
+#: src/window.py:276
+msgctxt "search keyword"
+msgid "link"
+msgstr ""
+
+#: src/window.py:277
+#, fuzzy
+msgctxt "search keyword"
+msgid "address"
+msgstr "地址"
+
+#: src/window.py:278
+msgctxt "search keyword"
+msgid "uri"
+msgstr ""
+
+#: src/window.py:279 src/window.py:341
+msgctxt "search keyword"
+msgid "query"
+msgstr ""
+
+#: src/window.py:286
 msgid "Compress and decompress files and texts using GZip"
 msgstr "使用 GZip 壓縮和解壓縮檔案和文字"
 
-#: src/window.py:189 src/ui/views/jwt_decoder.blp:20
-msgid "Decode JWT tokens to header and payload"
-msgstr "將 JWT 令牌解碼為標頭和負載"
+#: src/window.py:289
+msgctxt "search keyword"
+msgid "unarchive"
+msgstr ""
 
-#: src/window.py:196 src/window.py:203 src/window.py:210 src/window.py:217
-#: src/window.py:224 src/window.py:231 src/window.py:238 src/window.py:245
+#: src/window.py:290 src/window.py:498
+#, fuzzy
+msgctxt "search keyword"
+msgid "file"
+msgstr "全部檔案"
+
+#: src/window.py:293
+msgctxt "search keyword"
+msgid "zip"
+msgstr ""
+
+#: src/window.py:294
+msgctxt "search keyword"
+msgid "unzip"
+msgstr ""
+
+#: src/window.py:295
+#, fuzzy
+msgctxt "search keyword"
+msgid "decompression"
+msgstr "解壓縮"
+
+#: src/window.py:296
+#, fuzzy
+msgctxt "search keyword"
+msgid "decompressor"
+msgstr "解壓縮"
+
+#: src/window.py:303 src/ui/views/jwt_decoder.blp:20
+#, fuzzy
+msgid "Decode and encode JWT tokens"
+msgstr "對網址中的特殊字元進行編碼和解碼"
+
+#: src/window.py:306
+msgctxt "search keyword"
+msgid "json web token"
+msgstr ""
+
+#: src/window.py:307
+msgctxt "search keyword"
+msgid "header"
+msgstr ""
+
+#: src/window.py:308
+msgctxt "search keyword"
+msgid "payload"
+msgstr ""
+
+#: src/window.py:309
+msgctxt "search keyword"
+msgid "signature"
+msgstr ""
+
+#: src/window.py:310
+#, fuzzy
+msgctxt "search keyword"
+msgid "authentication"
+msgstr "縮排"
+
+#: src/window.py:311
+msgctxt "search keyword"
+msgid "authorization"
+msgstr ""
+
+#: src/window.py:312 src/window.py:449 src/window.py:678 src/window.py:696
+#, fuzzy
+msgctxt "search keyword"
+msgid "security"
+msgstr "嚴重性"
+
+#: src/window.py:319 src/window.py:333 src/window.py:348 src/window.py:363
+#: src/window.py:379 src/window.py:394 src/window.py:408 src/window.py:423
 #, fuzzy
 msgid "Formatters & Minifiers"
 msgstr "格式器"
 
-#: src/window.py:198 src/formatters/json.py:14
+#: src/window.py:321 src/formatters/json.py:14
 msgid "Format JSON documents"
 msgstr "格式化 JSON 文件"
 
-#: src/window.py:205 src/formatters/sql.py:14
+#: src/window.py:324 src/window.py:338 src/window.py:353 src/window.py:368
+#: src/window.py:385 src/window.py:399
+msgctxt "search keyword"
+msgid "pretty"
+msgstr ""
+
+#: src/window.py:326 src/window.py:340 src/window.py:355 src/window.py:370
+#: src/window.py:387 src/window.py:401
+msgctxt "search keyword"
+msgid "beautify"
+msgstr ""
+
+#: src/window.py:335 src/formatters/sql.py:14
 msgid "Format SQL documents"
 msgstr "格式化 SQL 文件"
 
-#: src/window.py:212 src/formatters/xml.py:16
+#: src/window.py:342
+msgctxt "search keyword"
+msgid "database"
+msgstr ""
+
+#: src/window.py:343
+msgctxt "search keyword"
+msgid "statement"
+msgstr ""
+
+#: src/window.py:350 src/formatters/xml.py:16
 msgid "Format XML documents"
 msgstr "格式化 XML 文件"
 
-#: src/window.py:219 src/formatters/html.py:15
+#: src/window.py:365 src/formatters/html.py:15
 msgid "Format HTML documents"
 msgstr "格式化 HTML 文件"
 
-#: src/window.py:226 src/formatters/js.py:15
+#: src/window.py:372 src/window.py:388 src/window.py:402 src/window.py:413
+#: src/window.py:429
+msgctxt "search keyword"
+msgid "minify"
+msgstr ""
+
+#: src/window.py:381 src/formatters/js.py:15
 msgid "Format JavaScript documents"
 msgstr "格式化 JavaScript 文件"
 
-#: src/window.py:233 src/formatters/css.py:14
+#: src/window.py:389 src/window.py:434
+#, fuzzy
+msgctxt "search keyword"
+msgid "code"
+msgstr "編碼"
+
+#: src/window.py:396 src/formatters/css.py:14
 msgid "Format CSS documents"
 msgstr "格式化 CSS 文件"
 
-#: src/window.py:240 src/formatters/css_minifier.py:15
+#: src/window.py:403 src/window.py:416
+msgctxt "search keyword"
+msgid "stylesheet"
+msgstr ""
+
+#: src/window.py:407 src/formatters/css_minifier.py:14
+msgid "CSS Minifier"
+msgstr ""
+
+#: src/window.py:410 src/formatters/css_minifier.py:15
 #, fuzzy
 msgid "Minify CSS documents"
 msgstr "格式化 CSS 文件"
 
-#: src/window.py:247
+#: src/window.py:414 src/window.py:430
+#, fuzzy
+msgctxt "search keyword"
+msgid "compress"
+msgstr "解壓縮"
+
+#: src/window.py:415
+#, fuzzy
+msgctxt "search keyword"
+msgid "style"
+msgstr "深色風格"
+
+#: src/window.py:417 src/window.py:431
+msgctxt "search keyword"
+msgid "reduce"
+msgstr ""
+
+#: src/window.py:418 src/window.py:432
+msgctxt "search keyword"
+msgid "size"
+msgstr ""
+
+#: src/window.py:422 src/formatters/js_minifier.py:14
+msgid "JavaScript Minifier"
+msgstr ""
+
+#: src/window.py:425
 #, fuzzy
 msgid "Minify JavaScript documents"
 msgstr "格式化 JavaScript 文件"
 
-#: src/window.py:254 src/window.py:261 src/window.py:268 src/window.py:275
-#: src/window.py:282 src/window.py:289
+#: src/window.py:433
+msgctxt "search keyword"
+msgid "script"
+msgstr ""
+
+#: src/window.py:440
+msgid "Hash"
+msgstr ""
+
+#: src/window.py:441 src/window.py:455 src/window.py:468 src/window.py:480
+#: src/window.py:493 src/window.py:508
 msgid "Generators"
 msgstr "產生器"
 
-#: src/window.py:256 src/ui/views/hash_generator.blp:20
+#: src/window.py:443 src/ui/views/hash_generator.blp:20
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
 msgstr "計算 MD5、SHA1、SHA256 和 SHA512 雜湊值並檢查完整性"
 
-#: src/window.py:263 src/ui/views/lorem_generator.blp:20
+#: src/window.py:446
+msgctxt "search keyword"
+msgid "checksum"
+msgstr ""
+
+#: src/window.py:447
+msgctxt "search keyword"
+msgid "digest"
+msgstr ""
+
+#: src/window.py:448
+#, fuzzy
+msgctxt "search keyword"
+msgid "generate"
+msgstr "產生"
+
+#: src/window.py:450 src/window.py:680 src/window.py:697
+msgctxt "search keyword"
+msgid "cryptography"
+msgstr ""
+
+#: src/window.py:457 src/ui/views/lorem_generator.blp:20
 msgid "Generate lorem ipsum placeholder text"
 msgstr "產生假文佔位符文字"
 
-#: src/window.py:270 src/ui/views/uuid_generator.blp:20
+#: src/window.py:460
+msgctxt "search keyword"
+msgid "dummy"
+msgstr ""
+
+#: src/window.py:461
+#, fuzzy
+msgctxt "search keyword"
+msgid "sample"
+msgstr "範例"
+
+#: src/window.py:462
+msgctxt "search keyword"
+msgid "filler"
+msgstr ""
+
+#: src/window.py:463
+msgctxt "search keyword"
+msgid "latin"
+msgstr ""
+
+#: src/window.py:470 src/ui/views/uuid_generator.blp:20
 msgid "Generate Universally Unique IDs (UUID)"
 msgstr "產生通用唯一識別碼（UUID）"
 
-#: src/window.py:274
+#: src/window.py:474
+#, fuzzy
+msgctxt "search keyword"
+msgid "identifier"
+msgstr "金鑰識別碼"
+
+#: src/window.py:475
+#, fuzzy
+msgctxt "search keyword"
+msgid "random"
+msgstr "隨機"
+
+#: src/window.py:479
 msgid "Random"
 msgstr "隨機"
 
-#: src/window.py:277 src/ui/views/random_generator.blp:20
+#: src/window.py:482 src/ui/views/random_generator.blp:20
 msgid "Generate random numbers and strings"
 msgstr "產生隨機數字和字串"
 
-#: src/window.py:281 src/ui/views/chmod_calculator.blp:19
+#: src/window.py:485
+msgctxt "search keyword"
+msgid "password"
+msgstr ""
+
+#: src/window.py:486
+msgctxt "search keyword"
+msgid "token"
+msgstr ""
+
+#: src/window.py:487
+msgctxt "search keyword"
+msgid "entropy"
+msgstr ""
+
+#: src/window.py:488
+msgctxt "search keyword"
+msgid "secure"
+msgstr ""
+
+#: src/window.py:492 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
 msgstr "Chmod 計算器"
 
-#: src/window.py:284 src/ui/views/chmod_calculator.blp:20
+#: src/window.py:495 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
 msgstr "計算數值以使用 chmod 修改權限"
 
-#: src/window.py:288
+#: src/window.py:499
+msgctxt "search keyword"
+msgid "unix"
+msgstr ""
+
+#: src/window.py:500
+msgctxt "search keyword"
+msgid "linux"
+msgstr ""
+
+#: src/window.py:501
+#, fuzzy
+msgctxt "search keyword"
+msgid "calculate"
+msgstr "要計算的雜湊值"
+
+#: src/window.py:502
+msgctxt "search keyword"
+msgid "mode"
+msgstr ""
+
+#: src/window.py:503
+msgctxt "search keyword"
+msgid "access"
+msgstr ""
+
+#: src/window.py:507
 msgid "QR Code"
 msgstr "QR 圖碼"
 
-#: src/window.py:291 src/ui/views/qrcode_generator.blp:20
+#: src/window.py:510 src/ui/views/qrcode_generator.blp:20
 msgid "Create custom QR Codes"
 msgstr "建立自訂 QR 圖碼"
 
-#: src/window.py:297 src/ui/views/text_inspector.blp:19
+#: src/window.py:513
+#, fuzzy
+msgctxt "search keyword"
+msgid "qrcode"
+msgstr "編碼"
+
+#: src/window.py:514
+#, fuzzy
+msgctxt "search keyword"
+msgid "barcode"
+msgstr "編碼"
+
+#: src/window.py:515
+#, fuzzy
+msgctxt "search keyword"
+msgid "image"
+msgstr "圖片"
+
+#: src/window.py:516
+msgctxt "search keyword"
+msgid "matrix"
+msgstr ""
+
+#: src/window.py:522 src/ui/views/text_inspector.blp:19
 msgid "Text Inspector & Case Converter"
 msgstr "文字檢查器和大小寫轉換器"
 
-#: src/window.py:298 src/window.py:305 src/window.py:312 src/window.py:319
-#: src/window.py:326 src/window.py:333 src/ui/views/regex_tester.blp:49
+#: src/window.py:523 src/window.py:541 src/window.py:553 src/window.py:566
+#: src/window.py:578 src/window.py:590 src/ui/views/regex_tester.blp:49
 #: src/ui/views/text_inspector.blp:107 src/ui/views/text_inspector.blp:164
 msgid "Text"
 msgstr "文字"
 
-#: src/window.py:300 src/ui/views/text_inspector.blp:20
+#: src/window.py:525 src/ui/views/text_inspector.blp:20
 msgid "View statistics about text and change sentence cases"
 msgstr "檢視有關文字和變更句子大小寫的統計信息"
 
-#: src/window.py:304
+#: src/window.py:528
+msgctxt "search keyword"
+msgid "analyze"
+msgstr ""
+
+#: src/window.py:530
+msgctxt "search keyword"
+msgid "uppercase"
+msgstr ""
+
+#: src/window.py:531
+msgctxt "search keyword"
+msgid "lowercase"
+msgstr ""
+
+#: src/window.py:532
+msgctxt "search keyword"
+msgid "capitalize"
+msgstr ""
+
+#: src/window.py:533
+#, fuzzy
+msgctxt "search keyword"
+msgid "count"
+msgstr "國家"
+
+#: src/window.py:534
+msgctxt "search keyword"
+msgid "words"
+msgstr ""
+
+#: src/window.py:535
+msgctxt "search keyword"
+msgid "characters"
+msgstr ""
+
+#: src/window.py:536
+msgctxt "search keyword"
+msgid "lines"
+msgstr ""
+
+#: src/window.py:540
 msgid "Regex Tester"
 msgstr "正規表達式測試器"
 
-#: src/window.py:307 src/ui/views/regex_tester.blp:20
+#: src/window.py:543 src/ui/views/regex_tester.blp:20
 msgid "Find matching strings inside a text"
 msgstr "尋找文字中的匹配字串"
 
-#: src/window.py:311 src/ui/views/text_diff.blp:19
+#: src/window.py:547
+msgctxt "search keyword"
+msgid "pattern"
+msgstr ""
+
+#: src/window.py:548
+#, fuzzy
+msgctxt "search keyword"
+msgid "search"
+msgstr "三月"
+
+#: src/window.py:552 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
 msgstr "文字差異"
 
-#: src/window.py:314 src/ui/views/text_diff.blp:20
+#: src/window.py:555 src/ui/views/text_diff.blp:20
 msgid "Analyze two texts and find differences"
 msgstr "分析兩個文字並找出差異"
 
-#: src/window.py:318 src/ui/views/xml_validator.blp:19
+#: src/window.py:558
+msgctxt "search keyword"
+msgid "difference"
+msgstr ""
+
+#: src/window.py:559
+#, fuzzy
+msgctxt "search keyword"
+msgid "compare"
+msgstr "解壓縮"
+
+#: src/window.py:560
+#, fuzzy
+msgctxt "search keyword"
+msgid "changes"
+msgstr "範圍"
+
+#: src/window.py:561
+msgctxt "search keyword"
+msgid "modification"
+msgstr ""
+
+#: src/window.py:565 src/ui/views/xml_validator.blp:19
 msgid "XML Scheme Validator"
 msgstr "XML 結構描述驗證器"
 
-#: src/window.py:321 src/ui/views/xml_validator.blp:20
+#: src/window.py:568 src/ui/views/xml_validator.blp:20
 msgid "Check an XML file against an XSD schema"
 msgstr "根據 XSD 結構描述檢查 XML 檔案"
 
-#: src/window.py:325 src/ui/views/json_validator.blp:19
+#: src/window.py:571 src/window.py:583
+#, fuzzy
+msgctxt "search keyword"
+msgid "validate"
+msgstr "無效！"
+
+#: src/window.py:577 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
 msgstr "JSON 結構描述驗證器"
 
-#: src/window.py:328 src/ui/views/json_validator.blp:20
+#: src/window.py:580 src/ui/views/json_validator.blp:20
 msgid "Check a JSON file against a JSON schema"
 msgstr "根據 JSON 結構描述檢查 JSON 檔案"
 
-#: src/window.py:335 src/ui/views/markdown_preview.blp:20
+#: src/window.py:592 src/ui/views/markdown_preview.blp:20
 msgid "Preview markdown code as you type"
 msgstr "鍵入時預覽 Markdown 程式碼"
 
-#: src/window.py:341 src/ui/views/contrast_checker.blp:19
-msgid "Contrast Checker"
-msgstr "對比度檢查器"
+#: src/window.py:595
+msgctxt "search keyword"
+msgid "render"
+msgstr ""
 
-#: src/window.py:342 src/window.py:349 src/window.py:356
+#: src/window.py:597
+msgctxt "search keyword"
+msgid "md"
+msgstr ""
+
+#: src/window.py:603 src/ui/views/color_converter.blp:16
+#, fuzzy
+msgid "Color Converter"
+msgstr "轉換器"
+
+#: src/window.py:604 src/window.py:622 src/window.py:633 src/window.py:648
 msgid "Graphics"
 msgstr "圖形"
 
-#: src/window.py:344 src/ui/views/contrast_checker.blp:20
+#: src/window.py:606 src/ui/views/color_converter.blp:17
+#, fuzzy
+msgid "Convert colors between formats"
+msgstr "在基數之間轉換數字"
+
+#: src/window.py:609
+msgctxt "search keyword"
+msgid "rgb"
+msgstr ""
+
+#: src/window.py:610
+msgctxt "search keyword"
+msgid "rgba"
+msgstr ""
+
+#: src/window.py:611
+msgctxt "search keyword"
+msgid "hex"
+msgstr ""
+
+#: src/window.py:612
+msgctxt "search keyword"
+msgid "hsl"
+msgstr ""
+
+#: src/window.py:613
+msgctxt "search keyword"
+msgid "hsv"
+msgstr ""
+
+#: src/window.py:614
+msgctxt "search keyword"
+msgid "cmyk"
+msgstr ""
+
+#: src/window.py:616
+#, fuzzy
+msgctxt "search keyword"
+msgid "conversion"
+msgstr "轉換器"
+
+#: src/window.py:617
+msgctxt "search keyword"
+msgid "palette"
+msgstr ""
+
+#: src/window.py:621 src/ui/views/contrast_checker.blp:19
+msgid "Contrast Checker"
+msgstr "對比度檢查器"
+
+#: src/window.py:624 src/ui/views/contrast_checker.blp:20
 msgid "Check a color combination for WCAG compliance"
 msgstr "檢查顏色組合是否符合 WCAG 標準"
 
-#: src/window.py:348
+#: src/window.py:627
+msgctxt "search keyword"
+msgid "accessibility"
+msgstr ""
+
+#: src/window.py:628
+msgctxt "search keyword"
+msgid "ratio"
+msgstr ""
+
+#: src/window.py:632
 msgid "Color Blindness"
 msgstr "色盲"
 
-#: src/window.py:351 src/ui/views/colorblindness_simulator.blp:20
+#: src/window.py:635 src/ui/views/colorblindness_simulator.blp:20
 msgid "Simulate color blindness in images"
 msgstr "在圖片中模擬色盲"
 
-#: src/window.py:355 src/ui/views/image_converter.blp:19
+#: src/window.py:638
+#, fuzzy
+msgctxt "search keyword"
+msgid "simulation"
+msgstr "正在載入模擬…"
+
+#: src/window.py:639
+msgctxt "search keyword"
+msgid "daltonism"
+msgstr ""
+
+#: src/window.py:640
+#, fuzzy
+msgctxt "search keyword"
+msgid "protanopia"
+msgstr "紅色盲"
+
+#: src/window.py:641
+#, fuzzy
+msgctxt "search keyword"
+msgid "deuteranopia"
+msgstr "綠色盲"
+
+#: src/window.py:642
+#, fuzzy
+msgctxt "search keyword"
+msgid "tritanopia"
+msgstr "黃藍色盲"
+
+#: src/window.py:643
+msgctxt "search keyword"
+msgid "vision"
+msgstr ""
+
+#: src/window.py:647 src/ui/views/image_converter.blp:19
 msgid "Image Format Converter"
 msgstr "圖片格式轉換器"
 
-#: src/window.py:358 src/ui/views/image_converter.blp:20
+#: src/window.py:650 src/ui/views/image_converter.blp:20
 msgid "Convert images to different formats"
 msgstr "將圖片轉換為不同格式"
 
-#: src/window.py:364 src/ui/views/certificate_parser.blp:19
+#: src/window.py:654
+msgctxt "search keyword"
+msgid "jpg"
+msgstr ""
+
+#: src/window.py:655
+msgctxt "search keyword"
+msgid "jpeg"
+msgstr ""
+
+#: src/window.py:656
+msgctxt "search keyword"
+msgid "png"
+msgstr ""
+
+#: src/window.py:657
+msgctxt "search keyword"
+msgid "bmp"
+msgstr ""
+
+#: src/window.py:658
+msgctxt "search keyword"
+msgid "gif"
+msgstr ""
+
+#: src/window.py:659
+msgctxt "search keyword"
+msgid "webp"
+msgstr ""
+
+#: src/window.py:660
+msgctxt "search keyword"
+msgid "picture"
+msgstr ""
+
+#: src/window.py:666 src/ui/views/certificate_parser.blp:19
 msgid "Certificate Parser"
 msgstr "憑證解析器"
 
-#: src/window.py:365 src/window.py:372 src/views/certificate_parser.py:90
+#: src/window.py:667 src/window.py:685 src/views/certificate_parser.py:90
 msgid "Certificates"
 msgstr "憑證"
 
-#: src/window.py:367 src/ui/views/certificate_parser.blp:20
+#: src/window.py:669 src/ui/views/certificate_parser.blp:20
 msgid "View certificates contents"
 msgstr "檢視憑證內容"
 
-#: src/window.py:371
+#: src/window.py:677 src/window.py:695
+msgctxt "search keyword"
+msgid "key"
+msgstr ""
+
+#: src/window.py:679
+msgctxt "search keyword"
+msgid "public key"
+msgstr ""
+
+#: src/window.py:684
 msgid "Certificate Signing Request"
 msgstr "憑證簽署請求"
 
-#: src/window.py:374 src/ui/views/certificate_request_generator.blp:23
+#: src/window.py:687 src/ui/views/certificate_request_generator.blp:23
 msgid "Generate certificate signing requests"
 msgstr "產生憑證簽署請求"
 
@@ -553,7 +1335,8 @@ msgstr ""
 msgid "Save key as"
 msgstr "將密鑰儲存為"
 
-#: src/views/chmod_calculator.py:30
+#: src/views/chmod_calculator.py:33 src/views/color_converter.py:54
+#: src/views/jwt_decoder.py:35
 msgid "Invalid value. Please check again"
 msgstr "無效數值。請再次檢查"
 
@@ -634,6 +1417,24 @@ msgid ""
 msgstr ""
 "JSON 結構描述有錯誤：\n"
 "{schema_error}"
+
+#: src/views/jwt_decoder.py:173
+msgid "Signature is Valid!"
+msgstr ""
+
+#: src/views/jwt_decoder.py:175
+msgid "The JWT signature was verified successfully."
+msgstr ""
+
+#: src/views/jwt_decoder.py:183
+msgid "Warning, Signature is Invalid!"
+msgstr ""
+
+#: src/views/jwt_decoder.py:186
+msgid ""
+"The JWT signature doesn't match the provided key. Please verify the key "
+"encoding or ensure the token was signed correctly."
+msgstr ""
 
 #: src/views/qrcode_generator.py:71 src/ui/views/qrcode_generator.blp:113
 #: src/ui/views/qrcode_generator.blp:122
@@ -774,6 +1575,15 @@ msgstr "星期五"
 msgid "Saturday"
 msgstr "星期六"
 
+#: src/views/timestamp.py:76
+msgid "Timezone"
+msgstr ""
+
+#: src/views/timestamp.py:77
+#, fuzzy
+msgid "Select the desired timezone"
+msgstr "選擇想要的操作"
+
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
 msgstr "XML 與提供的 XSD 結構描述符合。"
@@ -827,7 +1637,7 @@ msgstr "關於 Dev Toolbox (_A)"
 #: src/ui/about_dialog.blp:10
 #, fuzzy
 msgid ""
-"Copyright © 2022 - 2024 Alessandro Iepure\n"
+"Copyright © 2022 - 2025 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
 "版權所有 © 2022 - 2023 Alessandro Iepure\n"
@@ -961,10 +1771,11 @@ msgstr "使用 HTML 格式對特殊字元進行編碼和解碼"
 
 #: src/ui/views/base64_encoder.blp:30 src/ui/views/certificate_parser.blp:30
 #: src/ui/views/colorblindness_simulator.blp:31
-#: src/ui/views/contrast_checker.blp:30 src/ui/views/cron_converter.blp:31
-#: src/ui/views/formatter.blp:26 src/ui/views/gzip_compressor.blp:30
-#: src/ui/views/hash_generator.blp:31 src/ui/views/html_encoder.blp:30
-#: src/ui/views/image_converter.blp:31 src/ui/views/json_yaml.blp:30
+#: src/ui/views/color_converter.blp:27 src/ui/views/contrast_checker.blp:30
+#: src/ui/views/cron_converter.blp:31 src/ui/views/formatter.blp:26
+#: src/ui/views/gzip_compressor.blp:30 src/ui/views/hash_generator.blp:31
+#: src/ui/views/html_encoder.blp:30 src/ui/views/image_converter.blp:31
+#: src/ui/views/json_yaml.blp:30 src/ui/views/jwt_decoder.blp:29
 #: src/ui/views/lorem_generator.blp:31 src/ui/views/regex_tester.blp:30
 #: src/ui/views/text_inspector.blp:31 src/ui/views/timestamp.blp:30
 #: src/ui/views/url_encoder.blp:30 src/ui/views/uuid_generator.blp:31
@@ -1073,6 +1884,7 @@ msgid "Passphrase"
 msgstr "密碼"
 
 #: src/ui/views/certificate_request_generator.blp:80
+#: src/ui/views/jwt_decoder.blp:78
 msgid "Key"
 msgstr ""
 
@@ -1125,34 +1937,38 @@ msgid "Permissions"
 msgstr "權限"
 
 #: src/ui/views/chmod_calculator.blp:45
+msgid "Special"
+msgstr ""
+
+#: src/ui/views/chmod_calculator.blp:145
 msgid "Owner"
 msgstr "擁有者"
 
-#: src/ui/views/chmod_calculator.blp:58
+#: src/ui/views/chmod_calculator.blp:158
 msgid "Group"
 msgstr "群組"
 
-#: src/ui/views/chmod_calculator.blp:71
+#: src/ui/views/chmod_calculator.blp:171
 msgid "Others"
 msgstr "其他"
 
-#: src/ui/views/chmod_calculator.blp:84
+#: src/ui/views/chmod_calculator.blp:184
 msgid "Read"
 msgstr "讀取"
 
-#: src/ui/views/chmod_calculator.blp:97
+#: src/ui/views/chmod_calculator.blp:197
 msgid "Write"
 msgstr "寫入"
 
-#: src/ui/views/chmod_calculator.blp:110
+#: src/ui/views/chmod_calculator.blp:210
 msgid "Execute"
 msgstr "執行"
 
-#: src/ui/views/chmod_calculator.blp:251
+#: src/ui/views/chmod_calculator.blp:351
 msgid "Numeric value"
 msgstr ""
 
-#: src/ui/views/chmod_calculator.blp:263
+#: src/ui/views/chmod_calculator.blp:363
 msgid "Symbolic value"
 msgstr ""
 
@@ -1184,6 +2000,120 @@ msgstr "綠色盲"
 #: src/ui/views/colorblindness_simulator.blp:95
 msgid "Tritanopia"
 msgstr "黃藍色盲"
+
+#: src/ui/views/color_converter.blp:30
+#, fuzzy
+msgid "Format"
+msgstr "格式"
+
+#: src/ui/views/color_converter.blp:31
+#, fuzzy
+msgid "Output format for color values"
+msgstr "輸出格式"
+
+#: src/ui/views/color_converter.blp:36
+msgid "Web"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:37
+msgid "Web (Legacy)"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:38
+msgid "Percent"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:39
+msgid "Normalized"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:46
+msgid "Angle Unit"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:47
+msgid "Unit used for angle component"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:52
+msgid "Degrees"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:53
+msgid "Radians"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:54
+msgid "Gradians"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:55
+msgid "Turns"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:56
+#, fuzzy
+msgid "Follow Format"
+msgstr "格式"
+
+#: src/ui/views/color_converter.blp:62
+msgid "Bits"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:63
+msgid "Bits precision for color values"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:82
+msgid "Values"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:85 src/ui/views/color_converter.blp:97
+msgid "Color"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:103
+msgid "Hex"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:128
+#, fuzzy
+msgid "Red"
+msgstr "讀取"
+
+#: src/ui/views/color_converter.blp:136
+msgid "Green"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:144
+msgid "Blue"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:168 src/ui/views/color_converter.blp:208
+msgid "Hue"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:176 src/ui/views/color_converter.blp:216
+#, fuzzy
+msgid "Saturation"
+msgstr "星期六"
+
+#: src/ui/views/color_converter.blp:184
+msgid "Value"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:224
+#, fuzzy
+msgid "Lightness"
+msgstr "淺色風格"
+
+#: src/ui/views/color_converter.blp:234
+msgid "Alpha"
+msgstr ""
+
+#: src/ui/views/color_converter.blp:265
+msgid "HWB"
+msgstr ""
 
 #: src/ui/views/contrast_checker.blp:33 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
@@ -1346,6 +2276,11 @@ msgstr "轉換"
 msgid "converted-image"
 msgstr ""
 
+#: src/ui/views/json_validator.blp:49
+#, fuzzy
+msgid "JSON Schema"
+msgstr "JSON 結構描述驗證器"
+
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
 msgstr ""
@@ -1363,18 +2298,55 @@ msgid "YAML → JSON"
 msgstr ""
 
 #: src/ui/views/jwt_decoder.blp:19
-msgid "JWT tokens decoder"
+#, fuzzy
+msgid "JWT Decode & Encode"
+msgstr "HTML 編碼器和解碼器"
+
+#: src/ui/views/jwt_decoder.blp:32
+msgid "Verify Signature"
 msgstr ""
 
-#: src/ui/views/jwt_decoder.blp:29
+#: src/ui/views/jwt_decoder.blp:33
+msgid "Verify signature or sign JWT"
+msgstr ""
+
+#: src/ui/views/jwt_decoder.blp:41
+msgid "Off"
+msgstr ""
+
+#: src/ui/views/jwt_decoder.blp:46
+msgid "Symmetric"
+msgstr ""
+
+#: src/ui/views/jwt_decoder.blp:51
+msgid "Asymmetric"
+msgstr ""
+
+#: src/ui/views/jwt_decoder.blp:57
+msgid "Key Encoding"
+msgstr ""
+
+#: src/ui/views/jwt_decoder.blp:58
+msgid "Select the encoding of the key"
+msgstr ""
+
+#: src/ui/views/jwt_decoder.blp:99
+msgid "Public Key (PEM)"
+msgstr ""
+
+#: src/ui/views/jwt_decoder.blp:107
+msgid "Private Key (PEM)"
+msgstr ""
+
+#: src/ui/views/jwt_decoder.blp:120
 msgid "Token"
 msgstr ""
 
-#: src/ui/views/jwt_decoder.blp:47
+#: src/ui/views/jwt_decoder.blp:139
 msgid "Header"
 msgstr ""
 
-#: src/ui/views/jwt_decoder.blp:53
+#: src/ui/views/jwt_decoder.blp:147
 msgid "Payload"
 msgstr ""
 
@@ -2012,17 +2984,9 @@ msgstr ""
 msgid "Type CSS here"
 msgstr ""
 
-#: src/formatters/css_minifier.py:14
-msgid "CSS Minifier"
-msgstr ""
-
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
-msgstr ""
-
-#: src/formatters/js_minifier.py:14
-msgid "JavaScript Minifier"
 msgstr ""
 
 #: src/formatters/js_minifier.py:15
@@ -2033,6 +2997,9 @@ msgstr "格式化 CSS 文件"
 #: src/formatters/js_minifier.py:17
 msgid "Type JS code here"
 msgstr ""
+
+#~ msgid "Decode JWT tokens to header and payload"
+#~ msgstr "將 JWT 令牌解碼為標頭和負載"
 
 #~ msgid "Cancel"
 #~ msgstr "取消"
@@ -2046,9 +3013,6 @@ msgstr ""
 #, python-brace-format
 #~ msgid "Successfully saved as {save_path}"
 #~ msgstr "成功儲存為 {save_path}"
-
-#~ msgid "Range"
-#~ msgstr "範圍"
 
 #~ msgid "Range in which to generate"
 #~ msgstr "產生範圍"
