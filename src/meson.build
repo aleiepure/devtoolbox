@@ -108,6 +108,7 @@ devtoolbox_sources = [
   'main.py',
   'window.py',
   'utils.py',
+  'tools.py',
 ]
 
 install_data(devtoolbox_sources, install_dir: moduledir)

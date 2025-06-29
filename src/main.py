@@ -2,33 +2,24 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-import sys
-import gi
-from pathlib import Path
+from typing import List, Tuple
 
-gi.require_version("Gtk", "4.0")
-gi.require_version("Adw", "1")
-gi.require_version("GtkSource", "5")
-gi.require_version('WebKit', '6.0')
-gi.require_version('Gcr', '4')
-
-from gi.repository import Gtk, Gio, Adw, GObject, GtkSource, GLib
-
-from .window import DevtoolboxWindow
-
-from .widgets.utility_title import UtilityTitle
-from .widgets.text_area import TextArea
-from .widgets.file_view import FileView
-from .widgets.text_file_area import TextFileArea
-from .widgets.sidebar_item import SidebarItem
-from .widgets.spin_area import SpinArea
-from .widgets.date_area import DateArea
-from .widgets.entry_row import EntryRow
-from .widgets.webview_area import WebviewArea
-from .widgets.image_area import ImageArea
+from .tools import TOOLS_METADATA
 from .widgets.theme_switcher import ThemeSwitcher
-
-import shutil
+from .widgets.image_area import ImageArea
+from .widgets.webview_area import WebviewArea
+from .widgets.entry_row import EntryRow
+from .widgets.date_area import DateArea
+from .widgets.spin_area import SpinArea
+from .widgets.sidebar_item import SidebarItem
+from .widgets.text_file_area import TextFileArea
+from .widgets.file_view import FileView
+from .widgets.text_area import TextArea
+from .widgets.utility_title import UtilityTitle
+from .window import DevtoolboxWindow
+from gi.repository import Gtk, Gio, Adw, GObject, GtkSource, GLib
+import sys
+from pathlib import Path
 
 
 class DevtoolboxApplication(Adw.Application):
@@ -53,11 +44,62 @@ class DevtoolboxApplication(Adw.Application):
     ]
 
     def __init__(self, version, debug):
-        super().__init__(application_id="me.iepure.devtoolbox", flags=Gio.ApplicationFlags.FLAGS_NONE)
+        super().__init__(
+            application_id="me.iepure.devtoolbox",
+            flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE
+        )
 
-        self.version = version
-        self.debug = debug
-        # Adw.StyleManager.get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK)
+        self._version = version
+        self._debug = debug
+
+        self.add_main_option(
+            'help',
+            ord('h'),
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.NONE,
+            "Show this help message",
+            None
+        )
+        self.add_main_option(
+            'version',
+            ord('v'),
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.NONE,
+            "Show version information",
+            None
+        )
+        self.add_main_option(
+            'list',
+            ord('l'),
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.NONE,
+            "List available tools",
+            None
+        )
+        self.add_main_option(
+            'tool',
+            ord('t'),
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.STRING,
+            "Open a specific tool",
+            'TOOL_NAME'
+        )
+        self.add_main_option(
+            'search',
+            ord('s'),
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.STRING,
+            "Search for tools",
+            'SEARCH_TERMS'
+        )
+        self.add_main_option(
+            'search-provider',
+            0,
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.NONE,
+            "Run as search provider",
+            None
+        )
 
         self.create_action("quit", self.on_quit_action, ["<primary>q"])
         self.create_action("about", self.on_about_action)
@@ -74,20 +116,22 @@ class DevtoolboxApplication(Adw.Application):
         """
         win = self.props.active_window
         if not win:
-            win = DevtoolboxWindow(self.debug, application=self)
+            win = DevtoolboxWindow(self._debug, application=self)
             win.connect("close-request", self._on_close_request)
         win.present()
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
-        builder = Gtk.Builder.new_from_resource("/me/iepure/devtoolbox/ui/about_dialog.ui")
+        builder = Gtk.Builder.new_from_resource(
+            "/me/iepure/devtoolbox/ui/about_dialog.ui")
         about_dialog = builder.get_object("about_dialog")
-        
-        if self.debug == "True":
-            about_dialog.set_application_name(f"{about_dialog.get_application_name()}\n(Development snapshot)")
+
+        if self._debug == "True":
+            about_dialog.set_application_name(
+                f"{about_dialog.get_application_name()}\n(Development snapshot)")
             about_dialog.set_application_icon("me.iepure.devtoolbox")
-        
-        about_dialog.set_version(self.version)
+
+        about_dialog.set_version(self._version)
         about_dialog.add_credit_section("Contributors", [
             "Rafael Fontenelle https://github.com/rffontenelle",
             "Sabri Ünal https://github.com/sabriunal",
@@ -125,14 +169,14 @@ class DevtoolboxApplication(Adw.Application):
             "John Peter Sa https://github.com/johnpetersa19",
             "Nino678190 https://github.com/Nino678190",
             "Sebastian K. https://github.com/spktkpkt",
-            "PonyLucky https://github.com/PonyLucky"
+            "PonyLucky https://github.com/PonyLucky",
         ])
         about_dialog.present(self.props.active_window)
 
     def on_quit_action(self, widget, _):
         # Clean up temp files
-        
-        tmp_files =  Path(GLib.get_tmp_dir()).glob('me.iepure.devtoolbox*')
+
+        tmp_files = Path(GLib.get_tmp_dir()).glob('me.iepure.devtoolbox*')
         for tmp_file in tmp_files:
             tmp_file.unlink(missing_ok=True)
         self.quit()
@@ -146,14 +190,113 @@ class DevtoolboxApplication(Adw.Application):
               activated
             shortcuts: an optional list of accelerators
         """
+        
         action = Gio.SimpleAction.new(name, None)
         action.connect("activate", callback)
         self.add_action(action)
         if shortcuts:
             self.set_accels_for_action(f"app.{name}", shortcuts)
-            
+
     def _on_close_request(self, user_data: GObject.GPointer):
         self.on_quit_action(None, None)
+
+    def do_command_line(self, command_line):
+        """Handle command line arguments from primary instance."""
+
+        arguments = command_line.get_arguments()
+
+        tool_name = None
+        search_terms = None
+
+        # Parse arguments
+        i = 0
+        while i < len(arguments):
+            arg = arguments[i]
+            if arg == '--tool' or arg == '-t':
+                if i + 1 < len(arguments):
+                    tool_name = arguments[i + 1]
+                i += 2
+            elif arg == '--search' or arg == '-s':
+                if i + 1 < len(arguments):
+                    search_terms = arguments[i + 1]
+                i += 2
+            elif arg == '--search-provider':
+                return self._run_search_provider()
+            else:
+                i += 1
+
+        # Always activate first to ensure window exists
+        self.activate()
+        window = self.get_active_window()
+
+        if window:
+            success = self._handle_parsed_args(tool_name, search_terms, window)
+
+        return 0 if success else 1
+
+    def _handle_parsed_args(self, tool_name, search_terms, window) -> bool:
+        """Handle parsed command line arguments when window is ready."""
+
+        if tool_name:
+            if not window.open_tool(tool_name):
+                print(f"Tool '{tool_name}' not found. Use '--list (-l)' to see available tools.")
+                return False
+            else:
+                print(f"Opened tool: {tool_name}")
+        elif search_terms:
+            window.activate_search(search_terms)
+            
+        return True
+
+    def do_local_command_line(self, arguments: List[str]) -> Tuple[bool, List[str], int]:
+        """Handle command line arguments."""
+
+        if '--help' in arguments or '-h' in arguments:
+            arguments.remove('--help' if '--help' in arguments else '-h')
+            print("Usage: devtoolbox [options]\n"
+                  "Options:\n"
+                  "  -h, --help                   Show this help message\n"
+                  "  -v, --version                Show version information\n"
+                  "  -l, --list                   List available tools\n"
+                  "  -t, --tool <TOOL_NAME>       Open a specific tool\n"
+                  "  -s, --search <SEARCH_TERMS>  Search for tools\n"
+                  "  --search-provider            Run as search provider")
+            return True, arguments, 0
+
+        elif '--version' in arguments or '-v' in arguments:
+            arguments.remove('--version' if '--version' in arguments else '-v')
+            print(f"Devtoolbox version {self._version}")
+            return True, arguments, 0
+
+        elif '--list' in arguments or '-l' in arguments:
+            arguments.remove('--list' if '--list' in arguments else '-l')
+            print("Available tools:")
+            for tool_id, tool_meta in TOOLS_METADATA.items():
+                print(f"  {tool_id}: {tool_meta["title"]}")
+            return True, arguments, 0
+
+        elif '--search-provider' in arguments:
+            try:
+                arguments.remove('--search-provider')
+                exit_status = self._run_search_provider()
+                return True, arguments, exit_status
+            except Exception as e:
+                print(f"Search provider error: {e}")
+                return True, arguments, 1
+
+        # For all other arguments, let the primary instance handle them
+        return False, arguments, 0
+
+    def _run_search_provider(self):
+        """Run the search provider."""
+        try:
+            print("Starting search provider...")
+            # TODO: implement the search provider logic
+            return 0
+        except Exception as e:
+            print(f"Search provider error: {e}")
+            return 1
+
 
 def main(version, debug):
     """The application's entry point."""
