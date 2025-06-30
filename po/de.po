@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-06-28 18:38+0200\n"
-"PO-Revision-Date: 2025-01-13 12:00+0000\n"
+"PO-Revision-Date: 2025-07-01 05:01+0000\n"
 "Last-Translator: Nino678190 <superwauzi@gmx.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -2028,13 +2028,12 @@ msgid "Format"
 msgstr "Format"
 
 #: src/ui/views/color_converter.blp:31
-#, fuzzy
 msgid "Output format for color values"
-msgstr "Ausgabeformat"
+msgstr "Ausgabeformat für Farbwerte"
 
 #: src/ui/views/color_converter.blp:36
 msgid "Web"
-msgstr ""
+msgstr "Internet"
 
 #: src/ui/views/color_converter.blp:37
 msgid "Web (Legacy)"
@@ -2042,15 +2041,15 @@ msgstr ""
 
 #: src/ui/views/color_converter.blp:38
 msgid "Percent"
-msgstr ""
+msgstr "Prozent"
 
 #: src/ui/views/color_converter.blp:39
 msgid "Normalized"
-msgstr ""
+msgstr "Normalisierend"
 
 #: src/ui/views/color_converter.blp:46
 msgid "Angle Unit"
-msgstr ""
+msgstr "Winkelmaß"
 
 #: src/ui/views/color_converter.blp:47
 msgid "Unit used for angle component"
@@ -2058,11 +2057,12 @@ msgstr ""
 
 #: src/ui/views/color_converter.blp:52
 msgid "Degrees"
-msgstr ""
+msgstr "Grad"
 
 #: src/ui/views/color_converter.blp:53
+#, fuzzy
 msgid "Radians"
-msgstr ""
+msgstr "Radiant"
 
 #: src/ui/views/color_converter.blp:54
 msgid "Gradians"
