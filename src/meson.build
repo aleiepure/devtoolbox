@@ -1,4 +1,4 @@
-# Copyright (C) 2022 - 2023 Alessandro Iepure
+# Copyright (C) 2022 - 2025 Alessandro Iepure
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -108,6 +108,8 @@ devtoolbox_sources = [
   'main.py',
   'window.py',
   'utils.py',
+  'tools.py',
+  'search_provider.py',
 ]
 
 install_data(devtoolbox_sources, install_dir: moduledir)

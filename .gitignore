@@ -1,4 +1,4 @@
-# Copyright (C) 2022 - 2023 Alessandro Iepure
+# Copyright (C) 2022 - 2025 Alessandro Iepure
 #
 # SPDX-License-Identifier: CC0-1.0
 
@@ -11,3 +11,6 @@ _build/
 .pre-commit-config.yaml
 me.iepure.devtoolbox-release.json
 po/*.mo
+
+*.flatpak
+*.flatpakref

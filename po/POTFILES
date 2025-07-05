@@ -5,6 +5,7 @@ data/me.iepure.devtoolbox.gschema.xml
 src/main.py
 src/window.py
 src/utils.py
+src/tools.py
 
 src/widgets/date_area.py
 src/widgets/entry_row.py
