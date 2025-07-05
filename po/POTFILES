@@ -6,6 +6,7 @@ src/main.py
 src/window.py
 src/utils.py
 src/tools.py
+src/search_provider.py
 
 src/widgets/date_area.py
 src/widgets/entry_row.py
