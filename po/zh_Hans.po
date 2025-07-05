@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-06-28 18:38+0200\n"
-"PO-Revision-Date: 2025-02-17 16:38+0000\n"
-"Last-Translator: 复予 <clonewith@qq.com>\n"
+"PO-Revision-Date: 2025-06-30 01:02+0000\n"
+"Last-Translator: Broken Cloud <jgbsxx20130315@gmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/devtoolbox/devtoolbox/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.10.1-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -37,6 +37,10 @@ msgid ""
 "Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;"
 "Lorem;Ipsum;"
 msgstr ""
+"JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;验证;验证器;转换器;转换;时间戳;bmp;"
+"gif;icns;jpeg;png;tiff;webp;图像;Base;解析器;CRON;GZip;压缩;解压;Hash;正则表"
+"达式;对比;链接;Minify;生成器;生成;UUID;随机数;二维码;chmod;对比度;颜色;Text;D"
+"iff;Case;Markdown;预览;Lorem;Ipsum;"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -106,7 +110,7 @@ msgstr "JSON和YAML文档互相转换"
 #: src/window.py:131 src/window.py:151 src/window.py:327
 msgctxt "search keyword"
 msgid "parse"
-msgstr ""
+msgstr "解析"
 
 #: src/window.py:132 src/window.py:157 src/window.py:186
 #, fuzzy
@@ -131,12 +135,12 @@ msgstr "格式"
 #: src/window.py:585
 msgctxt "search keyword"
 msgid "document"
-msgstr ""
+msgstr "文档"
 
 #: src/window.py:136
 msgctxt "search keyword"
 msgid "spaces"
-msgstr ""
+msgstr "空格"
 
 #: src/window.py:137
 #, fuzzy
@@ -148,7 +152,7 @@ msgstr "缩进"
 #: src/window.py:369 src/window.py:386 src/window.py:400
 msgctxt "search keyword"
 msgid "indent"
-msgstr ""
+msgstr "缩进"
 
 #: src/window.py:142 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
@@ -161,22 +165,22 @@ msgstr "将 UNIX 时间戳与纯日期相互转换"
 #: src/window.py:148
 msgctxt "search keyword"
 msgid "epoch"
-msgstr ""
+msgstr "周期"
 
 #: src/window.py:149 src/window.py:211 src/window.py:230
 msgctxt "search keyword"
 msgid "time"
-msgstr ""
+msgstr "时间"
 
 #: src/window.py:152
 msgctxt "search keyword"
 msgid "datetime"
-msgstr ""
+msgstr "时间"
 
 #: src/window.py:153
 msgctxt "search keyword"
 msgid "calendar"
-msgstr ""
+msgstr "日历"
 
 #: src/window.py:154
 #, fuzzy
@@ -187,7 +191,7 @@ msgstr "时间戳"
 #: src/window.py:156 src/window.py:212 src/window.py:231
 msgctxt "search keyword"
 msgid "date"
-msgstr ""
+msgstr "日期"
 
 #: src/window.py:160
 msgctxt "search keyword"
