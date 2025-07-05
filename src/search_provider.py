@@ -12,6 +12,7 @@ from .tools import TOOLS_METADATA, search_tools
 class DevToolboxSearchProvider(GObject.Object):
     """GNOME Shell search provider for Dev Toolbox."""
 
+    IDLE_TIMEOUT = 10  # 30 seconds of inactivity
     CACHE_DURATION = 300  # 5 minutes
 
     def __init__(self):
@@ -20,6 +21,8 @@ class DevToolboxSearchProvider(GObject.Object):
         self._cache_timestamps = {}
         self._bus = None
         self._registration_id = None
+        self._idle_timeout_id = None
+        self._main_loop = None
 
         # D-Bus interface
         self.interface_xml = """
@@ -50,6 +53,29 @@ class DevToolboxSearchProvider(GObject.Object):
             </interface>
         </node>
         """
+
+    def _reset_idle_timer(self):
+        """Reset the idle timeout timer"""
+        
+        # Cancel existing timer
+        if self._idle_timeout_id:
+            GLib.source_remove(self._idle_timeout_id)
+        
+        # Start new timer
+        self._idle_timeout_id = GLib.timeout_add_seconds(
+            self.IDLE_TIMEOUT, 
+            self._on_idle_timeout
+        )
+        
+        print(f"DEBUG: Reset idle timer to {self.IDLE_TIMEOUT} seconds")
+
+    def _on_idle_timeout(self):
+        """Called when idle timeout expires"""
+        
+        print("DEBUG: Idle timeout reached, shutting down search provider...")
+        if self._main_loop:
+            self._main_loop.quit()
+        return False  # No repeat
 
     def _search_with_cache(self, terms: List[str]) -> List[str]:
         """Search with caching for performance"""
@@ -92,18 +118,22 @@ class DevToolboxSearchProvider(GObject.Object):
         """GNOME Shell SearchProvider2 interface method"""
 
         print(f"DEBUG: GetInitialResultSet called with: {terms}")
+        self._reset_idle_timer()
         return self._search_with_cache(terms)
 
     def GetSubsearchResultSet(self, previous_results: List[str], terms: List[str]) -> List[str]:
         """GNOME Shell SearchProvider2 interface method"""
 
         print(f"DEBUG: GetSubsearchResultSet called with: {terms}")
+        self._reset_idle_timer()
         return self._search_with_cache(terms)
 
     def GetResultMetas(self, identifiers: List[str]) -> List[Dict[str, Any]]:
         """GNOME Shell SearchProvider2 interface method"""
 
         print(f"DEBUG: GetResultMetas called with: {identifiers}")
+        self._reset_idle_timer()
+        
         metas = []
         for tool_id in identifiers:
             if tool_id in TOOLS_METADATA:
@@ -123,9 +153,10 @@ class DevToolboxSearchProvider(GObject.Object):
 
         print(
             f"DEBUG: ActivateResult called - tool: {identifier}, terms: {terms}")
+        self._reset_idle_timer()
+        
         # Launch app with specific tool
         try:
-            # Use Popen instead of run() to launch asynchronously
             subprocess.run(
                 [
                     '/app/bin/devtoolbox',
@@ -141,7 +172,8 @@ class DevToolboxSearchProvider(GObject.Object):
         """GNOME Shell SearchProvider2 interface method"""
 
         print(f"DEBUG: LaunchSearch called with: {terms}")
-        # Launch app with search active
+        self._reset_idle_timer()
+        
         try:
             subprocess.run(
                 [
@@ -239,9 +271,11 @@ class DevToolboxSearchProvider(GObject.Object):
             print(f"DEBUG: Name ownership ID: {name_id}")
             print("DEBUG: Search provider service started. Waiting for requests...")
 
+            self._reset_idle_timer()
+
             # Run the main loop
-            loop = GLib.MainLoop()
-            loop.run()
+            self._main_loop = GLib.MainLoop()
+            self._main_loop.run()
 
         except Exception as e:
             print(f"ERROR: Failed to start search provider: {e}")
