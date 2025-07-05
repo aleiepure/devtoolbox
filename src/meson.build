@@ -109,6 +109,7 @@ devtoolbox_sources = [
   'window.py',
   'utils.py',
   'tools.py',
+  'search_provider.py',
 ]
 
 install_data(devtoolbox_sources, install_dir: moduledir)

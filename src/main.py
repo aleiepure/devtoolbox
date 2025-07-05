@@ -17,6 +17,7 @@ from .widgets.file_view import FileView
 from .widgets.text_area import TextArea
 from .widgets.utility_title import UtilityTitle
 from .window import DevtoolboxWindow
+from .search_provider import DevToolboxSearchProvider
 from gi.repository import Gtk, Gio, Adw, GObject, GtkSource, GLib
 import sys
 from pathlib import Path
@@ -291,8 +292,8 @@ class DevtoolboxApplication(Adw.Application):
         """Run the search provider."""
         try:
             print("Starting search provider...")
-            # TODO: implement the search provider logic
-            return 0
+            search_provider = DevToolboxSearchProvider()
+            return search_provider.run()
         except Exception as e:
             print(f"Search provider error: {e}")
             return 1

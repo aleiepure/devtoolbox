@@ -11,3 +11,6 @@ _build/
 .pre-commit-config.yaml
 me.iepure.devtoolbox-release.json
 po/*.mo
+
+*.flatpak
+*.flatpakref

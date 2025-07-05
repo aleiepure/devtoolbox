@@ -49,4 +49,20 @@ if compile_schemas.found()
        args: ['--strict', '--dry-run', meson.current_source_dir()])
 endif
 
+# Search provider service file
+configure_file(
+  input: 'me.iepure.devtoolbox.SearchProvider.service.in',
+  output: 'me.iepure.devtoolbox.SearchProvider.service',
+  configuration: configuration_data({
+    'bindir': join_paths(get_option('prefix'), get_option('bindir'))
+  }),
+  install: true,
+  install_dir: join_paths(get_option('datadir'), 'dbus-1', 'services')
+)
+
+# Search provider ini file
+install_data('me.iepure.devtoolbox-search-provider.ini',
+  install_dir: join_paths(get_option('datadir'), 'gnome-shell', 'search-providers')
+)
+
 subdir('icons')

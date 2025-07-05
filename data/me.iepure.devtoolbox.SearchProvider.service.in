@@ -1,0 +1,8 @@
+# Copyright (C) 2022 - 2025 Alessandro Iepure
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+[D-BUS Service]
+Name=me.iepure.devtoolbox.SearchProvider
+Exec=@bindir@/devtoolbox --search-provider
+ObjectPath=/me/iepure/devtoolbox/SearchProvider
