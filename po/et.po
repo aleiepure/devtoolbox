@@ -82,7 +82,7 @@ msgstr "Regulaaravaldise testija"
 #: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/tools.py:450
 #: src/ui/views/markdown_preview.blp:19
 msgid "Markdown Previewer"
-msgstr ""
+msgstr "Markdowni eelvaade"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
@@ -126,17 +126,17 @@ msgstr "vorming"
 #: src/tools.py:446
 msgctxt "search keyword"
 msgid "document"
-msgstr ""
+msgstr "dokument"
 
 #: src/tools.py:25
 msgctxt "search keyword"
 msgid "spaces"
-msgstr ""
+msgstr "tühikud"
 
 #: src/tools.py:26
 msgctxt "search keyword"
 msgid "indentation"
-msgstr ""
+msgstr "taandread"
 
 #: src/tools.py:27 src/tools.py:204 src/tools.py:217 src/tools.py:231
 #: src/tools.py:245 src/tools.py:261 src/tools.py:274
@@ -961,7 +961,7 @@ msgstr "Värvipimedus"
 
 #: src/tools.py:493 src/ui/views/colorblindness_simulator.blp:20
 msgid "Simulate color blindness in images"
-msgstr ""
+msgstr "Simuleeri pildisel värvipimedust"
 
 #: src/tools.py:495
 msgctxt "search keyword"
@@ -1905,7 +1905,7 @@ msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:19
 msgid "Color Blindness Simulator"
-msgstr "simuleerima"
+msgstr "Värvipimeduse simulaator"
 
 #: src/ui/views/colorblindness_simulator.blp:34
 msgid "Severity"
@@ -2112,7 +2112,7 @@ msgstr ""
 
 #: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:52
 msgid "Indentations"
-msgstr ""
+msgstr "indentation"
 
 #: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:53
 msgid "Number of spaces used for indentation"
