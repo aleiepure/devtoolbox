@@ -86,11 +86,9 @@ SPDX-License-Identifier: CC0-1.0
           <li>Chmod: added support for special bits (<code>setuid</code>, <code>setgid</code>, and <code>
             sticky</code>) (thanks @Flachz)</li>
           <li>Improved search: Dev Toolbox now has more keywords, improving discoverability in the
-            OS and app stores
-            (thanks @freeducks-debug)</li>
+            OS and app stores (thanks @freeducks-debug)</li>
           <li>Improved in-app search: Tools now match not just their names and descriptions, but
-            also
-            tool-specific keywords</li>
+            also tool-specific keywords</li>
           <li>Dev Toolbox is now a GNOME search provider: search and launch tools directly from
             the Activities screen</li>
           <li>Updated translations</li>
