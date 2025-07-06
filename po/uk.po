@@ -6,27 +6,30 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-07-06 18:57+0000\n"
+"Last-Translator: freeducks-debug <209897795+freeducks-"
+"debug@users.noreply.github.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/devtoolbox/"
+"devtoolbox/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
 msgid "@app-name@"
-msgstr ""
+msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
 msgid "Dev tools at your fingertips"
-msgstr ""
+msgstr "Інструменти розробника під рукою"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
 msgid ""
@@ -36,6 +39,8 @@ msgid ""
 "Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;"
 "Lorem;Ipsum;"
 msgstr ""
+"JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;Validate;Validator;Converter;Convert;Timestamp;bmp;gif;icns;jpeg;png;tiff;webp;Image;Base;Parser;CRON;GZip;Compressor;Decompressor;Hash;Regex;Compare;URL;Minify;Generator;Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;Lorem;Ipsum;джейсон;хтмл;юмл;ксс;джаваскріпт;валідація;перевірка;конвертація;крон;час;гіфка;ікнока;джейпех;пнг;тіф;вебп;зображення;парсер;компрессор;вирази;регулярні;посилання;мініфікація;генератор;рандом;випадково;кьюар;контраст;колір;текст;діф;різниця;маркдовн;маркдавн;лорем;іпсун;іпсум;"
+""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -43,6 +48,9 @@ msgid ""
 "again that website of which you don't recall the name just for a quick "
 "conversion, this is the right app for you."
 msgstr ""
+"Якщо вам набридло постійно шукати потрібні інструменти в інтернеті, або "
+"знову відшукати той самий сайт (назву якого ви не пам'ятаєте) для швидкої "
+"конвертації - цей додаток для вас!"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid ""
