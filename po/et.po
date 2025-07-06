@@ -806,7 +806,7 @@ msgstr ""
 
 #: src/tools.py:405
 msgid "Regex Tester"
-msgstr "Regulaaravaldise testija"
+msgstr "Regulaaravaldise testi"
 
 #: src/tools.py:408 src/ui/views/regex_tester.blp:20
 msgid "Find matching strings inside a text"
@@ -2495,7 +2495,7 @@ msgstr ""
 
 #: src/ui/views/regex_tester.blp:37
 msgid "Regex to test"
-msgstr ""
+msgstr "Testitav avaldis"
 
 #: src/ui/views/reverse_cron.blp:58
 msgid "Every minute"
