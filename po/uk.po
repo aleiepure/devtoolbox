@@ -710,84 +710,84 @@ msgstr "Розрахунок значень для редагування доз
 #: src/tools.py:366
 msgctxt "search keyword"
 msgid "unix"
-msgstr "unix"
+msgstr "юнікс"
 
 #: src/tools.py:367
 msgctxt "search keyword"
 msgid "linux"
-msgstr ""
+msgstr "лінукс"
 
 #: src/tools.py:368
 msgctxt "search keyword"
 msgid "calculate"
-msgstr ""
+msgstr "розрахунок"
 
 #: src/tools.py:369
 msgctxt "search keyword"
 msgid "mode"
-msgstr ""
+msgstr "режим"
 
 #: src/tools.py:370
 msgctxt "search keyword"
 msgid "access"
-msgstr ""
+msgstr "дозвіл"
 
 #: src/tools.py:374
 msgid "QR Code"
-msgstr ""
+msgstr "QR код"
 
 #: src/tools.py:377 src/ui/views/qrcode_generator.blp:20
 msgid "Create custom QR Codes"
-msgstr ""
+msgstr "Створення власних QR кодів"
 
 #: src/tools.py:379
 msgctxt "search keyword"
 msgid "qrcode"
-msgstr ""
+msgstr "qr код"
 
 #: src/tools.py:380
 msgctxt "search keyword"
 msgid "barcode"
-msgstr ""
+msgstr "штрих код"
 
 #: src/tools.py:381
 msgctxt "search keyword"
 msgid "image"
-msgstr ""
+msgstr "зображення"
 
 #: src/tools.py:382
 msgctxt "search keyword"
 msgid "matrix"
-msgstr ""
+msgstr "матриця"
 
 #: src/tools.py:388 src/ui/views/text_inspector.blp:19
 msgid "Text Inspector & Case Converter"
-msgstr ""
+msgstr "Інспектор тексту та конвертація регістру"
 
 #: src/tools.py:389 src/tools.py:406 src/tools.py:417 src/tools.py:429
 #: src/tools.py:440 src/tools.py:451 src/ui/views/regex_tester.blp:49
 #: src/ui/views/text_inspector.blp:107 src/ui/views/text_inspector.blp:164
 msgid "Text"
-msgstr ""
+msgstr "Текст"
 
 #: src/tools.py:391 src/ui/views/text_inspector.blp:20
 msgid "View statistics about text and change sentence cases"
-msgstr ""
+msgstr "Перегляд статистики про текст та зміна регістру речень"
 
 #: src/tools.py:393
 msgctxt "search keyword"
 msgid "analyze"
-msgstr ""
+msgstr "аналізувати"
 
 #: src/tools.py:395
 msgctxt "search keyword"
 msgid "uppercase"
-msgstr ""
+msgstr "верхній регістр"
 
 #: src/tools.py:396
 msgctxt "search keyword"
 msgid "lowercase"
-msgstr ""
+msgstr "нижній регістр"
 
 #: src/tools.py:397
 msgctxt "search keyword"
