@@ -853,12 +853,12 @@ msgstr "порівняння"
 #: src/tools.py:423
 msgctxt "search keyword"
 msgid "changes"
-msgstr "різниця"
+msgstr "різниці"
 
 #: src/tools.py:424
 msgctxt "search keyword"
 msgid "modification"
-msgstr ""
+msgstr "подифікація"
 
 #: src/tools.py:428 src/ui/views/xml_validator.blp:19
 msgid "XML Scheme Validator"
