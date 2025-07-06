@@ -50,37 +50,39 @@ msgid ""
 msgstr ""
 "Якщо вам набридло постійно шукати потрібні інструменти в інтернеті, або "
 "знову відшукати той самий сайт (назву якого ви не пам'ятаєте) для швидкої "
-"конвертації - цей додаток для вас!"
+"конвертації - цей додаток для вас."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr ""
+"Це колекція потужних і водночас простих у використанні інструментів для "
+"розв'язання щоденних проблем розробника."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Includes:"
-msgstr ""
+msgstr "Включає:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "JSON to YAML converter and vice-versa"
-msgstr ""
+msgstr "Конвертація з JSON у YAML і навпаки"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33
 msgid "CRON expressions parser"
-msgstr ""
+msgstr "Парсер виразів CRON"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "GZip compressor and decompressor"
-msgstr ""
+msgstr "Стискання та розпакування GZip"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Formatters for common programming languages"
-msgstr ""
+msgstr "Форматувальник для поширених мов програмування"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Hash generators"
-msgstr ""
+msgstr "Генератор хешу"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
