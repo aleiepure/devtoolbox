@@ -2477,7 +2477,7 @@ msgstr "Miinimum"
 
 #: src/ui/views/random_generator.blp:97
 msgid "Minimum value of the generated number"
-msgstr "Loodava numbri miinimumväärtus"
+msgstr "Loodava numbri väikseim väärtus"
 
 #: src/ui/views/random_generator.blp:109
 msgid "Maximum"
@@ -2489,7 +2489,7 @@ msgstr "Loodava numbri suurim väärtus"
 
 #: src/ui/views/random_generator.blp:159
 msgid "Generated number"
-msgstr ""
+msgstr "Loodud number"
 
 #: src/ui/views/regex_tester.blp:19
 msgid "Regular Expression Tester"
