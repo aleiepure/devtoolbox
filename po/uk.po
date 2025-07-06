@@ -1900,15 +1900,15 @@ msgstr "Особливе"
 
 #: src/ui/views/chmod_calculator.blp:145
 msgid "Owner"
-msgstr "Володар"
+msgstr "Власник"
 
 #: src/ui/views/chmod_calculator.blp:158
 msgid "Group"
-msgstr ""
+msgstr "Група"
 
 #: src/ui/views/chmod_calculator.blp:171
 msgid "Others"
-msgstr ""
+msgstr "Інше"
 
 #: src/ui/views/chmod_calculator.blp:184
 msgid "Read"
