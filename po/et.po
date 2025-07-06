@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-07-06 19:30+0000\n"
+"PO-Revision-Date: 2025-07-06 19:31+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
@@ -109,13 +109,13 @@ msgstr ""
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
 msgctxt "search keyword"
 msgid "converter"
-msgstr ""
+msgstr "teisendaja"
 
 #: src/tools.py:22 src/tools.py:46 src/tools.py:74 src/tools.py:96
 #: src/tools.py:114 src/tools.py:394
 msgctxt "search keyword"
 msgid "convert"
-msgstr ""
+msgstr "teisenda"
 
 #: src/tools.py:23 src/tools.py:38 src/tools.py:47 src/tools.py:474
 msgctxt "search keyword"
@@ -887,7 +887,7 @@ msgstr ""
 
 #: src/tools.py:463 src/ui/views/color_converter.blp:16
 msgid "Color Converter"
-msgstr ""
+msgstr "Värvide teisendaja"
 
 #: src/tools.py:464 src/tools.py:481 src/tools.py:491 src/tools.py:505
 msgid "Graphics"
@@ -895,7 +895,7 @@ msgstr "Graafika"
 
 #: src/tools.py:466 src/ui/views/color_converter.blp:17
 msgid "Convert colors between formats"
-msgstr ""
+msgstr "Teisenda värve eri vormingute vahel"
 
 #: src/tools.py:468
 msgctxt "search keyword"
@@ -2197,7 +2197,7 @@ msgstr "Pilt"
 
 #: src/ui/views/image_converter.blp:60
 msgid "Convert"
-msgstr ""
+msgstr "Teisenda"
 
 #: src/ui/views/image_converter.blp:64
 msgid "converted-image"
@@ -2209,7 +2209,7 @@ msgstr ""
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
-msgstr ""
+msgstr "JSON - YAML teisendaja"
 
 #: src/ui/views/json_yaml.blp:34
 msgid "Specify what format is the input and the desired output"
