@@ -999,7 +999,7 @@ msgstr "Pildivormingute teisendaja"
 
 #: src/tools.py:507 src/ui/views/image_converter.blp:20
 msgid "Convert images to different formats"
-msgstr "Teis"
+msgstr "Teisenda pilte eri vormingutesse"
 
 #: src/tools.py:510
 msgctxt "search keyword"
@@ -1934,7 +1934,7 @@ msgstr ""
 
 #: src/ui/views/color_converter.blp:30
 msgid "Format"
-msgstr ""
+msgstr "Vorming"
 
 #: src/ui/views/color_converter.blp:31
 msgid "Output format for color values"
@@ -2185,7 +2185,7 @@ msgstr "HTML-i kodeerija ja dekodeerija"
 #: src/ui/views/image_converter.blp:34
 msgctxt "noun"
 msgid "Format"
-msgstr ""
+msgstr "Vorming"
 
 #: src/ui/views/image_converter.blp:35
 msgid "Select the desired output format"
@@ -2713,7 +2713,7 @@ msgstr ""
 
 #: src/ui/views/text_inspector.blp:66
 msgid "Information"
-msgstr ""
+msgstr "Teave"
 
 #: src/ui/views/text_inspector.blp:69
 msgid "Cursor"
@@ -2857,7 +2857,7 @@ msgstr "Välju"
 
 #: src/formatters/html.py:14
 msgid "HTML Formatter"
-msgstr ""
+msgstr "HTML-i vormindaja"
 
 #: src/formatters/html.py:17
 msgid "Type HTML code here"
@@ -2867,11 +2867,11 @@ msgstr ""
 #: src/formatters/sql.py:19 src/formatters/xml.py:21 src/formatters/css.py:19
 msgctxt "verb/action"
 msgid "Format"
-msgstr ""
+msgstr "Vorming"
 
 #: src/formatters/js.py:14
 msgid "JavaScript Formatter"
-msgstr ""
+msgstr "HTML-i vormindaja"
 
 #: src/formatters/js.py:17
 msgid "Type JavaScript code here"
