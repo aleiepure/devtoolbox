@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-07-06 19:14+0000\n"
+"PO-Revision-Date: 2025-07-06 20:17+0000\n"
 "Last-Translator: freeducks-debug <209897795+freeducks-"
 "debug@users.noreply.github.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/devtoolbox/"
@@ -953,148 +953,148 @@ msgstr "Перевірка контрасту"
 
 #: src/tools.py:483 src/ui/views/contrast_checker.blp:20
 msgid "Check a color combination for WCAG compliance"
-msgstr ""
+msgstr "Перевірка комбінацій кольорів на відповідність WCAG"
 
 #: src/tools.py:485
 msgctxt "search keyword"
 msgid "accessibility"
-msgstr ""
+msgstr "доступність"
 
 #: src/tools.py:486
 msgctxt "search keyword"
 msgid "ratio"
-msgstr ""
+msgstr "співвідношення"
 
 #: src/tools.py:490
 msgid "Color Blindness"
-msgstr ""
+msgstr "Дальтонізм"
 
 #: src/tools.py:493 src/ui/views/colorblindness_simulator.blp:20
 msgid "Simulate color blindness in images"
-msgstr ""
+msgstr "Симуляція дальтонізму на зображеннях"
 
 #: src/tools.py:495
 msgctxt "search keyword"
 msgid "simulation"
-msgstr ""
+msgstr "симуляція"
 
 #: src/tools.py:496
 msgctxt "search keyword"
 msgid "daltonism"
-msgstr ""
+msgstr "дальтонізм"
 
 #: src/tools.py:497
 msgctxt "search keyword"
 msgid "protanopia"
-msgstr ""
+msgstr "протанопія"
 
 #: src/tools.py:498
 msgctxt "search keyword"
 msgid "deuteranopia"
-msgstr ""
+msgstr "дейтеранопія"
 
 #: src/tools.py:499
 msgctxt "search keyword"
 msgid "tritanopia"
-msgstr ""
+msgstr "тританопія"
 
 #: src/tools.py:500
 msgctxt "search keyword"
 msgid "vision"
-msgstr ""
+msgstr "зір"
 
 #: src/tools.py:504 src/ui/views/image_converter.blp:19
 msgid "Image Format Converter"
-msgstr ""
+msgstr "Конвертатор форматів зображень"
 
 #: src/tools.py:507 src/ui/views/image_converter.blp:20
 msgid "Convert images to different formats"
-msgstr ""
+msgstr "Конвертація зображень в інші формати"
 
 #: src/tools.py:510
 msgctxt "search keyword"
 msgid "jpg"
-msgstr ""
+msgstr "jpg"
 
 #: src/tools.py:511
 msgctxt "search keyword"
 msgid "jpeg"
-msgstr ""
+msgstr "jpeg"
 
 #: src/tools.py:512
 msgctxt "search keyword"
 msgid "png"
-msgstr ""
+msgstr "png"
 
 #: src/tools.py:513
 msgctxt "search keyword"
 msgid "bmp"
-msgstr ""
+msgstr "bmp"
 
 #: src/tools.py:514
 msgctxt "search keyword"
 msgid "gif"
-msgstr ""
+msgstr "gif"
 
 #: src/tools.py:515
 msgctxt "search keyword"
 msgid "webp"
-msgstr ""
+msgstr "webp"
 
 #: src/tools.py:516
 msgctxt "search keyword"
 msgid "picture"
-msgstr ""
+msgstr "картинка"
 
 #: src/tools.py:522 src/ui/views/certificate_parser.blp:19
 msgid "Certificate Parser"
-msgstr ""
+msgstr "Аналіз сертифікатів"
 
 #: src/tools.py:523 src/tools.py:540 src/views/certificate_parser.py:90
 msgid "Certificates"
-msgstr ""
+msgstr "Сертифікати"
 
 #: src/tools.py:525 src/ui/views/certificate_parser.blp:20
 msgid "View certificates contents"
-msgstr ""
+msgstr "Перегляд вмісту сертифікатів"
 
 #: src/tools.py:532 src/tools.py:549
 msgctxt "search keyword"
 msgid "key"
-msgstr ""
+msgstr "ключ"
 
 #: src/tools.py:534
 msgctxt "search keyword"
 msgid "public key"
-msgstr ""
+msgstr "публічний ключ"
 
 #: src/tools.py:539
 msgid "Certificate Signing Request"
-msgstr ""
+msgstr "Запит на підпис сертифікату"
 
 #: src/tools.py:542 src/ui/views/certificate_request_generator.blp:23
 msgid "Generate certificate signing requests"
-msgstr ""
+msgstr "Створення запиту на підпис сертифікату"
 
 #. change view and save previous
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:54
 #: src/widgets/text_file_area.py:62 src/widgets/text_file_area.py:200
 msgid "Opening file..."
-msgstr ""
+msgstr "Відкрити файл..."
 
 #: src/widgets/image_area.py:96 src/widgets/text_area.py:147
 #: src/widgets/text_file_area.py:162 src/views/certificate_parser.py:60
 msgid "Cannot open more than one file"
-msgstr ""
+msgstr "Неможливо відкрити більше одного файлу"
 
 #: src/widgets/image_area.py:123
 msgid "Opening image..."
-msgstr ""
+msgstr "Відкрити зображення..."
 
 #: src/widgets/image_area.py:130 src/widgets/text_area.py:184
 #: src/widgets/text_file_area.py:207 src/views/certificate_parser.py:81
 msgid "Open File"
-msgstr ""
+msgstr "Відкрити файл"
 
 #: src/widgets/image_area.py:131 src/widgets/text_area.py:185
 #: src/widgets/text_file_area.py:208 src/views/certificate_parser.py:82
@@ -1103,35 +1103,35 @@ msgstr ""
 #: src/ui/widgets/text_file_area.blp:70 src/ui/views/certificate_parser.blp:51
 #: src/ui/views/certificate_request_generator.blp:117
 msgid "Open"
-msgstr ""
+msgstr "Відкрити"
 
 #: src/widgets/image_area.py:140
 msgid "Supported Image Formats"
-msgstr ""
+msgstr "Підтримувані формати зображень"
 
 #: src/widgets/image_area.py:173
 msgid "Saving image..."
-msgstr ""
+msgstr "Зберегти зображення..."
 
 #: src/widgets/image_area.py:180 src/widgets/text_file_area.py:328
 #: src/views/image_converter.py:51 src/views/qrcode_generator.py:183
 msgid "Save file as"
-msgstr ""
+msgstr "Зберегти файл як"
 
 #: src/widgets/image_area.py:181 src/widgets/text_file_area.py:329
 #: src/views/certificate_request_generator.py:215
 #: src/views/image_converter.py:52 src/views/qrcode_generator.py:184
 #: src/ui/widgets/image_area.blp:72 src/ui/widgets/text_file_area.blp:83
 msgid "Save"
-msgstr ""
+msgstr "Зберегти"
 
 #: src/widgets/text_area.py:194 src/widgets/text_file_area.py:230
 msgid "Text files"
-msgstr ""
+msgstr "Текстові файли"
 
 #: src/widgets/text_area.py:201 src/widgets/text_file_area.py:243
 msgid "Accepted files"
-msgstr ""
+msgstr "Допустимі файли"
 
 #: src/widgets/text_area.py:222
 #, python-brace-format
@@ -1139,36 +1139,38 @@ msgid ""
 "Loading a large file ({size})\n"
 "Might take a while, please wait..."
 msgstr ""
+"Завантаження великого файлу ({size})\n"
+"Може зайняти певний час, будь ласка, зачекайте..."
 
 #: src/widgets/text_area.py:230 src/widgets/text_file_area.py:280
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr ""
+msgstr "Неможливо відкрити {file_path}: {file_content}."
 
 #: src/widgets/text_area.py:246
 msgid "File is not UTF-8 encoded."
-msgstr ""
+msgstr "Файл не закодований в UTF-8."
 
 #: src/widgets/text_file_area.py:217
 msgid "All files"
-msgstr ""
+msgstr "Усі файли"
 
 #: src/widgets/text_file_area.py:224
 msgid "Text files and images"
-msgstr ""
+msgstr "Текстові файли та зображення"
 
 #: src/widgets/text_file_area.py:236
 msgid "Images"
-msgstr ""
+msgstr "Зображення"
 
 #: src/widgets/text_file_area.py:321
 msgid "Saving file..."
-msgstr ""
+msgstr "Збереження файлу..."
 
 #: src/widgets/text_file_area.py:360
 #, python-brace-format
 msgid "Unable to save {path}"
-msgstr ""
+msgstr "Неможливо зберегти {path}"
 
 #: src/views/base64_encoder.py:51 src/views/certificate_parser.py:60
 #: src/views/certificate_parser.py:65
@@ -1178,20 +1180,20 @@ msgstr ""
 #: src/views/url_encoder.py:63
 #, python-brace-format
 msgid "Error: {error}"
-msgstr ""
+msgstr "Помилка: {error}"
 
 #: src/views/certificate_parser.py:65
 msgid "Unsupported file"
-msgstr ""
+msgstr "Не підтримуваний файл"
 
 #: src/views/certificate_parser.py:102 src/views/reverse_cron.py:180
 #: src/ui/views/certificate_parser.blp:100 src/ui/views/reverse_cron.blp:39
 msgid "Expand All"
-msgstr ""
+msgstr "Розгорнути всі"
 
 #: src/views/certificate_parser.py:106 src/views/reverse_cron.py:184
 msgid "Collapse All"
-msgstr ""
+msgstr "Згорнути всі"
 
 #: src/views/certificate_parser.py:145
 msgid "Error: Cannot open this file because it is not a valid certificate."
