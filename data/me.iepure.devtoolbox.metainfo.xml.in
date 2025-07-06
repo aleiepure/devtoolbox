@@ -7,10 +7,10 @@ SPDX-License-Identifier: CC0-1.0
 -->
 
 <component type="desktop-application">
-	<id>me.iepure.devtoolbox</id>
+  <id>me.iepure.devtoolbox</id>
 
-	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>GPL-3.0-or-later</project_license>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
 
   <name translate="no">Dev Toolbox</name>
   <summary>Dev tools at your fingertips</summary>
@@ -18,7 +18,7 @@ SPDX-License-Identifier: CC0-1.0
   <developer id="me.iepure">
     <name translate="no">Alessandro Iepure</name>
   </developer>
-  
+
   <description translate="no">
     <p>If you're tired of endlessly looking online for the right tool, or to
       find again that website of which you don't recall the name just for a quick
@@ -56,7 +56,7 @@ SPDX-License-Identifier: CC0-1.0
     <color type="primary" scheme_preference="dark">#061d39</color>
   </branding>
 
-  <content_rating type="oars-1.1"/>
+  <content_rating type="oars-1.1" />
 
   <url type="homepage">https://github.com/aleiepure/devtoolbox</url>
   <url type="bugtracker">https://github.com/aleiepure/devtoolbox/issues</url>
@@ -77,6 +77,30 @@ SPDX-License-Identifier: CC0-1.0
   </screenshots>
 
   <releases>
+    <release version="1.3.0" date="2025-07-06">
+      <description translate="no">
+        <p>What's new:</p>
+        <ul>
+          <li>New Tool: Color Converter, convert colors between different formats (thanks @Flachz)</li>
+          <li>JWT: now supports encoding payloads and signature verification (thanks @Flachz)</li>
+          <li>Chmod: added support for special bits (<code>setuid</code>, <code>setgid</code>, and <code>
+            sticky</code>) (thanks @Flachz)</li>
+          <li>Improved search: Dev Toolbox now has more keywords, improving discoverability in the
+            OS and app stores
+            (thanks @freeducks-debug)</li>
+          <li>Improved in-app search: Tools now match not just their names and descriptions, but
+            also
+            tool-specific keywords</li>
+          <li>Dev Toolbox is now a GNOME search provider: search and launch tools directly from
+            the Activities screen</li>
+          <li>Updated translations</li>
+        </ul>
+        <p>We've now passed 50k downloads on Flathub and 300 GitHub stars!</p>
+        <p>Huge thanks to everyone who contributed, translated, reviewed, used the app,
+          or helped spread the word. This project started as a tiny idea. I never
+          imagined it would grow this far.</p>
+      </description>
+    </release>
     <release version="1.2.5" date="2025-05-03">
       <description translate="no">
         <p>What's new:</p>
@@ -102,7 +126,8 @@ SPDX-License-Identifier: CC0-1.0
       <description translate="no">
         <p>What's new:</p>
         <ul>
-          <li>JSON-YAML converter: support YAML's date, timestamp, and set formats when converting to JSON (thanks @mateusza)</li>
+          <li>JSON-YAML converter: support YAML's date, timestamp, and set formats when converting
+            to JSON (thanks @mateusza)</li>
           <li>Updated translations</li>
         </ul>
       </description>
@@ -111,8 +136,10 @@ SPDX-License-Identifier: CC0-1.0
       <description translate="no">
         <p>What's new:</p>
         <ul>
-          <li>HTML Formatter: Fixed an issue that generated invalid markup from valid input (thanks @cheywood)</li>
-          <li>Fixed an issues that deleted other apps' temporary files when running outside Flatpak (thanks @DjalimSimaila)</li> 
+          <li>HTML Formatter: Fixed an issue that generated invalid markup from valid input (thanks
+            @cheywood)</li>
+          <li>Fixed an issues that deleted other apps' temporary files when running outside Flatpak
+            (thanks @DjalimSimaila)</li>
           <li>Updated translations</li>
         </ul>
       </description>
@@ -122,7 +149,8 @@ SPDX-License-Identifier: CC0-1.0
         <p>What's new:</p>
         <ul>
           <li>About Dialog is now modal (thanks @lo2dev)</li>
-          <li>Improved UI consistency, enhanced tool options, modernized dialogs, and added visual updates across the app</li>
+          <li>Improved UI consistency, enhanced tool options, modernized dialogs, and added visual
+            updates across the app</li>
           <li>Updated translations</li>
         </ul>
       </description>
@@ -138,16 +166,16 @@ SPDX-License-Identifier: CC0-1.0
           <li>Timestamp: More timezones to choose from</li>
           <li>Timestamp: Time and date are now displayed in more formats</li>
           <li>Updated dependencies and platform version to GNOME 47</li>
-        </ul>
-        Thank you for the new and updated translations via weblate.
-      </description>
+        </ul> Thank you for
+        the new and updated translations via weblate. </description>
     </release>
     <release version="1.1.1" date="2023-06-18">
       <description translate="no">
         <p>What's new:</p>
         <ul>
           <li>Fixed various typos</li>
-          <li>Timestamp: fixed issue that prevented the app from launching when the system timezone was "Europe/Kyiv" </li>
+          <li>Timestamp: fixed issue that prevented the app from launching when the system timezone
+            was "Europe/Kyiv" </li>
           <li>Updated translations</li>
         </ul>
       </description>
@@ -170,9 +198,11 @@ SPDX-License-Identifier: CC0-1.0
           <li>New tool: QR-code generator</li>
           <li>New tool: JSON validator</li>
           <li>New tool: CSS Formatter</li>
-          <li>New translations: Czech (@Amereyeu), Spanish (Óscar Fernández Díaz on Weblate and @gallegonovato), Norwegian Bokmål (@comradekingu), and Portuguese (@SantosSi)</li>
+          <li>New translations: Czech (@Amereyeu), Spanish (Óscar Fernández Díaz on Weblate and
+            @gallegonovato), Norwegian Bokmål (@comradekingu), and Portuguese (@SantosSi)</li>
         </ul>
-        <p>I'm always open to suggestions. Feel free to contribute to the project with code or translations on Weblate.</p>
+        <p>I'm always open to suggestions. Feel free to contribute to the project with code or
+          translations on Weblate.</p>
       </description>
     </release>
     <release version="1.0.2" date="2023-03-08">
