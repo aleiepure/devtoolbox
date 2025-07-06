@@ -533,7 +533,7 @@ msgstr ""
 
 #: src/tools.py:257 src/formatters/js.py:15
 msgid "Format JavaScript documents"
-msgstr "Vorminda JSON-faile"
+msgstr "Vorminda JavaScripti faile"
 
 #: src/tools.py:264 src/tools.py:306
 msgctxt "search keyword"
@@ -542,7 +542,7 @@ msgstr ""
 
 #: src/tools.py:271 src/formatters/css.py:14
 msgid "Format CSS documents"
-msgstr ""
+msgstr "Vorminda CSS-faile"
 
 #: src/tools.py:277 src/tools.py:289
 msgctxt "search keyword"
@@ -873,7 +873,7 @@ msgstr ""
 
 #: src/tools.py:453 src/ui/views/markdown_preview.blp:20
 msgid "Preview markdown code as you type"
-msgstr ""
+msgstr "Vaata Markdowni koodi tulemust oma kirjutamise ajal"
 
 #: src/tools.py:455
 msgctxt "search keyword"
@@ -1773,7 +1773,7 @@ msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:34
 msgid "Fill the information below"
-msgstr ""
+msgstr "Palun sisesta alljärgnev teave"
 
 #: src/ui/views/certificate_request_generator.blp:35
 msgid ""
@@ -2162,7 +2162,7 @@ msgstr ""
 
 #: src/ui/views/hash_generator.blp:35
 msgid "Choose the hash type to calculate"
-msgstr ""
+msgstr "Vali kasutatav räsitüüp"
 
 #: src/ui/views/hash_generator.blp:53
 msgid "Check for integrity"
@@ -2176,7 +2176,7 @@ msgstr ""
 
 #: src/ui/views/hash_generator.blp:60
 msgid "Type the hash to check against"
-msgstr ""
+msgstr "Sisesta räsi, mille suhtes soovid kontrollida"
 
 #: src/ui/views/html_encoder.blp:19
 msgid "HTML Encoder & Decoder"
@@ -2861,7 +2861,7 @@ msgstr "HTML-i vormindaja"
 
 #: src/formatters/html.py:17
 msgid "Type HTML code here"
-msgstr ""
+msgstr "Sisesta siia HTML-kood"
 
 #: src/formatters/html.py:20 src/formatters/js.py:20 src/formatters/json.py:19
 #: src/formatters/sql.py:19 src/formatters/xml.py:21 src/formatters/css.py:19
@@ -2875,7 +2875,7 @@ msgstr "JavaScripti vormindaja"
 
 #: src/formatters/js.py:17
 msgid "Type JavaScript code here"
-msgstr ""
+msgstr "Sisesta siia HTML-kood"
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
@@ -2883,7 +2883,7 @@ msgstr "JSON-i vormindaja"
 
 #: src/formatters/json.py:16
 msgid "Type JSON code here"
-msgstr ""
+msgstr "Sisesta siia JSON-kood"
 
 #: src/formatters/sql.py:13
 msgid "SQL Formatter"
@@ -2891,7 +2891,7 @@ msgstr "SQL-i vormindaja"
 
 #: src/formatters/sql.py:16
 msgid "Type SQL code here"
-msgstr ""
+msgstr "Sisesta siia SQL-kood"
 
 #: src/formatters/xml.py:15
 msgid "XML Formatter"
@@ -2899,7 +2899,7 @@ msgstr "XML-i vormindaja"
 
 #: src/formatters/xml.py:18
 msgid "Type XML code here"
-msgstr ""
+msgstr "Sisesta siia XML-kood"
 
 #: src/formatters/css.py:13
 msgid "CSS Formatter"
@@ -2907,7 +2907,7 @@ msgstr "CSS-i vormindaja"
 
 #: src/formatters/css.py:16 src/formatters/css_minifier.py:17
 msgid "Type CSS here"
-msgstr ""
+msgstr "Sisesta siia CSS-kood"
 
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
@@ -2920,4 +2920,4 @@ msgstr ""
 
 #: src/formatters/js_minifier.py:17
 msgid "Type JS code here"
-msgstr ""
+msgstr "Sisesta siia JS-kood"
