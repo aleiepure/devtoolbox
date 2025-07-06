@@ -1688,41 +1688,43 @@ msgstr "Вхідні числа"
 
 #: src/ui/views/base_converter.blp:33
 msgid "Decimal"
-msgstr "Десятичне"
+msgstr "Десяткове"
 
 #: src/ui/views/base_converter.blp:41
 msgid "Binary"
-msgstr ""
+msgstr "Двійкове"
 
 #: src/ui/views/base_converter.blp:49
 msgid "Octal"
-msgstr ""
+msgstr "Вісімкове"
 
 #: src/ui/views/base_converter.blp:57
 msgid "Hexadecimal"
-msgstr ""
+msgstr "Шістнадцяткова"
 
 #: src/ui/views/base_converter.blp:65
 msgid "ASCII"
-msgstr ""
+msgstr "ASCII"
 
 #: src/ui/views/base_converter.blp:73
 msgid "UTF-8"
-msgstr ""
+msgstr "UTF-8"
 
 #: src/ui/views/base_converter.blp:98
 msgid ""
 "Typing an unaccepted character (i.e. 'A' in the decimal field) will cause "
 "all the fields to reset to 0."
 msgstr ""
+"Ввід не прийнятного символу (наприклад, \"A\" у десятковому полі) призведе "
+"до скидання усіх полів до 0."
 
 #: src/ui/views/base64_encoder.blp:19
 msgid "Base64 Encoder & Decoder"
-msgstr ""
+msgstr "Кодувальник і декодувальник Base64"
 
 #: src/ui/views/base64_encoder.blp:20
 msgid "Encode and decode strings using the Base64 format"
-msgstr ""
+msgstr "Кодування та декодування рядків за допомогою Base64 формату"
 
 #: src/ui/views/base64_encoder.blp:30 src/ui/views/certificate_parser.blp:30
 #: src/ui/views/colorblindness_simulator.blp:31
@@ -1735,115 +1737,117 @@ msgstr ""
 #: src/ui/views/text_inspector.blp:31 src/ui/views/timestamp.blp:30
 #: src/ui/views/url_encoder.blp:30 src/ui/views/uuid_generator.blp:31
 msgid "Tool options"
-msgstr ""
+msgstr "Опції інструменту"
 
 #: src/ui/views/base64_encoder.blp:33 src/ui/views/gzip_compressor.blp:33
 #: src/ui/views/html_encoder.blp:33 src/ui/views/json_yaml.blp:33
 #: src/ui/views/url_encoder.blp:33
 msgid "Direction"
-msgstr ""
+msgstr "Напрямок"
 
 #: src/ui/views/base64_encoder.blp:34 src/ui/views/html_encoder.blp:34
 #: src/ui/views/url_encoder.blp:34
 msgid "Select the desired encoding direction"
-msgstr ""
+msgstr "Оберіть бажаний напрямок кодування"
 
 #: src/ui/views/base64_encoder.blp:41 src/ui/views/html_encoder.blp:43
 #: src/ui/views/url_encoder.blp:43
 msgid "Encode"
-msgstr ""
+msgstr "Кодувати"
 
 #: src/ui/views/base64_encoder.blp:45 src/ui/views/html_encoder.blp:47
 #: src/ui/views/url_encoder.blp:47
 msgid "Decode"
-msgstr ""
+msgstr "Декодувати"
 
 #: src/ui/views/base64_encoder.blp:51
 msgid "URL Safe"
-msgstr ""
+msgstr "Безпечний URL режим"
 
 #: src/ui/views/base64_encoder.blp:52
 msgid "Use URL safe Base64 processing"
-msgstr ""
+msgstr "Використовувати URL безпечну обробку Base64"
 
 #: src/ui/views/base64_encoder.blp:68 src/ui/views/gzip_compressor.blp:63
 #: src/ui/views/hash_generator.blp:83 src/ui/views/html_encoder.blp:64
 #: src/ui/views/json_yaml.blp:76 src/ui/views/url_encoder.blp:84
 msgid "Input"
-msgstr ""
+msgstr "Ввід"
 
 #: src/ui/views/base64_encoder.blp:80 src/ui/views/gzip_compressor.blp:73
 #: src/ui/views/hash_generator.blp:92 src/ui/views/html_encoder.blp:77
 #: src/ui/views/json_yaml.blp:88 src/ui/views/url_encoder.blp:95
 msgid "Output"
-msgstr ""
+msgstr "Вивід"
 
 #: src/ui/views/certificate_parser.blp:33
 msgid "Certificate"
-msgstr ""
+msgstr "Сертифікат"
 
 #: src/ui/views/certificate_parser.blp:34
 msgid "Open a certificate file (pem, der, cer extensions)"
-msgstr ""
+msgstr "Відкрити файл сертифікату (розширення pem, der, cer)"
 
 #: src/ui/views/certificate_parser.blp:79
 msgid "Open a certificate file to view its contents."
-msgstr ""
+msgstr "Відкрийте файл сертифіката, щоб переглянути його вміст."
 
 #: src/ui/views/certificate_request_generator.blp:22
 msgid "Certificate Signing Request Generator"
-msgstr ""
+msgstr "Генератор запитів на підпис сертифікату"
 
 #: src/ui/views/certificate_request_generator.blp:34
 msgid "Fill the information below"
-msgstr ""
+msgstr "Заповніть інформацію нижче"
 
 #: src/ui/views/certificate_request_generator.blp:35
 msgid ""
 "Fill at least the required fields then press the 'Create CSR' button. An "
 "empty passphrase will generate an unecrypted CSR."
 msgstr ""
+"Заповніть як мінімум обов'язкові поля та натисніть \"Створити CSR\". "
+"Порожній пароль згенерує не зашифрований CSR."
 
 #: src/ui/views/certificate_request_generator.blp:46
 msgid "Create CSR"
-msgstr ""
+msgstr "Створити CSR"
 
 #: src/ui/views/certificate_request_generator.blp:52
 msgid "Common Name (CN) *"
-msgstr ""
+msgstr "Ім'я (CN) *"
 
 #: src/ui/views/certificate_request_generator.blp:56
 msgid "Country Name (C)"
-msgstr ""
+msgstr "Країна (C)"
 
 #: src/ui/views/certificate_request_generator.blp:60
 msgid "State or Province Name (ST)"
-msgstr ""
+msgstr "Область (ST)"
 
 #: src/ui/views/certificate_request_generator.blp:64
 msgid "Locality Name (L)"
-msgstr ""
+msgstr "Населений пункт (L)"
 
 #: src/ui/views/certificate_request_generator.blp:68
 msgid "Organization Name (O)"
-msgstr ""
+msgstr "Назва організації (O)"
 
 #: src/ui/views/certificate_request_generator.blp:72
 msgid "Organization Unit Name (OU)"
-msgstr ""
+msgstr "Відділ (OU)"
 
 #: src/ui/views/certificate_request_generator.blp:76
 msgid "Passphrase"
-msgstr ""
+msgstr "Пароль"
 
 #: src/ui/views/certificate_request_generator.blp:80
 #: src/ui/views/jwt_decoder.blp:78
 msgid "Key"
-msgstr ""
+msgstr "Ключ"
 
 #: src/ui/views/certificate_request_generator.blp:81
 msgid "Generate a new key or use and existing one"
-msgstr ""
+msgstr "Створити новий ключ або використовувати вже існуючий"
 
 #: src/ui/views/certificate_request_generator.blp:88
 msgid "New"
