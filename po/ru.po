@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-07-06 18:57+0000\n"
+"PO-Revision-Date: 2025-07-07 05:18+0000\n"
 "Last-Translator: freeducks-debug <209897795+freeducks-"
 "debug@users.noreply.github.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/devtoolbox/"
@@ -2967,7 +2967,7 @@ msgstr "Общее"
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Search Tools"
-msgstr "Поиск иснтрументов"
+msgstr "Поиск инструментов"
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"
