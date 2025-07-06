@@ -2262,11 +2262,11 @@ msgstr "Кодування та декодування JWT"
 
 #: src/ui/views/jwt_decoder.blp:32
 msgid "Verify Signature"
-msgstr "перевірити підпис"
+msgstr "Перевірити підпис"
 
 #: src/ui/views/jwt_decoder.blp:33
 msgid "Verify signature or sign JWT"
-msgstr ""
+msgstr "Перевірити або підписати JWT"
 
 #: src/ui/views/jwt_decoder.blp:41
 msgid "Off"
