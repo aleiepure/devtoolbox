@@ -142,7 +142,7 @@ msgstr "taandread"
 #: src/tools.py:245 src/tools.py:261 src/tools.py:274
 msgctxt "search keyword"
 msgid "indent"
-msgstr ""
+msgstr "Taandrida"
 
 #: src/tools.py:31 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
@@ -2112,11 +2112,11 @@ msgstr ""
 
 #: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:52
 msgid "Indentations"
-msgstr "indentation"
+msgstr "Taandread"
 
 #: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:53
 msgid "Number of spaces used for indentation"
-msgstr ""
+msgstr "Taandrea lisamiseks kasutatav tühikute arv"
 
 #: src/ui/views/gzip_compressor.blp:19
 msgid "GZip Compress & Decompress"
