@@ -1070,21 +1070,21 @@ msgstr ""
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:54
 #: src/widgets/text_file_area.py:62 src/widgets/text_file_area.py:200
 msgid "Opening file..."
-msgstr "Avan faili"
+msgstr "Avan faili..."
 
 #: src/widgets/image_area.py:96 src/widgets/text_area.py:147
 #: src/widgets/text_file_area.py:162 src/views/certificate_parser.py:60
 msgid "Cannot open more than one file"
-msgstr ""
+msgstr "Ei saa avada üle ühe faili"
 
 #: src/widgets/image_area.py:123
 msgid "Opening image..."
-msgstr ""
+msgstr "Avan pilti..."
 
 #: src/widgets/image_area.py:130 src/widgets/text_area.py:184
 #: src/widgets/text_file_area.py:207 src/views/certificate_parser.py:81
 msgid "Open File"
-msgstr ""
+msgstr "Ava fail"
 
 #: src/widgets/image_area.py:131 src/widgets/text_area.py:185
 #: src/widgets/text_file_area.py:208 src/views/certificate_parser.py:82
@@ -1093,7 +1093,7 @@ msgstr ""
 #: src/ui/widgets/text_file_area.blp:70 src/ui/views/certificate_parser.blp:51
 #: src/ui/views/certificate_request_generator.blp:117
 msgid "Open"
-msgstr ""
+msgstr "Ava"
 
 #: src/widgets/image_area.py:140
 msgid "Supported Image Formats"
@@ -1253,7 +1253,7 @@ msgstr ""
 
 #: src/views/certificate_request_generator.py:81
 msgid "Open Key File"
-msgstr ""
+msgstr "Ava võtmefail"
 
 #: src/views/certificate_request_generator.py:88
 msgid "All Files"
@@ -1286,7 +1286,7 @@ msgstr ""
 #: src/views/colorblindness_simulator.py:26 src/views/image_converter.py:24
 #: src/views/qrcode_generator.py:43
 msgid "Open Image"
-msgstr ""
+msgstr "Ava pilt"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
@@ -1302,7 +1302,7 @@ msgstr ""
 
 #: src/views/gzip_compressor.py:28
 msgid "Open image"
-msgstr ""
+msgstr "Ava pilt"
 
 #: src/views/gzip_compressor.py:31
 msgid "Cannot decompress from an image or a file"
@@ -1761,11 +1761,11 @@ msgstr ""
 
 #: src/ui/views/certificate_parser.blp:34
 msgid "Open a certificate file (pem, der, cer extensions)"
-msgstr ""
+msgstr "Ava sertifikaadifail (pem, der, cer laienditega failid)"
 
 #: src/ui/views/certificate_parser.blp:79
 msgid "Open a certificate file to view its contents."
-msgstr ""
+msgstr "Sertifikaadi sisu vaatamiseks ava sertifikaadifail."
 
 #: src/ui/views/certificate_request_generator.blp:22
 msgid "Certificate Signing Request Generator"
