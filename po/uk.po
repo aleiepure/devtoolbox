@@ -1847,59 +1847,60 @@ msgstr "Ключ"
 
 #: src/ui/views/certificate_request_generator.blp:81
 msgid "Generate a new key or use and existing one"
-msgstr "Створити новий ключ або використовувати вже існуючий"
+msgstr "Створити новий ключ або використовувати що існує"
 
 #: src/ui/views/certificate_request_generator.blp:88
 msgid "New"
-msgstr ""
+msgstr "Новий"
 
 #: src/ui/views/certificate_request_generator.blp:92
 msgid "Existing"
-msgstr ""
+msgstr "Що існує"
 
 #: src/ui/views/certificate_request_generator.blp:98
 msgid "Key File *"
-msgstr ""
+msgstr "Файл з ключем *"
 
 #: src/ui/views/certificate_request_generator.blp:99
 msgid "Open the file containing the key you want to use"
 msgstr ""
+"Відкрийте файл, в якому знаходиться ключ, який ви бажаєте використовувати"
 
 #: src/ui/views/certificate_request_generator.blp:124
 msgid "Key Size"
-msgstr ""
+msgstr "Розмір ключа"
 
 #: src/ui/views/certificate_request_generator.blp:125
 msgid "Size of the new key. It will be saved on the same path as the CSR."
-msgstr ""
+msgstr "Розмір нового ключа. Його буде збережено по тому же шляху, що й CSR."
 
 #: src/ui/views/certificate_request_generator.blp:134
 msgid "2048 bits"
-msgstr ""
+msgstr "2028 біт"
 
 #: src/ui/views/certificate_request_generator.blp:138
 msgid "4096 bits"
-msgstr ""
+msgstr "4096 біт"
 
 #: src/ui/views/certificate_request_generator.blp:144
 msgid "Key Save Location *"
-msgstr ""
+msgstr "Шлях збереження ключа *"
 
 #: src/ui/views/certificate_request_generator.blp:145
 msgid "Save location for the generated key file"
-msgstr ""
+msgstr "Шлях до згенерованого файлу ключа"
 
 #: src/ui/views/chmod_calculator.blp:33
 msgid "Permissions"
-msgstr ""
+msgstr "Права доступу"
 
 #: src/ui/views/chmod_calculator.blp:45
 msgid "Special"
-msgstr ""
+msgstr "Особливе"
 
 #: src/ui/views/chmod_calculator.blp:145
 msgid "Owner"
-msgstr ""
+msgstr "Володар"
 
 #: src/ui/views/chmod_calculator.blp:158
 msgid "Group"
