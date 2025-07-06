@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-07-06 18:57+0000\n"
+"PO-Revision-Date: 2025-07-06 19:14+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
@@ -1593,107 +1593,109 @@ msgstr ""
 #: src/ui/widgets/spin_area.blp:68 src/ui/widgets/text_area.blp:66
 #: src/ui/widgets/text_file_area.blp:106
 msgid "Copy to clipboard"
-msgstr ""
+msgstr "Kopeeri lõikelauale"
 
 #: src/ui/widgets/date_area.blp:79
 msgid "Year"
-msgstr ""
+msgstr "Aasta"
 
 #: src/ui/widgets/date_area.blp:110 src/ui/views/reverse_cron.blp:362
 msgid "Month"
-msgstr ""
+msgstr "Kuu"
 
 #: src/ui/widgets/date_area.blp:140 src/ui/views/reverse_cron.blp:250
 msgid "Day"
-msgstr ""
+msgstr "Päev"
 
 #: src/ui/widgets/date_area.blp:176 src/ui/views/reverse_cron.blp:147
 msgid "Hours"
-msgstr ""
+msgstr "Tunnid"
 
 #: src/ui/widgets/date_area.blp:207 src/ui/views/reverse_cron.blp:44
 msgid "Minutes"
-msgstr ""
+msgstr "Minutid"
 
 #: src/ui/widgets/date_area.blp:237
 msgid "Seconds"
-msgstr ""
+msgstr "Sekundid"
 
 #: src/ui/widgets/entry_row.blp:20
 msgid "Generate again"
-msgstr ""
+msgstr "Loo uuesti"
 
 #: src/ui/widgets/entry_row.blp:40 src/ui/widgets/spin_area.blp:79
 #: src/ui/widgets/text_area.blp:73 src/ui/widgets/text_file_area.blp:117
 msgid "Paste clipboard"
-msgstr ""
+msgstr "Aseta lõikelaualt"
 
 #: src/ui/widgets/entry_row.blp:51 src/ui/widgets/image_area.blp:95
 #: src/ui/widgets/text_area.blp:80 src/ui/widgets/text_file_area.blp:128
 msgid "Clear input"
-msgstr ""
+msgstr "Tühjenda sisend"
 
 #: src/ui/widgets/image_area.blp:84 src/ui/widgets/text_file_area.blp:95
 msgid "Open image in another program"
-msgstr ""
+msgstr "Ava pilt muus rakenduses"
 
 #: src/ui/widgets/theme_switcher.blp:29
 msgid "Follow system style"
-msgstr ""
+msgstr "Kasuta süsteemi kujundust"
 
 #: src/ui/widgets/theme_switcher.blp:43
 msgid "Light style"
-msgstr ""
+msgstr "Hele kujundus"
 
 #: src/ui/widgets/theme_switcher.blp:57
 msgid "Dark style"
-msgstr ""
+msgstr "Tume kujundus"
 
 #: src/ui/widgets/webview_area.blp:51
 msgid "Open web page in another browser"
-msgstr ""
+msgstr "Ava veebileht muus veebibrauseris"
 
 #: src/ui/views/base_converter.blp:19
 msgid "Number Bases Converter"
-msgstr ""
+msgstr "Numbrite aluste teisendaja"
 
 #: src/ui/views/base_converter.blp:30
 msgid "Input numbers"
-msgstr ""
+msgstr "Sisesta numbreid"
 
 #: src/ui/views/base_converter.blp:33
 msgid "Decimal"
-msgstr ""
+msgstr "Kümnendarv"
 
 #: src/ui/views/base_converter.blp:41
 msgid "Binary"
-msgstr ""
+msgstr "Kahendsüsteemi arv"
 
 #: src/ui/views/base_converter.blp:49
 msgid "Octal"
-msgstr ""
+msgstr "Kaheksandarv"
 
 #: src/ui/views/base_converter.blp:57
 msgid "Hexadecimal"
-msgstr ""
+msgstr "Kuueteistkümnendarv"
 
 #: src/ui/views/base_converter.blp:65
 msgid "ASCII"
-msgstr ""
+msgstr "ASCII"
 
 #: src/ui/views/base_converter.blp:73
 msgid "UTF-8"
-msgstr ""
+msgstr "UTF-8"
 
 #: src/ui/views/base_converter.blp:98
 msgid ""
 "Typing an unaccepted character (i.e. 'A' in the decimal field) will cause "
 "all the fields to reset to 0."
 msgstr ""
+"Mittesobiliku sisendi puhul (nt. A-täht kümnendarvu väljal) lähtestuvad kõik "
+"väljad 0-ks."
 
 #: src/ui/views/base64_encoder.blp:19
 msgid "Base64 Encoder & Decoder"
-msgstr ""
+msgstr "Base64 kodeerija ja dekodeerija"
 
 #: src/ui/views/base64_encoder.blp:20
 msgid "Encode and decode strings using the Base64 format"
@@ -1745,13 +1747,13 @@ msgstr ""
 #: src/ui/views/hash_generator.blp:83 src/ui/views/html_encoder.blp:64
 #: src/ui/views/json_yaml.blp:76 src/ui/views/url_encoder.blp:84
 msgid "Input"
-msgstr ""
+msgstr "Sisend"
 
 #: src/ui/views/base64_encoder.blp:80 src/ui/views/gzip_compressor.blp:73
 #: src/ui/views/hash_generator.blp:92 src/ui/views/html_encoder.blp:77
 #: src/ui/views/json_yaml.blp:88 src/ui/views/url_encoder.blp:95
 msgid "Output"
-msgstr ""
+msgstr "Väljund"
 
 #: src/ui/views/certificate_parser.blp:33
 msgid "Certificate"
@@ -2092,7 +2094,7 @@ msgstr ""
 
 #: src/ui/views/cron_converter.blp:47
 msgid "Output format"
-msgstr ""
+msgstr "Väljundvorming"
 
 #: src/ui/views/cron_converter.blp:48
 msgid ""
@@ -2187,7 +2189,7 @@ msgstr ""
 
 #: src/ui/views/image_converter.blp:35
 msgid "Select the desired output format"
-msgstr ""
+msgstr "Vali soovitud"
 
 #: src/ui/views/image_converter.blp:58
 msgid "Image"
