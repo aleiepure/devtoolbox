@@ -2222,47 +2222,47 @@ msgstr "Формат"
 
 #: src/ui/views/image_converter.blp:35
 msgid "Select the desired output format"
-msgstr "Оберіть бажаний формат вивіду"
+msgstr "Оберіть бажаний формат виводу"
 
 #: src/ui/views/image_converter.blp:58
 msgid "Image"
-msgstr ""
+msgstr "Зображення"
 
 #: src/ui/views/image_converter.blp:60
 msgid "Convert"
-msgstr ""
+msgstr "Конвертація"
 
 #: src/ui/views/image_converter.blp:64
 msgid "converted-image"
-msgstr ""
+msgstr "converted-image"
 
 #: src/ui/views/json_validator.blp:49
 msgid "JSON Schema"
-msgstr ""
+msgstr "Схема JSON"
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
-msgstr ""
+msgstr "Конвертація JSON - YAML"
 
 #: src/ui/views/json_yaml.blp:34
 msgid "Specify what format is the input and the desired output"
-msgstr ""
+msgstr "Вкажіть вхідний та вихідний формати"
 
 #: src/ui/views/json_yaml.blp:42
 msgid "JSON → YAML"
-msgstr ""
+msgstr "JSON → YAML"
 
 #: src/ui/views/json_yaml.blp:46
 msgid "YAML → JSON"
-msgstr ""
+msgstr "YAML → JSON"
 
 #: src/ui/views/jwt_decoder.blp:19
 msgid "JWT Decode & Encode"
-msgstr ""
+msgstr "Кодування та декодування JWT"
 
 #: src/ui/views/jwt_decoder.blp:32
 msgid "Verify Signature"
-msgstr ""
+msgstr "перевірити підпис"
 
 #: src/ui/views/jwt_decoder.blp:33
 msgid "Verify signature or sign JWT"
