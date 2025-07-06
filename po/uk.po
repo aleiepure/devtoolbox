@@ -858,98 +858,98 @@ msgstr "різниці"
 #: src/tools.py:424
 msgctxt "search keyword"
 msgid "modification"
-msgstr "подифікація"
+msgstr "модифікація"
 
 #: src/tools.py:428 src/ui/views/xml_validator.blp:19
 msgid "XML Scheme Validator"
-msgstr ""
+msgstr "Валідація схеми XML"
 
 #: src/tools.py:431 src/ui/views/xml_validator.blp:20
 msgid "Check an XML file against an XSD schema"
-msgstr ""
+msgstr "Перевірка файлу XML на дотримання XSD схеми"
 
 #: src/tools.py:433 src/tools.py:444
 msgctxt "search keyword"
 msgid "validate"
-msgstr ""
+msgstr "валідація"
 
 #: src/tools.py:439 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
-msgstr ""
+msgstr "Валідація схеми JSON"
 
 #: src/tools.py:442 src/ui/views/json_validator.blp:20
 msgid "Check a JSON file against a JSON schema"
-msgstr ""
+msgstr "Перевірка файлу JSON на дотримання схеми JSON"
 
 #: src/tools.py:453 src/ui/views/markdown_preview.blp:20
 msgid "Preview markdown code as you type"
-msgstr ""
+msgstr "Попередні перегляд Makrdown коду під час вводу тексту"
 
 #: src/tools.py:455
 msgctxt "search keyword"
 msgid "render"
-msgstr ""
+msgstr "відображення"
 
 #: src/tools.py:457
 msgctxt "search keyword"
 msgid "md"
-msgstr ""
+msgstr "md"
 
 #: src/tools.py:463 src/ui/views/color_converter.blp:16
 msgid "Color Converter"
-msgstr ""
+msgstr "Конвертація кольору"
 
 #: src/tools.py:464 src/tools.py:481 src/tools.py:491 src/tools.py:505
 msgid "Graphics"
-msgstr ""
+msgstr "Графіка"
 
 #: src/tools.py:466 src/ui/views/color_converter.blp:17
 msgid "Convert colors between formats"
-msgstr ""
+msgstr "Конвертація кольорів між форматами"
 
 #: src/tools.py:468
 msgctxt "search keyword"
 msgid "rgb"
-msgstr ""
+msgstr "rgb"
 
 #: src/tools.py:469
 msgctxt "search keyword"
 msgid "rgba"
-msgstr ""
+msgstr "rgba"
 
 #: src/tools.py:470
 msgctxt "search keyword"
 msgid "hex"
-msgstr ""
+msgstr "hex"
 
 #: src/tools.py:471
 msgctxt "search keyword"
 msgid "hsl"
-msgstr ""
+msgstr "hsl"
 
 #: src/tools.py:472
 msgctxt "search keyword"
 msgid "hsv"
-msgstr ""
+msgstr "hsv"
 
 #: src/tools.py:473
 msgctxt "search keyword"
 msgid "cmyk"
-msgstr ""
+msgstr "cmyk"
 
 #: src/tools.py:475
 msgctxt "search keyword"
 msgid "conversion"
-msgstr ""
+msgstr "конвертація"
 
 #: src/tools.py:476
 msgctxt "search keyword"
 msgid "palette"
-msgstr ""
+msgstr "палітра"
 
 #: src/tools.py:480 src/ui/views/contrast_checker.blp:19
 msgid "Contrast Checker"
-msgstr ""
+msgstr "Перевірка контрасту"
 
 #: src/tools.py:483 src/ui/views/contrast_checker.blp:20
 msgid "Check a color combination for WCAG compliance"
