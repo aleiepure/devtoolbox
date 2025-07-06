@@ -2266,51 +2266,51 @@ msgstr "Перевірити підпис"
 
 #: src/ui/views/jwt_decoder.blp:33
 msgid "Verify signature or sign JWT"
-msgstr "Перевірити або підписати JWT"
+msgstr "Перевірити підпис або підписати JWT"
 
 #: src/ui/views/jwt_decoder.blp:41
 msgid "Off"
-msgstr ""
+msgstr "Вимкнено"
 
 #: src/ui/views/jwt_decoder.blp:46
 msgid "Symmetric"
-msgstr ""
+msgstr "Симетрично"
 
 #: src/ui/views/jwt_decoder.blp:51
 msgid "Asymmetric"
-msgstr ""
+msgstr "Асиметрично"
 
 #: src/ui/views/jwt_decoder.blp:57
 msgid "Key Encoding"
-msgstr ""
+msgstr "Ключ кодування"
 
 #: src/ui/views/jwt_decoder.blp:58
 msgid "Select the encoding of the key"
-msgstr ""
+msgstr "Оберіть кодування для ключа"
 
 #: src/ui/views/jwt_decoder.blp:99
 msgid "Public Key (PEM)"
-msgstr ""
+msgstr "Публічний ключ (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:107
 msgid "Private Key (PEM)"
-msgstr ""
+msgstr "Приватний ключ (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:120
 msgid "Token"
-msgstr ""
+msgstr "Токен"
 
 #: src/ui/views/jwt_decoder.blp:139
 msgid "Header"
-msgstr ""
+msgstr "Заголовок"
 
 #: src/ui/views/jwt_decoder.blp:147
 msgid "Payload"
-msgstr ""
+msgstr "Корисні дані"
 
 #: src/ui/views/lorem_generator.blp:19
 msgid "Lorem Ipsum Generator"
-msgstr ""
+msgstr "Генерація Ipsum Generator"
 
 #: src/ui/views/lorem_generator.blp:34
 msgid "Begin with \"Lorem ipsum dolor sit amet\""
