@@ -2414,43 +2414,43 @@ msgstr "День народження"
 
 #: src/ui/views/qrcode_generator.blp:127
 msgid "Select from calendar:"
-msgstr "Обрати з календаря"
+msgstr "Обрати з календаря:"
 
 #: src/ui/views/qrcode_generator.blp:138
 msgid "URL"
-msgstr ""
+msgstr "URL адреса"
 
 #: src/ui/views/qrcode_generator.blp:145
 msgid "Address"
-msgstr ""
+msgstr "Адреса"
 
 #: src/ui/views/qrcode_generator.blp:148
 msgid "Street"
-msgstr ""
+msgstr "Вулиця"
 
 #: src/ui/views/qrcode_generator.blp:155
 msgid "City"
-msgstr ""
+msgstr "Місто"
 
 #: src/ui/views/qrcode_generator.blp:162
 msgid "State"
-msgstr ""
+msgstr "Область (штат)"
 
 #: src/ui/views/qrcode_generator.blp:169
 msgid "ZIP Code"
-msgstr ""
+msgstr "Поштовий індекс"
 
 #: src/ui/views/qrcode_generator.blp:176
 msgid "Country"
-msgstr ""
+msgstr "Країна"
 
 #: src/ui/views/qrcode_generator.blp:186
 msgid "Generated QR Code"
-msgstr ""
+msgstr "Згенерований QR код"
 
 #: src/ui/views/qrcode_generator.blp:193
 msgid "qr-code.png"
-msgstr ""
+msgstr "qr-code.png"
 
 #: src/ui/views/qrcode_generator.blp:195
 msgid "Generate"
