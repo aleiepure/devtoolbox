@@ -2871,7 +2871,7 @@ msgstr "Vorming"
 
 #: src/formatters/js.py:14
 msgid "JavaScript Formatter"
-msgstr "HTML-i vormindaja"
+msgstr "JavaScripti vormindaja"
 
 #: src/formatters/js.py:17
 msgid "Type JavaScript code here"
@@ -2879,7 +2879,7 @@ msgstr ""
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
-msgstr ""
+msgstr "JSON-i vormindaja"
 
 #: src/formatters/json.py:16
 msgid "Type JSON code here"
@@ -2887,7 +2887,7 @@ msgstr ""
 
 #: src/formatters/sql.py:13
 msgid "SQL Formatter"
-msgstr ""
+msgstr "SQL-i vormindaja"
 
 #: src/formatters/sql.py:16
 msgid "Type SQL code here"
@@ -2895,7 +2895,7 @@ msgstr ""
 
 #: src/formatters/xml.py:15
 msgid "XML Formatter"
-msgstr ""
+msgstr "XML-i vormindaja"
 
 #: src/formatters/xml.py:18
 msgid "Type XML code here"
@@ -2903,7 +2903,7 @@ msgstr ""
 
 #: src/formatters/css.py:13
 msgid "CSS Formatter"
-msgstr ""
+msgstr "CSS-i vormindaja"
 
 #: src/formatters/css.py:16 src/formatters/css_minifier.py:17
 msgid "Type CSS here"
