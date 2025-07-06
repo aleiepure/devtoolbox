@@ -2275,29 +2275,27 @@ msgstr "Off"
 
 #: src/ui/views/jwt_decoder.blp:46
 msgid "Symmetric"
-msgstr "Simmetrico"
+msgstr "Simmetrica"
 
 #: src/ui/views/jwt_decoder.blp:51
 msgid "Asymmetric"
-msgstr "Asimmetrico"
+msgstr "Asimmetrica"
 
 #: src/ui/views/jwt_decoder.blp:57
-#, fuzzy
 msgid "Key Encoding"
-msgstr "Codifica spazio"
+msgstr "Codifica chiave"
 
 #: src/ui/views/jwt_decoder.blp:58
-#, fuzzy
 msgid "Select the encoding of the key"
-msgstr "Seleziona la codifica desiderata per il carattere spazio"
+msgstr "Selezionare la codifica della chiave"
 
 #: src/ui/views/jwt_decoder.blp:99
 msgid "Public Key (PEM)"
-msgstr ""
+msgstr "Chiave pubblica (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:107
 msgid "Private Key (PEM)"
-msgstr ""
+msgstr "Chiave privata (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:120
 msgid "Token"
