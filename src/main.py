@@ -102,7 +102,7 @@ class DevtoolboxApplication(Adw.Application):
             None
         )
 
-        self.create_action("quit", self.on_quit_action, ["<primary>q"])
+        self.create_action("quit", self.on_quit_action, ["<primary>q", "<primary>w"])
         self.create_action("about", self.on_about_action)
 
         # Register custom types

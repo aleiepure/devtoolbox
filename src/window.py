@@ -121,6 +121,8 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             "active", Gio.SettingsBindFlags.DEFAULT)
         self._settings.bind("last-tool", self._content_stack,
             "visible-child-name", Gio.SettingsBindFlags.DEFAULT)
+        
+        self.create_action("show-menu", self._on_show_menu_action, ["F10"])
 
     @Gtk.Template.Callback()
     def _on_favorite_row_activated(self, list_box: Gtk.ListBox, row: Gtk.ListBoxRow) -> None:
@@ -324,3 +326,28 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             self._search_entry.set_text(search_terms)
         self._search_entry.grab_focus()
 
+    def _on_show_menu_action(self, action: Gio.SimpleAction, param: GLib.Variant | None) -> None:
+        """ Callback for the "show-menu" action. """
+        
+        self._menu_btn.popup()
+        
+    def create_action(self, name: str, callback: callable, accelerators: list[str] | None = None) -> None:
+        """
+        Creates a new action and adds it to the application.
+
+        Args:
+            name (str): Name of the action
+            callback (callable): Function to call when the action is activated
+            accelerators (list[str] | None): List of accelerators for the action
+
+        Returns:
+            None
+        """
+        
+        action = Gio.SimpleAction.new(name, None)
+        action.connect("activate", callback)
+        self.add_action(action)
+        if accelerators:
+            app = self.get_application()
+            action_name = f"win.{name}"
+            app.set_accels_for_action(action_name, accelerators)

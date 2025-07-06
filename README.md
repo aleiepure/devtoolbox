@@ -67,10 +67,13 @@ If you have an idea and you can make it happen by yourself, feel free to fork th
 Also, if you know another language, you can help by translating the app.
 
 <a href="https://hosted.weblate.org/engage/devtoolbox/">
-  <img src="https://hosted.weblate.org/widgets/devtoolbox/-/multi-auto.svg" alt="Translation status" />
+  <img src="https://hosted.weblate.org/widgets/devtoolbox/-/horizontal-auto.svg" alt="Translation status" />
 </a>
 
 In the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Contributing), you can find more information.
+
+This project adheres to the [GNOME Code of Conduct](https://conduct.gnome.org/).\
+By participating, you are expected to uphold this code and help create a welcoming and inclusive environment.
 
 ## License
 
