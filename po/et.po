@@ -1070,7 +1070,7 @@ msgstr ""
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:54
 #: src/widgets/text_file_area.py:62 src/widgets/text_file_area.py:200
 msgid "Opening file..."
-msgstr ""
+msgstr "Avan faili"
 
 #: src/widgets/image_area.py:96 src/widgets/text_area.py:147
 #: src/widgets/text_file_area.py:162 src/views/certificate_parser.py:60
@@ -1938,7 +1938,7 @@ msgstr ""
 
 #: src/ui/views/color_converter.blp:31
 msgid "Output format for color values"
-msgstr ""
+msgstr "Värvide väärtuste väljundvorming"
 
 #: src/ui/views/color_converter.blp:36
 msgid "Web"
@@ -2189,7 +2189,7 @@ msgstr ""
 
 #: src/ui/views/image_converter.blp:35
 msgid "Select the desired output format"
-msgstr "Vali soovitud"
+msgstr "Vali soovitud väljundvorming"
 
 #: src/ui/views/image_converter.blp:58
 msgid "Image"
@@ -2213,7 +2213,7 @@ msgstr ""
 
 #: src/ui/views/json_yaml.blp:34
 msgid "Specify what format is the input and the desired output"
-msgstr ""
+msgstr "Määratle sisendi ja soovitud väljundi vorming"
 
 #: src/ui/views/json_yaml.blp:42
 msgid "JSON → YAML"
