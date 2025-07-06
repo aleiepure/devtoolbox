@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-04-01 22:01+0000\n"
-"Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
+"PO-Revision-Date: 2025-07-06 18:57+0000\n"
+"Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
 "Language: et\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -77,7 +77,7 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
-msgstr ""
+msgstr "Regulaaravaldise testija"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/tools.py:450
 #: src/ui/views/markdown_preview.blp:19
@@ -146,11 +146,11 @@ msgstr ""
 
 #: src/tools.py:31 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
-msgstr ""
+msgstr "Ajatempel"
 
 #: src/tools.py:34 src/ui/views/timestamp.blp:20
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr ""
+msgstr "Teisenda omavahel UNIXi ajatempleid ja tavalisi kuupäevi"
 
 #: src/tools.py:36
 msgctxt "search keyword"
@@ -419,10 +419,9 @@ msgid "unarchive"
 msgstr ""
 
 #: src/tools.py:171 src/tools.py:365
-#, fuzzy
 msgctxt "search keyword"
 msgid "file"
-msgstr "Kõik failid"
+msgstr "fail"
 
 #: src/tools.py:174
 msgctxt "search keyword"
@@ -615,10 +614,9 @@ msgid "digest"
 msgstr ""
 
 #: src/tools.py:319
-#, fuzzy
 msgctxt "search keyword"
 msgid "generate"
-msgstr "Üldised"
+msgstr "loo"
 
 #: src/tools.py:321 src/tools.py:535 src/tools.py:551
 msgctxt "search keyword"
@@ -743,10 +741,9 @@ msgid "barcode"
 msgstr ""
 
 #: src/tools.py:381
-#, fuzzy
 msgctxt "search keyword"
 msgid "image"
-msgstr "Pildid"
+msgstr "pilt"
 
 #: src/tools.py:382
 msgctxt "search keyword"
@@ -809,7 +806,7 @@ msgstr ""
 
 #: src/tools.py:405
 msgid "Regex Tester"
-msgstr ""
+msgstr "Regulaaravaldise testija"
 
 #: src/tools.py:408 src/ui/views/regex_tester.blp:20
 msgid "Find matching strings inside a text"
@@ -1052,10 +1049,9 @@ msgid "View certificates contents"
 msgstr ""
 
 #: src/tools.py:532 src/tools.py:549
-#, fuzzy
 msgctxt "search keyword"
 msgid "key"
-msgstr "Võti"
+msgstr "võti"
 
 #: src/tools.py:534
 msgctxt "search keyword"
@@ -1829,7 +1825,6 @@ msgid "New"
 msgstr "Uus"
 
 #: src/ui/views/certificate_request_generator.blp:92
-#, fuzzy
 msgid "Existing"
 msgstr "Olemasolev"
 
