@@ -2124,7 +2124,7 @@ msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:20
 msgid "Compress and decompress texts and images using GZip"
-msgstr "Paki tekste ja pilte"
+msgstr "Paki tekste ja pilte GZip'i abil kokku ja lahti"
 
 #: src/ui/views/gzip_compressor.blp:34
 msgid "Select the desired operation"
