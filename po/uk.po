@@ -262,259 +262,260 @@ msgstr "Системи числення"
 
 #: src/tools.py:69 src/ui/views/base_converter.blp:20
 msgid "Convert numbers between bases"
-msgstr "Конвертація між різними системами числення"
+msgstr "Конвертація чисел між різними системами числення"
 
 #: src/tools.py:71
 msgctxt "search keyword"
 msgid "representation"
-msgstr ""
+msgstr "репрезентація"
 
 #: src/tools.py:72
 msgctxt "search keyword"
 msgid "base"
-msgstr ""
+msgstr "системи числення"
 
 #: src/tools.py:75
 msgctxt "search keyword"
 msgid "number"
-msgstr ""
+msgstr "цифра"
 
 #: src/tools.py:76
 msgctxt "search keyword"
 msgid "binary"
-msgstr ""
+msgstr "бінарність"
 
 #: src/tools.py:77
 msgctxt "search keyword"
 msgid "octal"
-msgstr ""
+msgstr "вісімкова"
 
 #: src/tools.py:78
 msgctxt "search keyword"
 msgid "decimal"
-msgstr ""
+msgstr "десяткова"
 
 #: src/tools.py:79
 msgctxt "search keyword"
 msgid "hexadecimal"
-msgstr ""
+msgstr "шістнадцяткова"
 
 #: src/tools.py:80
 msgctxt "search keyword"
 msgid "integer"
-msgstr ""
+msgstr "ціле число"
 
 #: src/tools.py:87 src/ui/views/cron_converter.blp:20
 msgid "CRON Parser"
-msgstr ""
+msgstr "Парсер CRON"
 
 #: src/tools.py:90 src/ui/views/cron_converter.blp:21
 msgid "Convert CRON expressions to time and date"
-msgstr ""
+msgstr "Конвертація виразів CRON у час та дату"
 
 #: src/tools.py:93 src/tools.py:111
 msgctxt "search keyword"
 msgid "schedule"
-msgstr ""
+msgstr "запланувати"
 
 #: src/tools.py:94 src/tools.py:112
 msgctxt "search keyword"
 msgid "parser"
-msgstr ""
+msgstr "парсер"
 
 #: src/tools.py:95 src/tools.py:113 src/tools.py:410
 msgctxt "search keyword"
 msgid "expression"
-msgstr ""
+msgstr "вираз"
 
 #: src/tools.py:99 src/tools.py:117
 msgctxt "search keyword"
 msgid "job"
-msgstr ""
+msgstr "робота"
 
 #: src/tools.py:105 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
-msgstr ""
+msgstr "Зворотній CRON"
 
 #: src/tools.py:108 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
-msgstr ""
+msgstr "Генератор виразів CRON"
 
 #: src/tools.py:126 src/tools.py:139 src/tools.py:151 src/tools.py:166
 #: src/tools.py:182
 msgid "Encoders & Decoders"
-msgstr ""
+msgstr "Кодувальники та декодувальники"
 
 #: src/tools.py:128 src/ui/views/html_encoder.blp:20
 msgid "Encode and decode special characters using the HTML format"
 msgstr ""
+"Кодування та декодування спеціальних символів використовуючи формат HTML"
 
 #: src/tools.py:131
 msgctxt "search keyword"
 msgid "escape"
-msgstr ""
+msgstr "escape"
 
 #: src/tools.py:133 src/tools.py:233 src/tools.py:247 src/tools.py:434
 #: src/tools.py:456
 msgctxt "search keyword"
 msgid "markup"
-msgstr ""
+msgstr "markup"
 
 #: src/tools.py:134 src/tools.py:145 src/tools.py:172
 msgctxt "search keyword"
 msgid "text"
-msgstr ""
+msgstr "текст"
 
 #: src/tools.py:141
 msgid "Encode and decode base64 strings"
-msgstr ""
+msgstr "Кодування та декодування base64 строк"
 
 #: src/tools.py:144 src/tools.py:173
 msgctxt "search keyword"
 msgid "string"
-msgstr ""
+msgstr "строка"
 
 #: src/tools.py:146 src/tools.py:207 src/tools.py:235 src/tools.py:445
 msgctxt "search keyword"
 msgid "data"
-msgstr ""
+msgstr "дата"
 
 #: src/tools.py:153 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
-msgstr ""
+msgstr "Кодування та декодування спеціальних символів всередині URL посилань"
 
 #: src/tools.py:155
 msgctxt "search keyword"
 msgid "url"
-msgstr ""
+msgstr "посилання"
 
 #: src/tools.py:156
 msgctxt "search keyword"
 msgid "unescape"
-msgstr ""
+msgstr "unescape"
 
 #: src/tools.py:157 src/tools.py:249
 msgctxt "search keyword"
 msgid "web"
-msgstr ""
+msgstr "веб"
 
 #: src/tools.py:158
 msgctxt "search keyword"
 msgid "link"
-msgstr ""
+msgstr "посилання"
 
 #: src/tools.py:159
 msgctxt "search keyword"
 msgid "address"
-msgstr ""
+msgstr "адреса"
 
 #: src/tools.py:160
 msgctxt "search keyword"
 msgid "uri"
-msgstr ""
+msgstr "uri"
 
 #: src/tools.py:161 src/tools.py:219
 msgctxt "search keyword"
 msgid "query"
-msgstr ""
+msgstr "запит"
 
 #: src/tools.py:168
 msgid "Compress and decompress files and texts using GZip"
-msgstr ""
+msgstr "Стискання та розпакування файлі та тексту за допомогою GZip"
 
 #: src/tools.py:170
 msgctxt "search keyword"
 msgid "unarchive"
-msgstr ""
+msgstr "розпакувати"
 
 #: src/tools.py:171 src/tools.py:365
 msgctxt "search keyword"
 msgid "file"
-msgstr ""
+msgstr "файл"
 
 #: src/tools.py:174
 msgctxt "search keyword"
 msgid "zip"
-msgstr ""
+msgstr "зіп"
 
 #: src/tools.py:175
 msgctxt "search keyword"
 msgid "unzip"
-msgstr ""
+msgstr "розпакувати"
 
 #: src/tools.py:176
 msgctxt "search keyword"
 msgid "decompression"
-msgstr ""
+msgstr "розпаковка"
 
 #: src/tools.py:177
 msgctxt "search keyword"
 msgid "decompressor"
-msgstr ""
+msgstr "розпакувальник"
 
 #: src/tools.py:184 src/ui/views/jwt_decoder.blp:20
 msgid "Decode and encode JWT tokens"
-msgstr ""
+msgstr "Кодування та декодування JWT токенів"
 
 #: src/tools.py:186
 msgctxt "search keyword"
 msgid "json web token"
-msgstr ""
+msgstr "json web token"
 
 #: src/tools.py:187
 msgctxt "search keyword"
 msgid "header"
-msgstr ""
+msgstr "заголовок"
 
 #: src/tools.py:188
 msgctxt "search keyword"
 msgid "payload"
-msgstr ""
+msgstr "payload"
 
 #: src/tools.py:189
 msgctxt "search keyword"
 msgid "signature"
-msgstr ""
+msgstr "сигнатура"
 
 #: src/tools.py:190
 msgctxt "search keyword"
 msgid "authentication"
-msgstr ""
+msgstr "автентифікація"
 
 #: src/tools.py:191
 msgctxt "search keyword"
 msgid "authorization"
-msgstr ""
+msgstr "авторизація"
 
 #: src/tools.py:192 src/tools.py:320 src/tools.py:533 src/tools.py:550
 msgctxt "search keyword"
 msgid "security"
-msgstr ""
+msgstr "безпека"
 
 #: src/tools.py:199 src/tools.py:212 src/tools.py:226 src/tools.py:240
 #: src/tools.py:255 src/tools.py:269 src/tools.py:282 src/tools.py:296
 msgid "Formatters & Minifiers"
-msgstr ""
+msgstr "Форматувальники та мініфікатори"
 
 #: src/tools.py:201 src/formatters/json.py:14
 msgid "Format JSON documents"
-msgstr ""
+msgstr "Форматування JSON документів"
 
 #: src/tools.py:203 src/tools.py:216 src/tools.py:230 src/tools.py:244
 #: src/tools.py:260 src/tools.py:273
 msgctxt "search keyword"
 msgid "pretty"
-msgstr ""
+msgstr "гарно"
 
 #: src/tools.py:205 src/tools.py:218 src/tools.py:232 src/tools.py:246
 #: src/tools.py:262 src/tools.py:275
 msgctxt "search keyword"
 msgid "beautify"
-msgstr ""
+msgstr "гарнофікація"
 
 #: src/tools.py:214 src/formatters/sql.py:14
 msgid "Format SQL documents"
-msgstr ""
+msgstr "Форматування документів SQL"
 
 #: src/tools.py:220
 msgctxt "search keyword"
