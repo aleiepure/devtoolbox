@@ -95,11 +95,11 @@ msgstr ""
 #: src/tools.py:13 src/tools.py:32 src/tools.py:67 src/tools.py:88
 #: src/tools.py:106
 msgid "Converters"
-msgstr ""
+msgstr "Teisendajad"
 
 #: src/tools.py:15 src/ui/views/json_yaml.blp:20
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr ""
+msgstr "Teisenda JSON-dokmente YAML-vormingusse ja vastupidi"
 
 #: src/tools.py:20 src/tools.py:39 src/tools.py:206
 msgctxt "search keyword"
@@ -155,77 +155,77 @@ msgstr "Teisenda omavahel UNIXi ajatempleid ja tavalisi kuupäevi"
 #: src/tools.py:36
 msgctxt "search keyword"
 msgid "epoch"
-msgstr ""
+msgstr "epohh"
 
 #: src/tools.py:37 src/tools.py:97 src/tools.py:115
 msgctxt "search keyword"
 msgid "time"
-msgstr ""
+msgstr "aeg"
 
 #: src/tools.py:40
 msgctxt "search keyword"
 msgid "datetime"
-msgstr ""
+msgstr "kellaajaga kuupäev"
 
 #: src/tools.py:41
 msgctxt "search keyword"
 msgid "calendar"
-msgstr ""
+msgstr "kalender"
 
 #: src/tools.py:42
 msgctxt "search keyword"
 msgid "timestamp"
-msgstr ""
+msgstr "ajatempel"
 
 #: src/tools.py:44 src/tools.py:98 src/tools.py:116
 msgctxt "search keyword"
 msgid "date"
-msgstr ""
+msgstr "kuupäev"
 
 #: src/tools.py:48
 msgctxt "search keyword"
 msgid "short"
-msgstr ""
+msgstr "lühike"
 
 #: src/tools.py:49
 msgctxt "search keyword"
 msgid "long"
-msgstr ""
+msgstr "pikk"
 
 #: src/tools.py:52
 msgctxt "search keyword"
 msgid "year"
-msgstr ""
+msgstr "aasta"
 
 #: src/tools.py:53
 msgctxt "search keyword"
 msgid "month"
-msgstr ""
+msgstr "kuu"
 
 #: src/tools.py:54
 msgctxt "search keyword"
 msgid "day"
-msgstr ""
+msgstr "päev"
 
 #: src/tools.py:55
 msgctxt "search keyword"
 msgid "hour"
-msgstr ""
+msgstr "tund"
 
 #: src/tools.py:56
 msgctxt "search keyword"
 msgid "hours"
-msgstr ""
+msgstr "tundi"
 
 #: src/tools.py:57
 msgctxt "search keyword"
 msgid "minute"
-msgstr ""
+msgstr "minut"
 
 #: src/tools.py:58
 msgctxt "search keyword"
 msgid "minutes"
-msgstr ""
+msgstr "minutid"
 
 #: src/tools.py:59
 msgctxt "search keyword"
@@ -806,7 +806,7 @@ msgstr ""
 
 #: src/tools.py:405
 msgid "Regex Tester"
-msgstr "Regulaaravaldise testi"
+msgstr "Regulaaravaldise test"
 
 #: src/tools.py:408 src/ui/views/regex_tester.blp:20
 msgid "Find matching strings inside a text"
@@ -2491,7 +2491,7 @@ msgstr ""
 
 #: src/ui/views/regex_tester.blp:19
 msgid "Regular Expression Tester"
-msgstr ""
+msgstr "Regulaaravaldise testija"
 
 #: src/ui/views/regex_tester.blp:37
 msgid "Regex to test"
