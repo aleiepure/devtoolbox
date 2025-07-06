@@ -38,13 +38,13 @@ class TimestampView(Adw.Bin):
         self._tool_options.add(self._timezone_comborow)
 
         # Set current date/time
-        tz = get_localzone_name()
+        tz = self._normalize_timezone_name(get_localzone_name())
 
         # Fix for https://github.com/aleiepure/devtoolbox/issues/28
         if tz == "Europe/Kiev":
             tz = "Europe/Kyiv"
 
-        self._timezone_comborow.set_selected(all_timezones.index(tz))
+        self._timezone_comborow.set_selected(self._find_timezone_index(tz))
         time = datetime.now(tz=ZoneInfo(tz))
         self._timestamp_spin_area.set_value(time.timestamp())
         self._date_area.set_date(
@@ -147,3 +147,50 @@ class TimestampView(Adw.Bin):
                                  second=seconds, tzinfo=ZoneInfo(tz)).strftime("%I:%M:%S %p"))
         self._full_long_date.set_text(datetime(year, month, day, hour=hours, minute=minutes,
                                       second=seconds, tzinfo=ZoneInfo(tz)).strftime("%A, %B %d %Y %I:%M:%S %p %Z"))
+
+    def _normalize_timezone_name(self, tz_name: str) -> str:
+        """ Normalize timezone name removing prefixes and aliasing to new names. """
+        
+        if tz_name.startswith(('posix/', 'right/')):
+            first_slash = tz_name.find('/')
+            if first_slash != -1:
+                tz_name = tz_name[first_slash + 1:]
+            
+        aliases = {
+            "Europe/Kiev": "Europe/Kyiv",
+        }
+        
+        return aliases.get(tz_name, tz_name)
+    
+    def _find_timezone_index(self, tz_name: str) -> int:
+        """ Find the index of the timezone in the all_timezones list. """
+        
+        tz_list = list(all_timezones)
+        
+        # Exact match first
+        try:
+            return tz_list.index(tz_name)
+        except ValueError:
+            pass
+        
+        # Case insensitive match
+        tz_lower = tz_name.lower()
+        for i, tz in enumerate(tz_list):
+            if tz.lower() == tz_lower:
+                return i
+            
+        # Partial match
+        if '/' in tz_name:
+            region, city = tz_name.split('/', 1)
+            for i, tz in enumerate(tz_list):
+                if tz.endswith(f"/{city}") and region.lower() in tz.lower():
+                    return i
+                
+        # Fallback to UTC
+        try:
+            return tz_list.index("UTC")
+        except ValueError:
+            
+            # Default to first in list if nothing matches
+            return 0
+        
