@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-07-06 20:40+0000\n"
+"PO-Revision-Date: 2025-07-07 05:18+0000\n"
 "Last-Translator: freeducks-debug <209897795+freeducks-"
 "debug@users.noreply.github.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/devtoolbox/"
@@ -1583,56 +1583,58 @@ msgstr "Пошук інструментів…"
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
-msgstr ""
+msgstr "Показати/сховати бічну панель"
 
 #: src/ui/window.blp:186
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Клавіатурні скорочення"
 
 #: src/ui/window.blp:191
 msgid "_About Dev Toolbox"
-msgstr ""
+msgstr "_Про \"Dev Toolbox\""
 
 #: src/ui/about_dialog.blp:10
 msgid ""
 "Copyright © 2022 - 2025 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
+"Авторські права © 2022 - 2025 Alessandro Iepure\n"
+"Права на деякі піктограми належать проекту GNOME"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
 #: src/ui/about_dialog.blp:18
 msgid "translator-credits"
-msgstr ""
+msgstr "freeducks-debug"
 
 #: src/ui/widgets/date_area.blp:39 src/ui/views/timestamp.blp:42
 msgid "Now"
-msgstr ""
+msgstr "Зараз"
 
 #: src/ui/widgets/date_area.blp:40
 msgid "Sets the current system date and time"
-msgstr ""
+msgstr "Встановити поточну дату та час системи"
 
 #: src/ui/widgets/date_area.blp:55 src/ui/widgets/entry_row.blp:30
 #: src/ui/widgets/spin_area.blp:68 src/ui/widgets/text_area.blp:66
 #: src/ui/widgets/text_file_area.blp:106
 msgid "Copy to clipboard"
-msgstr ""
+msgstr "Скопіювати у буфер обміну"
 
 #: src/ui/widgets/date_area.blp:79
 msgid "Year"
-msgstr ""
+msgstr "Рік"
 
 #: src/ui/widgets/date_area.blp:110 src/ui/views/reverse_cron.blp:362
 msgid "Month"
-msgstr ""
+msgstr "Місяць"
 
 #: src/ui/widgets/date_area.blp:140 src/ui/views/reverse_cron.blp:250
 msgid "Day"
-msgstr ""
+msgstr "День"
 
 #: src/ui/widgets/date_area.blp:176 src/ui/views/reverse_cron.blp:147
 msgid "Hours"
-msgstr ""
+msgstr "Година"
 
 #: src/ui/widgets/date_area.blp:207 src/ui/views/reverse_cron.blp:44
 msgid "Minutes"
