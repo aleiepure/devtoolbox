@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-07-06 18:57+0000\n"
+"PO-Revision-Date: 2025-07-06 19:14+0000\n"
 "Last-Translator: freeducks-debug <209897795+freeducks-"
 "debug@users.noreply.github.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/devtoolbox/"
@@ -792,68 +792,68 @@ msgstr "нижній регістр"
 #: src/tools.py:397
 msgctxt "search keyword"
 msgid "capitalize"
-msgstr ""
+msgstr "головна літера"
 
 #: src/tools.py:398
 msgctxt "search keyword"
 msgid "count"
-msgstr ""
+msgstr "рахувати"
 
 #: src/tools.py:399
 msgctxt "search keyword"
 msgid "words"
-msgstr ""
+msgstr "слова"
 
 #: src/tools.py:400
 msgctxt "search keyword"
 msgid "characters"
-msgstr ""
+msgstr "символи"
 
 #: src/tools.py:401
 msgctxt "search keyword"
 msgid "lines"
-msgstr ""
+msgstr "лінії"
 
 #: src/tools.py:405
 msgid "Regex Tester"
-msgstr ""
+msgstr "Перевірка регулярних виразів"
 
 #: src/tools.py:408 src/ui/views/regex_tester.blp:20
 msgid "Find matching strings inside a text"
-msgstr ""
+msgstr "Пошук відповідних рядків всередині тексту"
 
 #: src/tools.py:411
 msgctxt "search keyword"
 msgid "pattern"
-msgstr ""
+msgstr "патерн"
 
 #: src/tools.py:412
 msgctxt "search keyword"
 msgid "search"
-msgstr ""
+msgstr "пошук"
 
 #: src/tools.py:416 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
-msgstr ""
+msgstr "Порівняння тексту"
 
 #: src/tools.py:419 src/ui/views/text_diff.blp:20
 msgid "Analyze two texts and find differences"
-msgstr ""
+msgstr "Аналіз двох фрагментів тексту і пошук різниці"
 
 #: src/tools.py:421
 msgctxt "search keyword"
 msgid "difference"
-msgstr ""
+msgstr "різниця"
 
 #: src/tools.py:422
 msgctxt "search keyword"
 msgid "compare"
-msgstr ""
+msgstr "порівняння"
 
 #: src/tools.py:423
 msgctxt "search keyword"
 msgid "changes"
-msgstr ""
+msgstr "різниця"
 
 #: src/tools.py:424
 msgctxt "search keyword"
