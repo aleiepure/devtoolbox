@@ -1908,35 +1908,35 @@ msgstr "Група"
 
 #: src/ui/views/chmod_calculator.blp:171
 msgid "Others"
-msgstr "Інше"
+msgstr "Інші"
 
 #: src/ui/views/chmod_calculator.blp:184
 msgid "Read"
-msgstr ""
+msgstr "Читання"
 
 #: src/ui/views/chmod_calculator.blp:197
 msgid "Write"
-msgstr ""
+msgstr "Запис"
 
 #: src/ui/views/chmod_calculator.blp:210
 msgid "Execute"
-msgstr ""
+msgstr "Виконання"
 
 #: src/ui/views/chmod_calculator.blp:351
 msgid "Numeric value"
-msgstr ""
+msgstr "Числове значення"
 
 #: src/ui/views/chmod_calculator.blp:363
 msgid "Symbolic value"
-msgstr ""
+msgstr "Символічне значення"
 
 #: src/ui/views/colorblindness_simulator.blp:19
 msgid "Color Blindness Simulator"
-msgstr ""
+msgstr "Симулятор дальтонізму"
 
 #: src/ui/views/colorblindness_simulator.blp:34
 msgid "Severity"
-msgstr ""
+msgstr "Тяжість"
 
 #: src/ui/views/colorblindness_simulator.blp:35
 msgid "Severity of the anomaly"
