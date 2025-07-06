@@ -82,187 +82,187 @@ msgstr "Форматувальник для поширених мов прогр
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Hash generators"
-msgstr "Генератор хешу"
+msgstr "Генератори хешу"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
-msgstr ""
+msgstr "Перевірка регулярних виразів"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/tools.py:450
 #: src/ui/views/markdown_preview.blp:19
 msgid "Markdown Previewer"
-msgstr ""
+msgstr "Попередній перегляд Markdown"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
-msgstr ""
+msgstr "Конвертація зображень"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
-msgstr ""
+msgstr "І багато іншого..."
 
 #: src/tools.py:13 src/tools.py:32 src/tools.py:67 src/tools.py:88
 #: src/tools.py:106
 msgid "Converters"
-msgstr ""
+msgstr "Конвертатори"
 
 #: src/tools.py:15 src/ui/views/json_yaml.blp:20
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr ""
+msgstr "Конвертація JSON документів в YAML і навпаки"
 
 #: src/tools.py:20 src/tools.py:39 src/tools.py:206
 msgctxt "search keyword"
 msgid "parse"
-msgstr ""
+msgstr "спарсувати"
 
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
 msgctxt "search keyword"
 msgid "converter"
-msgstr ""
+msgstr "конвертатор"
 
 #: src/tools.py:22 src/tools.py:46 src/tools.py:74 src/tools.py:96
 #: src/tools.py:114 src/tools.py:394
 msgctxt "search keyword"
 msgid "convert"
-msgstr ""
+msgstr "конвертувати"
 
 #: src/tools.py:23 src/tools.py:38 src/tools.py:47 src/tools.py:474
 msgctxt "search keyword"
 msgid "format"
-msgstr ""
+msgstr "формат"
 
 #: src/tools.py:24 src/tools.py:234 src/tools.py:250 src/tools.py:435
 #: src/tools.py:446
 msgctxt "search keyword"
 msgid "document"
-msgstr ""
+msgstr "документ"
 
 #: src/tools.py:25
 msgctxt "search keyword"
 msgid "spaces"
-msgstr ""
+msgstr "пробіли"
 
 #: src/tools.py:26
 msgctxt "search keyword"
 msgid "indentation"
-msgstr ""
+msgstr "відступ"
 
 #: src/tools.py:27 src/tools.py:204 src/tools.py:217 src/tools.py:231
 #: src/tools.py:245 src/tools.py:261 src/tools.py:274
 msgctxt "search keyword"
 msgid "indent"
-msgstr ""
+msgstr "відступ"
 
 #: src/tools.py:31 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
-msgstr ""
+msgstr "Мітка часу"
 
 #: src/tools.py:34 src/ui/views/timestamp.blp:20
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr ""
+msgstr "Конвертація часової мітки UNIX в прості дати та навпаки"
 
 #: src/tools.py:36
 msgctxt "search keyword"
 msgid "epoch"
-msgstr ""
+msgstr "epoch"
 
 #: src/tools.py:37 src/tools.py:97 src/tools.py:115
 msgctxt "search keyword"
 msgid "time"
-msgstr ""
+msgstr "час"
 
 #: src/tools.py:40
 msgctxt "search keyword"
 msgid "datetime"
-msgstr ""
+msgstr "дата"
 
 #: src/tools.py:41
 msgctxt "search keyword"
 msgid "calendar"
-msgstr ""
+msgstr "календар"
 
 #: src/tools.py:42
 msgctxt "search keyword"
 msgid "timestamp"
-msgstr ""
+msgstr "часова мітка"
 
 #: src/tools.py:44 src/tools.py:98 src/tools.py:116
 msgctxt "search keyword"
 msgid "date"
-msgstr ""
+msgstr "дата"
 
 #: src/tools.py:48
 msgctxt "search keyword"
 msgid "short"
-msgstr ""
+msgstr "коротко"
 
 #: src/tools.py:49
 msgctxt "search keyword"
 msgid "long"
-msgstr ""
+msgstr "довго"
 
 #: src/tools.py:52
 msgctxt "search keyword"
 msgid "year"
-msgstr ""
+msgstr "рік"
 
 #: src/tools.py:53
 msgctxt "search keyword"
 msgid "month"
-msgstr ""
+msgstr "місяць"
 
 #: src/tools.py:54
 msgctxt "search keyword"
 msgid "day"
-msgstr ""
+msgstr "день"
 
 #: src/tools.py:55
 msgctxt "search keyword"
 msgid "hour"
-msgstr ""
+msgstr "година"
 
 #: src/tools.py:56
 msgctxt "search keyword"
 msgid "hours"
-msgstr ""
+msgstr "години"
 
 #: src/tools.py:57
 msgctxt "search keyword"
 msgid "minute"
-msgstr ""
+msgstr "хвилина"
 
 #: src/tools.py:58
 msgctxt "search keyword"
 msgid "minutes"
-msgstr ""
+msgstr "хвилини"
 
 #: src/tools.py:59
 msgctxt "search keyword"
 msgid "second"
-msgstr ""
+msgstr "секунда"
 
 #: src/tools.py:60
 msgctxt "search keyword"
 msgid "seconds"
-msgstr ""
+msgstr "секунди"
 
 #: src/tools.py:61
 msgctxt "search keyword"
 msgid "timezone"
-msgstr ""
+msgstr "часова зона"
 
 #: src/tools.py:62
 msgctxt "search keyword"
 msgid "now"
-msgstr ""
+msgstr "зараз"
 
 #: src/tools.py:66
 msgid "Number Bases"
-msgstr ""
+msgstr "Системи числення"
 
 #: src/tools.py:69 src/ui/views/base_converter.blp:20
 msgid "Convert numbers between bases"
-msgstr ""
+msgstr "Конвертація між різними системами числення"
 
 #: src/tools.py:71
 msgctxt "search keyword"
