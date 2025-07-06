@@ -1634,61 +1634,61 @@ msgstr "День"
 
 #: src/ui/widgets/date_area.blp:176 src/ui/views/reverse_cron.blp:147
 msgid "Hours"
-msgstr "Година"
+msgstr "Години"
 
 #: src/ui/widgets/date_area.blp:207 src/ui/views/reverse_cron.blp:44
 msgid "Minutes"
-msgstr ""
+msgstr "Хвилини"
 
 #: src/ui/widgets/date_area.blp:237
 msgid "Seconds"
-msgstr ""
+msgstr "Секунди"
 
 #: src/ui/widgets/entry_row.blp:20
 msgid "Generate again"
-msgstr ""
+msgstr "Згенерувати ще раз"
 
 #: src/ui/widgets/entry_row.blp:40 src/ui/widgets/spin_area.blp:79
 #: src/ui/widgets/text_area.blp:73 src/ui/widgets/text_file_area.blp:117
 msgid "Paste clipboard"
-msgstr ""
+msgstr "Вставити з буфера обміну"
 
 #: src/ui/widgets/entry_row.blp:51 src/ui/widgets/image_area.blp:95
 #: src/ui/widgets/text_area.blp:80 src/ui/widgets/text_file_area.blp:128
 msgid "Clear input"
-msgstr ""
+msgstr "Видалити"
 
 #: src/ui/widgets/image_area.blp:84 src/ui/widgets/text_file_area.blp:95
 msgid "Open image in another program"
-msgstr ""
+msgstr "Відкрити зображення в іншій програмі"
 
 #: src/ui/widgets/theme_switcher.blp:29
 msgid "Follow system style"
-msgstr ""
+msgstr "Стиль системи"
 
 #: src/ui/widgets/theme_switcher.blp:43
 msgid "Light style"
-msgstr ""
+msgstr "Світлий стиль"
 
 #: src/ui/widgets/theme_switcher.blp:57
 msgid "Dark style"
-msgstr ""
+msgstr "Темний стиль"
 
 #: src/ui/widgets/webview_area.blp:51
 msgid "Open web page in another browser"
-msgstr ""
+msgstr "Відкрити веб сторінку в іншому браузері"
 
 #: src/ui/views/base_converter.blp:19
 msgid "Number Bases Converter"
-msgstr ""
+msgstr "Конвертація систем числення"
 
 #: src/ui/views/base_converter.blp:30
 msgid "Input numbers"
-msgstr ""
+msgstr "Вхідні числа"
 
 #: src/ui/views/base_converter.blp:33
 msgid "Decimal"
-msgstr ""
+msgstr "Десятичне"
 
 #: src/ui/views/base_converter.blp:41
 msgid "Binary"
