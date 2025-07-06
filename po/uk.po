@@ -1940,266 +1940,272 @@ msgstr "Тяжкість"
 
 #: src/ui/views/colorblindness_simulator.blp:35
 msgid "Severity of the anomaly"
-msgstr "Тяжкість аномалії"
+msgstr "Ступінь тяжкості аномалії"
 
 #: src/ui/views/colorblindness_simulator.blp:72
 #: src/ui/views/text_inspector.blp:41
 msgid "Original"
-msgstr ""
+msgstr "Оригінал"
 
 #: src/ui/views/colorblindness_simulator.blp:79
 msgid "Protanopia"
-msgstr ""
+msgstr "Протапонія"
 
 #: src/ui/views/colorblindness_simulator.blp:90
 msgid "Deuteranopia"
-msgstr ""
+msgstr "Дейтеранопія"
 
 #: src/ui/views/colorblindness_simulator.blp:95
 msgid "Tritanopia"
-msgstr ""
+msgstr "Тританопія"
 
 #: src/ui/views/color_converter.blp:30
 msgid "Format"
-msgstr ""
+msgstr "Формат"
 
 #: src/ui/views/color_converter.blp:31
 msgid "Output format for color values"
-msgstr ""
+msgstr "Вихідний формат для значень кольорів"
 
 #: src/ui/views/color_converter.blp:36
 msgid "Web"
-msgstr ""
+msgstr "Веб"
 
 #: src/ui/views/color_converter.blp:37
 msgid "Web (Legacy)"
-msgstr ""
+msgstr "Веб (legacy)"
 
 #: src/ui/views/color_converter.blp:38
 msgid "Percent"
-msgstr ""
+msgstr "Процент"
 
 #: src/ui/views/color_converter.blp:39
 msgid "Normalized"
-msgstr ""
+msgstr "Нормалізоване"
 
 #: src/ui/views/color_converter.blp:46
 msgid "Angle Unit"
-msgstr ""
+msgstr "Одиниця вимірювання куту"
 
 #: src/ui/views/color_converter.blp:47
 msgid "Unit used for angle component"
-msgstr ""
+msgstr "Одиниця вимірювання для компонента кута"
 
 #: src/ui/views/color_converter.blp:52
 msgid "Degrees"
-msgstr ""
+msgstr "Градуси"
 
 #: src/ui/views/color_converter.blp:53
 msgid "Radians"
-msgstr ""
+msgstr "Радіани"
 
 #: src/ui/views/color_converter.blp:54
 msgid "Gradians"
-msgstr ""
+msgstr "Град"
 
 #: src/ui/views/color_converter.blp:55
 msgid "Turns"
-msgstr ""
+msgstr "Повороти"
 
 #: src/ui/views/color_converter.blp:56
 msgid "Follow Format"
-msgstr ""
+msgstr "Наслідувати формат"
 
 #: src/ui/views/color_converter.blp:62
 msgid "Bits"
-msgstr ""
+msgstr "Біти"
 
 #: src/ui/views/color_converter.blp:63
 msgid "Bits precision for color values"
-msgstr ""
+msgstr "Бітова точність значень кольорів"
 
 #: src/ui/views/color_converter.blp:82
 msgid "Values"
-msgstr ""
+msgstr "Значення"
 
 #: src/ui/views/color_converter.blp:85 src/ui/views/color_converter.blp:97
 msgid "Color"
-msgstr ""
+msgstr "Колір"
 
 #: src/ui/views/color_converter.blp:103
 msgid "Hex"
-msgstr ""
+msgstr "Hex"
 
 #: src/ui/views/color_converter.blp:128
 msgid "Red"
-msgstr ""
+msgstr "Червоний"
 
 #: src/ui/views/color_converter.blp:136
 msgid "Green"
-msgstr ""
+msgstr "Зелений"
 
 #: src/ui/views/color_converter.blp:144
 msgid "Blue"
-msgstr ""
+msgstr "Синій"
 
 #: src/ui/views/color_converter.blp:168 src/ui/views/color_converter.blp:208
 msgid "Hue"
-msgstr ""
+msgstr "Hue"
 
 #: src/ui/views/color_converter.blp:176 src/ui/views/color_converter.blp:216
 msgid "Saturation"
-msgstr ""
+msgstr "Насиченість"
 
 #: src/ui/views/color_converter.blp:184
 msgid "Value"
-msgstr ""
+msgstr "Значення"
 
 #: src/ui/views/color_converter.blp:224
 msgid "Lightness"
-msgstr ""
+msgstr "Яскравість"
 
 #: src/ui/views/color_converter.blp:234
 msgid "Alpha"
-msgstr ""
+msgstr "Альфа"
 
 #: src/ui/views/color_converter.blp:265
 msgid "HWB"
-msgstr ""
+msgstr "HWB"
 
 #: src/ui/views/contrast_checker.blp:33 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
-msgstr ""
+msgstr "Колір тексту"
 
 #: src/ui/views/contrast_checker.blp:34
 msgid "Color used for the text"
-msgstr ""
+msgstr "Колір для тексту"
 
 #: src/ui/views/contrast_checker.blp:52 src/ui/views/contrast_checker.blp:65
 msgid "Background color"
-msgstr ""
+msgstr "Колір фону"
 
 #: src/ui/views/contrast_checker.blp:53
 msgid "Color used for the background"
-msgstr ""
+msgstr "Колір для фону"
 
 #: src/ui/views/contrast_checker.blp:77
 msgid "Example"
-msgstr ""
+msgstr "Приклад"
 
 #: src/ui/views/contrast_checker.blp:89
 msgid "Lorem ipsum dolor sit amet"
-msgstr ""
+msgstr "Lorem ipsum dolor sit amet"
 
 #: src/ui/views/contrast_checker.blp:97
 msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
-msgstr ""
+msgstr "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
 
 #: src/ui/views/contrast_checker.blp:118 src/ui/views/contrast_checker.blp:149
 msgid "AA"
-msgstr ""
+msgstr "AA"
 
 #: src/ui/views/contrast_checker.blp:126 src/ui/views/contrast_checker.blp:188
 msgid "small"
-msgstr ""
+msgstr "маленький"
 
 #: src/ui/views/contrast_checker.blp:157 src/ui/views/contrast_checker.blp:219
 msgid "large"
-msgstr ""
+msgstr "великий"
 
 #: src/ui/views/contrast_checker.blp:180 src/ui/views/contrast_checker.blp:211
 msgid "AAA"
-msgstr ""
+msgstr "AAA"
 
 #: src/ui/views/cron_converter.blp:34
 msgid "Number of dates"
-msgstr ""
+msgstr "Кількість дат"
 
 #: src/ui/views/cron_converter.blp:35
 msgid "Number of dates to be generated (up to 20)"
-msgstr ""
+msgstr "Кількість дат для генерації (до 20)"
 
 #: src/ui/views/cron_converter.blp:47
 msgid "Output format"
-msgstr ""
+msgstr "Вихідний формат"
 
 #: src/ui/views/cron_converter.blp:48
 msgid ""
 "Format used to display generated dates (<a href=\"https://strftime.org/"
 "\">python syntax</a>)"
 msgstr ""
+"Формат, який буде використовуватися для відображення згенерованих дат (<a "
+"href=\"https://strftime.org/\">синтаксис Python</a>)"
 
 #: src/ui/views/cron_converter.blp:76
 msgid "CRON expression"
-msgstr ""
+msgstr "Вираз CRON"
 
 #: src/ui/views/cron_converter.blp:89
 msgid "Dates"
-msgstr ""
+msgstr "Дати"
 
 #: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:52
 msgid "Indentations"
-msgstr ""
+msgstr "Відступи"
 
 #: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:53
 msgid "Number of spaces used for indentation"
-msgstr ""
+msgstr "Кількість пробілів, які будуть використовуватися для відступів"
 
 #: src/ui/views/gzip_compressor.blp:19
 msgid "GZip Compress & Decompress"
-msgstr ""
+msgstr "Стискання та розпакування GZip"
 
 #: src/ui/views/gzip_compressor.blp:20
 msgid "Compress and decompress texts and images using GZip"
-msgstr ""
+msgstr "Стискання та розпакування тексту та зображень за допомогою GZip"
 
 #: src/ui/views/gzip_compressor.blp:34
 msgid "Select the desired operation"
-msgstr ""
+msgstr "Оберіть потрібну операцію"
 
 #: src/ui/views/gzip_compressor.blp:43
 msgid "Compress"
-msgstr ""
+msgstr "Стискання"
 
 #: src/ui/views/gzip_compressor.blp:47
 msgid "Decompress"
-msgstr ""
+msgstr "Розпакування"
 
 #: src/ui/views/gzip_compressor.blp:105
 msgid ""
 "The compression result and the expected decompression input are base64 "
 "encoded."
-msgstr ""
+msgstr "Результат стискання та очікувані дані розпакування закодовані в Base64."
 
 #: src/ui/views/gzip_compressor.blp:110
 msgid "May hang the app for large files, please wait."
 msgstr ""
+"Додаток може перестати відповідати при роботі з великими файлами, будь "
+"ласка, зачекайте."
 
 #: src/ui/views/hash_generator.blp:19
 msgid "Hash Generator & Checker"
-msgstr ""
+msgstr "Генерація та перевірка хешу"
 
 #: src/ui/views/hash_generator.blp:20
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
-msgstr ""
+msgstr "Розраховує MD5, SHA1, SHA256 та SHA512 хеші та перевіряє цілісність"
 
 #: src/ui/views/hash_generator.blp:34
 msgid "Hash to calculate"
-msgstr ""
+msgstr "Хеш для розрахунку"
 
 #: src/ui/views/hash_generator.blp:35
 msgid "Choose the hash type to calculate"
-msgstr ""
+msgstr "Оберіть тип хешу для розрахунку"
 
 #: src/ui/views/hash_generator.blp:53
 msgid "Check for integrity"
-msgstr ""
+msgstr "Перевірка цілісності"
 
 #: src/ui/views/hash_generator.blp:54
 msgid ""
 "If enabled the calculated hash will be checked against another provided hash "
 "to verify integrity"
 msgstr ""
+"Якщо увімкнено, розрахований хеш буде перевірено з наданим хешем для "
+"перевірки цілісності."
 
 #: src/ui/views/hash_generator.blp:60
 msgid "Type the hash to check against"
