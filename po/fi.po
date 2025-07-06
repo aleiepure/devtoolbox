@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-03-11 18:33+0000\n"
-"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
+"PO-Revision-Date: 2025-07-06 18:03+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/fi/>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -1653,12 +1653,11 @@ msgid "_About Dev Toolbox"
 msgstr "_Tietoja - Dev Toolbox"
 
 #: src/ui/about_dialog.blp:10
-#, fuzzy
 msgid ""
 "Copyright © 2022 - 2025 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
-"Tekijänoikeus © 2022 - 2024 Alessandro Iepure\n"
+"Tekijänoikeus © 2022 - 2025 Alessandro Iepure\n"
 "Joidenkin kuvakkeiden tekijänoikeus kuuluu GNOME-projektille"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
@@ -1764,11 +1763,11 @@ msgstr "Heksadesimaali"
 
 #: src/ui/views/base_converter.blp:65
 msgid "ASCII"
-msgstr ""
+msgstr "ASCII"
 
 #: src/ui/views/base_converter.blp:73
 msgid "UTF-8"
-msgstr ""
+msgstr "UTF-8"
 
 #: src/ui/views/base_converter.blp:98
 msgid ""
@@ -1779,14 +1778,12 @@ msgstr ""
 "nollaa kaikki kentät."
 
 #: src/ui/views/base64_encoder.blp:19
-#, fuzzy
 msgid "Base64 Encoder & Decoder"
-msgstr "URL-osoitteen koodaaja ja purkaja"
+msgstr "Base64-koodaaja ja -purkaja"
 
 #: src/ui/views/base64_encoder.blp:20
-#, fuzzy
 msgid "Encode and decode strings using the Base64 format"
-msgstr "Koodaa ja pura erikoismerkkejä käyttäen HTML-muotoilua"
+msgstr "Koodaa ja pura merkkijonoja käyttäen Base64-muotoa"
 
 #: src/ui/views/base64_encoder.blp:30 src/ui/views/certificate_parser.blp:30
 #: src/ui/views/colorblindness_simulator.blp:31
@@ -1815,12 +1812,12 @@ msgstr "Valitse haluamasi koodaussuunta"
 #: src/ui/views/base64_encoder.blp:41 src/ui/views/html_encoder.blp:43
 #: src/ui/views/url_encoder.blp:43
 msgid "Encode"
-msgstr ""
+msgstr "Koodaa"
 
 #: src/ui/views/base64_encoder.blp:45 src/ui/views/html_encoder.blp:47
 #: src/ui/views/url_encoder.blp:47
 msgid "Decode"
-msgstr ""
+msgstr "Pura"
 
 #: src/ui/views/base64_encoder.blp:51
 msgid "URL Safe"
@@ -2049,7 +2046,7 @@ msgstr ""
 
 #: src/ui/views/color_converter.blp:46
 msgid "Angle Unit"
-msgstr ""
+msgstr "Kulman yksikkö"
 
 #: src/ui/views/color_converter.blp:47
 msgid "Unit used for angle component"
@@ -2057,11 +2054,11 @@ msgstr ""
 
 #: src/ui/views/color_converter.blp:52
 msgid "Degrees"
-msgstr ""
+msgstr "Asteet"
 
 #: src/ui/views/color_converter.blp:53
 msgid "Radians"
-msgstr ""
+msgstr "Radiaanit"
 
 #: src/ui/views/color_converter.blp:54
 msgid "Gradians"
@@ -2086,28 +2083,27 @@ msgstr ""
 
 #: src/ui/views/color_converter.blp:82
 msgid "Values"
-msgstr ""
+msgstr "Arvot"
 
 #: src/ui/views/color_converter.blp:85 src/ui/views/color_converter.blp:97
 msgid "Color"
-msgstr ""
+msgstr "Väri"
 
 #: src/ui/views/color_converter.blp:103
 msgid "Hex"
 msgstr ""
 
 #: src/ui/views/color_converter.blp:128
-#, fuzzy
 msgid "Red"
-msgstr "Lue"
+msgstr "Punainen"
 
 #: src/ui/views/color_converter.blp:136
 msgid "Green"
-msgstr ""
+msgstr "Vihreä"
 
 #: src/ui/views/color_converter.blp:144
 msgid "Blue"
-msgstr ""
+msgstr "Sininen"
 
 #: src/ui/views/color_converter.blp:168 src/ui/views/color_converter.blp:208
 msgid "Hue"
@@ -2120,7 +2116,7 @@ msgstr "Lauantai"
 
 #: src/ui/views/color_converter.blp:184
 msgid "Value"
-msgstr ""
+msgstr "Arvo"
 
 #: src/ui/views/color_converter.blp:224
 #, fuzzy
@@ -2303,9 +2299,8 @@ msgid "converted-image"
 msgstr "muunnettu kuva"
 
 #: src/ui/views/json_validator.blp:49
-#, fuzzy
 msgid "JSON Schema"
-msgstr "JSON-skeeman validointi"
+msgstr "JSON-skeema"
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
@@ -2317,24 +2312,23 @@ msgstr "Määritä syötteen ja halutun tulosteen muoto"
 
 #: src/ui/views/json_yaml.blp:42
 msgid "JSON → YAML"
-msgstr ""
+msgstr "JSON → YAML"
 
 #: src/ui/views/json_yaml.blp:46
 msgid "YAML → JSON"
-msgstr ""
+msgstr "YAML → JSON"
 
 #: src/ui/views/jwt_decoder.blp:19
-#, fuzzy
 msgid "JWT Decode & Encode"
-msgstr "HTML:n kooderi ja purkaja"
+msgstr "JWT:n kooderi ja purkaja"
 
 #: src/ui/views/jwt_decoder.blp:32
 msgid "Verify Signature"
-msgstr ""
+msgstr "Vahvista allekirjoitus"
 
 #: src/ui/views/jwt_decoder.blp:33
 msgid "Verify signature or sign JWT"
-msgstr ""
+msgstr "Vahvista allekirjoitus tai allekirjoita JWT"
 
 #: src/ui/views/jwt_decoder.blp:41
 msgid "Off"
@@ -2342,11 +2336,11 @@ msgstr ""
 
 #: src/ui/views/jwt_decoder.blp:46
 msgid "Symmetric"
-msgstr ""
+msgstr "Symmetrinen"
 
 #: src/ui/views/jwt_decoder.blp:51
 msgid "Asymmetric"
-msgstr ""
+msgstr "Asymmetrinen"
 
 #: src/ui/views/jwt_decoder.blp:57
 #, fuzzy
@@ -2360,11 +2354,11 @@ msgstr "Valitse välilyönnin koodaustapa"
 
 #: src/ui/views/jwt_decoder.blp:99
 msgid "Public Key (PEM)"
-msgstr ""
+msgstr "Julkinen avain (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:107
 msgid "Private Key (PEM)"
-msgstr ""
+msgstr "Yksityinen avain (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:120
 msgid "Token"
