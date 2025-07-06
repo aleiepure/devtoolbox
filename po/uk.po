@@ -1571,15 +1571,15 @@ msgstr "Немає обраних"
 #: src/ui/window.blp:73
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
-msgstr "Додавайте інструменти в обране натиснув на зірку поруч з заголовком."
+msgstr "Додавайте інструменти в обране натиснув на зірку поруч з заголовком"
 
 #: src/ui/window.blp:92
 msgid "Favorites"
-msgstr ""
+msgstr "Обрані"
 
 #: src/ui/window.blp:121
 msgid "Search Tools…"
-msgstr ""
+msgstr "Пошук інструментів…"
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
