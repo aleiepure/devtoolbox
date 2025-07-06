@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-07-06 19:27+0000\n"
+"PO-Revision-Date: 2025-07-06 19:30+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
@@ -86,7 +86,7 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
-msgstr ""
+msgstr "Piltide teisendajad"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
@@ -1101,7 +1101,7 @@ msgstr "Toetatud pildivormingud"
 
 #: src/widgets/image_area.py:173
 msgid "Saving image..."
-msgstr ""
+msgstr "Salvestan pilti..."
 
 #: src/widgets/image_area.py:180 src/widgets/text_file_area.py:328
 #: src/views/image_converter.py:51 src/views/qrcode_generator.py:183
@@ -2124,7 +2124,7 @@ msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:20
 msgid "Compress and decompress texts and images using GZip"
-msgstr ""
+msgstr "Paki tekste ja pilte"
 
 #: src/ui/views/gzip_compressor.blp:34
 msgid "Select the desired operation"
@@ -2193,7 +2193,7 @@ msgstr "Vali soovitud väljundvorming"
 
 #: src/ui/views/image_converter.blp:58
 msgid "Image"
-msgstr ""
+msgstr "Pilt"
 
 #: src/ui/views/image_converter.blp:60
 msgid "Convert"
@@ -2201,7 +2201,7 @@ msgstr ""
 
 #: src/ui/views/image_converter.blp:64
 msgid "converted-image"
-msgstr ""
+msgstr "teisendatud pilt"
 
 #: src/ui/views/json_validator.blp:49
 msgid "JSON Schema"
