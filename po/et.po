@@ -659,15 +659,15 @@ msgstr ""
 #: src/tools.py:344
 msgctxt "search keyword"
 msgid "random"
-msgstr ""
+msgstr "juhuslik"
 
 #: src/tools.py:348
 msgid "Random"
-msgstr ""
+msgstr "Juhuslik sisu"
 
 #: src/tools.py:351 src/ui/views/random_generator.blp:20
 msgid "Generate random numbers and strings"
-msgstr ""
+msgstr "Loo juhuslikke numbreid ja sõnesid"
 
 #: src/tools.py:353
 msgctxt "search keyword"
@@ -873,7 +873,7 @@ msgstr ""
 
 #: src/tools.py:453 src/ui/views/markdown_preview.blp:20
 msgid "Preview markdown code as you type"
-msgstr "Vaata Markdowni koodi tulemust oma kirjutamise ajal"
+msgstr "Vaata Markdowni koodi visualiseerimist oma kirjutamise ajal"
 
 #: src/tools.py:455
 msgctxt "search keyword"
@@ -957,7 +957,7 @@ msgstr ""
 
 #: src/tools.py:490
 msgid "Color Blindness"
-msgstr ""
+msgstr "Värvipimedus"
 
 #: src/tools.py:493 src/ui/views/colorblindness_simulator.blp:20
 msgid "Simulate color blindness in images"
@@ -1106,14 +1106,14 @@ msgstr "Salvestan pilti..."
 #: src/widgets/image_area.py:180 src/widgets/text_file_area.py:328
 #: src/views/image_converter.py:51 src/views/qrcode_generator.py:183
 msgid "Save file as"
-msgstr ""
+msgstr "Salvesta fail kui"
 
 #: src/widgets/image_area.py:181 src/widgets/text_file_area.py:329
 #: src/views/certificate_request_generator.py:215
 #: src/views/image_converter.py:52 src/views/qrcode_generator.py:184
 #: src/ui/widgets/image_area.blp:72 src/ui/widgets/text_file_area.blp:83
 msgid "Save"
-msgstr ""
+msgstr "Salvesta"
 
 #: src/widgets/text_area.py:194 src/widgets/text_file_area.py:230
 msgid "Text files"
@@ -1261,7 +1261,7 @@ msgstr ""
 
 #: src/views/certificate_request_generator.py:145
 msgid "Select save location"
-msgstr ""
+msgstr "Vali salvestamise asukoht"
 
 #: src/views/certificate_request_generator.py:146
 #: src/ui/views/certificate_request_generator.blp:163
@@ -1272,11 +1272,11 @@ msgstr ""
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:63
 #: src/views/image_converter.py:41 src/views/qrcode_generator.py:201
 msgid "Saved Successfully"
-msgstr ""
+msgstr "Salvestamine õnnestus"
 
 #: src/views/certificate_request_generator.py:214
 msgid "Save key as"
-msgstr ""
+msgstr "Salvesta võti kui"
 
 #: src/views/chmod_calculator.py:33 src/views/color_converter.py:54
 #: src/views/jwt_decoder.py:35
@@ -1310,7 +1310,7 @@ msgstr ""
 
 #: src/views/gzip_compressor.py:134
 msgid "Please save this file to view its contents"
-msgstr ""
+msgstr "Sisu vaatamiseks palun salvesta fail"
 
 #: src/views/hash_generator.py:165
 msgid "Hashes match!"
@@ -1857,11 +1857,11 @@ msgstr "4096 bitti"
 
 #: src/ui/views/certificate_request_generator.blp:144
 msgid "Key Save Location *"
-msgstr ""
+msgstr "Võtme salvestamise asukoht *"
 
 #: src/ui/views/certificate_request_generator.blp:145
 msgid "Save location for the generated key file"
-msgstr ""
+msgstr "Loodud võtmefaili salvestamise kaust"
 
 #: src/ui/views/chmod_calculator.blp:33
 msgid "Permissions"
@@ -1905,7 +1905,7 @@ msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:19
 msgid "Color Blindness Simulator"
-msgstr ""
+msgstr "simuleerima"
 
 #: src/ui/views/colorblindness_simulator.blp:34
 msgid "Severity"
@@ -1998,7 +1998,7 @@ msgstr ""
 
 #: src/ui/views/color_converter.blp:85 src/ui/views/color_converter.blp:97
 msgid "Color"
-msgstr ""
+msgstr "Värv"
 
 #: src/ui/views/color_converter.blp:103
 msgid "Hex"
@@ -2042,19 +2042,19 @@ msgstr ""
 
 #: src/ui/views/contrast_checker.blp:33 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
-msgstr ""
+msgstr "Teksti värv"
 
 #: src/ui/views/contrast_checker.blp:34
 msgid "Color used for the text"
-msgstr "Testi jaoks kasutatud värv"
+msgstr "Teksti jaoks kasutatud värv"
 
 #: src/ui/views/contrast_checker.blp:52 src/ui/views/contrast_checker.blp:65
 msgid "Background color"
-msgstr ""
+msgstr "Taustavärv"
 
 #: src/ui/views/contrast_checker.blp:53
 msgid "Color used for the background"
-msgstr ""
+msgstr "Tausta jaoks kasutatud värv"
 
 #: src/ui/views/contrast_checker.blp:77
 msgid "Example"
@@ -2813,7 +2813,7 @@ msgstr ""
 
 #: src/ui/views/uuid_generator.blp:42
 msgid "Version 4 (Random)"
-msgstr ""
+msgstr "Versioon 4 (juhuslik)"
 
 #: src/ui/views/uuid_generator.blp:43
 msgid "Version 5"
@@ -2875,7 +2875,7 @@ msgstr "JavaScripti vormindaja"
 
 #: src/formatters/js.py:17
 msgid "Type JavaScript code here"
-msgstr "Sisesta siia HTML-kood"
+msgstr "Sisesta siia JavaScripti kood"
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
