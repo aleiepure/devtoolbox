@@ -436,12 +436,12 @@ msgstr ""
 #: src/tools.py:176
 msgctxt "search keyword"
 msgid "decompression"
-msgstr ""
+msgstr "lahti pakkimine"
 
 #: src/tools.py:177
 msgctxt "search keyword"
 msgid "decompressor"
-msgstr ""
+msgstr "lahtipakkija"
 
 #: src/tools.py:184 src/ui/views/jwt_decoder.blp:20
 msgid "Decode and encode JWT tokens"
@@ -560,7 +560,7 @@ msgstr ""
 #: src/tools.py:287 src/tools.py:302
 msgctxt "search keyword"
 msgid "compress"
-msgstr ""
+msgstr "paki kokku"
 
 #: src/tools.py:288
 msgctxt "search keyword"
@@ -672,7 +672,7 @@ msgstr ""
 #: src/tools.py:353
 msgctxt "search keyword"
 msgid "password"
-msgstr ""
+msgstr "salasõna"
 
 #: src/tools.py:354
 msgctxt "search keyword"
@@ -724,11 +724,11 @@ msgstr ""
 
 #: src/tools.py:374
 msgid "QR Code"
-msgstr ""
+msgstr "QR-kood"
 
 #: src/tools.py:377 src/ui/views/qrcode_generator.blp:20
 msgid "Create custom QR Codes"
-msgstr ""
+msgstr "Loo erinevaid QR-koode"
 
 #: src/tools.py:379
 msgctxt "search keyword"
@@ -2120,7 +2120,7 @@ msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:19
 msgid "GZip Compress & Decompress"
-msgstr "Kokku ja lahti pakkimine"
+msgstr "Kokku ja lahti pakkimine GZip'iga"
 
 #: src/ui/views/gzip_compressor.blp:20
 msgid "Compress and decompress texts and images using GZip"
@@ -2217,11 +2217,11 @@ msgstr "Määratle sisendi ja soovitud väljundi vorming"
 
 #: src/ui/views/json_yaml.blp:42
 msgid "JSON → YAML"
-msgstr ""
+msgstr "JSON → YAML"
 
 #: src/ui/views/json_yaml.blp:46
 msgid "YAML → JSON"
-msgstr ""
+msgstr "YAML → JSON"
 
 #: src/ui/views/jwt_decoder.blp:19
 msgid "JWT Decode & Encode"
@@ -2313,7 +2313,7 @@ msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:19
 msgid "QR Code Generator"
-msgstr ""
+msgstr "QR-koodide looja"
 
 #: src/ui/views/qrcode_generator.blp:31 src/ui/views/reverse_cron.blp:31
 msgid "Tool Options"
@@ -2321,171 +2321,171 @@ msgstr "Tarviku eelistused"
 
 #: src/ui/views/qrcode_generator.blp:32
 msgid "Fill the required information and press 'generate'"
-msgstr ""
+msgstr "Sisesta vajalik teave ja klõpsi nuppu „Loo“"
 
 #: src/ui/views/qrcode_generator.blp:35
 msgid "Content type"
-msgstr ""
+msgstr "Sisu tüüp"
 
 #: src/ui/views/qrcode_generator.blp:36
 msgid "Choose the content of the QR Code"
-msgstr ""
+msgstr "Vali QR-koodi tüüp"
 
 #: src/ui/views/qrcode_generator.blp:41 src/ui/views/qrcode_generator.blp:49
 msgid "Text/URL"
-msgstr ""
+msgstr "Tekst või võrguaadress"
 
 #: src/ui/views/qrcode_generator.blp:42
 msgid "WiFi Network"
-msgstr ""
+msgstr "WiFi-võrk"
 
 #: src/ui/views/qrcode_generator.blp:43
 msgid "Contact"
-msgstr ""
+msgstr "Kontaktkirje"
 
 #: src/ui/views/qrcode_generator.blp:56
 msgid "Network Name (SSID)"
-msgstr ""
+msgstr "Võrgu nimi (SSID)"
 
 #: src/ui/views/qrcode_generator.blp:63
 msgid "Network Encryption"
-msgstr ""
+msgstr "Kasutatav krüptimine"
 
 #: src/ui/views/qrcode_generator.blp:70
 msgid "None"
-msgstr ""
+msgstr "Puudub"
 
 #: src/ui/views/qrcode_generator.blp:76
 msgid "Network Password"
-msgstr ""
+msgstr "Võrgu salasõna"
 
 #: src/ui/views/qrcode_generator.blp:80
 msgid "First Name *"
-msgstr ""
+msgstr "Eesnimi *"
 
 #: src/ui/views/qrcode_generator.blp:87
 msgid "Last Name *"
-msgstr ""
+msgstr "Perenimi *"
 
 #: src/ui/views/qrcode_generator.blp:94
 msgid "Phone Number"
-msgstr ""
+msgstr "Telefoninumber"
 
 #: src/ui/views/qrcode_generator.blp:101
 msgid "Email"
-msgstr ""
+msgstr "E-posti aadress"
 
 #: src/ui/views/qrcode_generator.blp:108
 msgid "Birthday"
-msgstr ""
+msgstr "Sünnipäev"
 
 #: src/ui/views/qrcode_generator.blp:127
 msgid "Select from calendar:"
-msgstr ""
+msgstr "Vali kalendrist:"
 
 #: src/ui/views/qrcode_generator.blp:138
 msgid "URL"
-msgstr ""
+msgstr "Võrguaadress"
 
 #: src/ui/views/qrcode_generator.blp:145
 msgid "Address"
-msgstr ""
+msgstr "Aadress"
 
 #: src/ui/views/qrcode_generator.blp:148
 msgid "Street"
-msgstr ""
+msgstr "Tänav"
 
 #: src/ui/views/qrcode_generator.blp:155
 msgid "City"
-msgstr ""
+msgstr "Linn/asula"
 
 #: src/ui/views/qrcode_generator.blp:162
 msgid "State"
-msgstr ""
+msgstr "Osariik/maakond"
 
 #: src/ui/views/qrcode_generator.blp:169
 msgid "ZIP Code"
-msgstr ""
+msgstr "Suunanumber"
 
 #: src/ui/views/qrcode_generator.blp:176
 msgid "Country"
-msgstr ""
+msgstr "Riik"
 
 #: src/ui/views/qrcode_generator.blp:186
 msgid "Generated QR Code"
-msgstr ""
+msgstr "Loodud QR-kood"
 
 #: src/ui/views/qrcode_generator.blp:193
 msgid "qr-code.png"
-msgstr ""
+msgstr "qr-kood.png"
 
 #: src/ui/views/qrcode_generator.blp:195
 msgid "Generate"
-msgstr ""
+msgstr "Loo"
 
 #: src/ui/views/random_generator.blp:19
 msgid "Random Generator"
-msgstr ""
+msgstr "Juhusliku sisu looja"
 
 #: src/ui/views/random_generator.blp:30
 msgid "String"
-msgstr ""
+msgstr "String/sõne"
 
 #: src/ui/views/random_generator.blp:31
 msgid "Generate a random string with the given options. ASCII characters only."
-msgstr ""
+msgstr "Loo antud valikute alusel juhuslik sõne. Palun kasuta vaid ASCII-märke."
 
 #: src/ui/views/random_generator.blp:34
 msgid "Length"
-msgstr ""
+msgstr "Pikkus"
 
 #: src/ui/views/random_generator.blp:35
 msgid "Length of the generated string"
-msgstr ""
+msgstr "Loodava sisu pikkus"
 
 #: src/ui/views/random_generator.blp:47
 msgid "Uppercase letters (A-Z)"
-msgstr ""
+msgstr "Suurtähed (A-Z)"
 
 #: src/ui/views/random_generator.blp:53
 msgid "Lowercase letters (a-z)"
-msgstr ""
+msgstr "Väiketähed (a-z)"
 
 #: src/ui/views/random_generator.blp:59
 msgid "Numbers (0-9)"
-msgstr ""
+msgstr "Numbrid (0-9)"
 
 #: src/ui/views/random_generator.blp:65
 msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
-msgstr ""
+msgstr "Erimärgid (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 
 #: src/ui/views/random_generator.blp:75
 msgid "Generated string"
-msgstr ""
+msgstr "Loodud string/sõne"
 
 #: src/ui/views/random_generator.blp:92
 msgid "Number"
-msgstr ""
+msgstr "Number"
 
 #: src/ui/views/random_generator.blp:93
 msgid "Generate a random number in the given range"
-msgstr ""
+msgstr "Loo antud vahemikust juhuslik number"
 
 #: src/ui/views/random_generator.blp:96
 msgid "Minimum"
-msgstr ""
+msgstr "Miinimum"
 
 #: src/ui/views/random_generator.blp:97
 msgid "Minimum value of the generated number"
-msgstr ""
+msgstr "Loodava numbri miinimumväärtus"
 
 #: src/ui/views/random_generator.blp:109
 msgid "Maximum"
-msgstr ""
+msgstr "Maksimum"
 
 #: src/ui/views/random_generator.blp:110
 msgid "Maximum value of the generated number"
-msgstr ""
+msgstr "Loodava numbri suurim väärtus"
 
 #: src/ui/views/random_generator.blp:159
 msgid "Generated number"
