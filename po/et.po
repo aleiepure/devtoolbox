@@ -230,30 +230,30 @@ msgstr "minutid"
 #: src/tools.py:59
 msgctxt "search keyword"
 msgid "second"
-msgstr "sekundid"
+msgstr "sekund"
 
 #: src/tools.py:60
 msgctxt "search keyword"
 msgid "seconds"
-msgstr ""
+msgstr "sekundid"
 
 #: src/tools.py:61
 msgctxt "search keyword"
 msgid "timezone"
-msgstr ""
+msgstr "ajavöönd"
 
 #: src/tools.py:62
 msgctxt "search keyword"
 msgid "now"
-msgstr ""
+msgstr "praegu"
 
 #: src/tools.py:66
 msgid "Number Bases"
-msgstr ""
+msgstr "Numbrite alused"
 
 #: src/tools.py:69 src/ui/views/base_converter.blp:20
 msgid "Convert numbers between bases"
-msgstr ""
+msgstr "Teisenda erinevate numbrite aluste vahel"
 
 #: src/tools.py:71
 msgctxt "search keyword"
@@ -263,12 +263,12 @@ msgstr ""
 #: src/tools.py:72
 msgctxt "search keyword"
 msgid "base"
-msgstr ""
+msgstr "alus"
 
 #: src/tools.py:75
 msgctxt "search keyword"
 msgid "number"
-msgstr ""
+msgstr "number"
 
 #: src/tools.py:76
 msgctxt "search keyword"
@@ -2739,7 +2739,7 @@ msgstr ""
 
 #: src/ui/views/timestamp.blp:19
 msgid "Timestamp Converter"
-msgstr ""
+msgstr "Ajatemplite teisendaja"
 
 #: src/ui/views/timestamp.blp:43
 msgid "Sets the current system timestamp"
@@ -2747,47 +2747,47 @@ msgstr ""
 
 #: src/ui/views/timestamp.blp:47
 msgid "Date"
-msgstr ""
+msgstr "Kuupäev"
 
 #: src/ui/views/timestamp.blp:57
 msgid "ISO Date (ISO 8601/RFC 3339)"
-msgstr ""
+msgstr "ISO-vormingus kuupäev (ISO 8601/RFC 3339)"
 
 #: src/ui/views/timestamp.blp:63
 msgid "RFC 2822 Date"
-msgstr ""
+msgstr "RFC 2822 vormingus kuupäev"
 
 #: src/ui/views/timestamp.blp:69
 msgid "Short Date"
-msgstr ""
+msgstr "Lühike kuupäev"
 
 #: src/ui/views/timestamp.blp:75
 msgid "Short Time"
-msgstr ""
+msgstr "Lühike aeg"
 
 #: src/ui/views/timestamp.blp:81
 msgid "Long Date"
-msgstr ""
+msgstr "Pikk kuupäev"
 
 #: src/ui/views/timestamp.blp:87
 msgid "Long Time"
-msgstr ""
+msgstr "Pikk aeg"
 
 #: src/ui/views/timestamp.blp:93
 msgid "Full Long Date"
-msgstr ""
+msgstr "Täispikk kuupäev"
 
 #: src/ui/views/url_encoder.blp:19
 msgid "URL Encoder & Decoder"
-msgstr ""
+msgstr "Võrguaadresside kodeerija ja dekodeerija"
 
 #: src/ui/views/url_encoder.blp:53
 msgid "Space encoding"
-msgstr ""
+msgstr "Tühiku kodeerimine"
 
 #: src/ui/views/url_encoder.blp:54
 msgid "Select the desired encoding for the space character"
-msgstr ""
+msgstr "Vali tühiku kodeerimiseks soovitud tähemärgid"
 
 #: src/ui/views/uuid_generator.blp:19
 msgid "UUID Generator"
