@@ -485,11 +485,11 @@ msgstr ""
 #: src/tools.py:199 src/tools.py:212 src/tools.py:226 src/tools.py:240
 #: src/tools.py:255 src/tools.py:269 src/tools.py:282 src/tools.py:296
 msgid "Formatters & Minifiers"
-msgstr "Vormindajad"
+msgstr "Vormindajad ja vähendajad"
 
 #: src/tools.py:201 src/formatters/json.py:14
 msgid "Format JSON documents"
-msgstr ""
+msgstr "Vorminda JSON-faile"
 
 #: src/tools.py:203 src/tools.py:216 src/tools.py:230 src/tools.py:244
 #: src/tools.py:260 src/tools.py:273
@@ -505,7 +505,7 @@ msgstr ""
 
 #: src/tools.py:214 src/formatters/sql.py:14
 msgid "Format SQL documents"
-msgstr ""
+msgstr "Vorminda SQL-faile"
 
 #: src/tools.py:220
 msgctxt "search keyword"
@@ -519,11 +519,11 @@ msgstr ""
 
 #: src/tools.py:228 src/formatters/xml.py:16
 msgid "Format XML documents"
-msgstr ""
+msgstr "Vorminda XML-faile"
 
 #: src/tools.py:242 src/formatters/html.py:15
 msgid "Format HTML documents"
-msgstr ""
+msgstr "Vorminda HTML-faile"
 
 #: src/tools.py:248 src/tools.py:263 src/tools.py:276 src/tools.py:286
 #: src/tools.py:301
@@ -533,7 +533,7 @@ msgstr ""
 
 #: src/tools.py:257 src/formatters/js.py:15
 msgid "Format JavaScript documents"
-msgstr ""
+msgstr "Vorminda JSON-faile"
 
 #: src/tools.py:264 src/tools.py:306
 msgctxt "search keyword"
