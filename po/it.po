@@ -623,12 +623,12 @@ msgstr "digest"
 #: src/tools.py:319
 msgctxt "search keyword"
 msgid "generate"
-msgstr "Genera"
+msgstr "genera"
 
 #: src/tools.py:321 src/tools.py:535 src/tools.py:551
 msgctxt "search keyword"
 msgid "cryptography"
-msgstr ""
+msgstr "crittografia"
 
 #: src/tools.py:328 src/ui/views/lorem_generator.blp:20
 msgid "Generate lorem ipsum placeholder text"
@@ -637,39 +637,36 @@ msgstr "Genera testo segnaposto lorem ipsum"
 #: src/tools.py:330
 msgctxt "search keyword"
 msgid "dummy"
-msgstr ""
+msgstr "fittizio"
 
 #: src/tools.py:331
-#, fuzzy
 msgctxt "search keyword"
 msgid "sample"
-msgstr "Esempio"
+msgstr "campione"
 
 #: src/tools.py:332
 msgctxt "search keyword"
 msgid "filler"
-msgstr ""
+msgstr "riempimento"
 
 #: src/tools.py:333
 msgctxt "search keyword"
 msgid "latin"
-msgstr ""
+msgstr "latino"
 
 #: src/tools.py:340 src/ui/views/uuid_generator.blp:20
 msgid "Generate Universally Unique IDs (UUID)"
 msgstr "Genera ID Universalmente Univoci (UUID)"
 
 #: src/tools.py:343
-#, fuzzy
 msgctxt "search keyword"
 msgid "identifier"
-msgstr "Identificatore chiave"
+msgstr "identificatore"
 
 #: src/tools.py:344
-#, fuzzy
 msgctxt "search keyword"
 msgid "random"
-msgstr "Casuale"
+msgstr "casuale"
 
 #: src/tools.py:348
 msgid "Random"
@@ -682,23 +679,22 @@ msgstr "Genera numeri e stringhe casuali"
 #: src/tools.py:353
 msgctxt "search keyword"
 msgid "password"
-msgstr ""
+msgstr "password"
 
 #: src/tools.py:354
-#, fuzzy
 msgctxt "search keyword"
 msgid "token"
-msgstr "Token"
+msgstr "token"
 
 #: src/tools.py:355
 msgctxt "search keyword"
 msgid "entropy"
-msgstr ""
+msgstr "entropia"
 
 #: src/tools.py:356
 msgctxt "search keyword"
 msgid "secure"
-msgstr ""
+msgstr "sicuro"
 
 #: src/tools.py:360 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
@@ -711,12 +707,12 @@ msgstr "Calcola i valori per modificare i permessi con chmod"
 #: src/tools.py:366
 msgctxt "search keyword"
 msgid "unix"
-msgstr ""
+msgstr "unix"
 
 #: src/tools.py:367
 msgctxt "search keyword"
 msgid "linux"
-msgstr ""
+msgstr "lnux"
 
 #: src/tools.py:368
 #, fuzzy
