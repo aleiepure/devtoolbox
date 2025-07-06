@@ -2661,94 +2661,94 @@ msgstr "По будням"
 #. TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:554
 msgid "weekday(s) starting on"
-msgstr "будний день (будні дні) починаючи з"
+msgstr "будній день (будні дні) починаючи з"
 
 #: src/ui/views/reverse_cron.blp:585
 msgid "Specific weekday (choose one or many, no selection means every weekday)"
 msgstr ""
 "Конкретний день тижня (оберіть один чи декілька, відсутність вибору означає "
-"кожен будний день)"
+"кожен будній день)"
 
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:669
 msgid "Every weekday between"
-msgstr ""
+msgstr "Кожен будній день"
 
 #: src/ui/views/reverse_cron.blp:718
 msgid "Command to execute"
-msgstr ""
+msgstr "Команда для запуску"
 
 #: src/ui/views/reverse_cron.blp:737
 msgid "CRON Expression"
-msgstr ""
+msgstr "Вираз CRON"
 
 #: src/ui/views/text_diff.blp:33
 msgid "Old Text"
-msgstr ""
+msgstr "Старий текст"
 
 #: src/ui/views/text_diff.blp:45
 msgid "New Text"
-msgstr ""
+msgstr "Новий текст"
 
 #: src/ui/views/text_diff.blp:58
 msgid "Differences"
-msgstr ""
+msgstr "Різниця"
 
 #: src/ui/views/text_inspector.blp:34
 msgid "Change case"
-msgstr ""
+msgstr "Змінити регістр тексту"
 
 #: src/ui/views/text_inspector.blp:35
 msgid "Choose a case to apply to the text"
-msgstr ""
+msgstr "Оберіть регістр для застосування до тексту"
 
 #: src/ui/views/text_inspector.blp:42
 msgid "Sentence case"
-msgstr ""
+msgstr "Велика літера в початку речення"
 
 #: src/ui/views/text_inspector.blp:43
 msgid "lower case"
-msgstr ""
+msgstr "маленькі літери"
 
 #: src/ui/views/text_inspector.blp:44
 msgid "UPPERCASE"
-msgstr ""
+msgstr "ВЕЛИКІ ЛІТЕРИ"
 
 #: src/ui/views/text_inspector.blp:45
 msgid "Title Case"
-msgstr ""
+msgstr "Кожне Слово З Великої"
 
 #: src/ui/views/text_inspector.blp:46
 msgid "camelCase"
-msgstr ""
+msgstr "camelCase"
 
 #: src/ui/views/text_inspector.blp:47
 msgid "PascalCase"
-msgstr ""
+msgstr "PascalCase"
 
 #: src/ui/views/text_inspector.blp:48
 msgid "snake_case"
-msgstr ""
+msgstr "snake_case"
 
 #: src/ui/views/text_inspector.blp:49
 msgid "CONSTANT_CASE"
-msgstr ""
+msgstr "CONSTANT_CASE"
 
 #: src/ui/views/text_inspector.blp:50
 msgid "kebab-case"
-msgstr ""
+msgstr "kebab-case"
 
 #: src/ui/views/text_inspector.blp:51
 msgid "COBOL-CASE"
-msgstr ""
+msgstr "COBOL-CASE"
 
 #: src/ui/views/text_inspector.blp:52
 msgid "Train-Case"
-msgstr ""
+msgstr "Train-Case"
 
 #: src/ui/views/text_inspector.blp:53
 msgid "aLtErNaTiNg CaSe"
-msgstr ""
+msgstr "aLtErNaTiNg CaSe"
 
 #: src/ui/views/text_inspector.blp:54
 msgid "ReVeRsE aLtErNaTiNg CaSe"
