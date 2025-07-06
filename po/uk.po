@@ -1936,11 +1936,11 @@ msgstr "Симулятор дальтонізму"
 
 #: src/ui/views/colorblindness_simulator.blp:34
 msgid "Severity"
-msgstr "Тяжість"
+msgstr "Тяжкість"
 
 #: src/ui/views/colorblindness_simulator.blp:35
 msgid "Severity of the anomaly"
-msgstr ""
+msgstr "Тяжкість аномалії"
 
 #: src/ui/views/colorblindness_simulator.blp:72
 #: src/ui/views/text_inspector.blp:41
