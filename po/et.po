@@ -215,7 +215,7 @@ msgstr "tund"
 #: src/tools.py:56
 msgctxt "search keyword"
 msgid "hours"
-msgstr "tundi"
+msgstr "tunnid"
 
 #: src/tools.py:57
 msgctxt "search keyword"
@@ -230,7 +230,7 @@ msgstr "minutid"
 #: src/tools.py:59
 msgctxt "search keyword"
 msgid "second"
-msgstr ""
+msgstr "sekundid"
 
 #: src/tools.py:60
 msgctxt "search keyword"
