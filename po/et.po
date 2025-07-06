@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-07-06 19:14+0000\n"
+"PO-Revision-Date: 2025-07-06 19:27+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
@@ -120,7 +120,7 @@ msgstr ""
 #: src/tools.py:23 src/tools.py:38 src/tools.py:47 src/tools.py:474
 msgctxt "search keyword"
 msgid "format"
-msgstr ""
+msgstr "vorming"
 
 #: src/tools.py:24 src/tools.py:234 src/tools.py:250 src/tools.py:435
 #: src/tools.py:446
@@ -334,11 +334,11 @@ msgstr ""
 #: src/tools.py:126 src/tools.py:139 src/tools.py:151 src/tools.py:166
 #: src/tools.py:182
 msgid "Encoders & Decoders"
-msgstr ""
+msgstr "Kodeerijad ja dekodeerijad"
 
 #: src/tools.py:128 src/ui/views/html_encoder.blp:20
 msgid "Encode and decode special characters using the HTML format"
-msgstr ""
+msgstr "Kodeeri ja dekodeeri erimärke HTML-vormingu jaoks"
 
 #: src/tools.py:131
 msgctxt "search keyword"
@@ -354,11 +354,11 @@ msgstr ""
 #: src/tools.py:134 src/tools.py:145 src/tools.py:172
 msgctxt "search keyword"
 msgid "text"
-msgstr ""
+msgstr "tekst"
 
 #: src/tools.py:141
 msgid "Encode and decode base64 strings"
-msgstr ""
+msgstr "Kodeeri ja dekodeeri base64-vormingus sõnesid"
 
 #: src/tools.py:144 src/tools.py:173
 msgctxt "search keyword"
@@ -372,7 +372,7 @@ msgstr ""
 
 #: src/tools.py:153 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
-msgstr ""
+msgstr "Kodeeri ja dekodeeri erimärke kasutamiseks võrguaadressides"
 
 #: src/tools.py:155
 msgctxt "search keyword"
@@ -445,7 +445,7 @@ msgstr ""
 
 #: src/tools.py:184 src/ui/views/jwt_decoder.blp:20
 msgid "Decode and encode JWT tokens"
-msgstr ""
+msgstr "Kodeeri ja dekodeeri JWT tunnuslube"
 
 #: src/tools.py:186
 msgctxt "search keyword"
@@ -758,7 +758,7 @@ msgstr ""
 #: src/tools.py:440 src/tools.py:451 src/ui/views/regex_tester.blp:49
 #: src/ui/views/text_inspector.blp:107 src/ui/views/text_inspector.blp:164
 msgid "Text"
-msgstr ""
+msgstr "Tekst"
 
 #: src/tools.py:391 src/ui/views/text_inspector.blp:20
 msgid "View statistics about text and change sentence cases"
@@ -824,7 +824,7 @@ msgstr ""
 
 #: src/tools.py:416 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
-msgstr ""
+msgstr "Teksti erinevused"
 
 #: src/tools.py:419 src/ui/views/text_diff.blp:20
 msgid "Analyze two texts and find differences"
@@ -891,7 +891,7 @@ msgstr ""
 
 #: src/tools.py:464 src/tools.py:481 src/tools.py:491 src/tools.py:505
 msgid "Graphics"
-msgstr ""
+msgstr "Graafika"
 
 #: src/tools.py:466 src/ui/views/color_converter.blp:17
 msgid "Convert colors between formats"
@@ -995,11 +995,11 @@ msgstr ""
 
 #: src/tools.py:504 src/ui/views/image_converter.blp:19
 msgid "Image Format Converter"
-msgstr ""
+msgstr "Pildivormingute teisendaja"
 
 #: src/tools.py:507 src/ui/views/image_converter.blp:20
 msgid "Convert images to different formats"
-msgstr ""
+msgstr "Teis"
 
 #: src/tools.py:510
 msgctxt "search keyword"
@@ -1038,15 +1038,15 @@ msgstr ""
 
 #: src/tools.py:522 src/ui/views/certificate_parser.blp:19
 msgid "Certificate Parser"
-msgstr ""
+msgstr "Sertifikaartide sisukuvaja"
 
 #: src/tools.py:523 src/tools.py:540 src/views/certificate_parser.py:90
 msgid "Certificates"
-msgstr ""
+msgstr "Sertifikaadid"
 
 #: src/tools.py:525 src/ui/views/certificate_parser.blp:20
 msgid "View certificates contents"
-msgstr ""
+msgstr "Vaata sertifikaatide sisu"
 
 #: src/tools.py:532 src/tools.py:549
 msgctxt "search keyword"
@@ -1097,7 +1097,7 @@ msgstr "Ava"
 
 #: src/widgets/image_area.py:140
 msgid "Supported Image Formats"
-msgstr ""
+msgstr "Toetatud pildivormingud"
 
 #: src/widgets/image_area.py:173
 msgid "Saving image..."
@@ -1117,7 +1117,7 @@ msgstr ""
 
 #: src/widgets/text_area.py:194 src/widgets/text_file_area.py:230
 msgid "Text files"
-msgstr ""
+msgstr "Tekstifailid"
 
 #: src/widgets/text_area.py:201 src/widgets/text_file_area.py:243
 msgid "Accepted files"
@@ -1560,7 +1560,7 @@ msgstr ""
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
-msgstr ""
+msgstr "Näita külgriba või peida see"
 
 #: src/ui/window.blp:186
 msgid "_Keyboard Shortcuts"
@@ -1712,28 +1712,28 @@ msgstr ""
 #: src/ui/views/text_inspector.blp:31 src/ui/views/timestamp.blp:30
 #: src/ui/views/url_encoder.blp:30 src/ui/views/uuid_generator.blp:31
 msgid "Tool options"
-msgstr ""
+msgstr "Tarviku eelistused"
 
 #: src/ui/views/base64_encoder.blp:33 src/ui/views/gzip_compressor.blp:33
 #: src/ui/views/html_encoder.blp:33 src/ui/views/json_yaml.blp:33
 #: src/ui/views/url_encoder.blp:33
 msgid "Direction"
-msgstr ""
+msgstr "Suund"
 
 #: src/ui/views/base64_encoder.blp:34 src/ui/views/html_encoder.blp:34
 #: src/ui/views/url_encoder.blp:34
 msgid "Select the desired encoding direction"
-msgstr ""
+msgstr "Vali, mis pidi soovid kodeerida"
 
 #: src/ui/views/base64_encoder.blp:41 src/ui/views/html_encoder.blp:43
 #: src/ui/views/url_encoder.blp:43
 msgid "Encode"
-msgstr ""
+msgstr "Kodeeri"
 
 #: src/ui/views/base64_encoder.blp:45 src/ui/views/html_encoder.blp:47
 #: src/ui/views/url_encoder.blp:47
 msgid "Decode"
-msgstr ""
+msgstr "Dekodeeri"
 
 #: src/ui/views/base64_encoder.blp:51
 msgid "URL Safe"
@@ -1757,7 +1757,7 @@ msgstr "Väljund"
 
 #: src/ui/views/certificate_parser.blp:33
 msgid "Certificate"
-msgstr ""
+msgstr "Sertifikaat"
 
 #: src/ui/views/certificate_parser.blp:34
 msgid "Open a certificate file (pem, der, cer extensions)"
@@ -2046,7 +2046,7 @@ msgstr ""
 
 #: src/ui/views/contrast_checker.blp:34
 msgid "Color used for the text"
-msgstr ""
+msgstr "Testi jaoks kasutatud värv"
 
 #: src/ui/views/contrast_checker.blp:52 src/ui/views/contrast_checker.blp:65
 msgid "Background color"
@@ -2180,7 +2180,7 @@ msgstr ""
 
 #: src/ui/views/html_encoder.blp:19
 msgid "HTML Encoder & Decoder"
-msgstr ""
+msgstr "HTML-i kodeerija ja dekodeerija"
 
 #: src/ui/views/image_converter.blp:34
 msgctxt "noun"
@@ -2225,7 +2225,7 @@ msgstr ""
 
 #: src/ui/views/jwt_decoder.blp:19
 msgid "JWT Decode & Encode"
-msgstr ""
+msgstr "JWT kodeerija ja dekodeerija"
 
 #: src/ui/views/jwt_decoder.blp:32
 msgid "Verify Signature"
@@ -2317,7 +2317,7 @@ msgstr ""
 
 #: src/ui/views/qrcode_generator.blp:31 src/ui/views/reverse_cron.blp:31
 msgid "Tool Options"
-msgstr ""
+msgstr "Tarviku eelistused"
 
 #: src/ui/views/qrcode_generator.blp:32
 msgid "Fill the required information and press 'generate'"
@@ -2641,11 +2641,11 @@ msgstr ""
 
 #: src/ui/views/text_diff.blp:33
 msgid "Old Text"
-msgstr ""
+msgstr "Vana tekst"
 
 #: src/ui/views/text_diff.blp:45
 msgid "New Text"
-msgstr ""
+msgstr "Uus tekst"
 
 #: src/ui/views/text_diff.blp:58
 msgid "Differences"
