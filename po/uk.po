@@ -2310,111 +2310,111 @@ msgstr "Корисні дані"
 
 #: src/ui/views/lorem_generator.blp:19
 msgid "Lorem Ipsum Generator"
-msgstr "Генерація Ipsum Generator"
+msgstr "Генерація Lorem Ipsum"
 
 #: src/ui/views/lorem_generator.blp:34
 msgid "Begin with \"Lorem ipsum dolor sit amet\""
-msgstr ""
+msgstr "Починати з \"Lorem ipsum dolor sit amet\""
 
 #: src/ui/views/lorem_generator.blp:40 src/ui/views/uuid_generator.blp:53
 msgid "Amount"
-msgstr ""
+msgstr "Кількість"
 
 #: src/ui/views/lorem_generator.blp:54
 msgid "Words"
-msgstr ""
+msgstr "Слова"
 
 #: src/ui/views/lorem_generator.blp:55
 msgid "Sentences"
-msgstr ""
+msgstr "Речення"
 
 #: src/ui/views/lorem_generator.blp:56
 msgid "Paragraphs"
-msgstr ""
+msgstr "Абзаци"
 
 #: src/ui/views/lorem_generator.blp:69
 msgid "Generated text"
-msgstr ""
+msgstr "Згенерований текст"
 
 #: src/ui/views/markdown_preview.blp:35
 msgid "Markdown"
-msgstr ""
+msgstr "Markdown"
 
 #: src/ui/views/markdown_preview.blp:49
 msgid "Preview"
-msgstr ""
+msgstr "Попередній перегляд"
 
 #: src/ui/views/qrcode_generator.blp:19
 msgid "QR Code Generator"
-msgstr ""
+msgstr "Генератор QR кодів"
 
 #: src/ui/views/qrcode_generator.blp:31 src/ui/views/reverse_cron.blp:31
 msgid "Tool Options"
-msgstr ""
+msgstr "Опції інструменту"
 
 #: src/ui/views/qrcode_generator.blp:32
 msgid "Fill the required information and press 'generate'"
-msgstr ""
+msgstr "Заповніть необхідну інформацію та натисніть \"Згенерувати\""
 
 #: src/ui/views/qrcode_generator.blp:35
 msgid "Content type"
-msgstr ""
+msgstr "Тип вмісту"
 
 #: src/ui/views/qrcode_generator.blp:36
 msgid "Choose the content of the QR Code"
-msgstr ""
+msgstr "Оберіть вміст QR коду"
 
 #: src/ui/views/qrcode_generator.blp:41 src/ui/views/qrcode_generator.blp:49
 msgid "Text/URL"
-msgstr ""
+msgstr "Текст/URL посилання"
 
 #: src/ui/views/qrcode_generator.blp:42
 msgid "WiFi Network"
-msgstr ""
+msgstr "Мережа Wi-Fi"
 
 #: src/ui/views/qrcode_generator.blp:43
 msgid "Contact"
-msgstr ""
+msgstr "Контакт"
 
 #: src/ui/views/qrcode_generator.blp:56
 msgid "Network Name (SSID)"
-msgstr ""
+msgstr "Назва мережі (SSID)"
 
 #: src/ui/views/qrcode_generator.blp:63
 msgid "Network Encryption"
-msgstr ""
+msgstr "Шифрування мережі"
 
 #: src/ui/views/qrcode_generator.blp:70
 msgid "None"
-msgstr ""
+msgstr "Немає"
 
 #: src/ui/views/qrcode_generator.blp:76
 msgid "Network Password"
-msgstr ""
+msgstr "Пароль мережі"
 
 #: src/ui/views/qrcode_generator.blp:80
 msgid "First Name *"
-msgstr ""
+msgstr "Ім'я *"
 
 #: src/ui/views/qrcode_generator.blp:87
 msgid "Last Name *"
-msgstr ""
+msgstr "Прізвище *"
 
 #: src/ui/views/qrcode_generator.blp:94
 msgid "Phone Number"
-msgstr ""
+msgstr "Номер телефону"
 
 #: src/ui/views/qrcode_generator.blp:101
 msgid "Email"
-msgstr ""
+msgstr "Електрона пошта"
 
 #: src/ui/views/qrcode_generator.blp:108
 msgid "Birthday"
-msgstr ""
+msgstr "День народження"
 
 #: src/ui/views/qrcode_generator.blp:127
 msgid "Select from calendar:"
-msgstr ""
+msgstr "Обрати з календаря"
 
 #: src/ui/views/qrcode_generator.blp:138
 msgid "URL"
