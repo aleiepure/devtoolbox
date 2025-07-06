@@ -2205,24 +2205,24 @@ msgid ""
 "to verify integrity"
 msgstr ""
 "Якщо увімкнено, розрахований хеш буде перевірено з наданим хешем для "
-"перевірки цілісності."
+"перевірки цілісності"
 
 #: src/ui/views/hash_generator.blp:60
 msgid "Type the hash to check against"
-msgstr ""
+msgstr "Введіть хеш для перевірки"
 
 #: src/ui/views/html_encoder.blp:19
 msgid "HTML Encoder & Decoder"
-msgstr ""
+msgstr "Кодувальник та декодувальник HTML"
 
 #: src/ui/views/image_converter.blp:34
 msgctxt "noun"
 msgid "Format"
-msgstr ""
+msgstr "Формат"
 
 #: src/ui/views/image_converter.blp:35
 msgid "Select the desired output format"
-msgstr ""
+msgstr "Оберіть бажаний формат вивіду"
 
 #: src/ui/views/image_converter.blp:58
 msgid "Image"
