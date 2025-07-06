@@ -29,7 +29,7 @@ color-parser-py==0.1.6
 
 daltonlens==0.1.5
 numpy==2.1.2
-Pillow==11.2.11
+Pillow==11.3.0
 
 asn1crypto==1.5.1
 

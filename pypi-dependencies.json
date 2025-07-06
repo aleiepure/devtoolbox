@@ -338,21 +338,21 @@
             "name": "python3-Pillow",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"Pillow==11.2.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"Pillow==11.3.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fe/7c/d8b1330458e4d2f3f45d9508796d7caf0c0d3764c00c823d10f6f1a3b76d/pillow-11.2.1-cp312-cp312-manylinux_2_28_x86_64.whl",
-                    "sha256": "b2dbea1012ccb784a65349f57bbc93730b96e85b42e9bf7b01ef40443db720b4",
+                    "url": "https://files.pythonhosted.org/packages/e4/c9/06dd4a38974e24f932ff5f98ea3c546ce3f8c995d3f0985f8e5ba48bba19/pillow-11.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+                    "sha256": "676b2815362456b5b3216b4fd5bd89d362100dc6f4945154ff172e206a22c024",
                     "only-arches": [
                         "x86_64"
                     ]
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e4/3a/427e4cb0b9e177efbc1a84798ed20498c4f233abde003c06d2650a6d60cb/pillow-11.2.1-cp312-cp312-manylinux_2_28_aarch64.whl",
-                    "sha256": "3e645b020f3209a0181a418bffe7b4a93171eef6c4ef6cc20980b30bebf17b7d",
+                    "url": "https://files.pythonhosted.org/packages/41/f1/6f2427a26fc683e00d985bc391bdd76d8dd4e92fac33d841127eb8fb2313/pillow-11.3.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+                    "sha256": "97f07ed9f56a3b9b5f49d3661dc9607484e85c67e27f3e8be2c7d28ca032fec7",
                     "only-arches": [
                         "aarch64"
                     ]
