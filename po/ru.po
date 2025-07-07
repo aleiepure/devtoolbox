@@ -452,51 +452,46 @@ msgstr "распаковка"
 #: src/tools.py:177
 msgctxt "search keyword"
 msgid "decompressor"
-msgstr "распаковка"
+msgstr "распаковщик"
 
 #: src/tools.py:184 src/ui/views/jwt_decoder.blp:20
-#, fuzzy
 msgid "Decode and encode JWT tokens"
-msgstr "Кодирует и декодирует base64-строки"
+msgstr "Кодирует и декодирует JWT токены"
 
 #: src/tools.py:186
 msgctxt "search keyword"
 msgid "json web token"
-msgstr ""
+msgstr "json web token"
 
 #: src/tools.py:187
-#, fuzzy
 msgctxt "search keyword"
 msgid "header"
-msgstr "Заголовок"
+msgstr "заголовок"
 
 #: src/tools.py:188
-#, fuzzy
 msgctxt "search keyword"
 msgid "payload"
-msgstr "Полезные данные"
+msgstr "payload"
 
 #: src/tools.py:189
 msgctxt "search keyword"
 msgid "signature"
-msgstr ""
+msgstr "сигнатура"
 
 #: src/tools.py:190
-#, fuzzy
 msgctxt "search keyword"
 msgid "authentication"
-msgstr "Отступы"
+msgstr "аутентефикация"
 
 #: src/tools.py:191
 msgctxt "search keyword"
 msgid "authorization"
-msgstr ""
+msgstr "авторизация"
 
 #: src/tools.py:192 src/tools.py:320 src/tools.py:533 src/tools.py:550
-#, fuzzy
 msgctxt "search keyword"
 msgid "security"
-msgstr "Тяжесть"
+msgstr "безопасность"
 
 #: src/tools.py:199 src/tools.py:212 src/tools.py:226 src/tools.py:240
 #: src/tools.py:255 src/tools.py:269 src/tools.py:282 src/tools.py:296
@@ -511,13 +506,13 @@ msgstr "Форматирует JSON-документы"
 #: src/tools.py:260 src/tools.py:273
 msgctxt "search keyword"
 msgid "pretty"
-msgstr ""
+msgstr "красиво"
 
 #: src/tools.py:205 src/tools.py:218 src/tools.py:232 src/tools.py:246
 #: src/tools.py:262 src/tools.py:275
 msgctxt "search keyword"
 msgid "beautify"
-msgstr ""
+msgstr "красивофикация"
 
 #: src/tools.py:214 src/formatters/sql.py:14
 msgid "Format SQL documents"
@@ -526,12 +521,12 @@ msgstr "Форматирует SQL-документы"
 #: src/tools.py:220
 msgctxt "search keyword"
 msgid "database"
-msgstr ""
+msgstr "база данных"
 
 #: src/tools.py:221
 msgctxt "search keyword"
 msgid "statement"
-msgstr ""
+msgstr "выражение"
 
 #: src/tools.py:228 src/formatters/xml.py:16
 msgid "Format XML documents"
@@ -543,20 +538,18 @@ msgstr "Форматирует HTML-документы"
 
 #: src/tools.py:248 src/tools.py:263 src/tools.py:276 src/tools.py:286
 #: src/tools.py:301
-#, fuzzy
 msgctxt "search keyword"
 msgid "minify"
-msgstr "Сжать"
+msgstr "минификация"
 
 #: src/tools.py:257 src/formatters/js.py:15
 msgid "Format JavaScript documents"
 msgstr "Форматирует JavaScript-документы"
 
 #: src/tools.py:264 src/tools.py:306
-#, fuzzy
 msgctxt "search keyword"
 msgid "code"
-msgstr "Кодировать"
+msgstr "код"
 
 #: src/tools.py:271 src/formatters/css.py:14
 msgid "Format CSS documents"
@@ -565,7 +558,7 @@ msgstr "Форматирует CSS-документы"
 #: src/tools.py:277 src/tools.py:289
 msgctxt "search keyword"
 msgid "stylesheet"
-msgstr ""
+msgstr "таблица стиля"
 
 #: src/tools.py:281 src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
@@ -576,26 +569,24 @@ msgid "Minify CSS documents"
 msgstr "Минимизирует CSS-документы"
 
 #: src/tools.py:287 src/tools.py:302
-#, fuzzy
 msgctxt "search keyword"
 msgid "compress"
-msgstr "Распаковка"
+msgstr "сжатие"
 
 #: src/tools.py:288
-#, fuzzy
 msgctxt "search keyword"
 msgid "style"
-msgstr "Тёмная тема"
+msgstr "стиль"
 
 #: src/tools.py:290 src/tools.py:303
 msgctxt "search keyword"
 msgid "reduce"
-msgstr ""
+msgstr "уменьшить"
 
 #: src/tools.py:291 src/tools.py:304
 msgctxt "search keyword"
 msgid "size"
-msgstr ""
+msgstr "размер"
 
 #: src/tools.py:295 src/formatters/js_minifier.py:14
 msgid "JavaScript Minifier"
@@ -608,7 +599,7 @@ msgstr "Минимизирует JavaaScript-документы"
 #: src/tools.py:305
 msgctxt "search keyword"
 msgid "script"
-msgstr ""
+msgstr "скрипт"
 
 #: src/tools.py:312
 msgid "Hash"
@@ -620,30 +611,28 @@ msgid "Generators"
 msgstr "Генераторы"
 
 #: src/tools.py:315
-#, fuzzy
 msgid "Calculate hashes and check for integrity"
-msgstr "Вычисляет хэши MD5, SHA1, SHA256 и SHA512 и проверяет их целостность"
+msgstr "Расчитывает хеши и проверяет целостность"
 
 #: src/tools.py:317
 msgctxt "search keyword"
 msgid "checksum"
-msgstr ""
+msgstr "контрольная сумма"
 
 #: src/tools.py:318
 msgctxt "search keyword"
 msgid "digest"
-msgstr ""
+msgstr "поглотить"
 
 #: src/tools.py:319
-#, fuzzy
 msgctxt "search keyword"
 msgid "generate"
-msgstr "Сгенерировать"
+msgstr "сгенерировать"
 
 #: src/tools.py:321 src/tools.py:535 src/tools.py:551
 msgctxt "search keyword"
 msgid "cryptography"
-msgstr ""
+msgstr "криптография"
 
 #: src/tools.py:328 src/ui/views/lorem_generator.blp:20
 msgid "Generate lorem ipsum placeholder text"
@@ -652,39 +641,36 @@ msgstr "Генерирует заполняющий текст lorem ipsum"
 #: src/tools.py:330
 msgctxt "search keyword"
 msgid "dummy"
-msgstr ""
+msgstr "пустышка"
 
 #: src/tools.py:331
-#, fuzzy
 msgctxt "search keyword"
 msgid "sample"
-msgstr "Пример"
+msgstr "образец"
 
 #: src/tools.py:332
 msgctxt "search keyword"
 msgid "filler"
-msgstr ""
+msgstr "заполниватель"
 
 #: src/tools.py:333
 msgctxt "search keyword"
 msgid "latin"
-msgstr ""
+msgstr "латиница"
 
 #: src/tools.py:340 src/ui/views/uuid_generator.blp:20
 msgid "Generate Universally Unique IDs (UUID)"
 msgstr "Генерирует Универсальные Уникальные ID (UUID)"
 
 #: src/tools.py:343
-#, fuzzy
 msgctxt "search keyword"
 msgid "identifier"
-msgstr "Идентификатор ключа полномочий"
+msgstr "идентефикатор"
 
 #: src/tools.py:344
-#, fuzzy
 msgctxt "search keyword"
 msgid "random"
-msgstr "Генератор случайных значений"
+msgstr "случайность"
 
 #: src/tools.py:348
 msgid "Random"
@@ -697,23 +683,22 @@ msgstr "Генерирует случайные числа и строки"
 #: src/tools.py:353
 msgctxt "search keyword"
 msgid "password"
-msgstr ""
+msgstr "пароль"
 
 #: src/tools.py:354
-#, fuzzy
 msgctxt "search keyword"
 msgid "token"
-msgstr "Токен"
+msgstr "токен"
 
 #: src/tools.py:355
 msgctxt "search keyword"
 msgid "entropy"
-msgstr ""
+msgstr "энтропия"
 
 #: src/tools.py:356
 msgctxt "search keyword"
 msgid "secure"
-msgstr ""
+msgstr "безопасность"
 
 #: src/tools.py:360 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
@@ -726,28 +711,27 @@ msgstr "Рассчитывает значения для изменения пр
 #: src/tools.py:366
 msgctxt "search keyword"
 msgid "unix"
-msgstr ""
+msgstr "юникс"
 
 #: src/tools.py:367
 msgctxt "search keyword"
 msgid "linux"
-msgstr ""
+msgstr "линукс"
 
 #: src/tools.py:368
-#, fuzzy
 msgctxt "search keyword"
 msgid "calculate"
-msgstr "Хэш для вычисления"
+msgstr "расчет"
 
 #: src/tools.py:369
 msgctxt "search keyword"
 msgid "mode"
-msgstr ""
+msgstr "режим"
 
 #: src/tools.py:370
 msgctxt "search keyword"
 msgid "access"
-msgstr ""
+msgstr "доступ"
 
 #: src/tools.py:374
 msgid "QR Code"
@@ -758,27 +742,24 @@ msgid "Create custom QR Codes"
 msgstr "Создание собственных QR-кодов"
 
 #: src/tools.py:379
-#, fuzzy
 msgctxt "search keyword"
 msgid "qrcode"
-msgstr "qr-code.png"
+msgstr "qr код"
 
 #: src/tools.py:380
-#, fuzzy
 msgctxt "search keyword"
 msgid "barcode"
-msgstr "Кодировать"
+msgstr "штрих-код"
 
 #: src/tools.py:381
-#, fuzzy
 msgctxt "search keyword"
 msgid "image"
-msgstr "Изображение"
+msgstr "изображение"
 
 #: src/tools.py:382
 msgctxt "search keyword"
 msgid "matrix"
-msgstr ""
+msgstr "матрица"
 
 #: src/tools.py:388 src/ui/views/text_inspector.blp:19
 msgid "Text Inspector & Case Converter"
@@ -797,10 +778,9 @@ msgstr "Просмотр статистики текста и изменение
 #: src/tools.py:393
 msgctxt "search keyword"
 msgid "analyze"
-msgstr ""
+msgstr "анализировать"
 
 #: src/tools.py:395
-#, fuzzy
 msgctxt "search keyword"
 msgid "uppercase"
 msgstr "строчные буквы"
