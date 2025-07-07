@@ -783,10 +783,9 @@ msgstr "анализировать"
 #: src/tools.py:395
 msgctxt "search keyword"
 msgid "uppercase"
-msgstr "строчные буквы"
+msgstr "заглавные буквы"
 
 #: src/tools.py:396
-#, fuzzy
 msgctxt "search keyword"
 msgid "lowercase"
 msgstr "строчные буквы"
@@ -794,31 +793,27 @@ msgstr "строчные буквы"
 #: src/tools.py:397
 msgctxt "search keyword"
 msgid "capitalize"
-msgstr ""
+msgstr "главная буква"
 
 #: src/tools.py:398
-#, fuzzy
 msgctxt "search keyword"
 msgid "count"
-msgstr "Количество"
+msgstr "расчет"
 
 #: src/tools.py:399
-#, fuzzy
 msgctxt "search keyword"
 msgid "words"
-msgstr "Слова"
+msgstr "слова"
 
 #: src/tools.py:400
-#, fuzzy
 msgctxt "search keyword"
 msgid "characters"
-msgstr "Символов:"
+msgstr "символы"
 
 #: src/tools.py:401
-#, fuzzy
 msgctxt "search keyword"
 msgid "lines"
-msgstr "Строк:"
+msgstr "линии"
 
 #: src/tools.py:405
 msgid "Regex Tester"
@@ -831,13 +826,12 @@ msgstr "Находит совпадающие строки внутри текс
 #: src/tools.py:411
 msgctxt "search keyword"
 msgid "pattern"
-msgstr ""
+msgstr "паттерн"
 
 #: src/tools.py:412
-#, fuzzy
 msgctxt "search keyword"
 msgid "search"
-msgstr "Март"
+msgstr "поиск"
 
 #: src/tools.py:416 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
@@ -848,27 +842,24 @@ msgid "Analyze two texts and find differences"
 msgstr "Анализирует два текста и находит отличия"
 
 #: src/tools.py:421
-#, fuzzy
 msgctxt "search keyword"
 msgid "difference"
-msgstr "Отличия"
+msgstr "отличия"
 
 #: src/tools.py:422
-#, fuzzy
 msgctxt "search keyword"
 msgid "compare"
-msgstr "Распаковка"
+msgstr "сравнение"
 
 #: src/tools.py:423
-#, fuzzy
 msgctxt "search keyword"
 msgid "changes"
-msgstr "Изменить регистр текста"
+msgstr "разницы"
 
 #: src/tools.py:424
 msgctxt "search keyword"
 msgid "modification"
-msgstr ""
+msgstr "модификации"
 
 #: src/tools.py:428 src/ui/views/xml_validator.blp:19
 msgid "XML Scheme Validator"
