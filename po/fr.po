@@ -1775,7 +1775,7 @@ msgstr "Compatible avec une URL"
 
 #: src/ui/views/base64_encoder.blp:52
 msgid "Use URL safe Base64 processing"
-msgstr "tiliser un traitement base64 compatible avec une URL"
+msgstr "Utiliser un traitement base64 compatible avec une URL"
 
 #: src/ui/views/base64_encoder.blp:68 src/ui/views/gzip_compressor.blp:63
 #: src/ui/views/hash_generator.blp:83 src/ui/views/html_encoder.blp:64
@@ -1906,7 +1906,7 @@ msgstr "Permissions"
 
 #: src/ui/views/chmod_calculator.blp:45
 msgid "Special"
-msgstr ""
+msgstr "Spécial"
 
 #: src/ui/views/chmod_calculator.blp:145
 msgid "Owner"
@@ -1981,43 +1981,43 @@ msgstr "Format de sortie"
 
 #: src/ui/views/color_converter.blp:36
 msgid "Web"
-msgstr ""
+msgstr "Web"
 
 #: src/ui/views/color_converter.blp:37
 msgid "Web (Legacy)"
-msgstr ""
+msgstr "Web (héritage)"
 
 #: src/ui/views/color_converter.blp:38
 msgid "Percent"
-msgstr ""
+msgstr "Pourcentage"
 
 #: src/ui/views/color_converter.blp:39
 msgid "Normalized"
-msgstr ""
+msgstr "Normalisé"
 
 #: src/ui/views/color_converter.blp:46
 msgid "Angle Unit"
-msgstr ""
+msgstr "Unité d'angle"
 
 #: src/ui/views/color_converter.blp:47
 msgid "Unit used for angle component"
-msgstr ""
+msgstr "Unité utilisée pour l'angle"
 
 #: src/ui/views/color_converter.blp:52
 msgid "Degrees"
-msgstr ""
+msgstr "Degrés"
 
 #: src/ui/views/color_converter.blp:53
 msgid "Radians"
-msgstr ""
+msgstr "Radians"
 
 #: src/ui/views/color_converter.blp:54
 msgid "Gradians"
-msgstr ""
+msgstr "Gradians"
 
 #: src/ui/views/color_converter.blp:55
 msgid "Turns"
-msgstr ""
+msgstr "Tours"
 
 #: src/ui/views/color_converter.blp:56
 #, fuzzy
@@ -2026,23 +2026,23 @@ msgstr "Format"
 
 #: src/ui/views/color_converter.blp:62
 msgid "Bits"
-msgstr ""
+msgstr "Bits"
 
 #: src/ui/views/color_converter.blp:63
 msgid "Bits precision for color values"
-msgstr ""
+msgstr "Précision binaire pour les valeurs de couleur"
 
 #: src/ui/views/color_converter.blp:82
 msgid "Values"
-msgstr ""
+msgstr "Valeurs"
 
 #: src/ui/views/color_converter.blp:85 src/ui/views/color_converter.blp:97
 msgid "Color"
-msgstr ""
+msgstr "Couleur"
 
 #: src/ui/views/color_converter.blp:103
 msgid "Hex"
-msgstr ""
+msgstr "Hex"
 
 #: src/ui/views/color_converter.blp:128
 #, fuzzy
@@ -2051,15 +2051,15 @@ msgstr "Lire"
 
 #: src/ui/views/color_converter.blp:136
 msgid "Green"
-msgstr ""
+msgstr "Vert"
 
 #: src/ui/views/color_converter.blp:144
 msgid "Blue"
-msgstr ""
+msgstr "Bleu"
 
 #: src/ui/views/color_converter.blp:168 src/ui/views/color_converter.blp:208
 msgid "Hue"
-msgstr ""
+msgstr "Teinte"
 
 #: src/ui/views/color_converter.blp:176 src/ui/views/color_converter.blp:216
 #, fuzzy
@@ -2068,7 +2068,7 @@ msgstr "Samedi"
 
 #: src/ui/views/color_converter.blp:184
 msgid "Value"
-msgstr ""
+msgstr "Valeur"
 
 #: src/ui/views/color_converter.blp:224
 #, fuzzy
@@ -2077,7 +2077,7 @@ msgstr "Lumineux"
 
 #: src/ui/views/color_converter.blp:234
 msgid "Alpha"
-msgstr ""
+msgstr "Alpha"
 
 #: src/ui/views/color_converter.blp:265
 msgid "HWB"
