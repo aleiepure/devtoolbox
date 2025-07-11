@@ -2484,11 +2484,13 @@ msgstr "Générateur aléatoire"
 
 #: src/ui/views/random_generator.blp:30
 msgid "String"
-msgstr "chaîne de caractères"
+msgstr "Chaîne de caractères"
 
 #: src/ui/views/random_generator.blp:31
 msgid "Generate a random string with the given options. ASCII characters only."
 msgstr ""
+"Générer une chaîne aléatoire avec les options données. Les caractères ASCII "
+"seulement."
 
 #: src/ui/views/random_generator.blp:34
 msgid "Length"
@@ -2496,7 +2498,7 @@ msgstr "Longueur"
 
 #: src/ui/views/random_generator.blp:35
 msgid "Length of the generated string"
-msgstr ""
+msgstr "Longueur de la chaîne générée"
 
 #: src/ui/views/random_generator.blp:47
 msgid "Uppercase letters (A-Z)"
