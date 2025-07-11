@@ -2832,31 +2832,31 @@ msgstr "Date Courte"
 
 #: src/ui/views/timestamp.blp:75
 msgid "Short Time"
-msgstr "Date Longue"
+msgstr "Heure Court"
 
 #: src/ui/views/timestamp.blp:81
 msgid "Long Date"
-msgstr ""
+msgstr "Date Longue"
 
 #: src/ui/views/timestamp.blp:87
 msgid "Long Time"
-msgstr ""
+msgstr "Heure Longue"
 
 #: src/ui/views/timestamp.blp:93
 msgid "Full Long Date"
-msgstr ""
+msgstr "Date longue complète"
 
 #: src/ui/views/url_encoder.blp:19
 msgid "URL Encoder & Decoder"
-msgstr ""
+msgstr "Encodeur et décodeur d'URL"
 
 #: src/ui/views/url_encoder.blp:53
 msgid "Space encoding"
-msgstr ""
+msgstr "Encodage de l'espace"
 
 #: src/ui/views/url_encoder.blp:54
 msgid "Select the desired encoding for the space character"
-msgstr ""
+msgstr "Sélectionnez l'encodage souhaité pour le caractère espace"
 
 #: src/ui/views/uuid_generator.blp:19
 msgid "UUID Generator"
@@ -2868,11 +2868,11 @@ msgstr "Version"
 
 #: src/ui/views/uuid_generator.blp:35
 msgid "Choose the UUID version to generate"
-msgstr ""
+msgstr "Choisissez la version de l'UUID à générer"
 
 #: src/ui/views/uuid_generator.blp:40
 msgid "Version 1 (MAC address)"
-msgstr ""
+msgstr "Version 1 (Address MAC)"
 
 #: src/ui/views/uuid_generator.blp:41
 msgid "Version 3"
@@ -2880,7 +2880,7 @@ msgstr "Version 3"
 
 #: src/ui/views/uuid_generator.blp:42
 msgid "Version 4 (Random)"
-msgstr ""
+msgstr "Version 4 (Aléatoire)"
 
 #: src/ui/views/uuid_generator.blp:43
 msgid "Version 5"
@@ -2888,19 +2888,19 @@ msgstr "Version 5"
 
 #: src/ui/views/uuid_generator.blp:44
 msgid "Version 6 (Gregorian Time)"
-msgstr ""
+msgstr "Version 6 (Calendrier Gregorien)"
 
 #: src/ui/views/uuid_generator.blp:45
 msgid "Version 7 (UNIX Epoch)"
-msgstr ""
+msgstr "Version 7 (époque UNIX)"
 
 #: src/ui/views/uuid_generator.blp:54
 msgid "Number of UUIDs to be generated (up to 50)"
-msgstr ""
+msgstr "Nombre d'UUID à générer (jusqu'à 50)"
 
 #: src/ui/views/uuid_generator.blp:72
 msgid "Generated UUIDs"
-msgstr ""
+msgstr "UUIDs générés"
 
 #: src/ui/gtk/help-overlay.blp:15
 msgctxt "shortcut window"
@@ -2924,11 +2924,11 @@ msgstr "Quitter"
 
 #: src/formatters/html.py:14
 msgid "HTML Formatter"
-msgstr ""
+msgstr "Formateur HTML"
 
 #: src/formatters/html.py:17
 msgid "Type HTML code here"
-msgstr ""
+msgstr "Tapez le code HTML ici"
 
 #: src/formatters/html.py:20 src/formatters/js.py:20 src/formatters/json.py:19
 #: src/formatters/sql.py:19 src/formatters/xml.py:21 src/formatters/css.py:19
