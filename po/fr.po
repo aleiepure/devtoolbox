@@ -755,16 +755,16 @@ msgstr "code barre"
 #: src/tools.py:381
 msgctxt "search keyword"
 msgid "image"
-msgstr "Image"
+msgstr "image"
 
 #: src/tools.py:382
 msgctxt "search keyword"
 msgid "matrix"
-msgstr ""
+msgstr "matrice"
 
 #: src/tools.py:388 src/ui/views/text_inspector.blp:19
 msgid "Text Inspector & Case Converter"
-msgstr "Inspecteur de texte et convertisseur de majuscules"
+msgstr "Inspecteur de texte et convertisseur de casse"
 
 #: src/tools.py:389 src/tools.py:406 src/tools.py:417 src/tools.py:429
 #: src/tools.py:440 src/tools.py:451 src/ui/views/regex_tester.blp:49
@@ -774,33 +774,32 @@ msgstr "Texte"
 
 #: src/tools.py:391 src/ui/views/text_inspector.blp:20
 msgid "View statistics about text and change sentence cases"
-msgstr "Afficher des statistiques sur le texte et modifier les cas de figure"
+msgstr "Afficher des statistiques sur le texte et modifier la casse de phrases"
 
 #: src/tools.py:393
 msgctxt "search keyword"
 msgid "analyze"
-msgstr ""
+msgstr "analyser"
 
 #: src/tools.py:395
 msgctxt "search keyword"
 msgid "uppercase"
-msgstr ""
+msgstr "majuscule"
 
 #: src/tools.py:396
 msgctxt "search keyword"
 msgid "lowercase"
-msgstr ""
+msgstr "minuscule"
 
 #: src/tools.py:397
 msgctxt "search keyword"
 msgid "capitalize"
-msgstr ""
+msgstr "mettre en majuscules"
 
 #: src/tools.py:398
-#, fuzzy
 msgctxt "search keyword"
 msgid "count"
-msgstr "Quantité"
+msgstr "compter"
 
 #: src/tools.py:399
 #, fuzzy
