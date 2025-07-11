@@ -2740,11 +2740,11 @@ msgstr "MAJUSCULE"
 
 #: src/ui/views/text_inspector.blp:45
 msgid "Title Case"
-msgstr "Titre"
+msgstr "Casse Titre"
 
 #: src/ui/views/text_inspector.blp:46
 msgid "camelCase"
-msgstr ""
+msgstr "camelCase"
 
 #: src/ui/views/text_inspector.blp:47
 msgid "PascalCase"
