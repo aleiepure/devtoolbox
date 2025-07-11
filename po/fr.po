@@ -117,10 +117,9 @@ msgid "parse"
 msgstr "analyser"
 
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
-#, fuzzy
 msgctxt "search keyword"
 msgid "converter"
-msgstr "Convertisseurs"
+msgstr "convertisseurs"
 
 #: src/tools.py:22 src/tools.py:46 src/tools.py:74 src/tools.py:96
 #: src/tools.py:114 src/tools.py:394
@@ -176,7 +175,7 @@ msgstr "heure"
 #: src/tools.py:40
 msgctxt "search keyword"
 msgid "datetime"
-msgstr "datetime"
+msgstr "date heure"
 
 #: src/tools.py:41
 msgctxt "search keyword"
@@ -325,10 +324,9 @@ msgid "parser"
 msgstr "analyseur"
 
 #: src/tools.py:95 src/tools.py:113 src/tools.py:410
-#, fuzzy
 msgctxt "search keyword"
 msgid "expression"
-msgstr "Expression CRON"
+msgstr "expression CRON"
 
 #: src/tools.py:99 src/tools.py:117
 msgctxt "search keyword"
@@ -1545,9 +1543,8 @@ msgid "Timezone"
 msgstr "Fuseau horaire"
 
 #: src/views/timestamp.py:77
-#, fuzzy
 msgid "Select the desired timezone"
-msgstr "Sélectionner l'opération souhaitée"
+msgstr "Sélectionner le fuseau horaire souhaité"
 
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
@@ -1600,13 +1597,12 @@ msgid "_About Dev Toolbox"
 msgstr "_A propos de Dev Toolbox"
 
 #: src/ui/about_dialog.blp:10
-#, fuzzy
 msgid ""
 "Copyright © 2022 - 2025 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
-"Tous droits réservés 2022 Alessandro lepure\n"
-"Certaines icones sont sous licence Gnome Project"
+"Tous droits réservés 2022- 2025 Alessandro lepure\n"
+"Certaines icônes sont sous licence du projet GNOME"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
 #: src/ui/about_dialog.blp:18
@@ -1726,14 +1722,13 @@ msgstr ""
 "remise à 0 de tous les autres champs."
 
 #: src/ui/views/base64_encoder.blp:19
-#, fuzzy
 msgid "Base64 Encoder & Decoder"
-msgstr "Encodeurs et Décodeurs"
+msgstr "Encodeur et décodeur Base6"
 
 #: src/ui/views/base64_encoder.blp:20
-#, fuzzy
 msgid "Encode and decode strings using the Base64 format"
-msgstr "Encoder et décoder les caractères spéciaux en utilisant le format HTML"
+msgstr ""
+"Encoder et décoder des chaînes de caractères en utilisant le format Base64"
 
 #: src/ui/views/base64_encoder.blp:30 src/ui/views/certificate_parser.blp:30
 #: src/ui/views/colorblindness_simulator.blp:31
@@ -1863,7 +1858,6 @@ msgid "New"
 msgstr "Nouveau"
 
 #: src/ui/views/certificate_request_generator.blp:92
-#, fuzzy
 msgid "Existing"
 msgstr "Existant"
 
@@ -1970,14 +1964,12 @@ msgid "Tritanopia"
 msgstr "Tritanopie"
 
 #: src/ui/views/color_converter.blp:30
-#, fuzzy
 msgid "Format"
-msgstr "Format"
+msgstr "Formatter"
 
 #: src/ui/views/color_converter.blp:31
-#, fuzzy
 msgid "Output format for color values"
-msgstr "Format de sortie"
+msgstr "Format de sortie pour les couleurs"
 
 #: src/ui/views/color_converter.blp:36
 msgid "Web"
@@ -2020,9 +2012,8 @@ msgid "Turns"
 msgstr "Tours"
 
 #: src/ui/views/color_converter.blp:56
-#, fuzzy
 msgid "Follow Format"
-msgstr "Format"
+msgstr "Suivre le format"
 
 #: src/ui/views/color_converter.blp:62
 msgid "Bits"
@@ -2045,9 +2036,8 @@ msgid "Hex"
 msgstr "Hex"
 
 #: src/ui/views/color_converter.blp:128
-#, fuzzy
 msgid "Red"
-msgstr "Lire"
+msgstr "Rouge"
 
 #: src/ui/views/color_converter.blp:136
 msgid "Green"
@@ -2062,18 +2052,16 @@ msgid "Hue"
 msgstr "Teinte"
 
 #: src/ui/views/color_converter.blp:176 src/ui/views/color_converter.blp:216
-#, fuzzy
 msgid "Saturation"
-msgstr "Samedi"
+msgstr "Saturation"
 
 #: src/ui/views/color_converter.blp:184
 msgid "Value"
 msgstr "Valeur"
 
 #: src/ui/views/color_converter.blp:224
-#, fuzzy
 msgid "Lightness"
-msgstr "Lumineux"
+msgstr "Luminositée"
 
 #: src/ui/views/color_converter.blp:234
 msgid "Alpha"
@@ -2256,9 +2244,8 @@ msgid "converted-image"
 msgstr "image convertie"
 
 #: src/ui/views/json_validator.blp:49
-#, fuzzy
 msgid "JSON Schema"
-msgstr "Validateur de schéma JSON"
+msgstr "Schéma JSON"
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
@@ -2277,9 +2264,8 @@ msgid "YAML → JSON"
 msgstr "YAML → JSON"
 
 #: src/ui/views/jwt_decoder.blp:19
-#, fuzzy
 msgid "JWT Decode & Encode"
-msgstr "Encodeur & décodeur HTML"
+msgstr "Encoder et décoder des jetons JWT"
 
 #: src/ui/views/jwt_decoder.blp:32
 msgid "Verify Signature"
@@ -2306,9 +2292,8 @@ msgid "Key Encoding"
 msgstr "Encodage clé"
 
 #: src/ui/views/jwt_decoder.blp:58
-#, fuzzy
 msgid "Select the encoding of the key"
-msgstr "Sélection le sens de codage"
+msgstr "Sélectionnez le type de clé"
 
 #: src/ui/views/jwt_decoder.blp:99
 msgid "Public Key (PEM)"
@@ -2962,7 +2947,7 @@ msgstr "Saisissez le code SQL ici"
 
 #: src/formatters/xml.py:15
 msgid "XML Formatter"
-msgstr "Saisissez le code XML ici"
+msgstr "Formateur XML"
 
 #: src/formatters/xml.py:18
 msgid "Type XML code here"
@@ -2970,25 +2955,24 @@ msgstr "Saisissez le code XML ici"
 
 #: src/formatters/css.py:13
 msgid "CSS Formatter"
-msgstr ""
+msgstr "Formateur CSS"
 
 #: src/formatters/css.py:16 src/formatters/css_minifier.py:17
 msgid "Type CSS here"
-msgstr ""
+msgstr "Saisissez le code CSS ici"
 
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
-msgstr ""
+msgstr "Minifier"
 
 #: src/formatters/js_minifier.py:15
-#, fuzzy
 msgid "Minify JS code"
-msgstr "Formatage des documents CSS"
+msgstr "Minifier le code JavaScript"
 
 #: src/formatters/js_minifier.py:17
 msgid "Type JS code here"
-msgstr ""
+msgstr "Saisissez le code JavaScript ici"
 
 #~ msgid ""
 #~ "JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;"
