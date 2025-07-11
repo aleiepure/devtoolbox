@@ -2740,7 +2740,7 @@ msgstr "MAJUSCULE"
 
 #: src/ui/views/text_inspector.blp:45
 msgid "Title Case"
-msgstr "Casse Titre"
+msgstr "Title Case"
 
 #: src/ui/views/text_inspector.blp:46
 msgid "camelCase"
@@ -2748,27 +2748,27 @@ msgstr "camelCase"
 
 #: src/ui/views/text_inspector.blp:47
 msgid "PascalCase"
-msgstr ""
+msgstr "PascalCase"
 
 #: src/ui/views/text_inspector.blp:48
 msgid "snake_case"
-msgstr ""
+msgstr "snake_case"
 
 #: src/ui/views/text_inspector.blp:49
 msgid "CONSTANT_CASE"
-msgstr ""
+msgstr "CONSTANT_CASE"
 
 #: src/ui/views/text_inspector.blp:50
 msgid "kebab-case"
-msgstr ""
+msgstr "kebab-case"
 
 #: src/ui/views/text_inspector.blp:51
 msgid "COBOL-CASE"
-msgstr ""
+msgstr "COBOL-CASE"
 
 #: src/ui/views/text_inspector.blp:52
 msgid "Train-Case"
-msgstr ""
+msgstr "Train-Case"
 
 #: src/ui/views/text_inspector.blp:53
 msgid "aLtErNaTiNg CaSe"
@@ -2776,15 +2776,15 @@ msgstr "tExTe AlTeRné"
 
 #: src/ui/views/text_inspector.blp:54
 msgid "ReVeRsE aLtErNaTiNg CaSe"
-msgstr ""
+msgstr "ReVeRsE aLtErNaTiNg CaSe"
 
 #: src/ui/views/text_inspector.blp:66
 msgid "Information"
-msgstr ""
+msgstr "Information"
 
 #: src/ui/views/text_inspector.blp:69
 msgid "Cursor"
-msgstr ""
+msgstr "Curseur"
 
 #: src/ui/views/text_inspector.blp:83
 msgid "Line:"
@@ -2808,11 +2808,11 @@ msgstr "Lignes :"
 
 #: src/ui/views/timestamp.blp:19
 msgid "Timestamp Converter"
-msgstr ""
+msgstr "Convertisseur d'horodatage"
 
 #: src/ui/views/timestamp.blp:43
 msgid "Sets the current system timestamp"
-msgstr ""
+msgstr "Utilise l'horodatage du système"
 
 #: src/ui/views/timestamp.blp:47
 msgid "Date"
@@ -2820,19 +2820,19 @@ msgstr "Date"
 
 #: src/ui/views/timestamp.blp:57
 msgid "ISO Date (ISO 8601/RFC 3339)"
-msgstr ""
+msgstr "Date ISO (ISO 8601/RFC 3339)"
 
 #: src/ui/views/timestamp.blp:63
 msgid "RFC 2822 Date"
-msgstr ""
+msgstr "Date RFC 2822"
 
 #: src/ui/views/timestamp.blp:69
 msgid "Short Date"
-msgstr ""
+msgstr "Date Courte"
 
 #: src/ui/views/timestamp.blp:75
 msgid "Short Time"
-msgstr ""
+msgstr "Date Longue"
 
 #: src/ui/views/timestamp.blp:81
 msgid "Long Date"
