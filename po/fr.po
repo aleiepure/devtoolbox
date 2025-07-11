@@ -231,7 +231,7 @@ msgstr "heures"
 #: src/tools.py:57
 msgctxt "search keyword"
 msgid "minute"
-msgstr "minutes"
+msgstr "minute"
 
 #: src/tools.py:58
 msgctxt "search keyword"
@@ -239,81 +239,72 @@ msgid "minutes"
 msgstr "minutes"
 
 #: src/tools.py:59
-#, fuzzy
 msgctxt "search keyword"
 msgid "second"
-msgstr "Secondes"
+msgstr "seconde"
 
 #: src/tools.py:60
-#, fuzzy
 msgctxt "search keyword"
 msgid "seconds"
-msgstr "Secondes"
+msgstr "secondes"
 
 #: src/tools.py:61
 msgctxt "search keyword"
 msgid "timezone"
-msgstr ""
+msgstr "fuseau horaire"
 
 #: src/tools.py:62
-#, fuzzy
 msgctxt "search keyword"
 msgid "now"
-msgstr "Maintenant"
+msgstr "maintenant"
 
 #: src/tools.py:66
 msgid "Number Bases"
-msgstr "Nombre Bases"
+msgstr "Bases Numériques"
 
 #: src/tools.py:69 src/ui/views/base_converter.blp:20
 msgid "Convert numbers between bases"
 msgstr "Convertir des nombres entre bases"
 
 #: src/tools.py:71
-#, fuzzy
 msgctxt "search keyword"
 msgid "representation"
-msgstr "Indentations"
+msgstr "représentation"
 
 #: src/tools.py:72
 msgctxt "search keyword"
 msgid "base"
-msgstr ""
+msgstr "base"
 
 #: src/tools.py:75
-#, fuzzy
 msgctxt "search keyword"
 msgid "number"
-msgstr "Nombre"
+msgstr "nombre"
 
 #: src/tools.py:76
-#, fuzzy
 msgctxt "search keyword"
 msgid "binary"
-msgstr "Binaire"
+msgstr "binaire"
 
 #: src/tools.py:77
-#, fuzzy
 msgctxt "search keyword"
 msgid "octal"
-msgstr "Octal"
+msgstr "octal"
 
 #: src/tools.py:78
-#, fuzzy
 msgctxt "search keyword"
 msgid "decimal"
-msgstr "Décimal"
+msgstr "décimal"
 
 #: src/tools.py:79
-#, fuzzy
 msgctxt "search keyword"
 msgid "hexadecimal"
-msgstr "Hexadécimal"
+msgstr "hexadécimal"
 
 #: src/tools.py:80
 msgctxt "search keyword"
 msgid "integer"
-msgstr ""
+msgstr "entier"
 
 #: src/tools.py:87 src/ui/views/cron_converter.blp:20
 msgid "CRON Parser"
@@ -326,12 +317,12 @@ msgstr "Convertir les expressions CRON en heure et date"
 #: src/tools.py:93 src/tools.py:111
 msgctxt "search keyword"
 msgid "schedule"
-msgstr ""
+msgstr "planifier"
 
 #: src/tools.py:94 src/tools.py:112
 msgctxt "search keyword"
 msgid "parser"
-msgstr ""
+msgstr "analyser"
 
 #: src/tools.py:95 src/tools.py:113 src/tools.py:410
 #, fuzzy
