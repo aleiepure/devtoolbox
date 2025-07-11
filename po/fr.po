@@ -2498,7 +2498,7 @@ msgstr "Longueur"
 
 #: src/ui/views/random_generator.blp:35
 msgid "Length of the generated string"
-msgstr "Longueur de la chaîne générée"
+msgstr "Longueur de la chaîne de caractères générée"
 
 #: src/ui/views/random_generator.blp:47
 msgid "Uppercase letters (A-Z)"
@@ -2518,7 +2518,7 @@ msgstr "Caractères spéciaux (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 
 #: src/ui/views/random_generator.blp:75
 msgid "Generated string"
-msgstr ""
+msgstr "Chaîne de caractères générée"
 
 #: src/ui/views/random_generator.blp:92
 msgid "Number"
@@ -2526,7 +2526,7 @@ msgstr "Nombre"
 
 #: src/ui/views/random_generator.blp:93
 msgid "Generate a random number in the given range"
-msgstr ""
+msgstr "Générer un nombre aléatoire dans la gamme donnée"
 
 #: src/ui/views/random_generator.blp:96
 msgid "Minimum"
@@ -2534,7 +2534,7 @@ msgstr "Minimum"
 
 #: src/ui/views/random_generator.blp:97
 msgid "Minimum value of the generated number"
-msgstr ""
+msgstr "Valeur minimale du nombre généré"
 
 #: src/ui/views/random_generator.blp:109
 msgid "Maximum"
@@ -2542,11 +2542,11 @@ msgstr "Maximum"
 
 #: src/ui/views/random_generator.blp:110
 msgid "Maximum value of the generated number"
-msgstr ""
+msgstr "Valeur maximale du nombre généré"
 
 #: src/ui/views/random_generator.blp:159
 msgid "Generated number"
-msgstr ""
+msgstr "Nombre généré"
 
 #: src/ui/views/regex_tester.blp:19
 msgid "Regular Expression Tester"
@@ -2569,21 +2569,23 @@ msgstr "Chaque minute"
 #: src/ui/views/reverse_cron.blp:277 src/ui/views/reverse_cron.blp:389
 #: src/ui/views/reverse_cron.blp:543
 msgid "Every"
-msgstr ""
+msgstr "Chaque"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #: src/ui/views/reverse_cron.blp:82
 msgid "minute(s) starting at minute"
-msgstr ""
+msgstr "minute(s) à partir de la minute"
 
 #: src/ui/views/reverse_cron.blp:101
 msgid "Specific minute (choose one or many, no selection means every minute)"
 msgstr ""
+"Minute spécifique (en choisir une ou plusieurs, aucune sélection signifie "
+"chaque minute)"
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:122
 msgid "Every minute between minute"
-msgstr ""
+msgstr "Chaque minute entre la minute"
 
 #. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:133
