@@ -2077,11 +2077,11 @@ msgstr "Lumineux"
 
 #: src/ui/views/color_converter.blp:234
 msgid "Alpha"
-msgstr "Alpha"
+msgstr "Transparence"
 
 #: src/ui/views/color_converter.blp:265
 msgid "HWB"
-msgstr ""
+msgstr "HWB"
 
 #: src/ui/views/contrast_checker.blp:33 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
@@ -2270,11 +2270,11 @@ msgstr "Fournir le format d'entrée et de sortie désiré"
 
 #: src/ui/views/json_yaml.blp:42
 msgid "JSON → YAML"
-msgstr ""
+msgstr "JSON → YAML"
 
 #: src/ui/views/json_yaml.blp:46
 msgid "YAML → JSON"
-msgstr ""
+msgstr "YAML → JSON"
 
 #: src/ui/views/jwt_decoder.blp:19
 #, fuzzy
@@ -2283,27 +2283,27 @@ msgstr "Encodeur & décodeur HTML"
 
 #: src/ui/views/jwt_decoder.blp:32
 msgid "Verify Signature"
-msgstr ""
+msgstr "Vérifier la signature"
 
 #: src/ui/views/jwt_decoder.blp:33
 msgid "Verify signature or sign JWT"
-msgstr ""
+msgstr "Vérifier la signature ou signer un jeton JWT"
 
 #: src/ui/views/jwt_decoder.blp:41
 msgid "Off"
-msgstr ""
+msgstr "Off"
 
 #: src/ui/views/jwt_decoder.blp:46
 msgid "Symmetric"
-msgstr ""
+msgstr "Symmétrique"
 
 #: src/ui/views/jwt_decoder.blp:51
 msgid "Asymmetric"
-msgstr ""
+msgstr "Asymétrique"
 
 #: src/ui/views/jwt_decoder.blp:57
 msgid "Key Encoding"
-msgstr ""
+msgstr "Encodage clé"
 
 #: src/ui/views/jwt_decoder.blp:58
 #, fuzzy
@@ -2312,11 +2312,11 @@ msgstr "Sélection le sens de codage"
 
 #: src/ui/views/jwt_decoder.blp:99
 msgid "Public Key (PEM)"
-msgstr ""
+msgstr "Clé publique (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:107
 msgid "Private Key (PEM)"
-msgstr ""
+msgstr "Clé privée (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:120
 msgid "Token"
@@ -2468,7 +2468,7 @@ msgstr "Pays"
 
 #: src/ui/views/qrcode_generator.blp:186
 msgid "Generated QR Code"
-msgstr ""
+msgstr "QR Code Généré"
 
 #: src/ui/views/qrcode_generator.blp:193
 msgid "qr-code.png"
@@ -2484,7 +2484,7 @@ msgstr "Générateur aléatoire"
 
 #: src/ui/views/random_generator.blp:30
 msgid "String"
-msgstr ""
+msgstr "chaîne de caractères"
 
 #: src/ui/views/random_generator.blp:31
 msgid "Generate a random string with the given options. ASCII characters only."
