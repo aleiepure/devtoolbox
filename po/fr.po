@@ -799,25 +799,22 @@ msgstr "mettre en majuscules"
 #: src/tools.py:398
 msgctxt "search keyword"
 msgid "count"
-msgstr "compter"
+msgstr "compte"
 
 #: src/tools.py:399
-#, fuzzy
 msgctxt "search keyword"
 msgid "words"
-msgstr "Mots"
+msgstr "mots"
 
 #: src/tools.py:400
-#, fuzzy
 msgctxt "search keyword"
 msgid "characters"
-msgstr "Caractères :"
+msgstr "caractères"
 
 #: src/tools.py:401
-#, fuzzy
 msgctxt "search keyword"
 msgid "lines"
-msgstr "Lignes :"
+msgstr "lignes"
 
 #: src/tools.py:405
 msgid "Regex Tester"
@@ -825,25 +822,23 @@ msgstr "Testeur Regex"
 
 #: src/tools.py:408 src/ui/views/regex_tester.blp:20
 msgid "Find matching strings inside a text"
-msgstr "Recherche de chaînes de caractères correspondantes dans un texte"
+msgstr "Recherche de chaînes de caractères dans un texte"
 
 #: src/tools.py:411
 msgctxt "search keyword"
 msgid "pattern"
-msgstr ""
+msgstr "schéma"
 
 #: src/tools.py:412
-#, fuzzy
 msgctxt "search keyword"
 msgid "search"
-msgstr "Mars"
+msgstr "recherche"
 
 #: src/tools.py:416 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
 msgstr "Différence de texte"
 
 #: src/tools.py:419 src/ui/views/text_diff.blp:20
-#, fuzzy
 msgid "Analyze two texts and find differences"
 msgstr "Analyser deux textes et trouver des différences"
 
