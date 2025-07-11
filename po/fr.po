@@ -2579,8 +2579,8 @@ msgstr "minute(s) à partir de la minute"
 #: src/ui/views/reverse_cron.blp:101
 msgid "Specific minute (choose one or many, no selection means every minute)"
 msgstr ""
-"Minute spécifique (en choisir une ou plusieurs, aucune sélection signifie "
-"chaque minute)"
+"Minute spécifique (en choisir une ou plusieurs, l'absence de sélection "
+"signifie toutes les minutes)"
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:122
@@ -2590,7 +2590,7 @@ msgstr "Chaque minute entre la minute"
 #. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:133
 msgid "and minute"
-msgstr ""
+msgstr "et la minute"
 
 #: src/ui/views/reverse_cron.blp:161
 msgid "Every hour"
@@ -2599,21 +2599,23 @@ msgstr "Toutes les heures"
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
 #: src/ui/views/reverse_cron.blp:185
 msgid "hour(s) starting at hour"
-msgstr ""
+msgstr "heure(s) à partir de l'heure"
 
 #: src/ui/views/reverse_cron.blp:204
 msgid "Specific hour (choose one or many, no selection means every hour)"
 msgstr ""
+"Heure spécifique (choisir une ou plusieurs heures, l'absence de sélection "
+"signifie toutes les heures)"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:225
 msgid "Every hour between hour"
-msgstr ""
+msgstr "Chaque heure entre l'heure"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:236
 msgid "and hour"
-msgstr ""
+msgstr "et l'heure"
 
 #: src/ui/views/reverse_cron.blp:264
 msgid "Every day"
@@ -2622,27 +2624,29 @@ msgstr "Chaque jour"
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:288
 msgid "day(s) starting on the"
-msgstr ""
+msgstr "jour(s) à partir du"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:299
 msgid "of the month"
-msgstr ""
+msgstr "du mois"
 
 #: src/ui/views/reverse_cron.blp:316
 msgid ""
 "Specific day of month (choose one or many, no selection means every day)"
 msgstr ""
+"Jour spécifique du mois (choisir un ou plusieurs, l'absence de sélection "
+"signifie tous les jours)"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:337
 msgid "Every day between the"
-msgstr ""
+msgstr "Chaque jour à partir du"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:348
 msgid "and the"
-msgstr ""
+msgstr "jusqu'au"
 
 #: src/ui/views/reverse_cron.blp:376
 msgid "Every month"
@@ -2651,16 +2655,18 @@ msgstr "Chaque mois"
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
 #: src/ui/views/reverse_cron.blp:400
 msgid "month(s) starting in"
-msgstr ""
+msgstr "mois à partir de"
 
 #: src/ui/views/reverse_cron.blp:436
 msgid "Specific month (choose one or many, no selection means every month)"
 msgstr ""
+"Mois spécifique (en choisir un ou plusieurs, l'absence de sélection signifie "
+"tous les mois)"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #: src/ui/views/reverse_cron.blp:457
 msgid "Every month between"
-msgstr ""
+msgstr "Chaque mois à partir de"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
@@ -2670,7 +2676,7 @@ msgstr "et"
 
 #: src/ui/views/reverse_cron.blp:516
 msgid "Weekday"
-msgstr ""
+msgstr "Jour de la semaine"
 
 #: src/ui/views/reverse_cron.blp:530
 msgid "Every weekday"
@@ -2679,20 +2685,22 @@ msgstr "Chaque semaine"
 #. TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:554
 msgid "weekday(s) starting on"
-msgstr ""
+msgstr "jours de la semaine à partir de"
 
 #: src/ui/views/reverse_cron.blp:585
 msgid "Specific weekday (choose one or many, no selection means every weekday)"
 msgstr ""
+"Jour de semaine spécifique (choisir un ou plusieurs, l'absence de sélection "
+"signifie tous les jours de la semaine)"
 
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:669
 msgid "Every weekday between"
-msgstr ""
+msgstr "Chaque jour de la semaine entre"
 
 #: src/ui/views/reverse_cron.blp:718
 msgid "Command to execute"
-msgstr ""
+msgstr "Commande à exécuter"
 
 #: src/ui/views/reverse_cron.blp:737
 msgid "CRON Expression"
@@ -2708,31 +2716,31 @@ msgstr "Nouveau texte"
 
 #: src/ui/views/text_diff.blp:58
 msgid "Differences"
-msgstr ""
+msgstr "Différences"
 
 #: src/ui/views/text_inspector.blp:34
 msgid "Change case"
-msgstr ""
+msgstr "Changer la casse"
 
 #: src/ui/views/text_inspector.blp:35
 msgid "Choose a case to apply to the text"
-msgstr ""
+msgstr "Choisir une casse à appliquer au texte"
 
 #: src/ui/views/text_inspector.blp:42
 msgid "Sentence case"
-msgstr ""
+msgstr "Casse de la phrase"
 
 #: src/ui/views/text_inspector.blp:43
 msgid "lower case"
-msgstr ""
+msgstr "minuscule"
 
 #: src/ui/views/text_inspector.blp:44
 msgid "UPPERCASE"
-msgstr ""
+msgstr "MAJUSCULE"
 
 #: src/ui/views/text_inspector.blp:45
 msgid "Title Case"
-msgstr ""
+msgstr "Titre"
 
 #: src/ui/views/text_inspector.blp:46
 msgid "camelCase"
