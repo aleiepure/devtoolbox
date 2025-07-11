@@ -2958,15 +2958,15 @@ msgstr "Formateur SQL"
 
 #: src/formatters/sql.py:16
 msgid "Type SQL code here"
-msgstr "Tapez le code SQL ici"
+msgstr "Saisissez le code SQL ici"
 
 #: src/formatters/xml.py:15
 msgid "XML Formatter"
-msgstr ""
+msgstr "Saisissez le code XML ici"
 
 #: src/formatters/xml.py:18
 msgid "Type XML code here"
-msgstr ""
+msgstr "Saisissez le code XML ici"
 
 #: src/formatters/css.py:13
 msgid "CSS Formatter"
