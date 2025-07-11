@@ -322,7 +322,7 @@ msgstr "planifier"
 #: src/tools.py:94 src/tools.py:112
 msgctxt "search keyword"
 msgid "parser"
-msgstr "analyser"
+msgstr "analyseur"
 
 #: src/tools.py:95 src/tools.py:113 src/tools.py:410
 #, fuzzy
@@ -333,7 +333,7 @@ msgstr "Expression CRON"
 #: src/tools.py:99 src/tools.py:117
 msgctxt "search keyword"
 msgid "job"
-msgstr ""
+msgstr "tâche"
 
 #: src/tools.py:105 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
@@ -355,18 +355,18 @@ msgstr "Encoder et décoder les caractères spéciaux en utilisant le format HTM
 #: src/tools.py:131
 msgctxt "search keyword"
 msgid "escape"
-msgstr ""
+msgstr "échapper"
 
 #: src/tools.py:133 src/tools.py:233 src/tools.py:247 src/tools.py:434
 #: src/tools.py:456
 msgctxt "search keyword"
 msgid "markup"
-msgstr ""
+msgstr "balisage"
 
 #: src/tools.py:134 src/tools.py:145 src/tools.py:172
 msgctxt "search keyword"
 msgid "text"
-msgstr ""
+msgstr "texte"
 
 #: src/tools.py:141
 msgid "Encode and decode base64 strings"
@@ -375,12 +375,12 @@ msgstr "Encoder et décoder les caractères en base64"
 #: src/tools.py:144 src/tools.py:173
 msgctxt "search keyword"
 msgid "string"
-msgstr ""
+msgstr "chaîne de caractères"
 
 #: src/tools.py:146 src/tools.py:207 src/tools.py:235 src/tools.py:445
 msgctxt "search keyword"
 msgid "data"
-msgstr ""
+msgstr "donnée"
 
 #: src/tools.py:153 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
@@ -389,38 +389,37 @@ msgstr "Encoder et décoder les caractères spéciaux dans les URL"
 #: src/tools.py:155
 msgctxt "search keyword"
 msgid "url"
-msgstr ""
+msgstr "url"
 
 #: src/tools.py:156
 msgctxt "search keyword"
 msgid "unescape"
-msgstr ""
+msgstr "non échapper"
 
 #: src/tools.py:157 src/tools.py:249
 msgctxt "search keyword"
 msgid "web"
-msgstr ""
+msgstr "web"
 
 #: src/tools.py:158
 msgctxt "search keyword"
 msgid "link"
-msgstr ""
+msgstr "lien"
 
 #: src/tools.py:159
-#, fuzzy
 msgctxt "search keyword"
 msgid "address"
-msgstr "Adresse"
+msgstr "adresse"
 
 #: src/tools.py:160
 msgctxt "search keyword"
 msgid "uri"
-msgstr ""
+msgstr "uri"
 
 #: src/tools.py:161 src/tools.py:219
 msgctxt "search keyword"
 msgid "query"
-msgstr ""
+msgstr "query"
 
 #: src/tools.py:168
 msgid "Compress and decompress files and texts using GZip"
@@ -429,84 +428,76 @@ msgstr "Compresser et décompresser des fichiers et des textes à l'aide de GZip
 #: src/tools.py:170
 msgctxt "search keyword"
 msgid "unarchive"
-msgstr ""
+msgstr "décompresser"
 
 #: src/tools.py:171 src/tools.py:365
-#, fuzzy
 msgctxt "search keyword"
 msgid "file"
-msgstr "Tous les fichiers"
+msgstr "fichier"
 
 #: src/tools.py:174
 msgctxt "search keyword"
 msgid "zip"
-msgstr ""
+msgstr "compresser"
 
 #: src/tools.py:175
 msgctxt "search keyword"
 msgid "unzip"
-msgstr ""
+msgstr "décompresser"
 
 #: src/tools.py:176
-#, fuzzy
 msgctxt "search keyword"
 msgid "decompression"
-msgstr "Décompresser"
+msgstr "décompression"
 
 #: src/tools.py:177
-#, fuzzy
 msgctxt "search keyword"
 msgid "decompressor"
-msgstr "Décompresser"
+msgstr "décompresseur"
 
 #: src/tools.py:184 src/ui/views/jwt_decoder.blp:20
-#, fuzzy
 msgid "Decode and encode JWT tokens"
-msgstr "Encoder et décoder les caractères en base64"
+msgstr "Décoder et coder les jetons JWT"
 
 #: src/tools.py:186
 msgctxt "search keyword"
 msgid "json web token"
-msgstr ""
+msgstr "jeton web json"
 
 #: src/tools.py:187
-#, fuzzy
 msgctxt "search keyword"
 msgid "header"
-msgstr "Entête"
+msgstr "entête"
 
 #: src/tools.py:188
-#, fuzzy
 msgctxt "search keyword"
 msgid "payload"
-msgstr "Données"
+msgstr "données"
 
 #: src/tools.py:189
 msgctxt "search keyword"
 msgid "signature"
-msgstr ""
+msgstr "signature"
 
 #: src/tools.py:190
-#, fuzzy
 msgctxt "search keyword"
 msgid "authentication"
-msgstr "Indentations"
+msgstr "authentification"
 
 #: src/tools.py:191
 msgctxt "search keyword"
 msgid "authorization"
-msgstr ""
+msgstr "autorisation"
 
 #: src/tools.py:192 src/tools.py:320 src/tools.py:533 src/tools.py:550
-#, fuzzy
 msgctxt "search keyword"
 msgid "security"
-msgstr "Sévérité"
+msgstr "sécurité"
 
 #: src/tools.py:199 src/tools.py:212 src/tools.py:226 src/tools.py:240
 #: src/tools.py:255 src/tools.py:269 src/tools.py:282 src/tools.py:296
 msgid "Formatters & Minifiers"
-msgstr "Formateurs et minimiseurs"
+msgstr "Formateurs et Minifieurs"
 
 #: src/tools.py:201 src/formatters/json.py:14
 msgid "Format JSON documents"
@@ -516,13 +507,13 @@ msgstr "Formatage des documents JSON"
 #: src/tools.py:260 src/tools.py:273
 msgctxt "search keyword"
 msgid "pretty"
-msgstr ""
+msgstr "jolie"
 
 #: src/tools.py:205 src/tools.py:218 src/tools.py:232 src/tools.py:246
 #: src/tools.py:262 src/tools.py:275
 msgctxt "search keyword"
 msgid "beautify"
-msgstr ""
+msgstr "rendre jolie"
 
 #: src/tools.py:214 src/formatters/sql.py:14
 msgid "Format SQL documents"
@@ -531,16 +522,16 @@ msgstr "Formatage des documents SQL"
 #: src/tools.py:220
 msgctxt "search keyword"
 msgid "database"
-msgstr ""
+msgstr "base de donnée"
 
 #: src/tools.py:221
 msgctxt "search keyword"
 msgid "statement"
-msgstr ""
+msgstr "déclaration"
 
 #: src/tools.py:228 src/formatters/xml.py:16
 msgid "Format XML documents"
-msgstr "Formatage des documents XML"
+msgstr "Formater des documents XML"
 
 #: src/tools.py:242 src/formatters/html.py:15
 msgid "Format HTML documents"
@@ -550,73 +541,70 @@ msgstr "Formater des documents HTML"
 #: src/tools.py:301
 msgctxt "search keyword"
 msgid "minify"
-msgstr ""
+msgstr "minifier"
 
 #: src/tools.py:257 src/formatters/js.py:15
 msgid "Format JavaScript documents"
-msgstr "Formatage des documents JavaScript"
+msgstr "Formater des documents JavaScript"
 
 #: src/tools.py:264 src/tools.py:306
-#, fuzzy
 msgctxt "search keyword"
 msgid "code"
-msgstr "Encoder"
+msgstr "code"
 
 #: src/tools.py:271 src/formatters/css.py:14
 msgid "Format CSS documents"
-msgstr "Formatage des documents CSS"
+msgstr "Formater des documents CSS"
 
 #: src/tools.py:277 src/tools.py:289
 msgctxt "search keyword"
 msgid "stylesheet"
-msgstr ""
+msgstr "feuille de style"
 
 #: src/tools.py:281 src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
-msgstr ""
+msgstr "Minifieur CSS"
 
 #: src/tools.py:284 src/formatters/css_minifier.py:15
 msgid "Minify CSS documents"
-msgstr "Simplifier des documents CSS"
+msgstr "Minifier des documents CSS"
 
 #: src/tools.py:287 src/tools.py:302
-#, fuzzy
 msgctxt "search keyword"
 msgid "compress"
-msgstr "Décompresser"
+msgstr "compresser"
 
 #: src/tools.py:288
-#, fuzzy
 msgctxt "search keyword"
 msgid "style"
-msgstr "Sombre"
+msgstr "style"
 
 #: src/tools.py:290 src/tools.py:303
 msgctxt "search keyword"
 msgid "reduce"
-msgstr ""
+msgstr "réduire"
 
 #: src/tools.py:291 src/tools.py:304
 msgctxt "search keyword"
 msgid "size"
-msgstr ""
+msgstr "taille"
 
 #: src/tools.py:295 src/formatters/js_minifier.py:14
 msgid "JavaScript Minifier"
-msgstr ""
+msgstr "Minifieur JavaScript"
 
 #: src/tools.py:298
 msgid "Minify JavaScript documents"
-msgstr "Simplifier du code JavaScript"
+msgstr "Minifier du code JavaScript"
 
 #: src/tools.py:305
 msgctxt "search keyword"
 msgid "script"
-msgstr ""
+msgstr "script"
 
 #: src/tools.py:312
 msgid "Hash"
-msgstr ""
+msgstr "Hash"
 
 #: src/tools.py:313 src/tools.py:326 src/tools.py:338 src/tools.py:349
 #: src/tools.py:361 src/tools.py:375
@@ -624,20 +612,18 @@ msgid "Generators"
 msgstr "Générateurs"
 
 #: src/tools.py:315
-#, fuzzy
 msgid "Calculate hashes and check for integrity"
-msgstr ""
-"Calculer les hachages MD5, SHA1, SHA256 et SHA512 et en vérifier l'intégrité"
+msgstr "Calculer et vérifier l'intégrité de hachages"
 
 #: src/tools.py:317
 msgctxt "search keyword"
 msgid "checksum"
-msgstr ""
+msgstr "somme de contrôle"
 
 #: src/tools.py:318
 msgctxt "search keyword"
 msgid "digest"
-msgstr ""
+msgstr "digest"
 
 #: src/tools.py:319
 #, fuzzy
