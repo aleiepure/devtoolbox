@@ -2928,7 +2928,7 @@ msgstr "Formateur HTML"
 
 #: src/formatters/html.py:17
 msgid "Type HTML code here"
-msgstr "Tapez le code HTML ici"
+msgstr "Saisissez le code HTML ici"
 
 #: src/formatters/html.py:20 src/formatters/js.py:20 src/formatters/json.py:19
 #: src/formatters/sql.py:19 src/formatters/xml.py:21 src/formatters/css.py:19
@@ -2938,19 +2938,19 @@ msgstr "Format"
 
 #: src/formatters/js.py:14
 msgid "JavaScript Formatter"
-msgstr ""
+msgstr "Formateur JavaScript"
 
 #: src/formatters/js.py:17
 msgid "Type JavaScript code here"
-msgstr ""
+msgstr "Tapez le code JavaScript ici"
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
-msgstr ""
+msgstr "Formateur JSON"
 
 #: src/formatters/json.py:16
 msgid "Type JSON code here"
-msgstr ""
+msgstr "Tapez le code JSON ici"
 
 #: src/formatters/sql.py:13
 msgid "SQL Formatter"
