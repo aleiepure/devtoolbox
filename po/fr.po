@@ -840,28 +840,27 @@ msgstr "Différence de texte"
 
 #: src/tools.py:419 src/ui/views/text_diff.blp:20
 msgid "Analyze two texts and find differences"
-msgstr "Analyser deux textes et trouver des différences"
+msgstr "Analyser deux textes et trouver les différences"
 
 #: src/tools.py:421
 msgctxt "search keyword"
 msgid "difference"
-msgstr ""
+msgstr "différence"
 
 #: src/tools.py:422
-#, fuzzy
 msgctxt "search keyword"
 msgid "compare"
-msgstr "Décompresser"
+msgstr "comparer"
 
 #: src/tools.py:423
 msgctxt "search keyword"
 msgid "changes"
-msgstr ""
+msgstr "changements"
 
 #: src/tools.py:424
 msgctxt "search keyword"
 msgid "modification"
-msgstr ""
+msgstr "modification"
 
 #: src/tools.py:428 src/ui/views/xml_validator.blp:19
 msgid "XML Scheme Validator"
@@ -872,10 +871,9 @@ msgid "Check an XML file against an XSD schema"
 msgstr "Vérifier un fichier XML à partir d'un schéma XSD"
 
 #: src/tools.py:433 src/tools.py:444
-#, fuzzy
 msgctxt "search keyword"
 msgid "validate"
-msgstr "Invalide !"
+msgstr "valider"
 
 #: src/tools.py:439 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
@@ -883,7 +881,7 @@ msgstr "Validateur de schéma JSON"
 
 #: src/tools.py:442 src/ui/views/json_validator.blp:20
 msgid "Check a JSON file against a JSON schema"
-msgstr "Vérifier la conformité d'un fichier JSON par rapport au standard"
+msgstr "Vérifier la conformité d'un fichier JSON par rapport à un schéma"
 
 #: src/tools.py:453 src/ui/views/markdown_preview.blp:20
 msgid "Preview markdown code as you type"
@@ -892,85 +890,83 @@ msgstr "Prévisualiser le code markdown lors de l'écriture"
 #: src/tools.py:455
 msgctxt "search keyword"
 msgid "render"
-msgstr ""
+msgstr "rendu"
 
 #: src/tools.py:457
 msgctxt "search keyword"
 msgid "md"
-msgstr ""
+msgstr "md"
 
 #: src/tools.py:463 src/ui/views/color_converter.blp:16
-#, fuzzy
 msgid "Color Converter"
-msgstr "Convertisseurs"
+msgstr "Convertisseur de couleur"
 
 #: src/tools.py:464 src/tools.py:481 src/tools.py:491 src/tools.py:505
 msgid "Graphics"
 msgstr "Graphiques"
 
 #: src/tools.py:466 src/ui/views/color_converter.blp:17
-#, fuzzy
 msgid "Convert colors between formats"
-msgstr "Convertir des nombres entre bases"
+msgstr "Convertir le format de couleurs"
 
 #: src/tools.py:468
 msgctxt "search keyword"
 msgid "rgb"
-msgstr ""
+msgstr "rgb"
 
 #: src/tools.py:469
 msgctxt "search keyword"
 msgid "rgba"
-msgstr ""
+msgstr "rgba"
 
 #: src/tools.py:470
 msgctxt "search keyword"
 msgid "hex"
-msgstr ""
+msgstr "hex"
 
 #: src/tools.py:471
 msgctxt "search keyword"
 msgid "hsl"
-msgstr ""
+msgstr "hsl"
 
 #: src/tools.py:472
 msgctxt "search keyword"
 msgid "hsv"
-msgstr ""
+msgstr "hsv"
 
 #: src/tools.py:473
 msgctxt "search keyword"
 msgid "cmyk"
-msgstr ""
+msgstr "cmyk"
 
 #: src/tools.py:475
-#, fuzzy
 msgctxt "search keyword"
 msgid "conversion"
-msgstr "Version"
+msgstr "conversion"
 
 #: src/tools.py:476
 msgctxt "search keyword"
 msgid "palette"
-msgstr ""
+msgstr "palette"
 
 #: src/tools.py:480 src/ui/views/contrast_checker.blp:19
 msgid "Contrast Checker"
-msgstr "Vérificateur de constraste"
+msgstr "Vérificateur de constrastes"
 
 #: src/tools.py:483 src/ui/views/contrast_checker.blp:20
 msgid "Check a color combination for WCAG compliance"
-msgstr "Vérifier la conformité d'une combinaison de couleurs avec les WCAG"
+msgstr ""
+"Vérifier la conformité d'une combinaison de couleurs avec les règles WCAG"
 
 #: src/tools.py:485
 msgctxt "search keyword"
 msgid "accessibility"
-msgstr ""
+msgstr "accessibilité"
 
 #: src/tools.py:486
 msgctxt "search keyword"
 msgid "ratio"
-msgstr ""
+msgstr "ratio"
 
 #: src/tools.py:490
 msgid "Color Blindness"
@@ -981,39 +977,34 @@ msgid "Simulate color blindness in images"
 msgstr "Simuler le daltonisme sur des images"
 
 #: src/tools.py:495
-#, fuzzy
 msgctxt "search keyword"
 msgid "simulation"
-msgstr "Chargement de la simulation…"
+msgstr "simulation"
 
 #: src/tools.py:496
 msgctxt "search keyword"
 msgid "daltonism"
-msgstr ""
+msgstr "daltonisme"
 
 #: src/tools.py:497
-#, fuzzy
 msgctxt "search keyword"
 msgid "protanopia"
-msgstr "Protanopie"
+msgstr "protanopie"
 
 #: src/tools.py:498
-#, fuzzy
 msgctxt "search keyword"
 msgid "deuteranopia"
-msgstr "Deutéranopie"
+msgstr "deutéranopie"
 
 #: src/tools.py:499
-#, fuzzy
 msgctxt "search keyword"
 msgid "tritanopia"
-msgstr "Tritanopie"
+msgstr "tritanopie"
 
 #: src/tools.py:500
-#, fuzzy
 msgctxt "search keyword"
 msgid "vision"
-msgstr "Version"
+msgstr "version"
 
 #: src/tools.py:504 src/ui/views/image_converter.blp:19
 msgid "Image Format Converter"
@@ -1026,37 +1017,37 @@ msgstr "Convertir des images en différents formats"
 #: src/tools.py:510
 msgctxt "search keyword"
 msgid "jpg"
-msgstr ""
+msgstr "jpg"
 
 #: src/tools.py:511
 msgctxt "search keyword"
 msgid "jpeg"
-msgstr ""
+msgstr "jpeg"
 
 #: src/tools.py:512
 msgctxt "search keyword"
 msgid "png"
-msgstr ""
+msgstr "png"
 
 #: src/tools.py:513
 msgctxt "search keyword"
 msgid "bmp"
-msgstr ""
+msgstr "bmp"
 
 #: src/tools.py:514
 msgctxt "search keyword"
 msgid "gif"
-msgstr ""
+msgstr "gif"
 
 #: src/tools.py:515
 msgctxt "search keyword"
 msgid "webp"
-msgstr ""
+msgstr "webp"
 
 #: src/tools.py:516
 msgctxt "search keyword"
 msgid "picture"
-msgstr ""
+msgstr "image"
 
 #: src/tools.py:522 src/ui/views/certificate_parser.blp:19
 msgid "Certificate Parser"
@@ -1067,28 +1058,24 @@ msgid "Certificates"
 msgstr "Certificats"
 
 #: src/tools.py:525 src/ui/views/certificate_parser.blp:20
-#, fuzzy
 msgid "View certificates contents"
-msgstr "Voir le contenu du certificat"
+msgstr "Voir le contenu de certificats"
 
 #: src/tools.py:532 src/tools.py:549
-#, fuzzy
 msgctxt "search keyword"
 msgid "key"
-msgstr "Clé"
+msgstr "clé"
 
 #: src/tools.py:534
 msgctxt "search keyword"
 msgid "public key"
-msgstr ""
+msgstr "clé publique"
 
 #: src/tools.py:539
-#, fuzzy
 msgid "Certificate Signing Request"
 msgstr "Demande de signature de certificat"
 
 #: src/tools.py:542 src/ui/views/certificate_request_generator.blp:23
-#, fuzzy
 msgid "Generate certificate signing requests"
 msgstr "Générer des demandes de signature de certificat"
 
@@ -1143,7 +1130,7 @@ msgstr "Enregistrer"
 
 #: src/widgets/text_area.py:194 src/widgets/text_file_area.py:230
 msgid "Text files"
-msgstr "Fichiers de texte"
+msgstr "Fichiers texte"
 
 #: src/widgets/text_area.py:201 src/widgets/text_file_area.py:243
 msgid "Accepted files"
@@ -1161,7 +1148,7 @@ msgstr ""
 #: src/widgets/text_area.py:230 src/widgets/text_file_area.py:280
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr "Impossible d'ouvrir {file_path} : {file_content}."
+msgstr "Impossible d'ouvrir {file_path}: {file_content}."
 
 #: src/widgets/text_area.py:246
 msgid "File is not UTF-8 encoded."
@@ -1396,7 +1383,7 @@ msgstr ""
 
 #: src/views/jwt_decoder.py:173
 msgid "Signature is Valid!"
-msgstr ""
+msgstr "La signature est valide!"
 
 #: src/views/jwt_decoder.py:175
 msgid "The JWT signature was verified successfully."
