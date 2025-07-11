@@ -322,7 +322,7 @@ msgstr "planifier"
 #: src/tools.py:94 src/tools.py:112
 msgctxt "search keyword"
 msgid "parser"
-msgstr "analyseur"
+msgstr "analyser"
 
 #: src/tools.py:95 src/tools.py:113 src/tools.py:410
 #, fuzzy
