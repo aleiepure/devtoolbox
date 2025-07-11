@@ -37,8 +37,11 @@ msgid ""
 "Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;"
 "Lorem;Ipsum;"
 msgstr ""
-"JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;Valider;Validateur;Convertisseur;Conversion;Timestamp;bmp;gif;icns;jpeg;png;tiff;webp;Image;Base;Parser;CRON;GZip;Compresseur;Décompresseur;Hash;Regex;Comparer;URL;Minifier;Generateur;Generer;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Prévisualiser;Lorem;Ipsum;"
-""
+"JSON ;YAML ;YML ;XML ;HTML ;CSS ;SQL ;JavaScript ;Valider ;Validateur ;"
+"Convertisseur ;Conversion ;Timestamp ;bmp ;gif ;icns ;jpeg ;png ;tiff ;webp ;"
+"Image ;Base ;Parser ;CRON ;GZip ;Compresseur ;Décompresseur ;Hash ;Regex ;"
+"Comparer ;URL ;Minifier ;Generateur ;Generer ;UUID ;Random ;QR ;chmod ;"
+"Contrast ;Color ;Text ;Diff ;Case ;Markdown ;Prévisualiser ;Lorem ;Ipsum ;"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -111,7 +114,7 @@ msgstr "Convertir des documents JSON en YAML et vice-versa"
 #: src/tools.py:20 src/tools.py:39 src/tools.py:206
 msgctxt "search keyword"
 msgid "parse"
-msgstr ""
+msgstr "analyser"
 
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
 #, fuzzy
@@ -121,39 +124,36 @@ msgstr "Convertisseurs"
 
 #: src/tools.py:22 src/tools.py:46 src/tools.py:74 src/tools.py:96
 #: src/tools.py:114 src/tools.py:394
-#, fuzzy
 msgctxt "search keyword"
 msgid "convert"
-msgstr "Convertir"
+msgstr "convertir"
 
 #: src/tools.py:23 src/tools.py:38 src/tools.py:47 src/tools.py:474
-#, fuzzy
 msgctxt "search keyword"
 msgid "format"
-msgstr "Format"
+msgstr "formater"
 
 #: src/tools.py:24 src/tools.py:234 src/tools.py:250 src/tools.py:435
 #: src/tools.py:446
 msgctxt "search keyword"
 msgid "document"
-msgstr ""
+msgstr "document"
 
 #: src/tools.py:25
 msgctxt "search keyword"
 msgid "spaces"
-msgstr ""
+msgstr "espaces"
 
 #: src/tools.py:26
-#, fuzzy
 msgctxt "search keyword"
 msgid "indentation"
-msgstr "Indentations"
+msgstr "indentation"
 
 #: src/tools.py:27 src/tools.py:204 src/tools.py:217 src/tools.py:231
 #: src/tools.py:245 src/tools.py:261 src/tools.py:274
 msgctxt "search keyword"
 msgid "indent"
-msgstr ""
+msgstr "indenter"
 
 #: src/tools.py:31 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
@@ -166,83 +166,77 @@ msgstr "Convertir les horodatages UNIX en dates simples et inversement"
 #: src/tools.py:36
 msgctxt "search keyword"
 msgid "epoch"
-msgstr ""
+msgstr "epoch"
 
 #: src/tools.py:37 src/tools.py:97 src/tools.py:115
 msgctxt "search keyword"
 msgid "time"
-msgstr ""
+msgstr "heure"
 
 #: src/tools.py:40
 msgctxt "search keyword"
 msgid "datetime"
-msgstr ""
+msgstr "datetime"
 
 #: src/tools.py:41
 msgctxt "search keyword"
 msgid "calendar"
-msgstr ""
+msgstr "calendrier"
 
 #: src/tools.py:42
-#, fuzzy
 msgctxt "search keyword"
 msgid "timestamp"
-msgstr "Horodatage"
+msgstr "horodatage"
 
 #: src/tools.py:44 src/tools.py:98 src/tools.py:116
 msgctxt "search keyword"
 msgid "date"
-msgstr ""
+msgstr "date"
 
 #: src/tools.py:48
 msgctxt "search keyword"
 msgid "short"
-msgstr ""
+msgstr "court"
 
 #: src/tools.py:49
 msgctxt "search keyword"
 msgid "long"
-msgstr ""
+msgstr "long"
 
 #: src/tools.py:52
 msgctxt "search keyword"
 msgid "year"
-msgstr ""
+msgstr "année"
 
 #: src/tools.py:53
-#, fuzzy
 msgctxt "search keyword"
 msgid "month"
-msgstr "Mois"
+msgstr "mois"
 
 #: src/tools.py:54
-#, fuzzy
 msgctxt "search keyword"
 msgid "day"
-msgstr "Mai"
+msgstr "jour"
 
 #: src/tools.py:55
 msgctxt "search keyword"
 msgid "hour"
-msgstr ""
+msgstr "heure"
 
 #: src/tools.py:56
-#, fuzzy
 msgctxt "search keyword"
 msgid "hours"
-msgstr "Heures"
+msgstr "heures"
 
 #: src/tools.py:57
-#, fuzzy
 msgctxt "search keyword"
 msgid "minute"
-msgstr "Minutes"
+msgstr "minutes"
 
 #: src/tools.py:58
-#, fuzzy
 msgctxt "search keyword"
 msgid "minutes"
-msgstr "Minutes"
+msgstr "minutes"
 
 #: src/tools.py:59
 #, fuzzy
