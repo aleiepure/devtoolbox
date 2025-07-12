@@ -62,7 +62,7 @@ class SpinArea(Adw.Bin):
         self.emit("action-clicked")
 
     def _on_copy_clicked(self, user_data:GObject.GPointer):
-        text      = str(self._spin_btn.get_value_as_int())
+        text      = str(int(self._spin_btn.get_value()))
         clipboard = Gdk.Display.get_clipboard(Gdk.Display.get_default())
         clipboard.set(text)
 
@@ -87,7 +87,7 @@ class SpinArea(Adw.Bin):
         self.emit("value-changed")
 
     def get_value(self) -> int:
-        return self._spin_btn.get_value_as_int()
+        return int(self._spin_btn.get_value())
 
     def set_value(self, value:int):
         self._spin_btn.set_value(value)
