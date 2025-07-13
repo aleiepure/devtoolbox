@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-07-13 06:30+0000\n"
-"Last-Translator: vikdevelop <vikdevelop@proton.me>\n"
+"PO-Revision-Date: 2025-07-14 09:01+0000\n"
+"Last-Translator: Fjuro <fjuro@alius.cz>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/cs/>\n"
 "Language: cs\n"
@@ -111,7 +111,7 @@ msgstr "Převod dokumentů JSON do YAML a naopak"
 #: src/tools.py:20 src/tools.py:39 src/tools.py:206
 msgctxt "search keyword"
 msgid "parse"
-msgstr "parsování"
+msgstr "parsovat"
 
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
 msgctxt "search keyword"
@@ -304,7 +304,7 @@ msgstr "celé číslo"
 
 #: src/tools.py:87 src/ui/views/cron_converter.blp:20
 msgid "CRON Parser"
-msgstr "CRON Parser"
+msgstr "Parser CRON"
 
 #: src/tools.py:90 src/ui/views/cron_converter.blp:21
 msgid "Convert CRON expressions to time and date"
@@ -336,7 +336,7 @@ msgstr "Reverzní CRON"
 
 #: src/tools.py:108 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
-msgstr "Generování CRON výrazů"
+msgstr "Generování výrazů CRON"
 
 #: src/tools.py:126 src/tools.py:139 src/tools.py:151 src/tools.py:166
 #: src/tools.py:182
@@ -423,79 +423,71 @@ msgstr "Komprimování a dekomprimování souborů a textů pomocí GZip"
 #: src/tools.py:170
 msgctxt "search keyword"
 msgid "unarchive"
-msgstr ""
+msgstr "rozbalit"
 
 #: src/tools.py:171 src/tools.py:365
-#, fuzzy
 msgctxt "search keyword"
 msgid "file"
-msgstr "Všechny soubory"
+msgstr "soubor"
 
 #: src/tools.py:174
 msgctxt "search keyword"
 msgid "zip"
-msgstr ""
+msgstr "zip"
 
 #: src/tools.py:175
 msgctxt "search keyword"
 msgid "unzip"
-msgstr ""
+msgstr "unzip"
 
 #: src/tools.py:176
-#, fuzzy
 msgctxt "search keyword"
 msgid "decompression"
-msgstr "Dekomprimovat"
+msgstr "dekomprimovat"
 
 #: src/tools.py:177
-#, fuzzy
 msgctxt "search keyword"
 msgid "decompressor"
-msgstr "Dekomprimovat"
+msgstr "dekomprese"
 
 #: src/tools.py:184 src/ui/views/jwt_decoder.blp:20
-#, fuzzy
 msgid "Decode and encode JWT tokens"
-msgstr "Kódování a dekódování řetězců base64"
+msgstr "Kódování a dekódování tokenů JWT"
 
 #: src/tools.py:186
 msgctxt "search keyword"
 msgid "json web token"
-msgstr ""
+msgstr "webový token json"
 
 #: src/tools.py:187
-#, fuzzy
 msgctxt "search keyword"
 msgid "header"
-msgstr "Záhlaví"
+msgstr "hlavička"
 
 #: src/tools.py:188
-#, fuzzy
 msgctxt "search keyword"
 msgid "payload"
-msgstr "Datová část"
+msgstr "datová část"
 
 #: src/tools.py:189
 msgctxt "search keyword"
 msgid "signature"
-msgstr ""
+msgstr "podpis"
 
 #: src/tools.py:190
-#, fuzzy
 msgctxt "search keyword"
 msgid "authentication"
-msgstr "Odsazení"
+msgstr "autentifikace"
 
 #: src/tools.py:191
 msgctxt "search keyword"
 msgid "authorization"
-msgstr ""
+msgstr "autorizace"
 
 #: src/tools.py:192 src/tools.py:320 src/tools.py:533 src/tools.py:550
-#, fuzzy
 msgctxt "search keyword"
 msgid "security"
-msgstr "Závažnost"
+msgstr "zabezpečení"
 
 #: src/tools.py:199 src/tools.py:212 src/tools.py:226 src/tools.py:240
 #: src/tools.py:255 src/tools.py:269 src/tools.py:282 src/tools.py:296
@@ -510,13 +502,13 @@ msgstr "Formátování dokumentů JSON"
 #: src/tools.py:260 src/tools.py:273
 msgctxt "search keyword"
 msgid "pretty"
-msgstr ""
+msgstr "zlepšení"
 
 #: src/tools.py:205 src/tools.py:218 src/tools.py:232 src/tools.py:246
 #: src/tools.py:262 src/tools.py:275
 msgctxt "search keyword"
 msgid "beautify"
-msgstr ""
+msgstr "pěknější"
 
 #: src/tools.py:214 src/formatters/sql.py:14
 msgid "Format SQL documents"
@@ -525,12 +517,12 @@ msgstr "Formátování dokumentů SQL"
 #: src/tools.py:220
 msgctxt "search keyword"
 msgid "database"
-msgstr ""
+msgstr "databáze"
 
 #: src/tools.py:221
 msgctxt "search keyword"
 msgid "statement"
-msgstr ""
+msgstr "výraz"
 
 #: src/tools.py:228 src/formatters/xml.py:16
 msgid "Format XML documents"
@@ -828,16 +820,14 @@ msgid "words"
 msgstr "Slova"
 
 #: src/tools.py:400
-#, fuzzy
 msgctxt "search keyword"
 msgid "characters"
-msgstr "Počet znaků:"
+msgstr "znaky"
 
 #: src/tools.py:401
-#, fuzzy
 msgctxt "search keyword"
 msgid "lines"
-msgstr "Řádky:"
+msgstr "řádky"
 
 #: src/tools.py:405
 msgid "Regex Tester"
@@ -898,10 +888,9 @@ msgid "Check an XML file against an XSD schema"
 msgstr "Zkontrolujte soubor XML se schématem XSD"
 
 #: src/tools.py:433 src/tools.py:444
-#, fuzzy
 msgctxt "search keyword"
 msgid "validate"
-msgstr "Neplatný!"
+msgstr "validovat"
 
 #: src/tools.py:439 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
@@ -1008,10 +997,9 @@ msgid "Simulate color blindness in images"
 msgstr "Simulujte barevnou slepotu na obrázcích"
 
 #: src/tools.py:495
-#, fuzzy
 msgctxt "search keyword"
 msgid "simulation"
-msgstr "Načítání simulace..."
+msgstr "simulace"
 
 #: src/tools.py:496
 msgctxt "search keyword"
@@ -2181,7 +2169,7 @@ msgstr ""
 
 #: src/ui/views/cron_converter.blp:76
 msgid "CRON expression"
-msgstr "výraz CRON"
+msgstr "Výraz CRON"
 
 #: src/ui/views/cron_converter.blp:89
 msgid "Dates"
@@ -2727,7 +2715,7 @@ msgstr "Příkaz k provedení"
 
 #: src/ui/views/reverse_cron.blp:737
 msgid "CRON Expression"
-msgstr "výraz CRON"
+msgstr "Výraz CRON"
 
 #: src/ui/views/text_diff.blp:33
 msgid "Old Text"
