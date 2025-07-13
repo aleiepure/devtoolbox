@@ -2002,71 +2002,67 @@ msgstr "Grady"
 
 #: src/ui/views/color_converter.blp:55
 msgid "Turns"
-msgstr "Turnů"
+msgstr "Turny"
 
 #: src/ui/views/color_converter.blp:56
-#, fuzzy
 msgid "Follow Format"
-msgstr "Formát"
+msgstr "Následovat formát"
 
 #: src/ui/views/color_converter.blp:62
 msgid "Bits"
-msgstr ""
+msgstr "Bity"
 
 #: src/ui/views/color_converter.blp:63
 msgid "Bits precision for color values"
-msgstr ""
+msgstr "Přesnost na bity pro hodnoty barev"
 
 #: src/ui/views/color_converter.blp:82
 msgid "Values"
-msgstr ""
+msgstr "Hodnoty"
 
 #: src/ui/views/color_converter.blp:85 src/ui/views/color_converter.blp:97
 msgid "Color"
-msgstr ""
+msgstr "Barva"
 
 #: src/ui/views/color_converter.blp:103
 msgid "Hex"
-msgstr ""
+msgstr "Hex"
 
 #: src/ui/views/color_converter.blp:128
-#, fuzzy
 msgid "Red"
-msgstr "Čtení"
+msgstr "Červená"
 
 #: src/ui/views/color_converter.blp:136
 msgid "Green"
-msgstr ""
+msgstr "Zelená"
 
 #: src/ui/views/color_converter.blp:144
 msgid "Blue"
-msgstr ""
+msgstr "Modrá"
 
 #: src/ui/views/color_converter.blp:168 src/ui/views/color_converter.blp:208
 msgid "Hue"
-msgstr ""
+msgstr "Odstín"
 
 #: src/ui/views/color_converter.blp:176 src/ui/views/color_converter.blp:216
-#, fuzzy
 msgid "Saturation"
-msgstr "Sobota"
+msgstr "Sytost"
 
 #: src/ui/views/color_converter.blp:184
 msgid "Value"
-msgstr ""
+msgstr "Hodnota"
 
 #: src/ui/views/color_converter.blp:224
-#, fuzzy
 msgid "Lightness"
-msgstr "Světlý motiv"
+msgstr "Jas"
 
 #: src/ui/views/color_converter.blp:234
 msgid "Alpha"
-msgstr ""
+msgstr "Alfa"
 
 #: src/ui/views/color_converter.blp:265
 msgid "HWB"
-msgstr ""
+msgstr "HWB"
 
 #: src/ui/views/contrast_checker.blp:33 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
@@ -2212,7 +2208,7 @@ msgstr "Zadejte hash, proti kterému chcete zkontrolovat"
 
 #: src/ui/views/html_encoder.blp:19
 msgid "HTML Encoder & Decoder"
-msgstr "HTML kodér a dekodér"
+msgstr "Kodér a dekodér HTML"
 
 #: src/ui/views/image_converter.blp:34
 msgctxt "noun"
@@ -2236,9 +2232,8 @@ msgid "converted-image"
 msgstr "konvertovaný obrázek"
 
 #: src/ui/views/json_validator.blp:49
-#, fuzzy
 msgid "JSON Schema"
-msgstr "Validátor schématu JSON"
+msgstr "Schéma JSON"
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
@@ -2250,54 +2245,51 @@ msgstr "Určete, jaký formát je vstup a požadovaný výstup"
 
 #: src/ui/views/json_yaml.blp:42
 msgid "JSON → YAML"
-msgstr ""
+msgstr "JSON → YAML"
 
 #: src/ui/views/json_yaml.blp:46
 msgid "YAML → JSON"
-msgstr ""
+msgstr "YAML → JSON"
 
 #: src/ui/views/jwt_decoder.blp:19
-#, fuzzy
 msgid "JWT Decode & Encode"
-msgstr "HTML kodér a dekodér"
+msgstr "Kodér a dekodér JWT"
 
 #: src/ui/views/jwt_decoder.blp:32
 msgid "Verify Signature"
-msgstr ""
+msgstr "Ověřit podpis"
 
 #: src/ui/views/jwt_decoder.blp:33
 msgid "Verify signature or sign JWT"
-msgstr ""
+msgstr "Ověřit podpis nebo podepsat JWT"
 
 #: src/ui/views/jwt_decoder.blp:41
 msgid "Off"
-msgstr ""
+msgstr "Vypnuto"
 
 #: src/ui/views/jwt_decoder.blp:46
 msgid "Symmetric"
-msgstr ""
+msgstr "Symetrické"
 
 #: src/ui/views/jwt_decoder.blp:51
 msgid "Asymmetric"
-msgstr ""
+msgstr "Asymetrické"
 
 #: src/ui/views/jwt_decoder.blp:57
-#, fuzzy
 msgid "Key Encoding"
-msgstr "Kódování mezer"
+msgstr "Kódování klíče"
 
 #: src/ui/views/jwt_decoder.blp:58
-#, fuzzy
 msgid "Select the encoding of the key"
-msgstr "Vyberte požadované kódování pro znak mezery"
+msgstr "Vyberte kódování klíče"
 
 #: src/ui/views/jwt_decoder.blp:99
 msgid "Public Key (PEM)"
-msgstr ""
+msgstr "Veřejný klíč (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:107
 msgid "Private Key (PEM)"
-msgstr ""
+msgstr "Soukromý klíč (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:120
 msgid "Token"
