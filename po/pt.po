@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-04-06 16:03+0000\n"
-"Last-Translator: ssantos <ssantos@web.de>\n"
+"PO-Revision-Date: 2025-07-08 06:09+0000\n"
+"Last-Translator: Manuela Silva <mmsrs@sky.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/pt/>\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -44,17 +44,17 @@ msgid ""
 "again that website of which you don't recall the name just for a quick "
 "conversion, this is the right app for you."
 msgstr ""
-"Se está cansado de procurar infinitamente online pela ferramenta certa ou de "
-"encontrar novamente aquele site cujo nome não se lembra do nome apenas para "
-"uma conversão rápida, este é a app certa para si."
+"Se está cansado de procurar infinitamente on-line pela ferramenta certa, ou "
+"para encontrar novamente aquele site da Web cujo nome não se lembra apenas "
+"para uma conversão rápida, esta é a aplicação certa para si."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr ""
-"Esta é uma coleção de ferramentas poderosas e simples de usar para resolver "
-"os problemas de desenvolvimento diários mais comuns."
+"É uma coleção de ferramentas poderosas e simples de utilizar para resolver a "
+"maioria dos problemas comuns do desenvolvimento diário."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Includes:"
@@ -70,7 +70,7 @@ msgstr "Analisador de expressões CRON"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "GZip compressor and decompressor"
-msgstr "Compressor e descompactador GZip"
+msgstr "Compressor e descompressor GZip"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Formatters for common programming languages"
@@ -87,7 +87,7 @@ msgstr "Testador de regex"
 #: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/tools.py:450
 #: src/ui/views/markdown_preview.blp:19
 msgid "Markdown Previewer"
-msgstr "Visualizador de Markdown"
+msgstr "Pré-visualizador de Marcação"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
@@ -109,23 +109,20 @@ msgstr "Converta documentos JSON para YAML e vice-versa"
 #: src/tools.py:20 src/tools.py:39 src/tools.py:206
 msgctxt "search keyword"
 msgid "parse"
-msgstr ""
+msgstr "analisar"
 
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
-#, fuzzy
 msgctxt "search keyword"
 msgid "converter"
-msgstr "Conversores"
+msgstr "Conversor"
 
 #: src/tools.py:22 src/tools.py:46 src/tools.py:74 src/tools.py:96
 #: src/tools.py:114 src/tools.py:394
-#, fuzzy
 msgctxt "search keyword"
 msgid "convert"
 msgstr "Converter"
 
 #: src/tools.py:23 src/tools.py:38 src/tools.py:47 src/tools.py:474
-#, fuzzy
 msgctxt "search keyword"
 msgid "format"
 msgstr "Formato"
@@ -134,24 +131,23 @@ msgstr "Formato"
 #: src/tools.py:446
 msgctxt "search keyword"
 msgid "document"
-msgstr ""
+msgstr "documento"
 
 #: src/tools.py:25
 msgctxt "search keyword"
 msgid "spaces"
-msgstr ""
+msgstr "espaços"
 
 #: src/tools.py:26
-#, fuzzy
 msgctxt "search keyword"
 msgid "indentation"
-msgstr "Indentações"
+msgstr "Indentação"
 
 #: src/tools.py:27 src/tools.py:204 src/tools.py:217 src/tools.py:231
 #: src/tools.py:245 src/tools.py:261 src/tools.py:274
 msgctxt "search keyword"
 msgid "indent"
-msgstr ""
+msgstr "indentar"
 
 #: src/tools.py:31 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
@@ -169,20 +165,19 @@ msgstr ""
 #: src/tools.py:37 src/tools.py:97 src/tools.py:115
 msgctxt "search keyword"
 msgid "time"
-msgstr ""
+msgstr "hora"
 
 #: src/tools.py:40
 msgctxt "search keyword"
 msgid "datetime"
-msgstr ""
+msgstr "datahora"
 
 #: src/tools.py:41
 msgctxt "search keyword"
 msgid "calendar"
-msgstr ""
+msgstr "calendário"
 
 #: src/tools.py:42
-#, fuzzy
 msgctxt "search keyword"
 msgid "timestamp"
 msgstr "Data/hora"
@@ -190,7 +185,7 @@ msgstr "Data/hora"
 #: src/tools.py:44 src/tools.py:98 src/tools.py:116
 msgctxt "search keyword"
 msgid "date"
-msgstr ""
+msgstr "data"
 
 #: src/tools.py:48
 msgctxt "search keyword"
@@ -205,25 +200,22 @@ msgstr ""
 #: src/tools.py:52
 msgctxt "search keyword"
 msgid "year"
-msgstr ""
+msgstr "ano"
 
 #: src/tools.py:53
-#, fuzzy
 msgctxt "search keyword"
 msgid "month"
 msgstr "Mês"
 
 #: src/tools.py:54
-#, fuzzy
 msgctxt "search keyword"
 msgid "day"
-msgstr "Poderia"
+msgstr "dia"
 
 #: src/tools.py:55
-#, fuzzy
 msgctxt "search keyword"
 msgid "hour"
-msgstr "e hora"
+msgstr "hora"
 
 #: src/tools.py:56
 #, fuzzy
@@ -258,10 +250,9 @@ msgstr "Segundos"
 #: src/tools.py:61
 msgctxt "search keyword"
 msgid "timezone"
-msgstr ""
+msgstr "zona horária"
 
 #: src/tools.py:62
-#, fuzzy
 msgctxt "search keyword"
 msgid "now"
 msgstr "Agora"
@@ -851,16 +842,14 @@ msgid "words"
 msgstr "Palavras"
 
 #: src/tools.py:400
-#, fuzzy
 msgctxt "search keyword"
 msgid "characters"
-msgstr "Caracteres:"
+msgstr "carateres"
 
 #: src/tools.py:401
-#, fuzzy
 msgctxt "search keyword"
 msgid "lines"
-msgstr "Linhas:"
+msgstr "linhas"
 
 #: src/tools.py:405
 msgid "Regex Tester"
@@ -921,10 +910,9 @@ msgid "Check an XML file against an XSD schema"
 msgstr "Verifique um ficheiro XML em relação a um esquema XSD"
 
 #: src/tools.py:433 src/tools.py:444
-#, fuzzy
 msgctxt "search keyword"
 msgid "validate"
-msgstr "Inválido!"
+msgstr "validar"
 
 #: src/tools.py:439 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
@@ -1031,10 +1019,9 @@ msgid "Simulate color blindness in images"
 msgstr "Simule daltonismo em imagens"
 
 #: src/tools.py:495
-#, fuzzy
 msgctxt "search keyword"
 msgid "simulation"
-msgstr "Carregando simulação..."
+msgstr "simulação"
 
 #: src/tools.py:496
 msgctxt "search keyword"
@@ -1267,19 +1254,19 @@ msgstr ""
 #: src/views/certificate_parser.py:153
 #, python-brace-format
 msgid "Identity: {identity}"
-msgstr "Identity: {identity}"
+msgstr "Identidade: {identity}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:155
 #, python-brace-format
 msgid "Verified by: {verified_by}"
-msgstr "Verified by: {verified_by}"
+msgstr "Verificado por: {verified_by}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:157
 #, python-brace-format
 msgid "Expires: {expiration_date}"
-msgstr "Expires: {expiration_date}"
+msgstr "Expira: {expiration_date}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:163
@@ -2874,7 +2861,7 @@ msgstr "Data"
 
 #: src/ui/views/timestamp.blp:57
 msgid "ISO Date (ISO 8601/RFC 3339)"
-msgstr "Data ISO (ISO 8601/RFC 3339)"
+msgstr "Data do ISO (ISO 8601/RFC 3339)"
 
 #: src/ui/views/timestamp.blp:63
 msgid "RFC 2822 Date"
