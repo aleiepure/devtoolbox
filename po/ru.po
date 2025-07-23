@@ -8,19 +8,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-05-14 20:28+0300\n"
-"Last-Translator: David Sultaniiazov <x1z53@alt-gnome.ru>\n"
+"PO-Revision-Date: 2025-07-08 06:09+0000\n"
+"Last-Translator: freeducks-debug <209897795+freeducks-"
+"debug@users.noreply.github.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Gtranslator 48.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -40,6 +41,8 @@ msgid ""
 "Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;"
 "Lorem;Ipsum;"
 msgstr ""
+"JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;Validate;Validator;Converter;Convert;Timestamp;bmp;gif;icns;jpeg;png;tiff;webp;Image;Base;Parser;CRON;GZip;Compressor;Decompressor;Hash;Regex;Compare;URL;Minify;Generator;Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;Lorem;Ipsum;джейсон;йамль;хтмл;ксс;джаваскрипт;валидация;проверка;конвертация;конвертировать;бмп;гиф;иконка;джипех;пнг;тиф;вебп;изображение;картинка;парсер;крон;зип;компрессор;декомпрессор;хеш;регулярное;выражение;геренатор;минификация;рандом;случайно;контраст;цвет;разница;диф;маркдовн;маркдавн;лорем;импсун;импсум;"
+""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -112,49 +115,45 @@ msgstr "Преобразует JSON-документы в YAML и наоборо
 #: src/tools.py:20 src/tools.py:39 src/tools.py:206
 msgctxt "search keyword"
 msgid "parse"
-msgstr ""
+msgstr "парсировать"
 
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
-#, fuzzy
 msgctxt "search keyword"
 msgid "converter"
-msgstr "Конвертеры"
+msgstr "конвертер"
 
 #: src/tools.py:22 src/tools.py:46 src/tools.py:74 src/tools.py:96
 #: src/tools.py:114 src/tools.py:394
-#, fuzzy
 msgctxt "search keyword"
 msgid "convert"
-msgstr "Конвертировать"
+msgstr "конвертировать"
 
 #: src/tools.py:23 src/tools.py:38 src/tools.py:47 src/tools.py:474
-#, fuzzy
 msgctxt "search keyword"
 msgid "format"
-msgstr "Формат"
+msgstr "формат"
 
 #: src/tools.py:24 src/tools.py:234 src/tools.py:250 src/tools.py:435
 #: src/tools.py:446
 msgctxt "search keyword"
 msgid "document"
-msgstr ""
+msgstr "документ"
 
 #: src/tools.py:25
 msgctxt "search keyword"
 msgid "spaces"
-msgstr ""
+msgstr "пробелы"
 
 #: src/tools.py:26
-#, fuzzy
 msgctxt "search keyword"
 msgid "indentation"
-msgstr "Отступы"
+msgstr "отступ"
 
 #: src/tools.py:27 src/tools.py:204 src/tools.py:217 src/tools.py:231
 #: src/tools.py:245 src/tools.py:261 src/tools.py:274
 msgctxt "search keyword"
 msgid "indent"
-msgstr ""
+msgstr "отступ"
 
 #: src/tools.py:31 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
@@ -167,107 +166,97 @@ msgstr "Преобразует временные метки UNIX в прост�
 #: src/tools.py:36
 msgctxt "search keyword"
 msgid "epoch"
-msgstr ""
+msgstr "epoch"
 
 #: src/tools.py:37 src/tools.py:97 src/tools.py:115
 msgctxt "search keyword"
 msgid "time"
-msgstr ""
+msgstr "время"
 
 #: src/tools.py:40
 msgctxt "search keyword"
 msgid "datetime"
-msgstr ""
+msgstr "дата и время"
 
 #: src/tools.py:41
 msgctxt "search keyword"
 msgid "calendar"
-msgstr ""
+msgstr "календарь"
 
 #: src/tools.py:42
-#, fuzzy
 msgctxt "search keyword"
 msgid "timestamp"
-msgstr "Временная метка"
+msgstr "временная метка"
 
 #: src/tools.py:44 src/tools.py:98 src/tools.py:116
 msgctxt "search keyword"
 msgid "date"
-msgstr ""
+msgstr "дата"
 
 #: src/tools.py:48
 msgctxt "search keyword"
 msgid "short"
-msgstr ""
+msgstr "коротко"
 
 #: src/tools.py:49
 msgctxt "search keyword"
 msgid "long"
-msgstr ""
+msgstr "долго"
 
 #: src/tools.py:52
 msgctxt "search keyword"
 msgid "year"
-msgstr ""
+msgstr "год"
 
 #: src/tools.py:53
-#, fuzzy
 msgctxt "search keyword"
 msgid "month"
-msgstr "Месяц"
+msgstr "месяц"
 
 #: src/tools.py:54
-#, fuzzy
 msgctxt "search keyword"
 msgid "day"
-msgstr "Май"
+msgstr "день"
 
 #: src/tools.py:55
-#, fuzzy
 msgctxt "search keyword"
 msgid "hour"
-msgstr "и часом"
+msgstr "час"
 
 #: src/tools.py:56
-#, fuzzy
 msgctxt "search keyword"
 msgid "hours"
-msgstr "Час"
+msgstr "часы"
 
 #: src/tools.py:57
-#, fuzzy
 msgctxt "search keyword"
 msgid "minute"
-msgstr "Минуты"
+msgstr "минута"
 
 #: src/tools.py:58
-#, fuzzy
 msgctxt "search keyword"
 msgid "minutes"
-msgstr "Минуты"
+msgstr "минуты"
 
 #: src/tools.py:59
-#, fuzzy
 msgctxt "search keyword"
 msgid "second"
-msgstr "Секунды"
+msgstr "секунда"
 
 #: src/tools.py:60
-#, fuzzy
 msgctxt "search keyword"
 msgid "seconds"
-msgstr "Секунды"
+msgstr "секунды"
 
 #: src/tools.py:61
 msgctxt "search keyword"
 msgid "timezone"
-msgstr ""
+msgstr "временная зона"
 
 #: src/tools.py:62
-#, fuzzy
 msgctxt "search keyword"
 msgid "now"
-msgstr "Сейчас"
+msgstr "сейчас"
 
 #: src/tools.py:66
 msgid "Number Bases"
@@ -278,50 +267,44 @@ msgid "Convert numbers between bases"
 msgstr "Преобразует числа между системами счисления с разным основанием"
 
 #: src/tools.py:71
-#, fuzzy
 msgctxt "search keyword"
 msgid "representation"
-msgstr "Отступы"
+msgstr "репрезентация"
 
 #: src/tools.py:72
 msgctxt "search keyword"
 msgid "base"
-msgstr ""
+msgstr "система исчисления"
 
 #: src/tools.py:75
-#, fuzzy
 msgctxt "search keyword"
 msgid "number"
-msgstr "Число"
+msgstr "цифра"
 
 #: src/tools.py:76
-#, fuzzy
 msgctxt "search keyword"
 msgid "binary"
-msgstr "Двоичное"
+msgstr "бинарность"
 
 #: src/tools.py:77
-#, fuzzy
 msgctxt "search keyword"
 msgid "octal"
-msgstr "Восьмеричное"
+msgstr "восьмеричное"
 
 #: src/tools.py:78
-#, fuzzy
 msgctxt "search keyword"
 msgid "decimal"
-msgstr "Десятичное"
+msgstr "десятичное"
 
 #: src/tools.py:79
-#, fuzzy
 msgctxt "search keyword"
 msgid "hexadecimal"
-msgstr "Шестнадцатеричное"
+msgstr "шестнадцатеричное"
 
 #: src/tools.py:80
 msgctxt "search keyword"
 msgid "integer"
-msgstr ""
+msgstr "целое число"
 
 #: src/tools.py:87 src/ui/views/cron_converter.blp:20
 msgid "CRON Parser"
@@ -334,23 +317,22 @@ msgstr "Преобразует выражения CRON во время или д
 #: src/tools.py:93 src/tools.py:111
 msgctxt "search keyword"
 msgid "schedule"
-msgstr ""
+msgstr "запланировать"
 
 #: src/tools.py:94 src/tools.py:112
 msgctxt "search keyword"
 msgid "parser"
-msgstr ""
+msgstr "парсер"
 
 #: src/tools.py:95 src/tools.py:113 src/tools.py:410
-#, fuzzy
 msgctxt "search keyword"
 msgid "expression"
-msgstr "CRON-выражение"
+msgstr "выражение"
 
 #: src/tools.py:99 src/tools.py:117
 msgctxt "search keyword"
 msgid "job"
-msgstr ""
+msgstr "работа"
 
 #: src/tools.py:105 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
@@ -372,33 +354,32 @@ msgstr "Кодирует и декодирует специальные симв
 #: src/tools.py:131
 msgctxt "search keyword"
 msgid "escape"
-msgstr ""
+msgstr "escape"
 
 #: src/tools.py:133 src/tools.py:233 src/tools.py:247 src/tools.py:434
 #: src/tools.py:456
 msgctxt "search keyword"
 msgid "markup"
-msgstr ""
+msgstr "markup"
 
 #: src/tools.py:134 src/tools.py:145 src/tools.py:172
 msgctxt "search keyword"
 msgid "text"
-msgstr ""
+msgstr "текст"
 
 #: src/tools.py:141
 msgid "Encode and decode base64 strings"
 msgstr "Кодирует и декодирует base64-строки"
 
 #: src/tools.py:144 src/tools.py:173
-#, fuzzy
 msgctxt "search keyword"
 msgid "string"
-msgstr "Строка"
+msgstr "строка"
 
 #: src/tools.py:146 src/tools.py:207 src/tools.py:235 src/tools.py:445
 msgctxt "search keyword"
 msgid "data"
-msgstr ""
+msgstr "дата"
 
 #: src/tools.py:153 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
@@ -407,38 +388,37 @@ msgstr "Кодирует и декодирует специальные симв
 #: src/tools.py:155
 msgctxt "search keyword"
 msgid "url"
-msgstr ""
+msgstr "ссылка"
 
 #: src/tools.py:156
 msgctxt "search keyword"
 msgid "unescape"
-msgstr ""
+msgstr "unescape"
 
 #: src/tools.py:157 src/tools.py:249
 msgctxt "search keyword"
 msgid "web"
-msgstr ""
+msgstr "веб"
 
 #: src/tools.py:158
 msgctxt "search keyword"
 msgid "link"
-msgstr ""
+msgstr "ссылка"
 
 #: src/tools.py:159
-#, fuzzy
 msgctxt "search keyword"
 msgid "address"
-msgstr "Адрес"
+msgstr "адресс"
 
 #: src/tools.py:160
 msgctxt "search keyword"
 msgid "uri"
-msgstr ""
+msgstr "uri"
 
 #: src/tools.py:161 src/tools.py:219
 msgctxt "search keyword"
 msgid "query"
-msgstr ""
+msgstr "запрос"
 
 #: src/tools.py:168
 msgid "Compress and decompress files and texts using GZip"
@@ -447,79 +427,71 @@ msgstr "Сжимает и распаковывает файлы и тексты 
 #: src/tools.py:170
 msgctxt "search keyword"
 msgid "unarchive"
-msgstr ""
+msgstr "распаковать"
 
 #: src/tools.py:171 src/tools.py:365
-#, fuzzy
 msgctxt "search keyword"
 msgid "file"
-msgstr "Все файлы"
+msgstr "файл"
 
 #: src/tools.py:174
 msgctxt "search keyword"
 msgid "zip"
-msgstr ""
+msgstr "зип"
 
 #: src/tools.py:175
 msgctxt "search keyword"
 msgid "unzip"
-msgstr ""
+msgstr "распаковать"
 
 #: src/tools.py:176
-#, fuzzy
 msgctxt "search keyword"
 msgid "decompression"
-msgstr "Распаковка"
+msgstr "распаковка"
 
 #: src/tools.py:177
-#, fuzzy
 msgctxt "search keyword"
 msgid "decompressor"
-msgstr "Распаковка"
+msgstr "распаковщик"
 
 #: src/tools.py:184 src/ui/views/jwt_decoder.blp:20
-#, fuzzy
 msgid "Decode and encode JWT tokens"
-msgstr "Кодирует и декодирует base64-строки"
+msgstr "Кодирует и декодирует JWT токены"
 
 #: src/tools.py:186
 msgctxt "search keyword"
 msgid "json web token"
-msgstr ""
+msgstr "json web token"
 
 #: src/tools.py:187
-#, fuzzy
 msgctxt "search keyword"
 msgid "header"
-msgstr "Заголовок"
+msgstr "заголовок"
 
 #: src/tools.py:188
-#, fuzzy
 msgctxt "search keyword"
 msgid "payload"
-msgstr "Полезные данные"
+msgstr "payload"
 
 #: src/tools.py:189
 msgctxt "search keyword"
 msgid "signature"
-msgstr ""
+msgstr "сигнатура"
 
 #: src/tools.py:190
-#, fuzzy
 msgctxt "search keyword"
 msgid "authentication"
-msgstr "Отступы"
+msgstr "аутентефикация"
 
 #: src/tools.py:191
 msgctxt "search keyword"
 msgid "authorization"
-msgstr ""
+msgstr "авторизация"
 
 #: src/tools.py:192 src/tools.py:320 src/tools.py:533 src/tools.py:550
-#, fuzzy
 msgctxt "search keyword"
 msgid "security"
-msgstr "Тяжесть"
+msgstr "безопасность"
 
 #: src/tools.py:199 src/tools.py:212 src/tools.py:226 src/tools.py:240
 #: src/tools.py:255 src/tools.py:269 src/tools.py:282 src/tools.py:296
@@ -534,13 +506,13 @@ msgstr "Форматирует JSON-документы"
 #: src/tools.py:260 src/tools.py:273
 msgctxt "search keyword"
 msgid "pretty"
-msgstr ""
+msgstr "красиво"
 
 #: src/tools.py:205 src/tools.py:218 src/tools.py:232 src/tools.py:246
 #: src/tools.py:262 src/tools.py:275
 msgctxt "search keyword"
 msgid "beautify"
-msgstr ""
+msgstr "красивофикация"
 
 #: src/tools.py:214 src/formatters/sql.py:14
 msgid "Format SQL documents"
@@ -549,12 +521,12 @@ msgstr "Форматирует SQL-документы"
 #: src/tools.py:220
 msgctxt "search keyword"
 msgid "database"
-msgstr ""
+msgstr "база данных"
 
 #: src/tools.py:221
 msgctxt "search keyword"
 msgid "statement"
-msgstr ""
+msgstr "выражение"
 
 #: src/tools.py:228 src/formatters/xml.py:16
 msgid "Format XML documents"
@@ -566,20 +538,18 @@ msgstr "Форматирует HTML-документы"
 
 #: src/tools.py:248 src/tools.py:263 src/tools.py:276 src/tools.py:286
 #: src/tools.py:301
-#, fuzzy
 msgctxt "search keyword"
 msgid "minify"
-msgstr "Сжать"
+msgstr "минификация"
 
 #: src/tools.py:257 src/formatters/js.py:15
 msgid "Format JavaScript documents"
-msgstr "Форматирует JavaaScript-документы"
+msgstr "Форматирует JavaScript-документы"
 
 #: src/tools.py:264 src/tools.py:306
-#, fuzzy
 msgctxt "search keyword"
 msgid "code"
-msgstr "Кодировать"
+msgstr "код"
 
 #: src/tools.py:271 src/formatters/css.py:14
 msgid "Format CSS documents"
@@ -588,7 +558,7 @@ msgstr "Форматирует CSS-документы"
 #: src/tools.py:277 src/tools.py:289
 msgctxt "search keyword"
 msgid "stylesheet"
-msgstr ""
+msgstr "таблица стиля"
 
 #: src/tools.py:281 src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
@@ -599,26 +569,24 @@ msgid "Minify CSS documents"
 msgstr "Минимизирует CSS-документы"
 
 #: src/tools.py:287 src/tools.py:302
-#, fuzzy
 msgctxt "search keyword"
 msgid "compress"
-msgstr "Распаковка"
+msgstr "сжатие"
 
 #: src/tools.py:288
-#, fuzzy
 msgctxt "search keyword"
 msgid "style"
-msgstr "Тёмная тема"
+msgstr "стиль"
 
 #: src/tools.py:290 src/tools.py:303
 msgctxt "search keyword"
 msgid "reduce"
-msgstr ""
+msgstr "уменьшить"
 
 #: src/tools.py:291 src/tools.py:304
 msgctxt "search keyword"
 msgid "size"
-msgstr ""
+msgstr "размер"
 
 #: src/tools.py:295 src/formatters/js_minifier.py:14
 msgid "JavaScript Minifier"
@@ -631,7 +599,7 @@ msgstr "Минимизирует JavaaScript-документы"
 #: src/tools.py:305
 msgctxt "search keyword"
 msgid "script"
-msgstr ""
+msgstr "скрипт"
 
 #: src/tools.py:312
 msgid "Hash"
@@ -643,30 +611,28 @@ msgid "Generators"
 msgstr "Генераторы"
 
 #: src/tools.py:315
-#, fuzzy
 msgid "Calculate hashes and check for integrity"
-msgstr "Вычисляет хэши MD5, SHA1, SHA256 и SHA512 и проверяет их целостность"
+msgstr "Расчитывает хеши и проверяет целостность"
 
 #: src/tools.py:317
 msgctxt "search keyword"
 msgid "checksum"
-msgstr ""
+msgstr "контрольная сумма"
 
 #: src/tools.py:318
 msgctxt "search keyword"
 msgid "digest"
-msgstr ""
+msgstr "поглотить"
 
 #: src/tools.py:319
-#, fuzzy
 msgctxt "search keyword"
 msgid "generate"
-msgstr "Сгенерировать"
+msgstr "сгенерировать"
 
 #: src/tools.py:321 src/tools.py:535 src/tools.py:551
 msgctxt "search keyword"
 msgid "cryptography"
-msgstr ""
+msgstr "криптография"
 
 #: src/tools.py:328 src/ui/views/lorem_generator.blp:20
 msgid "Generate lorem ipsum placeholder text"
@@ -675,39 +641,36 @@ msgstr "Генерирует заполняющий текст lorem ipsum"
 #: src/tools.py:330
 msgctxt "search keyword"
 msgid "dummy"
-msgstr ""
+msgstr "пустышка"
 
 #: src/tools.py:331
-#, fuzzy
 msgctxt "search keyword"
 msgid "sample"
-msgstr "Пример"
+msgstr "образец"
 
 #: src/tools.py:332
 msgctxt "search keyword"
 msgid "filler"
-msgstr ""
+msgstr "заполниватель"
 
 #: src/tools.py:333
 msgctxt "search keyword"
 msgid "latin"
-msgstr ""
+msgstr "латиница"
 
 #: src/tools.py:340 src/ui/views/uuid_generator.blp:20
 msgid "Generate Universally Unique IDs (UUID)"
 msgstr "Генерирует Универсальные Уникальные ID (UUID)"
 
 #: src/tools.py:343
-#, fuzzy
 msgctxt "search keyword"
 msgid "identifier"
-msgstr "Идентификатор ключа полномочий"
+msgstr "идентефикатор"
 
 #: src/tools.py:344
-#, fuzzy
 msgctxt "search keyword"
 msgid "random"
-msgstr "Генератор случайных значений"
+msgstr "случайность"
 
 #: src/tools.py:348
 msgid "Random"
@@ -720,23 +683,22 @@ msgstr "Генерирует случайные числа и строки"
 #: src/tools.py:353
 msgctxt "search keyword"
 msgid "password"
-msgstr ""
+msgstr "пароль"
 
 #: src/tools.py:354
-#, fuzzy
 msgctxt "search keyword"
 msgid "token"
-msgstr "Токен"
+msgstr "токен"
 
 #: src/tools.py:355
 msgctxt "search keyword"
 msgid "entropy"
-msgstr ""
+msgstr "энтропия"
 
 #: src/tools.py:356
 msgctxt "search keyword"
 msgid "secure"
-msgstr ""
+msgstr "безопасность"
 
 #: src/tools.py:360 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
@@ -749,28 +711,27 @@ msgstr "Рассчитывает значения для изменения пр
 #: src/tools.py:366
 msgctxt "search keyword"
 msgid "unix"
-msgstr ""
+msgstr "юникс"
 
 #: src/tools.py:367
 msgctxt "search keyword"
 msgid "linux"
-msgstr ""
+msgstr "линукс"
 
 #: src/tools.py:368
-#, fuzzy
 msgctxt "search keyword"
 msgid "calculate"
-msgstr "Хэш для вычисления"
+msgstr "расчет"
 
 #: src/tools.py:369
 msgctxt "search keyword"
 msgid "mode"
-msgstr ""
+msgstr "режим"
 
 #: src/tools.py:370
 msgctxt "search keyword"
 msgid "access"
-msgstr ""
+msgstr "доступ"
 
 #: src/tools.py:374
 msgid "QR Code"
@@ -781,27 +742,24 @@ msgid "Create custom QR Codes"
 msgstr "Создание собственных QR-кодов"
 
 #: src/tools.py:379
-#, fuzzy
 msgctxt "search keyword"
 msgid "qrcode"
-msgstr "qr-code.png"
+msgstr "qr код"
 
 #: src/tools.py:380
-#, fuzzy
 msgctxt "search keyword"
 msgid "barcode"
-msgstr "Кодировать"
+msgstr "штрих-код"
 
 #: src/tools.py:381
-#, fuzzy
 msgctxt "search keyword"
 msgid "image"
-msgstr "Изображение"
+msgstr "изображение"
 
 #: src/tools.py:382
 msgctxt "search keyword"
 msgid "matrix"
-msgstr ""
+msgstr "матрица"
 
 #: src/tools.py:388 src/ui/views/text_inspector.blp:19
 msgid "Text Inspector & Case Converter"
@@ -820,16 +778,14 @@ msgstr "Просмотр статистики текста и изменение
 #: src/tools.py:393
 msgctxt "search keyword"
 msgid "analyze"
-msgstr ""
+msgstr "анализировать"
 
 #: src/tools.py:395
-#, fuzzy
 msgctxt "search keyword"
 msgid "uppercase"
-msgstr "строчные буквы"
+msgstr "заглавные буквы"
 
 #: src/tools.py:396
-#, fuzzy
 msgctxt "search keyword"
 msgid "lowercase"
 msgstr "строчные буквы"
@@ -837,31 +793,27 @@ msgstr "строчные буквы"
 #: src/tools.py:397
 msgctxt "search keyword"
 msgid "capitalize"
-msgstr ""
+msgstr "главная буква"
 
 #: src/tools.py:398
-#, fuzzy
 msgctxt "search keyword"
 msgid "count"
-msgstr "Количество"
+msgstr "расчет"
 
 #: src/tools.py:399
-#, fuzzy
 msgctxt "search keyword"
 msgid "words"
-msgstr "Слова"
+msgstr "слова"
 
 #: src/tools.py:400
-#, fuzzy
 msgctxt "search keyword"
 msgid "characters"
-msgstr "Символов:"
+msgstr "символы"
 
 #: src/tools.py:401
-#, fuzzy
 msgctxt "search keyword"
 msgid "lines"
-msgstr "Строк:"
+msgstr "линии"
 
 #: src/tools.py:405
 msgid "Regex Tester"
@@ -874,13 +826,12 @@ msgstr "Находит совпадающие строки внутри текс
 #: src/tools.py:411
 msgctxt "search keyword"
 msgid "pattern"
-msgstr ""
+msgstr "паттерн"
 
 #: src/tools.py:412
-#, fuzzy
 msgctxt "search keyword"
 msgid "search"
-msgstr "Март"
+msgstr "поиск"
 
 #: src/tools.py:416 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
@@ -891,27 +842,24 @@ msgid "Analyze two texts and find differences"
 msgstr "Анализирует два текста и находит отличия"
 
 #: src/tools.py:421
-#, fuzzy
 msgctxt "search keyword"
 msgid "difference"
-msgstr "Отличия"
+msgstr "отличия"
 
 #: src/tools.py:422
-#, fuzzy
 msgctxt "search keyword"
 msgid "compare"
-msgstr "Распаковка"
+msgstr "сравнение"
 
 #: src/tools.py:423
-#, fuzzy
 msgctxt "search keyword"
 msgid "changes"
-msgstr "Изменить регистр текста"
+msgstr "разницы"
 
 #: src/tools.py:424
 msgctxt "search keyword"
 msgid "modification"
-msgstr ""
+msgstr "модификация"
 
 #: src/tools.py:428 src/ui/views/xml_validator.blp:19
 msgid "XML Scheme Validator"
@@ -922,10 +870,9 @@ msgid "Check an XML file against an XSD schema"
 msgstr "Проверка XML-файла на соответствие XSD-схеме"
 
 #: src/tools.py:433 src/tools.py:444
-#, fuzzy
 msgctxt "search keyword"
 msgid "validate"
-msgstr "Недействительный!"
+msgstr "валидация"
 
 #: src/tools.py:439 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
@@ -942,67 +889,64 @@ msgstr "Предварительный просмотр Markdown-кода во �
 #: src/tools.py:455
 msgctxt "search keyword"
 msgid "render"
-msgstr ""
+msgstr "отображение"
 
 #: src/tools.py:457
 msgctxt "search keyword"
 msgid "md"
-msgstr ""
+msgstr "md"
 
 #: src/tools.py:463 src/ui/views/color_converter.blp:16
-#, fuzzy
 msgid "Color Converter"
-msgstr "Конвертеры"
+msgstr "Конвертатор цвета"
 
 #: src/tools.py:464 src/tools.py:481 src/tools.py:491 src/tools.py:505
 msgid "Graphics"
 msgstr "Графика"
 
 #: src/tools.py:466 src/ui/views/color_converter.blp:17
-#, fuzzy
 msgid "Convert colors between formats"
-msgstr "Преобразует числа между системами счисления с разным основанием"
+msgstr "Конвертирует цвета между форматами"
 
 #: src/tools.py:468
 msgctxt "search keyword"
 msgid "rgb"
-msgstr ""
+msgstr "rgb"
 
 #: src/tools.py:469
 msgctxt "search keyword"
 msgid "rgba"
-msgstr ""
+msgstr "rgba"
 
 #: src/tools.py:470
 msgctxt "search keyword"
 msgid "hex"
-msgstr ""
+msgstr "hex"
 
 #: src/tools.py:471
 msgctxt "search keyword"
 msgid "hsl"
-msgstr ""
+msgstr "hsl"
 
 #: src/tools.py:472
 msgctxt "search keyword"
 msgid "hsv"
-msgstr ""
+msgstr "hsv"
 
 #: src/tools.py:473
 msgctxt "search keyword"
 msgid "cmyk"
-msgstr ""
+msgstr "cmyk"
 
 #: src/tools.py:475
-#, fuzzy
 msgctxt "search keyword"
 msgid "conversion"
-msgstr "Версия"
+msgstr "конвертация"
 
 #: src/tools.py:476
 msgctxt "search keyword"
 msgid "palette"
-msgstr ""
+msgstr "палитра"
 
 #: src/tools.py:480 src/ui/views/contrast_checker.blp:19
 msgid "Contrast Checker"
@@ -1015,13 +959,12 @@ msgstr "Проверка сочетания цветов на соответст
 #: src/tools.py:485
 msgctxt "search keyword"
 msgid "accessibility"
-msgstr ""
+msgstr "доступность"
 
 #: src/tools.py:486
-#, fuzzy
 msgctxt "search keyword"
 msgid "ratio"
-msgstr "Информация"
+msgstr "соотношение"
 
 #: src/tools.py:490
 msgid "Color Blindness"
@@ -1032,39 +975,34 @@ msgid "Simulate color blindness in images"
 msgstr "Имитация дальтонизма на изображений"
 
 #: src/tools.py:495
-#, fuzzy
 msgctxt "search keyword"
 msgid "simulation"
-msgstr "Загрузка симуляции..."
+msgstr "симуляция"
 
 #: src/tools.py:496
 msgctxt "search keyword"
 msgid "daltonism"
-msgstr ""
+msgstr "дальтонизм"
 
 #: src/tools.py:497
-#, fuzzy
 msgctxt "search keyword"
 msgid "protanopia"
-msgstr "Протанопия"
+msgstr "протанопия"
 
 #: src/tools.py:498
-#, fuzzy
 msgctxt "search keyword"
 msgid "deuteranopia"
-msgstr "Дойтеранопия"
+msgstr "дойтеранопия"
 
 #: src/tools.py:499
-#, fuzzy
 msgctxt "search keyword"
 msgid "tritanopia"
-msgstr "Тританопия"
+msgstr "тританопия"
 
 #: src/tools.py:500
-#, fuzzy
 msgctxt "search keyword"
 msgid "vision"
-msgstr "Версия"
+msgstr "зрение"
 
 #: src/tools.py:504 src/ui/views/image_converter.blp:19
 msgid "Image Format Converter"
@@ -1077,37 +1015,37 @@ msgstr "Преобразует изображения в разные форма
 #: src/tools.py:510
 msgctxt "search keyword"
 msgid "jpg"
-msgstr ""
+msgstr "jpg"
 
 #: src/tools.py:511
 msgctxt "search keyword"
 msgid "jpeg"
-msgstr ""
+msgstr "jpeg"
 
 #: src/tools.py:512
 msgctxt "search keyword"
 msgid "png"
-msgstr ""
+msgstr "png"
 
 #: src/tools.py:513
 msgctxt "search keyword"
 msgid "bmp"
-msgstr ""
+msgstr "bmp"
 
 #: src/tools.py:514
 msgctxt "search keyword"
 msgid "gif"
-msgstr ""
+msgstr "gif"
 
 #: src/tools.py:515
 msgctxt "search keyword"
 msgid "webp"
-msgstr ""
+msgstr "webp"
 
 #: src/tools.py:516
 msgctxt "search keyword"
 msgid "picture"
-msgstr ""
+msgstr "картинка"
 
 #: src/tools.py:522 src/ui/views/certificate_parser.blp:19
 msgid "Certificate Parser"
@@ -1122,15 +1060,14 @@ msgid "View certificates contents"
 msgstr "Просмотр содержимого сертификатов"
 
 #: src/tools.py:532 src/tools.py:549
-#, fuzzy
 msgctxt "search keyword"
 msgid "key"
-msgstr "Ключ"
+msgstr "ключ"
 
 #: src/tools.py:534
 msgctxt "search keyword"
 msgid "public key"
-msgstr ""
+msgstr "публичный ключ"
 
 #: src/tools.py:539
 msgid "Certificate Signing Request"
@@ -1443,21 +1380,23 @@ msgstr ""
 
 #: src/views/jwt_decoder.py:173
 msgid "Signature is Valid!"
-msgstr ""
+msgstr "Подпись действительная!"
 
 #: src/views/jwt_decoder.py:175
 msgid "The JWT signature was verified successfully."
-msgstr ""
+msgstr "Подпись JWT была успешно проверенная."
 
 #: src/views/jwt_decoder.py:183
 msgid "Warning, Signature is Invalid!"
-msgstr ""
+msgstr "Внимание - подпись не действительная!"
 
 #: src/views/jwt_decoder.py:186
 msgid ""
 "The JWT signature doesn't match the provided key. Please verify the key "
 "encoding or ensure the token was signed correctly."
 msgstr ""
+"JWT подпись не совпадает с данным ключем. Пожалуйста, проверьте кодирование "
+"ключа или убедиться, что токен был подписан корректно."
 
 #: src/views/qrcode_generator.py:71 src/ui/views/qrcode_generator.blp:113
 #: src/ui/views/qrcode_generator.blp:122
@@ -1600,12 +1539,11 @@ msgstr "Суббота"
 
 #: src/views/timestamp.py:76
 msgid "Timezone"
-msgstr ""
+msgstr "Часовой пояс"
 
 #: src/views/timestamp.py:77
-#, fuzzy
 msgid "Select the desired timezone"
-msgstr "Выберите нужную операцию"
+msgstr "Выберите желательный чаосовой поясн"
 
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
@@ -1659,12 +1597,11 @@ msgid "_About Dev Toolbox"
 msgstr "_О Dev Toolbox"
 
 #: src/ui/about_dialog.blp:10
-#, fuzzy
 msgid ""
 "Copyright © 2022 - 2025 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
-"Copyright © 2022 - 2024 Alessandro Iepure\n"
+"Авторское право © 2022 - 2025 Alessandro Iepure\n"
 "Некоторые значки являются собственностью проекта GNOME"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
@@ -1963,7 +1900,7 @@ msgstr "Права доступа"
 
 #: src/ui/views/chmod_calculator.blp:45
 msgid "Special"
-msgstr ""
+msgstr "Особенное"
 
 #: src/ui/views/chmod_calculator.blp:145
 msgid "Owner"
@@ -2027,118 +1964,112 @@ msgid "Tritanopia"
 msgstr "Тританопия"
 
 #: src/ui/views/color_converter.blp:30
-#, fuzzy
 msgid "Format"
 msgstr "Формат"
 
 #: src/ui/views/color_converter.blp:31
-#, fuzzy
 msgid "Output format for color values"
-msgstr "Выходной формат"
+msgstr "Выходной формат для значения цветов"
 
 #: src/ui/views/color_converter.blp:36
 msgid "Web"
-msgstr ""
+msgstr "Веб"
 
 #: src/ui/views/color_converter.blp:37
 msgid "Web (Legacy)"
-msgstr ""
+msgstr "Веб (Legacy)"
 
 #: src/ui/views/color_converter.blp:38
 msgid "Percent"
-msgstr ""
+msgstr "Процент"
 
 #: src/ui/views/color_converter.blp:39
 msgid "Normalized"
-msgstr ""
+msgstr "Нормализированное"
 
 #: src/ui/views/color_converter.blp:46
 msgid "Angle Unit"
-msgstr ""
+msgstr "Единица измерения угла"
 
 #: src/ui/views/color_converter.blp:47
 msgid "Unit used for angle component"
-msgstr ""
+msgstr "Единица измерения компонента угла"
 
 #: src/ui/views/color_converter.blp:52
 msgid "Degrees"
-msgstr ""
+msgstr "Градусы"
 
 #: src/ui/views/color_converter.blp:53
 msgid "Radians"
-msgstr ""
+msgstr "Радианы"
 
 #: src/ui/views/color_converter.blp:54
 msgid "Gradians"
-msgstr ""
+msgstr "Грады"
 
 #: src/ui/views/color_converter.blp:55
 msgid "Turns"
-msgstr ""
+msgstr "Повороты"
 
 #: src/ui/views/color_converter.blp:56
-#, fuzzy
 msgid "Follow Format"
-msgstr "Формат"
+msgstr "Наследование формата"
 
 #: src/ui/views/color_converter.blp:62
 msgid "Bits"
-msgstr ""
+msgstr "Биты"
 
 #: src/ui/views/color_converter.blp:63
 msgid "Bits precision for color values"
-msgstr ""
+msgstr "Битовая точность значений цвета"
 
 #: src/ui/views/color_converter.blp:82
 msgid "Values"
-msgstr ""
+msgstr "Значения"
 
 #: src/ui/views/color_converter.blp:85 src/ui/views/color_converter.blp:97
 msgid "Color"
-msgstr ""
+msgstr "Цвет"
 
 #: src/ui/views/color_converter.blp:103
 msgid "Hex"
-msgstr ""
+msgstr "Hex"
 
 #: src/ui/views/color_converter.blp:128
-#, fuzzy
 msgid "Red"
-msgstr "Чтение"
+msgstr "Красный"
 
 #: src/ui/views/color_converter.blp:136
 msgid "Green"
-msgstr ""
+msgstr "Зеленый"
 
 #: src/ui/views/color_converter.blp:144
 msgid "Blue"
-msgstr ""
+msgstr "Синий"
 
 #: src/ui/views/color_converter.blp:168 src/ui/views/color_converter.blp:208
 msgid "Hue"
-msgstr ""
+msgstr "Hue"
 
 #: src/ui/views/color_converter.blp:176 src/ui/views/color_converter.blp:216
-#, fuzzy
 msgid "Saturation"
-msgstr "Суббота"
+msgstr "Насыченность"
 
 #: src/ui/views/color_converter.blp:184
 msgid "Value"
-msgstr ""
+msgstr "Значение"
 
 #: src/ui/views/color_converter.blp:224
-#, fuzzy
 msgid "Lightness"
-msgstr "Светлая тема"
+msgstr "Яркость"
 
 #: src/ui/views/color_converter.blp:234
 msgid "Alpha"
-msgstr ""
+msgstr "Альфа"
 
 #: src/ui/views/color_converter.blp:265
 msgid "HWB"
-msgstr ""
+msgstr "HWB"
 
 #: src/ui/views/contrast_checker.blp:33 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
@@ -2331,47 +2262,44 @@ msgid "YAML → JSON"
 msgstr "YAML → JSON"
 
 #: src/ui/views/jwt_decoder.blp:19
-#, fuzzy
 msgid "JWT Decode & Encode"
-msgstr "Кодировщик и декодировщик HTML"
+msgstr "Кодировщик и декодировщик JWT"
 
 #: src/ui/views/jwt_decoder.blp:32
 msgid "Verify Signature"
-msgstr ""
+msgstr "Проверка подписи"
 
 #: src/ui/views/jwt_decoder.blp:33
 msgid "Verify signature or sign JWT"
-msgstr ""
+msgstr "Проверить или подписать JWT"
 
 #: src/ui/views/jwt_decoder.blp:41
 msgid "Off"
-msgstr ""
+msgstr "Выключено"
 
 #: src/ui/views/jwt_decoder.blp:46
 msgid "Symmetric"
-msgstr ""
+msgstr "Симметрично"
 
 #: src/ui/views/jwt_decoder.blp:51
 msgid "Asymmetric"
-msgstr ""
+msgstr "Асимметрично"
 
 #: src/ui/views/jwt_decoder.blp:57
-#, fuzzy
 msgid "Key Encoding"
-msgstr "Кодирование пробела"
+msgstr "Ключ кодирования"
 
 #: src/ui/views/jwt_decoder.blp:58
-#, fuzzy
 msgid "Select the encoding of the key"
-msgstr "Выберите нужную кодировку для символа пробела"
+msgstr "Выберите кодировку для ключа"
 
 #: src/ui/views/jwt_decoder.blp:99
 msgid "Public Key (PEM)"
-msgstr ""
+msgstr "Публичный ключ (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:107
 msgid "Private Key (PEM)"
-msgstr ""
+msgstr "Приватный ключ (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:120
 msgid "Token"
@@ -2964,7 +2892,7 @@ msgstr "Общее"
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Search Tools"
-msgstr "Поиск иснтрументов"
+msgstr "Поиск инструментов"
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"

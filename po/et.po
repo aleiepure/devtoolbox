@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-04-01 22:01+0000\n"
-"Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
+"PO-Revision-Date: 2025-07-07 05:18+0000\n"
+"Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
 "Language: et\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -69,7 +69,7 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Formatters for common programming languages"
-msgstr ""
+msgstr "Vormindajad levinumate programmeerimiskeelte jaoks"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Hash generators"
@@ -77,16 +77,16 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
-msgstr ""
+msgstr "Regulaaravaldise testija"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/tools.py:450
 #: src/ui/views/markdown_preview.blp:19
 msgid "Markdown Previewer"
-msgstr ""
+msgstr "Markdowni eelvaade"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
-msgstr ""
+msgstr "Piltide teisendajad"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
@@ -95,11 +95,11 @@ msgstr ""
 #: src/tools.py:13 src/tools.py:32 src/tools.py:67 src/tools.py:88
 #: src/tools.py:106
 msgid "Converters"
-msgstr ""
+msgstr "Teisendajad"
 
 #: src/tools.py:15 src/ui/views/json_yaml.blp:20
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr ""
+msgstr "Teisenda JSON-dokmente YAML-vormingusse ja vastupidi"
 
 #: src/tools.py:20 src/tools.py:39 src/tools.py:206
 msgctxt "search keyword"
@@ -109,151 +109,151 @@ msgstr ""
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
 msgctxt "search keyword"
 msgid "converter"
-msgstr ""
+msgstr "teisendaja"
 
 #: src/tools.py:22 src/tools.py:46 src/tools.py:74 src/tools.py:96
 #: src/tools.py:114 src/tools.py:394
 msgctxt "search keyword"
 msgid "convert"
-msgstr ""
+msgstr "teisenda"
 
 #: src/tools.py:23 src/tools.py:38 src/tools.py:47 src/tools.py:474
 msgctxt "search keyword"
 msgid "format"
-msgstr ""
+msgstr "vorming"
 
 #: src/tools.py:24 src/tools.py:234 src/tools.py:250 src/tools.py:435
 #: src/tools.py:446
 msgctxt "search keyword"
 msgid "document"
-msgstr ""
+msgstr "dokument"
 
 #: src/tools.py:25
 msgctxt "search keyword"
 msgid "spaces"
-msgstr ""
+msgstr "tühikud"
 
 #: src/tools.py:26
 msgctxt "search keyword"
 msgid "indentation"
-msgstr ""
+msgstr "taandread"
 
 #: src/tools.py:27 src/tools.py:204 src/tools.py:217 src/tools.py:231
 #: src/tools.py:245 src/tools.py:261 src/tools.py:274
 msgctxt "search keyword"
 msgid "indent"
-msgstr ""
+msgstr "Taandrida"
 
 #: src/tools.py:31 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
-msgstr ""
+msgstr "Ajatempel"
 
 #: src/tools.py:34 src/ui/views/timestamp.blp:20
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr ""
+msgstr "Teisenda omavahel UNIXi ajatempleid ja tavalisi kuupäevi"
 
 #: src/tools.py:36
 msgctxt "search keyword"
 msgid "epoch"
-msgstr ""
+msgstr "epohh"
 
 #: src/tools.py:37 src/tools.py:97 src/tools.py:115
 msgctxt "search keyword"
 msgid "time"
-msgstr ""
+msgstr "aeg"
 
 #: src/tools.py:40
 msgctxt "search keyword"
 msgid "datetime"
-msgstr ""
+msgstr "kellaajaga kuupäev"
 
 #: src/tools.py:41
 msgctxt "search keyword"
 msgid "calendar"
-msgstr ""
+msgstr "kalender"
 
 #: src/tools.py:42
 msgctxt "search keyword"
 msgid "timestamp"
-msgstr ""
+msgstr "ajatempel"
 
 #: src/tools.py:44 src/tools.py:98 src/tools.py:116
 msgctxt "search keyword"
 msgid "date"
-msgstr ""
+msgstr "kuupäev"
 
 #: src/tools.py:48
 msgctxt "search keyword"
 msgid "short"
-msgstr ""
+msgstr "lühike"
 
 #: src/tools.py:49
 msgctxt "search keyword"
 msgid "long"
-msgstr ""
+msgstr "pikk"
 
 #: src/tools.py:52
 msgctxt "search keyword"
 msgid "year"
-msgstr ""
+msgstr "aasta"
 
 #: src/tools.py:53
 msgctxt "search keyword"
 msgid "month"
-msgstr ""
+msgstr "kuu"
 
 #: src/tools.py:54
 msgctxt "search keyword"
 msgid "day"
-msgstr ""
+msgstr "päev"
 
 #: src/tools.py:55
 msgctxt "search keyword"
 msgid "hour"
-msgstr ""
+msgstr "tund"
 
 #: src/tools.py:56
 msgctxt "search keyword"
 msgid "hours"
-msgstr ""
+msgstr "tunnid"
 
 #: src/tools.py:57
 msgctxt "search keyword"
 msgid "minute"
-msgstr ""
+msgstr "minut"
 
 #: src/tools.py:58
 msgctxt "search keyword"
 msgid "minutes"
-msgstr ""
+msgstr "minutid"
 
 #: src/tools.py:59
 msgctxt "search keyword"
 msgid "second"
-msgstr ""
+msgstr "sekund"
 
 #: src/tools.py:60
 msgctxt "search keyword"
 msgid "seconds"
-msgstr ""
+msgstr "sekundid"
 
 #: src/tools.py:61
 msgctxt "search keyword"
 msgid "timezone"
-msgstr ""
+msgstr "ajavöönd"
 
 #: src/tools.py:62
 msgctxt "search keyword"
 msgid "now"
-msgstr ""
+msgstr "praegu"
 
 #: src/tools.py:66
 msgid "Number Bases"
-msgstr ""
+msgstr "Numbrite alused"
 
 #: src/tools.py:69 src/ui/views/base_converter.blp:20
 msgid "Convert numbers between bases"
-msgstr ""
+msgstr "Teisenda erinevate numbrite aluste vahel"
 
 #: src/tools.py:71
 msgctxt "search keyword"
@@ -263,12 +263,12 @@ msgstr ""
 #: src/tools.py:72
 msgctxt "search keyword"
 msgid "base"
-msgstr ""
+msgstr "alus"
 
 #: src/tools.py:75
 msgctxt "search keyword"
 msgid "number"
-msgstr ""
+msgstr "number"
 
 #: src/tools.py:76
 msgctxt "search keyword"
@@ -334,11 +334,11 @@ msgstr ""
 #: src/tools.py:126 src/tools.py:139 src/tools.py:151 src/tools.py:166
 #: src/tools.py:182
 msgid "Encoders & Decoders"
-msgstr ""
+msgstr "Kodeerijad ja dekodeerijad"
 
 #: src/tools.py:128 src/ui/views/html_encoder.blp:20
 msgid "Encode and decode special characters using the HTML format"
-msgstr ""
+msgstr "Kodeeri ja dekodeeri erimärke HTML-vormingu jaoks"
 
 #: src/tools.py:131
 msgctxt "search keyword"
@@ -354,11 +354,11 @@ msgstr ""
 #: src/tools.py:134 src/tools.py:145 src/tools.py:172
 msgctxt "search keyword"
 msgid "text"
-msgstr ""
+msgstr "tekst"
 
 #: src/tools.py:141
 msgid "Encode and decode base64 strings"
-msgstr ""
+msgstr "Kodeeri ja dekodeeri base64-vormingus sõnesid"
 
 #: src/tools.py:144 src/tools.py:173
 msgctxt "search keyword"
@@ -372,7 +372,7 @@ msgstr ""
 
 #: src/tools.py:153 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
-msgstr ""
+msgstr "Kodeeri ja dekodeeri erimärke kasutamiseks võrguaadressides"
 
 #: src/tools.py:155
 msgctxt "search keyword"
@@ -419,10 +419,9 @@ msgid "unarchive"
 msgstr ""
 
 #: src/tools.py:171 src/tools.py:365
-#, fuzzy
 msgctxt "search keyword"
 msgid "file"
-msgstr "Kõik failid"
+msgstr "fail"
 
 #: src/tools.py:174
 msgctxt "search keyword"
@@ -437,16 +436,16 @@ msgstr ""
 #: src/tools.py:176
 msgctxt "search keyword"
 msgid "decompression"
-msgstr ""
+msgstr "lahti pakkimine"
 
 #: src/tools.py:177
 msgctxt "search keyword"
 msgid "decompressor"
-msgstr ""
+msgstr "lahtipakkija"
 
 #: src/tools.py:184 src/ui/views/jwt_decoder.blp:20
 msgid "Decode and encode JWT tokens"
-msgstr ""
+msgstr "Kodeeri ja dekodeeri JWT tunnuslube"
 
 #: src/tools.py:186
 msgctxt "search keyword"
@@ -486,11 +485,11 @@ msgstr ""
 #: src/tools.py:199 src/tools.py:212 src/tools.py:226 src/tools.py:240
 #: src/tools.py:255 src/tools.py:269 src/tools.py:282 src/tools.py:296
 msgid "Formatters & Minifiers"
-msgstr ""
+msgstr "Vormindajad ja vähendajad"
 
 #: src/tools.py:201 src/formatters/json.py:14
 msgid "Format JSON documents"
-msgstr ""
+msgstr "Vorminda JSON-faile"
 
 #: src/tools.py:203 src/tools.py:216 src/tools.py:230 src/tools.py:244
 #: src/tools.py:260 src/tools.py:273
@@ -506,7 +505,7 @@ msgstr ""
 
 #: src/tools.py:214 src/formatters/sql.py:14
 msgid "Format SQL documents"
-msgstr ""
+msgstr "Vorminda SQL-faile"
 
 #: src/tools.py:220
 msgctxt "search keyword"
@@ -520,11 +519,11 @@ msgstr ""
 
 #: src/tools.py:228 src/formatters/xml.py:16
 msgid "Format XML documents"
-msgstr ""
+msgstr "Vorminda XML-faile"
 
 #: src/tools.py:242 src/formatters/html.py:15
 msgid "Format HTML documents"
-msgstr ""
+msgstr "Vorminda HTML-faile"
 
 #: src/tools.py:248 src/tools.py:263 src/tools.py:276 src/tools.py:286
 #: src/tools.py:301
@@ -534,7 +533,7 @@ msgstr ""
 
 #: src/tools.py:257 src/formatters/js.py:15
 msgid "Format JavaScript documents"
-msgstr ""
+msgstr "Vorminda JavaScripti faile"
 
 #: src/tools.py:264 src/tools.py:306
 msgctxt "search keyword"
@@ -543,7 +542,7 @@ msgstr ""
 
 #: src/tools.py:271 src/formatters/css.py:14
 msgid "Format CSS documents"
-msgstr ""
+msgstr "Vorminda CSS-faile"
 
 #: src/tools.py:277 src/tools.py:289
 msgctxt "search keyword"
@@ -561,7 +560,7 @@ msgstr ""
 #: src/tools.py:287 src/tools.py:302
 msgctxt "search keyword"
 msgid "compress"
-msgstr ""
+msgstr "paki kokku"
 
 #: src/tools.py:288
 msgctxt "search keyword"
@@ -615,10 +614,9 @@ msgid "digest"
 msgstr ""
 
 #: src/tools.py:319
-#, fuzzy
 msgctxt "search keyword"
 msgid "generate"
-msgstr "Üldised"
+msgstr "loo"
 
 #: src/tools.py:321 src/tools.py:535 src/tools.py:551
 msgctxt "search keyword"
@@ -661,20 +659,20 @@ msgstr ""
 #: src/tools.py:344
 msgctxt "search keyword"
 msgid "random"
-msgstr ""
+msgstr "juhuslik"
 
 #: src/tools.py:348
 msgid "Random"
-msgstr ""
+msgstr "Juhuslik sisu"
 
 #: src/tools.py:351 src/ui/views/random_generator.blp:20
 msgid "Generate random numbers and strings"
-msgstr ""
+msgstr "Loo juhuslikke numbreid ja sõnesid"
 
 #: src/tools.py:353
 msgctxt "search keyword"
 msgid "password"
-msgstr ""
+msgstr "salasõna"
 
 #: src/tools.py:354
 msgctxt "search keyword"
@@ -726,11 +724,11 @@ msgstr ""
 
 #: src/tools.py:374
 msgid "QR Code"
-msgstr ""
+msgstr "QR-kood"
 
 #: src/tools.py:377 src/ui/views/qrcode_generator.blp:20
 msgid "Create custom QR Codes"
-msgstr ""
+msgstr "Loo erinevaid QR-koode"
 
 #: src/tools.py:379
 msgctxt "search keyword"
@@ -743,10 +741,9 @@ msgid "barcode"
 msgstr ""
 
 #: src/tools.py:381
-#, fuzzy
 msgctxt "search keyword"
 msgid "image"
-msgstr "Pildid"
+msgstr "pilt"
 
 #: src/tools.py:382
 msgctxt "search keyword"
@@ -761,7 +758,7 @@ msgstr ""
 #: src/tools.py:440 src/tools.py:451 src/ui/views/regex_tester.blp:49
 #: src/ui/views/text_inspector.blp:107 src/ui/views/text_inspector.blp:164
 msgid "Text"
-msgstr ""
+msgstr "Tekst"
 
 #: src/tools.py:391 src/ui/views/text_inspector.blp:20
 msgid "View statistics about text and change sentence cases"
@@ -809,7 +806,7 @@ msgstr ""
 
 #: src/tools.py:405
 msgid "Regex Tester"
-msgstr ""
+msgstr "Regulaaravaldise test"
 
 #: src/tools.py:408 src/ui/views/regex_tester.blp:20
 msgid "Find matching strings inside a text"
@@ -827,7 +824,7 @@ msgstr ""
 
 #: src/tools.py:416 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
-msgstr ""
+msgstr "Teksti erinevused"
 
 #: src/tools.py:419 src/ui/views/text_diff.blp:20
 msgid "Analyze two texts and find differences"
@@ -876,7 +873,7 @@ msgstr ""
 
 #: src/tools.py:453 src/ui/views/markdown_preview.blp:20
 msgid "Preview markdown code as you type"
-msgstr ""
+msgstr "Vaata Markdowni koodi visualiseerimist oma kirjutamise ajal"
 
 #: src/tools.py:455
 msgctxt "search keyword"
@@ -890,15 +887,15 @@ msgstr ""
 
 #: src/tools.py:463 src/ui/views/color_converter.blp:16
 msgid "Color Converter"
-msgstr ""
+msgstr "Värvide teisendaja"
 
 #: src/tools.py:464 src/tools.py:481 src/tools.py:491 src/tools.py:505
 msgid "Graphics"
-msgstr ""
+msgstr "Graafika"
 
 #: src/tools.py:466 src/ui/views/color_converter.blp:17
 msgid "Convert colors between formats"
-msgstr ""
+msgstr "Teisenda värve eri vormingute vahel"
 
 #: src/tools.py:468
 msgctxt "search keyword"
@@ -960,11 +957,11 @@ msgstr ""
 
 #: src/tools.py:490
 msgid "Color Blindness"
-msgstr ""
+msgstr "Värvipimedus"
 
 #: src/tools.py:493 src/ui/views/colorblindness_simulator.blp:20
 msgid "Simulate color blindness in images"
-msgstr ""
+msgstr "Simuleeri pildisel värvipimedust"
 
 #: src/tools.py:495
 msgctxt "search keyword"
@@ -998,11 +995,11 @@ msgstr ""
 
 #: src/tools.py:504 src/ui/views/image_converter.blp:19
 msgid "Image Format Converter"
-msgstr ""
+msgstr "Pildivormingute teisendaja"
 
 #: src/tools.py:507 src/ui/views/image_converter.blp:20
 msgid "Convert images to different formats"
-msgstr ""
+msgstr "Teisenda pilte eri vormingutesse"
 
 #: src/tools.py:510
 msgctxt "search keyword"
@@ -1041,21 +1038,20 @@ msgstr ""
 
 #: src/tools.py:522 src/ui/views/certificate_parser.blp:19
 msgid "Certificate Parser"
-msgstr ""
+msgstr "Sertifikaartide sisukuvaja"
 
 #: src/tools.py:523 src/tools.py:540 src/views/certificate_parser.py:90
 msgid "Certificates"
-msgstr ""
+msgstr "Sertifikaadid"
 
 #: src/tools.py:525 src/ui/views/certificate_parser.blp:20
 msgid "View certificates contents"
-msgstr ""
+msgstr "Vaata sertifikaatide sisu"
 
 #: src/tools.py:532 src/tools.py:549
-#, fuzzy
 msgctxt "search keyword"
 msgid "key"
-msgstr "Võti"
+msgstr "võti"
 
 #: src/tools.py:534
 msgctxt "search keyword"
@@ -1074,21 +1070,21 @@ msgstr ""
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:54
 #: src/widgets/text_file_area.py:62 src/widgets/text_file_area.py:200
 msgid "Opening file..."
-msgstr ""
+msgstr "Avan faili..."
 
 #: src/widgets/image_area.py:96 src/widgets/text_area.py:147
 #: src/widgets/text_file_area.py:162 src/views/certificate_parser.py:60
 msgid "Cannot open more than one file"
-msgstr ""
+msgstr "Ei saa avada üle ühe faili"
 
 #: src/widgets/image_area.py:123
 msgid "Opening image..."
-msgstr ""
+msgstr "Avan pilti..."
 
 #: src/widgets/image_area.py:130 src/widgets/text_area.py:184
 #: src/widgets/text_file_area.py:207 src/views/certificate_parser.py:81
 msgid "Open File"
-msgstr ""
+msgstr "Ava fail"
 
 #: src/widgets/image_area.py:131 src/widgets/text_area.py:185
 #: src/widgets/text_file_area.py:208 src/views/certificate_parser.py:82
@@ -1097,31 +1093,31 @@ msgstr ""
 #: src/ui/widgets/text_file_area.blp:70 src/ui/views/certificate_parser.blp:51
 #: src/ui/views/certificate_request_generator.blp:117
 msgid "Open"
-msgstr ""
+msgstr "Ava"
 
 #: src/widgets/image_area.py:140
 msgid "Supported Image Formats"
-msgstr ""
+msgstr "Toetatud pildivormingud"
 
 #: src/widgets/image_area.py:173
 msgid "Saving image..."
-msgstr ""
+msgstr "Salvestan pilti..."
 
 #: src/widgets/image_area.py:180 src/widgets/text_file_area.py:328
 #: src/views/image_converter.py:51 src/views/qrcode_generator.py:183
 msgid "Save file as"
-msgstr ""
+msgstr "Salvesta fail kui"
 
 #: src/widgets/image_area.py:181 src/widgets/text_file_area.py:329
 #: src/views/certificate_request_generator.py:215
 #: src/views/image_converter.py:52 src/views/qrcode_generator.py:184
 #: src/ui/widgets/image_area.blp:72 src/ui/widgets/text_file_area.blp:83
 msgid "Save"
-msgstr ""
+msgstr "Salvesta"
 
 #: src/widgets/text_area.py:194 src/widgets/text_file_area.py:230
 msgid "Text files"
-msgstr ""
+msgstr "Tekstifailid"
 
 #: src/widgets/text_area.py:201 src/widgets/text_file_area.py:243
 msgid "Accepted files"
@@ -1257,7 +1253,7 @@ msgstr ""
 
 #: src/views/certificate_request_generator.py:81
 msgid "Open Key File"
-msgstr ""
+msgstr "Ava võtmefail"
 
 #: src/views/certificate_request_generator.py:88
 msgid "All Files"
@@ -1265,7 +1261,7 @@ msgstr ""
 
 #: src/views/certificate_request_generator.py:145
 msgid "Select save location"
-msgstr ""
+msgstr "Vali salvestamise asukoht"
 
 #: src/views/certificate_request_generator.py:146
 #: src/ui/views/certificate_request_generator.blp:163
@@ -1276,11 +1272,11 @@ msgstr ""
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:63
 #: src/views/image_converter.py:41 src/views/qrcode_generator.py:201
 msgid "Saved Successfully"
-msgstr ""
+msgstr "Salvestamine õnnestus"
 
 #: src/views/certificate_request_generator.py:214
 msgid "Save key as"
-msgstr ""
+msgstr "Salvesta võti kui"
 
 #: src/views/chmod_calculator.py:33 src/views/color_converter.py:54
 #: src/views/jwt_decoder.py:35
@@ -1290,7 +1286,7 @@ msgstr ""
 #: src/views/colorblindness_simulator.py:26 src/views/image_converter.py:24
 #: src/views/qrcode_generator.py:43
 msgid "Open Image"
-msgstr ""
+msgstr "Ava pilt"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
@@ -1306,7 +1302,7 @@ msgstr ""
 
 #: src/views/gzip_compressor.py:28
 msgid "Open image"
-msgstr ""
+msgstr "Ava pilt"
 
 #: src/views/gzip_compressor.py:31
 msgid "Cannot decompress from an image or a file"
@@ -1314,7 +1310,7 @@ msgstr ""
 
 #: src/views/gzip_compressor.py:134
 msgid "Please save this file to view its contents"
-msgstr ""
+msgstr "Sisu vaatamiseks palun salvesta fail"
 
 #: src/views/hash_generator.py:165
 msgid "Hashes match!"
@@ -1564,11 +1560,11 @@ msgstr ""
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
-msgstr ""
+msgstr "Näita külgriba või peida see"
 
 #: src/ui/window.blp:186
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Klaviatuuri kiirklahvid"
 
 #: src/ui/window.blp:191
 msgid "_About Dev Toolbox"
@@ -1597,107 +1593,109 @@ msgstr ""
 #: src/ui/widgets/spin_area.blp:68 src/ui/widgets/text_area.blp:66
 #: src/ui/widgets/text_file_area.blp:106
 msgid "Copy to clipboard"
-msgstr ""
+msgstr "Kopeeri lõikelauale"
 
 #: src/ui/widgets/date_area.blp:79
 msgid "Year"
-msgstr ""
+msgstr "Aasta"
 
 #: src/ui/widgets/date_area.blp:110 src/ui/views/reverse_cron.blp:362
 msgid "Month"
-msgstr ""
+msgstr "Kuu"
 
 #: src/ui/widgets/date_area.blp:140 src/ui/views/reverse_cron.blp:250
 msgid "Day"
-msgstr ""
+msgstr "Päev"
 
 #: src/ui/widgets/date_area.blp:176 src/ui/views/reverse_cron.blp:147
 msgid "Hours"
-msgstr ""
+msgstr "Tunnid"
 
 #: src/ui/widgets/date_area.blp:207 src/ui/views/reverse_cron.blp:44
 msgid "Minutes"
-msgstr ""
+msgstr "Minutid"
 
 #: src/ui/widgets/date_area.blp:237
 msgid "Seconds"
-msgstr ""
+msgstr "Sekundid"
 
 #: src/ui/widgets/entry_row.blp:20
 msgid "Generate again"
-msgstr ""
+msgstr "Loo uuesti"
 
 #: src/ui/widgets/entry_row.blp:40 src/ui/widgets/spin_area.blp:79
 #: src/ui/widgets/text_area.blp:73 src/ui/widgets/text_file_area.blp:117
 msgid "Paste clipboard"
-msgstr ""
+msgstr "Aseta lõikelaualt"
 
 #: src/ui/widgets/entry_row.blp:51 src/ui/widgets/image_area.blp:95
 #: src/ui/widgets/text_area.blp:80 src/ui/widgets/text_file_area.blp:128
 msgid "Clear input"
-msgstr ""
+msgstr "Tühjenda sisend"
 
 #: src/ui/widgets/image_area.blp:84 src/ui/widgets/text_file_area.blp:95
 msgid "Open image in another program"
-msgstr ""
+msgstr "Ava pilt muus rakenduses"
 
 #: src/ui/widgets/theme_switcher.blp:29
 msgid "Follow system style"
-msgstr ""
+msgstr "Kasuta süsteemi kujundust"
 
 #: src/ui/widgets/theme_switcher.blp:43
 msgid "Light style"
-msgstr ""
+msgstr "Hele kujundus"
 
 #: src/ui/widgets/theme_switcher.blp:57
 msgid "Dark style"
-msgstr ""
+msgstr "Tume kujundus"
 
 #: src/ui/widgets/webview_area.blp:51
 msgid "Open web page in another browser"
-msgstr ""
+msgstr "Ava veebileht muus veebibrauseris"
 
 #: src/ui/views/base_converter.blp:19
 msgid "Number Bases Converter"
-msgstr ""
+msgstr "Numbrite aluste teisendaja"
 
 #: src/ui/views/base_converter.blp:30
 msgid "Input numbers"
-msgstr ""
+msgstr "Sisesta numbreid"
 
 #: src/ui/views/base_converter.blp:33
 msgid "Decimal"
-msgstr ""
+msgstr "Kümnendarv"
 
 #: src/ui/views/base_converter.blp:41
 msgid "Binary"
-msgstr ""
+msgstr "Kahendsüsteemi arv"
 
 #: src/ui/views/base_converter.blp:49
 msgid "Octal"
-msgstr ""
+msgstr "Kaheksandarv"
 
 #: src/ui/views/base_converter.blp:57
 msgid "Hexadecimal"
-msgstr ""
+msgstr "Kuueteistkümnendarv"
 
 #: src/ui/views/base_converter.blp:65
 msgid "ASCII"
-msgstr ""
+msgstr "ASCII"
 
 #: src/ui/views/base_converter.blp:73
 msgid "UTF-8"
-msgstr ""
+msgstr "UTF-8"
 
 #: src/ui/views/base_converter.blp:98
 msgid ""
 "Typing an unaccepted character (i.e. 'A' in the decimal field) will cause "
 "all the fields to reset to 0."
 msgstr ""
+"Mittesobiliku sisendi puhul (nt. A-täht kümnendarvu väljal) lähtestuvad kõik "
+"väljad 0-ks."
 
 #: src/ui/views/base64_encoder.blp:19
 msgid "Base64 Encoder & Decoder"
-msgstr ""
+msgstr "Base64 kodeerija ja dekodeerija"
 
 #: src/ui/views/base64_encoder.blp:20
 msgid "Encode and decode strings using the Base64 format"
@@ -1714,28 +1712,28 @@ msgstr ""
 #: src/ui/views/text_inspector.blp:31 src/ui/views/timestamp.blp:30
 #: src/ui/views/url_encoder.blp:30 src/ui/views/uuid_generator.blp:31
 msgid "Tool options"
-msgstr ""
+msgstr "Tarviku eelistused"
 
 #: src/ui/views/base64_encoder.blp:33 src/ui/views/gzip_compressor.blp:33
 #: src/ui/views/html_encoder.blp:33 src/ui/views/json_yaml.blp:33
 #: src/ui/views/url_encoder.blp:33
 msgid "Direction"
-msgstr ""
+msgstr "Suund"
 
 #: src/ui/views/base64_encoder.blp:34 src/ui/views/html_encoder.blp:34
 #: src/ui/views/url_encoder.blp:34
 msgid "Select the desired encoding direction"
-msgstr ""
+msgstr "Vali, mis pidi soovid kodeerida"
 
 #: src/ui/views/base64_encoder.blp:41 src/ui/views/html_encoder.blp:43
 #: src/ui/views/url_encoder.blp:43
 msgid "Encode"
-msgstr ""
+msgstr "Kodeeri"
 
 #: src/ui/views/base64_encoder.blp:45 src/ui/views/html_encoder.blp:47
 #: src/ui/views/url_encoder.blp:47
 msgid "Decode"
-msgstr ""
+msgstr "Dekodeeri"
 
 #: src/ui/views/base64_encoder.blp:51
 msgid "URL Safe"
@@ -1749,25 +1747,25 @@ msgstr ""
 #: src/ui/views/hash_generator.blp:83 src/ui/views/html_encoder.blp:64
 #: src/ui/views/json_yaml.blp:76 src/ui/views/url_encoder.blp:84
 msgid "Input"
-msgstr ""
+msgstr "Sisend"
 
 #: src/ui/views/base64_encoder.blp:80 src/ui/views/gzip_compressor.blp:73
 #: src/ui/views/hash_generator.blp:92 src/ui/views/html_encoder.blp:77
 #: src/ui/views/json_yaml.blp:88 src/ui/views/url_encoder.blp:95
 msgid "Output"
-msgstr ""
+msgstr "Väljund"
 
 #: src/ui/views/certificate_parser.blp:33
 msgid "Certificate"
-msgstr ""
+msgstr "Sertifikaat"
 
 #: src/ui/views/certificate_parser.blp:34
 msgid "Open a certificate file (pem, der, cer extensions)"
-msgstr ""
+msgstr "Ava sertifikaadifail (pem, der, cer laienditega failid)"
 
 #: src/ui/views/certificate_parser.blp:79
 msgid "Open a certificate file to view its contents."
-msgstr ""
+msgstr "Sertifikaadi sisu vaatamiseks ava sertifikaadifail."
 
 #: src/ui/views/certificate_request_generator.blp:22
 msgid "Certificate Signing Request Generator"
@@ -1775,7 +1773,7 @@ msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:34
 msgid "Fill the information below"
-msgstr ""
+msgstr "Palun sisesta alljärgnev teave"
 
 #: src/ui/views/certificate_request_generator.blp:35
 msgid ""
@@ -1829,7 +1827,6 @@ msgid "New"
 msgstr "Uus"
 
 #: src/ui/views/certificate_request_generator.blp:92
-#, fuzzy
 msgid "Existing"
 msgstr "Olemasolev"
 
@@ -1860,11 +1857,11 @@ msgstr "4096 bitti"
 
 #: src/ui/views/certificate_request_generator.blp:144
 msgid "Key Save Location *"
-msgstr ""
+msgstr "Võtme salvestamise asukoht *"
 
 #: src/ui/views/certificate_request_generator.blp:145
 msgid "Save location for the generated key file"
-msgstr ""
+msgstr "Loodud võtmefaili salvestamise kaust"
 
 #: src/ui/views/chmod_calculator.blp:33
 msgid "Permissions"
@@ -1908,7 +1905,7 @@ msgstr ""
 
 #: src/ui/views/colorblindness_simulator.blp:19
 msgid "Color Blindness Simulator"
-msgstr ""
+msgstr "Värvipimeduse simulaator"
 
 #: src/ui/views/colorblindness_simulator.blp:34
 msgid "Severity"
@@ -1937,11 +1934,11 @@ msgstr ""
 
 #: src/ui/views/color_converter.blp:30
 msgid "Format"
-msgstr ""
+msgstr "Vorming"
 
 #: src/ui/views/color_converter.blp:31
 msgid "Output format for color values"
-msgstr ""
+msgstr "Värvide väärtuste väljundvorming"
 
 #: src/ui/views/color_converter.blp:36
 msgid "Web"
@@ -2001,7 +1998,7 @@ msgstr ""
 
 #: src/ui/views/color_converter.blp:85 src/ui/views/color_converter.blp:97
 msgid "Color"
-msgstr ""
+msgstr "Värv"
 
 #: src/ui/views/color_converter.blp:103
 msgid "Hex"
@@ -2045,19 +2042,19 @@ msgstr ""
 
 #: src/ui/views/contrast_checker.blp:33 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
-msgstr ""
+msgstr "Teksti värv"
 
 #: src/ui/views/contrast_checker.blp:34
 msgid "Color used for the text"
-msgstr ""
+msgstr "Teksti jaoks kasutatud värv"
 
 #: src/ui/views/contrast_checker.blp:52 src/ui/views/contrast_checker.blp:65
 msgid "Background color"
-msgstr ""
+msgstr "Taustavärv"
 
 #: src/ui/views/contrast_checker.blp:53
 msgid "Color used for the background"
-msgstr ""
+msgstr "Tausta jaoks kasutatud värv"
 
 #: src/ui/views/contrast_checker.blp:77
 msgid "Example"
@@ -2097,7 +2094,7 @@ msgstr ""
 
 #: src/ui/views/cron_converter.blp:47
 msgid "Output format"
-msgstr ""
+msgstr "Väljundvorming"
 
 #: src/ui/views/cron_converter.blp:48
 msgid ""
@@ -2115,19 +2112,19 @@ msgstr ""
 
 #: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:52
 msgid "Indentations"
-msgstr ""
+msgstr "Taandread"
 
 #: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:53
 msgid "Number of spaces used for indentation"
-msgstr ""
+msgstr "Taandrea lisamiseks kasutatav tühikute arv"
 
 #: src/ui/views/gzip_compressor.blp:19
 msgid "GZip Compress & Decompress"
-msgstr ""
+msgstr "Kokku ja lahti pakkimine GZip'iga"
 
 #: src/ui/views/gzip_compressor.blp:20
 msgid "Compress and decompress texts and images using GZip"
-msgstr ""
+msgstr "Paki tekste ja pilte GZip'i abil kokku ja lahti"
 
 #: src/ui/views/gzip_compressor.blp:34
 msgid "Select the desired operation"
@@ -2135,11 +2132,11 @@ msgstr ""
 
 #: src/ui/views/gzip_compressor.blp:43
 msgid "Compress"
-msgstr ""
+msgstr "Paki kokku"
 
 #: src/ui/views/gzip_compressor.blp:47
 msgid "Decompress"
-msgstr ""
+msgstr "Paki lahti"
 
 #: src/ui/views/gzip_compressor.blp:105
 msgid ""
@@ -2165,7 +2162,7 @@ msgstr ""
 
 #: src/ui/views/hash_generator.blp:35
 msgid "Choose the hash type to calculate"
-msgstr ""
+msgstr "Vali kasutatav räsitüüp"
 
 #: src/ui/views/hash_generator.blp:53
 msgid "Check for integrity"
@@ -2179,32 +2176,32 @@ msgstr ""
 
 #: src/ui/views/hash_generator.blp:60
 msgid "Type the hash to check against"
-msgstr ""
+msgstr "Sisesta räsi, mille suhtes soovid kontrollida"
 
 #: src/ui/views/html_encoder.blp:19
 msgid "HTML Encoder & Decoder"
-msgstr ""
+msgstr "HTML-i kodeerija ja dekodeerija"
 
 #: src/ui/views/image_converter.blp:34
 msgctxt "noun"
 msgid "Format"
-msgstr ""
+msgstr "Vorming"
 
 #: src/ui/views/image_converter.blp:35
 msgid "Select the desired output format"
-msgstr ""
+msgstr "Vali soovitud väljundvorming"
 
 #: src/ui/views/image_converter.blp:58
 msgid "Image"
-msgstr ""
+msgstr "Pilt"
 
 #: src/ui/views/image_converter.blp:60
 msgid "Convert"
-msgstr ""
+msgstr "Teisenda"
 
 #: src/ui/views/image_converter.blp:64
 msgid "converted-image"
-msgstr ""
+msgstr "teisendatud pilt"
 
 #: src/ui/views/json_validator.blp:49
 msgid "JSON Schema"
@@ -2212,23 +2209,23 @@ msgstr ""
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
-msgstr ""
+msgstr "JSON - YAML teisendaja"
 
 #: src/ui/views/json_yaml.blp:34
 msgid "Specify what format is the input and the desired output"
-msgstr ""
+msgstr "Määratle sisendi ja soovitud väljundi vorming"
 
 #: src/ui/views/json_yaml.blp:42
 msgid "JSON → YAML"
-msgstr ""
+msgstr "JSON → YAML"
 
 #: src/ui/views/json_yaml.blp:46
 msgid "YAML → JSON"
-msgstr ""
+msgstr "YAML → JSON"
 
 #: src/ui/views/jwt_decoder.blp:19
 msgid "JWT Decode & Encode"
-msgstr ""
+msgstr "JWT kodeerija ja dekodeerija"
 
 #: src/ui/views/jwt_decoder.blp:32
 msgid "Verify Signature"
@@ -2312,195 +2309,195 @@ msgstr ""
 
 #: src/ui/views/markdown_preview.blp:49
 msgid "Preview"
-msgstr ""
+msgstr "Eelvaade"
 
 #: src/ui/views/qrcode_generator.blp:19
 msgid "QR Code Generator"
-msgstr ""
+msgstr "QR-koodide looja"
 
 #: src/ui/views/qrcode_generator.blp:31 src/ui/views/reverse_cron.blp:31
 msgid "Tool Options"
-msgstr ""
+msgstr "Tarviku eelistused"
 
 #: src/ui/views/qrcode_generator.blp:32
 msgid "Fill the required information and press 'generate'"
-msgstr ""
+msgstr "Sisesta vajalik teave ja klõpsi nuppu „Loo“"
 
 #: src/ui/views/qrcode_generator.blp:35
 msgid "Content type"
-msgstr ""
+msgstr "Sisu tüüp"
 
 #: src/ui/views/qrcode_generator.blp:36
 msgid "Choose the content of the QR Code"
-msgstr ""
+msgstr "Vali QR-koodi tüüp"
 
 #: src/ui/views/qrcode_generator.blp:41 src/ui/views/qrcode_generator.blp:49
 msgid "Text/URL"
-msgstr ""
+msgstr "Tekst või võrguaadress"
 
 #: src/ui/views/qrcode_generator.blp:42
 msgid "WiFi Network"
-msgstr ""
+msgstr "WiFi-võrk"
 
 #: src/ui/views/qrcode_generator.blp:43
 msgid "Contact"
-msgstr ""
+msgstr "Kontaktkirje"
 
 #: src/ui/views/qrcode_generator.blp:56
 msgid "Network Name (SSID)"
-msgstr ""
+msgstr "Võrgu nimi (SSID)"
 
 #: src/ui/views/qrcode_generator.blp:63
 msgid "Network Encryption"
-msgstr ""
+msgstr "Kasutatav krüptimine"
 
 #: src/ui/views/qrcode_generator.blp:70
 msgid "None"
-msgstr ""
+msgstr "Puudub"
 
 #: src/ui/views/qrcode_generator.blp:76
 msgid "Network Password"
-msgstr ""
+msgstr "Võrgu salasõna"
 
 #: src/ui/views/qrcode_generator.blp:80
 msgid "First Name *"
-msgstr ""
+msgstr "Eesnimi *"
 
 #: src/ui/views/qrcode_generator.blp:87
 msgid "Last Name *"
-msgstr ""
+msgstr "Perenimi *"
 
 #: src/ui/views/qrcode_generator.blp:94
 msgid "Phone Number"
-msgstr ""
+msgstr "Telefoninumber"
 
 #: src/ui/views/qrcode_generator.blp:101
 msgid "Email"
-msgstr ""
+msgstr "E-posti aadress"
 
 #: src/ui/views/qrcode_generator.blp:108
 msgid "Birthday"
-msgstr ""
+msgstr "Sünnipäev"
 
 #: src/ui/views/qrcode_generator.blp:127
 msgid "Select from calendar:"
-msgstr ""
+msgstr "Vali kalendrist:"
 
 #: src/ui/views/qrcode_generator.blp:138
 msgid "URL"
-msgstr ""
+msgstr "Võrguaadress"
 
 #: src/ui/views/qrcode_generator.blp:145
 msgid "Address"
-msgstr ""
+msgstr "Aadress"
 
 #: src/ui/views/qrcode_generator.blp:148
 msgid "Street"
-msgstr ""
+msgstr "Tänav"
 
 #: src/ui/views/qrcode_generator.blp:155
 msgid "City"
-msgstr ""
+msgstr "Linn/asula"
 
 #: src/ui/views/qrcode_generator.blp:162
 msgid "State"
-msgstr ""
+msgstr "Osariik/maakond"
 
 #: src/ui/views/qrcode_generator.blp:169
 msgid "ZIP Code"
-msgstr ""
+msgstr "Suunanumber"
 
 #: src/ui/views/qrcode_generator.blp:176
 msgid "Country"
-msgstr ""
+msgstr "Riik"
 
 #: src/ui/views/qrcode_generator.blp:186
 msgid "Generated QR Code"
-msgstr ""
+msgstr "Loodud QR-kood"
 
 #: src/ui/views/qrcode_generator.blp:193
 msgid "qr-code.png"
-msgstr ""
+msgstr "qr-kood.png"
 
 #: src/ui/views/qrcode_generator.blp:195
 msgid "Generate"
-msgstr ""
+msgstr "Loo"
 
 #: src/ui/views/random_generator.blp:19
 msgid "Random Generator"
-msgstr ""
+msgstr "Juhusliku sisu looja"
 
 #: src/ui/views/random_generator.blp:30
 msgid "String"
-msgstr ""
+msgstr "String/sõne"
 
 #: src/ui/views/random_generator.blp:31
 msgid "Generate a random string with the given options. ASCII characters only."
-msgstr ""
+msgstr "Loo antud valikute alusel juhuslik sõne. Palun kasuta vaid ASCII-märke."
 
 #: src/ui/views/random_generator.blp:34
 msgid "Length"
-msgstr ""
+msgstr "Pikkus"
 
 #: src/ui/views/random_generator.blp:35
 msgid "Length of the generated string"
-msgstr ""
+msgstr "Loodava sisu pikkus"
 
 #: src/ui/views/random_generator.blp:47
 msgid "Uppercase letters (A-Z)"
-msgstr ""
+msgstr "Suurtähed (A-Z)"
 
 #: src/ui/views/random_generator.blp:53
 msgid "Lowercase letters (a-z)"
-msgstr ""
+msgstr "Väiketähed (a-z)"
 
 #: src/ui/views/random_generator.blp:59
 msgid "Numbers (0-9)"
-msgstr ""
+msgstr "Numbrid (0-9)"
 
 #: src/ui/views/random_generator.blp:65
 msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
-msgstr ""
+msgstr "Erimärgid (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 
 #: src/ui/views/random_generator.blp:75
 msgid "Generated string"
-msgstr ""
+msgstr "Loodud string/sõne"
 
 #: src/ui/views/random_generator.blp:92
 msgid "Number"
-msgstr ""
+msgstr "Number"
 
 #: src/ui/views/random_generator.blp:93
 msgid "Generate a random number in the given range"
-msgstr ""
+msgstr "Loo antud vahemikust juhuslik number"
 
 #: src/ui/views/random_generator.blp:96
 msgid "Minimum"
-msgstr ""
+msgstr "Miinimum"
 
 #: src/ui/views/random_generator.blp:97
 msgid "Minimum value of the generated number"
-msgstr ""
+msgstr "Loodava numbri väikseim väärtus"
 
 #: src/ui/views/random_generator.blp:109
 msgid "Maximum"
-msgstr ""
+msgstr "Maksimum"
 
 #: src/ui/views/random_generator.blp:110
 msgid "Maximum value of the generated number"
-msgstr ""
+msgstr "Loodava numbri suurim väärtus"
 
 #: src/ui/views/random_generator.blp:159
 msgid "Generated number"
-msgstr ""
+msgstr "Loodud number"
 
 #: src/ui/views/regex_tester.blp:19
 msgid "Regular Expression Tester"
-msgstr ""
+msgstr "Regulaaravaldise testija"
 
 #: src/ui/views/regex_tester.blp:37
 msgid "Regex to test"
-msgstr ""
+msgstr "Testitav avaldis"
 
 #: src/ui/views/reverse_cron.blp:58
 msgid "Every minute"
@@ -2644,11 +2641,11 @@ msgstr ""
 
 #: src/ui/views/text_diff.blp:33
 msgid "Old Text"
-msgstr ""
+msgstr "Vana tekst"
 
 #: src/ui/views/text_diff.blp:45
 msgid "New Text"
-msgstr ""
+msgstr "Uus tekst"
 
 #: src/ui/views/text_diff.blp:58
 msgid "Differences"
@@ -2716,7 +2713,7 @@ msgstr ""
 
 #: src/ui/views/text_inspector.blp:66
 msgid "Information"
-msgstr ""
+msgstr "Teave"
 
 #: src/ui/views/text_inspector.blp:69
 msgid "Cursor"
@@ -2744,7 +2741,7 @@ msgstr ""
 
 #: src/ui/views/timestamp.blp:19
 msgid "Timestamp Converter"
-msgstr ""
+msgstr "Ajatemplite teisendaja"
 
 #: src/ui/views/timestamp.blp:43
 msgid "Sets the current system timestamp"
@@ -2752,47 +2749,47 @@ msgstr ""
 
 #: src/ui/views/timestamp.blp:47
 msgid "Date"
-msgstr ""
+msgstr "Kuupäev"
 
 #: src/ui/views/timestamp.blp:57
 msgid "ISO Date (ISO 8601/RFC 3339)"
-msgstr ""
+msgstr "ISO-vormingus kuupäev (ISO 8601/RFC 3339)"
 
 #: src/ui/views/timestamp.blp:63
 msgid "RFC 2822 Date"
-msgstr ""
+msgstr "RFC 2822 vormingus kuupäev"
 
 #: src/ui/views/timestamp.blp:69
 msgid "Short Date"
-msgstr ""
+msgstr "Lühike kuupäev"
 
 #: src/ui/views/timestamp.blp:75
 msgid "Short Time"
-msgstr ""
+msgstr "Lühike aeg"
 
 #: src/ui/views/timestamp.blp:81
 msgid "Long Date"
-msgstr ""
+msgstr "Pikk kuupäev"
 
 #: src/ui/views/timestamp.blp:87
 msgid "Long Time"
-msgstr ""
+msgstr "Pikk aeg"
 
 #: src/ui/views/timestamp.blp:93
 msgid "Full Long Date"
-msgstr ""
+msgstr "Täispikk kuupäev"
 
 #: src/ui/views/url_encoder.blp:19
 msgid "URL Encoder & Decoder"
-msgstr ""
+msgstr "Võrguaadresside kodeerija ja dekodeerija"
 
 #: src/ui/views/url_encoder.blp:53
 msgid "Space encoding"
-msgstr ""
+msgstr "Tühiku kodeerimine"
 
 #: src/ui/views/url_encoder.blp:54
 msgid "Select the desired encoding for the space character"
-msgstr ""
+msgstr "Vali tühiku kodeerimiseks soovitud tähemärgid"
 
 #: src/ui/views/uuid_generator.blp:19
 msgid "UUID Generator"
@@ -2816,7 +2813,7 @@ msgstr ""
 
 #: src/ui/views/uuid_generator.blp:42
 msgid "Version 4 (Random)"
-msgstr ""
+msgstr "Versioon 4 (juhuslik)"
 
 #: src/ui/views/uuid_generator.blp:43
 msgid "Version 5"
@@ -2860,57 +2857,57 @@ msgstr "Välju"
 
 #: src/formatters/html.py:14
 msgid "HTML Formatter"
-msgstr ""
+msgstr "HTML-i vormindaja"
 
 #: src/formatters/html.py:17
 msgid "Type HTML code here"
-msgstr ""
+msgstr "Sisesta siia HTML-kood"
 
 #: src/formatters/html.py:20 src/formatters/js.py:20 src/formatters/json.py:19
 #: src/formatters/sql.py:19 src/formatters/xml.py:21 src/formatters/css.py:19
 msgctxt "verb/action"
 msgid "Format"
-msgstr ""
+msgstr "Vorming"
 
 #: src/formatters/js.py:14
 msgid "JavaScript Formatter"
-msgstr ""
+msgstr "JavaScripti vormindaja"
 
 #: src/formatters/js.py:17
 msgid "Type JavaScript code here"
-msgstr ""
+msgstr "Sisesta siia JavaScripti kood"
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
-msgstr ""
+msgstr "JSON-i vormindaja"
 
 #: src/formatters/json.py:16
 msgid "Type JSON code here"
-msgstr ""
+msgstr "Sisesta siia JSON-kood"
 
 #: src/formatters/sql.py:13
 msgid "SQL Formatter"
-msgstr ""
+msgstr "SQL-i vormindaja"
 
 #: src/formatters/sql.py:16
 msgid "Type SQL code here"
-msgstr ""
+msgstr "Sisesta siia SQL-kood"
 
 #: src/formatters/xml.py:15
 msgid "XML Formatter"
-msgstr ""
+msgstr "XML-i vormindaja"
 
 #: src/formatters/xml.py:18
 msgid "Type XML code here"
-msgstr ""
+msgstr "Sisesta siia XML-kood"
 
 #: src/formatters/css.py:13
 msgid "CSS Formatter"
-msgstr ""
+msgstr "CSS-i vormindaja"
 
 #: src/formatters/css.py:16 src/formatters/css_minifier.py:17
 msgid "Type CSS here"
-msgstr ""
+msgstr "Sisesta siia CSS-kood"
 
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
@@ -2923,4 +2920,4 @@ msgstr ""
 
 #: src/formatters/js_minifier.py:17
 msgid "Type JS code here"
-msgstr ""
+msgstr "Sisesta siia JS-kood"
