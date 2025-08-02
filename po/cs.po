@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-07-14 09:01+0000\n"
+"PO-Revision-Date: 2025-08-03 17:03+0000\n"
 "Last-Translator: Fjuro <fjuro@alius.cz>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/cs/>\n"
@@ -256,11 +256,11 @@ msgstr "nyní"
 
 #: src/tools.py:66
 msgid "Number Bases"
-msgstr "Číselné základy"
+msgstr "Číselné soustavy"
 
 #: src/tools.py:69 src/ui/views/base_converter.blp:20
 msgid "Convert numbers between bases"
-msgstr "Převod čísel mezi základy"
+msgstr "Převod čísel mezi soustavami"
 
 #: src/tools.py:71
 msgctxt "search keyword"
@@ -270,7 +270,7 @@ msgstr "zastoupení"
 #: src/tools.py:72
 msgctxt "search keyword"
 msgid "base"
-msgstr "základna"
+msgstr "soustava"
 
 #: src/tools.py:75
 msgctxt "search keyword"
@@ -280,22 +280,22 @@ msgstr "číslo"
 #: src/tools.py:76
 msgctxt "search keyword"
 msgid "binary"
-msgstr "binární"
+msgstr "dvojková"
 
 #: src/tools.py:77
 msgctxt "search keyword"
 msgid "octal"
-msgstr "osmičkové"
+msgstr "osmičková"
 
 #: src/tools.py:78
 msgctxt "search keyword"
 msgid "decimal"
-msgstr "desítkové"
+msgstr "desítková"
 
 #: src/tools.py:79
 msgctxt "search keyword"
 msgid "hexadecimal"
-msgstr "hexadecimální"
+msgstr "šestnáctková"
 
 #: src/tools.py:80
 msgctxt "search keyword"
@@ -1679,7 +1679,7 @@ msgstr "Otevřít webovou stránku v jiném prohlížeči"
 
 #: src/ui/views/base_converter.blp:19
 msgid "Number Bases Converter"
-msgstr "Převod číselných základů"
+msgstr "Převod číselných soustav"
 
 #: src/ui/views/base_converter.blp:30
 msgid "Input numbers"
@@ -1699,7 +1699,7 @@ msgstr "Osmičková"
 
 #: src/ui/views/base_converter.blp:57
 msgid "Hexadecimal"
-msgstr "Hexadecimální"
+msgstr "Šestnáctková"
 
 #: src/ui/views/base_converter.blp:65
 msgid "ASCII"
