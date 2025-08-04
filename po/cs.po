@@ -6,17 +6,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-01-07 16:53+0100\n"
-"Last-Translator: Amerey <info@amerey.eu>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2025-08-03 17:03+0000\n"
+"Last-Translator: Fjuro <fjuro@alius.cz>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/devtoolbox/"
+"devtoolbox/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
-"X-Generator: Poedit 3.4.4\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -36,6 +37,8 @@ msgid ""
 "Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;"
 "Lorem;Ipsum;"
 msgstr ""
+"JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;Validate;Validator;Converter;Convert;Timestamp;bmp;gif;icns;jpeg;png;tiff;webp;Image;Base;Parser;CRON;GZip;Compressor;Decompressor;Hash;Regex;Compare;URL;Minify;Generator;Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;Lorem;Ipsum;"
+""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -108,49 +111,45 @@ msgstr "Převod dokumentů JSON do YAML a naopak"
 #: src/tools.py:20 src/tools.py:39 src/tools.py:206
 msgctxt "search keyword"
 msgid "parse"
-msgstr ""
+msgstr "parsovat"
 
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
-#, fuzzy
 msgctxt "search keyword"
 msgid "converter"
-msgstr "Převodníky"
+msgstr "převodník"
 
 #: src/tools.py:22 src/tools.py:46 src/tools.py:74 src/tools.py:96
 #: src/tools.py:114 src/tools.py:394
-#, fuzzy
 msgctxt "search keyword"
 msgid "convert"
-msgstr "Převést"
+msgstr "převést"
 
 #: src/tools.py:23 src/tools.py:38 src/tools.py:47 src/tools.py:474
-#, fuzzy
 msgctxt "search keyword"
 msgid "format"
-msgstr "Formát"
+msgstr "formátovat"
 
 #: src/tools.py:24 src/tools.py:234 src/tools.py:250 src/tools.py:435
 #: src/tools.py:446
 msgctxt "search keyword"
 msgid "document"
-msgstr ""
+msgstr "dokument"
 
 #: src/tools.py:25
 msgctxt "search keyword"
 msgid "spaces"
-msgstr ""
+msgstr "mezery"
 
 #: src/tools.py:26
-#, fuzzy
 msgctxt "search keyword"
 msgid "indentation"
-msgstr "Odsazení"
+msgstr "odsazení"
 
 #: src/tools.py:27 src/tools.py:204 src/tools.py:217 src/tools.py:231
 #: src/tools.py:245 src/tools.py:261 src/tools.py:274
 msgctxt "search keyword"
 msgid "indent"
-msgstr ""
+msgstr "odrážka"
 
 #: src/tools.py:31 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
@@ -163,166 +162,149 @@ msgstr "Převod časového razítka UNIX do a z obyčejných datumů"
 #: src/tools.py:36
 msgctxt "search keyword"
 msgid "epoch"
-msgstr ""
+msgstr "epocha"
 
 #: src/tools.py:37 src/tools.py:97 src/tools.py:115
 msgctxt "search keyword"
 msgid "time"
-msgstr ""
+msgstr "čas"
 
 #: src/tools.py:40
 msgctxt "search keyword"
 msgid "datetime"
-msgstr ""
+msgstr "datum a čas"
 
 #: src/tools.py:41
 msgctxt "search keyword"
 msgid "calendar"
-msgstr ""
+msgstr "kalendář"
 
 #: src/tools.py:42
-#, fuzzy
 msgctxt "search keyword"
 msgid "timestamp"
-msgstr "Časové razítko"
+msgstr "časové razítko"
 
 #: src/tools.py:44 src/tools.py:98 src/tools.py:116
 msgctxt "search keyword"
 msgid "date"
-msgstr ""
+msgstr "datum"
 
 #: src/tools.py:48
 msgctxt "search keyword"
 msgid "short"
-msgstr ""
+msgstr "krátký"
 
 #: src/tools.py:49
 msgctxt "search keyword"
 msgid "long"
-msgstr ""
+msgstr "dlouhý"
 
 #: src/tools.py:52
 msgctxt "search keyword"
 msgid "year"
-msgstr ""
+msgstr "rok"
 
 #: src/tools.py:53
-#, fuzzy
 msgctxt "search keyword"
 msgid "month"
-msgstr "Měsíc"
+msgstr "měsíc"
 
 #: src/tools.py:54
-#, fuzzy
 msgctxt "search keyword"
 msgid "day"
-msgstr "Květen"
+msgstr "den"
 
 #: src/tools.py:55
-#, fuzzy
 msgctxt "search keyword"
 msgid "hour"
-msgstr "a hodinou"
+msgstr "hodina"
 
 #: src/tools.py:56
-#, fuzzy
 msgctxt "search keyword"
 msgid "hours"
-msgstr "Hodiny"
+msgstr "hodiny"
 
 #: src/tools.py:57
-#, fuzzy
 msgctxt "search keyword"
 msgid "minute"
-msgstr "Minuty"
+msgstr "minuta"
 
 #: src/tools.py:58
-#, fuzzy
 msgctxt "search keyword"
 msgid "minutes"
-msgstr "Minuty"
+msgstr "minuty"
 
 #: src/tools.py:59
-#, fuzzy
 msgctxt "search keyword"
 msgid "second"
-msgstr "Sekundy"
+msgstr "sekunda"
 
 #: src/tools.py:60
-#, fuzzy
 msgctxt "search keyword"
 msgid "seconds"
-msgstr "Sekundy"
+msgstr "sekundy"
 
 #: src/tools.py:61
-#, fuzzy
 msgctxt "search keyword"
 msgid "timezone"
-msgstr "Časové pásmo"
+msgstr "časové pásmo"
 
 #: src/tools.py:62
-#, fuzzy
 msgctxt "search keyword"
 msgid "now"
-msgstr "Nyní"
+msgstr "nyní"
 
 #: src/tools.py:66
 msgid "Number Bases"
-msgstr "Číselné základy"
+msgstr "Číselné soustavy"
 
 #: src/tools.py:69 src/ui/views/base_converter.blp:20
 msgid "Convert numbers between bases"
-msgstr "Převod čísel mezi základy"
+msgstr "Převod čísel mezi soustavami"
 
 #: src/tools.py:71
-#, fuzzy
 msgctxt "search keyword"
 msgid "representation"
-msgstr "Odsazení"
+msgstr "zastoupení"
 
 #: src/tools.py:72
 msgctxt "search keyword"
 msgid "base"
-msgstr ""
+msgstr "soustava"
 
 #: src/tools.py:75
-#, fuzzy
 msgctxt "search keyword"
 msgid "number"
-msgstr "Číslo"
+msgstr "číslo"
 
 #: src/tools.py:76
-#, fuzzy
 msgctxt "search keyword"
 msgid "binary"
-msgstr "Binární"
+msgstr "dvojková"
 
 #: src/tools.py:77
-#, fuzzy
 msgctxt "search keyword"
 msgid "octal"
-msgstr "Osmičková"
+msgstr "osmičková"
 
 #: src/tools.py:78
-#, fuzzy
 msgctxt "search keyword"
 msgid "decimal"
-msgstr "Desítková"
+msgstr "desítková"
 
 #: src/tools.py:79
-#, fuzzy
 msgctxt "search keyword"
 msgid "hexadecimal"
-msgstr "Hexadecimální"
+msgstr "šestnáctková"
 
 #: src/tools.py:80
 msgctxt "search keyword"
 msgid "integer"
-msgstr ""
+msgstr "celé číslo"
 
 #: src/tools.py:87 src/ui/views/cron_converter.blp:20
 msgid "CRON Parser"
-msgstr "CRON Parser"
+msgstr "Parser CRON"
 
 #: src/tools.py:90 src/ui/views/cron_converter.blp:21
 msgid "Convert CRON expressions to time and date"
@@ -331,23 +313,22 @@ msgstr "Převod výrazů CRON na čas a datum"
 #: src/tools.py:93 src/tools.py:111
 msgctxt "search keyword"
 msgid "schedule"
-msgstr ""
+msgstr "plán"
 
 #: src/tools.py:94 src/tools.py:112
 msgctxt "search keyword"
 msgid "parser"
-msgstr ""
+msgstr "parsování"
 
 #: src/tools.py:95 src/tools.py:113 src/tools.py:410
-#, fuzzy
 msgctxt "search keyword"
 msgid "expression"
-msgstr "výraz CRON"
+msgstr "výraz"
 
 #: src/tools.py:99 src/tools.py:117
 msgctxt "search keyword"
 msgid "job"
-msgstr ""
+msgstr "úloha"
 
 #: src/tools.py:105 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
@@ -355,7 +336,7 @@ msgstr "Reverzní CRON"
 
 #: src/tools.py:108 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
-msgstr "Generování CRON výrazů"
+msgstr "Generování výrazů CRON"
 
 #: src/tools.py:126 src/tools.py:139 src/tools.py:151 src/tools.py:166
 #: src/tools.py:182
@@ -369,33 +350,32 @@ msgstr "Kódování a dekódování speciálních znaků pomocí formátu HTML"
 #: src/tools.py:131
 msgctxt "search keyword"
 msgid "escape"
-msgstr ""
+msgstr "únik"
 
 #: src/tools.py:133 src/tools.py:233 src/tools.py:247 src/tools.py:434
 #: src/tools.py:456
 msgctxt "search keyword"
 msgid "markup"
-msgstr ""
+msgstr "označit"
 
 #: src/tools.py:134 src/tools.py:145 src/tools.py:172
 msgctxt "search keyword"
 msgid "text"
-msgstr ""
+msgstr "text"
 
 #: src/tools.py:141
 msgid "Encode and decode base64 strings"
 msgstr "Kódování a dekódování řetězců base64"
 
 #: src/tools.py:144 src/tools.py:173
-#, fuzzy
 msgctxt "search keyword"
 msgid "string"
-msgstr "Řetězec"
+msgstr "řetězec"
 
 #: src/tools.py:146 src/tools.py:207 src/tools.py:235 src/tools.py:445
 msgctxt "search keyword"
 msgid "data"
-msgstr ""
+msgstr "data"
 
 #: src/tools.py:153 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
@@ -404,38 +384,37 @@ msgstr "Kódování a dekódování speciálních znaků v adresách URL"
 #: src/tools.py:155
 msgctxt "search keyword"
 msgid "url"
-msgstr ""
+msgstr "url"
 
 #: src/tools.py:156
 msgctxt "search keyword"
 msgid "unescape"
-msgstr ""
+msgstr "unescape"
 
 #: src/tools.py:157 src/tools.py:249
 msgctxt "search keyword"
 msgid "web"
-msgstr ""
+msgstr "web"
 
 #: src/tools.py:158
 msgctxt "search keyword"
 msgid "link"
-msgstr ""
+msgstr "odkaz"
 
 #: src/tools.py:159
-#, fuzzy
 msgctxt "search keyword"
 msgid "address"
-msgstr "Adresa"
+msgstr "adresa"
 
 #: src/tools.py:160
 msgctxt "search keyword"
 msgid "uri"
-msgstr ""
+msgstr "uri"
 
 #: src/tools.py:161 src/tools.py:219
 msgctxt "search keyword"
 msgid "query"
-msgstr ""
+msgstr "dotaz"
 
 #: src/tools.py:168
 msgid "Compress and decompress files and texts using GZip"
@@ -444,79 +423,71 @@ msgstr "Komprimování a dekomprimování souborů a textů pomocí GZip"
 #: src/tools.py:170
 msgctxt "search keyword"
 msgid "unarchive"
-msgstr ""
+msgstr "rozbalit"
 
 #: src/tools.py:171 src/tools.py:365
-#, fuzzy
 msgctxt "search keyword"
 msgid "file"
-msgstr "Všechny soubory"
+msgstr "soubor"
 
 #: src/tools.py:174
 msgctxt "search keyword"
 msgid "zip"
-msgstr ""
+msgstr "zip"
 
 #: src/tools.py:175
 msgctxt "search keyword"
 msgid "unzip"
-msgstr ""
+msgstr "unzip"
 
 #: src/tools.py:176
-#, fuzzy
 msgctxt "search keyword"
 msgid "decompression"
-msgstr "Dekomprimovat"
+msgstr "dekomprimovat"
 
 #: src/tools.py:177
-#, fuzzy
 msgctxt "search keyword"
 msgid "decompressor"
-msgstr "Dekomprimovat"
+msgstr "dekomprese"
 
 #: src/tools.py:184 src/ui/views/jwt_decoder.blp:20
-#, fuzzy
 msgid "Decode and encode JWT tokens"
-msgstr "Kódování a dekódování řetězců base64"
+msgstr "Kódování a dekódování tokenů JWT"
 
 #: src/tools.py:186
 msgctxt "search keyword"
 msgid "json web token"
-msgstr ""
+msgstr "webový token json"
 
 #: src/tools.py:187
-#, fuzzy
 msgctxt "search keyword"
 msgid "header"
-msgstr "Záhlaví"
+msgstr "hlavička"
 
 #: src/tools.py:188
-#, fuzzy
 msgctxt "search keyword"
 msgid "payload"
-msgstr "Datová část"
+msgstr "datová část"
 
 #: src/tools.py:189
 msgctxt "search keyword"
 msgid "signature"
-msgstr ""
+msgstr "podpis"
 
 #: src/tools.py:190
-#, fuzzy
 msgctxt "search keyword"
 msgid "authentication"
-msgstr "Odsazení"
+msgstr "autentifikace"
 
 #: src/tools.py:191
 msgctxt "search keyword"
 msgid "authorization"
-msgstr ""
+msgstr "autorizace"
 
 #: src/tools.py:192 src/tools.py:320 src/tools.py:533 src/tools.py:550
-#, fuzzy
 msgctxt "search keyword"
 msgid "security"
-msgstr "Závažnost"
+msgstr "zabezpečení"
 
 #: src/tools.py:199 src/tools.py:212 src/tools.py:226 src/tools.py:240
 #: src/tools.py:255 src/tools.py:269 src/tools.py:282 src/tools.py:296
@@ -531,13 +502,13 @@ msgstr "Formátování dokumentů JSON"
 #: src/tools.py:260 src/tools.py:273
 msgctxt "search keyword"
 msgid "pretty"
-msgstr ""
+msgstr "zlepšení"
 
 #: src/tools.py:205 src/tools.py:218 src/tools.py:232 src/tools.py:246
 #: src/tools.py:262 src/tools.py:275
 msgctxt "search keyword"
 msgid "beautify"
-msgstr ""
+msgstr "pěknější"
 
 #: src/tools.py:214 src/formatters/sql.py:14
 msgid "Format SQL documents"
@@ -546,12 +517,12 @@ msgstr "Formátování dokumentů SQL"
 #: src/tools.py:220
 msgctxt "search keyword"
 msgid "database"
-msgstr ""
+msgstr "databáze"
 
 #: src/tools.py:221
 msgctxt "search keyword"
 msgid "statement"
-msgstr ""
+msgstr "vyjádření"
 
 #: src/tools.py:228 src/formatters/xml.py:16
 msgid "Format XML documents"
@@ -563,20 +534,18 @@ msgstr "Formátování dokumentů HTML"
 
 #: src/tools.py:248 src/tools.py:263 src/tools.py:276 src/tools.py:286
 #: src/tools.py:301
-#, fuzzy
 msgctxt "search keyword"
 msgid "minify"
-msgstr "Minifikovat"
+msgstr "minifikovat"
 
 #: src/tools.py:257 src/formatters/js.py:15
 msgid "Format JavaScript documents"
 msgstr "Formátování dokumentů JavaScript"
 
 #: src/tools.py:264 src/tools.py:306
-#, fuzzy
 msgctxt "search keyword"
 msgid "code"
-msgstr "Kódovat"
+msgstr "kód"
 
 #: src/tools.py:271 src/formatters/css.py:14
 msgid "Format CSS documents"
@@ -585,7 +554,7 @@ msgstr "Formátování dokumentů CSS"
 #: src/tools.py:277 src/tools.py:289
 msgctxt "search keyword"
 msgid "stylesheet"
-msgstr ""
+msgstr "styly"
 
 #: src/tools.py:281 src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
@@ -596,26 +565,24 @@ msgid "Minify CSS documents"
 msgstr "Minifikování dokumentů CSS"
 
 #: src/tools.py:287 src/tools.py:302
-#, fuzzy
 msgctxt "search keyword"
 msgid "compress"
-msgstr "Dekomprimovat"
+msgstr "komprimovat"
 
 #: src/tools.py:288
-#, fuzzy
 msgctxt "search keyword"
 msgid "style"
-msgstr "Tmavý motiv"
+msgstr "styl"
 
 #: src/tools.py:290 src/tools.py:303
 msgctxt "search keyword"
 msgid "reduce"
-msgstr ""
+msgstr "zmenšit"
 
 #: src/tools.py:291 src/tools.py:304
 msgctxt "search keyword"
 msgid "size"
-msgstr ""
+msgstr "velikost"
 
 #: src/tools.py:295 src/formatters/js_minifier.py:14
 msgid "JavaScript Minifier"
@@ -628,11 +595,11 @@ msgstr "Minifikování dokumentů JavaScript"
 #: src/tools.py:305
 msgctxt "search keyword"
 msgid "script"
-msgstr ""
+msgstr "skript"
 
 #: src/tools.py:312
 msgid "Hash"
-msgstr ""
+msgstr "Hash"
 
 #: src/tools.py:313 src/tools.py:326 src/tools.py:338 src/tools.py:349
 #: src/tools.py:361 src/tools.py:375
@@ -640,30 +607,28 @@ msgid "Generators"
 msgstr "Generátory"
 
 #: src/tools.py:315
-#, fuzzy
 msgid "Calculate hashes and check for integrity"
-msgstr "Výpočet MD5, SHA1, SHA256 a SHA512 hash a kontrola integrity"
+msgstr "Vypočítá hashe a zkontrolujte integritu"
 
 #: src/tools.py:317
 msgctxt "search keyword"
 msgid "checksum"
-msgstr ""
+msgstr "kontrolní součet"
 
 #: src/tools.py:318
 msgctxt "search keyword"
 msgid "digest"
-msgstr ""
+msgstr "výtah"
 
 #: src/tools.py:319
-#, fuzzy
 msgctxt "search keyword"
 msgid "generate"
-msgstr "Vygenerovat"
+msgstr "generovat"
 
 #: src/tools.py:321 src/tools.py:535 src/tools.py:551
 msgctxt "search keyword"
 msgid "cryptography"
-msgstr ""
+msgstr "kryptografie"
 
 #: src/tools.py:328 src/ui/views/lorem_generator.blp:20
 msgid "Generate lorem ipsum placeholder text"
@@ -672,39 +637,36 @@ msgstr "Generování zástupného textu lorem ipsum"
 #: src/tools.py:330
 msgctxt "search keyword"
 msgid "dummy"
-msgstr ""
+msgstr "atrapa"
 
 #: src/tools.py:331
-#, fuzzy
 msgctxt "search keyword"
 msgid "sample"
-msgstr "Příklad"
+msgstr "příklad"
 
 #: src/tools.py:332
 msgctxt "search keyword"
 msgid "filler"
-msgstr ""
+msgstr "výplň"
 
 #: src/tools.py:333
 msgctxt "search keyword"
 msgid "latin"
-msgstr ""
+msgstr "latinka"
 
 #: src/tools.py:340 src/ui/views/uuid_generator.blp:20
 msgid "Generate Universally Unique IDs (UUID)"
 msgstr "Generování univerzálních jedinečných ID (UUID)"
 
 #: src/tools.py:343
-#, fuzzy
 msgctxt "search keyword"
 msgid "identifier"
-msgstr "Identifikátor klíče"
+msgstr "identifikátor"
 
 #: src/tools.py:344
-#, fuzzy
 msgctxt "search keyword"
 msgid "random"
-msgstr "Náhodný generátor"
+msgstr "náhodný"
 
 #: src/tools.py:348
 msgid "Random"
@@ -717,23 +679,22 @@ msgstr "Generování náhodných čísel a řetězců"
 #: src/tools.py:353
 msgctxt "search keyword"
 msgid "password"
-msgstr ""
+msgstr "heslo"
 
 #: src/tools.py:354
-#, fuzzy
 msgctxt "search keyword"
 msgid "token"
-msgstr "Token"
+msgstr "token"
 
 #: src/tools.py:355
 msgctxt "search keyword"
 msgid "entropy"
-msgstr ""
+msgstr "entropie"
 
 #: src/tools.py:356
 msgctxt "search keyword"
 msgid "secure"
-msgstr ""
+msgstr "bezpečnost"
 
 #: src/tools.py:360 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
@@ -746,28 +707,27 @@ msgstr "Vypočítejte hodnoty pro úpravu oprávnění pomocí chmod"
 #: src/tools.py:366
 msgctxt "search keyword"
 msgid "unix"
-msgstr ""
+msgstr "unix"
 
 #: src/tools.py:367
 msgctxt "search keyword"
 msgid "linux"
-msgstr ""
+msgstr "linux"
 
 #: src/tools.py:368
-#, fuzzy
 msgctxt "search keyword"
 msgid "calculate"
-msgstr "Hash pro výpočet"
+msgstr "vypočítat"
 
 #: src/tools.py:369
 msgctxt "search keyword"
 msgid "mode"
-msgstr ""
+msgstr "režim"
 
 #: src/tools.py:370
 msgctxt "search keyword"
 msgid "access"
-msgstr ""
+msgstr "přístup"
 
 #: src/tools.py:374
 msgid "QR Code"
@@ -778,27 +738,24 @@ msgid "Create custom QR Codes"
 msgstr "Vytváření vlastních QR kódů"
 
 #: src/tools.py:379
-#, fuzzy
 msgctxt "search keyword"
 msgid "qrcode"
-msgstr "qr-code.png"
+msgstr "qr kód"
 
 #: src/tools.py:380
-#, fuzzy
 msgctxt "search keyword"
 msgid "barcode"
-msgstr "Kódovat"
+msgstr "čárový kód"
 
 #: src/tools.py:381
-#, fuzzy
 msgctxt "search keyword"
 msgid "image"
-msgstr "Obrázek"
+msgstr "obrázek"
 
 #: src/tools.py:382
 msgctxt "search keyword"
 msgid "matrix"
-msgstr ""
+msgstr "matice"
 
 #: src/tools.py:388 src/ui/views/text_inspector.blp:19
 msgid "Text Inspector & Case Converter"
@@ -817,16 +774,14 @@ msgstr "Zobrazení statistik a změny textu"
 #: src/tools.py:393
 msgctxt "search keyword"
 msgid "analyze"
-msgstr ""
+msgstr "analyzovat"
 
 #: src/tools.py:395
-#, fuzzy
 msgctxt "search keyword"
 msgid "uppercase"
-msgstr "malá písmena"
+msgstr "velká písmena"
 
 #: src/tools.py:396
-#, fuzzy
 msgctxt "search keyword"
 msgid "lowercase"
 msgstr "malá písmena"
@@ -834,31 +789,27 @@ msgstr "malá písmena"
 #: src/tools.py:397
 msgctxt "search keyword"
 msgid "capitalize"
-msgstr ""
+msgstr "kapitalizovat"
 
 #: src/tools.py:398
-#, fuzzy
 msgctxt "search keyword"
 msgid "count"
-msgstr "Počet"
+msgstr "počet"
 
 #: src/tools.py:399
-#, fuzzy
 msgctxt "search keyword"
 msgid "words"
-msgstr "Slova"
+msgstr "slova"
 
 #: src/tools.py:400
-#, fuzzy
 msgctxt "search keyword"
 msgid "characters"
-msgstr "Počet znaků:"
+msgstr "znaky"
 
 #: src/tools.py:401
-#, fuzzy
 msgctxt "search keyword"
 msgid "lines"
-msgstr "Řádky:"
+msgstr "řádky"
 
 #: src/tools.py:405
 msgid "Regex Tester"
@@ -871,13 +822,12 @@ msgstr "Najděte v textu odpovídající řetězce"
 #: src/tools.py:411
 msgctxt "search keyword"
 msgid "pattern"
-msgstr ""
+msgstr "vzorec"
 
 #: src/tools.py:412
-#, fuzzy
 msgctxt "search keyword"
 msgid "search"
-msgstr "Březen"
+msgstr "hledat"
 
 #: src/tools.py:416 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
@@ -888,27 +838,24 @@ msgid "Analyze two texts and find differences"
 msgstr "Analyzujte dva texty a najděte rozdíly"
 
 #: src/tools.py:421
-#, fuzzy
 msgctxt "search keyword"
 msgid "difference"
-msgstr "Rozdíly"
+msgstr "rozdíl"
 
 #: src/tools.py:422
-#, fuzzy
 msgctxt "search keyword"
 msgid "compare"
-msgstr "Dekomprimovat"
+msgstr "porovnat"
 
 #: src/tools.py:423
-#, fuzzy
 msgctxt "search keyword"
 msgid "changes"
-msgstr "Změna stylu písma"
+msgstr "změny"
 
 #: src/tools.py:424
 msgctxt "search keyword"
 msgid "modification"
-msgstr ""
+msgstr "úprava"
 
 #: src/tools.py:428 src/ui/views/xml_validator.blp:19
 msgid "XML Scheme Validator"
@@ -919,10 +866,9 @@ msgid "Check an XML file against an XSD schema"
 msgstr "Zkontrolujte soubor XML se schématem XSD"
 
 #: src/tools.py:433 src/tools.py:444
-#, fuzzy
 msgctxt "search keyword"
 msgid "validate"
-msgstr "Neplatný!"
+msgstr "validovat"
 
 #: src/tools.py:439 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
@@ -939,67 +885,64 @@ msgstr "Zobrazte náhled markdown kódu při psaní"
 #: src/tools.py:455
 msgctxt "search keyword"
 msgid "render"
-msgstr ""
+msgstr "vykreslit"
 
 #: src/tools.py:457
 msgctxt "search keyword"
 msgid "md"
-msgstr ""
+msgstr "md"
 
 #: src/tools.py:463 src/ui/views/color_converter.blp:16
-#, fuzzy
 msgid "Color Converter"
-msgstr "Převodníky"
+msgstr "Převodník barev"
 
 #: src/tools.py:464 src/tools.py:481 src/tools.py:491 src/tools.py:505
 msgid "Graphics"
 msgstr "Grafika"
 
 #: src/tools.py:466 src/ui/views/color_converter.blp:17
-#, fuzzy
 msgid "Convert colors between formats"
-msgstr "Převod čísel mezi základy"
+msgstr "Převod barev mezi formáty"
 
 #: src/tools.py:468
 msgctxt "search keyword"
 msgid "rgb"
-msgstr ""
+msgstr "rgb"
 
 #: src/tools.py:469
 msgctxt "search keyword"
 msgid "rgba"
-msgstr ""
+msgstr "rgba"
 
 #: src/tools.py:470
 msgctxt "search keyword"
 msgid "hex"
-msgstr ""
+msgstr "hex"
 
 #: src/tools.py:471
 msgctxt "search keyword"
 msgid "hsl"
-msgstr ""
+msgstr "hsl"
 
 #: src/tools.py:472
 msgctxt "search keyword"
 msgid "hsv"
-msgstr ""
+msgstr "hsv"
 
 #: src/tools.py:473
 msgctxt "search keyword"
 msgid "cmyk"
-msgstr ""
+msgstr "cmyk"
 
 #: src/tools.py:475
-#, fuzzy
 msgctxt "search keyword"
 msgid "conversion"
-msgstr "Verze"
+msgstr "převod"
 
 #: src/tools.py:476
 msgctxt "search keyword"
 msgid "palette"
-msgstr ""
+msgstr "paleta"
 
 #: src/tools.py:480 src/ui/views/contrast_checker.blp:19
 msgid "Contrast Checker"
@@ -1012,13 +955,12 @@ msgstr "Zkontrolujte, zda barevná kombinace vyhovuje WCAG"
 #: src/tools.py:485
 msgctxt "search keyword"
 msgid "accessibility"
-msgstr ""
+msgstr "přístupnost"
 
 #: src/tools.py:486
-#, fuzzy
 msgctxt "search keyword"
 msgid "ratio"
-msgstr "Informace"
+msgstr "poměr"
 
 #: src/tools.py:490
 msgid "Color Blindness"
@@ -1029,39 +971,34 @@ msgid "Simulate color blindness in images"
 msgstr "Simulujte barevnou slepotu na obrázcích"
 
 #: src/tools.py:495
-#, fuzzy
 msgctxt "search keyword"
 msgid "simulation"
-msgstr "Načítání simulace..."
+msgstr "simulace"
 
 #: src/tools.py:496
 msgctxt "search keyword"
 msgid "daltonism"
-msgstr ""
+msgstr "daltonismus"
 
 #: src/tools.py:497
-#, fuzzy
 msgctxt "search keyword"
 msgid "protanopia"
-msgstr "Protanopie"
+msgstr "protanopie"
 
 #: src/tools.py:498
-#, fuzzy
 msgctxt "search keyword"
 msgid "deuteranopia"
-msgstr "Deuteranopie"
+msgstr "deuteranopie"
 
 #: src/tools.py:499
-#, fuzzy
 msgctxt "search keyword"
 msgid "tritanopia"
-msgstr "Tritanopie"
+msgstr "tritanopie"
 
 #: src/tools.py:500
-#, fuzzy
 msgctxt "search keyword"
 msgid "vision"
-msgstr "Verze"
+msgstr "vidění"
 
 #: src/tools.py:504 src/ui/views/image_converter.blp:19
 msgid "Image Format Converter"
@@ -1074,37 +1011,37 @@ msgstr "Převeďte obrázky do různých formátů"
 #: src/tools.py:510
 msgctxt "search keyword"
 msgid "jpg"
-msgstr ""
+msgstr "jpg"
 
 #: src/tools.py:511
 msgctxt "search keyword"
 msgid "jpeg"
-msgstr ""
+msgstr "jpeg"
 
 #: src/tools.py:512
 msgctxt "search keyword"
 msgid "png"
-msgstr ""
+msgstr "png"
 
 #: src/tools.py:513
 msgctxt "search keyword"
 msgid "bmp"
-msgstr ""
+msgstr "bmp"
 
 #: src/tools.py:514
 msgctxt "search keyword"
 msgid "gif"
-msgstr ""
+msgstr "gif"
 
 #: src/tools.py:515
 msgctxt "search keyword"
 msgid "webp"
-msgstr ""
+msgstr "webp"
 
 #: src/tools.py:516
 msgctxt "search keyword"
 msgid "picture"
-msgstr ""
+msgstr "obrázek"
 
 #: src/tools.py:522 src/ui/views/certificate_parser.blp:19
 msgid "Certificate Parser"
@@ -1119,15 +1056,14 @@ msgid "View certificates contents"
 msgstr "Zobrazení obsahu certifikátů"
 
 #: src/tools.py:532 src/tools.py:549
-#, fuzzy
 msgctxt "search keyword"
 msgid "key"
-msgstr "Klíč"
+msgstr "klíč"
 
 #: src/tools.py:534
 msgctxt "search keyword"
 msgid "public key"
-msgstr ""
+msgstr "veřejný klíč"
 
 #: src/tools.py:539
 msgid "Certificate Signing Request"
@@ -1439,21 +1375,23 @@ msgstr ""
 
 #: src/views/jwt_decoder.py:173
 msgid "Signature is Valid!"
-msgstr ""
+msgstr "Podpis je platný!"
 
 #: src/views/jwt_decoder.py:175
 msgid "The JWT signature was verified successfully."
-msgstr ""
+msgstr "Podpis JWT byl úspěšně ověřen."
 
 #: src/views/jwt_decoder.py:183
 msgid "Warning, Signature is Invalid!"
-msgstr ""
+msgstr "Varování, podpis je neplatný!"
 
 #: src/views/jwt_decoder.py:186
 msgid ""
 "The JWT signature doesn't match the provided key. Please verify the key "
 "encoding or ensure the token was signed correctly."
 msgstr ""
+"Podpis JWT neodpovídá poskytnutému klíči. Ověřte prosím kódování klíče nebo "
+"se ujistěte, že byl token správně podepsán."
 
 #: src/views/qrcode_generator.py:71 src/ui/views/qrcode_generator.blp:113
 #: src/ui/views/qrcode_generator.blp:122
@@ -1655,13 +1593,12 @@ msgid "_About Dev Toolbox"
 msgstr "O aplikaci Dev Toolbox"
 
 #: src/ui/about_dialog.blp:10
-#, fuzzy
 msgid ""
 "Copyright © 2022 - 2025 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
-"Copyright © 2022 - 2024 Alessandro Iepure\n"
-"Některé ikony jsou chráněny autorským právem projektu GNOME"
+"Copyright © 2022 – 2025 Alessandro Iepure\n"
+"Některé ikony jsou chráněny autorskými právy projektu GNOME"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
 #: src/ui/about_dialog.blp:18
@@ -1742,7 +1679,7 @@ msgstr "Otevřít webovou stránku v jiném prohlížeči"
 
 #: src/ui/views/base_converter.blp:19
 msgid "Number Bases Converter"
-msgstr "Převod číselných základů"
+msgstr "Převod číselných soustav"
 
 #: src/ui/views/base_converter.blp:30
 msgid "Input numbers"
@@ -1762,15 +1699,15 @@ msgstr "Osmičková"
 
 #: src/ui/views/base_converter.blp:57
 msgid "Hexadecimal"
-msgstr "Hexadecimální"
+msgstr "Šestnáctková"
 
 #: src/ui/views/base_converter.blp:65
 msgid "ASCII"
-msgstr ""
+msgstr "ASCII"
 
 #: src/ui/views/base_converter.blp:73
 msgid "UTF-8"
-msgstr ""
+msgstr "UTF-8"
 
 #: src/ui/views/base_converter.blp:98
 msgid ""
@@ -1780,14 +1717,12 @@ msgstr ""
 "Zadání špatného znaku (např. \"A\" do pole) způsobí reset všech polí na 0."
 
 #: src/ui/views/base64_encoder.blp:19
-#, fuzzy
 msgid "Base64 Encoder & Decoder"
-msgstr "Kodér a dekodér URL"
+msgstr "Kodér a dekodér Base64"
 
 #: src/ui/views/base64_encoder.blp:20
-#, fuzzy
 msgid "Encode and decode strings using the Base64 format"
-msgstr "Kódování a dekódování speciálních znaků pomocí formátu HTML"
+msgstr "Kódování a dekódování speciálních znaků pomocí formátu Base64"
 
 #: src/ui/views/base64_encoder.blp:30 src/ui/views/certificate_parser.blp:30
 #: src/ui/views/colorblindness_simulator.blp:31
@@ -1825,11 +1760,11 @@ msgstr "Dekódovat"
 
 #: src/ui/views/base64_encoder.blp:51
 msgid "URL Safe"
-msgstr ""
+msgstr "Bezpečný k URL"
 
 #: src/ui/views/base64_encoder.blp:52
 msgid "Use URL safe Base64 processing"
-msgstr ""
+msgstr "Použít zpracování Base64 bezpečné k URL"
 
 #: src/ui/views/base64_encoder.blp:68 src/ui/views/gzip_compressor.blp:63
 #: src/ui/views/hash_generator.blp:83 src/ui/views/html_encoder.blp:64
@@ -1917,7 +1852,6 @@ msgid "New"
 msgstr "Nový"
 
 #: src/ui/views/certificate_request_generator.blp:92
-#, fuzzy
 msgid "Existing"
 msgstr "Existující"
 
@@ -1959,7 +1893,7 @@ msgstr "Oprávnění"
 
 #: src/ui/views/chmod_calculator.blp:45
 msgid "Special"
-msgstr ""
+msgstr "Zvláštní"
 
 #: src/ui/views/chmod_calculator.blp:145
 msgid "Owner"
@@ -2023,118 +1957,112 @@ msgid "Tritanopia"
 msgstr "Tritanopie"
 
 #: src/ui/views/color_converter.blp:30
-#, fuzzy
 msgid "Format"
 msgstr "Formát"
 
 #: src/ui/views/color_converter.blp:31
-#, fuzzy
 msgid "Output format for color values"
-msgstr "Výstupní formát"
+msgstr "Výstupní formát pro hodnoty barev"
 
 #: src/ui/views/color_converter.blp:36
 msgid "Web"
-msgstr ""
+msgstr "Web"
 
 #: src/ui/views/color_converter.blp:37
 msgid "Web (Legacy)"
-msgstr ""
+msgstr "Web (zastaralý)"
 
 #: src/ui/views/color_converter.blp:38
 msgid "Percent"
-msgstr ""
+msgstr "Procento"
 
 #: src/ui/views/color_converter.blp:39
 msgid "Normalized"
-msgstr ""
+msgstr "Normalizované"
 
 #: src/ui/views/color_converter.blp:46
 msgid "Angle Unit"
-msgstr ""
+msgstr "Jednotka úhlu"
 
 #: src/ui/views/color_converter.blp:47
 msgid "Unit used for angle component"
-msgstr ""
+msgstr "Jednotka použitá pro součást úhlu"
 
 #: src/ui/views/color_converter.blp:52
 msgid "Degrees"
-msgstr ""
+msgstr "Stupně"
 
 #: src/ui/views/color_converter.blp:53
 msgid "Radians"
-msgstr ""
+msgstr "Radiány"
 
 #: src/ui/views/color_converter.blp:54
 msgid "Gradians"
-msgstr ""
+msgstr "Grady"
 
 #: src/ui/views/color_converter.blp:55
 msgid "Turns"
-msgstr ""
+msgstr "Turny"
 
 #: src/ui/views/color_converter.blp:56
-#, fuzzy
 msgid "Follow Format"
-msgstr "Formát"
+msgstr "Následovat formát"
 
 #: src/ui/views/color_converter.blp:62
 msgid "Bits"
-msgstr ""
+msgstr "Bity"
 
 #: src/ui/views/color_converter.blp:63
 msgid "Bits precision for color values"
-msgstr ""
+msgstr "Přesnost na bity pro hodnoty barev"
 
 #: src/ui/views/color_converter.blp:82
 msgid "Values"
-msgstr ""
+msgstr "Hodnoty"
 
 #: src/ui/views/color_converter.blp:85 src/ui/views/color_converter.blp:97
 msgid "Color"
-msgstr ""
+msgstr "Barva"
 
 #: src/ui/views/color_converter.blp:103
 msgid "Hex"
-msgstr ""
+msgstr "Hex"
 
 #: src/ui/views/color_converter.blp:128
-#, fuzzy
 msgid "Red"
-msgstr "Čtení"
+msgstr "Červená"
 
 #: src/ui/views/color_converter.blp:136
 msgid "Green"
-msgstr ""
+msgstr "Zelená"
 
 #: src/ui/views/color_converter.blp:144
 msgid "Blue"
-msgstr ""
+msgstr "Modrá"
 
 #: src/ui/views/color_converter.blp:168 src/ui/views/color_converter.blp:208
 msgid "Hue"
-msgstr ""
+msgstr "Odstín"
 
 #: src/ui/views/color_converter.blp:176 src/ui/views/color_converter.blp:216
-#, fuzzy
 msgid "Saturation"
-msgstr "Sobota"
+msgstr "Sytost"
 
 #: src/ui/views/color_converter.blp:184
 msgid "Value"
-msgstr ""
+msgstr "Hodnota"
 
 #: src/ui/views/color_converter.blp:224
-#, fuzzy
 msgid "Lightness"
-msgstr "Světlý motiv"
+msgstr "Jas"
 
 #: src/ui/views/color_converter.blp:234
 msgid "Alpha"
-msgstr ""
+msgstr "Alfa"
 
 #: src/ui/views/color_converter.blp:265
 msgid "HWB"
-msgstr ""
+msgstr "HWB"
 
 #: src/ui/views/contrast_checker.blp:33 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
@@ -2202,7 +2130,7 @@ msgstr ""
 
 #: src/ui/views/cron_converter.blp:76
 msgid "CRON expression"
-msgstr "výraz CRON"
+msgstr "Výraz CRON"
 
 #: src/ui/views/cron_converter.blp:89
 msgid "Dates"
@@ -2280,7 +2208,7 @@ msgstr "Zadejte hash, proti kterému chcete zkontrolovat"
 
 #: src/ui/views/html_encoder.blp:19
 msgid "HTML Encoder & Decoder"
-msgstr "HTML kodér a dekodér"
+msgstr "Kodér a dekodér HTML"
 
 #: src/ui/views/image_converter.blp:34
 msgctxt "noun"
@@ -2304,9 +2232,8 @@ msgid "converted-image"
 msgstr "konvertovaný obrázek"
 
 #: src/ui/views/json_validator.blp:49
-#, fuzzy
 msgid "JSON Schema"
-msgstr "Validátor schématu JSON"
+msgstr "Schéma JSON"
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
@@ -2318,54 +2245,51 @@ msgstr "Určete, jaký formát je vstup a požadovaný výstup"
 
 #: src/ui/views/json_yaml.blp:42
 msgid "JSON → YAML"
-msgstr ""
+msgstr "JSON → YAML"
 
 #: src/ui/views/json_yaml.blp:46
 msgid "YAML → JSON"
-msgstr ""
+msgstr "YAML → JSON"
 
 #: src/ui/views/jwt_decoder.blp:19
-#, fuzzy
 msgid "JWT Decode & Encode"
-msgstr "HTML kodér a dekodér"
+msgstr "Kodér a dekodér JWT"
 
 #: src/ui/views/jwt_decoder.blp:32
 msgid "Verify Signature"
-msgstr ""
+msgstr "Ověřit podpis"
 
 #: src/ui/views/jwt_decoder.blp:33
 msgid "Verify signature or sign JWT"
-msgstr ""
+msgstr "Ověřit podpis nebo podepsat JWT"
 
 #: src/ui/views/jwt_decoder.blp:41
 msgid "Off"
-msgstr ""
+msgstr "Vypnuto"
 
 #: src/ui/views/jwt_decoder.blp:46
 msgid "Symmetric"
-msgstr ""
+msgstr "Symetrické"
 
 #: src/ui/views/jwt_decoder.blp:51
 msgid "Asymmetric"
-msgstr ""
+msgstr "Asymetrické"
 
 #: src/ui/views/jwt_decoder.blp:57
-#, fuzzy
 msgid "Key Encoding"
-msgstr "Kódování mezer"
+msgstr "Kódování klíče"
 
 #: src/ui/views/jwt_decoder.blp:58
-#, fuzzy
 msgid "Select the encoding of the key"
-msgstr "Vyberte požadované kódování pro znak mezery"
+msgstr "Vyberte kódování klíče"
 
 #: src/ui/views/jwt_decoder.blp:99
 msgid "Public Key (PEM)"
-msgstr ""
+msgstr "Veřejný klíč (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:107
 msgid "Private Key (PEM)"
-msgstr ""
+msgstr "Soukromý klíč (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:120
 msgid "Token"
@@ -2748,7 +2672,7 @@ msgstr "Příkaz k provedení"
 
 #: src/ui/views/reverse_cron.blp:737
 msgid "CRON Expression"
-msgstr "výraz CRON"
+msgstr "Výraz CRON"
 
 #: src/ui/views/text_diff.blp:33
 msgid "Old Text"
