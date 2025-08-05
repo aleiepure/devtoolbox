@@ -38,7 +38,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <file preprocess="xml-stripblanks">ui/views/base64_encoder.ui</file>
     <file preprocess="xml-stripblanks">ui/views/html_encoder.ui</file>
     <file preprocess="xml-stripblanks">ui/views/url_encoder.ui</file>
-    <file preprocess="xml-stripblanks">ui/views/gzip_compressor.ui</file>
+    <file preprocess="xml-stripblanks">ui/views/compressor.ui</file>
     <file preprocess="xml-stripblanks">ui/views/jwt_decoder.ui</file>
     <file preprocess="xml-stripblanks">ui/views/formatter.ui</file>
     <file preprocess="xml-stripblanks">ui/views/hash_generator.ui</file>

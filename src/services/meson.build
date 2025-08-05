@@ -12,7 +12,7 @@ sources = [
   'base64_encoder.py',
   'html_encoder.py',
   'url_encoder.py',
-  'gzip_compressor.py',
+  'compressor.py',
   'jwt_decoder.py',
   'hash_generator.py',
   'lorem_generator.py',

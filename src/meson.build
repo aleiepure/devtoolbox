@@ -20,7 +20,7 @@ blueprints = custom_target('blueprints',
     'ui/views/base64_encoder.blp',
     'ui/views/html_encoder.blp',
     'ui/views/url_encoder.blp',
-    'ui/views/gzip_compressor.blp',
+    'ui/views/compressor.blp',
     'ui/views/contrast_checker.blp',
     'ui/views/color_converter.blp',
     'ui/views/base_converter.blp',
@@ -102,6 +102,7 @@ subdir('widgets')
 subdir('views')
 subdir('services')
 subdir('formatters')
+subdir('compressors')
 
 devtoolbox_sources = [
   '__init__.py',

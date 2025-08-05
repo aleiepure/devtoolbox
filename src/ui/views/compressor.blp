@@ -4,7 +4,7 @@
 using Gtk 4.0;
 using Adw 1;
 
-template $GzipCompressorView: Adw.Bin {
+template $CompressorView: Adw.Bin {
   Adw.ToastOverlay _toast {
     child: ScrolledWindow {
       child: Adw.Clamp {
@@ -15,11 +15,7 @@ template $GzipCompressorView: Adw.Bin {
         child: Box {
           orientation: vertical;
 
-          $UtilityTitle _title {
-            title: _("GZip Compress & Decompress");
-            description: _("Compress and decompress texts and images using GZip");
-            tool-name: "gzip-compressor";
-          }
+          $UtilityTitle _title {}
 
           Separator {
             margin-top: 10;
@@ -37,7 +33,7 @@ template $GzipCompressorView: Adw.Bin {
               [suffix]
               Adw.ToggleGroup _direction_selector {
                 valign: center;
-                notify::active => $_on_direction_changed();
+                notify::active => $_on_direction_changed_signal();
 
                 Adw.Toggle {
                   label: _("Compress");
@@ -67,6 +63,12 @@ template $GzipCompressorView: Adw.Bin {
               use-default-text-extensions: true;
               use-default-image-extensions: true;
               text-wrap-mode: "word-char";
+
+              text-changed => $_on_input_changed_signal();
+              image-loaded => $_on_input_changed_signal();
+              file-loaded => $_on_input_changed_signal();
+              error => $_on_error_signal();
+              view-cleared => $_on_view_cleared_signal();
             }
 
             $TextFileArea _output_area {
@@ -79,6 +81,9 @@ template $GzipCompressorView: Adw.Bin {
               allow-drag-and-drop: false;
               text-wrap-mode: "char";
               default-save-name: "decompressed-image.png";
+
+              error => $_on_error_signal();
+              saved => $_on_file_saved_signal();
             }
           }
 

@@ -168,14 +168,39 @@ TOOLS_METADATA = {
         "icon-name": "shoe-box-symbolic",
         "tooltip": _("Compress and decompress files and texts using GZip"),
         "keywords": [
-            C_("search keyword", "unarchive"),
+            C_("search keyword", "gzip"),
+            C_("search keyword", "compression"),
+            C_("search keyword", "archive"),
             C_("search keyword", "file"),
             C_("search keyword", "text"),
-            C_("search keyword", "string"),
-            C_("search keyword", "zip"),
-            C_("search keyword", "unzip"),
-            C_("search keyword", "decompression"),
-            C_("search keyword", "decompressor")
+        ]
+    },
+    "lzma-compressor": {
+        "title": "LZMA",
+        "category": _("Encoders & Decoders"),
+        "icon-name": "shoe-box-symbolic",
+        "tooltip": _("Compress and decompress files and texts using LZMA"),
+        "keywords": [
+            C_("search keyword", "lzma"),
+            C_("search keyword", "xz"),
+            C_("search keyword", "compression"),
+            C_("search keyword", "archive"),
+            C_("search keyword", "file"),
+            C_("search keyword", "text"),
+        ]
+    },
+    "bz2-compressor": {
+        "title": "Bzip2",
+        "category": _("Encoders & Decoders"),
+        "icon-name": "shoe-box-symbolic",
+        "tooltip": _("Compress and decompress files and texts using Bzip2"),
+        "keywords": [
+            C_("search keyword", "bzip2"),
+            C_("search keyword", "bz2"),
+            C_("search keyword", "compression"),
+            C_("search keyword", "archive"),
+            C_("search keyword", "file"),
+            C_("search keyword", "text"),
         ]
     },
     "jwt-decoder": {
@@ -594,8 +619,17 @@ def get_tools_for_ui() -> dict:
                 from .views.url_encoder import UrlEncoderView
                 tools_with_ui[tool_id]["child"] = UrlEncoderView()
             case "gzip-compressor":
-                from .views.gzip_compressor import GzipCompressorView
-                tools_with_ui[tool_id]["child"] = GzipCompressorView()
+                from .views.compressor import CompressorView
+                from .compressors.gzip_compressor import GzipCompressor
+                tools_with_ui[tool_id]["child"] = CompressorView(GzipCompressor())
+            case "lzma-compressor":
+                from .views.compressor import CompressorView
+                from .compressors.lzma_compressor import LzmaCompressor
+                tools_with_ui[tool_id]["child"] = CompressorView(LzmaCompressor())
+            case "bz2-compressor":
+                from .views.compressor import CompressorView
+                from .compressors.bz2_compressor import Bz2Compressor
+                tools_with_ui[tool_id]["child"] = CompressorView(Bz2Compressor())
             case "jwt-decoder":
                 from .views.jwt_decoder import JwtDecoderView
                 tools_with_ui[tool_id]["child"] = JwtDecoderView()
