@@ -1,11 +1,11 @@
 {
-    "id" : "me.iepure.devtoolbox",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "48",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "devtoolbox",
+    "id": "me.iepure.devtoolbox",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "48",
+    "sdk": "org.gnome.Sdk",
+    "command": "devtoolbox",
     "separate-locales": false,
-    "finish-args" : [
+    "finish-args": [
         "--share=network",
         "--share=ipc",
         "--socket=fallback-x11",
@@ -14,7 +14,7 @@
         "--talk-name=org.gtk.vfs.*",
         "--filesystem=xdg-run/gvfsd"
     ],
-    "cleanup" : [
+    "cleanup": [
         "/include",
         "/lib/pkgconfig",
         "/man",
@@ -25,24 +25,26 @@
         "*.la",
         "*.a"
     ],
-    "modules" : [
+    "modules": [
         "pypi-dependencies.json",
         {
             "name": "blueprint-compiler",
             "buildsystem": "meson",
-            "cleanup": ["*"],
+            "cleanup": [
+                "*"
+            ],
             "sources": [
                 {
-                "type": "git",
-                "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-                "tag": "v0.16.0"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/blueprint-compiler",
+                    "tag": "v0.18.0"
                 }
-	        ]
-	    },
+            ]
+        },
         {
-            "name" : "devtoolbox",
-            "builddir" : true,
-            "buildsystem" : "meson",
+            "name": "devtoolbox",
+            "builddir": true,
+            "buildsystem": "meson",
             "post-install": [
                 "mv /app/bin/devtoolbox /app/bin/devtoolbox-bin",
                 "install -Dm755 /app/devtoolbox/devtoolbox-run-script /app/bin/devtoolbox"

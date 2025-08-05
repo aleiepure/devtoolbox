@@ -9,14 +9,15 @@ from typing import List
 TOOLS_METADATA = {
     # Converters
     "json-yaml": {
-        "title": "JSON - YAML",
+        "title": "JSON - YAML - TOML",
         "category": _("Converters"),
         "icon-name": "horizontal-arrows-symbolic",
-        "tooltip": _("Convert JSON documents to YAML and vice-versa"),
+        "tooltip": _("Convert between JSON, YAML, and TOML formats"),
         "keywords": [
             "json",
             "yaml",
             "yml",
+            "toml",
             C_("search keyword", "parse"),
             C_("search keyword", "converter"),
             C_("search keyword", "convert"),
@@ -567,8 +568,8 @@ def get_tools_for_ui() -> dict:
             
             # Converters
             case "json-yaml":
-                from .views.json_yaml import JsonYamlView
-                tools_with_ui[tool_id]["child"] = JsonYamlView()
+                from .views.json_yaml_toml import JsonYamlTomlView
+                tools_with_ui[tool_id]["child"] = JsonYamlTomlView()
             case "timestamp":
                 from .views.timestamp import TimestampView
                 tools_with_ui[tool_id]["child"] = TimestampView()

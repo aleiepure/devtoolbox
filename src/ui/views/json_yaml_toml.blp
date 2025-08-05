@@ -16,8 +16,8 @@ template $JsonYamlView: Adw.Bin {
           orientation: vertical;
 
           $UtilityTitle _title {
-            title: _("JSON - YAML Converter");
-            description: _("Convert JSON documents to YAML and vice-versa");
+            title: _("JSON - YAML - TOML Converter");
+            description: _("Convert between JSON, YAML, and TOML formats");
             tool-name: "json-yaml";
           }
 
@@ -30,20 +30,57 @@ template $JsonYamlView: Adw.Bin {
             title: _("Tool options");
 
             Adw.ActionRow {
-              title: _("Direction");
-              subtitle: _("Specify what format is the input and the desired output");
-              icon-name: "horizontal-arrows-symbolic";
+              title: _("Input format");
+              subtitle: _("Select the format of your input data");
+              icon-name: "go-next-symbolic";
 
               [suffix]
-              Adw.ToggleGroup _direction_selector {
+              Adw.ToggleGroup _input_format_selector {
                 valign: center;
+                active: 0;
+                notify::active => $_on_format_changed_signal();
                 
                 Adw.Toggle {
-                  label: _("JSON → YAML");
+                  label: "JSON";
+                  enabled: bind $_is_format_enabled_closure(_output_format_selector.active, 0) as <bool>;
                 }
 
                 Adw.Toggle {
-                  label: _("YAML → JSON");
+                  label: "YAML";
+                  enabled: bind $_is_format_enabled_closure(_output_format_selector.active, 1) as <bool>;
+                }
+
+                Adw.Toggle {
+                  label: "TOML";
+                  enabled: bind $_is_format_enabled_closure(_output_format_selector.active, 2) as <bool>;
+                }
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Output format");
+              subtitle: _("Select the desired output format");
+              icon-name: "go-previous-symbolic";
+
+              [suffix]
+              Adw.ToggleGroup _output_format_selector {
+                valign: center;
+                active: 1;
+                notify::active => $_on_format_changed_signal();
+
+                Adw.Toggle {
+                  label: "JSON";
+                  enabled: bind $_is_format_enabled_closure(_input_format_selector.active, 0) as <bool>;
+                }
+
+                Adw.Toggle {
+                  label: "YAML";
+                  enabled: bind $_is_format_enabled_closure(_input_format_selector.active, 1) as <bool>;
+                }
+
+                Adw.Toggle {
+                  label: "TOML";
+                  enabled: bind $_is_format_enabled_closure(_input_format_selector.active, 2) as <bool>;
                 }
               }
             }
@@ -52,6 +89,7 @@ template $JsonYamlView: Adw.Bin {
               title: _("Indentations");
               subtitle: _("Number of spaces used for indentation");
               icon-name: "format-indent-more-symbolic";
+              changed => $_on_input_changed_signal();
 
               adjustment: Adjustment {
                 lower: 2;
@@ -82,6 +120,10 @@ template $JsonYamlView: Adw.Bin {
               text-syntax-highlighting: true;
               text-wrap-mode: "none";
               text-highlight-current-line: true;
+
+              text-changed => $_on_input_changed_signal();
+              error => $_on_error_signal();
+              view-cleared => $_on_view_cleared_signal();
             }
 
             $TextArea _output_area {
@@ -95,6 +137,8 @@ template $JsonYamlView: Adw.Bin {
               text-show-line-numbers: true;
               text-syntax-highlighting: true;
               text-wrap-mode: "none";
+
+              error => $_on_error_signal();
             }
           }
         };

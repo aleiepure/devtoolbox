@@ -14,6 +14,7 @@ import jwt
 import re
 from jsonschema.protocols import Validator
 from jsonschema.exceptions import SchemaError
+import tomllib
 
 
 class Bases(Enum):
@@ -143,6 +144,13 @@ class Utils:
             return True
         except Exception as e:
             print(e)
+            return False
+
+    def is_toml(text: str) -> bool:
+        try:
+            tomllib.loads(text)
+            return True
+        except tomllib.TOMLDecodeError:
             return False
 
     @staticmethod

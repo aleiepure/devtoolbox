@@ -7,7 +7,7 @@ servicesdir = join_paths(pkgdatadir, 'devtoolbox/services')
 
 sources = [
   '__init__.py',
-  'json_yaml.py',
+  'json_yaml_toml.py',
   'cron_converter.py',
   'base64_encoder.py',
   'html_encoder.py',

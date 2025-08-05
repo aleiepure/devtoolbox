@@ -9,7 +9,7 @@ gnome = import('gnome')
 blueprints = custom_target('blueprints',
   input: files(
     'ui/gtk/help-overlay.blp',
-    'ui/views/json_yaml.blp',
+    'ui/views/json_yaml_toml.blp',
     'ui/views/jwt_decoder.blp',
     'ui/views/markdown_preview.blp',
     'ui/views/regex_tester.blp',
