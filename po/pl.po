@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-06-11 15:01+0000\n"
-"Last-Translator: Eryk Michalak <gnu.ewm@protonmail.com>\n"
+"PO-Revision-Date: 2025-08-09 14:02+0000\n"
+"Last-Translator: Oskar Karpiński <karpinski.oskar@proton.me>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/pl/>\n"
 "Language: pl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -38,6 +38,12 @@ msgid ""
 "Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;"
 "Lorem;Ipsum;"
 msgstr ""
+"JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;Weryfikuj;Zweryfikować;Konwersta;Przekonwertuj;"
+"Sygnatura "
+"czasowa;bmp;gif;icns;jpeg;png;tiff;webp;Obraz;Base;Walidator;CRON;GZip;Kompresja;Dekompresja;"
+"Suma "
+"kontrolna;Regex;Porównaj;URL;Minify;Generator;Generuj;UUID;Random;QR;chmod;Kontrast;Kolor;Tekst;Różnica;Case;Markdown;Podgląd;Lorem;Ipsum;"
+""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -114,10 +120,9 @@ msgid "parse"
 msgstr ""
 
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
-#, fuzzy
 msgctxt "search keyword"
 msgid "converter"
-msgstr "Konwertery"
+msgstr "Konwerter"
 
 #: src/tools.py:22 src/tools.py:46 src/tools.py:74 src/tools.py:96
 #: src/tools.py:114 src/tools.py:394
@@ -136,24 +141,23 @@ msgstr "Format"
 #: src/tools.py:446
 msgctxt "search keyword"
 msgid "document"
-msgstr ""
+msgstr "dokument"
 
 #: src/tools.py:25
 msgctxt "search keyword"
 msgid "spaces"
-msgstr ""
+msgstr "spacje"
 
 #: src/tools.py:26
-#, fuzzy
 msgctxt "search keyword"
 msgid "indentation"
-msgstr "Wcięcia"
+msgstr "wcięcia"
 
 #: src/tools.py:27 src/tools.py:204 src/tools.py:217 src/tools.py:231
 #: src/tools.py:245 src/tools.py:261 src/tools.py:274
 msgctxt "search keyword"
 msgid "indent"
-msgstr ""
+msgstr "wcięcie"
 
 #: src/tools.py:31 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
@@ -171,101 +175,92 @@ msgstr ""
 #: src/tools.py:37 src/tools.py:97 src/tools.py:115
 msgctxt "search keyword"
 msgid "time"
-msgstr ""
+msgstr "czas"
 
 #: src/tools.py:40
 msgctxt "search keyword"
 msgid "datetime"
-msgstr ""
+msgstr "data i godzina"
 
 #: src/tools.py:41
 msgctxt "search keyword"
 msgid "calendar"
-msgstr ""
+msgstr "kalendarz"
 
 #: src/tools.py:42
-#, fuzzy
 msgctxt "search keyword"
 msgid "timestamp"
-msgstr "Znacznik czasowy"
+msgstr "znacznik czasowy"
 
 #: src/tools.py:44 src/tools.py:98 src/tools.py:116
 msgctxt "search keyword"
 msgid "date"
-msgstr ""
+msgstr "data"
 
 #: src/tools.py:48
 msgctxt "search keyword"
 msgid "short"
-msgstr ""
+msgstr "krótki"
 
 #: src/tools.py:49
 msgctxt "search keyword"
 msgid "long"
-msgstr ""
+msgstr "długi"
 
 #: src/tools.py:52
 msgctxt "search keyword"
 msgid "year"
-msgstr ""
+msgstr "rok"
 
 #: src/tools.py:53
-#, fuzzy
 msgctxt "search keyword"
 msgid "month"
-msgstr "Miesiąc"
+msgstr "miesiąc"
 
 #: src/tools.py:54
-#, fuzzy
 msgctxt "search keyword"
 msgid "day"
-msgstr "Maj"
+msgstr "dzień"
 
 #: src/tools.py:55
 msgctxt "search keyword"
 msgid "hour"
-msgstr ""
+msgstr "godzina"
 
 #: src/tools.py:56
-#, fuzzy
 msgctxt "search keyword"
 msgid "hours"
-msgstr "Godziny"
+msgstr "godzin"
 
 #: src/tools.py:57
-#, fuzzy
 msgctxt "search keyword"
 msgid "minute"
-msgstr "Minuty"
+msgstr "minuta"
 
 #: src/tools.py:58
-#, fuzzy
 msgctxt "search keyword"
 msgid "minutes"
-msgstr "Minuty"
+msgstr "minut"
 
 #: src/tools.py:59
-#, fuzzy
 msgctxt "search keyword"
 msgid "second"
-msgstr "Sekundy"
+msgstr "sekund"
 
 #: src/tools.py:60
-#, fuzzy
 msgctxt "search keyword"
 msgid "seconds"
-msgstr "Sekundy"
+msgstr "sekundy"
 
 #: src/tools.py:61
 msgctxt "search keyword"
 msgid "timezone"
-msgstr ""
+msgstr "strefa czasiwa"
 
 #: src/tools.py:62
-#, fuzzy
 msgctxt "search keyword"
 msgid "now"
-msgstr "Teraz"
+msgstr "teraz"
 
 #: src/tools.py:66
 msgid "Number Bases"
@@ -287,39 +282,34 @@ msgid "base"
 msgstr ""
 
 #: src/tools.py:75
-#, fuzzy
 msgctxt "search keyword"
 msgid "number"
-msgstr "Liczba"
+msgstr "liczba"
 
 #: src/tools.py:76
-#, fuzzy
 msgctxt "search keyword"
 msgid "binary"
-msgstr "Binarne"
+msgstr "binarne"
 
 #: src/tools.py:77
-#, fuzzy
 msgctxt "search keyword"
 msgid "octal"
-msgstr "Ósemkowe"
+msgstr "ósemkowe"
 
 #: src/tools.py:78
-#, fuzzy
 msgctxt "search keyword"
 msgid "decimal"
-msgstr "Dziesiętne"
+msgstr "dziesiętne"
 
 #: src/tools.py:79
-#, fuzzy
 msgctxt "search keyword"
 msgid "hexadecimal"
-msgstr "Szesnastkowe"
+msgstr "szesnastkowe"
 
 #: src/tools.py:80
 msgctxt "search keyword"
 msgid "integer"
-msgstr ""
+msgstr "liczba całkowita"
 
 #: src/tools.py:87 src/ui/views/cron_converter.blp:20
 msgid "CRON Parser"
@@ -332,7 +322,7 @@ msgstr "Konwersja wyrażeń CRON na czas i datę"
 #: src/tools.py:93 src/tools.py:111
 msgctxt "search keyword"
 msgid "schedule"
-msgstr ""
+msgstr "harmonogram"
 
 #: src/tools.py:94 src/tools.py:112
 msgctxt "search keyword"
@@ -340,10 +330,9 @@ msgid "parser"
 msgstr ""
 
 #: src/tools.py:95 src/tools.py:113 src/tools.py:410
-#, fuzzy
 msgctxt "search keyword"
 msgid "expression"
-msgstr "Pozwolenia"
+msgstr "wyrażenie"
 
 #: src/tools.py:99 src/tools.py:117
 msgctxt "search keyword"
@@ -381,22 +370,21 @@ msgstr ""
 #: src/tools.py:134 src/tools.py:145 src/tools.py:172
 msgctxt "search keyword"
 msgid "text"
-msgstr ""
+msgstr "tekst"
 
 #: src/tools.py:141
 msgid "Encode and decode base64 strings"
 msgstr "Kodowanie i dekodowanie ciągów base64"
 
 #: src/tools.py:144 src/tools.py:173
-#, fuzzy
 msgctxt "search keyword"
 msgid "string"
-msgstr "Ciąg tekstowy"
+msgstr "ciąg znaków"
 
 #: src/tools.py:146 src/tools.py:207 src/tools.py:235 src/tools.py:445
 msgctxt "search keyword"
 msgid "data"
-msgstr ""
+msgstr "data"
 
 #: src/tools.py:153 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
@@ -405,7 +393,7 @@ msgstr "Kodowanie i dekodowanie znaków specjalnych w adresach URL"
 #: src/tools.py:155
 msgctxt "search keyword"
 msgid "url"
-msgstr ""
+msgstr "url"
 
 #: src/tools.py:156
 msgctxt "search keyword"
@@ -415,23 +403,22 @@ msgstr ""
 #: src/tools.py:157 src/tools.py:249
 msgctxt "search keyword"
 msgid "web"
-msgstr ""
+msgstr "strona"
 
 #: src/tools.py:158
 msgctxt "search keyword"
 msgid "link"
-msgstr ""
+msgstr "link"
 
 #: src/tools.py:159
-#, fuzzy
 msgctxt "search keyword"
 msgid "address"
-msgstr "Adres"
+msgstr "adres"
 
 #: src/tools.py:160
 msgctxt "search keyword"
 msgid "uri"
-msgstr ""
+msgstr "uri"
 
 #: src/tools.py:161 src/tools.py:219
 msgctxt "search keyword"
@@ -450,7 +437,7 @@ msgstr ""
 #: src/tools.py:171 src/tools.py:365
 msgctxt "search keyword"
 msgid "file"
-msgstr ""
+msgstr "plik"
 
 #: src/tools.py:174
 msgctxt "search keyword"
@@ -498,23 +485,22 @@ msgstr ""
 #: src/tools.py:189
 msgctxt "search keyword"
 msgid "signature"
-msgstr ""
+msgstr "podpis"
 
 #: src/tools.py:190
-#, fuzzy
 msgctxt "search keyword"
 msgid "authentication"
-msgstr "Wcięcia"
+msgstr "uwierzytelnianie (authentication)"
 
 #: src/tools.py:191
 msgctxt "search keyword"
 msgid "authorization"
-msgstr ""
+msgstr "autoryzacja (authorization)"
 
 #: src/tools.py:192 src/tools.py:320 src/tools.py:533 src/tools.py:550
 msgctxt "search keyword"
 msgid "security"
-msgstr ""
+msgstr "zabezpieczenie"
 
 #: src/tools.py:199 src/tools.py:212 src/tools.py:226 src/tools.py:240
 #: src/tools.py:255 src/tools.py:269 src/tools.py:282 src/tools.py:296
@@ -544,7 +530,7 @@ msgstr "Formatowanie dokumentów SQL"
 #: src/tools.py:220
 msgctxt "search keyword"
 msgid "database"
-msgstr ""
+msgstr "baza danych"
 
 #: src/tools.py:221
 msgctxt "search keyword"
@@ -563,17 +549,16 @@ msgstr "Formatowanie dokumentów HTML"
 #: src/tools.py:301
 msgctxt "search keyword"
 msgid "minify"
-msgstr ""
+msgstr "minifikuj"
 
 #: src/tools.py:257 src/formatters/js.py:15
 msgid "Format JavaScript documents"
 msgstr "Formatowanie dokumentów JavaScript"
 
 #: src/tools.py:264 src/tools.py:306
-#, fuzzy
 msgctxt "search keyword"
 msgid "code"
-msgstr "Koduj"
+msgstr "kod"
 
 #: src/tools.py:271 src/formatters/css.py:14
 msgid "Format CSS documents"
@@ -582,40 +567,39 @@ msgstr "Formatowanie dokumentów CSS"
 #: src/tools.py:277 src/tools.py:289
 msgctxt "search keyword"
 msgid "stylesheet"
-msgstr ""
+msgstr "arkusz stylów"
 
 #: src/tools.py:281 src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
-msgstr ""
+msgstr "Minifikacja CSS"
 
 #: src/tools.py:284 src/formatters/css_minifier.py:15
 msgid "Minify CSS documents"
 msgstr "Zminimalizuj dokumenty CSS"
 
 #: src/tools.py:287 src/tools.py:302
-#, fuzzy
 msgctxt "search keyword"
 msgid "compress"
-msgstr "Dekompresuj"
+msgstr "kompresuj"
 
 #: src/tools.py:288
 msgctxt "search keyword"
 msgid "style"
-msgstr ""
+msgstr "styl"
 
 #: src/tools.py:290 src/tools.py:303
 msgctxt "search keyword"
 msgid "reduce"
-msgstr ""
+msgstr "redukuj"
 
 #: src/tools.py:291 src/tools.py:304
 msgctxt "search keyword"
 msgid "size"
-msgstr ""
+msgstr "rozmiar"
 
 #: src/tools.py:295 src/formatters/js_minifier.py:14
 msgid "JavaScript Minifier"
-msgstr ""
+msgstr "Minifikacja JavaScript"
 
 #: src/tools.py:298
 msgid "Minify JavaScript documents"
@@ -624,11 +608,11 @@ msgstr "Zminimalizuj dokumenty JavaScript"
 #: src/tools.py:305
 msgctxt "search keyword"
 msgid "script"
-msgstr ""
+msgstr "skrypt"
 
 #: src/tools.py:312
 msgid "Hash"
-msgstr ""
+msgstr "Suma kontrolna"
 
 #: src/tools.py:313 src/tools.py:326 src/tools.py:338 src/tools.py:349
 #: src/tools.py:361 src/tools.py:375
@@ -637,12 +621,12 @@ msgstr "Generatory"
 
 #: src/tools.py:315
 msgid "Calculate hashes and check for integrity"
-msgstr ""
+msgstr "Oblicz sumę kontrolną i sprawdź integralność"
 
 #: src/tools.py:317
 msgctxt "search keyword"
 msgid "checksum"
-msgstr ""
+msgstr "suma kontrolna"
 
 #: src/tools.py:318
 msgctxt "search keyword"
@@ -650,15 +634,14 @@ msgid "digest"
 msgstr ""
 
 #: src/tools.py:319
-#, fuzzy
 msgctxt "search keyword"
 msgid "generate"
-msgstr "Generuj"
+msgstr "generuj"
 
 #: src/tools.py:321 src/tools.py:535 src/tools.py:551
 msgctxt "search keyword"
 msgid "cryptography"
-msgstr ""
+msgstr "kryptografia"
 
 #: src/tools.py:328 src/ui/views/lorem_generator.blp:20
 msgid "Generate lorem ipsum placeholder text"
