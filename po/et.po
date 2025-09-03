@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-09-03 22:18+0000\n"
+"PO-Revision-Date: 2025-09-03 22:37+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
@@ -962,7 +962,7 @@ msgstr "Värvipimedus"
 
 #: src/tools.py:493 src/ui/views/colorblindness_simulator.blp:20
 msgid "Simulate color blindness in images"
-msgstr "Simuleeri pildisel värvipimedust"
+msgstr "Simuleeri pildi alusel värvipimedust"
 
 #: src/tools.py:495
 msgctxt "search keyword"
@@ -1211,12 +1211,12 @@ msgstr "Aegub: {expiration_date}"
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:163
 msgid "Basic Constraints"
-msgstr ""
+msgstr "Põhipiirangud"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:164
 msgid "Extended Key Usage"
-msgstr ""
+msgstr "Võtme laiendatud kasutus"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:165 src/views/certificate_parser.py:210
@@ -1226,7 +1226,7 @@ msgstr ""
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:166
 msgid "Key Usage"
-msgstr ""
+msgstr "Võtmekasutus"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:167
@@ -1236,17 +1236,17 @@ msgstr ""
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:171
 msgid "Extension"
-msgstr ""
+msgstr "Laiend"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:211
 msgid "Certificate Fingerprints"
-msgstr ""
+msgstr "Sertifikaadi sõrmejäljed"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:214
 msgid "Key Identifier"
-msgstr ""
+msgstr "Võtme identifitseerija"
 
 #: src/views/certificate_request_generator.py:40
 msgid "Open CSR"
@@ -1915,28 +1915,28 @@ msgstr "Värvipimeduse simulaator"
 
 #: src/ui/views/colorblindness_simulator.blp:34
 msgid "Severity"
-msgstr ""
+msgstr "Tõsidus"
 
 #: src/ui/views/colorblindness_simulator.blp:35
 msgid "Severity of the anomaly"
-msgstr ""
+msgstr "Anomaalia tõsidus"
 
 #: src/ui/views/colorblindness_simulator.blp:72
 #: src/ui/views/text_inspector.blp:41
 msgid "Original"
-msgstr ""
+msgstr "Alpilt"
 
 #: src/ui/views/colorblindness_simulator.blp:79
 msgid "Protanopia"
-msgstr ""
+msgstr "Protanoopia (punapimedus)"
 
 #: src/ui/views/colorblindness_simulator.blp:90
 msgid "Deuteranopia"
-msgstr ""
+msgstr "Deuteranopsia (puna-rohepimedus)"
 
 #: src/ui/views/colorblindness_simulator.blp:95
 msgid "Tritanopia"
-msgstr ""
+msgstr "Tritanoopia (sinipimedus)"
 
 #: src/ui/views/color_converter.blp:30
 msgid "Format"
@@ -2158,15 +2158,16 @@ msgstr ""
 
 #: src/ui/views/hash_generator.blp:19
 msgid "Hash Generator & Checker"
-msgstr ""
+msgstr "Räsideväärtuste arvutaja ja kontrollija"
 
 #: src/ui/views/hash_generator.blp:20
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
 msgstr ""
+"Arvuta MD5, SHA1, SHA256 ja SHA512 räsiväärtusi ja kontrolli andmeterviklust"
 
 #: src/ui/views/hash_generator.blp:34
 msgid "Hash to calculate"
-msgstr ""
+msgstr "Arvutatav räsiväärtus"
 
 #: src/ui/views/hash_generator.blp:35
 msgid "Choose the hash type to calculate"
@@ -2174,13 +2175,15 @@ msgstr "Vali kasutatav räsitüüp"
 
 #: src/ui/views/hash_generator.blp:53
 msgid "Check for integrity"
-msgstr ""
+msgstr "Kontrolli andmeterviklust"
 
 #: src/ui/views/hash_generator.blp:54
 msgid ""
 "If enabled the calculated hash will be checked against another provided hash "
 "to verify integrity"
 msgstr ""
+"Kui lülitad selle eelistuse sisse, siis arvutatud räsiväärtust "
+"kontrollitakse andmetervikluse nimel teise sisestatud räsiväärtusega"
 
 #: src/ui/views/hash_generator.blp:60
 msgid "Type the hash to check against"
