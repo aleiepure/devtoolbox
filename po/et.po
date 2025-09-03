@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-09-03 22:02+0000\n"
+"PO-Revision-Date: 2025-09-03 22:18+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
@@ -650,6 +650,7 @@ msgstr ""
 #: src/tools.py:340 src/ui/views/uuid_generator.blp:20
 msgid "Generate Universally Unique IDs (UUID)"
 msgstr ""
+"Loo universaalselt unikaalseid tunnuseid (Universally Unique IDs - UUID)"
 
 #: src/tools.py:343
 msgctxt "search keyword"
@@ -810,17 +811,17 @@ msgstr "Regulaaravaldise test"
 
 #: src/tools.py:408 src/ui/views/regex_tester.blp:20
 msgid "Find matching strings inside a text"
-msgstr ""
+msgstr "Leia tekstist sobivad vasted|sõnad|sõned"
 
 #: src/tools.py:411
 msgctxt "search keyword"
 msgid "pattern"
-msgstr ""
+msgstr "muster"
 
 #: src/tools.py:412
 msgctxt "search keyword"
 msgid "search"
-msgstr ""
+msgstr "otsing"
 
 #: src/tools.py:416 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
@@ -828,7 +829,7 @@ msgstr "Teksti erinevused"
 
 #: src/tools.py:419 src/ui/views/text_diff.blp:20
 msgid "Analyze two texts and find differences"
-msgstr ""
+msgstr "Analüüsi kahte teksti ja leia nende erinevused"
 
 #: src/tools.py:421
 msgctxt "search keyword"
@@ -939,11 +940,11 @@ msgstr ""
 
 #: src/tools.py:480 src/ui/views/contrast_checker.blp:19
 msgid "Contrast Checker"
-msgstr ""
+msgstr "Kontrastsuse kontrollija"
 
 #: src/tools.py:483 src/ui/views/contrast_checker.blp:20
 msgid "Check a color combination for WCAG compliance"
-msgstr ""
+msgstr "Kontrolli, kas värvikombinatsioon vastab WCAG-reeglitele"
 
 #: src/tools.py:485
 msgctxt "search keyword"
@@ -2063,31 +2064,33 @@ msgstr "Tausta jaoks kasutatud värv"
 
 #: src/ui/views/contrast_checker.blp:77
 msgid "Example"
-msgstr ""
+msgstr "Näide"
 
 #: src/ui/views/contrast_checker.blp:89
 msgid "Lorem ipsum dolor sit amet"
-msgstr ""
+msgstr "Parimad asjad maailmas ei ole asjad. (Jaagup Kreem)"
 
 #: src/ui/views/contrast_checker.blp:97
 msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
 msgstr ""
+"Üldiselt võttes on tänapäeval väärtuslik kõik see, mida ei saa guugeldada. ("
+"Valdur Mikita)"
 
 #: src/ui/views/contrast_checker.blp:118 src/ui/views/contrast_checker.blp:149
 msgid "AA"
-msgstr ""
+msgstr "AA"
 
 #: src/ui/views/contrast_checker.blp:126 src/ui/views/contrast_checker.blp:188
 msgid "small"
-msgstr ""
+msgstr "väike"
 
 #: src/ui/views/contrast_checker.blp:157 src/ui/views/contrast_checker.blp:219
 msgid "large"
-msgstr ""
+msgstr "suur"
 
 #: src/ui/views/contrast_checker.blp:180 src/ui/views/contrast_checker.blp:211
 msgid "AAA"
-msgstr ""
+msgstr "AAA"
 
 #: src/ui/views/cron_converter.blp:34
 msgid "Number of dates"
@@ -2282,31 +2285,31 @@ msgstr ""
 
 #: src/ui/views/lorem_generator.blp:19
 msgid "Lorem Ipsum Generator"
-msgstr ""
+msgstr "Lorem ipsumi koostaja"
 
 #: src/ui/views/lorem_generator.blp:34
 msgid "Begin with \"Lorem ipsum dolor sit amet\""
-msgstr ""
+msgstr "Lisa algusesse „Lorem ipsum dolor sit amet“"
 
 #: src/ui/views/lorem_generator.blp:40 src/ui/views/uuid_generator.blp:53
 msgid "Amount"
-msgstr ""
+msgstr "Maht"
 
 #: src/ui/views/lorem_generator.blp:54
 msgid "Words"
-msgstr ""
+msgstr "Sõna"
 
 #: src/ui/views/lorem_generator.blp:55
 msgid "Sentences"
-msgstr ""
+msgstr "Lauset"
 
 #: src/ui/views/lorem_generator.blp:56
 msgid "Paragraphs"
-msgstr ""
+msgstr "Lõiku"
 
 #: src/ui/views/lorem_generator.blp:69
 msgid "Generated text"
-msgstr ""
+msgstr "Koostatud tekst"
 
 #: src/ui/views/markdown_preview.blp:35
 msgid "Markdown"
@@ -2474,7 +2477,7 @@ msgstr "Number"
 
 #: src/ui/views/random_generator.blp:93
 msgid "Generate a random number in the given range"
-msgstr "Loo antud vahemikust juhuslik number"
+msgstr "Leia antud vahemikust juhuslik number"
 
 #: src/ui/views/random_generator.blp:96
 msgid "Minimum"
@@ -2482,7 +2485,7 @@ msgstr "Miinimum"
 
 #: src/ui/views/random_generator.blp:97
 msgid "Minimum value of the generated number"
-msgstr "Loodava numbri väikseim väärtus"
+msgstr "Leitava numbri väikseim väärtus"
 
 #: src/ui/views/random_generator.blp:109
 msgid "Maximum"
@@ -2490,11 +2493,11 @@ msgstr "Maksimum"
 
 #: src/ui/views/random_generator.blp:110
 msgid "Maximum value of the generated number"
-msgstr "Loodava numbri suurim väärtus"
+msgstr "Leitava numbri suurim väärtus"
 
 #: src/ui/views/random_generator.blp:159
 msgid "Generated number"
-msgstr "Loodud number"
+msgstr "Leitud number"
 
 #: src/ui/views/regex_tester.blp:19
 msgid "Regular Expression Tester"
@@ -2654,7 +2657,7 @@ msgstr "Uus tekst"
 
 #: src/ui/views/text_diff.blp:58
 msgid "Differences"
-msgstr ""
+msgstr "Erinevused"
 
 #: src/ui/views/text_inspector.blp:34
 msgid "Change case"
@@ -2798,15 +2801,15 @@ msgstr "Vali tühiku kodeerimiseks soovitud tähemärgid"
 
 #: src/ui/views/uuid_generator.blp:19
 msgid "UUID Generator"
-msgstr ""
+msgstr "UUID-looja"
 
 #: src/ui/views/uuid_generator.blp:34
 msgid "Version"
-msgstr ""
+msgstr "Versioon"
 
 #: src/ui/views/uuid_generator.blp:35
 msgid "Choose the UUID version to generate"
-msgstr ""
+msgstr "Vali loodavate UUID-de versioon"
 
 #: src/ui/views/uuid_generator.blp:40
 msgid "Version 1 (MAC address)"
@@ -2834,11 +2837,11 @@ msgstr "Versioun 7 (põhineb UNIX-i ajal)"
 
 #: src/ui/views/uuid_generator.blp:54
 msgid "Number of UUIDs to be generated (up to 50)"
-msgstr "Loodavate UUID-ede arv (kuni 50)"
+msgstr "Loodavate UUID-kirjete arv (kuni 50)"
 
 #: src/ui/views/uuid_generator.blp:72
 msgid "Generated UUIDs"
-msgstr "Loodud UUID-ed"
+msgstr "Loodud UUID-kirjed"
 
 #: src/ui/gtk/help-overlay.blp:15
 msgctxt "shortcut window"
