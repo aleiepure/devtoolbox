@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-07-07 05:18+0000\n"
+"PO-Revision-Date: 2025-09-03 22:02+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.13.1-rc\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -426,12 +426,12 @@ msgstr "fail"
 #: src/tools.py:174
 msgctxt "search keyword"
 msgid "zip"
-msgstr ""
+msgstr "zip"
 
 #: src/tools.py:175
 msgctxt "search keyword"
 msgid "unzip"
-msgstr ""
+msgstr "unzip"
 
 #: src/tools.py:176
 msgctxt "search keyword"
@@ -465,22 +465,22 @@ msgstr ""
 #: src/tools.py:189
 msgctxt "search keyword"
 msgid "signature"
-msgstr ""
+msgstr "allkiri"
 
 #: src/tools.py:190
 msgctxt "search keyword"
 msgid "authentication"
-msgstr ""
+msgstr "autentimine"
 
 #: src/tools.py:191
 msgctxt "search keyword"
 msgid "authorization"
-msgstr ""
+msgstr "volitamine"
 
 #: src/tools.py:192 src/tools.py:320 src/tools.py:533 src/tools.py:550
 msgctxt "search keyword"
 msgid "security"
-msgstr ""
+msgstr "turvalisus"
 
 #: src/tools.py:199 src/tools.py:212 src/tools.py:226 src/tools.py:240
 #: src/tools.py:255 src/tools.py:269 src/tools.py:282 src/tools.py:296
@@ -606,7 +606,7 @@ msgstr ""
 #: src/tools.py:317
 msgctxt "search keyword"
 msgid "checksum"
-msgstr ""
+msgstr "kontrollsumma"
 
 #: src/tools.py:318
 msgctxt "search keyword"
@@ -621,11 +621,11 @@ msgstr "loo"
 #: src/tools.py:321 src/tools.py:535 src/tools.py:551
 msgctxt "search keyword"
 msgid "cryptography"
-msgstr ""
+msgstr "krüptograafia"
 
 #: src/tools.py:328 src/ui/views/lorem_generator.blp:20
 msgid "Generate lorem ipsum placeholder text"
-msgstr ""
+msgstr "Koosta „Lorem ipsum“ tekst"
 
 #: src/tools.py:330
 msgctxt "search keyword"
@@ -733,12 +733,12 @@ msgstr "Loo erinevaid QR-koode"
 #: src/tools.py:379
 msgctxt "search keyword"
 msgid "qrcode"
-msgstr ""
+msgstr "qr-kood"
 
 #: src/tools.py:380
 msgctxt "search keyword"
 msgid "barcode"
-msgstr ""
+msgstr "triipkood"
 
 #: src/tools.py:381
 msgctxt "search keyword"
@@ -748,7 +748,7 @@ msgstr "pilt"
 #: src/tools.py:382
 msgctxt "search keyword"
 msgid "matrix"
-msgstr ""
+msgstr "maatrikskood"
 
 #: src/tools.py:388 src/ui/views/text_inspector.blp:19
 msgid "Text Inspector & Case Converter"
@@ -1004,37 +1004,37 @@ msgstr "Teisenda pilte eri vormingutesse"
 #: src/tools.py:510
 msgctxt "search keyword"
 msgid "jpg"
-msgstr ""
+msgstr "jpg"
 
 #: src/tools.py:511
 msgctxt "search keyword"
 msgid "jpeg"
-msgstr ""
+msgstr "jpeg"
 
 #: src/tools.py:512
 msgctxt "search keyword"
 msgid "png"
-msgstr ""
+msgstr "png"
 
 #: src/tools.py:513
 msgctxt "search keyword"
 msgid "bmp"
-msgstr ""
+msgstr "bmp"
 
 #: src/tools.py:514
 msgctxt "search keyword"
 msgid "gif"
-msgstr ""
+msgstr "gif"
 
 #: src/tools.py:515
 msgctxt "search keyword"
 msgid "webp"
-msgstr ""
+msgstr "webp"
 
 #: src/tools.py:516
 msgctxt "search keyword"
 msgid "picture"
-msgstr ""
+msgstr "pilt"
 
 #: src/tools.py:522 src/ui/views/certificate_parser.blp:19
 msgid "Certificate Parser"
@@ -1056,15 +1056,15 @@ msgstr "võti"
 #: src/tools.py:534
 msgctxt "search keyword"
 msgid "public key"
-msgstr ""
+msgstr "avalik võti"
 
 #: src/tools.py:539
 msgid "Certificate Signing Request"
-msgstr ""
+msgstr "Sertifikaadi koostamise päring (CSR)"
 
 #: src/tools.py:542 src/ui/views/certificate_request_generator.blp:23
 msgid "Generate certificate signing requests"
-msgstr ""
+msgstr "Koosta sertifikaaditaotlusi"
 
 #. change view and save previous
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:54
@@ -1133,7 +1133,7 @@ msgstr ""
 #: src/widgets/text_area.py:230 src/widgets/text_file_area.py:280
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr ""
+msgstr "{file_path} avamine ei õnnestu: {file_content}."
 
 #: src/widgets/text_area.py:246
 msgid "File is not UTF-8 encoded."
@@ -1249,7 +1249,7 @@ msgstr ""
 
 #: src/views/certificate_request_generator.py:40
 msgid "Open CSR"
-msgstr ""
+msgstr "Ava CSR"
 
 #: src/views/certificate_request_generator.py:81
 msgid "Open Key File"
@@ -1257,7 +1257,7 @@ msgstr "Ava võtmefail"
 
 #: src/views/certificate_request_generator.py:88
 msgid "All Files"
-msgstr ""
+msgstr "Kõik failid"
 
 #: src/views/certificate_request_generator.py:145
 msgid "Select save location"
@@ -1266,7 +1266,7 @@ msgstr "Vali salvestamise asukoht"
 #: src/views/certificate_request_generator.py:146
 #: src/ui/views/certificate_request_generator.blp:163
 msgid "Choose"
-msgstr ""
+msgstr "Vali"
 
 #: src/views/certificate_request_generator.py:197
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:63
@@ -1281,7 +1281,7 @@ msgstr "Salvesta võti kui"
 #: src/views/chmod_calculator.py:33 src/views/color_converter.py:54
 #: src/views/jwt_decoder.py:35
 msgid "Invalid value. Please check again"
-msgstr ""
+msgstr "Vigane väärtus. Palun kontrolli uuesti"
 
 #: src/views/colorblindness_simulator.py:26 src/views/image_converter.py:24
 #: src/views/qrcode_generator.py:43
@@ -1292,7 +1292,7 @@ msgstr "Ava pilt"
 #: src/views/colorblindness_simulator.py:96
 #: src/views/colorblindness_simulator.py:98
 msgid "Loading simulation..."
-msgstr ""
+msgstr "Laadin simulatsiooni..."
 
 #: src/views/formatter.py:76
 msgid ""
@@ -1314,25 +1314,28 @@ msgstr "Sisu vaatamiseks palun salvesta fail"
 
 #: src/views/hash_generator.py:165
 msgid "Hashes match!"
-msgstr ""
+msgstr "Räsiväärtused klapivad!"
 
 #: src/views/hash_generator.py:167
 msgid "The integrity is verified."
-msgstr ""
+msgstr "Andmeterviklus on kinnitatud."
 
 #: src/views/hash_generator.py:175
 msgid "Warning, integrity cannot be verified!"
-msgstr ""
+msgstr "Hoiatus: andmeterviklust pole võimalik kinnitatada!"
 
 #: src/views/hash_generator.py:177
 msgid ""
 "The calculated hash and the provided one do not match. Check again and if "
 "this is a file you downloaded from the Internet re-download it."
 msgstr ""
+"Arvutatud räsiväärtus ei klapi sisestatud räsiväärtusega. Igaks juhuks "
+"kontrolli seda uuesti. Kui tõesti sina laadisid selle faili internetist, "
+"siis tee seda uuesti."
 
 #: src/views/json_validator.py:77 src/views/xml_validator.py:76
 msgid "Valid!"
-msgstr ""
+msgstr "Korrektne ja kehtiv!"
 
 #: src/views/json_validator.py:79
 msgid "JSON is compliant with the provided JSON schema."
@@ -1359,15 +1362,15 @@ msgstr ""
 
 #: src/views/jwt_decoder.py:173
 msgid "Signature is Valid!"
-msgstr ""
+msgstr "Allkiri on kehtuv ja korrektne!"
 
 #: src/views/jwt_decoder.py:175
 msgid "The JWT signature was verified successfully."
-msgstr ""
+msgstr "JWT allkirja kontrollimine õnnestus."
 
 #: src/views/jwt_decoder.py:183
 msgid "Warning, Signature is Invalid!"
-msgstr ""
+msgstr "Hoiatus: allkiri on vigane!"
 
 #: src/views/jwt_decoder.py:186
 msgid ""
@@ -1552,11 +1555,11 @@ msgstr ""
 
 #: src/ui/window.blp:92
 msgid "Favorites"
-msgstr ""
+msgstr "Lemmikud"
 
 #: src/ui/window.blp:121
 msgid "Search Tools…"
-msgstr ""
+msgstr "Otsingutarvikud…"
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
@@ -1575,15 +1578,17 @@ msgid ""
 "Copyright © 2022 - 2025 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
+"Autoriõigused © 2022 - 2025 Alessandro Iepure\n"
+"Mõnede ikoonide autoriõigused kuuluvad GNOME'i projektile"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
 #: src/ui/about_dialog.blp:18
 msgid "translator-credits"
-msgstr ""
+msgstr "Priit Jõerüüt 2025"
 
 #: src/ui/widgets/date_area.blp:39 src/ui/views/timestamp.blp:42
 msgid "Now"
-msgstr ""
+msgstr "Praegune hetk"
 
 #: src/ui/widgets/date_area.blp:40
 msgid "Sets the current system date and time"
@@ -2717,27 +2722,27 @@ msgstr "Teave"
 
 #: src/ui/views/text_inspector.blp:69
 msgid "Cursor"
-msgstr ""
+msgstr "Kursor"
 
 #: src/ui/views/text_inspector.blp:83
 msgid "Line:"
-msgstr ""
+msgstr "Rida:"
 
 #: src/ui/views/text_inspector.blp:96
 msgid "Column:"
-msgstr ""
+msgstr "Veerg:"
 
 #: src/ui/views/text_inspector.blp:121
 msgid "Characters:"
-msgstr ""
+msgstr "Tähemärke:"
 
 #: src/ui/views/text_inspector.blp:134
 msgid "Words:"
-msgstr ""
+msgstr "Sõnu:"
 
 #: src/ui/views/text_inspector.blp:147
 msgid "Lines:"
-msgstr ""
+msgstr "Ridu:"
 
 #: src/ui/views/timestamp.blp:19
 msgid "Timestamp Converter"
@@ -2805,11 +2810,11 @@ msgstr ""
 
 #: src/ui/views/uuid_generator.blp:40
 msgid "Version 1 (MAC address)"
-msgstr ""
+msgstr "Versioon 1 (põhineb MAC-aadressil)"
 
 #: src/ui/views/uuid_generator.blp:41
 msgid "Version 3"
-msgstr ""
+msgstr "Versioon 3"
 
 #: src/ui/views/uuid_generator.blp:42
 msgid "Version 4 (Random)"
@@ -2817,23 +2822,23 @@ msgstr "Versioon 4 (juhuslik)"
 
 #: src/ui/views/uuid_generator.blp:43
 msgid "Version 5"
-msgstr ""
+msgstr "Versioon 5"
 
 #: src/ui/views/uuid_generator.blp:44
 msgid "Version 6 (Gregorian Time)"
-msgstr ""
+msgstr "Versioon 6 (põhineb Gregoriuse ajal/kalendril)"
 
 #: src/ui/views/uuid_generator.blp:45
 msgid "Version 7 (UNIX Epoch)"
-msgstr ""
+msgstr "Versioun 7 (põhineb UNIX-i ajal)"
 
 #: src/ui/views/uuid_generator.blp:54
 msgid "Number of UUIDs to be generated (up to 50)"
-msgstr ""
+msgstr "Loodavate UUID-ede arv (kuni 50)"
 
 #: src/ui/views/uuid_generator.blp:72
 msgid "Generated UUIDs"
-msgstr ""
+msgstr "Loodud UUID-ed"
 
 #: src/ui/gtk/help-overlay.blp:15
 msgctxt "shortcut window"
