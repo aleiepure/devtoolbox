@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-09-04 06:27+0000\n"
+"PO-Revision-Date: 2025-09-04 06:49+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
@@ -2614,7 +2614,7 @@ msgstr "Kord kuus"
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
 #: src/ui/views/reverse_cron.blp:400
 msgid "month(s) starting in"
-msgstr "kui, kui esimene kuu on"
+msgstr "kuu kui, kui esimene kuu on"
 
 #: src/ui/views/reverse_cron.blp:436
 msgid "Specific month (choose one or many, no selection means every month)"
@@ -2629,7 +2629,7 @@ msgstr "Iga kuu, kui esimene kuu on"
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:485 src/ui/views/reverse_cron.blp:692
 msgid "and"
-msgstr "ja viimane kuu on"
+msgstr "ja viimane on"
 
 #: src/ui/views/reverse_cron.blp:516
 msgid "Weekday"
