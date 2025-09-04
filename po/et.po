@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-09-04 07:25+0000\n"
+"PO-Revision-Date: 2025-09-04 20:26+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
@@ -467,7 +467,7 @@ msgstr "päis päisekirje"
 #: src/tools.py:188
 msgctxt "search keyword"
 msgid "payload"
-msgstr ""
+msgstr "sisuandmed sisu andmed"
 
 #: src/tools.py:189
 msgctxt "search keyword"
@@ -637,22 +637,22 @@ msgstr "Koosta „Lorem ipsum“ tekst"
 #: src/tools.py:330
 msgctxt "search keyword"
 msgid "dummy"
-msgstr ""
+msgstr "näidis juhuslik sisu"
 
 #: src/tools.py:331
 msgctxt "search keyword"
 msgid "sample"
-msgstr ""
+msgstr "näidis näide"
 
 #: src/tools.py:332
 msgctxt "search keyword"
 msgid "filler"
-msgstr ""
+msgstr "kohatäide sisutäide tühja ruumi täide"
 
 #: src/tools.py:333
 msgctxt "search keyword"
 msgid "latin"
-msgstr ""
+msgstr "ladina"
 
 #: src/tools.py:340 src/ui/views/uuid_generator.blp:20
 msgid "Generate Universally Unique IDs (UUID)"
@@ -662,7 +662,7 @@ msgstr ""
 #: src/tools.py:343
 msgctxt "search keyword"
 msgid "identifier"
-msgstr ""
+msgstr "tunnus identifikaator"
 
 #: src/tools.py:344
 msgctxt "search keyword"
@@ -685,17 +685,17 @@ msgstr "salasõna"
 #: src/tools.py:354
 msgctxt "search keyword"
 msgid "token"
-msgstr ""
+msgstr "tunnusluba pääsuluba token"
 
 #: src/tools.py:355
 msgctxt "search keyword"
 msgid "entropy"
-msgstr ""
+msgstr "entroopia (juhuslikkuse määr)"
 
 #: src/tools.py:356
 msgctxt "search keyword"
 msgid "secure"
-msgstr ""
+msgstr "turvaline"
 
 #: src/tools.py:360 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
@@ -708,27 +708,27 @@ msgstr "Koosta õiged väärtused õiguste muutmiseks UNIXi/Linuxi chmod-tarviku
 #: src/tools.py:366
 msgctxt "search keyword"
 msgid "unix"
-msgstr ""
+msgstr "unix"
 
 #: src/tools.py:367
 msgctxt "search keyword"
 msgid "linux"
-msgstr ""
+msgstr "linux"
 
 #: src/tools.py:368
 msgctxt "search keyword"
 msgid "calculate"
-msgstr ""
+msgstr "arvuta kalkuleeri kalkuleerimine arvutamine"
 
 #: src/tools.py:369
 msgctxt "search keyword"
 msgid "mode"
-msgstr ""
+msgstr "viis režiim"
 
 #: src/tools.py:370
 msgctxt "search keyword"
 msgid "access"
-msgstr ""
+msgstr "ligipääs juurdepääs"
 
 #: src/tools.py:374
 msgid "QR Code"
@@ -770,47 +770,47 @@ msgstr "Tekst"
 
 #: src/tools.py:391 src/ui/views/text_inspector.blp:20
 msgid "View statistics about text and change sentence cases"
-msgstr ""
+msgstr "Vaata nappi statistikat teksti kohta ning vahet tähesuuruse stiile"
 
 #: src/tools.py:393
 msgctxt "search keyword"
 msgid "analyze"
-msgstr ""
+msgstr "analüüsi"
 
 #: src/tools.py:395
 msgctxt "search keyword"
 msgid "uppercase"
-msgstr ""
+msgstr "suurtähed"
 
 #: src/tools.py:396
 msgctxt "search keyword"
 msgid "lowercase"
-msgstr ""
+msgstr "väiketähed"
 
 #: src/tools.py:397
 msgctxt "search keyword"
 msgid "capitalize"
-msgstr ""
+msgstr "muuda suurtähtedeks"
 
 #: src/tools.py:398
 msgctxt "search keyword"
 msgid "count"
-msgstr ""
+msgstr "loenda loendus kogus"
 
 #: src/tools.py:399
 msgctxt "search keyword"
 msgid "words"
-msgstr ""
+msgstr "sõnad"
 
 #: src/tools.py:400
 msgctxt "search keyword"
 msgid "characters"
-msgstr ""
+msgstr "tähemärgid tähemärke"
 
 #: src/tools.py:401
 msgctxt "search keyword"
 msgid "lines"
-msgstr ""
+msgstr "rida ridu"
 
 #: src/tools.py:405
 msgid "Regex Tester"
@@ -841,43 +841,43 @@ msgstr "Analüüsi kahte teksti ja leia nende erinevused"
 #: src/tools.py:421
 msgctxt "search keyword"
 msgid "difference"
-msgstr ""
+msgstr "erinevus vahe"
 
 #: src/tools.py:422
 msgctxt "search keyword"
 msgid "compare"
-msgstr ""
+msgstr "võrdle võrdlus"
 
 #: src/tools.py:423
 msgctxt "search keyword"
 msgid "changes"
-msgstr ""
+msgstr "muudatus muutus muudatused muutused"
 
 #: src/tools.py:424
 msgctxt "search keyword"
 msgid "modification"
-msgstr ""
+msgstr "modifikatsioon muudatus muutus muudatused muutused"
 
 #: src/tools.py:428 src/ui/views/xml_validator.blp:19
 msgid "XML Scheme Validator"
-msgstr ""
+msgstr "XML-skeemi valideerija"
 
 #: src/tools.py:431 src/ui/views/xml_validator.blp:20
 msgid "Check an XML file against an XSD schema"
-msgstr ""
+msgstr "Kontrolli XML-faili XSD-skeemi suhtes"
 
 #: src/tools.py:433 src/tools.py:444
 msgctxt "search keyword"
 msgid "validate"
-msgstr ""
+msgstr "kontrolli valideeri"
 
 #: src/tools.py:439 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
-msgstr ""
+msgstr "JSON-skeemi valideerija"
 
 #: src/tools.py:442 src/ui/views/json_validator.blp:20
 msgid "Check a JSON file against a JSON schema"
-msgstr ""
+msgstr "Kontrolli JSON-faili JSON-skeemi suhtes"
 
 #: src/tools.py:453 src/ui/views/markdown_preview.blp:20
 msgid "Preview markdown code as you type"
@@ -886,12 +886,12 @@ msgstr "Vaata Markdowni koodi visualiseerimist oma kirjutamise ajal"
 #: src/tools.py:455
 msgctxt "search keyword"
 msgid "render"
-msgstr ""
+msgstr "renderda renderdus renderdamine"
 
 #: src/tools.py:457
 msgctxt "search keyword"
 msgid "md"
-msgstr ""
+msgstr "md"
 
 #: src/tools.py:463 src/ui/views/color_converter.blp:16
 msgid "Color Converter"
@@ -908,42 +908,42 @@ msgstr "Teisenda värve eri vormingute vahel"
 #: src/tools.py:468
 msgctxt "search keyword"
 msgid "rgb"
-msgstr ""
+msgstr "rgb"
 
 #: src/tools.py:469
 msgctxt "search keyword"
 msgid "rgba"
-msgstr ""
+msgstr "rgba"
 
 #: src/tools.py:470
 msgctxt "search keyword"
 msgid "hex"
-msgstr ""
+msgstr "hex"
 
 #: src/tools.py:471
 msgctxt "search keyword"
 msgid "hsl"
-msgstr ""
+msgstr "hsl"
 
 #: src/tools.py:472
 msgctxt "search keyword"
 msgid "hsv"
-msgstr ""
+msgstr "hsv"
 
 #: src/tools.py:473
 msgctxt "search keyword"
 msgid "cmyk"
-msgstr ""
+msgstr "cmyk"
 
 #: src/tools.py:475
 msgctxt "search keyword"
 msgid "conversion"
-msgstr ""
+msgstr "teisendus teisendamine"
 
 #: src/tools.py:476
 msgctxt "search keyword"
 msgid "palette"
-msgstr ""
+msgstr "palett värvipalett"
 
 #: src/tools.py:480 src/ui/views/contrast_checker.blp:19
 msgid "Contrast Checker"
@@ -956,12 +956,12 @@ msgstr "Kontrolli, kas värvikombinatsioon vastab WCAG-reeglitele"
 #: src/tools.py:485
 msgctxt "search keyword"
 msgid "accessibility"
-msgstr ""
+msgstr "hõlbustus ligipääsetavus kasutatavus"
 
 #: src/tools.py:486
 msgctxt "search keyword"
 msgid "ratio"
-msgstr ""
+msgstr "suhtarv suhe"
 
 #: src/tools.py:490
 msgid "Color Blindness"
@@ -974,32 +974,32 @@ msgstr "Simuleeri pildi alusel värvipimedust"
 #: src/tools.py:495
 msgctxt "search keyword"
 msgid "simulation"
-msgstr ""
+msgstr "simulatsioon"
 
 #: src/tools.py:496
 msgctxt "search keyword"
 msgid "daltonism"
-msgstr ""
+msgstr "värvipimedus daltonism"
 
 #: src/tools.py:497
 msgctxt "search keyword"
 msgid "protanopia"
-msgstr ""
+msgstr "protanoopia punapimedus"
 
 #: src/tools.py:498
 msgctxt "search keyword"
 msgid "deuteranopia"
-msgstr ""
+msgstr "deuteranopsia rohepimedus"
 
 #: src/tools.py:499
 msgctxt "search keyword"
 msgid "tritanopia"
-msgstr ""
+msgstr "tritanoopia sinipimedus"
 
 #: src/tools.py:500
 msgctxt "search keyword"
 msgid "vision"
-msgstr ""
+msgstr "nägemine"
 
 #: src/tools.py:504 src/ui/views/image_converter.blp:19
 msgid "Image Format Converter"
@@ -1129,7 +1129,7 @@ msgstr "Tekstifailid"
 
 #: src/widgets/text_area.py:201 src/widgets/text_file_area.py:243
 msgid "Accepted files"
-msgstr ""
+msgstr "Vastuvõetud failid"
 
 #: src/widgets/text_area.py:222
 #, python-brace-format
@@ -1137,6 +1137,8 @@ msgid ""
 "Loading a large file ({size})\n"
 "Might take a while, please wait..."
 msgstr ""
+"Laadin suuremahulist faili ({size})\n"
+"Selleks võib kuluda aega, palun oota..."
 
 #: src/widgets/text_area.py:230 src/widgets/text_file_area.py:280
 #, python-brace-format
@@ -1307,6 +1309,8 @@ msgid ""
 "Text is not in the correct format. Check if you misspelled something or if "
 "all parentheses are closed."
 msgstr ""
+"Tekst pole õiges vormingus. Kontrolli, et poleks trükivigu ja kõik sulud "
+"oleks lõpetatud."
 
 #: src/views/gzip_compressor.py:28
 msgid "Open image"
@@ -1314,7 +1318,7 @@ msgstr "Ava pilt"
 
 #: src/views/gzip_compressor.py:31
 msgid "Cannot decompress from an image or a file"
-msgstr ""
+msgstr "Pilti või faili ei saa lahti pakkida"
 
 #: src/views/gzip_compressor.py:134
 msgid "Please save this file to view its contents"
@@ -1347,12 +1351,12 @@ msgstr "Korrektne ja kehtiv!"
 
 #: src/views/json_validator.py:79
 msgid "JSON is compliant with the provided JSON schema."
-msgstr ""
+msgstr "JSON-fail vastab lisatud JSON-skeemile."
 
 #: src/views/json_validator.py:87 src/views/json_validator.py:97
 #: src/views/xml_validator.py:86
 msgid "Invalid!"
-msgstr ""
+msgstr "Vigane!"
 
 #: src/views/json_validator.py:89
 #, python-brace-format
@@ -1360,6 +1364,8 @@ msgid ""
 "JSON is not compliant with the provided JSON scheme:\n"
 "{validation_error}"
 msgstr ""
+"JSON-fail ei vasta lisatud JSON-skeemile:\n"
+"{validation_error}"
 
 #: src/views/json_validator.py:99
 #, python-brace-format
@@ -1367,6 +1373,8 @@ msgid ""
 "Error in JSON schema:\n"
 "{schema_error}"
 msgstr ""
+"Viga JSON-skeemis:\n"
+"{schema_error}"
 
 #: src/views/jwt_decoder.py:173
 msgid "Signature is Valid!"
@@ -1391,7 +1399,7 @@ msgstr ""
 #: src/views/qrcode_generator.py:71 src/ui/views/qrcode_generator.blp:113
 #: src/ui/views/qrcode_generator.blp:122
 msgid "Not Set"
-msgstr ""
+msgstr "Pole määratud"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
@@ -1537,7 +1545,7 @@ msgstr "Vali soovitud ajavöönd"
 
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
-msgstr ""
+msgstr "XML-fail vastab lisatud XSD-skeemile."
 
 #: src/views/xml_validator.py:88
 #, python-brace-format
@@ -1545,23 +1553,27 @@ msgid ""
 "XML is not compliant with the provided XSD scheme:\n"
 "{xsd_error}"
 msgstr ""
+"XML-fail ei vasta lisatud XSD-skeemile:\n"
+"{xsd_error}"
 
 #: src/ui/window.blp:56
 msgid "Show/hide searchbar"
-msgstr ""
+msgstr "Näita/peida otsinguriba"
 
 #: src/ui/window.blp:62
 msgid "Favorite Tools"
-msgstr ""
+msgstr "Lemmiktarvikud"
 
 #: src/ui/window.blp:72
 msgid "No Favorites"
-msgstr ""
+msgstr "Lemmikuid pole"
 
 #: src/ui/window.blp:73
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
 msgstr ""
+"Kui tahad lemmiktarvikuid siia lisada, siis klõpsi tähekest tarviku "
+"pealkirja kõrval"
 
 #: src/ui/window.blp:92
 msgid "Favorites"
@@ -1581,7 +1593,7 @@ msgstr "_Klaviatuuri kiirklahvid"
 
 #: src/ui/window.blp:191
 msgid "_About Dev Toolbox"
-msgstr ""
+msgstr "R_akenduse teave: Dev Toolbox"
 
 #: src/ui/about_dialog.blp:10
 msgid ""
@@ -1602,7 +1614,7 @@ msgstr "Praegune hetk"
 
 #: src/ui/widgets/date_area.blp:40
 msgid "Sets the current system date and time"
-msgstr ""
+msgstr "Määrab süsteemi kuupäeva ja kellaaja"
 
 #: src/ui/widgets/date_area.blp:55 src/ui/widgets/entry_row.blp:30
 #: src/ui/widgets/spin_area.blp:68 src/ui/widgets/text_area.blp:66
@@ -1798,7 +1810,7 @@ msgstr ""
 
 #: src/ui/views/certificate_request_generator.blp:46
 msgid "Create CSR"
-msgstr ""
+msgstr "Loo CSR"
 
 #: src/ui/views/certificate_request_generator.blp:52
 msgid "Common Name (CN) *"
@@ -2021,39 +2033,39 @@ msgstr ""
 
 #: src/ui/views/color_converter.blp:128
 msgid "Red"
-msgstr ""
+msgstr "Punane"
 
 #: src/ui/views/color_converter.blp:136
 msgid "Green"
-msgstr ""
+msgstr "Roheline"
 
 #: src/ui/views/color_converter.blp:144
 msgid "Blue"
-msgstr ""
+msgstr "Sinine"
 
 #: src/ui/views/color_converter.blp:168 src/ui/views/color_converter.blp:208
 msgid "Hue"
-msgstr ""
+msgstr "Värvitoon"
 
 #: src/ui/views/color_converter.blp:176 src/ui/views/color_converter.blp:216
 msgid "Saturation"
-msgstr ""
+msgstr "Värviküllastus"
 
 #: src/ui/views/color_converter.blp:184
 msgid "Value"
-msgstr ""
+msgstr "Väärtus"
 
 #: src/ui/views/color_converter.blp:224
 msgid "Lightness"
-msgstr ""
+msgstr "Heledus"
 
 #: src/ui/views/color_converter.blp:234
 msgid "Alpha"
-msgstr ""
+msgstr "Alfa-läbipaistvus"
 
 #: src/ui/views/color_converter.blp:265
 msgid "HWB"
-msgstr ""
+msgstr "HWB"
 
 #: src/ui/views/contrast_checker.blp:33 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
@@ -2147,7 +2159,7 @@ msgstr "Paki tekste ja pilte GZip'i abil kokku ja lahti"
 
 #: src/ui/views/gzip_compressor.blp:34
 msgid "Select the desired operation"
-msgstr ""
+msgstr "Vali soovitud tegevus"
 
 #: src/ui/views/gzip_compressor.blp:43
 msgid "Compress"
@@ -2162,10 +2174,11 @@ msgid ""
 "The compression result and the expected decompression input are base64 "
 "encoded."
 msgstr ""
+"Pakkimise tulemus ja eeldatav lahtipakkimise sisend on kodeeritud base64-ga."
 
 #: src/ui/views/gzip_compressor.blp:110
 msgid "May hang the app for large files, please wait."
-msgstr ""
+msgstr "Suurte failid puhul võib rakendus hanguda, palun oota."
 
 #: src/ui/views/hash_generator.blp:19
 msgid "Hash Generator & Checker"
@@ -2227,7 +2240,7 @@ msgstr "teisendatud pilt"
 
 #: src/ui/views/json_validator.blp:49
 msgid "JSON Schema"
-msgstr ""
+msgstr "JSON-skeem"
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
@@ -2327,7 +2340,7 @@ msgstr "Koostatud tekst"
 
 #: src/ui/views/markdown_preview.blp:35
 msgid "Markdown"
-msgstr ""
+msgstr "Markdown-märkekeel"
 
 #: src/ui/views/markdown_preview.blp:49
 msgid "Preview"
