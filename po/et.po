@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-09-04 20:26+0000\n"
+"PO-Revision-Date: 2025-09-04 20:35+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
@@ -1581,7 +1581,7 @@ msgstr "Lemmikud"
 
 #: src/ui/window.blp:121
 msgid "Search Tools…"
-msgstr "Otsingutarvikud…"
+msgstr "Otsi tarvikuid…"
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
@@ -1726,7 +1726,7 @@ msgstr "Base64 kodeerija ja dekodeerija"
 
 #: src/ui/views/base64_encoder.blp:20
 msgid "Encode and decode strings using the Base64 format"
-msgstr ""
+msgstr "Kodeeri teksti base64-kodeeringusse ning dekodeeri sealt"
 
 #: src/ui/views/base64_encoder.blp:30 src/ui/views/certificate_parser.blp:30
 #: src/ui/views/colorblindness_simulator.blp:31
@@ -1764,11 +1764,11 @@ msgstr "Dekodeeri"
 
 #: src/ui/views/base64_encoder.blp:51
 msgid "URL Safe"
-msgstr ""
+msgstr "Sobilik võrguaadresside jaoks"
 
 #: src/ui/views/base64_encoder.blp:52
 msgid "Use URL safe Base64 processing"
-msgstr ""
+msgstr "Kasuta base64-töötlust viisil, mis sobib võrguaadressidesse"
 
 #: src/ui/views/base64_encoder.blp:68 src/ui/views/gzip_compressor.blp:63
 #: src/ui/views/hash_generator.blp:83 src/ui/views/html_encoder.blp:64
@@ -1814,27 +1814,27 @@ msgstr "Loo CSR"
 
 #: src/ui/views/certificate_request_generator.blp:52
 msgid "Common Name (CN) *"
-msgstr ""
+msgstr "Üldnimi - Common Name (CN) *"
 
 #: src/ui/views/certificate_request_generator.blp:56
 msgid "Country Name (C)"
-msgstr ""
+msgstr "Riigi nimi - Country Name (C)"
 
 #: src/ui/views/certificate_request_generator.blp:60
 msgid "State or Province Name (ST)"
-msgstr ""
+msgstr "Piirkonna nimi - State or Province Name (ST)"
 
 #: src/ui/views/certificate_request_generator.blp:64
 msgid "Locality Name (L)"
-msgstr ""
+msgstr "Asukoha nimi - Locality Name (L)"
 
 #: src/ui/views/certificate_request_generator.blp:68
 msgid "Organization Name (O)"
-msgstr ""
+msgstr "Organisatsiooni nimi - Organization Name (O)"
 
 #: src/ui/views/certificate_request_generator.blp:72
 msgid "Organization Unit Name (OU)"
-msgstr ""
+msgstr "Organisatsiooni allüksuse nimi - Organization Unit Name (OU)"
 
 #: src/ui/views/certificate_request_generator.blp:76
 msgid "Passphrase"
