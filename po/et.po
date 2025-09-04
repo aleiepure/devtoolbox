@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-09-04 20:35+0000\n"
+"PO-Revision-Date: 2025-09-04 20:38+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
@@ -1072,7 +1072,7 @@ msgstr "Sertifikaadi koostamise päring (CSR)"
 
 #: src/tools.py:542 src/ui/views/certificate_request_generator.blp:23
 msgid "Generate certificate signing requests"
-msgstr "Koosta sertifikaaditaotlusi"
+msgstr "Koosta sertifikaaditaotlusi (CSR - Certificate Signing Request)"
 
 #. change view and save previous
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:54
@@ -1796,7 +1796,7 @@ msgstr "Sertifikaadi sisu vaatamiseks ava sertifikaadifail."
 
 #: src/ui/views/certificate_request_generator.blp:22
 msgid "Certificate Signing Request Generator"
-msgstr ""
+msgstr "Sertifikaaditaotluse koostaja"
 
 #: src/ui/views/certificate_request_generator.blp:34
 msgid "Fill the information below"
@@ -1807,10 +1807,12 @@ msgid ""
 "Fill at least the required fields then press the 'Create CSR' button. An "
 "empty passphrase will generate an unecrypted CSR."
 msgstr ""
+"Palun täida vähemalt nõutavad väljad ja klõpsi „Koosta CSR“ nuppu. Kui "
+"salafraas jääb tühjaks, siis luuakse CSR krüptimata kujul."
 
 #: src/ui/views/certificate_request_generator.blp:46
 msgid "Create CSR"
-msgstr "Loo CSR"
+msgstr "Koosta CSR"
 
 #: src/ui/views/certificate_request_generator.blp:52
 msgid "Common Name (CN) *"
