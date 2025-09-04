@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-09-04 06:03+0000\n"
+"PO-Revision-Date: 2025-09-04 06:27+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
@@ -1394,136 +1394,136 @@ msgstr ""
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
 msgid "st"
-msgstr ""
+msgstr "."
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:210
 msgid "nd"
-msgstr ""
+msgstr "."
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:213
 msgid "rd"
-msgstr ""
+msgstr "."
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:216
 msgid "th"
-msgstr ""
+msgstr "."
 
 #: src/views/reverse_cron.py:240 src/views/reverse_cron.py:354
 #: src/ui/views/reverse_cron.blp:410 src/ui/views/reverse_cron.blp:467
 #: src/ui/views/reverse_cron.blp:495
 msgid "January"
-msgstr ""
+msgstr "Jaanuar"
 
 #: src/views/reverse_cron.py:241 src/views/reverse_cron.py:355
 #: src/ui/views/reverse_cron.blp:411 src/ui/views/reverse_cron.blp:468
 #: src/ui/views/reverse_cron.blp:496
 msgid "February"
-msgstr ""
+msgstr "Veebruar"
 
 #: src/views/reverse_cron.py:242 src/views/reverse_cron.py:356
 #: src/ui/views/reverse_cron.blp:412 src/ui/views/reverse_cron.blp:469
 #: src/ui/views/reverse_cron.blp:497
 msgid "March"
-msgstr ""
+msgstr "Märts"
 
 #: src/views/reverse_cron.py:243 src/views/reverse_cron.py:357
 #: src/ui/views/reverse_cron.blp:413 src/ui/views/reverse_cron.blp:470
 #: src/ui/views/reverse_cron.blp:498
 msgid "April"
-msgstr ""
+msgstr "Aprill"
 
 #: src/views/reverse_cron.py:244 src/views/reverse_cron.py:358
 #: src/ui/views/reverse_cron.blp:414 src/ui/views/reverse_cron.blp:471
 #: src/ui/views/reverse_cron.blp:499
 msgid "May"
-msgstr ""
+msgstr "Mai"
 
 #: src/views/reverse_cron.py:245 src/views/reverse_cron.py:359
 #: src/ui/views/reverse_cron.blp:415 src/ui/views/reverse_cron.blp:472
 #: src/ui/views/reverse_cron.blp:500
 msgid "June"
-msgstr ""
+msgstr "Juuni"
 
 #: src/views/reverse_cron.py:246 src/views/reverse_cron.py:360
 #: src/ui/views/reverse_cron.blp:416 src/ui/views/reverse_cron.blp:473
 #: src/ui/views/reverse_cron.blp:501
 msgid "July"
-msgstr ""
+msgstr "Juuli"
 
 #: src/views/reverse_cron.py:247 src/views/reverse_cron.py:361
 #: src/ui/views/reverse_cron.blp:417 src/ui/views/reverse_cron.blp:474
 #: src/ui/views/reverse_cron.blp:502
 msgid "August"
-msgstr ""
+msgstr "August"
 
 #: src/views/reverse_cron.py:248 src/views/reverse_cron.py:362
 #: src/ui/views/reverse_cron.blp:418 src/ui/views/reverse_cron.blp:475
 #: src/ui/views/reverse_cron.blp:503
 msgid "September"
-msgstr ""
+msgstr "September"
 
 #: src/views/reverse_cron.py:249 src/views/reverse_cron.py:363
 #: src/ui/views/reverse_cron.blp:419 src/ui/views/reverse_cron.blp:476
 #: src/ui/views/reverse_cron.blp:504
 msgid "October"
-msgstr ""
+msgstr "Oktoober"
 
 #: src/views/reverse_cron.py:250 src/views/reverse_cron.py:364
 #: src/ui/views/reverse_cron.blp:420 src/ui/views/reverse_cron.blp:477
 #: src/ui/views/reverse_cron.blp:505
 msgid "November"
-msgstr ""
+msgstr "November"
 
 #: src/views/reverse_cron.py:251 src/views/reverse_cron.py:365
 #: src/ui/views/reverse_cron.blp:421 src/ui/views/reverse_cron.blp:478
 #: src/ui/views/reverse_cron.blp:506
 msgid "December"
-msgstr ""
+msgstr "Detsember"
 
 #: src/views/reverse_cron.py:376 src/ui/views/reverse_cron.blp:570
 #: src/ui/views/reverse_cron.blp:649 src/ui/views/reverse_cron.blp:685
 #: src/ui/views/reverse_cron.blp:708
 msgid "Sunday"
-msgstr ""
+msgstr "Pühapäev"
 
 #: src/views/reverse_cron.py:377 src/ui/views/reverse_cron.blp:564
 #: src/ui/views/reverse_cron.blp:595 src/ui/views/reverse_cron.blp:679
 #: src/ui/views/reverse_cron.blp:702
 msgid "Monday"
-msgstr ""
+msgstr "Esmaspäev"
 
 #: src/views/reverse_cron.py:378 src/ui/views/reverse_cron.blp:565
 #: src/ui/views/reverse_cron.blp:604 src/ui/views/reverse_cron.blp:680
 #: src/ui/views/reverse_cron.blp:703
 msgid "Tuesday"
-msgstr ""
+msgstr "Teisipäev"
 
 #: src/views/reverse_cron.py:379 src/ui/views/reverse_cron.blp:566
 #: src/ui/views/reverse_cron.blp:613 src/ui/views/reverse_cron.blp:681
 #: src/ui/views/reverse_cron.blp:704
 msgid "Wednesday"
-msgstr ""
+msgstr "Kolmapäev"
 
 #: src/views/reverse_cron.py:380 src/ui/views/reverse_cron.blp:567
 #: src/ui/views/reverse_cron.blp:622 src/ui/views/reverse_cron.blp:682
 #: src/ui/views/reverse_cron.blp:705
 msgid "Thursday"
-msgstr ""
+msgstr "Neljapäev"
 
 #: src/views/reverse_cron.py:381 src/ui/views/reverse_cron.blp:568
 #: src/ui/views/reverse_cron.blp:631 src/ui/views/reverse_cron.blp:683
 #: src/ui/views/reverse_cron.blp:706
 msgid "Friday"
-msgstr ""
+msgstr "Reede"
 
 #: src/views/reverse_cron.py:382 src/ui/views/reverse_cron.blp:569
 #: src/ui/views/reverse_cron.blp:640 src/ui/views/reverse_cron.blp:684
 #: src/ui/views/reverse_cron.blp:707
 msgid "Saturday"
-msgstr ""
+msgstr "Laupäev"
 
 #: src/views/timestamp.py:76
 msgid "Timezone"
@@ -2101,11 +2101,11 @@ msgstr "AAA"
 
 #: src/ui/views/cron_converter.blp:34
 msgid "Number of dates"
-msgstr ""
+msgstr "Kuupäevade arv"
 
 #: src/ui/views/cron_converter.blp:35
 msgid "Number of dates to be generated (up to 20)"
-msgstr ""
+msgstr "Loodavaate kuupäevade arv (kuni 20)"
 
 #: src/ui/views/cron_converter.blp:47
 msgid "Output format"
@@ -2116,14 +2116,16 @@ msgid ""
 "Format used to display generated dates (<a href=\"https://strftime.org/"
 "\">python syntax</a>)"
 msgstr ""
+"Loodud kuupäevade kuvamise vorming (<a href=\"https://strftime.org/\""
+">pythoni süntaks</a>)"
 
 #: src/ui/views/cron_converter.blp:76
 msgid "CRON expression"
-msgstr ""
+msgstr "CRON-i avaldis"
 
 #: src/ui/views/cron_converter.blp:89
 msgid "Dates"
-msgstr ""
+msgstr "Kuupäevad"
 
 #: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:52
 msgid "Indentations"
@@ -2519,7 +2521,7 @@ msgstr "Testitav avaldis"
 
 #: src/ui/views/reverse_cron.blp:58
 msgid "Every minute"
-msgstr ""
+msgstr "Kord minutis"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
@@ -2530,132 +2532,136 @@ msgstr ""
 #: src/ui/views/reverse_cron.blp:277 src/ui/views/reverse_cron.blp:389
 #: src/ui/views/reverse_cron.blp:543
 msgid "Every"
-msgstr ""
+msgstr "Iga"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #: src/ui/views/reverse_cron.blp:82
 msgid "minute(s) starting at minute"
-msgstr ""
+msgstr "minut alates minutist"
 
 #: src/ui/views/reverse_cron.blp:101
 msgid "Specific minute (choose one or many, no selection means every minute)"
 msgstr ""
+"Vali üks või enam täpset minutit (valiku puudumine tähendab iga minutit)"
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:122
 msgid "Every minute between minute"
-msgstr ""
+msgstr "Iga minut vahemikus"
 
 #. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:133
 msgid "and minute"
-msgstr ""
+msgstr "kuni"
 
 #: src/ui/views/reverse_cron.blp:161
 msgid "Every hour"
-msgstr ""
+msgstr "Kord tunnis"
 
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
 #: src/ui/views/reverse_cron.blp:185
 msgid "hour(s) starting at hour"
-msgstr ""
+msgstr "tund alates tunnist"
 
 #: src/ui/views/reverse_cron.blp:204
 msgid "Specific hour (choose one or many, no selection means every hour)"
-msgstr ""
+msgstr "Vali üks või enam täpset tundi (valiku puudumine tähendab iga tundi)"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:225
 msgid "Every hour between hour"
-msgstr ""
+msgstr "Iga tund vahemikust"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:236
 msgid "and hour"
-msgstr ""
+msgstr "kuni"
 
 #: src/ui/views/reverse_cron.blp:264
 msgid "Every day"
-msgstr ""
+msgstr "Kord päevas"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:288
 msgid "day(s) starting on the"
-msgstr ""
+msgstr "päev alates kuu"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:299
 msgid "of the month"
-msgstr ""
+msgstr "päevast"
 
 #: src/ui/views/reverse_cron.blp:316
 msgid ""
 "Specific day of month (choose one or many, no selection means every day)"
 msgstr ""
+"Vali üks või enam täpset päeva kuus (valiku puudumine tähendab iga päeva)"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:337
 msgid "Every day between the"
-msgstr ""
+msgstr "Iga päev alates"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:348
 msgid "and the"
-msgstr ""
+msgstr "kuni"
 
 #: src/ui/views/reverse_cron.blp:376
 msgid "Every month"
-msgstr ""
+msgstr "Kord kuus"
 
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
 #: src/ui/views/reverse_cron.blp:400
 msgid "month(s) starting in"
-msgstr ""
+msgstr "kui, kui esimene kuu on"
 
 #: src/ui/views/reverse_cron.blp:436
 msgid "Specific month (choose one or many, no selection means every month)"
-msgstr ""
+msgstr "Vali üks või enam täpset kuud (valiku puudumine tähendab iga kuud)"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #: src/ui/views/reverse_cron.blp:457
 msgid "Every month between"
-msgstr ""
+msgstr "Iga kuu, kui esimene kuu on"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:485 src/ui/views/reverse_cron.blp:692
 msgid "and"
-msgstr ""
+msgstr "ja viimane kuu on"
 
 #: src/ui/views/reverse_cron.blp:516
 msgid "Weekday"
-msgstr ""
+msgstr "Päev nädalas"
 
 #: src/ui/views/reverse_cron.blp:530
 msgid "Every weekday"
-msgstr ""
+msgstr "Nädala igal päeval"
 
 #. TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:554
 msgid "weekday(s) starting on"
-msgstr ""
+msgstr "nädalapäev, kui esimene päev on"
 
 #: src/ui/views/reverse_cron.blp:585
 msgid "Specific weekday (choose one or many, no selection means every weekday)"
 msgstr ""
+"Vali üks või enam konkreetne päev nädalas (valiku puudumine tähendab iga "
+"päeva nädalas)"
 
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:669
 msgid "Every weekday between"
-msgstr ""
+msgstr "Iga päev nädalas:"
 
 #: src/ui/views/reverse_cron.blp:718
 msgid "Command to execute"
-msgstr ""
+msgstr "Käivitatav käsk"
 
 #: src/ui/views/reverse_cron.blp:737
 msgid "CRON Expression"
-msgstr ""
+msgstr "CRON-i lausend"
 
 #: src/ui/views/text_diff.blp:33
 msgid "Old Text"
