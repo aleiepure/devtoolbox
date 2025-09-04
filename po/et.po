@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-09-04 07:03+0000\n"
+"PO-Revision-Date: 2025-09-04 07:25+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
@@ -536,7 +536,7 @@ msgstr "Vorminda HTML-faile"
 #: src/tools.py:301
 msgctxt "search keyword"
 msgid "minify"
-msgstr "minimiseerima"
+msgstr "minimiseerima kompaktne"
 
 #: src/tools.py:257 src/formatters/js.py:15
 msgid "Format JavaScript documents"
@@ -562,7 +562,7 @@ msgstr "CSS-i minimeerija"
 
 #: src/tools.py:284 src/formatters/css_minifier.py:15
 msgid "Minify CSS documents"
-msgstr "Muuda CSS-failid väiksemaks"
+msgstr "Muuda CSS-failid kompaktsemaks"
 
 #: src/tools.py:287 src/tools.py:302
 msgctxt "search keyword"
@@ -590,7 +590,7 @@ msgstr "JavaScripti minimeerija"
 
 #: src/tools.py:298
 msgid "Minify JavaScript documents"
-msgstr "Muuda JavaScripti failid väiksemaks"
+msgstr "Muuda JavaScripti failid kompaktsemaks"
 
 #: src/tools.py:305
 msgctxt "search keyword"
@@ -699,11 +699,11 @@ msgstr ""
 
 #: src/tools.py:360 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
-msgstr ""
+msgstr "Chmod-failiõiguste arvutaja"
 
 #: src/tools.py:363 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
-msgstr ""
+msgstr "Koosta õiged väärtused õiguste muutmiseks UNIXi/Linuxi chmod-tarvikuga"
 
 #: src/tools.py:366
 msgctxt "search keyword"
@@ -760,7 +760,7 @@ msgstr "maatrikskood"
 
 #: src/tools.py:388 src/ui/views/text_inspector.blp:19
 msgid "Text Inspector & Case Converter"
-msgstr ""
+msgstr "Tekstianalüüs ja tähesuuruste muutmine"
 
 #: src/tools.py:389 src/tools.py:406 src/tools.py:417 src/tools.py:429
 #: src/tools.py:440 src/tools.py:451 src/ui/views/regex_tester.blp:49
@@ -1385,6 +1385,8 @@ msgid ""
 "The JWT signature doesn't match the provided key. Please verify the key "
 "encoding or ensure the token was signed correctly."
 msgstr ""
+"JWT allkiri ei vasta lisatud võtmele. Palun kontrolli, et võtme kodeering "
+"oleks õige ja/või tunnusluba on korrektselt allkirjastatud."
 
 #: src/views/qrcode_generator.py:71 src/ui/views/qrcode_generator.blp:113
 #: src/ui/views/qrcode_generator.blp:122
@@ -1878,43 +1880,43 @@ msgstr "Loodud võtmefaili salvestamise kaust"
 
 #: src/ui/views/chmod_calculator.blp:33
 msgid "Permissions"
-msgstr ""
+msgstr "Õigused"
 
 #: src/ui/views/chmod_calculator.blp:45
 msgid "Special"
-msgstr ""
+msgstr "Eritingimused"
 
 #: src/ui/views/chmod_calculator.blp:145
 msgid "Owner"
-msgstr ""
+msgstr "Omanik"
 
 #: src/ui/views/chmod_calculator.blp:158
 msgid "Group"
-msgstr ""
+msgstr "Grupp"
 
 #: src/ui/views/chmod_calculator.blp:171
 msgid "Others"
-msgstr ""
+msgstr "Muu maailm"
 
 #: src/ui/views/chmod_calculator.blp:184
 msgid "Read"
-msgstr ""
+msgstr "Lugemine"
 
 #: src/ui/views/chmod_calculator.blp:197
 msgid "Write"
-msgstr ""
+msgstr "Kirjutamine"
 
 #: src/ui/views/chmod_calculator.blp:210
 msgid "Execute"
-msgstr ""
+msgstr "Käivitamine"
 
 #: src/ui/views/chmod_calculator.blp:351
 msgid "Numeric value"
-msgstr ""
+msgstr "Numbriline väärtus"
 
 #: src/ui/views/chmod_calculator.blp:363
 msgid "Symbolic value"
-msgstr ""
+msgstr "Esitus sümbolitena"
 
 #: src/ui/views/colorblindness_simulator.blp:19
 msgid "Color Blindness Simulator"
@@ -1931,7 +1933,7 @@ msgstr "Anomaalia tõsidus"
 #: src/ui/views/colorblindness_simulator.blp:72
 #: src/ui/views/text_inspector.blp:41
 msgid "Original"
-msgstr "Alpilt"
+msgstr "Algtekst"
 
 #: src/ui/views/colorblindness_simulator.blp:79
 msgid "Protanopia"
@@ -2167,7 +2169,7 @@ msgstr ""
 
 #: src/ui/views/hash_generator.blp:19
 msgid "Hash Generator & Checker"
-msgstr "Räsideväärtuste arvutaja ja kontrollija"
+msgstr "Räsiväärtuste arvutaja ja kontrollija"
 
 #: src/ui/views/hash_generator.blp:20
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
@@ -2249,51 +2251,51 @@ msgstr "JWT kodeerija ja dekodeerija"
 
 #: src/ui/views/jwt_decoder.blp:32
 msgid "Verify Signature"
-msgstr ""
+msgstr "Allkirja kontroll"
 
 #: src/ui/views/jwt_decoder.blp:33
 msgid "Verify signature or sign JWT"
-msgstr ""
+msgstr "Kontrolli olemasolevat allkirja või allkirjasta JWT"
 
 #: src/ui/views/jwt_decoder.blp:41
 msgid "Off"
-msgstr ""
+msgstr "Pole kasutusel"
 
 #: src/ui/views/jwt_decoder.blp:46
 msgid "Symmetric"
-msgstr ""
+msgstr "Sümmeetriline"
 
 #: src/ui/views/jwt_decoder.blp:51
 msgid "Asymmetric"
-msgstr ""
+msgstr "Asümmeetriline"
 
 #: src/ui/views/jwt_decoder.blp:57
 msgid "Key Encoding"
-msgstr ""
+msgstr "Võtme kodeerimine"
 
 #: src/ui/views/jwt_decoder.blp:58
 msgid "Select the encoding of the key"
-msgstr ""
+msgstr "Vali võtme kodeerimise viis"
 
 #: src/ui/views/jwt_decoder.blp:99
 msgid "Public Key (PEM)"
-msgstr ""
+msgstr "Avalik võti (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:107
 msgid "Private Key (PEM)"
-msgstr ""
+msgstr "Privaatvõti (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:120
 msgid "Token"
-msgstr ""
+msgstr "Tunnusluba ehk token"
 
 #: src/ui/views/jwt_decoder.blp:139
 msgid "Header"
-msgstr ""
+msgstr "Päis"
 
 #: src/ui/views/jwt_decoder.blp:147
 msgid "Payload"
-msgstr ""
+msgstr "Sisuandmed"
 
 #: src/ui/views/lorem_generator.blp:19
 msgid "Lorem Ipsum Generator"
@@ -2677,63 +2679,63 @@ msgstr "Erinevused"
 
 #: src/ui/views/text_inspector.blp:34
 msgid "Change case"
-msgstr ""
+msgstr "Muuda tähesuurust"
 
 #: src/ui/views/text_inspector.blp:35
 msgid "Choose a case to apply to the text"
-msgstr ""
+msgstr "Vali selline suur- ja väiketähtede kasutus, mida soovid näha"
 
 #: src/ui/views/text_inspector.blp:42
 msgid "Sentence case"
-msgstr ""
+msgstr "Lause stiil"
 
 #: src/ui/views/text_inspector.blp:43
 msgid "lower case"
-msgstr ""
+msgstr "väiketähed"
 
 #: src/ui/views/text_inspector.blp:44
 msgid "UPPERCASE"
-msgstr ""
+msgstr "SUURTÄHED"
 
 #: src/ui/views/text_inspector.blp:45
 msgid "Title Case"
-msgstr ""
+msgstr "Pealkirja stiil"
 
 #: src/ui/views/text_inspector.blp:46
 msgid "camelCase"
-msgstr ""
+msgstr "kaameliStiil"
 
 #: src/ui/views/text_inspector.blp:47
 msgid "PascalCase"
-msgstr ""
+msgstr "PascaliStiil"
 
 #: src/ui/views/text_inspector.blp:48
 msgid "snake_case"
-msgstr ""
+msgstr "mao_stiil"
 
 #: src/ui/views/text_inspector.blp:49
 msgid "CONSTANT_CASE"
-msgstr ""
+msgstr "ÜKS_JA_SAMA"
 
 #: src/ui/views/text_inspector.blp:50
 msgid "kebab-case"
-msgstr ""
+msgstr "kebabi-stiil"
 
 #: src/ui/views/text_inspector.blp:51
 msgid "COBOL-CASE"
-msgstr ""
+msgstr "COBOLI-STIIL"
 
 #: src/ui/views/text_inspector.blp:52
 msgid "Train-Case"
-msgstr ""
+msgstr "Rongi-stiil"
 
 #: src/ui/views/text_inspector.blp:53
 msgid "aLtErNaTiNg CaSe"
-msgstr ""
+msgstr "vArIeErUv TäHeSuUrUs"
 
 #: src/ui/views/text_inspector.blp:54
 msgid "ReVeRsE aLtErNaTiNg CaSe"
-msgstr ""
+msgstr "VaRiEeRuV tÄhEsUuRuS tAgUrPiDi"
 
 #: src/ui/views/text_inspector.blp:66
 msgid "Information"
@@ -2741,7 +2743,7 @@ msgstr "Teave"
 
 #: src/ui/views/text_inspector.blp:69
 msgid "Cursor"
-msgstr "Kursor"
+msgstr "Kursori asukoht"
 
 #: src/ui/views/text_inspector.blp:83
 msgid "Line:"
@@ -2936,11 +2938,11 @@ msgstr "Sisesta siia CSS-kood"
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
-msgstr ""
+msgstr "Muuda kompaktsemaks"
 
 #: src/formatters/js_minifier.py:15
 msgid "Minify JS code"
-msgstr ""
+msgstr "Muuda JavaScripti kood kompaktsemaks"
 
 #: src/formatters/js_minifier.py:17
 msgid "Type JS code here"
