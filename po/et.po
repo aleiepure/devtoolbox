@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-09-03 22:37+0000\n"
+"PO-Revision-Date: 2025-09-04 06:03+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/et/>\n"
@@ -37,6 +37,8 @@ msgid ""
 "Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;"
 "Lorem;Ipsum;"
 msgstr ""
+"JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;Validate;Validator;Converter;Convert;Timestamp;bmp;gif;icns;jpeg;png;tiff;webp;Image;Base;Parser;CRON;GZip;Compressor;Decompressor;Hash;Regex;Compare;URL;Minify;Generator;Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;Lorem;Ipsum;valideerija;konverter;ajatempel;pilt;pildid;parser;parsija;pakkija;räsi;regulaaravaldis;võrdleja;juhuslik;värv;tekst;erinevus;eelvaade;"
+""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -44,28 +46,33 @@ msgid ""
 "again that website of which you don't recall the name just for a quick "
 "conversion, this is the right app for you."
 msgstr ""
+"Kui oled väsinud veebist vajaliku pisitarviku otsimisest või oled unustanud "
+"just tolle vajaliku konverteri nime ja aadressi, siis see abivahend on just "
+"sinu jaoks."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr ""
+"See on kogumik lihtsaid, kuid võimsaid abivahendeid, mida igapäevases "
+"arendus- ja süsteemihalduse töös vaja läheb."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Includes:"
-msgstr ""
+msgstr "Sealhulgas on:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "JSON to YAML converter and vice-versa"
-msgstr ""
+msgstr "JSON-i konverter YAML-iks ning sama ka teistpidi"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33
 msgid "CRON expressions parser"
-msgstr ""
+msgstr "CRON-i lausendite analüüs"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "GZip compressor and decompressor"
-msgstr ""
+msgstr "GZip-i pakkija ja lahtipakkija"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Formatters for common programming languages"
@@ -73,7 +80,7 @@ msgstr "Vormindajad levinumate programmeerimiskeelte jaoks"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Hash generators"
-msgstr ""
+msgstr "Räsiarvutajad"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
@@ -90,7 +97,7 @@ msgstr "Piltide teisendajad"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
-msgstr ""
+msgstr "Ja palju muud..."
 
 #: src/tools.py:13 src/tools.py:32 src/tools.py:67 src/tools.py:88
 #: src/tools.py:106
@@ -104,7 +111,7 @@ msgstr "Teisenda JSON-dokmente YAML-vormingusse ja vastupidi"
 #: src/tools.py:20 src/tools.py:39 src/tools.py:206
 msgctxt "search keyword"
 msgid "parse"
-msgstr ""
+msgstr "parsi"
 
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
 msgctxt "search keyword"
@@ -258,7 +265,7 @@ msgstr "Teisenda erinevate numbrite aluste vahel"
 #: src/tools.py:71
 msgctxt "search keyword"
 msgid "representation"
-msgstr ""
+msgstr "esitus"
 
 #: src/tools.py:72
 msgctxt "search keyword"
@@ -273,63 +280,63 @@ msgstr "number"
 #: src/tools.py:76
 msgctxt "search keyword"
 msgid "binary"
-msgstr ""
+msgstr "binaarne"
 
 #: src/tools.py:77
 msgctxt "search keyword"
 msgid "octal"
-msgstr ""
+msgstr "kaheksandsüsteemis"
 
 #: src/tools.py:78
 msgctxt "search keyword"
 msgid "decimal"
-msgstr ""
+msgstr "kümnendsüsteemis"
 
 #: src/tools.py:79
 msgctxt "search keyword"
 msgid "hexadecimal"
-msgstr ""
+msgstr "kuueteistkümnendsüsteemis"
 
 #: src/tools.py:80
 msgctxt "search keyword"
 msgid "integer"
-msgstr ""
+msgstr "täisarv"
 
 #: src/tools.py:87 src/ui/views/cron_converter.blp:20
 msgid "CRON Parser"
-msgstr ""
+msgstr "CRON-i analüüsija"
 
 #: src/tools.py:90 src/ui/views/cron_converter.blp:21
 msgid "Convert CRON expressions to time and date"
-msgstr ""
+msgstr "Muuda CRON-i lausendid ajaks ja kellaajaks"
 
 #: src/tools.py:93 src/tools.py:111
 msgctxt "search keyword"
 msgid "schedule"
-msgstr ""
+msgstr "ajastamine"
 
 #: src/tools.py:94 src/tools.py:112
 msgctxt "search keyword"
 msgid "parser"
-msgstr ""
+msgstr "analüüsija"
 
 #: src/tools.py:95 src/tools.py:113 src/tools.py:410
 msgctxt "search keyword"
 msgid "expression"
-msgstr ""
+msgstr "lausend"
 
 #: src/tools.py:99 src/tools.py:117
 msgctxt "search keyword"
 msgid "job"
-msgstr ""
+msgstr "töö"
 
 #: src/tools.py:105 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
-msgstr ""
+msgstr "Tagurpidi CRON"
 
 #: src/tools.py:108 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
-msgstr ""
+msgstr "Koosta CRON-i lausendeid"
 
 #: src/tools.py:126 src/tools.py:139 src/tools.py:151 src/tools.py:166
 #: src/tools.py:182
@@ -343,13 +350,13 @@ msgstr "Kodeeri ja dekodeeri erimärke HTML-vormingu jaoks"
 #: src/tools.py:131
 msgctxt "search keyword"
 msgid "escape"
-msgstr ""
+msgstr "paoklahv"
 
 #: src/tools.py:133 src/tools.py:233 src/tools.py:247 src/tools.py:434
 #: src/tools.py:456
 msgctxt "search keyword"
 msgid "markup"
-msgstr ""
+msgstr "märgend"
 
 #: src/tools.py:134 src/tools.py:145 src/tools.py:172
 msgctxt "search keyword"
@@ -363,12 +370,12 @@ msgstr "Kodeeri ja dekodeeri base64-vormingus sõnesid"
 #: src/tools.py:144 src/tools.py:173
 msgctxt "search keyword"
 msgid "string"
-msgstr ""
+msgstr "sõne"
 
 #: src/tools.py:146 src/tools.py:207 src/tools.py:235 src/tools.py:445
 msgctxt "search keyword"
 msgid "data"
-msgstr ""
+msgstr "andmed"
 
 #: src/tools.py:153 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
@@ -377,7 +384,7 @@ msgstr "Kodeeri ja dekodeeri erimärke kasutamiseks võrguaadressides"
 #: src/tools.py:155
 msgctxt "search keyword"
 msgid "url"
-msgstr ""
+msgstr "url võrguaadress"
 
 #: src/tools.py:156
 msgctxt "search keyword"
@@ -387,36 +394,36 @@ msgstr ""
 #: src/tools.py:157 src/tools.py:249
 msgctxt "search keyword"
 msgid "web"
-msgstr ""
+msgstr "veeb"
 
 #: src/tools.py:158
 msgctxt "search keyword"
 msgid "link"
-msgstr ""
+msgstr "link"
 
 #: src/tools.py:159
 msgctxt "search keyword"
 msgid "address"
-msgstr ""
+msgstr "aadress"
 
 #: src/tools.py:160
 msgctxt "search keyword"
 msgid "uri"
-msgstr ""
+msgstr "uri"
 
 #: src/tools.py:161 src/tools.py:219
 msgctxt "search keyword"
 msgid "query"
-msgstr ""
+msgstr "päring"
 
 #: src/tools.py:168
 msgid "Compress and decompress files and texts using GZip"
-msgstr ""
+msgstr "Paki GZip-is sisu kokku ja lahti"
 
 #: src/tools.py:170
 msgctxt "search keyword"
 msgid "unarchive"
-msgstr ""
+msgstr "paki lahti"
 
 #: src/tools.py:171 src/tools.py:365
 msgctxt "search keyword"
@@ -450,12 +457,12 @@ msgstr "Kodeeri ja dekodeeri JWT tunnuslube"
 #: src/tools.py:186
 msgctxt "search keyword"
 msgid "json web token"
-msgstr ""
+msgstr "json web token veeb tunnusluba"
 
 #: src/tools.py:187
 msgctxt "search keyword"
 msgid "header"
-msgstr ""
+msgstr "päis päisekirje"
 
 #: src/tools.py:188
 msgctxt "search keyword"
@@ -1520,11 +1527,11 @@ msgstr ""
 
 #: src/views/timestamp.py:76
 msgid "Timezone"
-msgstr ""
+msgstr "Ajavöönd"
 
 #: src/views/timestamp.py:77
 msgid "Select the desired timezone"
-msgstr ""
+msgstr "Vali soovitud ajavöönd"
 
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
@@ -2756,7 +2763,7 @@ msgstr "Ajatemplite teisendaja"
 
 #: src/ui/views/timestamp.blp:43
 msgid "Sets the current system timestamp"
-msgstr ""
+msgstr "Määrab süsteemi praeguse ajatempli"
 
 #: src/ui/views/timestamp.blp:47
 msgid "Date"
