@@ -1,6 +1,7 @@
 # Copyright (C) 2022 - 2025 Alessandro Iepure
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
+from importlib import import_module
 
 from gi.repository import Adw, Gtk, Gio, GLib
 from gettext import gettext as _
@@ -8,7 +9,7 @@ from gettext import gettext as _
 from .widgets.sidebar_item import SidebarItem
 from .widgets.theme_switcher import ThemeSwitcher
 
-from .tools import get_tools_for_ui, search_tools
+from .tools import search_tools, TOOLS_METADATA
 
 
 @Gtk.Template(resource_path="/me/iepure/devtoolbox/ui/window.ui")
@@ -77,7 +78,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
         if debug == "False":
             self.remove_css_class("devel")
 
-        self._tools = get_tools_for_ui()
+        self._tools = TOOLS_METADATA
 
         # Populate sidebar and content stack
         for t in self._tools:
@@ -87,7 +88,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
                 icon_name=self._tools[t]["icon-name"],
                 tool_tip=self._tools[t]["tooltip"],
                 category=self._tools[t]["category"]))
-            self._content_stack.add_named(self._tools[t]["child"], t)
+            #self._content_stack.add_named(self._tools[t]["child"], t)
 
         self._sidebar.set_header_func(
             self._create_sidebar_headers, None, None)
@@ -100,8 +101,9 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
 
         # Select row for visible content
         try:
-            index = list(self._tools.keys()).index(
-            self._settings.get_string("last-tool"))
+            last_tool = self._settings.get_string("last-tool")
+            self.ensure_tool_widget(last_tool)
+            index = list(self._tools.keys()).index(last_tool)
             if index == 0:
                 self._sidebar.select_row(self._sidebar.get_first_child())
             else:
@@ -124,6 +126,25 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
         
         self.create_action("show-menu", self._on_show_menu_action, ["F10"])
 
+    def ensure_tool_widget(self, tool_name: str):
+        if not self._content_stack.get_child_by_name(tool_name):
+            match self._tools[tool_name]:
+                case {"widget_class": widget}:
+                    def wrapper(widget):
+                        return widget
+                    import_path = widget
+                case {"compressor_class": compressor}:
+                    from .views.compressor import CompressorView as wrapper
+                    import_path = compressor
+                case {"formatter_class": formatter}:
+                    from .views.formatter import FormatterView as wrapper
+                    import_path = formatter
+                case _:
+                    raise RuntimeError("unknown tool configuration")
+            module, class_name = import_path.rsplit(".", 1)
+            widget = wrapper(getattr(import_module(module), class_name)())
+            self._content_stack.add_named(widget, tool_name)
+
     @Gtk.Template.Callback()
     def _on_favorite_row_activated(self, list_box: Gtk.ListBox, row: Gtk.ListBoxRow) -> None:
         """
@@ -138,7 +159,9 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             None
         """
 
-        self._content_stack.set_visible_child_name(row.get_tool_name())
+        tool_name = row.get_tool_name()
+        self.ensure_tool_widget(tool_name)
+        self._content_stack.set_visible_child_name(tool_name)
 
         idx = 0
         sidebar_row = self._sidebar.get_row_at_index(idx)
@@ -168,7 +191,9 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
             None
         """
 
-        self._content_stack.set_visible_child_name(row.get_tool_name())
+        tool_name = row.get_tool_name()
+        self.ensure_tool_widget(tool_name)
+        self._content_stack.set_visible_child_name(tool_name)
 
         # Toggle not visible? => sidebar over content, close on selection
         if not self._toggle_sidebar_btn.get_visible():
@@ -300,6 +325,7 @@ class DevtoolboxWindow(Adw.ApplicationWindow):
         if tool_name not in self._tools:
             return False
             
+        self.ensure_tool_widget(tool_name)
         self._content_stack.set_visible_child_name(tool_name)
         
         # Select corresponding sidebar row
