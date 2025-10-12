@@ -6,28 +6,29 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-10-13 20:07+0000\n"
+"Last-Translator: dukezas <dukezas@gmail.com>\n"
+"Language-Team: Lithuanian <https://hosted.weblate.org/projects/devtoolbox/"
+"devtoolbox/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural="
-"(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : "
-"((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);\n"
+"(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
 msgid "@app-name@"
-msgstr ""
+msgstr "@programa@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
 msgid "Dev tools at your fingertips"
-msgstr ""
+msgstr "Paruošti kūrimo įrankiai"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
 msgid ""
@@ -37,6 +38,10 @@ msgid ""
 "Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;"
 "Lorem;Ipsum;"
 msgstr ""
+"JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;Patvirtinti;Validatorius;Konverteris;Konvertuoti"
+";Laiko-"
+"žyma;bmp;gif;icns;jpeg;png;tiff;webp;Atvaizdas;Pagrindas;Analizatorius;CRON;GZip;Suspaudėjass;Išskleidėjas;Hash'as;Regex;Palyginti;URL;Minimizuoti;Generatorius;Generuoti;UUID;Atsitiktinis;QR;chmod;Kontrastas;Spalva;Tekstas;Skirtumas;Case;Markdown;Peržiūra;Lorem;Ipsum;"
+""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -44,45 +49,50 @@ msgid ""
 "again that website of which you don't recall the name just for a quick "
 "conversion, this is the right app for you."
 msgstr ""
+"Jei jus užkniso nuolatinės tinkamo įrankio paieškos internete, ar negalit "
+"rast svetainės, kurios pavadinimo neatsimenat, kad atlikti greitą "
+"konversiją, tai ši programa (apsas) yra jums."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr ""
+"Tai galingų, bet parastų naudoti įrankių rinkinys padėsiantis išspręsti "
+"dažniausias kūrybos problemas."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Includes:"
-msgstr ""
+msgstr "Turi:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "JSON to YAML converter and vice-versa"
-msgstr ""
+msgstr "JSON į YAML konverteris ir atvirkščiai"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33
 msgid "CRON expressions parser"
-msgstr ""
+msgstr "CRON užduočių analizatorius"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "GZip compressor and decompressor"
-msgstr ""
+msgstr "GZip suspaudėjas ir išskleidėjas"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Formatters for common programming languages"
-msgstr ""
+msgstr "Populiarių programavimo kalbų formatuotojas"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Hash generators"
-msgstr ""
+msgstr "Hash generatoriai"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
-msgstr ""
+msgstr "Regex testeris"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/tools.py:450
 #: src/ui/views/markdown_preview.blp:19
 msgid "Markdown Previewer"
-msgstr ""
+msgstr "Markdown peržiūra"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
