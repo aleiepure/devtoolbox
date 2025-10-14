@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-10-13 20:07+0000\n"
+"PO-Revision-Date: 2025-10-15 00:07+0000\n"
 "Last-Translator: dukezas <dukezas@gmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/lt/>\n"
@@ -96,431 +96,432 @@ msgstr "Markdown peržiūra"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
-msgstr ""
+msgstr "Atvaizdų konvertavimas"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
-msgstr ""
+msgstr "Ir dar daugiau..."
 
 #: src/tools.py:13 src/tools.py:32 src/tools.py:67 src/tools.py:88
 #: src/tools.py:106
 msgid "Converters"
-msgstr ""
+msgstr "Konverteriai"
 
 #: src/tools.py:15 src/ui/views/json_yaml.blp:20
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr ""
+msgstr "Konvertuoti JSON dokumentus į YAML ir atvirkščiai"
 
 #: src/tools.py:20 src/tools.py:39 src/tools.py:206
 msgctxt "search keyword"
 msgid "parse"
-msgstr ""
+msgstr "analizuoti"
 
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
 msgctxt "search keyword"
 msgid "converter"
-msgstr ""
+msgstr "konverteris"
 
 #: src/tools.py:22 src/tools.py:46 src/tools.py:74 src/tools.py:96
 #: src/tools.py:114 src/tools.py:394
 msgctxt "search keyword"
 msgid "convert"
-msgstr ""
+msgstr "keisti (konvertuoti)"
 
 #: src/tools.py:23 src/tools.py:38 src/tools.py:47 src/tools.py:474
 msgctxt "search keyword"
 msgid "format"
-msgstr ""
+msgstr "formatas"
 
 #: src/tools.py:24 src/tools.py:234 src/tools.py:250 src/tools.py:435
 #: src/tools.py:446
 msgctxt "search keyword"
 msgid "document"
-msgstr ""
+msgstr "dokumentas"
 
 #: src/tools.py:25
 msgctxt "search keyword"
 msgid "spaces"
-msgstr ""
+msgstr "tarpai"
 
 #: src/tools.py:26
 msgctxt "search keyword"
 msgid "indentation"
-msgstr ""
+msgstr "laisvas tarpas (pastraipa, įtrauka)"
 
 #: src/tools.py:27 src/tools.py:204 src/tools.py:217 src/tools.py:231
 #: src/tools.py:245 src/tools.py:261 src/tools.py:274
 msgctxt "search keyword"
 msgid "indent"
-msgstr ""
+msgstr "įtrauka"
 
 #: src/tools.py:31 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
-msgstr ""
+msgstr "Laiko žymė"
 
 #: src/tools.py:34 src/ui/views/timestamp.blp:20
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr ""
+msgstr "Keisti UNIX laiko žymą į paprastą datą ir atvirkščiai"
 
 #: src/tools.py:36
 msgctxt "search keyword"
 msgid "epoch"
-msgstr ""
+msgstr "laikotarpis"
 
 #: src/tools.py:37 src/tools.py:97 src/tools.py:115
 msgctxt "search keyword"
 msgid "time"
-msgstr ""
+msgstr "laikas"
 
 #: src/tools.py:40
 msgctxt "search keyword"
 msgid "datetime"
-msgstr ""
+msgstr "data ir laikas"
 
 #: src/tools.py:41
 msgctxt "search keyword"
 msgid "calendar"
-msgstr ""
+msgstr "kalendorius"
 
 #: src/tools.py:42
 msgctxt "search keyword"
 msgid "timestamp"
-msgstr ""
+msgstr "laiko žyma"
 
 #: src/tools.py:44 src/tools.py:98 src/tools.py:116
 msgctxt "search keyword"
 msgid "date"
-msgstr ""
+msgstr "data"
 
 #: src/tools.py:48
 msgctxt "search keyword"
 msgid "short"
-msgstr ""
+msgstr "trumpas"
 
 #: src/tools.py:49
 msgctxt "search keyword"
 msgid "long"
-msgstr ""
+msgstr "ilgas"
 
 #: src/tools.py:52
 msgctxt "search keyword"
 msgid "year"
-msgstr ""
+msgstr "metai"
 
 #: src/tools.py:53
 msgctxt "search keyword"
 msgid "month"
-msgstr ""
+msgstr "mėnuo"
 
 #: src/tools.py:54
 msgctxt "search keyword"
 msgid "day"
-msgstr ""
+msgstr "diena"
 
 #: src/tools.py:55
 msgctxt "search keyword"
 msgid "hour"
-msgstr ""
+msgstr "valanda"
 
 #: src/tools.py:56
 msgctxt "search keyword"
 msgid "hours"
-msgstr ""
+msgstr "valandos"
 
 #: src/tools.py:57
 msgctxt "search keyword"
 msgid "minute"
-msgstr ""
+msgstr "minutė"
 
 #: src/tools.py:58
 msgctxt "search keyword"
 msgid "minutes"
-msgstr ""
+msgstr "minutės"
 
 #: src/tools.py:59
 msgctxt "search keyword"
 msgid "second"
-msgstr ""
+msgstr "seundė"
 
 #: src/tools.py:60
 msgctxt "search keyword"
 msgid "seconds"
-msgstr ""
+msgstr "sekundės"
 
 #: src/tools.py:61
 msgctxt "search keyword"
 msgid "timezone"
-msgstr ""
+msgstr "laiko juosta"
 
 #: src/tools.py:62
 msgctxt "search keyword"
 msgid "now"
-msgstr ""
+msgstr "dabar"
 
 #: src/tools.py:66
 msgid "Number Bases"
-msgstr ""
+msgstr "Skaičiavimo sistemos"
 
 #: src/tools.py:69 src/ui/views/base_converter.blp:20
 msgid "Convert numbers between bases"
-msgstr ""
+msgstr "Konvertuotis skaičius tarp sistemų"
 
 #: src/tools.py:71
 msgctxt "search keyword"
 msgid "representation"
-msgstr ""
+msgstr "pateikimas"
 
 #: src/tools.py:72
 msgctxt "search keyword"
 msgid "base"
-msgstr ""
+msgstr "sistema"
 
 #: src/tools.py:75
 msgctxt "search keyword"
 msgid "number"
-msgstr ""
+msgstr "skaičius"
 
 #: src/tools.py:76
 msgctxt "search keyword"
 msgid "binary"
-msgstr ""
+msgstr "dvejetainė"
 
 #: src/tools.py:77
 msgctxt "search keyword"
 msgid "octal"
-msgstr ""
+msgstr "aštuntainė"
 
 #: src/tools.py:78
 msgctxt "search keyword"
 msgid "decimal"
-msgstr ""
+msgstr "dešimtainė"
 
 #: src/tools.py:79
 msgctxt "search keyword"
 msgid "hexadecimal"
-msgstr ""
+msgstr "šešioliktainė"
 
 #: src/tools.py:80
 msgctxt "search keyword"
 msgid "integer"
-msgstr ""
+msgstr "sveikasis skaičius"
 
 #: src/tools.py:87 src/ui/views/cron_converter.blp:20
 msgid "CRON Parser"
-msgstr ""
+msgstr "CRON analizatorius"
 
 #: src/tools.py:90 src/ui/views/cron_converter.blp:21
 msgid "Convert CRON expressions to time and date"
-msgstr ""
+msgstr "Konvertuoti CRON išraiškas į laiką ir datą"
 
 #: src/tools.py:93 src/tools.py:111
 msgctxt "search keyword"
 msgid "schedule"
-msgstr ""
+msgstr "planuoti"
 
 #: src/tools.py:94 src/tools.py:112
 msgctxt "search keyword"
 msgid "parser"
-msgstr ""
+msgstr "analizatorius"
 
 #: src/tools.py:95 src/tools.py:113 src/tools.py:410
 msgctxt "search keyword"
 msgid "expression"
-msgstr ""
+msgstr "išraiška"
 
 #: src/tools.py:99 src/tools.py:117
 msgctxt "search keyword"
 msgid "job"
-msgstr ""
+msgstr "vykdyti"
 
 #: src/tools.py:105 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
-msgstr ""
+msgstr "Atvirkštinis CRON"
 
 #: src/tools.py:108 src/ui/views/reverse_cron.blp:20
+#, fuzzy
 msgid "Generate CRON expressions"
-msgstr ""
+msgstr "Generuoti CRON išraiškas"
 
 #: src/tools.py:126 src/tools.py:139 src/tools.py:151 src/tools.py:166
 #: src/tools.py:182
 msgid "Encoders & Decoders"
-msgstr ""
+msgstr "Koduotojai ir Dekoduotojai"
 
 #: src/tools.py:128 src/ui/views/html_encoder.blp:20
 msgid "Encode and decode special characters using the HTML format"
-msgstr ""
+msgstr "Koduoti ir dekoduoti specialius simbolius naudojant HTML formatą"
 
 #: src/tools.py:131
 msgctxt "search keyword"
 msgid "escape"
-msgstr ""
+msgstr "išeiti"
 
 #: src/tools.py:133 src/tools.py:233 src/tools.py:247 src/tools.py:434
 #: src/tools.py:456
 msgctxt "search keyword"
 msgid "markup"
-msgstr ""
+msgstr "markup'as"
 
 #: src/tools.py:134 src/tools.py:145 src/tools.py:172
 msgctxt "search keyword"
 msgid "text"
-msgstr ""
+msgstr "tekstas"
 
 #: src/tools.py:141
 msgid "Encode and decode base64 strings"
-msgstr ""
+msgstr "Koduoti ir dekoduoti base64 eiutes"
 
 #: src/tools.py:144 src/tools.py:173
 msgctxt "search keyword"
 msgid "string"
-msgstr ""
+msgstr "eilutė"
 
 #: src/tools.py:146 src/tools.py:207 src/tools.py:235 src/tools.py:445
 msgctxt "search keyword"
 msgid "data"
-msgstr ""
+msgstr "data"
 
 #: src/tools.py:153 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
-msgstr ""
+msgstr "Koduoti ir dekoduoti specialius simbolius URL adresuose"
 
 #: src/tools.py:155
 msgctxt "search keyword"
 msgid "url"
-msgstr ""
+msgstr "nuoroda"
 
 #: src/tools.py:156
 msgctxt "search keyword"
 msgid "unescape"
-msgstr ""
+msgstr "unescape"
 
 #: src/tools.py:157 src/tools.py:249
 msgctxt "search keyword"
 msgid "web"
-msgstr ""
+msgstr "žiniatinklis"
 
 #: src/tools.py:158
 msgctxt "search keyword"
 msgid "link"
-msgstr ""
+msgstr "nuoroda"
 
 #: src/tools.py:159
 msgctxt "search keyword"
 msgid "address"
-msgstr ""
+msgstr "adresas"
 
 #: src/tools.py:160
 msgctxt "search keyword"
 msgid "uri"
-msgstr ""
+msgstr "uri"
 
 #: src/tools.py:161 src/tools.py:219
 msgctxt "search keyword"
 msgid "query"
-msgstr ""
+msgstr "užklausa"
 
 #: src/tools.py:168
 msgid "Compress and decompress files and texts using GZip"
-msgstr ""
+msgstr "Suspausti ir išskleisti failus ir tekstus naudojant GZip"
 
 #: src/tools.py:170
 msgctxt "search keyword"
 msgid "unarchive"
-msgstr ""
+msgstr "išarchyvuoti"
 
 #: src/tools.py:171 src/tools.py:365
 msgctxt "search keyword"
 msgid "file"
-msgstr ""
+msgstr "failas"
 
 #: src/tools.py:174
 msgctxt "search keyword"
 msgid "zip"
-msgstr ""
+msgstr "suspausti"
 
 #: src/tools.py:175
 msgctxt "search keyword"
 msgid "unzip"
-msgstr ""
+msgstr "išskleisti"
 
 #: src/tools.py:176
 msgctxt "search keyword"
 msgid "decompression"
-msgstr ""
+msgstr "išskleidimas"
 
 #: src/tools.py:177
 msgctxt "search keyword"
 msgid "decompressor"
-msgstr ""
+msgstr "išskleidėjas"
 
 #: src/tools.py:184 src/ui/views/jwt_decoder.blp:20
 msgid "Decode and encode JWT tokens"
-msgstr ""
+msgstr "Dekoduoti ir koduoti JWT žetonus"
 
 #: src/tools.py:186
 msgctxt "search keyword"
 msgid "json web token"
-msgstr ""
+msgstr "json žiniatinklio žetonas"
 
 #: src/tools.py:187
 msgctxt "search keyword"
 msgid "header"
-msgstr ""
+msgstr "antraštė"
 
 #: src/tools.py:188
 msgctxt "search keyword"
 msgid "payload"
-msgstr ""
+msgstr "naudingoji apkrova"
 
 #: src/tools.py:189
 msgctxt "search keyword"
 msgid "signature"
-msgstr ""
+msgstr "parašas"
 
 #: src/tools.py:190
 msgctxt "search keyword"
 msgid "authentication"
-msgstr ""
+msgstr "autentikavimas"
 
 #: src/tools.py:191
 msgctxt "search keyword"
 msgid "authorization"
-msgstr ""
+msgstr "autorizavimas"
 
 #: src/tools.py:192 src/tools.py:320 src/tools.py:533 src/tools.py:550
 msgctxt "search keyword"
 msgid "security"
-msgstr ""
+msgstr "apsauga"
 
 #: src/tools.py:199 src/tools.py:212 src/tools.py:226 src/tools.py:240
 #: src/tools.py:255 src/tools.py:269 src/tools.py:282 src/tools.py:296
 msgid "Formatters & Minifiers"
-msgstr ""
+msgstr "Farmatuotojai ir minimizuotojai"
 
 #: src/tools.py:201 src/formatters/json.py:14
 msgid "Format JSON documents"
-msgstr ""
+msgstr "Formatuoti JSON dokumentus"
 
 #: src/tools.py:203 src/tools.py:216 src/tools.py:230 src/tools.py:244
 #: src/tools.py:260 src/tools.py:273
 msgctxt "search keyword"
 msgid "pretty"
-msgstr ""
+msgstr "gražus"
 
 #: src/tools.py:205 src/tools.py:218 src/tools.py:232 src/tools.py:246
 #: src/tools.py:262 src/tools.py:275
 msgctxt "search keyword"
 msgid "beautify"
-msgstr ""
+msgstr "gražinti"
 
 #: src/tools.py:214 src/formatters/sql.py:14
 msgid "Format SQL documents"
-msgstr ""
+msgstr "Formatuoti SQL dokumentus"
 
 #: src/tools.py:220
 msgctxt "search keyword"
 msgid "database"
-msgstr ""
+msgstr "duomenų bazė"
 
 #: src/tools.py:221
 msgctxt "search keyword"
@@ -529,326 +530,326 @@ msgstr ""
 
 #: src/tools.py:228 src/formatters/xml.py:16
 msgid "Format XML documents"
-msgstr ""
+msgstr "Formatuoti XML dokumentus"
 
 #: src/tools.py:242 src/formatters/html.py:15
 msgid "Format HTML documents"
-msgstr ""
+msgstr "Formatuoti HTML dokumentus"
 
 #: src/tools.py:248 src/tools.py:263 src/tools.py:276 src/tools.py:286
 #: src/tools.py:301
 msgctxt "search keyword"
 msgid "minify"
-msgstr ""
+msgstr "minimizuoti"
 
 #: src/tools.py:257 src/formatters/js.py:15
 msgid "Format JavaScript documents"
-msgstr ""
+msgstr "Formatuoti JavaScript dokumentus"
 
 #: src/tools.py:264 src/tools.py:306
 msgctxt "search keyword"
 msgid "code"
-msgstr ""
+msgstr "kodas"
 
 #: src/tools.py:271 src/formatters/css.py:14
 msgid "Format CSS documents"
-msgstr ""
+msgstr "Foematuoti CSS dokumentus"
 
 #: src/tools.py:277 src/tools.py:289
 msgctxt "search keyword"
 msgid "stylesheet"
-msgstr ""
+msgstr "stylesheet'as"
 
 #: src/tools.py:281 src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
-msgstr ""
+msgstr "CSS minimizuotojas"
 
 #: src/tools.py:284 src/formatters/css_minifier.py:15
 msgid "Minify CSS documents"
-msgstr ""
+msgstr "Minimizuoti CSS dokumentus"
 
 #: src/tools.py:287 src/tools.py:302
 msgctxt "search keyword"
 msgid "compress"
-msgstr ""
+msgstr "suspausti"
 
 #: src/tools.py:288
 msgctxt "search keyword"
 msgid "style"
-msgstr ""
+msgstr "stilius"
 
 #: src/tools.py:290 src/tools.py:303
 msgctxt "search keyword"
 msgid "reduce"
-msgstr ""
+msgstr "sumažinti"
 
 #: src/tools.py:291 src/tools.py:304
 msgctxt "search keyword"
 msgid "size"
-msgstr ""
+msgstr "dydis"
 
 #: src/tools.py:295 src/formatters/js_minifier.py:14
 msgid "JavaScript Minifier"
-msgstr ""
+msgstr "JavaScript'o minimizuotojas"
 
 #: src/tools.py:298
 msgid "Minify JavaScript documents"
-msgstr ""
+msgstr "Minimizuoti JavaScript dokumentus"
 
 #: src/tools.py:305
 msgctxt "search keyword"
 msgid "script"
-msgstr ""
+msgstr "skriptas"
 
 #: src/tools.py:312
 msgid "Hash"
-msgstr ""
+msgstr "Hash'as"
 
 #: src/tools.py:313 src/tools.py:326 src/tools.py:338 src/tools.py:349
 #: src/tools.py:361 src/tools.py:375
 msgid "Generators"
-msgstr ""
+msgstr "Generatoriai"
 
 #: src/tools.py:315
 msgid "Calculate hashes and check for integrity"
-msgstr ""
+msgstr "Skaičiuoti hash'us ir patikrinti vientisumą"
 
 #: src/tools.py:317
 msgctxt "search keyword"
 msgid "checksum"
-msgstr ""
+msgstr "kontrolinė suma"
 
 #: src/tools.py:318
 msgctxt "search keyword"
 msgid "digest"
-msgstr ""
+msgstr "įsisavinti"
 
 #: src/tools.py:319
 msgctxt "search keyword"
 msgid "generate"
-msgstr ""
+msgstr "generuoti"
 
 #: src/tools.py:321 src/tools.py:535 src/tools.py:551
 msgctxt "search keyword"
 msgid "cryptography"
-msgstr ""
+msgstr "kriptografija"
 
 #: src/tools.py:328 src/ui/views/lorem_generator.blp:20
 msgid "Generate lorem ipsum placeholder text"
-msgstr ""
+msgstr "Generuoti lorem ipsum užpildantį tekstą"
 
 #: src/tools.py:330
 msgctxt "search keyword"
 msgid "dummy"
-msgstr ""
+msgstr "fiktyvus"
 
 #: src/tools.py:331
 msgctxt "search keyword"
 msgid "sample"
-msgstr ""
+msgstr "pavyzdys"
 
 #: src/tools.py:332
 msgctxt "search keyword"
 msgid "filler"
-msgstr ""
+msgstr "užpildas"
 
 #: src/tools.py:333
 msgctxt "search keyword"
 msgid "latin"
-msgstr ""
+msgstr "lotynų"
 
 #: src/tools.py:340 src/ui/views/uuid_generator.blp:20
 msgid "Generate Universally Unique IDs (UUID)"
-msgstr ""
+msgstr "Generuoti Universalius Unikalius ID (UUID)"
 
 #: src/tools.py:343
 msgctxt "search keyword"
 msgid "identifier"
-msgstr ""
+msgstr "identifikatorius"
 
 #: src/tools.py:344
 msgctxt "search keyword"
 msgid "random"
-msgstr ""
+msgstr "atsitiktinis"
 
 #: src/tools.py:348
 msgid "Random"
-msgstr ""
+msgstr "Atsitiktinis"
 
 #: src/tools.py:351 src/ui/views/random_generator.blp:20
 msgid "Generate random numbers and strings"
-msgstr ""
+msgstr "Generuoti atsitiktinius skaičius ir eilutes"
 
 #: src/tools.py:353
 msgctxt "search keyword"
 msgid "password"
-msgstr ""
+msgstr "slaptažodis"
 
 #: src/tools.py:354
 msgctxt "search keyword"
 msgid "token"
-msgstr ""
+msgstr "žetonas"
 
 #: src/tools.py:355
 msgctxt "search keyword"
 msgid "entropy"
-msgstr ""
+msgstr "entropija"
 
 #: src/tools.py:356
 msgctxt "search keyword"
 msgid "secure"
-msgstr ""
+msgstr "sauga"
 
 #: src/tools.py:360 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
-msgstr ""
+msgstr "Chmod skaičiuoklė"
 
 #: src/tools.py:363 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
-msgstr ""
+msgstr "Apskaičiuokite reikšmes, kad pakeistumėte teises naudodami chmod"
 
 #: src/tools.py:366
 msgctxt "search keyword"
 msgid "unix"
-msgstr ""
+msgstr "unix"
 
 #: src/tools.py:367
 msgctxt "search keyword"
 msgid "linux"
-msgstr ""
+msgstr "linux"
 
 #: src/tools.py:368
 msgctxt "search keyword"
 msgid "calculate"
-msgstr ""
+msgstr "skaičiuoti"
 
 #: src/tools.py:369
 msgctxt "search keyword"
 msgid "mode"
-msgstr ""
+msgstr "režimas"
 
 #: src/tools.py:370
 msgctxt "search keyword"
 msgid "access"
-msgstr ""
+msgstr "prieiga"
 
 #: src/tools.py:374
 msgid "QR Code"
-msgstr ""
+msgstr "QR kodas"
 
 #: src/tools.py:377 src/ui/views/qrcode_generator.blp:20
 msgid "Create custom QR Codes"
-msgstr ""
+msgstr "Kurti tinkintus QR kodus"
 
 #: src/tools.py:379
 msgctxt "search keyword"
 msgid "qrcode"
-msgstr ""
+msgstr "qr kodas"
 
 #: src/tools.py:380
 msgctxt "search keyword"
 msgid "barcode"
-msgstr ""
+msgstr "barkodas"
 
 #: src/tools.py:381
 msgctxt "search keyword"
 msgid "image"
-msgstr ""
+msgstr "atvaizdas"
 
 #: src/tools.py:382
 msgctxt "search keyword"
 msgid "matrix"
-msgstr ""
+msgstr "matrica"
 
 #: src/tools.py:388 src/ui/views/text_inspector.blp:19
 msgid "Text Inspector & Case Converter"
-msgstr ""
+msgstr "Teksto tikrinimas, didžiųjų/mažųjų raidžių keitimas"
 
 #: src/tools.py:389 src/tools.py:406 src/tools.py:417 src/tools.py:429
 #: src/tools.py:440 src/tools.py:451 src/ui/views/regex_tester.blp:49
 #: src/ui/views/text_inspector.blp:107 src/ui/views/text_inspector.blp:164
 msgid "Text"
-msgstr ""
+msgstr "Tekstas"
 
 #: src/tools.py:391 src/ui/views/text_inspector.blp:20
 msgid "View statistics about text and change sentence cases"
-msgstr ""
+msgstr "Peržiūrėti teksto statistiką ir keisti raidžių lygį"
 
 #: src/tools.py:393
 msgctxt "search keyword"
 msgid "analyze"
-msgstr ""
+msgstr "analizuoti"
 
 #: src/tools.py:395
 msgctxt "search keyword"
 msgid "uppercase"
-msgstr ""
+msgstr "didžiosios"
 
 #: src/tools.py:396
 msgctxt "search keyword"
 msgid "lowercase"
-msgstr ""
+msgstr "mažosios"
 
 #: src/tools.py:397
 msgctxt "search keyword"
 msgid "capitalize"
-msgstr ""
+msgstr "rašyti didžiosiomis"
 
 #: src/tools.py:398
 msgctxt "search keyword"
 msgid "count"
-msgstr ""
+msgstr "suskaičiuoti"
 
 #: src/tools.py:399
 msgctxt "search keyword"
 msgid "words"
-msgstr ""
+msgstr "žodžius"
 
 #: src/tools.py:400
 msgctxt "search keyword"
 msgid "characters"
-msgstr ""
+msgstr "simboliai"
 
 #: src/tools.py:401
 msgctxt "search keyword"
 msgid "lines"
-msgstr ""
+msgstr "eilutės"
 
 #: src/tools.py:405
 msgid "Regex Tester"
-msgstr ""
+msgstr "Regex testuotojas"
 
 #: src/tools.py:408 src/ui/views/regex_tester.blp:20
 msgid "Find matching strings inside a text"
-msgstr ""
+msgstr "Rasti tekste sutampančias eilutes"
 
 #: src/tools.py:411
 msgctxt "search keyword"
 msgid "pattern"
-msgstr ""
+msgstr "šablonas"
 
 #: src/tools.py:412
 msgctxt "search keyword"
 msgid "search"
-msgstr ""
+msgstr "ieškoti"
 
 #: src/tools.py:416 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
-msgstr ""
+msgstr "Tekstų palyginimas"
 
 #: src/tools.py:419 src/ui/views/text_diff.blp:20
 msgid "Analyze two texts and find differences"
-msgstr ""
+msgstr "Analizuoti abu tekstus ir rasti skirtumus"
 
 #: src/tools.py:421
 msgctxt "search keyword"
 msgid "difference"
-msgstr ""
+msgstr "skirtumas"
 
 #: src/tools.py:422
 msgctxt "search keyword"
 msgid "compare"
-msgstr ""
+msgstr "pallyginti"
 
 #: src/tools.py:423
 msgctxt "search keyword"
