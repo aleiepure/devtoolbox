@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-10-22 02:03+0000\n"
+"PO-Revision-Date: 2025-10-24 01:02+0000\n"
 "Last-Translator: dukezas <dukezas@gmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/lt/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural="
 "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.14-dev\n"
+"X-Generator: Weblate 5.14.1-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -2013,350 +2013,357 @@ msgstr "Laikytis formato"
 
 #: src/ui/views/color_converter.blp:62
 msgid "Bits"
-msgstr ""
+msgstr "Bitai"
 
 #: src/ui/views/color_converter.blp:63
 msgid "Bits precision for color values"
-msgstr ""
+msgstr "Bitų tikslumas spalvų reikšmėms"
 
 #: src/ui/views/color_converter.blp:82
 msgid "Values"
-msgstr ""
+msgstr "Reikšmės"
 
 #: src/ui/views/color_converter.blp:85 src/ui/views/color_converter.blp:97
 msgid "Color"
-msgstr ""
+msgstr "Spalva"
 
 #: src/ui/views/color_converter.blp:103
 msgid "Hex"
-msgstr ""
+msgstr "Hex"
 
 #: src/ui/views/color_converter.blp:128
 msgid "Red"
-msgstr ""
+msgstr "Raudona"
 
 #: src/ui/views/color_converter.blp:136
 msgid "Green"
-msgstr ""
+msgstr "Žalia"
 
 #: src/ui/views/color_converter.blp:144
 msgid "Blue"
-msgstr ""
+msgstr "Mėlyna"
 
 #: src/ui/views/color_converter.blp:168 src/ui/views/color_converter.blp:208
 msgid "Hue"
-msgstr ""
+msgstr "Atspalvis"
 
 #: src/ui/views/color_converter.blp:176 src/ui/views/color_converter.blp:216
 msgid "Saturation"
-msgstr ""
+msgstr "Saturacija"
 
 #: src/ui/views/color_converter.blp:184
 msgid "Value"
-msgstr ""
+msgstr "Reikšmė"
 
 #: src/ui/views/color_converter.blp:224
 msgid "Lightness"
-msgstr ""
+msgstr "Šviesumas"
 
 #: src/ui/views/color_converter.blp:234
 msgid "Alpha"
-msgstr ""
+msgstr "Alfa"
 
 #: src/ui/views/color_converter.blp:265
 msgid "HWB"
-msgstr ""
+msgstr "HWB"
 
 #: src/ui/views/contrast_checker.blp:33 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
-msgstr ""
+msgstr "Teksto spalva"
 
 #: src/ui/views/contrast_checker.blp:34
 msgid "Color used for the text"
-msgstr ""
+msgstr "Tekstui naudojama spalva"
 
 #: src/ui/views/contrast_checker.blp:52 src/ui/views/contrast_checker.blp:65
 msgid "Background color"
-msgstr ""
+msgstr "Pagrindo spalva"
 
 #: src/ui/views/contrast_checker.blp:53
 msgid "Color used for the background"
-msgstr ""
+msgstr "Pagrindui naudojama spalva"
 
 #: src/ui/views/contrast_checker.blp:77
 msgid "Example"
-msgstr ""
+msgstr "Pavyzdys"
 
 #: src/ui/views/contrast_checker.blp:89
 msgid "Lorem ipsum dolor sit amet"
-msgstr ""
+msgstr "Lorem ipsum dolor sit amet"
 
 #: src/ui/views/contrast_checker.blp:97
 msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
-msgstr ""
+msgstr "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
 
 #: src/ui/views/contrast_checker.blp:118 src/ui/views/contrast_checker.blp:149
 msgid "AA"
-msgstr ""
+msgstr "AA"
 
 #: src/ui/views/contrast_checker.blp:126 src/ui/views/contrast_checker.blp:188
 msgid "small"
-msgstr ""
+msgstr "mažas"
 
 #: src/ui/views/contrast_checker.blp:157 src/ui/views/contrast_checker.blp:219
 msgid "large"
-msgstr ""
+msgstr "didelis"
 
 #: src/ui/views/contrast_checker.blp:180 src/ui/views/contrast_checker.blp:211
 msgid "AAA"
-msgstr ""
+msgstr "AAA"
 
 #: src/ui/views/cron_converter.blp:34
 msgid "Number of dates"
-msgstr ""
+msgstr "Datų kiekis"
 
 #: src/ui/views/cron_converter.blp:35
 msgid "Number of dates to be generated (up to 20)"
-msgstr ""
+msgstr "Generuojamų datų kiekis (iki 20)"
 
 #: src/ui/views/cron_converter.blp:47
 msgid "Output format"
-msgstr ""
+msgstr "Išvesties formatas"
 
 #: src/ui/views/cron_converter.blp:48
 msgid ""
 "Format used to display generated dates (<a href=\"https://strftime.org/"
 "\">python syntax</a>)"
 msgstr ""
+"Formatas naudojamas rodyti generuojamas datas "
+"(<a href=\"https://strftime.org/\">python sintaksė</a>)"
 
 #: src/ui/views/cron_converter.blp:76
 msgid "CRON expression"
-msgstr ""
+msgstr "CRON išraiška"
 
 #: src/ui/views/cron_converter.blp:89
 msgid "Dates"
-msgstr ""
+msgstr "Datos"
 
 #: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:52
 msgid "Indentations"
-msgstr ""
+msgstr "Įtraukos"
 
 #: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:53
 msgid "Number of spaces used for indentation"
-msgstr ""
+msgstr "Tarpų kiekis naudojamas įtraukai"
 
 #: src/ui/views/gzip_compressor.blp:19
 msgid "GZip Compress & Decompress"
-msgstr ""
+msgstr "GZip suspaudimas ir išskleidimas"
 
 #: src/ui/views/gzip_compressor.blp:20
 msgid "Compress and decompress texts and images using GZip"
-msgstr ""
+msgstr "Suspausti ir išskleisti tekstus ir paveiksliukus naudojant GZip"
 
 #: src/ui/views/gzip_compressor.blp:34
 msgid "Select the desired operation"
-msgstr ""
+msgstr "Pasirinkti norimą veiksmą"
 
 #: src/ui/views/gzip_compressor.blp:43
 msgid "Compress"
-msgstr ""
+msgstr "Suspausti"
 
 #: src/ui/views/gzip_compressor.blp:47
 msgid "Decompress"
-msgstr ""
+msgstr "Išskleisti"
 
 #: src/ui/views/gzip_compressor.blp:105
 msgid ""
 "The compression result and the expected decompression input are base64 "
 "encoded."
 msgstr ""
+"Suspaudimo rezultatas ir laukiama išskleidimo įvestis užkoduoti naudojant "
+"base64."
 
 #: src/ui/views/gzip_compressor.blp:110
 msgid "May hang the app for large files, please wait."
-msgstr ""
+msgstr "Prašome palaukti, programa gali \"pakibti\" apdorodama didelius failus."
 
 #: src/ui/views/hash_generator.blp:19
 msgid "Hash Generator & Checker"
-msgstr ""
+msgstr "Hash generatorius ir tikrintojas"
 
 #: src/ui/views/hash_generator.blp:20
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
 msgstr ""
+"Apskaičiuoti MD5, SHA1, SHA256, and SHA512 hash'us ir patikrinti vientisumą"
 
 #: src/ui/views/hash_generator.blp:34
 msgid "Hash to calculate"
-msgstr ""
+msgstr "Apskaičiuoti hash'ą"
 
 #: src/ui/views/hash_generator.blp:35
 msgid "Choose the hash type to calculate"
-msgstr ""
+msgstr "Apskaičiavimui pasirinkite hash'o tipą"
 
 #: src/ui/views/hash_generator.blp:53
 msgid "Check for integrity"
-msgstr ""
+msgstr "Tikrinti vientisumą"
 
 #: src/ui/views/hash_generator.blp:54
 msgid ""
 "If enabled the calculated hash will be checked against another provided hash "
 "to verify integrity"
 msgstr ""
+"Jei įgalinta, vientisumo patikrinimui apskaičiuotas hash'as bus palygintas "
+"su kitu pateiktu hash'u"
 
 #: src/ui/views/hash_generator.blp:60
 msgid "Type the hash to check against"
-msgstr ""
+msgstr "Įrašykite hashą su kuriuo norite palyginti"
 
 #: src/ui/views/html_encoder.blp:19
 msgid "HTML Encoder & Decoder"
-msgstr ""
+msgstr "HTML koduotojas ir dekoderis"
 
 #: src/ui/views/image_converter.blp:34
 msgctxt "noun"
 msgid "Format"
-msgstr ""
+msgstr "Formatas"
 
 #: src/ui/views/image_converter.blp:35
 msgid "Select the desired output format"
-msgstr ""
+msgstr "Pasirinkite norimą išvesties formatą"
 
 #: src/ui/views/image_converter.blp:58
 msgid "Image"
-msgstr ""
+msgstr "Paveikslėlis"
 
 #: src/ui/views/image_converter.blp:60
 msgid "Convert"
-msgstr ""
+msgstr "Konvertuoti"
 
 #: src/ui/views/image_converter.blp:64
 msgid "converted-image"
-msgstr ""
+msgstr "kovertuotas paveiklėlis"
 
 #: src/ui/views/json_validator.blp:49
 msgid "JSON Schema"
-msgstr ""
+msgstr "JSON schema"
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
-msgstr ""
+msgstr "JSON - YAML koverteris"
 
 #: src/ui/views/json_yaml.blp:34
 msgid "Specify what format is the input and the desired output"
-msgstr ""
+msgstr "Nurodykite įvesties formatą ir norimą išvesties formatą"
 
 #: src/ui/views/json_yaml.blp:42
 msgid "JSON → YAML"
-msgstr ""
+msgstr "JSON → YAML"
 
 #: src/ui/views/json_yaml.blp:46
 msgid "YAML → JSON"
-msgstr ""
+msgstr "YAML → JSON"
 
 #: src/ui/views/jwt_decoder.blp:19
 msgid "JWT Decode & Encode"
-msgstr ""
+msgstr "JWT koduotojas ir dekoderis"
 
 #: src/ui/views/jwt_decoder.blp:32
 msgid "Verify Signature"
-msgstr ""
+msgstr "Patvirtinti parašą"
 
 #: src/ui/views/jwt_decoder.blp:33
 msgid "Verify signature or sign JWT"
-msgstr ""
+msgstr "Patvirtinti parašą arba pasirašyti JWT"
 
 #: src/ui/views/jwt_decoder.blp:41
 msgid "Off"
-msgstr ""
+msgstr "Išjungta"
 
 #: src/ui/views/jwt_decoder.blp:46
 msgid "Symmetric"
-msgstr ""
+msgstr "Simetriškas"
 
 #: src/ui/views/jwt_decoder.blp:51
 msgid "Asymmetric"
-msgstr ""
+msgstr "Asimetriškas"
 
 #: src/ui/views/jwt_decoder.blp:57
 msgid "Key Encoding"
-msgstr ""
+msgstr "Rakto kodavimas"
 
 #: src/ui/views/jwt_decoder.blp:58
 msgid "Select the encoding of the key"
-msgstr ""
+msgstr "Pasirinkite rakto kodavimą"
 
 #: src/ui/views/jwt_decoder.blp:99
 msgid "Public Key (PEM)"
-msgstr ""
+msgstr "Viešas raktas (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:107
 msgid "Private Key (PEM)"
-msgstr ""
+msgstr "Privatus raktas (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:120
 msgid "Token"
-msgstr ""
+msgstr "Žetonas"
 
 #: src/ui/views/jwt_decoder.blp:139
 msgid "Header"
-msgstr ""
+msgstr "Antraštė"
 
 #: src/ui/views/jwt_decoder.blp:147
 msgid "Payload"
-msgstr ""
+msgstr "Naudingi duomenys"
 
 #: src/ui/views/lorem_generator.blp:19
 msgid "Lorem Ipsum Generator"
-msgstr ""
+msgstr "Lorem ipsum generatorius"
 
 #: src/ui/views/lorem_generator.blp:34
 msgid "Begin with \"Lorem ipsum dolor sit amet\""
-msgstr ""
+msgstr "Pradėti naudojant \"Lorem ipsum dolor sit amet\""
 
 #: src/ui/views/lorem_generator.blp:40 src/ui/views/uuid_generator.blp:53
 msgid "Amount"
-msgstr ""
+msgstr "Kiekis"
 
 #: src/ui/views/lorem_generator.blp:54
 msgid "Words"
-msgstr ""
+msgstr "Žodžiai"
 
 #: src/ui/views/lorem_generator.blp:55
 msgid "Sentences"
-msgstr ""
+msgstr "Sakiniai"
 
 #: src/ui/views/lorem_generator.blp:56
 msgid "Paragraphs"
-msgstr ""
+msgstr "Pastraipos"
 
 #: src/ui/views/lorem_generator.blp:69
 msgid "Generated text"
-msgstr ""
+msgstr "Sugeneruotas tekstas"
 
 #: src/ui/views/markdown_preview.blp:35
 msgid "Markdown"
-msgstr ""
+msgstr "Ženklinimas (markdown)"
 
 #: src/ui/views/markdown_preview.blp:49
 msgid "Preview"
-msgstr ""
+msgstr "Peržiūra"
 
 #: src/ui/views/qrcode_generator.blp:19
 msgid "QR Code Generator"
-msgstr ""
+msgstr "QR kodo generatorius"
 
 #: src/ui/views/qrcode_generator.blp:31 src/ui/views/reverse_cron.blp:31
 msgid "Tool Options"
-msgstr ""
+msgstr "Įrankio parinktys"
 
 #: src/ui/views/qrcode_generator.blp:32
 msgid "Fill the required information and press 'generate'"
-msgstr ""
+msgstr "Užpildykite būtiną informaciją ir spauskite 'generuoti'"
 
 #: src/ui/views/qrcode_generator.blp:35
 msgid "Content type"
-msgstr ""
+msgstr "Turinio tipas"
 
 #: src/ui/views/qrcode_generator.blp:36
 msgid "Choose the content of the QR Code"
-msgstr ""
+msgstr "Pasirinkite QR kodo turinį"
 
 #: src/ui/views/qrcode_generator.blp:41 src/ui/views/qrcode_generator.blp:49
 msgid "Text/URL"
