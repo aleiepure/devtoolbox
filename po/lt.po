@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-10-24 01:02+0000\n"
+"PO-Revision-Date: 2025-10-30 04:26+0000\n"
 "Last-Translator: dukezas <dukezas@gmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/lt/>\n"
@@ -2367,175 +2367,176 @@ msgstr "Pasirinkite QR kodo turinį"
 
 #: src/ui/views/qrcode_generator.blp:41 src/ui/views/qrcode_generator.blp:49
 msgid "Text/URL"
-msgstr ""
+msgstr "Tekstas/URL nuoroda"
 
 #: src/ui/views/qrcode_generator.blp:42
 msgid "WiFi Network"
-msgstr ""
+msgstr "WiFi tinklas"
 
 #: src/ui/views/qrcode_generator.blp:43
 msgid "Contact"
-msgstr ""
+msgstr "Kontaktas"
 
 #: src/ui/views/qrcode_generator.blp:56
 msgid "Network Name (SSID)"
-msgstr ""
+msgstr "Tinklo vardas (SSID)"
 
 #: src/ui/views/qrcode_generator.blp:63
 msgid "Network Encryption"
-msgstr ""
+msgstr "Tinklo šifravimas"
 
 #: src/ui/views/qrcode_generator.blp:70
 msgid "None"
-msgstr ""
+msgstr "Nė vienas"
 
 #: src/ui/views/qrcode_generator.blp:76
 msgid "Network Password"
-msgstr ""
+msgstr "Tinklo slaptažodis"
 
 #: src/ui/views/qrcode_generator.blp:80
 msgid "First Name *"
-msgstr ""
+msgstr "Vardas *"
 
 #: src/ui/views/qrcode_generator.blp:87
 msgid "Last Name *"
-msgstr ""
+msgstr "Pavardė *"
 
 #: src/ui/views/qrcode_generator.blp:94
 msgid "Phone Number"
-msgstr ""
+msgstr "Telefono Nr."
 
 #: src/ui/views/qrcode_generator.blp:101
 msgid "Email"
-msgstr ""
+msgstr "E-paštas"
 
 #: src/ui/views/qrcode_generator.blp:108
 msgid "Birthday"
-msgstr ""
+msgstr "Gimimo diena"
 
 #: src/ui/views/qrcode_generator.blp:127
 msgid "Select from calendar:"
-msgstr ""
+msgstr "Pasirinkti kalendoriuje:"
 
 #: src/ui/views/qrcode_generator.blp:138
 msgid "URL"
-msgstr ""
+msgstr "URL nuoroda"
 
 #: src/ui/views/qrcode_generator.blp:145
 msgid "Address"
-msgstr ""
+msgstr "Adresas"
 
 #: src/ui/views/qrcode_generator.blp:148
 msgid "Street"
-msgstr ""
+msgstr "Gatvė"
 
 #: src/ui/views/qrcode_generator.blp:155
 msgid "City"
-msgstr ""
+msgstr "Miestas"
 
 #: src/ui/views/qrcode_generator.blp:162
 msgid "State"
-msgstr ""
+msgstr "Valstija"
 
 #: src/ui/views/qrcode_generator.blp:169
 msgid "ZIP Code"
-msgstr ""
+msgstr "Pašto kodas"
 
 #: src/ui/views/qrcode_generator.blp:176
 msgid "Country"
-msgstr ""
+msgstr "Šalis"
 
 #: src/ui/views/qrcode_generator.blp:186
 msgid "Generated QR Code"
-msgstr ""
+msgstr "Sugeneruotas QR kodas"
 
 #: src/ui/views/qrcode_generator.blp:193
 msgid "qr-code.png"
-msgstr ""
+msgstr "qr-kodas.png"
 
 #: src/ui/views/qrcode_generator.blp:195
 msgid "Generate"
-msgstr ""
+msgstr "Generuoti"
 
 #: src/ui/views/random_generator.blp:19
 msgid "Random Generator"
-msgstr ""
+msgstr "Atsitiktinis generatorius"
 
 #: src/ui/views/random_generator.blp:30
 msgid "String"
-msgstr ""
+msgstr "Eilutė"
 
 #: src/ui/views/random_generator.blp:31
 msgid "Generate a random string with the given options. ASCII characters only."
 msgstr ""
+"Generuoti atsitiktinę eilutę su nurodytais parametrais. Tik ASCII simboliai."
 
 #: src/ui/views/random_generator.blp:34
 msgid "Length"
-msgstr ""
+msgstr "Ilgumas"
 
 #: src/ui/views/random_generator.blp:35
 msgid "Length of the generated string"
-msgstr ""
+msgstr "Sugeneruotos eilutės ilgumas"
 
 #: src/ui/views/random_generator.blp:47
 msgid "Uppercase letters (A-Z)"
-msgstr ""
+msgstr "Didžiosios raidės (A-Z)"
 
 #: src/ui/views/random_generator.blp:53
 msgid "Lowercase letters (a-z)"
-msgstr ""
+msgstr "Mažosios raidės (a-z)"
 
 #: src/ui/views/random_generator.blp:59
 msgid "Numbers (0-9)"
-msgstr ""
+msgstr "Skaičiai (0-9)"
 
 #: src/ui/views/random_generator.blp:65
 msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
-msgstr ""
+msgstr "Spec simboliai (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 
 #: src/ui/views/random_generator.blp:75
 msgid "Generated string"
-msgstr ""
+msgstr "Sugeneruota eilutė"
 
 #: src/ui/views/random_generator.blp:92
 msgid "Number"
-msgstr ""
+msgstr "Skaičius"
 
 #: src/ui/views/random_generator.blp:93
 msgid "Generate a random number in the given range"
-msgstr ""
+msgstr "Generuoti atsitiktinį skaičių iš duoto intervalo"
 
 #: src/ui/views/random_generator.blp:96
 msgid "Minimum"
-msgstr ""
+msgstr "Minimumas"
 
 #: src/ui/views/random_generator.blp:97
 msgid "Minimum value of the generated number"
-msgstr ""
+msgstr "Mažiausia sugeneruoto skaičiaus reikšmė"
 
 #: src/ui/views/random_generator.blp:109
 msgid "Maximum"
-msgstr ""
+msgstr "Maksimumas"
 
 #: src/ui/views/random_generator.blp:110
 msgid "Maximum value of the generated number"
-msgstr ""
+msgstr "Didžiausia sugeneruoto skaičiaus reikšmė"
 
 #: src/ui/views/random_generator.blp:159
 msgid "Generated number"
-msgstr ""
+msgstr "Sugeneruotas skaičius"
 
 #: src/ui/views/regex_tester.blp:19
 msgid "Regular Expression Tester"
-msgstr ""
+msgstr "Reguliariųjų išraiškų tikrinimas"
 
 #: src/ui/views/regex_tester.blp:37
 msgid "Regex to test"
-msgstr ""
+msgstr "Regiuliarioji išraiška tikrinimui"
 
 #: src/ui/views/reverse_cron.blp:58
 msgid "Every minute"
-msgstr ""
+msgstr "Kas minutę"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
@@ -2546,412 +2547,421 @@ msgstr ""
 #: src/ui/views/reverse_cron.blp:277 src/ui/views/reverse_cron.blp:389
 #: src/ui/views/reverse_cron.blp:543
 msgid "Every"
-msgstr ""
+msgstr "Kas"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #: src/ui/views/reverse_cron.blp:82
 msgid "minute(s) starting at minute"
-msgstr ""
+msgstr "minutę(es) pradedent minute"
 
 #: src/ui/views/reverse_cron.blp:101
 msgid "Specific minute (choose one or many, no selection means every minute)"
 msgstr ""
+"Pasirinktą minutę (pasirinkite vieną ar kelias, nepasirinkus bus kas minutę)"
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:122
 msgid "Every minute between minute"
-msgstr ""
+msgstr "Kiekvieną minutę tarp minučių"
 
 #. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:133
 msgid "and minute"
-msgstr ""
+msgstr "ir minučių"
 
 #: src/ui/views/reverse_cron.blp:161
 msgid "Every hour"
-msgstr ""
+msgstr "Kas valandą"
 
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
 #: src/ui/views/reverse_cron.blp:185
 msgid "hour(s) starting at hour"
-msgstr ""
+msgstr "valandą(as) pradedant valandą"
 
 #: src/ui/views/reverse_cron.blp:204
 msgid "Specific hour (choose one or many, no selection means every hour)"
 msgstr ""
+"Pasirinktą valandą "
+"(pasirinkite vieną ar kelias, nepasirinkus bus kas valandą)"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:225
 msgid "Every hour between hour"
-msgstr ""
+msgstr "Kiekvieną valandą tarp valandos"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:236
 msgid "and hour"
-msgstr ""
+msgstr "ir valandos"
 
 #: src/ui/views/reverse_cron.blp:264
 msgid "Every day"
-msgstr ""
+msgstr "Kiekvieną dieną"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:288
 msgid "day(s) starting on the"
-msgstr ""
+msgstr "dieną(as) pradedant nuo"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:299
 msgid "of the month"
-msgstr ""
+msgstr "mėnesio dienos"
 
 #: src/ui/views/reverse_cron.blp:316
 msgid ""
 "Specific day of month (choose one or many, no selection means every day)"
 msgstr ""
+"Pasirinktą mėnesio dieną "
+"(pasirinkite vieną ar daugiau, nepasirinkus bus kiekvieną dieną)"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:337
 msgid "Every day between the"
-msgstr ""
+msgstr "Kiekvieną dieną tarp"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:348
 msgid "and the"
-msgstr ""
+msgstr "ir"
 
 #: src/ui/views/reverse_cron.blp:376
 msgid "Every month"
-msgstr ""
+msgstr "Kiekvieną mėnesį"
 
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
 #: src/ui/views/reverse_cron.blp:400
 msgid "month(s) starting in"
-msgstr ""
+msgstr "Kas mėnesį(ius) pradedant"
 
 #: src/ui/views/reverse_cron.blp:436
 msgid "Specific month (choose one or many, no selection means every month)"
 msgstr ""
+"Pasirinktą mėnesį "
+"(pasirinkite vieną ar kelis, nepasirinkus bus kiekvieną mėnesį)"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #: src/ui/views/reverse_cron.blp:457
 msgid "Every month between"
-msgstr ""
+msgstr "Kiekvieną mėnesį tarp"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:485 src/ui/views/reverse_cron.blp:692
 msgid "and"
-msgstr ""
+msgstr "ir"
 
 #: src/ui/views/reverse_cron.blp:516
 msgid "Weekday"
-msgstr ""
+msgstr "Darbo diena"
 
 #: src/ui/views/reverse_cron.blp:530
 msgid "Every weekday"
-msgstr ""
+msgstr "Kiekvieną darbo dieną"
 
 #. TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:554
 msgid "weekday(s) starting on"
-msgstr ""
+msgstr "darbo dieną(as) pradedant nuo"
 
 #: src/ui/views/reverse_cron.blp:585
 msgid "Specific weekday (choose one or many, no selection means every weekday)"
 msgstr ""
+"Pasirinktą darbo dieną "
+"(pasirinkite vieną ar kelias, nepasirinkus bus kiekvieną darbo dieną)"
 
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:669
 msgid "Every weekday between"
-msgstr ""
+msgstr "Kiekvieną darbo dieną tarp"
 
 #: src/ui/views/reverse_cron.blp:718
 msgid "Command to execute"
-msgstr ""
+msgstr "Vykdyti komandą"
 
 #: src/ui/views/reverse_cron.blp:737
 msgid "CRON Expression"
-msgstr ""
+msgstr "CRON išraiška"
 
 #: src/ui/views/text_diff.blp:33
 msgid "Old Text"
-msgstr ""
+msgstr "Senas tekstas"
 
 #: src/ui/views/text_diff.blp:45
 msgid "New Text"
-msgstr ""
+msgstr "Naujas tekstas"
 
 #: src/ui/views/text_diff.blp:58
 msgid "Differences"
-msgstr ""
+msgstr "Skirtumai"
 
 #: src/ui/views/text_inspector.blp:34
 msgid "Change case"
-msgstr ""
+msgstr "Keisti raidžių registrą"
 
 #: src/ui/views/text_inspector.blp:35
 msgid "Choose a case to apply to the text"
-msgstr ""
+msgstr "Pasirinkite teksto raidžių registrą"
 
 #: src/ui/views/text_inspector.blp:42
 msgid "Sentence case"
-msgstr ""
+msgstr "Pirma didžioji"
 
 #: src/ui/views/text_inspector.blp:43
 msgid "lower case"
-msgstr ""
+msgstr "mažosios"
 
 #: src/ui/views/text_inspector.blp:44
 msgid "UPPERCASE"
-msgstr ""
+msgstr "DIDŽIOSIOS"
 
 #: src/ui/views/text_inspector.blp:45
 msgid "Title Case"
-msgstr ""
+msgstr "Kiekvienas Žodis Didžiąja"
 
 #: src/ui/views/text_inspector.blp:46
 msgid "camelCase"
-msgstr ""
+msgstr "camelTipas"
 
 #: src/ui/views/text_inspector.blp:47
 msgid "PascalCase"
-msgstr ""
+msgstr "PascalTipas"
 
 #: src/ui/views/text_inspector.blp:48
 msgid "snake_case"
-msgstr ""
+msgstr "snake_tipas"
 
 #: src/ui/views/text_inspector.blp:49
 msgid "CONSTANT_CASE"
-msgstr ""
+msgstr "CONSTANT_TIPAS"
 
 #: src/ui/views/text_inspector.blp:50
 msgid "kebab-case"
-msgstr ""
+msgstr "kebab-tipas"
 
 #: src/ui/views/text_inspector.blp:51
 msgid "COBOL-CASE"
-msgstr ""
+msgstr "COBOL-TIPAS"
 
 #: src/ui/views/text_inspector.blp:52
 msgid "Train-Case"
-msgstr ""
+msgstr "Train-Tipas"
 
 #: src/ui/views/text_inspector.blp:53
 msgid "aLtErNaTiNg CaSe"
-msgstr ""
+msgstr "aLtErNaTiNg TiPas"
 
 #: src/ui/views/text_inspector.blp:54
 msgid "ReVeRsE aLtErNaTiNg CaSe"
-msgstr ""
+msgstr "ReVeRsE aLtErNaTiNg TiPas"
 
 #: src/ui/views/text_inspector.blp:66
 msgid "Information"
-msgstr ""
+msgstr "Informacija"
 
 #: src/ui/views/text_inspector.blp:69
 msgid "Cursor"
-msgstr ""
+msgstr "Kursorius"
 
 #: src/ui/views/text_inspector.blp:83
 msgid "Line:"
-msgstr ""
+msgstr "Eilutė:"
 
 #: src/ui/views/text_inspector.blp:96
 msgid "Column:"
-msgstr ""
+msgstr "Stulpelis:"
 
 #: src/ui/views/text_inspector.blp:121
 msgid "Characters:"
-msgstr ""
+msgstr "Ženklai:"
 
 #: src/ui/views/text_inspector.blp:134
 msgid "Words:"
-msgstr ""
+msgstr "Žodžiai:"
 
 #: src/ui/views/text_inspector.blp:147
 msgid "Lines:"
-msgstr ""
+msgstr "Eilutės:"
 
 #: src/ui/views/timestamp.blp:19
 msgid "Timestamp Converter"
-msgstr ""
+msgstr "Laiko žymos konverteris"
 
 #: src/ui/views/timestamp.blp:43
 msgid "Sets the current system timestamp"
-msgstr ""
+msgstr "Nustato dabartinę sistemos laiko žymą"
 
 #: src/ui/views/timestamp.blp:47
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #: src/ui/views/timestamp.blp:57
 msgid "ISO Date (ISO 8601/RFC 3339)"
-msgstr ""
+msgstr "ISO data (ISO 8601/RFC 3339)"
 
 #: src/ui/views/timestamp.blp:63
 msgid "RFC 2822 Date"
-msgstr ""
+msgstr "RFC 2822 data"
 
 #: src/ui/views/timestamp.blp:69
 msgid "Short Date"
-msgstr ""
+msgstr "Trumpas datos formatas"
 
 #: src/ui/views/timestamp.blp:75
 msgid "Short Time"
-msgstr ""
+msgstr "Trumpas laiko formatas"
 
 #: src/ui/views/timestamp.blp:81
 msgid "Long Date"
-msgstr ""
+msgstr "Ilgas datos formatas"
 
 #: src/ui/views/timestamp.blp:87
 msgid "Long Time"
-msgstr ""
+msgstr "Ilgas laiko formatas"
 
 #: src/ui/views/timestamp.blp:93
 msgid "Full Long Date"
-msgstr ""
+msgstr "Pilna ilga data"
 
 #: src/ui/views/url_encoder.blp:19
 msgid "URL Encoder & Decoder"
-msgstr ""
+msgstr "URL koduotojas ir dekoderis"
 
 #: src/ui/views/url_encoder.blp:53
 msgid "Space encoding"
-msgstr ""
+msgstr "Tarpo kodavimas"
 
 #: src/ui/views/url_encoder.blp:54
 msgid "Select the desired encoding for the space character"
-msgstr ""
+msgstr "Pasirinkite norimą tarpo kodavimą"
 
 #: src/ui/views/uuid_generator.blp:19
 msgid "UUID Generator"
-msgstr ""
+msgstr "UUID generatorius"
 
 #: src/ui/views/uuid_generator.blp:34
 msgid "Version"
-msgstr ""
+msgstr "Versija"
 
 #: src/ui/views/uuid_generator.blp:35
 msgid "Choose the UUID version to generate"
-msgstr ""
+msgstr "Pasirinkite UUID generavimo versiją"
 
 #: src/ui/views/uuid_generator.blp:40
 msgid "Version 1 (MAC address)"
-msgstr ""
+msgstr "Versija 1 (MAC adresas)"
 
 #: src/ui/views/uuid_generator.blp:41
 msgid "Version 3"
-msgstr ""
+msgstr "Versija 3"
 
 #: src/ui/views/uuid_generator.blp:42
 msgid "Version 4 (Random)"
-msgstr ""
+msgstr "Versija 4 (atsitiktinė)"
 
 #: src/ui/views/uuid_generator.blp:43
 msgid "Version 5"
-msgstr ""
+msgstr "Versija 5"
 
 #: src/ui/views/uuid_generator.blp:44
 msgid "Version 6 (Gregorian Time)"
-msgstr ""
+msgstr "Versija 6 (Grigališkas)"
 
 #: src/ui/views/uuid_generator.blp:45
 msgid "Version 7 (UNIX Epoch)"
-msgstr ""
+msgstr "Versija 7 (UNIX epocha)"
 
 #: src/ui/views/uuid_generator.blp:54
 msgid "Number of UUIDs to be generated (up to 50)"
-msgstr ""
+msgstr "Generuojamų UUID kiekis (iki 50)"
 
 #: src/ui/views/uuid_generator.blp:72
 msgid "Generated UUIDs"
-msgstr ""
+msgstr "Sugeneruoti UUID"
 
 #: src/ui/gtk/help-overlay.blp:15
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Bendras(i)"
 
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Search Tools"
-msgstr ""
+msgstr "Paieškos įrankiai"
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Rodyti trumpinius"
 
 #: src/ui/gtk/help-overlay.blp:28
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Išeiti"
 
 #: src/formatters/html.py:14
 msgid "HTML Formatter"
-msgstr ""
+msgstr "HTML formatuotojas"
 
 #: src/formatters/html.py:17
 msgid "Type HTML code here"
-msgstr ""
+msgstr "Rašykite HTML kodą čia"
 
 #: src/formatters/html.py:20 src/formatters/js.py:20 src/formatters/json.py:19
 #: src/formatters/sql.py:19 src/formatters/xml.py:21 src/formatters/css.py:19
 msgctxt "verb/action"
 msgid "Format"
-msgstr ""
+msgstr "Formatuoti"
 
 #: src/formatters/js.py:14
 msgid "JavaScript Formatter"
-msgstr ""
+msgstr "JavaScript formatuotojas"
 
 #: src/formatters/js.py:17
 msgid "Type JavaScript code here"
-msgstr ""
+msgstr "Rašykite JavaScript čia"
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
-msgstr ""
+msgstr "JSON formatuotojas"
 
 #: src/formatters/json.py:16
 msgid "Type JSON code here"
-msgstr ""
+msgstr "Rašykite JSON kodą čia"
 
 #: src/formatters/sql.py:13
 msgid "SQL Formatter"
-msgstr ""
+msgstr "SQL formatuotojas"
 
 #: src/formatters/sql.py:16
 msgid "Type SQL code here"
-msgstr ""
+msgstr "Rašykite SQL kodą čia"
 
 #: src/formatters/xml.py:15
 msgid "XML Formatter"
-msgstr ""
+msgstr "XML formatuotojas"
 
 #: src/formatters/xml.py:18
 msgid "Type XML code here"
-msgstr ""
+msgstr "Rašykite XML kodą čia"
 
 #: src/formatters/css.py:13
 msgid "CSS Formatter"
-msgstr ""
+msgstr "CSS formatuotojas"
 
 #: src/formatters/css.py:16 src/formatters/css_minifier.py:17
 msgid "Type CSS here"
-msgstr ""
+msgstr "Rašykite CSS čia"
 
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
-msgstr ""
+msgstr "Sumažinti"
 
 #: src/formatters/js_minifier.py:15
 msgid "Minify JS code"
-msgstr ""
+msgstr "Sumažinti JS kodą"
 
 #: src/formatters/js_minifier.py:17
 msgid "Type JS code here"
-msgstr ""
+msgstr "Rašykite JS kodą čia"
