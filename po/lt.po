@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-10-30 04:26+0000\n"
+"PO-Revision-Date: 2025-11-07 03:51+0000\n"
 "Last-Translator: dukezas <dukezas@gmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/lt/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural="
 "(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.14.1-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -96,7 +96,7 @@ msgstr "Markdown peržiūra"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
-msgstr "Atvaizdų konvertavimas"
+msgstr "Paveikslėlių konvertavimas"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
@@ -338,7 +338,6 @@ msgid "Reverse CRON"
 msgstr "Atvirkštinis CRON"
 
 #: src/tools.py:108 src/ui/views/reverse_cron.blp:20
-#, fuzzy
 msgid "Generate CRON expressions"
 msgstr "Generuoti CRON išraiškas"
 
@@ -526,7 +525,7 @@ msgstr "duomenų bazė"
 #: src/tools.py:221
 msgctxt "search keyword"
 msgid "statement"
-msgstr ""
+msgstr "pareiškimas"
 
 #: src/tools.py:228 src/formatters/xml.py:16
 msgid "Format XML documents"
@@ -1140,13 +1139,13 @@ msgid ""
 "Loading a large file ({size})\n"
 "Might take a while, please wait..."
 msgstr ""
-"Užkraunamas didelis failas ({size}) \n"
+"Užkraunamas didelis failas ({size})\n"
 "Gali užtrukti, prašome palaukti..."
 
 #: src/widgets/text_area.py:230 src/widgets/text_file_area.py:280
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr "Negaliu atidaryti  {file_path}: {file_content}."
+msgstr "Negaliu atidaryti {file_path}: {file_content}."
 
 #: src/widgets/text_area.py:246
 msgid "File is not UTF-8 encoded."
@@ -1605,7 +1604,7 @@ msgstr ""
 #. TRANSLATORS: replace with your name (with optional email or website)
 #: src/ui/about_dialog.blp:18
 msgid "translator-credits"
-msgstr "Vertimas: BelzeBubas (bubasbelze@gmail.com)"
+msgstr "BelzeBubas (bubasbelze@gmail.com)"
 
 #: src/ui/widgets/date_area.blp:39 src/ui/views/timestamp.blp:42
 msgid "Now"
@@ -2089,11 +2088,11 @@ msgstr "Pavyzdys"
 
 #: src/ui/views/contrast_checker.blp:89
 msgid "Lorem ipsum dolor sit amet"
-msgstr "Lorem ipsum dolor sit amet"
+msgstr "Lorem ipsum dolor color sit amet"
 
 #: src/ui/views/contrast_checker.blp:97
 msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
-msgstr "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
+msgstr "velit laboris excepteur aliqua nostrud dolore colore anim ad qui esse"
 
 #: src/ui/views/contrast_checker.blp:118 src/ui/views/contrast_checker.blp:149
 msgid "AA"
@@ -2403,7 +2402,7 @@ msgstr "Pavardė *"
 
 #: src/ui/views/qrcode_generator.blp:94
 msgid "Phone Number"
-msgstr "Telefono Nr."
+msgstr "Telefono Numeris"
 
 #: src/ui/views/qrcode_generator.blp:101
 msgid "Email"
