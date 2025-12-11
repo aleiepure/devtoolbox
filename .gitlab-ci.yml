@@ -1,0 +1,53 @@
+stages:
+  - check
+  - test
+
+flatpak:
+  image: 'registry.gitlab.gnome.org/gnome/gnome-runtime-images/gnome:41'
+  stage: test
+  tags:
+    - flatpak
+  variables:
+    BUNDLE: "devtoolbox-rs-nightly.flatpak"
+    MANIFEST_PATH: "build-aux/me.iepure.Devtoolbox.Devel.json"
+    FLATPAK_MODULE: "devtoolbox-rs"
+    APP_ID: "me.iepure.Devtoolbox.Devel"
+    RUNTIME_REPO: "https://nightly.gnome.org/gnome-nightly.flatpakrepo"
+  script:
+    - >
+      xvfb-run -a -s "-screen 0 1024x768x24"
+      flatpak-builder --keep-build-dirs --user --disable-rofiles-fuse flatpak_app --repo=repo ${BRANCH:+--default-branch=$BRANCH} ${MANIFEST_PATH}
+    - flatpak build-bundle repo ${BUNDLE} --runtime-repo=${RUNTIME_REPO} ${APP_ID} ${BRANCH}
+  artifacts:
+    name: 'Flatpak artifacts'
+    expose_as: 'Get Flatpak bundle here'
+    when: 'always'
+    paths:
+      - "${BUNDLE}"
+      - '.flatpak-builder/build/${FLATPAK_MODULE}/_flatpak_build/meson-logs/meson-log.txt'
+      - '.flatpak-builder/build/${FLATPAK_MODULE}/_flatpak_build/meson-logs/testlog.txt'
+    expire_in: 14 days
+
+cargo-clippy:
+  extends:
+    - flatpak
+  needs:
+    - flatpak
+  script:
+    - flatpak-builder --user --disable-rofiles-fuse --keep-build-dirs --stop-at=${FLATPAK_MODULE} flatpak_app ${MANIFEST_PATH}
+    - flatpak build-finish --share=network flatpak_app
+    - echo "cargo clippy -- -D warnings" | flatpak-builder --user --disable-rofiles-fuse --build-shell=${FLATPAK_MODULE} flatpak_app ${MANIFEST_PATH}
+
+
+# Configure and run rustfmt
+# Exits and builds fails if on bad format
+rustfmt:
+  image: "rust:slim"
+  script:
+    - rustup component add rustfmt
+    # Create blank versions of our configured files
+    # so rustfmt does not yell about non-existent files or completely empty files
+    - echo -e "" >> src/config.rs
+    - rustc -Vv && cargo -Vv
+    - cargo fmt --version
+    - cargo fmt --all -- --color=always --check

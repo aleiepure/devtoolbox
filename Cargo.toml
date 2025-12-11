@@ -1,0 +1,12 @@
+[package]
+name = "devtoolbox-rs"
+version = "0.1.0"
+authors = ["Alessandro Iepure <alessandro@iepure.me>"]
+edition = "2021"
+
+[dependencies]
+log = "0.4"
+pretty_env_logger = "0.4"
+gettext-rs = { version = "0.7", features = ["gettext-system"] }
+once_cell = "1.9"
+gtk = {version = "0.4", package = "gtk4"}

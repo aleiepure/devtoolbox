@@ -1,0 +1,6 @@
+data/me.iepure.Devtoolbox.desktop.in.in
+data/me.iepure.Devtoolbox.gschema.xml.in
+data/me.iepure.Devtoolbox.metainfo.xml.in.in
+data/resources/ui/shortcuts.ui
+data/resources/ui/window.ui
+src/application.rs
