@@ -1,4 +1,4 @@
-target/
+# GNOME Builder
 build/
 _build/
 builddir/
@@ -9,3 +9,14 @@ src/config.rs
 *.ui~
 .flatpak/
 vendor
+
+# IDEs
+.vscode/
+.idea/
+
+# Rust
+**/target/
+**/Cargo.lock
+
+# Others
+*.flatpak

@@ -1,0 +1,235 @@
+/*
+ * window.blp
+ *
+ * Copyright (C) 2022-2025 Alessandro Iepure
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+ 
+using Gtk 4.0;
+using Adw 1;
+
+// Main application window
+template $DevtoolboxWindow: Adw.ApplicationWindow {
+  styles [
+    "devel",
+  ]
+
+  default-height: 1200;
+  default-width: 800;
+  width-request: 930;
+  height-request: 700;
+
+  ShortcutController {
+    scope: global;
+
+    Shortcut {
+      trigger: "<Primary>f";
+      action: "action(win.search)";
+    }
+  }
+
+  Adw.Breakpoint {
+    condition ("max-width: 1100px")
+
+    setters {
+      overlay_split_view.collapsed: true;
+      show_sidebar_button.visible: true;
+      toggle_sidebar_button.visible: false;
+    }
+  }
+
+  Adw.OverlaySplitView overlay_split_view {
+    show-sidebar: bind toggle_sidebar_button.active;
+    max-sidebar-width: 350;
+    sidebar-width-fraction: 0.35;
+    sidebar: sidebar_content;
+    content: tool_content;
+  }
+}
+
+// Sidebar content
+Adw.ToolbarView sidebar_content {
+  [top]
+  Adw.HeaderBar {
+    title-widget: Label {
+      label: "Dev Toolbox";
+
+      styles [
+        "heading",
+      ]
+    };
+
+    [start]
+    ToggleButton show_search_button {
+      icon-name: "loupe";
+      tooltip-text: _("Show/Hide Searchbar");
+    }
+
+    [end]
+    MenuButton fav_menu_button {
+      icon-name: "starred";
+      tooltip-text: _("Favorite Tools");
+
+      popover: Popover {
+        child: Adw.ViewStack favorite_view_stack {
+          width-request: 300;
+
+          Adw.ViewStackPage {
+            name: "empty";
+
+            child: Adw.StatusPage {
+              title: _("No Favorite Tools");
+              description: _("Add your favorite tools here by clicking the star button beside the title");
+              icon-name: "star-filled-rounded";
+            };
+          }
+
+          Adw.ViewStackPage {
+            name: "favorites";
+
+            child: Box {
+              orientation: vertical;
+              spacing: 6;
+
+              Label {
+                margin-top: 6;
+                label: _("Favorite Tools");
+
+                styles [
+                  "title-4",
+                ]
+              }
+
+              ScrolledWindow {
+                vexpand: true;
+
+                child: ListBox favorite_listbox {
+                  styles [
+                    "navigation-sidebar",
+                  ]
+
+                  selection-mode: single;
+                  row-activated => $on_signal_row_activated_favorite_listbox();
+                };
+              }
+            };
+          }
+        };
+      };
+    }
+  }
+
+  [top]
+  SearchBar search_bar {
+    search-mode-enabled: bind show_search_button.active;
+
+    child: SearchEntry search_entry {
+      halign: center;
+      activates-default: true;
+      placeholder-text: _("Search Tools…");
+      search-delay: 500;
+      search-changed => $on_signal_search_changed_search_entry();
+    };
+  }
+
+  content: ScrolledWindow {
+    child: ListBox sidebar_listbox {
+      selection-mode: single;
+      vexpand: true;
+      width-request: 256;
+
+      styles [
+        "navigation-sidebar",
+      ]
+
+      row-activated => $on_signal_row_activated_sidebar_listbox();
+    };
+  };
+}
+
+// Tool content
+Adw.ToolbarView tool_content {
+  [top]
+  Adw.HeaderBar {
+    show-title: false;
+
+    [start]
+    ToggleButton toggle_sidebar_button {
+      icon-name: "sidebar";
+      tooltip-text: _("Show/Hide Sidebar");
+    }
+
+    [start]
+    Button show_sidebar_button {
+      visible: false;
+      icon-name: "sidebar";
+      tooltip-text: _("Show Sidebar");
+      clicked => $on_signal_clicked_show_sidebar_button();
+    }
+
+    [end]
+    MenuButton menu_button {
+      icon-name: "open-menu";
+      tooltip-text: _("Open Menu");
+      menu-model: primary_menu;
+    }
+  }
+
+  content: Box {
+    orientation: vertical;
+
+    Adw.ViewStack content_view_stack {
+      /* TODO: when tools are implemented, this shall be left empty and handled 
+      programmatically */
+
+      Adw.ViewStackPage {
+        child: Gtk.Box {
+          orientation: vertical;
+          spacing: 20;
+
+          $ToolTitle {
+            tool-id: "example-tool";
+            title: _("Example Tool");
+            description: _("This is an example tool used to demonstrate the UI layout.");
+          }
+
+          $ToolTitle {
+            tool-id: "example-tool-2";
+            title: _("Example Tool 2");
+            description: _("This is an example tool 2 used to demonstrate the UI layout.");
+          }
+        };
+
+      }
+    }
+  };
+}
+
+// Primary application menu
+menu primary_menu {
+  section {
+    item {
+      label: _("_Keyboard Shortcuts");
+      action: "win.shortcuts";
+    }
+
+    item {
+      label: _("_About Dev Toolbox");
+      action: "app.about";
+    }
+  }
+}

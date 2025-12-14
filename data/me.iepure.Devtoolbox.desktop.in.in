@@ -1,11 +1,15 @@
+# Copyright (C) 2022 - 2025 Alessandro Iepure
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 [Desktop Entry]
-Name=Devtoolbox
-Comment=Write a GTK + Rust application
-Type=Application
-Exec=devtoolbox-rs
+# TRANSLATORS: do not translate
+Name=@app-name@
+Comment=Dev tools at your fingertips
+Exec=devtoolbox
+Icon=me.iepure.Devtoolbox
 Terminal=false
-Categories=GNOME;GTK;
-Keywords=Gnome;GTK;
-# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=@icon@
+Type=Application
+Categories=Development;GTK;
+Keywords=JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;Validate;Validator;Converter;Convert;Timestamp;bmp;gif;icns;jpeg;png;tiff;webp;Image;Base;Parser;CRON;GZip;Compressor;Decompressor;Hash;Regex;Compare;URL;Minify;Generator;Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;Lorem;Ipsum;
 StartupNotify=true

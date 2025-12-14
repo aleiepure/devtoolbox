@@ -1,0 +1,78 @@
+/*
+ * tool_title.blp
+ *
+ * Copyright (C) 2022-2025 Alessandro Iepure
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+
+using Gtk 4.0;
+using Adw 1;
+
+template $ToolTitle: Adw.Bin {
+    Grid {
+        Button star_button {
+            valign: center;
+            margin-top: 10;
+            tooltip-text: _("Add to Favorites");
+            icon-name: bind $start_button_icon_closure(template.tool_id) as <string>;
+
+            styles [
+                "circular",
+            ]
+
+            layout {
+                column: 0;
+                row: 0;
+                row-span: 2;
+            }
+
+            clicked => $on_signal_clicked_star_button() swapped;
+        }
+
+        Label title_label {
+            halign: start;
+            margin-top: 10;
+            margin-start: 10;
+            label: bind template.title;
+
+            styles [
+                "title-1",
+            ]
+
+            layout {
+                column: 1;
+                row: 0;
+            }
+        }
+
+        Label description_label {
+            halign: start;
+            margin-start: 10;
+            label: bind template.description;
+
+            styles [
+                "caption-heading",
+            ]
+
+            layout {
+                column: 1;
+                row: 1;
+            }
+          
+        }
+    }
+}

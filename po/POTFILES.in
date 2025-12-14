@@ -1,6 +1,6 @@
-data/me.iepure.Devtoolbox.desktop.in.in
-data/me.iepure.Devtoolbox.gschema.xml.in
-data/me.iepure.Devtoolbox.metainfo.xml.in.in
-data/resources/ui/shortcuts.ui
-data/resources/ui/window.ui
-src/application.rs
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/org.gnome.Example.desktop.in
+data/org.gnome.Example.metainfo.xml.in
+data/org.gnome.Example.gschema.xml
+src/window.ui
