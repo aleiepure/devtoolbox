@@ -22,25 +22,18 @@
 using Gtk 4.0;
 using Adw 1;
 
-// Main application window
+// MARK: Template
 template $DevtoolboxWindow: Adw.ApplicationWindow {
   styles [
     "devel",
   ]
 
+  map => $on_signal_map();
+
   default-height: 1200;
   default-width: 800;
   width-request: 930;
   height-request: 700;
-
-  ShortcutController {
-    scope: global;
-
-    Shortcut {
-      trigger: "<Primary>f";
-      action: "action(win.search)";
-    }
-  }
 
   Adw.Breakpoint {
     condition ("max-width: 1100px")
@@ -61,7 +54,7 @@ template $DevtoolboxWindow: Adw.ApplicationWindow {
   }
 }
 
-// Sidebar content
+// MARK: Sidebar content
 Adw.ToolbarView sidebar_content {
   [top]
   Adw.HeaderBar {
@@ -156,7 +149,7 @@ Adw.ToolbarView sidebar_content {
         "navigation-sidebar",
       ]
 
-      row-activated => $on_signal_row_activated_sidebar_listbox();
+      row-activated => $on_signal_row_activated_sidebar_listbox() swapped;
     };
   };
 }
@@ -193,28 +186,7 @@ Adw.ToolbarView tool_content {
     orientation: vertical;
 
     Adw.ViewStack content_view_stack {
-      /* TODO: when tools are implemented, this shall be left empty and handled 
-      programmatically */
-
-      Adw.ViewStackPage {
-        child: Gtk.Box {
-          orientation: vertical;
-          spacing: 20;
-
-          $ToolTitle {
-            tool-id: "example-tool";
-            title: _("Example Tool");
-            description: _("This is an example tool used to demonstrate the UI layout.");
-          }
-
-          $ToolTitle {
-            tool-id: "example-tool-2";
-            title: _("Example Tool 2");
-            description: _("This is an example tool 2 used to demonstrate the UI layout.");
-          }
-        };
-
-      }
+      // TODO: when tools are implemented, this shall be left empty and handled programmatically
     }
   };
 }

@@ -5,7 +5,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
 <div align="center">
-  <h1><img src="./data/icons/hicolor/scalable/apps/me.iepure.devtoolbox.svg" height="64" alt="Dev Toolbox Icon"/><br>Dev Toolbox</h1>
+  <h1><img src="./data/icons/hicolor/scalable/apps/me.iepure.Devtoolbox.svg" height="64" alt="Dev Toolbox Icon"/><br>Dev Toolbox</h1>
   <h4>Development tools at your fingertips</h4>
 </div>
 
@@ -43,12 +43,14 @@ This is a collection of powerful yet simple-to-use tools and utilities to solve 
 - Image converters
 - Much more...
 
-### Known issues
+> [!important] Now with 100% more iron
+> This branch contains a complete Rust rewrite from scratch. I apologize for the long gaps between updates. Compatibility
+> issues with very old third-party Python libraries finally forced my hand. The latest platform update broke most dependencies,
+> making Python 3.14 support impossible. I'm betting on Rust's robust ecosystem and strong typing to eliminate long-standing 
+> performance issues and provide a more stable foundation going forward. 
+> This rewrite means a fresh start, from how the code is structured, to translations that will need community help to rebuild.
 
-This app is currently under development with potential bugs and issues. If you are testing it and find some, please create an issue and describe the problem and how to reproduce it.
-Please remember that I'm working on this in my spare time, and fixes might not come very quickly.\
-In the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Known-issues), you can find an updated list of known problems and how to fix them temporarily.
-
+<!-- 
 ## Install
 
 <a href="https://flathub.org/apps/details/me.iepure.devtoolbox">
@@ -58,19 +60,17 @@ In the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Known-issues), you ca
 The latest stable is also available in [Releases](https://github.com/aleiepure/devtoolbox/releases).\
 Builds from the main branch are available as artifacts on the
 [Actions page](https://github.com/aleiepure/devtoolbox/actions).\
-Check the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Contributing) to learn how to build from source code manually.
+Check the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Contributing) to learn how to build from source code manually. -->
 
 ## Contribute
 
-All contributions are and will always be welcome.\
+<!-- All contributions are and will always be welcome. \
 If you have an idea and you can make it happen by yourself, feel free to fork the repository, code it and open a PR.\
 Also, if you know another language, you can help by translating the app.
 
 <a href="https://hosted.weblate.org/engage/devtoolbox/">
   <img src="https://hosted.weblate.org/widgets/devtoolbox/-/horizontal-auto.svg" alt="Translation status" />
-</a>
-
-In the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Contributing), you can find more information.
+</a> -->
 
 This project adheres to the [GNOME Code of Conduct](https://conduct.gnome.org/).\
 By participating, you are expected to uphold this code and help create a welcoming and inclusive environment.
@@ -78,8 +78,8 @@ By participating, you are expected to uphold this code and help create a welcomi
 ## License
 
 Copyright (C) 2022 - 2025 Alessandro Iepure\
-This application comes with absolutely no warranty. See the GNU General Public License, version 3 or later for details. A [copy of the license](./LICENSES/GPL-3.0-or-later.txt)
-can be found in the [LICENSES/](./LICENSES/) folder.
+This application comes with absolutely no warranty. See the GNU General Public License, version 3 or later for details.
+A [copy of the license](./COPYING) is available in the repo.
 
 Most of the symbolic icons are copyright of the GNOME Project.\
 The libraries used are the copyright of the respective copyright holders.

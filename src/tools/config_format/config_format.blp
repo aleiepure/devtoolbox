@@ -1,5 +1,5 @@
 /*
- * mod.rs
+ * config_format.blp
  *
  * Copyright (C) 2022-2025 Alessandro Iepure
  *
@@ -19,32 +19,27 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
-pub mod macros;
+using Gtk 4.0;
+using Adw 1;
 
-pub trait Tool {
-    fn metadata() -> ToolMetadata;
-    fn create_view(&self) -> gtk::Widget;
+template $ConfigFormatWidget: Adw.Bin {
+    Adw.ToastOverlay toast_overlay {
+        child: ScrolledWindow {
+            child: Adw.Clamp {
+                vexpand: true;
+                maximum-size: 1200;
+                tightening-threshold: 600;
+
+                child: Box {
+                    orientation: vertical;
+
+                    $ToolTitle {
+                        tool_id: bind template.tool_id as <string>;
+                        title: bind template.title as <string>;
+                        description: bind template.description as <string>;
+                    }
+                };
+            };
+        };
+    }
 }
-
-#[derive(Clone, Copy)]
-pub struct ToolMetadata {
-    pub id: &'static str,
-    pub title: &'static str,
-    pub description: &'static str,
-    pub category: &'static ToolCategory,
-    pub icon: &'static str,
-    pub keywords: &'static [&'static str],
-}
-
-use inventory;
-
-use crate::tools::macros::ToolCategory;
-
-inventory::collect!(ToolMetadata);
-
-pub fn all_tools() -> impl Iterator<Item = &'static ToolMetadata> {
-    inventory::iter::<ToolMetadata>()
-}
-
-pub mod config_format;
-pub mod timestamp;

@@ -14,10 +14,12 @@
 
     <!-- Widgets -->
     <file>core/widgets/tool_title/tool_title.ui</file>
+
+    <!-- Tools -->
+    <file>tools/config_format/config_format.ui</file>
+    <file>tools/timestamp/timestamp.ui</file>
   </gresource>
-
-  <!-- Tools -->
-
+  
   <!-- Icons -->
   <gresource prefix="/me/iepure/Devtoolbox/icons/scalable/actions/">
     <file compressed="true" alias="loupe-symbolic.svg">../data/icons/symbolic/loupe-symbolic.svg</file>

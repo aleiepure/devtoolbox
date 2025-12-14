@@ -24,10 +24,11 @@ SPDX-License-Identifier: GPL-3.0-or-later
 		</key>
 		<key name="last-tool" type="s">
 			<choices>
-				<choice value="json-yaml" />
+				<choice value="config_format" />
+				<choice value="timestamp" />
 			</choices>
 			<summary>Last used tool</summary>
-			<default>"json-yaml"</default>
+			<default>"config_format"</default>
 		</key>
 		<key name="sidebar-open" type="b">
 			<summary>Sidebar open</summary>

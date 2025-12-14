@@ -19,32 +19,23 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
-pub mod macros;
-
-pub trait Tool {
-    fn metadata() -> ToolMetadata;
-    fn create_view(&self) -> gtk::Widget;
-}
-
-#[derive(Clone, Copy)]
-pub struct ToolMetadata {
-    pub id: &'static str,
-    pub title: &'static str,
-    pub description: &'static str,
-    pub category: &'static ToolCategory,
-    pub icon: &'static str,
-    pub keywords: &'static [&'static str],
-}
-
-use inventory;
-
+use crate::define_tool;
 use crate::tools::macros::ToolCategory;
 
-inventory::collect!(ToolMetadata);
+mod config_format;
+pub use config_format::ConfigFormatWidget;
 
-pub fn all_tools() -> impl Iterator<Item = &'static ToolMetadata> {
-    inventory::iter::<ToolMetadata>()
+define_tool!(
+    ConfigFormatTool,
+    widget: ConfigFormatWidget,
+    id: "config_format",
+    title: "Configuration Format",
+    description: "A tool to format configuration files.",
+    category: &ToolCategory::Converters,
+    icon: "document-edit",
+    keywords: ["config", "format", "development"],
+);
+
+inventory::submit! {
+    CONFIG_FORMAT_TOOL_METADATA
 }
-
-pub mod config_format;
-pub mod timestamp;

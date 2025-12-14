@@ -19,32 +19,23 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
-pub mod macros;
-
-pub trait Tool {
-    fn metadata() -> ToolMetadata;
-    fn create_view(&self) -> gtk::Widget;
-}
-
-#[derive(Clone, Copy)]
-pub struct ToolMetadata {
-    pub id: &'static str,
-    pub title: &'static str,
-    pub description: &'static str,
-    pub category: &'static ToolCategory,
-    pub icon: &'static str,
-    pub keywords: &'static [&'static str],
-}
-
-use inventory;
-
+use crate::define_tool;
 use crate::tools::macros::ToolCategory;
 
-inventory::collect!(ToolMetadata);
+mod timestamp;
+pub use timestamp::TimestampWidget;
 
-pub fn all_tools() -> impl Iterator<Item = &'static ToolMetadata> {
-    inventory::iter::<ToolMetadata>()
+define_tool!(
+    TimestampTool,
+    widget: TimestampWidget,
+    id: "timestamp",
+    title: "Timestamp",
+    description: "A tool to work with timestamps.",
+    category: &ToolCategory::Formatters,
+    icon: "document-edit",
+    keywords: ["timestamp", "time", "conversion"],
+);
+
+inventory::submit! {
+    TIMESTAMP_TOOL_METADATA
 }
-
-pub mod config_format;
-pub mod timestamp;

@@ -59,10 +59,6 @@ run_command(
   check: true
 )
 
-# Handle subdirectories
-subdir('core')
-subdir('tools')
-
 # Compile gresources
 gnome = import('gnome')
 
@@ -72,6 +68,9 @@ blueprint_files = files(
   'core/ui/about-dialog.blp',
 
   'core/widgets/tool_title/tool_title.blp',
+
+  'tools/config_format/config_format.blp',
+  'tools/timestamp/timestamp.blp',
 )
 
 compile_blueprint = custom_target('blueprints',
