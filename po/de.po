@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-01-13 12:00+0000\n"
-"Last-Translator: Nino678190 <superwauzi@gmx.de>\n"
+"PO-Revision-Date: 2025-12-16 22:00+0000\n"
+"Last-Translator: Oliver <oliver.puff@gmx.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/de/>\n"
 "Language: de\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10-dev\n"
+"X-Generator: Weblate 5.15.1-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
 msgid "@app-name@"
-msgstr ""
+msgstr "@app-name@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
@@ -134,7 +134,7 @@ msgstr "Format"
 #: src/tools.py:446
 msgctxt "search keyword"
 msgid "document"
-msgstr ""
+msgstr "Dokument"
 
 #: src/tools.py:25
 msgctxt "search keyword"
@@ -169,7 +169,7 @@ msgstr ""
 #: src/tools.py:37 src/tools.py:97 src/tools.py:115
 msgctxt "search keyword"
 msgid "time"
-msgstr ""
+msgstr "Zeit"
 
 #: src/tools.py:40
 msgctxt "search keyword"
@@ -179,7 +179,7 @@ msgstr ""
 #: src/tools.py:41
 msgctxt "search keyword"
 msgid "calendar"
-msgstr ""
+msgstr "Kalender"
 
 #: src/tools.py:42
 #, fuzzy
@@ -195,17 +195,17 @@ msgstr ""
 #: src/tools.py:48
 msgctxt "search keyword"
 msgid "short"
-msgstr ""
+msgstr "kurz"
 
 #: src/tools.py:49
 msgctxt "search keyword"
 msgid "long"
-msgstr ""
+msgstr "lang"
 
 #: src/tools.py:52
 msgctxt "search keyword"
 msgid "year"
-msgstr ""
+msgstr "Jahr"
 
 #: src/tools.py:53
 #, fuzzy
@@ -214,16 +214,14 @@ msgid "month"
 msgstr "Monat"
 
 #: src/tools.py:54
-#, fuzzy
 msgctxt "search keyword"
 msgid "day"
-msgstr "Mai"
+msgstr "Tag"
 
 #: src/tools.py:55
-#, fuzzy
 msgctxt "search keyword"
 msgid "hour"
-msgstr "und Stunde"
+msgstr "Stunde"
 
 #: src/tools.py:56
 #, fuzzy
@@ -232,10 +230,9 @@ msgid "hours"
 msgstr "Stunden"
 
 #: src/tools.py:57
-#, fuzzy
 msgctxt "search keyword"
 msgid "minute"
-msgstr "Minuten"
+msgstr "Minute"
 
 #: src/tools.py:58
 #, fuzzy
@@ -244,10 +241,9 @@ msgid "minutes"
 msgstr "Minuten"
 
 #: src/tools.py:59
-#, fuzzy
 msgctxt "search keyword"
 msgid "second"
-msgstr "Sekunden"
+msgstr "Sekunde"
 
 #: src/tools.py:60
 #, fuzzy
@@ -256,9 +252,10 @@ msgid "seconds"
 msgstr "Sekunden"
 
 #: src/tools.py:61
+#, fuzzy
 msgctxt "search keyword"
 msgid "timezone"
-msgstr ""
+msgstr "Zeitzone"
 
 #: src/tools.py:62
 #, fuzzy
@@ -292,10 +289,9 @@ msgid "number"
 msgstr "Zahl"
 
 #: src/tools.py:76
-#, fuzzy
 msgctxt "search keyword"
 msgid "binary"
-msgstr "Binär"
+msgstr "binär"
 
 #: src/tools.py:77
 #, fuzzy
@@ -380,7 +376,7 @@ msgstr ""
 #: src/tools.py:134 src/tools.py:145 src/tools.py:172
 msgctxt "search keyword"
 msgid "text"
-msgstr ""
+msgstr "Text"
 
 #: src/tools.py:141
 msgid "Encode and decode base64 strings"
@@ -404,7 +400,7 @@ msgstr "Kodieren und Dekodieren von URLs"
 #: src/tools.py:155
 msgctxt "search keyword"
 msgid "url"
-msgstr ""
+msgstr "URL"
 
 #: src/tools.py:156
 msgctxt "search keyword"
@@ -419,7 +415,7 @@ msgstr ""
 #: src/tools.py:158
 msgctxt "search keyword"
 msgid "link"
-msgstr ""
+msgstr "Link"
 
 #: src/tools.py:159
 #, fuzzy
@@ -447,10 +443,9 @@ msgid "unarchive"
 msgstr ""
 
 #: src/tools.py:171 src/tools.py:365
-#, fuzzy
 msgctxt "search keyword"
 msgid "file"
-msgstr "Alle Datein"
+msgstr "Datei"
 
 #: src/tools.py:174
 msgctxt "search keyword"
@@ -505,7 +500,7 @@ msgstr ""
 #, fuzzy
 msgctxt "search keyword"
 msgid "authentication"
-msgstr "Einzüge"
+msgstr "Autentifikation"
 
 #: src/tools.py:191
 msgctxt "search keyword"
