@@ -50,7 +50,7 @@ This is a collection of powerful yet simple-to-use tools and utilities to solve 
 > issues with very old third-party Python libraries finally forced my hand. The latest platform update broke most dependencies,
 > making Python 3.14 support impossible. I'm betting on Rust's robust ecosystem and strong typing to eliminate long-standing 
 > performance issues and a more stable foundation for the future. 
-> This rewrite means a fresh start, from how the code is structured to translations that will need community help to rebuild.
+> This rewrite means a fresh start. See [#123](https://github.com/aleiepure/devtoolbox/issues/123) for more information.
 
 <!-- 
 ## Install
