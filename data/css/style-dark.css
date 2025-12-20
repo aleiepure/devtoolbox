@@ -1,11 +1,7 @@
 /*
- * Copyright (C) 2023 Alessandro Iepure
+ * Copyright (C) 2022 - 2023 Alessandro Iepure
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-/* Dark mode CSS */
-
-.chip {
-    background-color: @dark_3;
-}
+/* Dark mode CSS - overrides style.css */

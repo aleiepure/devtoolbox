@@ -3,7 +3,6 @@
 
   <!-- Core UI -->
   <gresource prefix="/me/iepure/Devtoolbox/">
-
     <file>core/ui/window.ui</file>
     <file>core/ui/shortcuts-dialog.ui</file>
     <file>core/ui/about-dialog.ui</file>
@@ -14,6 +13,7 @@
 
     <!-- Widgets -->
     <file>core/widgets/tool_title/tool_title.ui</file>
+    <file>core/widgets/text_area/text_area.ui</file>
 
     <!-- Tools -->
     <file>tools/config_format/config_format.ui</file>
@@ -26,5 +26,7 @@
     <file compressed="true" alias="sidebar-symbolic.svg">../data/icons/symbolic/sidebar-symbolic.svg</file>
     <file compressed="true" alias="star-filled-rounded-symbolic.svg">../data/icons/symbolic/star-filled-rounded-symbolic.svg</file>
     <file compressed="true" alias="star-outline-rounded-symbolic.svg">../data/icons/symbolic/star-outline-rounded-symbolic.svg</file>
+    <file compressed="true" alias="right-symbolic.svg">../data/icons/symbolic/right-symbolic.svg</file>
+    <file compressed="true" alias="left-symbolic.svg">../data/icons/symbolic/left-symbolic.svg</file>
   </gresource>
 </gresources>

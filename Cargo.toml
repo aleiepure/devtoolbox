@@ -1,15 +1,13 @@
 [package]
 name = "devtoolbox"
-version = "0.1.0"
+version = "2.0.0"
 edition = "2021"
+license = "GPL-3.0-or-later"
 
 [dependencies]
 gettext-rs = { version = "0.7", features = ["gettext-system"] }
 gtk = { version = "0.10.3", package = "gtk4", features = ["gnome_49"] }
+adw = { version = "0.8.1", package = "libadwaita", features = ["v1_8"] }
+sourceview = { version = "0.10.0", package = "sourceview5" }
 inventory = "0.3.21"
-pastey = "0.2.0"
-
-[dependencies.adw]
-package = "libadwaita"
-version = "0.8.1"
-features = ["v1_8"]
+pastey = "0.2.1"

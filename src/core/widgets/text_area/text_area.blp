@@ -1,0 +1,230 @@
+/*
+ * text_area.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+using GtkSource 5;
+
+template $TextArea: Adw.Bin {
+    Box {
+        margin-top: 10;
+        orientation: vertical;
+        spacing: 6;
+        // MARK: Header
+        Box {
+            orientation: horizontal;
+            halign: fill;
+            hexpand: true;
+            // Title
+            Label _title_label {
+                margin-bottom: 8;
+                margin-top: 8;
+                margin-start: 8;
+
+                styles [
+                    "heading",
+                ]
+
+                label: bind template.title;
+            }
+
+            // Toolbar
+            Box {
+                orientation: horizontal;
+                halign: end;
+                hexpand: true;
+                // Loading spinner
+                Adw.Spinner loading_spinner {
+                    width-request: 16;
+                    visible: bind template.working;
+                }
+
+                Separator {
+                    styles [
+                        "spacer",
+                    ]
+
+                    visible: bind template.working;
+                }
+
+                // Action button
+                Button _action_button {
+                    styles [
+                        "accent",
+                    ]
+
+                    label: bind template.action-button-label;
+                    visible: bind template.action-button-visible;
+                    sensitive: bind template.working inverted;
+                    clicked => $on_signal_clicked_action_button() swapped;
+                }
+
+                Separator {
+                    styles [
+                        "spacer",
+                    ]
+
+                    visible: bind template.action-button-visible;
+                }
+
+                // Edit buttons
+                Box {
+                    orientation: horizontal;
+                    margin-start: 8;
+                    spacing: 6;
+                    // Open
+                    Button open_button {
+                        valign: center;
+                        visible: bind template.open_button_visible;
+                        sensitive: bind template.working inverted;
+
+                        styles [
+                            "flat",
+                        ]
+
+                        child: Adw.ButtonContent {
+                            icon-name: "document-open";
+                            label: _("Open");
+                        };
+
+                        clicked => $on_signal_clicked_open_button() swapped;
+                    }
+
+                    // Copy
+                    Button copy_button {
+                        valign: center;
+                        visible: bind template.copy_button_visible;
+
+                        styles [
+                            "flat",
+                        ]
+
+                        icon-name: "edit-copy";
+                        tooltip-text: _("Copy to clipboard");
+                        clicked => $on_signal_clicked_copy_button() swapped;
+                    }
+
+                    // Paste
+                    Button paste_button {
+                        valign: center;
+                        visible: bind template.paste_button_visible;
+
+                        styles [
+                            "flat",
+                        ]
+
+                        icon-name: "edit-paste";
+                        tooltip-text: _("Paste from clipboard");
+                        clicked => $on_signal_clicked_paste_button() swapped;
+                    }
+
+                    // Clear
+                    Button clear_button {
+                        valign: center;
+                        visible: bind template.clear_button_visible;
+
+                        styles [
+                            "flat",
+                        ]
+
+                        icon-name: "edit-clear";
+                        tooltip-text: _("Clear text");
+                        clicked => $on_signal_clicked_clear_button() swapped;
+                    }
+                }
+            }
+        }
+
+        // MARK: Text Area
+        Adw.ViewStack view_stack {
+            styles [
+                "card",
+            ]
+
+            // Text Area Page
+            Adw.ViewStackPage {
+                name: "text-area";
+
+                child: ScrolledWindow {
+                    child: Overlay {
+                        [overlay]
+                        Revealer {
+                            reveal-child: bind template.dragging;
+                            transition-type: crossfade;
+                            can-target: false;
+
+                            styles [
+                                "rounded-corner-12",
+                            ]
+
+                            child: Adw.StatusPage {
+                                styles [
+                                    "rounded-corner-12",
+                                    "dnd-highlight",
+                                    "compact",
+                                    "view",
+                                ]
+
+                                title: _("Drop a text file here");
+                                icon-name: "document-open";
+                            };
+                        }
+
+                        GtkSource.View source_view {
+                            auto-indent: true;
+                            tab-width: 4;
+                            smart-backspace: true;
+                            insert-spaces-instead-of-tabs: true;
+                            top-margin: 12;
+                            bottom-margin: 12;
+                            left-margin: 12;
+                            right-margin: 12;
+                            monospace: bind template.monospace;
+                            editable: bind template.editable;
+                            show-line-numbers: bind template.show-line-numbers;
+                            highlight-current-line: bind template.highlight-current-line;
+                            height-request: bind template.height;
+
+                            styles [
+                                "rounded-corner-12",
+                            ]
+                        }
+                    };
+                };
+            }
+
+            // Loading Page
+            Adw.ViewStackPage {
+                name: "loading";
+
+                child: Box {
+                    orientation: vertical;
+                    margin-bottom: 3;
+                    margin-end: 3;
+                    margin-start: 3;
+                    margin-top: 3;
+                    valign: center;
+                    vexpand: true;
+                    spacing: 10;
+
+                    Adw.Spinner {
+                        width-request: 36;
+                    }
+
+                    Label loading_label {
+                        label: bind template.loading_label;
+                    }
+                };
+            }
+        }
+    }
+}
+
+FileDialog open_file_dialog {
+    modal: true;
+    title: _("Open File");
+    accept-label: _("Open");
+}

@@ -44,6 +44,13 @@ Refer to the other tools for the contents of each file.
 Add a choice in the gschema for key `last-tool` with tool id.
 Add an entry in `src/core/window.rs` in function `create_tool_view(...)` for the new tool's id.
 Add an entry in gresource for the `.ui` file and in `src/meson.build` to compile the blueprint.
+<!-- 
+## Iconography
+
+For cohesiveness, certain icons for the tools' options have set meanings. Stick to the same.
+
+- Direction, format: `go-next`
+- Indentations, spaces, margin, alignment: ` -->
 
 <!-- ## Translations
 
