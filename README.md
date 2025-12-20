@@ -43,11 +43,11 @@ This is a collection of powerful yet simple-to-use tools and utilities to solve 
 - Image converters
 - Much more...
 
-### Known issues
-
-This app is currently under development with potential bugs and issues. If you are testing it and find some, please create an issue and describe the problem and how to reproduce it.
-Please remember that I'm working on this in my spare time, and fixes might not come very quickly.\
-In the [wiki](https://github.com/aleiepure/devtoolbox/wiki/Known-issues), you can find an updated list of known problems and how to fix them temporarily.
+> [!IMPORTANT]
+> **This branch is in maintenence mode**
+> 
+> This app is currently being rewriten in Rust. 
+> See [#123](https://github.com/aleiepure/devtoolbox/issues/123) for more information.
 
 ## Install
 
