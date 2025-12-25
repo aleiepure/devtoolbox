@@ -26,7 +26,8 @@ TOOLS_METADATA = {
             C_("search keyword", "spaces"),
             C_("search keyword", "indentation"),
             C_("search keyword", "indent")
-        ]
+        ],
+        "widget_class": "devtoolbox.views.json_yaml_toml.JsonYamlTomlView"
     },
     "timestamp": {
         "title": _("Timestamp"),
@@ -61,7 +62,8 @@ TOOLS_METADATA = {
             C_("search keyword", "seconds"),
             C_("search keyword", "timezone"),
             C_("search keyword", "now"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.timestamp.TimestampView"
     },
     "base-converter": {
         "title": _("Number Bases"),
@@ -82,7 +84,8 @@ TOOLS_METADATA = {
             "ascii",
             "utf-8",
             "utf8"
-        ]
+        ],
+        "widget_class": "devtoolbox.views.base_converter.BaseConverterView"
     },
     "cron": {
         "title": _("CRON Parser"),
@@ -100,7 +103,8 @@ TOOLS_METADATA = {
             C_("search keyword", "job"),
             "linux",
             "unix",
-        ]
+        ],
+        "widget_class": "devtoolbox.views.cron_converter.CronConverterView"
     },
     "reverse-cron": {
         "title": _("Reverse CRON"),
@@ -118,7 +122,8 @@ TOOLS_METADATA = {
             C_("search keyword", "job"),
             "linux",
             "unix",
-        ]
+        ],
+        "widget_class": "devtoolbox.views.reverse_cron.ReverseCronView"
     },
 
     # Encoders
@@ -133,7 +138,8 @@ TOOLS_METADATA = {
             "web",
             C_("search keyword", "markup"),
             C_("search keyword", "text"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.html_encoder.HtmlEncoderView"
     },
     "base64-encoder": {
         "title": "Base64",
@@ -145,7 +151,8 @@ TOOLS_METADATA = {
             C_("search keyword", "string"),
             C_("search keyword", "text"),
             C_("search keyword", "data"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.base64_encoder.Base64EncoderView"
     },
     "url-encoder": {
         "title": "URL",
@@ -160,7 +167,8 @@ TOOLS_METADATA = {
             C_("search keyword", "address"),
             C_("search keyword", "uri"),
             C_("search keyword", "query"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.url_encoder.UrlEncoderView"
     },
     "gzip-compressor": {
         "title": "GZip",
@@ -173,7 +181,8 @@ TOOLS_METADATA = {
             C_("search keyword", "archive"),
             C_("search keyword", "file"),
             C_("search keyword", "text"),
-        ]
+        ],
+        "compressor_class": "devtoolbox.compressors.gzip_compressor.GzipCompressor"
     },
     "lzma-compressor": {
         "title": "LZMA",
@@ -187,7 +196,8 @@ TOOLS_METADATA = {
             C_("search keyword", "archive"),
             C_("search keyword", "file"),
             C_("search keyword", "text"),
-        ]
+        ],
+        "compressor_class": "devtoolbox.compressors.lzma_compressor.LzmaCompressor"
     },
     "bz2-compressor": {
         "title": "Bzip2",
@@ -201,7 +211,8 @@ TOOLS_METADATA = {
             C_("search keyword", "archive"),
             C_("search keyword", "file"),
             C_("search keyword", "text"),
-        ]
+        ],
+        "compressor_class": "devtoolbox.compressors.bz2_compressor.Bz2Compressor"
     },
     "jwt-decoder": {
         "title": "JWT",
@@ -216,7 +227,8 @@ TOOLS_METADATA = {
             C_("search keyword", "authentication"),
             C_("search keyword", "authorization"),
             C_("search keyword", "security"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.jwt_decoder.JwtDecoderView"
     },
 
     # Formatters and minifiers
@@ -231,7 +243,8 @@ TOOLS_METADATA = {
             C_("search keyword", "beautify"),
             C_("search keyword", "parse"),
             C_("search keyword", "data"),
-        ]
+        ],
+        "formatter_class": "devtoolbox.formatters.json.JsonFormatter"
     },
     "sql-formatter": {
         "title": "SQL",
@@ -245,7 +258,8 @@ TOOLS_METADATA = {
             C_("search keyword", "query"),
             C_("search keyword", "database"),
             C_("search keyword", "statement"),
-        ]
+        ],
+        "formatter_class": "devtoolbox.formatters.sql.SqlFormatter"
     },
     "xml-formatter": {
         "title": "XML",
@@ -259,7 +273,8 @@ TOOLS_METADATA = {
             C_("search keyword", "markup"),
             C_("search keyword", "document"),
             C_("search keyword", "data"),
-        ]
+        ],
+        "formatter_class": "devtoolbox.formatters.xml.XmlFormatter"
     },
     "html-formatter": {
         "title": "HTML",
@@ -274,7 +289,8 @@ TOOLS_METADATA = {
             C_("search keyword", "minify"),
             C_("search keyword", "web"),
             C_("search keyword", "document"),
-        ]
+        ],
+        "formatter_class": "devtoolbox.formatters.html.HtmlFormatter"
     },
     "js-formatter": {
         "title": "JavaScript",
@@ -288,7 +304,8 @@ TOOLS_METADATA = {
             C_("search keyword", "beautify"),
             C_("search keyword", "minify"),
             C_("search keyword", "code"),
-        ]
+        ],
+        "formatter_class": "devtoolbox.formatters.js.JsFormatter"
     },
     "css-formatter": {
         "title": "CSS",
@@ -301,7 +318,8 @@ TOOLS_METADATA = {
             C_("search keyword", "beautify"),
             C_("search keyword", "minify"),
             C_("search keyword", "stylesheet"),
-        ]
+        ],
+        "formatter_class": "devtoolbox.formatters.css.CssFormatter"
     },
     "css-minifier": {
         "title": _("CSS Minifier"),
@@ -315,7 +333,8 @@ TOOLS_METADATA = {
             C_("search keyword", "stylesheet"),
             C_("search keyword", "reduce"),
             C_("search keyword", "size"),
-        ]
+        ],
+        "formatter_class": "devtoolbox.formatters.css_minifier.CssMinifier"
     },
     "js-minifier": {
         "title": _("JavaScript Minifier"),
@@ -330,7 +349,8 @@ TOOLS_METADATA = {
             C_("search keyword", "size"),
             C_("search keyword", "script"),
             C_("search keyword", "code"),
-        ]
+        ],
+        "formatter_class": "devtoolbox.formatters.js_minifier.JsMinifier"
     },
 
     # Generators
@@ -345,7 +365,8 @@ TOOLS_METADATA = {
             C_("search keyword", "generate"),
             C_("search keyword", "security"),
             C_("search keyword", "cryptography"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.hash_generator.HashGeneratorView"
     },
     "lorem-generator": {
         "title": "Lorem Ipsum",
@@ -357,7 +378,8 @@ TOOLS_METADATA = {
             C_("search keyword", "sample"),
             C_("search keyword", "filler"),
             C_("search keyword", "latin"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.lorem_generator.LoremGeneratorView"
     },
     "uuid-generator": {
         "title": "UUID",
@@ -368,7 +390,8 @@ TOOLS_METADATA = {
             "guid",
             C_("search keyword", "identifier"),
             C_("search keyword", "random"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.uuid_generator.UuidGeneratorView"
     },
     "random-generator": {
         "title": _("Random"),
@@ -380,7 +403,8 @@ TOOLS_METADATA = {
             C_("search keyword", "token"),
             C_("search keyword", "entropy"),
             C_("search keyword", "secure"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.random_generator.RandomGeneratorView"
     },
     "chmod": {
         "title": _("Chmod Calculator"),
@@ -394,7 +418,8 @@ TOOLS_METADATA = {
             C_("search keyword", "calculate"),
             C_("search keyword", "mode"),
             C_("search keyword", "access"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.chmod_calculator.ChmodCalculatorView"
     },
     "qrcode": {
         "title": _("QR Code"),
@@ -406,7 +431,8 @@ TOOLS_METADATA = {
             C_("search keyword", "barcode"),
             C_("search keyword", "image"),
             C_("search keyword", "matrix"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.qrcode_generator.QRCodeGeneratorView"
     },
 
     # Text
@@ -425,7 +451,8 @@ TOOLS_METADATA = {
             C_("search keyword", "words"),
             C_("search keyword", "characters"),
             C_("search keyword", "lines"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.text_inspector.TextInspectorView"
     },
     "regex-tester": {
         "title": _("Regex Tester"),
@@ -436,7 +463,8 @@ TOOLS_METADATA = {
             C_("search keyword", "expression"),
             C_("search keyword", "pattern"),
             C_("search keyword", "search"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.regex_tester.RegexTesterView"
     },
     "text-diff": {
         "title": _("Text Diff"),
@@ -448,7 +476,8 @@ TOOLS_METADATA = {
             C_("search keyword", "compare"),
             C_("search keyword", "changes"),
             C_("search keyword", "modification"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.text_diff.TextDiffView"
     },
     "xml-validator": {
         "title": _("XML Scheme Validator"),
@@ -459,7 +488,8 @@ TOOLS_METADATA = {
             C_("search keyword", "validate"),
             C_("search keyword", "markup"),
             C_("search keyword", "document"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.xml_validator.XmlValidator"
     },
     "json-validator": {
         "title": _("JSON Schema Validator"),
@@ -470,7 +500,8 @@ TOOLS_METADATA = {
             C_("search keyword", "validate"),
             C_("search keyword", "data"),
             C_("search keyword", "document"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.json_validator.JsonValidatorView"
     },
     "markdown-preview": {
         "title": _("Markdown Previewer"),
@@ -481,7 +512,8 @@ TOOLS_METADATA = {
             C_("search keyword", "render"),
             C_("search keyword", "markup"),
             C_("search keyword", "md"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.markdown_preview.MarkdownPreviewView"
     },
 
     # Graphics
@@ -500,7 +532,8 @@ TOOLS_METADATA = {
             C_("search keyword", "format"),
             C_("search keyword", "conversion"),
             C_("search keyword", "palette"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.color_converter.ColorConverterView"
     },
     "contrast-checker": {
         "title": _("Contrast Checker"),
@@ -510,7 +543,8 @@ TOOLS_METADATA = {
         "keywords": [
             C_("search keyword", "accessibility"),
             C_("search keyword", "ratio"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.contrast_checker.ContrastCheckerView"
     },
     "colorblind-sim": {
         "title": _("Color Blindness"),
@@ -524,7 +558,8 @@ TOOLS_METADATA = {
             C_("search keyword", "deuteranopia"),
             C_("search keyword", "tritanopia"),
             C_("search keyword", "vision"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.colorblindness_simulator.ColorblindnessSimulatorView"
     },
     "image-converter": {
         "title": _("Image Format Converter"),
@@ -540,7 +575,8 @@ TOOLS_METADATA = {
             C_("search keyword", "gif"),
             C_("search keyword", "webp"),
             C_("search keyword", "picture"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.image_converter.ImageConverterView"
     },
 
     # Certificates
@@ -559,7 +595,8 @@ TOOLS_METADATA = {
             C_("search keyword", "security"),
             C_("search keyword", "public key"),
             C_("search keyword", "cryptography"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.certificate_parser.CertificateParserView"
     },
     "csr-generator": {
         "title": _("Certificate Signing Request"),
@@ -575,162 +612,11 @@ TOOLS_METADATA = {
             C_("search keyword", "key"),
             C_("search keyword", "security"),
             C_("search keyword", "cryptography"),
-        ]
+        ],
+        "widget_class": "devtoolbox.views.certificate_request_generator.CertificateRequestGeneratorView"
     },
 }
 
-def get_tools_for_ui() -> dict:
-    """
-    Get tools configuration with UI components attached.
-    Import view classes only when needed for UI.
-    """
-    
-    tools_with_ui = {}
-    for tool_id, config in TOOLS_METADATA.items():
-        tools_with_ui[tool_id] = config.copy()
-
-        match tool_id:
-            
-            # Converters
-            case "json-yaml":
-                from .views.json_yaml_toml import JsonYamlTomlView
-                tools_with_ui[tool_id]["child"] = JsonYamlTomlView()
-            case "timestamp":
-                from .views.timestamp import TimestampView
-                tools_with_ui[tool_id]["child"] = TimestampView()
-            case "base-converter":
-                from .views.base_converter import BaseConverterView
-                tools_with_ui[tool_id]["child"] = BaseConverterView()
-            case "cron":
-                from .views.cron_converter import CronConverterView
-                tools_with_ui[tool_id]["child"] = CronConverterView()
-            case "reverse-cron":
-                from .views.reverse_cron import ReverseCronView
-                tools_with_ui[tool_id]["child"] = ReverseCronView()
-            
-            # Encoders
-            case "html-encoder":
-                from .views.html_encoder import HtmlEncoderView
-                tools_with_ui[tool_id]["child"] = HtmlEncoderView()
-            case "base64-encoder":
-                from .views.base64_encoder import Base64EncoderView
-                tools_with_ui[tool_id]["child"] = Base64EncoderView()
-            case "url-encoder":
-                from .views.url_encoder import UrlEncoderView
-                tools_with_ui[tool_id]["child"] = UrlEncoderView()
-            case "gzip-compressor":
-                from .views.compressor import CompressorView
-                from .compressors.gzip_compressor import GzipCompressor
-                tools_with_ui[tool_id]["child"] = CompressorView(GzipCompressor())
-            case "lzma-compressor":
-                from .views.compressor import CompressorView
-                from .compressors.lzma_compressor import LzmaCompressor
-                tools_with_ui[tool_id]["child"] = CompressorView(LzmaCompressor())
-            case "bz2-compressor":
-                from .views.compressor import CompressorView
-                from .compressors.bz2_compressor import Bz2Compressor
-                tools_with_ui[tool_id]["child"] = CompressorView(Bz2Compressor())
-            case "jwt-decoder":
-                from .views.jwt_decoder import JwtDecoderView
-                tools_with_ui[tool_id]["child"] = JwtDecoderView()
-            
-            # Formatters and minifiers
-            case "json-formatter":
-                from .views.formatter import FormatterView
-                from .formatters.json import JsonFormatter
-                tools_with_ui[tool_id]["child"] = FormatterView(JsonFormatter())
-            case "sql-formatter":
-                from .views.formatter import FormatterView
-                from .formatters.sql import SqlFormatter
-                tools_with_ui[tool_id]["child"] = FormatterView(SqlFormatter())
-            case "xml-formatter":
-                from .views.formatter import FormatterView
-                from .formatters.xml import XmlFormatter
-                tools_with_ui[tool_id]["child"] = FormatterView(XmlFormatter())
-            case "html-formatter":
-                from .views.formatter import FormatterView
-                from .formatters.html import HtmlFormatter
-                tools_with_ui[tool_id]["child"] = FormatterView(HtmlFormatter())
-            case "js-formatter":
-                from .views.formatter import FormatterView
-                from .formatters.js import JsFormatter
-                tools_with_ui[tool_id]["child"] = FormatterView(JsFormatter())
-            case "css-formatter":
-                from .views.formatter import FormatterView
-                from .formatters.css import CssFormatter
-                tools_with_ui[tool_id]["child"] = FormatterView(CssFormatter())
-            case "css-minifier":
-                from .views.formatter import FormatterView
-                from .formatters.css_minifier import CssMinifier
-                tools_with_ui[tool_id]["child"] = FormatterView(CssMinifier())
-            case "js-minifier":
-                from .views.formatter import FormatterView
-                from .formatters.js_minifier import JsMinifier
-                tools_with_ui[tool_id]["child"] = FormatterView(JsMinifier())
-            
-            # Generators
-            case "hash-generator":
-                from .views.hash_generator import HashGeneratorView
-                tools_with_ui[tool_id]["child"] = HashGeneratorView()
-            case "lorem-generator":
-                from .views.lorem_generator import LoremGeneratorView
-                tools_with_ui[tool_id]["child"] = LoremGeneratorView()
-            case "uuid-generator":
-                from .views.uuid_generator import UuidGeneratorView
-                tools_with_ui[tool_id]["child"] = UuidGeneratorView()
-            case "random-generator":
-                from .views.random_generator import RandomGeneratorView
-                tools_with_ui[tool_id]["child"] = RandomGeneratorView()
-            case "chmod":
-                from .views.chmod_calculator import ChmodCalculatorView
-                tools_with_ui[tool_id]["child"] = ChmodCalculatorView()
-            case "qrcode":
-                from .views.qrcode_generator import QRCodeGeneratorView
-                tools_with_ui[tool_id]["child"] = QRCodeGeneratorView()
-            
-            # Text
-            case "text-inspector":
-                from .views.text_inspector import TextInspectorView
-                tools_with_ui[tool_id]["child"] = TextInspectorView()
-            case "regex-tester":
-                from .views.regex_tester import RegexTesterView
-                tools_with_ui[tool_id]["child"] = RegexTesterView()
-            case "text-diff":
-                from .views.text_diff import TextDiffView
-                tools_with_ui[tool_id]["child"] = TextDiffView()
-            case "xml-validator":
-                from .views.xml_validator import XmlValidatorView
-                tools_with_ui[tool_id]["child"] = XmlValidatorView()
-            case "json-validator":
-                from .views.json_validator import JsonValidatorView
-                tools_with_ui[tool_id]["child"] = JsonValidatorView()
-            case "markdown-preview":
-                from .views.markdown_preview import MarkdownPreviewView
-                tools_with_ui[tool_id]["child"] = MarkdownPreviewView()
-                
-            # Graphics
-            case "color-converter":
-                from .views.color_converter import ColorConverterView
-                tools_with_ui[tool_id]["child"] = ColorConverterView()
-            case "contrast-checker":
-                from .views.contrast_checker import ContrastCheckerView
-                tools_with_ui[tool_id]["child"] = ContrastCheckerView()
-            case "colorblind-sim":
-                from .views.colorblindness_simulator import ColorblindnessSimulatorView
-                tools_with_ui[tool_id]["child"] = ColorblindnessSimulatorView()
-            case "image-converter":
-                from .views.image_converter import ImageConverterView
-                tools_with_ui[tool_id]["child"] = ImageConverterView()
-                
-            # Certificates
-            case "certificate-parser":
-                from .views.certificate_parser import CertificateParserView
-                tools_with_ui[tool_id]["child"] = CertificateParserView()
-            case "csr-generator":
-                from .views.certificate_request_generator import CertificateRequestGeneratorView
-                tools_with_ui[tool_id]["child"] = CertificateRequestGeneratorView()
-
-    return tools_with_ui
 
 def search_tools(search_terms: List[str]) -> List[str]:
     """
