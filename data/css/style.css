@@ -21,6 +21,12 @@
   box-shadow: none;
 }
 
+.error-highlight {
+  border: 2px solid var(--error-color);
+  outline: none;
+  box-shadow: none;
+}
+
 /* .padding-left-8 {
   padding-left: 8px;
 }

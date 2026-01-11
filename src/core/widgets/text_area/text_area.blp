@@ -151,7 +151,7 @@ template $TextArea: Adw.Bin {
                 child: ScrolledWindow {
                     child: Overlay {
                         [overlay]
-                        Revealer {
+                        Revealer drop_revealer{
                             reveal-child: bind template.dragging;
                             transition-type: crossfade;
                             can-target: false;

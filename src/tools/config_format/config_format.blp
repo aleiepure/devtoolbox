@@ -117,24 +117,29 @@ template $ConfigFormatWidget: Adw.Bin {
                             title: _("Input");
                             open-button-visible: true;
                             paste-button-visible: true;
-                            copy-button-visible: true;
                             clear-button-visible: true;
                             show-line-numbers: true;
                             highlight-syntax: true;
                             highlight-current-line: true;
                             editable: true;
-                            action-button-visible: true;
-                            action-button-label: _("Format");
+                            allow-drag-and-drop: true;
                             dragging: bind template.dragging;
-                            action-clicked => $on_signal_input_area_action_button_clicked() swapped;
-                            error => $on_signal_input_area_error() swapped;
                             filter-text-files: true;
+                            changed => $on_signal_input_area_changed() swapped;
+                            error => $on_signal_input_area_error() swapped;
+                            cleared => $on_signal_input_area_cleared() swapped;
                         }
 
                         // Output Text Area
                         $TextArea output_area {
                             title: _("Output");
-                            dragging: bind template.dragging;
+                            copy-button-visible: true;
+                            editable: false;
+                            allow-drag-and-drop: false;
+                            show-line-numbers: true;
+                            highlight-syntax: true;
+                            highlight-current-line: false;
+                            error => $on_signal_output_area_error() swapped;
                         }
                     }
                 };

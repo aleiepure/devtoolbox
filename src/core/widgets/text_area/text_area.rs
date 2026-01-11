@@ -30,6 +30,9 @@ mod imp {
         view_stack: TemplateChild<adw::ViewStack>,
 
         #[template_child]
+        drop_revealer: TemplateChild<gtk::Revealer>,
+
+        #[template_child]
         source_view: TemplateChild<sourceview::View>,
 
         #[template_child]
@@ -161,7 +164,6 @@ mod imp {
     #[gtk::template_callbacks]
     impl TextArea {
         // MARK: Signal handlers
-
         /// Action button clicked. Emits the "action-clicked" signal.
         #[template_callback]
         fn on_signal_clicked_action_button(&self, _button: &gtk::Button) {
@@ -189,7 +191,7 @@ mod imp {
         /// Clear button clicked. Clears the text area and emits the "cleared" signal.
         #[template_callback]
         fn on_signal_clicked_clear_button(&self, _button: &gtk::Button) {
-            self.clear_text();
+            self.clear();
             self.obj().emit_by_name::<()>("cleared", &[]);
         }
 
@@ -274,7 +276,7 @@ mod imp {
         }
 
         /// Clear the text area. Called when the clear button is clicked.
-        fn clear_text(&self) {
+        pub fn clear(&self) {
             if let Some(source_buffer) = self
                 .source_view
                 .buffer()
@@ -282,7 +284,7 @@ mod imp {
             {
                 source_buffer.set_text("");
             }
-            // self.source_view.remove_css_class("border-red");
+            self.source_view.remove_css_class("error-highlight");
             self.view_stack.set_visible_child_name("text-area");
             self.obj().set_working(false);
         }
@@ -338,6 +340,35 @@ mod imp {
             }
             self.view_stack.set_visible_child_name("text-area");
         }
+
+        pub fn text(&self) -> String {
+            self.source_view
+                .buffer()
+                .text(
+                    &self.source_view.buffer().start_iter(),
+                    &self.source_view.buffer().end_iter(),
+                    false,
+                )
+                .to_string()
+        }
+
+        pub fn set_text(&self, text: String) {
+            if let Some(source_buffer) = self
+                .source_view
+                .buffer()
+                .downcast_ref::<sourceview::Buffer>()
+            {
+                source_buffer.set_text(&text);
+            }
+        }
+
+        pub fn set_error(&self, error: bool) {
+            if error {
+                self.source_view.add_css_class("error-highlight");
+            } else {
+                self.source_view.remove_css_class("error-highlight");
+            }
+        }
     }
 
     #[glib::derived_properties]
@@ -355,14 +386,22 @@ mod imp {
             self.set_theme();
 
             // Set language if specified
-            let language = sourceview::LanguageManager::default().language(&self.language.borrow());
-            if let Some(source_buffer) = self
-                .source_view
-                .buffer()
-                .downcast_ref::<sourceview::Buffer>()
-            {
-                source_buffer.set_language(language.as_ref());
-            }
+            let obj = self.obj().clone();
+            let obj_clone = obj.clone();
+            obj.connect_notify_local(Some("language"), move |_text_area, _param_spec| {
+                if let Some(imp) = obj_clone.downcast_ref::<super::TextArea>() {
+                    let language = sourceview::LanguageManager::default()
+                        .language(&imp.imp().language.borrow());
+                    if let Some(source_buffer) = imp
+                        .imp()
+                        .source_view
+                        .buffer()
+                        .downcast_ref::<sourceview::Buffer>()
+                    {
+                        source_buffer.set_language(language.as_ref());
+                    }
+                }
+            });
 
             // Bind properties to the source view (rest are bound in the template)
             self.obj()
@@ -399,13 +438,17 @@ mod imp {
                 },
             );
 
-            // Drag and drop
             let drop_target =
                 gtk::DropTarget::new(gdk::FileList::static_type(), gdk::DragAction::COPY);
 
             let obj = self.obj().clone();
             let imp = self.obj().downgrade();
             drop_target.connect_drop(move |_, value, _, _| {
+                // Reject drop if drag and drop is not allowed
+                if !obj.allow_drag_and_drop() {
+                    return false;
+                }
+
                 let files = value
                     .get::<gdk::FileList>()
                     .expect("Failed to get FileList from drop value");
@@ -469,5 +512,21 @@ impl TextArea {
             .property("title", title)
             .property("loading-label", gettext("Loading..."))
             .build()
+    }
+
+    pub fn clear(&self) {
+        self.imp().clear();
+    }
+
+    pub fn text(&self) -> String {
+        self.imp().text()
+    }
+
+    pub fn set_text(&self, text: String) {
+        self.imp().set_text(text);
+    }
+
+    pub fn set_error(&self, error: bool) {
+        self.imp().set_error(error);
     }
 }
