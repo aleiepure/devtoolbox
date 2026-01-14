@@ -39,18 +39,30 @@ Each tool has its own module inside `src/tools/<tool-id>`. Inside each tool has 
 - `mod.rs`
 - `<tool-id>.rs`
 - `<tool-id>.blp`
+- any other file needed to implement its logic
 
-Refer to the other tools for the contents of each file.
-Add a choice in the gschema for key `last-tool` with tool id.
-Add an entry in `src/core/window.rs` in function `create_tool_view(...)` for the new tool's id.
-Add an entry in gresource for the `.ui` file and in `src/meson.build` to compile the blueprint.
-<!-- 
-## Iconography
+Inside `mod.rs` define the tool's metadata via the `define_tool!` macro. It takes the following parameters:
 
-For cohesiveness, certain icons for the tools' options have set meanings. Stick to the same.
+- `widget`: Object type of the widget to be shown
+- `id`: unique name for the tool inside the app (snake_case)
+- `title`: title shown at the top of the widget. If `sidebar_title` is not provided, also used for the sidebar
+- `description`: subtitle shown under the title at the top of the widget. Also used for sidebar tooltip on hover
+- `sidebar_title`: override the title shown in the sidebar. Set to `None` if not required
+- `category`: one of the available categories. Affects the position in the sidebar and search
+- `keywords`: keywords for searching
 
-- Direction, format: `go-next`
-- Indentations, spaces, margin, alignment: ` -->
+Tool icon in the sidebar is an svg named `<tool_id>_symbolic.svg` placed in `data/icons/symbolic/tools/`. Make sure to add
+an entry in the `gresource.xml` file as well.
+
+Make sure to add a line in `src/meson.build` around line 51 to compile the tool's blueprint file and update the `gresource.xml`
+with a new line for the tool.
+
+In `gschema.xml` add a choice for the `last-tool` key (around line 25) with the tool id.
+
+In `src/tools/mod.rs` add a new line in the `ALL_TOOLS` array formatted as such: `&<tool_id>::<TOOL_ID>_TOOL_METADATA,`.
+
+All tools need to have a toast overlay, the tool title widget at the top (bound to title and description from metadata), 
+options if needed and the rest of the ui. Make sure width is consistent across all tools.
 
 <!-- ## Translations
 

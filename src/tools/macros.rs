@@ -47,40 +47,24 @@ impl ToolCategory {
 #[macro_export]
 macro_rules! define_tool {
     (
-        $struct_name:ident,
         widget: $widget_name:path,
         id: $id:literal,
-        title: $title:literal,
-        description: $description:literal,
+        title: $title:expr,
+        description: $description:expr,
+        sidebar_title: $sidebar_title:expr,
         category: $category:expr,
-        icon: $icon:literal,
         keywords: [$($kw:literal),* $(,)?],
     ) => {
-        pub struct $struct_name;
-
         pastey::paste! {
-            pub static [<$struct_name:snake:upper _METADATA>]: $crate::tools::ToolMetadata =
-                $crate::tools::ToolMetadata {
+            pub static [<$id:snake:upper _TOOL_METADATA>]: once_cell::sync::Lazy<$crate::tools::ToolMetadata> =
+                once_cell::sync::Lazy::new(|| $crate::tools::ToolMetadata {
                     id: $id,
                     title: $title,
                     description: $description,
+                    sidebar_title: $sidebar_title,
                     category: $category,
-                    icon: $icon,
                     keywords: &[$($kw),*],
-                };
-        }
-
-        impl $crate::tools::Tool for $struct_name {
-            fn metadata() -> $crate::tools::ToolMetadata {
-                pastey::paste! {
-                    [<$struct_name:snake:upper _METADATA>]
-                }
-            }
-
-            fn create_view(&self) -> gtk::Widget {
-                use gtk::prelude::*;
-                <$widget_name>::new(&Self::metadata()).upcast()
-            }
+                });
         }
     };
 }

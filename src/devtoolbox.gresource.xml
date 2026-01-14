@@ -22,6 +22,7 @@
   
   <!-- Icons -->
   <gresource prefix="/me/iepure/Devtoolbox/icons/scalable/actions/">
+    <!-- UI icons -->
     <file compressed="true" alias="loupe-symbolic.svg">../data/icons/symbolic/loupe-symbolic.svg</file>
     <file compressed="true" alias="sidebar-symbolic.svg">../data/icons/symbolic/sidebar-symbolic.svg</file>
     <file compressed="true" alias="star-filled-rounded-symbolic.svg">../data/icons/symbolic/star-filled-rounded-symbolic.svg</file>
@@ -29,5 +30,9 @@
     <file compressed="true" alias="right-symbolic.svg">../data/icons/symbolic/right-symbolic.svg</file>
     <file compressed="true" alias="left-symbolic.svg">../data/icons/symbolic/left-symbolic.svg</file>
     <file compressed="true" alias="warning-outline-symbolic.svg">../data/icons/symbolic/warning-outline-symbolic.svg</file>
+
+    <!-- Tool icons -->
+    <file compressed="true" alias="config_format-symbolic.svg">../data/icons/symbolic/tools/config_format-symbolic.svg</file>
+    <file compressed="true" alias="timestamp-symbolic.svg">../data/icons/symbolic/tools/timestamp-symbolic.svg</file>
   </gresource>
 </gresources>

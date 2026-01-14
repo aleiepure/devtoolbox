@@ -154,10 +154,15 @@ mod imp {
                 row_box.set_margin_bottom(6);
                 row_box.set_spacing(12);
 
-                let icon = gtk::Image::from_icon_name(tool.icon);
+                let icon = gtk::Image::from_icon_name(tool.id);
                 row_box.append(&icon);
 
-                let title = gtk::Label::new(Some(tool.title));
+                let title = gtk::Label::new(None);
+                if let Some(sidebar_title) = &tool.sidebar_title {
+                    title.set_label(sidebar_title);
+                } else {
+                    title.set_label(&tool.title);
+                }
                 title.set_halign(gtk::Align::Start);
                 title.add_css_class("body");
                 row_box.append(&title);

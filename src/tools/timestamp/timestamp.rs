@@ -76,8 +76,8 @@ impl TimestampWidget {
     pub fn new(metadata: &ToolMetadata) -> Self {
         glib::Object::builder()
             .property("tool-id", metadata.id)
-            .property("title", metadata.title)
-            .property("description", metadata.description)
+            .property("title", metadata.title.clone())
+            .property("description", metadata.description.clone())
             .build()
     }
 }

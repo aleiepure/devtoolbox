@@ -5,32 +5,31 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
+pub mod config_format;
 pub mod macros;
+pub mod timestamp;
 
-pub trait Tool {
-    fn metadata() -> ToolMetadata;
-    fn create_view(&self) -> gtk::Widget;
-}
-
-#[derive(Clone, Copy)]
-pub struct ToolMetadata {
-    pub id: &'static str,
-    pub title: &'static str,
-    pub description: &'static str,
-    pub category: &'static ToolCategory,
-    pub icon: &'static str,
-    pub keywords: &'static [&'static str],
-}
-
-use inventory;
+use once_cell::sync::Lazy;
 
 use crate::tools::macros::ToolCategory;
 
-inventory::collect!(ToolMetadata);
-
-pub fn all_tools() -> impl Iterator<Item = &'static ToolMetadata> {
-    inventory::iter::<ToolMetadata>()
+#[derive(Clone)]
+pub struct ToolMetadata {
+    pub id: &'static str,
+    pub title: String,
+    pub description: String,
+    pub sidebar_title: Option<String>,
+    pub category: &'static ToolCategory,
+    pub keywords: &'static [&'static str],
 }
 
-pub mod config_format;
-pub mod timestamp;
+pub static ALL_TOOLS: Lazy<Vec<&'static ToolMetadata>> = Lazy::new(|| {
+    vec![
+        &config_format::CONFIG_FORMAT_TOOL_METADATA,
+        &timestamp::TIMESTAMP_TOOL_METADATA,
+    ] // TODO: add new tools here
+});
+
+pub fn all_tools() -> impl Iterator<Item = &'static ToolMetadata> {
+    ALL_TOOLS.iter().copied()
+}
