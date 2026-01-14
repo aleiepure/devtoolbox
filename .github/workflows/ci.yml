@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [main]
+    branches: ["v2.0-rs"]
   pull_request:
 
 name: CI
@@ -8,7 +8,7 @@ name: CI
 jobs:
   rustfmt:
     name: Rustfmt
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
@@ -24,15 +24,23 @@ jobs:
 
   flatpak:
     name: Flatpak
-    runs-on: ubuntu-20.04
     container:
-      image: bilelmoussaoui/flatpak-github-actions:gnome-41
+      image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-49
       options: --privileged
+    strategy:
+      matrix:
+        variant:
+          - arch: x86_64
+            runner: ubuntu-24.04
+          - arch: aarch64
+            runner: ubuntu-24.04-arm
+    runs-on: ${{ matrix.variant.runner }}
     steps:
     - uses: actions/checkout@v2
-    - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v4
+    - uses: flatpak/flatpak-github-actions/flatpak-builder@v6
       with:
-        bundle: devtoolbox-rs.flatpak
-        manifest-path: build-aux/me.iepure.Devtoolbox.Devel.json
-        run-tests: true
+        bundle: devtoolbox.flatpak
+        manifest-path: me.iepure.Devtoolbox.yaml
         cache-key: flatpak-builder-${{ github.sha }}
+        arch: ${{ matrix.variant.arch }}
+        verbose: true
