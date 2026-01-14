@@ -6,7 +6,7 @@ SPDX-License-Identifier: CC0-1.0
 -->
 
 <component type="desktop-application">
-  <id>me.iepure.devtoolbox</id>
+  <id>me.iepure.Devtoolbox</id>
 
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
@@ -40,10 +40,10 @@ SPDX-License-Identifier: CC0-1.0
     </ul>
   </description>
 
-  <launchable type="desktop-id">me.iepure.devtoolbox.desktop</launchable>
+  <launchable type="desktop-id">me.iepure.Devtoolbox.desktop</launchable>
 
   <provides>
-    <id>me.iepure.devtoolbox.desktop</id>
+    <id>me.iepure.Devtoolbox.desktop</id>
   </provides>
 
   <replaces>
