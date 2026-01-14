@@ -18,6 +18,7 @@ template $TextArea: Adw.Bin {
             orientation: horizontal;
             halign: fill;
             hexpand: true;
+            spacing: 6;
             // Title
             Label _title_label {
                 margin-bottom: 8;
@@ -29,6 +30,31 @@ template $TextArea: Adw.Bin {
                 ]
 
                 label: bind template.title;
+            }
+
+            MenuButton error_icon {
+                visible: bind template.error;
+                icon-name: "warning-outline";
+                tooltip-text: _("Errors present. Click for details.");
+                direction: right;
+
+                popover: Popover {
+                    position: right;
+
+                    child: Label {
+                        label: bind template.error-label;
+                        wrap: true;
+                        margin-top: 6;
+                        margin-bottom: 6;
+                        margin-start: 6;
+                        margin-end: 6;
+                    };
+                };
+
+                styles [
+                    "flat",
+                    "error",
+                ]
             }
 
             // Toolbar
@@ -151,7 +177,7 @@ template $TextArea: Adw.Bin {
                 child: ScrolledWindow {
                     child: Overlay {
                         [overlay]
-                        Revealer drop_revealer{
+                        Revealer drop_revealer {
                             reveal-child: bind template.dragging;
                             transition-type: crossfade;
                             can-target: false;

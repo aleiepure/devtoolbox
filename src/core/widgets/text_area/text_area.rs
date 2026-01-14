@@ -140,6 +140,15 @@ mod imp {
         #[property(set, get, type = bool, default = false)]
         dragging: RefCell<bool>,
 
+        /// Error state of the text area. When true, the text area is highlighted to indicate an error and an error icon
+        /// is shown in the header. Hovering over the icon shows more information about the error.
+        #[property(set, get, type = bool, default = false)]
+        error: RefCell<bool>,
+
+        /// Error label shown as tooltip when hovering over the error icon. Useful only if 'error' is true.
+        #[property(set, get, type = String, default = "")]
+        error_label: RefCell<String>,
+
         // MARK: Other fields
         text_changed_handler_id: RefCell<Option<glib::SignalHandlerId>>,
     }
@@ -361,14 +370,6 @@ mod imp {
                 source_buffer.set_text(&text);
             }
         }
-
-        pub fn set_error(&self, error: bool) {
-            if error {
-                self.source_view.add_css_class("error-highlight");
-            } else {
-                self.source_view.remove_css_class("error-highlight");
-            }
-        }
     }
 
     #[glib::derived_properties]
@@ -438,6 +439,20 @@ mod imp {
                 },
             );
 
+            // Error state
+            let obj = self.obj().clone();
+            obj.connect_notify_local(Some("error"), move |text_area, _param_spec| {
+                if text_area.error() {
+                    text_area.imp().source_view.add_css_class("error-highlight");
+                } else {
+                    text_area
+                        .imp()
+                        .source_view
+                        .remove_css_class("error-highlight");
+                }
+            });
+
+            // Drag and drop
             let drop_target =
                 gtk::DropTarget::new(gdk::FileList::static_type(), gdk::DragAction::COPY);
 
@@ -526,7 +541,7 @@ impl TextArea {
         self.imp().set_text(text);
     }
 
-    pub fn set_error(&self, error: bool) {
-        self.imp().set_error(error);
-    }
+    // pub fn set_error(&self, error: bool) {
+    //     self.imp().set_error(error);
+    // }
 }

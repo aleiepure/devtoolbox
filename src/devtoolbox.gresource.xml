@@ -28,5 +28,6 @@
     <file compressed="true" alias="star-outline-rounded-symbolic.svg">../data/icons/symbolic/star-outline-rounded-symbolic.svg</file>
     <file compressed="true" alias="right-symbolic.svg">../data/icons/symbolic/right-symbolic.svg</file>
     <file compressed="true" alias="left-symbolic.svg">../data/icons/symbolic/left-symbolic.svg</file>
+    <file compressed="true" alias="warning-outline-symbolic.svg">../data/icons/symbolic/warning-outline-symbolic.svg</file>
   </gresource>
 </gresources>

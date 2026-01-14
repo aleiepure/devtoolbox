@@ -67,37 +67,39 @@ pub fn validate_toml(input: &str) -> Result<toml::Value, toml::de::Error> {
 }
 
 pub fn json_to_yaml(input: &str) -> Result<String, String> {
-    let json_value: serde_json::Value = serde_json::from_str(input).unwrap();
+    let json_value: serde_json::Value = serde_json::from_str(input).map_err(|e| e.to_string())?;
     let yaml_string = serde_yaml_ng::to_string(&json_value).map_err(|e| e.to_string())?;
     Ok(yaml_string)
 }
 
 pub fn yaml_to_json(input: &str) -> Result<String, String> {
-    let yaml_value: serde_yaml_ng::Value = serde_yaml_ng::from_str(input).unwrap();
+    let yaml_value: serde_yaml_ng::Value =
+        serde_yaml_ng::from_str(input).map_err(|e| e.to_string())?;
     let json_string = serde_json::to_string_pretty(&yaml_value).map_err(|e| e.to_string())?;
     Ok(json_string)
 }
 
 pub fn toml_to_json(input: &str) -> Result<String, String> {
-    let toml_value: toml::Value = toml::from_str(input).unwrap();
+    let toml_value: toml::Value = toml::from_str(input).map_err(|e| e.to_string())?;
     let json_string = serde_json::to_string_pretty(&toml_value).map_err(|e| e.to_string())?;
     Ok(json_string)
 }
 
 pub fn json_to_toml(input: &str) -> Result<String, String> {
-    let json_value: serde_json::Value = serde_json::from_str(input).unwrap();
+    let json_value: serde_json::Value = serde_json::from_str(input).map_err(|e| e.to_string())?;
     let toml_string = toml::to_string(&json_value).map_err(|e| e.to_string())?;
     Ok(toml_string)
 }
 
 pub fn yaml_to_toml(input: &str) -> Result<String, String> {
-    let yaml_value: serde_yaml_ng::Value = serde_yaml_ng::from_str(input).unwrap();
+    let yaml_value: serde_yaml_ng::Value =
+        serde_yaml_ng::from_str(input).map_err(|e| e.to_string())?;
     let toml_string = toml::to_string(&yaml_value).map_err(|e| e.to_string())?;
     Ok(toml_string)
 }
 
 pub fn toml_to_yaml(input: &str) -> Result<String, String> {
-    let toml_value: toml::Value = toml::from_str(input).unwrap();
+    let toml_value: toml::Value = toml::from_str(input).map_err(|e| e.to_string())?;
     let yaml_string = serde_yaml_ng::to_string(&toml_value).map_err(|e| e.to_string())?;
     Ok(yaml_string)
 }

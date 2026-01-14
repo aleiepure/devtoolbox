@@ -8,142 +8,122 @@ using Gtk 4.0;
 using Adw 1;
 
 template $ConfigFormatWidget: Adw.Bin {
-    Adw.ToastOverlay toast_overlay {
-        
-        child: ScrolledWindow {
-            child: Adw.Clamp {
-                vexpand: true;
-                maximum-size: 1200;
-                tightening-threshold: 600;
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
 
-                child: Box {
-                    orientation: vertical;
-                    // MARK: - Tool Title
-                    $ToolTitle {
-                        tool_id: bind template.tool_id as <string>;
-                        title: bind template.title as <string>;
-                        description: bind template.description as <string>;
-                    }
+        child: Box {
+          orientation: vertical;
+          // MARK: - Tool Title
+          $ToolTitle {
+            tool_id: bind template.tool_id as <string>;
+            title: bind template.title as <string>;
+            description: bind template.description as <string>;
+          }
 
-                    // MARK: - Tool Settings
-                    Adw.PreferencesGroup {
-                        title: _("Options");
-                        // Input Format
-                        Adw.ActionRow {
-                            title: _("Input Format");
-                            subtitle: _("Select the format of the input.");
-                            icon-name: "right";
+          // MARK: - Tool Settings
+          Adw.PreferencesGroup {
+            title: _("Options");
+            // Input Format
+            Adw.ActionRow {
+              title: _("Input Format");
+              subtitle: _("Select the format of the input.");
+              icon-name: "right";
 
-                            [suffix]
-                            Adw.ToggleGroup input_format_toggle_group {
-                                valign: center;
-                                active: 0;
-                                notify::active => $on_signal_notify_active_input_format_toggle_group() swapped;
+              [suffix]
+              Adw.ToggleGroup input_format_toggle_group {
+                valign: center;
+                active: 0;
+                notify::active => $on_signal_notify_active_input_format_toggle_group() swapped;
 
-                                Adw.Toggle {
-                                    label: "JSON";
-                                    enabled: bind $is_format_enabled_closure(
-                                        output_format_toggle_group.active,
-                                        0
-                                    ) as <bool>;
-                                }
+                Adw.Toggle {
+                  label: "JSON";
+                  enabled: bind $is_format_enabled_closure(output_format_toggle_group.active, 0) as <bool>;
+                }
 
-                                Adw.Toggle {
-                                    label: "YAML";
-                                    enabled: bind $is_format_enabled_closure(
-                                        output_format_toggle_group.active,
-                                        1
-                                    ) as <bool>;
-                                }
+                Adw.Toggle {
+                  label: "YAML";
+                  enabled: bind $is_format_enabled_closure(output_format_toggle_group.active, 1) as <bool>;
+                }
 
-                                Adw.Toggle {
-                                    label: "TOML";
-                                    enabled: bind $is_format_enabled_closure(
-                                        output_format_toggle_group.active,
-                                        2
-                                    ) as <bool>;
-                                }
-                            }
-                        }
+                Adw.Toggle {
+                  label: "TOML";
+                  enabled: bind $is_format_enabled_closure(output_format_toggle_group.active, 2) as <bool>;
+                }
+              }
+            }
 
-                        // Output Format
-                        Adw.ActionRow {
-                            title: _("Output Format");
-                            subtitle: _("Select the format of the output.");
-                            icon-name: "left";
+            // Output Format
+            Adw.ActionRow {
+              title: _("Output Format");
+              subtitle: _("Select the format of the output.");
+              icon-name: "left";
 
-                            [suffix]
-                            Adw.ToggleGroup output_format_toggle_group {
-                                valign: center;
-                                active: 1;
-                                notify::active => $on_signal_notify_active_output_format_toggle_group() swapped;
+              [suffix]
+              Adw.ToggleGroup output_format_toggle_group {
+                valign: center;
+                active: 1;
+                notify::active => $on_signal_notify_active_output_format_toggle_group() swapped;
 
-                                Adw.Toggle {
-                                    label: "JSON";
-                                    enabled: bind $is_format_enabled_closure(
-                                        input_format_toggle_group.active,
-                                        0
-                                    ) as <bool>;
-                                }
+                Adw.Toggle {
+                  label: "JSON";
+                  enabled: bind $is_format_enabled_closure(input_format_toggle_group.active, 0) as <bool>;
+                }
 
-                                Adw.Toggle {
-                                    label: "YAML";
-                                    enabled: bind $is_format_enabled_closure(
-                                        input_format_toggle_group.active,
-                                        1
-                                    ) as <bool>;
-                                }
+                Adw.Toggle {
+                  label: "YAML";
+                  enabled: bind $is_format_enabled_closure(input_format_toggle_group.active, 1) as <bool>;
+                }
 
-                                Adw.Toggle {
-                                    label: "TOML";
-                                    enabled: bind $is_format_enabled_closure(
-                                        input_format_toggle_group.active,
-                                        2
-                                    ) as <bool>;
-                                }
-                            }
-                        }
-                    }
+                Adw.Toggle {
+                  label: "TOML";
+                  enabled: bind $is_format_enabled_closure(input_format_toggle_group.active, 2) as <bool>;
+                }
+              }
+            }
+          }
 
-                    // MARK: - Tool Main Content
-                    Box {
-                        orientation: horizontal;
-                        homogeneous: true;
-                        spacing: 12;
-                        margin-bottom: 12;
+          // MARK: - Tool Main Content
+          Box {
+            orientation: horizontal;
+            homogeneous: true;
+            spacing: 12;
+            margin-bottom: 12;
+            // Input Text Area
+            $TextArea input_area {
+              title: _("Input");
+              open-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+              show-line-numbers: true;
+              highlight-syntax: true;
+              highlight-current-line: true;
+              editable: true;
+              allow-drag-and-drop: true;
+              dragging: bind template.dragging;
+              filter-text-files: true;
+              changed => $on_signal_input_area_changed() swapped;
+              error => $on_signal_input_area_error() swapped;
+              cleared => $on_signal_input_area_cleared() swapped;
+            }
 
-                        // Input Text Area
-                        $TextArea input_area {
-                            title: _("Input");
-                            open-button-visible: true;
-                            paste-button-visible: true;
-                            clear-button-visible: true;
-                            show-line-numbers: true;
-                            highlight-syntax: true;
-                            highlight-current-line: true;
-                            editable: true;
-                            allow-drag-and-drop: true;
-                            dragging: bind template.dragging;
-                            filter-text-files: true;
-                            changed => $on_signal_input_area_changed() swapped;
-                            error => $on_signal_input_area_error() swapped;
-                            cleared => $on_signal_input_area_cleared() swapped;
-                        }
-
-                        // Output Text Area
-                        $TextArea output_area {
-                            title: _("Output");
-                            copy-button-visible: true;
-                            editable: false;
-                            allow-drag-and-drop: false;
-                            show-line-numbers: true;
-                            highlight-syntax: true;
-                            highlight-current-line: false;
-                            error => $on_signal_output_area_error() swapped;
-                        }
-                    }
-                };
-            };
+            // Output Text Area
+            $TextArea output_area {
+              title: _("Output");
+              copy-button-visible: true;
+              editable: false;
+              allow-drag-and-drop: false;
+              show-line-numbers: true;
+              highlight-syntax: true;
+              highlight-current-line: false;
+              error => $on_signal_output_area_error() swapped;
+            }
+          }
         };
-    }
+      };
+    };
+  }
 }

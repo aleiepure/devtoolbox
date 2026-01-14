@@ -160,11 +160,8 @@ mod imp {
                 ConfigFormat::Json => {
                     if let Err(e) = validate_json(&input_text) {
                         self.input_area.set_error(true);
-                        self.toast_overlay.add_toast(
-                            adw::Toast::builder()
-                                .title(format!("Invalid JSON: {}", e))
-                                .build(),
-                        );
+                        self.input_area
+                            .set_error_label(format!("Invalid JSON: {}", e));
                         return;
                     } else {
                         self.input_area.set_error(false);
@@ -173,11 +170,8 @@ mod imp {
                 ConfigFormat::Yaml => {
                     if let Err(e) = validate_yaml(&input_text) {
                         self.input_area.set_error(true);
-                        self.toast_overlay.add_toast(
-                            adw::Toast::builder()
-                                .title(format!("Invalid YAML: {}", e))
-                                .build(),
-                        );
+                        self.input_area
+                            .set_error_label(format!("Invalid YAML: {}", e));
                         return;
                     } else {
                         self.input_area.set_error(false);
@@ -186,11 +180,8 @@ mod imp {
                 ConfigFormat::Toml => {
                     if let Err(e) = validate_toml(&input_text) {
                         self.input_area.set_error(true);
-                        self.toast_overlay.add_toast(
-                            adw::Toast::builder()
-                                .title(format!("Invalid TOML: {}", e))
-                                .build(),
-                        );
+                        self.input_area
+                            .set_error_label(format!("Invalid TOML: {}", e));
                         return;
                     } else {
                         self.input_area.set_error(false);
@@ -207,11 +198,8 @@ mod imp {
                     }
                     Err(e) => {
                         self.output_area.set_error(true);
-                        self.toast_overlay.add_toast(
-                            adw::Toast::builder()
-                                .title(format!("Conversion error: {}", e))
-                                .build(),
-                        );
+                        self.output_area
+                            .set_error_label(format!("Conversion error: {}", e));
                     }
                 },
                 (ConfigFormat::Json, ConfigFormat::Toml) => match json_to_toml(&input_text) {
@@ -221,11 +209,8 @@ mod imp {
                     }
                     Err(e) => {
                         self.output_area.set_error(true);
-                        self.toast_overlay.add_toast(
-                            adw::Toast::builder()
-                                .title(format!("Conversion error: {}", e))
-                                .build(),
-                        );
+                        self.output_area
+                            .set_error_label(format!("Conversion error: {}", e));
                     }
                 },
                 (ConfigFormat::Yaml, ConfigFormat::Json) => match yaml_to_json(&input_text) {
@@ -235,11 +220,8 @@ mod imp {
                     }
                     Err(e) => {
                         self.output_area.set_error(true);
-                        self.toast_overlay.add_toast(
-                            adw::Toast::builder()
-                                .title(format!("Conversion error: {}", e))
-                                .build(),
-                        );
+                        self.output_area
+                            .set_error_label(format!("Conversion error: {}", e));
                     }
                 },
                 (ConfigFormat::Yaml, ConfigFormat::Toml) => match yaml_to_toml(&input_text) {
@@ -249,11 +231,8 @@ mod imp {
                     }
                     Err(e) => {
                         self.output_area.set_error(true);
-                        self.toast_overlay.add_toast(
-                            adw::Toast::builder()
-                                .title(format!("Conversion error: {}", e))
-                                .build(),
-                        );
+                        self.output_area
+                            .set_error_label(format!("Conversion error: {}", e));
                     }
                 },
                 (ConfigFormat::Toml, ConfigFormat::Json) => match toml_to_json(&input_text) {
@@ -263,11 +242,8 @@ mod imp {
                     }
                     Err(e) => {
                         self.output_area.set_error(true);
-                        self.toast_overlay.add_toast(
-                            adw::Toast::builder()
-                                .title(format!("Conversion error: {}", e))
-                                .build(),
-                        );
+                        self.output_area
+                            .set_error_label(format!("Conversion error: {}", e));
                     }
                 },
                 (ConfigFormat::Toml, ConfigFormat::Yaml) => match toml_to_yaml(&input_text) {
@@ -277,11 +253,8 @@ mod imp {
                     }
                     Err(e) => {
                         self.output_area.set_error(true);
-                        self.toast_overlay.add_toast(
-                            adw::Toast::builder()
-                                .title(format!("Conversion error: {}", e))
-                                .build(),
-                        );
+                        self.output_area
+                            .set_error_label(format!("Conversion error: {}", e));
                     }
                 },
                 _ => {}
