@@ -53,7 +53,7 @@ macro_rules! define_tool {
         description: $description:expr,
         sidebar_title: $sidebar_title:expr,
         category: $category:expr,
-        keywords: [$($kw:literal),* $(,)?],
+        keywords: [$($kw:expr),* $(,)?],
     ) => {
         pastey::paste! {
             pub static [<$id:snake:upper _TOOL_METADATA>]: once_cell::sync::Lazy<$crate::tools::ToolMetadata> =
@@ -63,7 +63,7 @@ macro_rules! define_tool {
                     description: $description,
                     sidebar_title: $sidebar_title,
                     category: $category,
-                    keywords: &[$($kw),*],
+                    keywords: Box::leak(Box::new([$($kw),*])),
                 });
         }
     };

@@ -21,5 +21,11 @@ define_tool!(
     description: pgettext("Tool Description", "Convert configuration files between different formats"),
     sidebar_title: Some(pgettext("Tool Sidebar Title", "Configuration Format")),
     category: &ToolCategory::Converters,
-    keywords: ["config", "format", "development", "json", "yaml", "toml"] ,
+    keywords: [
+        pgettext("Keyword", "config"),
+        pgettext("Keyword", "format"),
+        pgettext("Keyword", "development"),
+        "json".to_string(),
+        "yaml".to_string(),
+        "toml".to_string()],
 );

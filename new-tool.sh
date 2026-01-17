@@ -85,7 +85,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate, Properties)]
-    #[template(resource = "/me/iepure/DevToolbox/tools/$TOOL_ID.ui")]
+    #[template(resource = "/me/iepure/Devtoolbox/tools/$TOOL_ID/$TOOL_ID.ui")]
     #[properties(wrapper_type = super::$TOOL_ID_WIDGET)]
     pub struct $TOOL_ID_WIDGET {
         // Template widgets
@@ -93,8 +93,14 @@ mod imp {
         // pub some_widget: TemplateChild<gtk::SomeWidget>,
 
         // Properties
-        // #[property(get, set, type = bool, default = true)]
-        // pub some_property: RefCell<bool>,
+        #[property(set, get, type = String)]
+        tool_id: RefCell<String>,
+
+        #[property(set, get, type = String)]
+        title: RefCell<String>,
+
+        #[property(set, get, type = String)]
+        description: RefCell<String>,
     }
 
     #[glib::object_subclass]
@@ -105,7 +111,7 @@ mod imp {
 
         fn class_init(klass: &mut Self::Class) {
             klass.bind_template();
-            klass.bind_template_callback();
+            klass.bind_template_callbacks();
         }
 
         fn instance_init(obj: &glib::subclass::InitializingObject<Self>) {
@@ -113,7 +119,7 @@ mod imp {
         }
     }
 
-    #[gtl::template_callbacks]
+    #[gtk::template_callbacks]
     impl $TOOL_ID_WIDGET {
         // Template callbacks and closures
         // #[template_callback]
@@ -137,7 +143,7 @@ mod imp {
 
 glib::wrapper! {
     pub struct $TOOL_ID_WIDGET(ObjectSubclass<imp::$TOOL_ID_WIDGET>)
-        @extends gtk::Box, adw::Bin,
+        @extends gtk::Widget, adw::Bin,
         @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget, gtk::Orientable;
 }
 

@@ -20,7 +20,7 @@ pub struct ToolMetadata {
     pub description: String,
     pub sidebar_title: Option<String>,
     pub category: &'static ToolCategory,
-    pub keywords: &'static [&'static str],
+    pub keywords: &'static [String],
 }
 
 pub static ALL_TOOLS: Lazy<Vec<&'static ToolMetadata>> = Lazy::new(|| {

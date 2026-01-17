@@ -30,6 +30,8 @@
     <file compressed="true" alias="right-symbolic.svg">../data/icons/symbolic/right-symbolic.svg</file>
     <file compressed="true" alias="left-symbolic.svg">../data/icons/symbolic/left-symbolic.svg</file>
     <file compressed="true" alias="warning-outline-symbolic.svg">../data/icons/symbolic/warning-outline-symbolic.svg</file>
+    <file compressed="true" alias="globe-symbolic.svg">../data/icons/symbolic/globe-symbolic.svg</file>
+    <file compressed="true" alias="update-symbolic.svg">../data/icons/symbolic/update-symbolic.svg</file>
 
     <!-- Tool icons -->
     <file compressed="true" alias="config_format-symbolic.svg">../data/icons/symbolic/tools/config_format-symbolic.svg</file>

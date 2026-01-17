@@ -4,28 +4,401 @@
  * Copyright (C) 2025 Alessandro Iepure
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
-
 using Gtk 4.0;
 using Adw 1;
 
 template $TimestampWidget: Adw.Bin {
-    Adw.ToastOverlay toast_overlay {
-        child: ScrolledWindow {
-            child: Adw.Clamp {
-                vexpand: true;
-                maximum-size: 1200;
-                tightening-threshold: 600;
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
 
-                child: Box {
-                    orientation: vertical;
+        child: Box {
+          orientation: vertical;
+          spacing: 12;
+          margin-bottom: 12;
+          // MARK: - Tool Title
+          $ToolTitle {
+            tool_id: bind template.tool_id as <string>;
+            title: bind template.title as <string>;
+            description: bind template.description as <string>;
+          }
 
-                    $ToolTitle {
-                        tool_id: bind template.tool_id as <string>;
-                        title: bind template.title as <string>;
-                        description: bind template.description as <string>;
-                    }
-                };
-            };
+          // MARK: - Tool Settings
+          Adw.PreferencesGroup tool_options_preferences_group {
+            title: _("Options");
+          }
+
+          // MARK: - Timestamp
+          Adw.PreferencesGroup {
+            title: _("Timestamp");
+
+            [header-suffix]
+            Box {
+              orientation: horizontal;
+              spacing: 6;
+
+              Button timestamp_now_button {
+                label: _("Now");
+                tooltip-text: _("Set current timestamp");
+                valign: center;
+                clicked => $on_signal_clicked_timestamp_now_button() swapped;
+
+                styles [
+                  "accent",
+                ]
+              }
+
+              Button timestamp_copy_button {
+                icon-name: "edit-copy";
+                tooltip-text: _("Copy current timestamp");
+                valign: center;
+                clicked => $on_signal_clicked_timestamp_copy_button() swapped;
+
+                styles [
+                  "flat",
+                ]
+              }
+
+              Button timestamp_paste_button {
+                icon-name: "edit-paste";
+                tooltip-text: _("Paste from clipboard");
+                valign: center;
+                clicked => $on_signal_clicked_timestamp_paste_button() swapped;
+
+                styles [
+                  "flat",
+                ]
+              }
+            }
+
+            Adw.SpinRow timestamp_spinrow {
+              title: _("Timestamp");
+
+              styles [
+                "property",
+              ]
+
+              adjustment: Adjustment {
+                lower: 0;
+                upper: 9223372036854775807; // Max 64-bit signed int
+                step-increment: 1;
+                page-increment: 60;
+              };
+
+              notify::value => $on_signal_notify_value_timestamp_spinrow() swapped;
+            }
+          }
+
+          // MARK: - Date & Time
+          Adw.PreferencesGroup {
+            title: _("Date &amp; Time");
+
+            [header-suffix]
+            Box {
+              orientation: horizontal;
+              spacing: 6;
+
+              Button date_now_button {
+                label: _("Now");
+                tooltip-text: _("Set current date and time");
+                valign: center;
+                clicked => $on_signal_clicked_date_now_button() swapped;
+
+                styles [
+                  "accent",
+                ]
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Date");
+
+              styles [
+                "dimmed",
+              ]
+
+              Box {
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                Adw.SpinRow day_spinrow {
+                  title: _("Day");
+                  notify::value => $on_signal_notify_value_date_spinrow() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 1;
+                    upper: 31;
+                    step-increment: 1;
+                  };
+
+                  styles [
+                    "property",
+                  ]
+                }
+
+                Adw.SpinRow month_spinrow {
+                  title: _("Month");
+                  notify::value => $on_signal_notify_value_date_spinrow() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 1;
+                    upper: 12;
+                    step-increment: 1;
+                  };
+
+                  styles [
+                    "property",
+                  ]
+                }
+
+                Adw.SpinRow year_spinrow {
+                  title: _("Year");
+                  notify::value => $on_signal_notify_value_date_spinrow() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 1970;
+                    upper: 9999;
+                    step-increment: 1;
+                  };
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+                }
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Time");
+
+              styles [
+                "dimmed",
+              ]
+
+              Box {
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                Adw.SpinRow hour_spinrow {
+                  title: _("Hour");
+                  notify::value => $on_signal_notify_value_date_spinrow() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 23;
+                    step-increment: 1;
+                  };
+
+                  styles [
+                    "property",
+                  ]
+                }
+
+                Adw.SpinRow minute_spinrow {
+                  title: _("Minute");
+                  notify::value => $on_signal_notify_value_date_spinrow() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 59;
+                    step-increment: 1;
+                  };
+
+                  styles [
+                    "property",
+                  ]
+                }
+
+                Adw.SpinRow second_spinrow {
+                  title: _("Second");
+                  notify::value => $on_signal_notify_value_date_spinrow() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 59;
+                    step-increment: 1;
+                  };
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+                }
+              }
+            }
+          }
+
+          // MARK: - Other Formats
+          Adw.PreferencesGroup {
+            title: _("Standard Formats");
+
+            Adw.EntryRow iso_entryrow {
+              title: "ISO 8601/RFC 3339";
+              editable: false;
+
+              [suffix]
+              Button iso_copy_button {
+                icon-name: "edit-copy";
+                tooltip-text: _("Copy ISO 8601/RFC 3339 date");
+                valign: center;
+                clicked => $on_signal_clicked_iso_copy_button() swapped;
+
+                styles [
+                  "flat",
+                ]
+              }
+            }
+
+            Adw.EntryRow rfc_2822_entryrow {
+              title: "RFC 2822";
+              editable: false;
+
+              [suffix]
+              Button rfc_copy_button {
+                icon-name: "edit-copy";
+                tooltip-text: _("Copy RFC 2822 date");
+                valign: center;
+                clicked => $on_signal_clicked_rfc_copy_button() swapped;
+
+                styles [
+                  "flat",
+                ]
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Short Format");
+
+              Box {
+                orientation: horizontal;
+                hexpand: true;
+                margin-start: 20;
+                halign: end;
+
+                Adw.EntryRow short_date_entryrow {
+                  title: _("Date");
+                  editable: false;
+
+                  styles [
+                    "property",
+                  ]
+
+                  [suffix]
+                  Button short_date_copy_button {
+                    icon-name: "edit-copy";
+                    tooltip-text: _("Copy Short Date");
+                    valign: center;
+                    clicked => $on_signal_clicked_short_date_copy_button() swapped;
+
+                    styles [
+                      "flat",
+                    ]
+                  }
+                }
+
+                Adw.EntryRow short_time_entryrow {
+                  title: _("Time");
+                  editable: false;
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+
+                  [suffix]
+                  Button short_time_copy_button {
+                    icon-name: "edit-copy";
+                    tooltip-text: _("Copy Short Time");
+                    valign: center;
+                    clicked => $on_signal_clicked_short_time_copy_button() swapped;
+
+                    styles [
+                      "flat",
+                    ]
+                  }
+                }
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Long Format");
+
+              Box {
+                orientation: horizontal;
+                hexpand: true;
+                margin-start: 20;
+                halign: end;
+
+                Adw.EntryRow long_date_entryrow {
+                  title: _("Date");
+                  editable: false;
+
+                  styles [
+                    "property",
+                  ]
+
+                  [suffix]
+                  Button long_date_copy_button {
+                    icon-name: "edit-copy";
+                    tooltip-text: _("Copy Long Date");
+                    valign: center;
+                    clicked => $on_signal_clicked_long_date_copy_button() swapped;
+
+                    styles [
+                      "flat",
+                    ]
+                  }
+                }
+
+                Adw.EntryRow long_time_entryrow {
+                  title: _("Time");
+                  editable: false;
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+
+                  [suffix]
+                  Button long_time_copy_button {
+                    icon-name: "edit-copy";
+                    tooltip-text: _("Copy Long Time");
+                    valign: center;
+                    clicked => $on_signal_clicked_long_time_copy_button() swapped;
+
+                    styles [
+                      "flat",
+                    ]
+                  }
+                }
+              }
+            }
+
+            Adw.EntryRow full_long_entryrow {
+              title: "Full Long Format";
+              editable: false;
+
+              [suffix]
+              Button full_long_copy_button {
+                icon-name: "edit-copy";
+                tooltip-text: _("Copy Full Long Format");
+                valign: center;
+                clicked => $on_signal_clicked_full_long_copy_button() swapped;
+
+                styles [
+                  "flat",
+                ]
+              }
+            }
+          }
         };
-    }
+      };
+    };
+  }
 }

@@ -27,32 +27,6 @@
   box-shadow: none;
 }
 
-/* .padding-left-8 {
-  padding-left: 8px;
-}
-
-.padding-5 {
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
-  padding-top: 2px;
-}
-
-.border-red {
-  border: 1px solid red;
-}
-
-.padding-20{
-  padding: 20px;
-}
-
-.color-row {
+row.last-in-row {
   margin-right: -12px;
 }
-
-dropdown, dropdown box, dropdown > entry, dropdown > button {
-  background-color: transparent;
-  box-shadow: none;
-  border: none;
-  font-weight: normal;
-} */
