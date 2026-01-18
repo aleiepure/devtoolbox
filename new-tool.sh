@@ -79,8 +79,6 @@ use gtk::{glib, glib::Properties, CompositeTemplate};
 
 use std::cell::RefCell;
 
-use crate::tools::ToolMetadata;
-
 mod imp {
     use super::*;
 
@@ -89,18 +87,15 @@ mod imp {
     #[properties(wrapper_type = super::$TOOL_ID_WIDGET)]
     pub struct $TOOL_ID_WIDGET {
         // Template widgets
-        // #[template_child]
-        // pub some_widget: TemplateChild<gtk::SomeWidget>,
+        #[template_child]
+        toast_overlay: TemplateChild<adw::ToastOverlay>,
 
-        // Properties
-        #[property(set, get, type = String)]
-        tool_id: RefCell<String>,
+        // Properties (if not needed, remove Properties derive and this section)
+        // #[property(get, set, type = bool, default = false)]
+        // example_property: RefCell<bool>,
 
-        #[property(set, get, type = String)]
-        title: RefCell<String>,
-
-        #[property(set, get, type = String)]
-        description: RefCell<String>,
+        // Other fields
+        // example_variable: RefCell<bool>,
     }
 
     #[glib::object_subclass]
@@ -123,17 +118,27 @@ mod imp {
     impl $TOOL_ID_WIDGET {
         // Template callbacks and closures
         // #[template_callback]
-        // fn is_something_closure(&self) -> bool {}
         // fn on_signal_signalname_widgetid(&self) {}
 
         // Other methods
     }
 
-    #[glib::derived_properties]
+    #[glib::derived_properties] // Remove this line if no properties
     impl ObjectImpl for $TOOL_ID_WIDGET {
         fn constructed(&self) {
             self.parent_constructed();
             // Initialization code here, delete whole function if not needed
+        }
+
+        // Delete this whole block if not defining custom signals
+        fn signals() -> &'static [glib::subclass::Signal] {
+            static SIGNALS: &[glib::subclass::Signal] = &[
+                // Define signals here
+                // glib::subclass::Signal::builder("signal-name")
+                //     .param_types(&[])
+                //     .build(),
+            ];
+            SIGNALS
         }
     }
     
@@ -148,12 +153,8 @@ glib::wrapper! {
 }
 
 impl $TOOL_ID_WIDGET {
-    pub fn new(metadata: &ToolMetadata) -> Self {
-        glib::Object::builder()
-            .property("tool-id", metadata.id)
-            .property("title", metadata.title.clone())
-            .property("description", metadata.description.clone())
-            .build()
+    pub fn new() -> Self {
+        glib::Object::builder().build()
     }
 }
 EOF
@@ -180,13 +181,9 @@ template \$$TOOL_ID_WIDGET : Adw.Bin {
 
         child: Box {
           orientation: vertical;
-          
-          // MARK: - Tool Title
-          \$ToolTitle {
-            tool_id: bind template.tool_id as <string>;
-            title: bind template.title as <string>;
-            description: bind template.description as <string>;
-          }
+          spacing: 24;
+          margin-bottom: 12;
+          margin-top: 12;
 
           // MARK: - Tool Settings
           Adw.PreferencesGroup {
@@ -196,42 +193,11 @@ template \$$TOOL_ID_WIDGET : Adw.Bin {
           }
 
           // MARK: - Tool Main Content
-          // Box {
-          //   orientation: horizontal;
-          //   homogeneous: true;
-          //   spacing: 12;
-          //   margin-bottom: 12;
-          //
-          //  // Input Text Area
-          //  $TextArea input_area {
-          //    title: _("Input");
-          //    open-button-visible: true;
-          //    paste-button-visible: true;
-          //    clear-button-visible: true;
-          //    show-line-numbers: true;
-          //    highlight-syntax: true;
-          //    highlight-current-line: true;
-          //    editable: true;
-          //    allow-drag-and-drop: true;
-          //    dragging: bind template.dragging;
-          //    filter-text-files: true;
-          //    changed => $on_signal_input_area_changed() swapped;
-          //    error => $on_signal_input_area_error() swapped;
-          //    cleared => $on_signal_input_area_cleared() swapped;
-          //  }
-
-           // // Output Text Area
-           // $TextArea output_area {
-           //   title: _("Output");
-           //   copy-button-visible: true;
-           //   editable: false;
-           //   allow-drag-and-drop: false;
-           //   show-line-numbers: true;
-           //   highlight-syntax: true;
-           //   highlight-current-line: false;
-           //   error => $on_signal_output_area_error() swapped;
-           // }
-          // }
+          Box {
+            Label {
+              label: "Replace this box/label with the tool main content.";
+            }
+          }
         };
       };
     };
@@ -296,6 +262,17 @@ if ! grep -q "<choice value='${TOOL_ID}'/>" "$GSETTINGS"; then
     }" "$GSETTINGS"
 fi
 echo "$GSETTINGS: file updated."
+
+# MARK: Update src/core/window.rs
+WINDOW_RS="src/core/window.rs"
+
+if ! grep -q "\"${TOOL_ID}\"" "$WINDOW_RS"; then
+    # Find the last tool case in the match statement and add before the _ => panic line
+    sed -i "/fn create_tool_view/,/_ => {$/ {
+        /_ => {$/i\                \"${TOOL_ID}\" => {\n                    use crate::tools::${TOOL_ID}::${TOOL_ID_WIDGET};\n                    ${TOOL_ID_WIDGET}::new().upcast()\n                }
+    }" "$WINDOW_RS"
+fi
+echo "$WINDOW_RS: file updated."
 
 echo ""
 echo "Boilerplate creation for tool '$TOOL_ID' completed."

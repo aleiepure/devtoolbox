@@ -11,8 +11,6 @@ use gtk::{gdk, glib, glib::Properties, CompositeTemplate};
 
 use std::cell::RefCell;
 
-use crate::tools::ToolMetadata;
-
 use crate::core::widgets::text_area::TextArea;
 use crate::tools::config_format::convertion::{
     json_to_toml, json_to_yaml, toml_to_json, toml_to_yaml, validate_json, validate_toml,

@@ -11,8 +11,6 @@ use gtk::{gdk, glib, glib::Properties, CompositeTemplate};
 
 use std::cell::{OnceCell, RefCell};
 
-use crate::tools::ToolMetadata;
-
 use adw::prelude::PreferencesGroupExt;
 use chrono_tz::TZ_VARIANTS;
 use gettextrs::gettext;
