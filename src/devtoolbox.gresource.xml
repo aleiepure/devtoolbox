@@ -12,7 +12,6 @@
     <file alias="style-dark.css">../data/css/style-dark.css</file>
 
     <!-- Widgets -->
-    <file>core/widgets/tool_title/tool_title.ui</file>
     <file>core/widgets/text_area/text_area.ui</file>
 
     <!-- Tools -->
@@ -25,8 +24,8 @@
     <!-- UI icons -->
     <file compressed="true" alias="loupe-symbolic.svg">../data/icons/symbolic/loupe-symbolic.svg</file>
     <file compressed="true" alias="sidebar-symbolic.svg">../data/icons/symbolic/sidebar-symbolic.svg</file>
-    <file compressed="true" alias="star-filled-rounded-symbolic.svg">../data/icons/symbolic/star-filled-rounded-symbolic.svg</file>
-    <file compressed="true" alias="star-outline-rounded-symbolic.svg">../data/icons/symbolic/star-outline-rounded-symbolic.svg</file>
+    <file compressed="true" alias="star-new-symbolic.svg">../data/icons/symbolic/star-new-symbolic.svg</file>
+    <file compressed="true" alias="star-delete-symbolic.svg">../data/icons/symbolic/star-delete-symbolic.svg</file>
     <file compressed="true" alias="right-symbolic.svg">../data/icons/symbolic/right-symbolic.svg</file>
     <file compressed="true" alias="left-symbolic.svg">../data/icons/symbolic/left-symbolic.svg</file>
     <file compressed="true" alias="warning-outline-symbolic.svg">../data/icons/symbolic/warning-outline-symbolic.svg</file>

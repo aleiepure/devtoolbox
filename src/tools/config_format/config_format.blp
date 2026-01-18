@@ -17,16 +17,14 @@ template $ConfigFormatWidget: Adw.Bin {
 
         child: Box {
           orientation: vertical;
-          // MARK: - Tool Title
-          $ToolTitle {
-            tool_id: bind template.tool_id as <string>;
-            title: bind template.title as <string>;
-            description: bind template.description as <string>;
-          }
+          spacing: 24;
+          margin-bottom: 12;
+          margin-top: 12;
 
           // MARK: - Tool Settings
           Adw.PreferencesGroup {
             title: _("Options");
+
             // Input Format
             Adw.ActionRow {
               title: _("Input Format");

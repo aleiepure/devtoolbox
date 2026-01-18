@@ -9,7 +9,7 @@ src/core/ui/shortcuts-dialog.blp
 src/core/ui/window.blp
 src/core/widgets/text_area/text_area.blp
 src/core/widgets/text_area/text_area.rs
-src/core/widgets/tool_title/tool_title.blp
+src/core/window.rs
 src/tools/config_format/config_format.blp
 src/tools/config_format/mod.rs
 src/tools/macros.rs

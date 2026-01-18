@@ -9,7 +9,7 @@ mod core;
 mod tools;
 
 use core::application::DevtoolboxApplication;
-use core::widgets::{TextArea, ToolTitle};
+use core::widgets::TextArea;
 use core::window::DevtoolboxWindow;
 
 use config::{GETTEXT_PACKAGE, LOCALEDIR, PKGDATADIR};
@@ -30,7 +30,6 @@ fn main() -> glib::ExitCode {
     gio::resources_register(&resources);
 
     // Register custom widgets
-    ToolTitle::ensure_type();
     TextArea::ensure_type();
 
     // Create a new GtkApplication. The application manages our main loop,

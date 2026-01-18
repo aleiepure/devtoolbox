@@ -6,7 +6,5 @@
 */
 
 pub mod text_area;
-pub mod tool_title;
 
 pub use text_area::TextArea;
-pub use tool_title::ToolTitle;

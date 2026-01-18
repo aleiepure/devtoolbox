@@ -56,56 +56,66 @@ Adw.ToolbarView sidebar_content {
     }
 
     [end]
-    MenuButton fav_menu_button {
-      icon-name: "starred";
-      tooltip-text: _("Favorite Tools");
+    Box {
+      orientation: horizontal;
 
-      popover: Popover {
-        child: Adw.ViewStack favorite_view_stack {
-          width-request: 300;
+      MenuButton fav_menu_button {
+        icon-name: "starred";
+        tooltip-text: _("Favorite Tools");
 
-          Adw.ViewStackPage {
-            name: "empty";
+        popover: Popover {
+          child: Adw.ViewStack favorite_view_stack {
+            width-request: 300;
 
-            child: Adw.StatusPage {
-              title: _("No Favorite Tools");
-              description: _("Add your favorite tools here by clicking the star button beside the title");
-              icon-name: "star-filled-rounded";
-            };
-          }
+            Adw.ViewStackPage {
+              name: "empty";
 
-          Adw.ViewStackPage {
-            name: "favorites";
+              child: Adw.StatusPage {
+                title: _("No Favorite Tools");
+                description: _("Add your favorite tools here by clicking the star button beside the title");
+                icon-name: "star-filled-rounded";
+              };
+            }
 
-            child: Box {
-              orientation: vertical;
-              spacing: 6;
+            Adw.ViewStackPage {
+              name: "favorites";
 
-              Label {
-                margin-top: 6;
-                label: _("Favorite Tools");
+              child: Box {
+                orientation: vertical;
+                spacing: 6;
 
-                styles [
-                  "title-4",
-                ]
-              }
+                Label {
+                  margin-top: 6;
+                  label: _("Favorite Tools");
 
-              ScrolledWindow {
-                vexpand: true;
-
-                child: ListBox favorite_listbox {
                   styles [
-                    "navigation-sidebar",
+                    "title-4",
                   ]
+                }
 
-                  selection-mode: single;
-                  row-activated => $on_signal_row_activated_favorite_listbox();
-                };
-              }
-            };
-          }
+                ScrolledWindow {
+                  vexpand: true;
+
+                  child: ListBox favorite_listbox {
+                    styles [
+                      "navigation-sidebar",
+                    ]
+
+                    selection-mode: single;
+                    row-activated => $on_signal_row_activated_favorite_listbox();
+                  };
+                }
+              };
+            }
+          };
         };
-      };
+      }
+
+      MenuButton menu_button {
+        icon-name: "open-menu";
+        tooltip-text: _("Open Menu");
+        menu-model: primary_menu;
+      }
     }
   }
 
@@ -140,28 +150,24 @@ Adw.ToolbarView sidebar_content {
 // MARK: Tool content
 Adw.ToolbarView tool_content {
   [top]
-  Adw.HeaderBar {
-    show-title: false;
-
+  Adw.HeaderBar content_header_bar {
     [start]
     ToggleButton toggle_sidebar_button {
       icon-name: "sidebar";
-      tooltip-text: _("Show/Hide Sidebar");
+      tooltip-text: _("Toggle Sidebar");
     }
 
     [start]
     Button show_sidebar_button {
       visible: false;
       icon-name: "sidebar";
-      tooltip-text: _("Show Sidebar");
+      tooltip-text: _("Open Sidebar");
       clicked => $on_signal_clicked_show_sidebar_button();
     }
 
     [end]
-    MenuButton menu_button {
-      icon-name: "open-menu";
-      tooltip-text: _("Open Menu");
-      menu-model: primary_menu;
+    Button mark_favorite_button {
+      clicked => $on_signal_clicked_mark_favorite_button() swapped;
     }
   }
 

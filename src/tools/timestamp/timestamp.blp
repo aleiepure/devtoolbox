@@ -17,14 +17,9 @@ template $TimestampWidget: Adw.Bin {
 
         child: Box {
           orientation: vertical;
-          spacing: 12;
+          spacing: 24;
           margin-bottom: 12;
-          // MARK: - Tool Title
-          $ToolTitle {
-            tool_id: bind template.tool_id as <string>;
-            title: bind template.title as <string>;
-            description: bind template.description as <string>;
-          }
+          margin-top: 12;
 
           // MARK: - Tool Settings
           Adw.PreferencesGroup tool_options_preferences_group {
@@ -116,10 +111,6 @@ template $TimestampWidget: Adw.Bin {
             Adw.ActionRow {
               title: _("Date");
 
-              styles [
-                "dimmed",
-              ]
-
               Box {
                 margin-start: 20;
                 homogeneous: true;
@@ -175,10 +166,6 @@ template $TimestampWidget: Adw.Bin {
 
             Adw.ActionRow {
               title: _("Time");
-
-              styles [
-                "dimmed",
-              ]
 
               Box {
                 margin-start: 20;
@@ -275,6 +262,10 @@ template $TimestampWidget: Adw.Bin {
             Adw.ActionRow {
               title: _("Short Format");
 
+              styles [
+                "property",
+              ]
+
               Box {
                 orientation: horizontal;
                 hexpand: true;
@@ -328,6 +319,10 @@ template $TimestampWidget: Adw.Bin {
 
             Adw.ActionRow {
               title: _("Long Format");
+
+              styles [
+                "property",
+              ]
 
               Box {
                 orientation: horizontal;

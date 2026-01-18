@@ -404,11 +404,7 @@ glib::wrapper! {
 }
 
 impl TimestampWidget {
-    pub fn new(metadata: &ToolMetadata) -> Self {
-        glib::Object::builder()
-            .property("tool-id", metadata.id)
-            .property("title", metadata.title.clone())
-            .property("description", metadata.description.clone())
-            .build()
+    pub fn new() -> Self {
+        glib::Object::builder().build()
     }
 }

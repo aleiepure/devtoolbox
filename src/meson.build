@@ -53,7 +53,6 @@ blueprint_files = files(
   'core/ui/window.blp',
   'core/ui/about-dialog.blp',
 
-  'core/widgets/tool_title/tool_title.blp',
   'core/widgets/text_area/text_area.blp',
 
   'tools/config_format/config_format.blp',

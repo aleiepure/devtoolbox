@@ -1,9 +1,0 @@
-/*
- * mod.rs
- *
- * Copyright (C) 2025 Alessandro Iepure
- * SPDX-License-Identifier: GPL-3.0-or-later
-*/
-
-mod tool_title;
-pub use tool_title::ToolTitle;

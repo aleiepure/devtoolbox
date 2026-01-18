@@ -9,6 +9,7 @@ use gtk::prelude::*;
 use gtk::{gio, glib, CompositeTemplate};
 
 mod imp {
+    use gettextrs::gettext;
     use gtk::gio::Settings;
     use std::cell::RefCell;
     use std::collections::HashMap;
@@ -23,20 +24,27 @@ mod imp {
     pub struct DevtoolboxWindow {
         // Template widgets
         #[template_child]
-        pub overlay_split_view: TemplateChild<adw::OverlaySplitView>,
+        overlay_split_view: TemplateChild<adw::OverlaySplitView>,
 
         #[template_child]
-        pub toggle_sidebar_button: TemplateChild<gtk::ToggleButton>,
+        content_header_bar: TemplateChild<adw::HeaderBar>,
 
         #[template_child]
-        pub menu_button: TemplateChild<gtk::MenuButton>,
+        toggle_sidebar_button: TemplateChild<gtk::ToggleButton>,
 
         #[template_child]
-        pub sidebar_listbox: TemplateChild<gtk::ListBox>,
+        menu_button: TemplateChild<gtk::MenuButton>,
 
         #[template_child]
-        pub content_view_stack: TemplateChild<adw::ViewStack>,
+        sidebar_listbox: TemplateChild<gtk::ListBox>,
 
+        #[template_child]
+        mark_favorite_button: TemplateChild<gtk::Button>,
+
+        #[template_child]
+        content_view_stack: TemplateChild<adw::ViewStack>,
+
+        // Other fields
         loaded_tools: RefCell<HashMap<String, gtk::Widget>>,
     }
 
@@ -98,6 +106,39 @@ mod imp {
             window.imp().overlay_split_view.set_show_sidebar(true);
         }
 
+        #[template_callback]
+        fn on_signal_clicked_mark_favorite_button(&self) {
+            let settings = Settings::new(APP_ID);
+            let mut favorites = settings.strv("favorite-tools");
+
+            // Get the current tool ID from the visible child in the stack
+            let Some(tool_id) = self.content_view_stack.visible_child_name() else {
+                return;
+            };
+            let tool_id = tool_id.as_str();
+
+            if favorites.contains(tool_id) {
+                // Remove from favorites
+                let index = favorites.iter().position(|id| id == tool_id).unwrap();
+                favorites.remove(index);
+                settings.set_strv("favorite-tools", &favorites).unwrap();
+
+                // Update button
+                self.mark_favorite_button.set_icon_name("star-new");
+                self.mark_favorite_button
+                    .set_tooltip_text(Some(&gettext("Add to Favorites")));
+            } else {
+                // Add to favorites
+                favorites.push(tool_id.into());
+                settings.set_strv("favorite-tools", &favorites).unwrap();
+
+                // Update button
+                self.mark_favorite_button.set_icon_name("star-delete");
+                self.mark_favorite_button
+                    .set_tooltip_text(Some(&gettext("Remove from Favorites")));
+            }
+        }
+
         fn load_and_show_tool(&self, tool_id: &str) {
             let mut loaded_tools = self.loaded_tools.borrow_mut();
 
@@ -116,6 +157,31 @@ mod imp {
                 }
             }
 
+            // Update header bar title
+            if let Some(metadata) = all_tools().find(|t| t.id == tool_id) {
+                let title_widget = adw::WindowTitle::builder()
+                    .title(&metadata.title)
+                    .subtitle(&metadata.description)
+                    .build();
+                self.content_header_bar
+                    .set_title_widget(Some(&title_widget));
+            }
+
+            // Update favorite button state
+            let settings = Settings::new(APP_ID);
+            if settings
+                .strv("favorite-tools")
+                .contains(&tool_id.to_string())
+            {
+                self.mark_favorite_button.set_icon_name("star-delete");
+                self.mark_favorite_button
+                    .set_tooltip_text(Some(&gettext("Remove from Favorites")));
+            } else {
+                self.mark_favorite_button.set_icon_name("star-new");
+                self.mark_favorite_button
+                    .set_tooltip_text(Some(&gettext("Add to Favorites")));
+            }
+
             // Show the tool
             self.content_view_stack.set_visible_child_name(tool_id);
 
@@ -131,11 +197,11 @@ mod imp {
             let tool = match metadata.id {
                 "config_format" => {
                     use crate::tools::config_format::ConfigFormatWidget;
-                    ConfigFormatWidget::new(metadata).upcast()
+                    ConfigFormatWidget::new().upcast()
                 }
                 "timestamp" => {
                     use crate::tools::timestamp::TimestampWidget;
-                    TimestampWidget::new(metadata).upcast()
+                    TimestampWidget::new().upcast()
                 }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
