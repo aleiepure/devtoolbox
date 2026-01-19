@@ -14,6 +14,8 @@ src/core/window.rs
 src/tools/config_format/config_format.blp
 src/tools/config_format/mod.rs
 src/tools/macros.rs
+src/tools/number_bases/mod.rs
+src/tools/number_bases/number_bases.blp
 src/tools/timestamp/mod.rs
 src/tools/timestamp/timestamp.blp
 src/tools/timestamp/timestamp.rs

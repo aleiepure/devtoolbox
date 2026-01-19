@@ -1,0 +1,78 @@
+/*
+ * number_bases.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $NumberBasesWidget : Adw.Bin {
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+          spacing: 24;
+          margin-bottom: 12;
+          margin-top: 12;
+
+          // MARK: - Main Content
+          Adw.PreferencesGroup {
+            $ActionableEntryRow decimal_entryrow {
+              title: _("Decimal");
+              input-purpose: number;
+              text: "0";
+              copy-button-visible: true;
+              clear-button-visible: true;
+            }
+
+            $ActionableEntryRow binary_entryrow {
+              title: _("Binary");
+              input-purpose: number;
+              text: "0";
+              copy-button-visible: true;
+              clear-button-visible: true;
+            }
+
+            $ActionableEntryRow octal_entryrow {
+              title: _("Octal");
+              input-purpose: number;
+              text: "0";
+              copy-button-visible: true;
+              clear-button-visible: true;
+            }
+
+            $ActionableEntryRow hexadecimal_entryrow {
+              title: _("Hexadecimal");
+              input-purpose: number;
+              text: "0";
+              copy-button-visible: true;
+              clear-button-visible: true;
+            }
+
+            $ActionableEntryRow ascii_entryrow {
+              title: "ASCII";
+              input-purpose: alpha;
+              max-length: 1;
+              copy-button-visible: true;
+              clear-button-visible: true;
+            }
+
+            $ActionableEntryRow utf8_entryrow {
+              title: "UTF-8";
+              input-purpose: alpha;
+              max-length: 1;
+              copy-button-visible: true;
+              clear-button-visible: true;
+            }
+          }
+        };
+      };
+    };
+  }
+}

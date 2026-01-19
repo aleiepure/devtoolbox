@@ -58,6 +58,7 @@ blueprint_files = files(
 
   'tools/config_format/config_format.blp',
   'tools/timestamp/timestamp.blp',
+  'tools/number_bases/number_bases.blp',
 )
 
 compile_blueprint = custom_target('blueprints',

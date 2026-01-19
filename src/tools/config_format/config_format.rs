@@ -12,7 +12,7 @@ use gtk::{gdk, glib, glib::Properties, CompositeTemplate};
 use std::cell::RefCell;
 
 use crate::core::widgets::text_area::TextArea;
-use crate::tools::config_format::convertion::{
+use crate::tools::config_format::conversion::{
     json_to_toml, json_to_yaml, toml_to_json, toml_to_yaml, validate_json, validate_toml,
     validate_yaml, yaml_to_json, yaml_to_toml, ConfigFormat,
 };

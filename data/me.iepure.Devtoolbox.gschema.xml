@@ -25,6 +25,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
 			<choices>
 				<choice value="config_format" />
 				<choice value="timestamp" />
+                <choice value="number_bases"/>
 			</choices>
 			<summary>Last used tool</summary>
 			<default>"config_format"</default>

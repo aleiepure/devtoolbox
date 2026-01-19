@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="16px"
+   viewBox="0 0 16 16"
+   width="16px"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="number_bases-symbolic.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="50"
+     inkscape:cx="8.64"
+     inkscape:cy="7.72"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     id="g3"
+     transform="translate(0.217349,0.5899996)">
+    <text
+       xml:space="preserve"
+       style="font-size:10.6667px;writing-mode:lr-tb;direction:ltr;fill:#000000"
+       x="-0.33467942"
+       y="8.662693"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="-0.33467942"
+         y="8.662693"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:10.6667px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold'">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:10.6667px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';writing-mode:lr-tb;direction:ltr;fill:#000000"
+       x="9.8839712"
+       y="13.453331"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         x="9.8839712"
+         y="13.453331">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:10.6667px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';writing-mode:lr-tb;direction:ltr;fill:#000000"
+       x="4.2146683"
+       y="10.754681"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         x="4.2146683"
+         y="10.754681">2</tspan></text>
+  </g>
+</svg>

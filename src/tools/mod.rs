@@ -7,6 +7,7 @@
 
 pub mod config_format;
 pub mod macros;
+pub mod number_bases;
 pub mod timestamp;
 
 use once_cell::sync::Lazy;
@@ -27,6 +28,7 @@ pub static ALL_TOOLS: Lazy<Vec<&'static ToolMetadata>> = Lazy::new(|| {
     vec![
         &config_format::CONFIG_FORMAT_TOOL_METADATA,
         &timestamp::TIMESTAMP_TOOL_METADATA,
+        &number_bases::NUMBER_BASES_TOOL_METADATA,
     ] // TODO: add new tools here
 });
 

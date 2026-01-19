@@ -203,6 +203,10 @@ mod imp {
                     use crate::tools::timestamp::TimestampWidget;
                     TimestampWidget::new().upcast()
                 }
+                "number_bases" => {
+                    use crate::tools::number_bases::NumberBasesWidget;
+                    NumberBasesWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }
