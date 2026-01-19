@@ -16,7 +16,7 @@ template $ActionableEntryRow: Adw.EntryRow {
 
         Button generate_button {
             icon-name: "update";
-            tooltip-text: "Generate";
+            tooltip-text: _("Generate");
             valign: center;
             visible: bind template.generate-button-visible;
             clicked => $on_signal_clicked_generate_button() swapped;
@@ -26,7 +26,7 @@ template $ActionableEntryRow: Adw.EntryRow {
 
         Button copy_button {
             icon-name: "edit-copy";
-            tooltip-text: "Copy to Clipboard";
+            tooltip-text: _("Copy to Clipboard");
             valign: center;
             visible: bind template.copy-button-visible;
             clicked => $on_signal_clicked_copy_button() swapped;
@@ -36,7 +36,7 @@ template $ActionableEntryRow: Adw.EntryRow {
 
         Button paste_button {
             icon-name: "edit-paste";
-            tooltip-text: "Paste from Clipboard";
+            tooltip-text: _("Paste from Clipboard");
             valign: center;
             visible: bind template.paste-button-visible;
             clicked => $on_signal_clicked_paste_button() swapped;
@@ -46,7 +46,7 @@ template $ActionableEntryRow: Adw.EntryRow {
 
         Button clear_button {
             icon-name: "edit-clear";
-            tooltip-text: "Clear Field";
+            tooltip-text: _("Clear Field");
             valign: center;
             visible: bind template.clear-button-visible;
             clicked => $on_signal_clicked_clear_button() swapped;
