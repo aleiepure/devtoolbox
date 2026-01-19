@@ -218,55 +218,6 @@ mod imp {
             }
         }
 
-        #[template_callback]
-        fn on_signal_clicked_iso_copy_button(&self) {
-            let text = self.iso_entryrow.text();
-            let clipboard = gdk::Display::default().unwrap().clipboard();
-            clipboard.set_text(&text);
-        }
-
-        #[template_callback]
-        fn on_signal_clicked_rfc_copy_button(&self) {
-            let text = self.rfc_2822_entryrow.text();
-            let clipboard = gdk::Display::default().unwrap().clipboard();
-            clipboard.set_text(&text);
-        }
-
-        #[template_callback]
-        fn on_signal_clicked_short_date_copy_button(&self) {
-            let text = self.short_date_entryrow.text();
-            let clipboard = gdk::Display::default().unwrap().clipboard();
-            clipboard.set_text(&text);
-        }
-
-        #[template_callback]
-        fn on_signal_clicked_short_time_copy_button(&self) {
-            let text = self.short_time_entryrow.text();
-            let clipboard = gdk::Display::default().unwrap().clipboard();
-            clipboard.set_text(&text);
-        }
-
-        #[template_callback]
-        fn on_signal_clicked_long_date_copy_button(&self) {
-            let text = self.long_date_entryrow.text();
-            let clipboard = gdk::Display::default().unwrap().clipboard();
-            clipboard.set_text(&text);
-        }
-
-        #[template_callback]
-        fn on_signal_clicked_long_time_copy_button(&self) {
-            let text = self.long_time_entryrow.text();
-            let clipboard = gdk::Display::default().unwrap().clipboard();
-            clipboard.set_text(&text);
-        }
-
-        #[template_callback]
-        fn on_signal_clicked_full_long_copy_button(&self) {
-            let text = self.full_long_entryrow.text();
-            let clipboard = gdk::Display::default().unwrap().clipboard();
-            clipboard.set_text(&text);
-        }
-
         // Other methods
         /// Build the timezone ComboRow. This is done programmatically to
         /// populate the list with all available timezones from chrono-tz.

@@ -20,7 +20,6 @@ template $TimestampWidget: Adw.Bin {
           spacing: 24;
           margin-bottom: 12;
           margin-top: 12;
-
           // MARK: - Tool Settings
           Adw.PreferencesGroup tool_options_preferences_group {
             title: _("Options");
@@ -225,38 +224,16 @@ template $TimestampWidget: Adw.Bin {
           Adw.PreferencesGroup {
             title: _("Standard Formats");
 
-            Adw.EntryRow iso_entryrow {
+            $ActionableEntryRow iso_entryrow {
               title: "ISO 8601/RFC 3339";
               editable: false;
-
-              [suffix]
-              Button iso_copy_button {
-                icon-name: "edit-copy";
-                tooltip-text: _("Copy ISO 8601/RFC 3339 date");
-                valign: center;
-                clicked => $on_signal_clicked_iso_copy_button() swapped;
-
-                styles [
-                  "flat",
-                ]
-              }
+              copy-button-visible: true;
             }
 
-            Adw.EntryRow rfc_2822_entryrow {
+            $ActionableEntryRow rfc_2822_entryrow {
               title: "RFC 2822";
               editable: false;
-
-              [suffix]
-              Button rfc_copy_button {
-                icon-name: "edit-copy";
-                tooltip-text: _("Copy RFC 2822 date");
-                valign: center;
-                clicked => $on_signal_clicked_rfc_copy_button() swapped;
-
-                styles [
-                  "flat",
-                ]
-              }
+              copy-button-visible: true;
             }
 
             Adw.ActionRow {
@@ -272,47 +249,25 @@ template $TimestampWidget: Adw.Bin {
                 margin-start: 20;
                 halign: end;
 
-                Adw.EntryRow short_date_entryrow {
+                $ActionableEntryRow short_date_entryrow {
                   title: _("Date");
                   editable: false;
+                  copy-button-visible: true;
 
                   styles [
                     "property",
                   ]
-
-                  [suffix]
-                  Button short_date_copy_button {
-                    icon-name: "edit-copy";
-                    tooltip-text: _("Copy Short Date");
-                    valign: center;
-                    clicked => $on_signal_clicked_short_date_copy_button() swapped;
-
-                    styles [
-                      "flat",
-                    ]
-                  }
                 }
 
-                Adw.EntryRow short_time_entryrow {
+                $ActionableEntryRow short_time_entryrow {
                   title: _("Time");
                   editable: false;
+                  copy-button-visible: true;
 
                   styles [
                     "property",
                     "last-in-row",
                   ]
-
-                  [suffix]
-                  Button short_time_copy_button {
-                    icon-name: "edit-copy";
-                    tooltip-text: _("Copy Short Time");
-                    valign: center;
-                    clicked => $on_signal_clicked_short_time_copy_button() swapped;
-
-                    styles [
-                      "flat",
-                    ]
-                  }
                 }
               }
             }
@@ -330,66 +285,37 @@ template $TimestampWidget: Adw.Bin {
                 margin-start: 20;
                 halign: end;
 
-                Adw.EntryRow long_date_entryrow {
+                $ActionableEntryRow long_date_entryrow {
                   title: _("Date");
                   editable: false;
+                  copy-button-visible: true;
 
                   styles [
                     "property",
                   ]
-
-                  [suffix]
-                  Button long_date_copy_button {
-                    icon-name: "edit-copy";
-                    tooltip-text: _("Copy Long Date");
-                    valign: center;
-                    clicked => $on_signal_clicked_long_date_copy_button() swapped;
-
-                    styles [
-                      "flat",
-                    ]
-                  }
                 }
 
-                Adw.EntryRow long_time_entryrow {
+                $ActionableEntryRow long_time_entryrow {
                   title: _("Time");
                   editable: false;
+                  copy-button-visible: true;
 
                   styles [
                     "property",
                     "last-in-row",
                   ]
-
-                  [suffix]
-                  Button long_time_copy_button {
-                    icon-name: "edit-copy";
-                    tooltip-text: _("Copy Long Time");
-                    valign: center;
-                    clicked => $on_signal_clicked_long_time_copy_button() swapped;
-
-                    styles [
-                      "flat",
-                    ]
-                  }
                 }
               }
             }
 
-            Adw.EntryRow full_long_entryrow {
+            $ActionableEntryRow full_long_entryrow {
               title: "Full Long Format";
               editable: false;
+              copy-button-visible: true;
 
-              [suffix]
-              Button full_long_copy_button {
-                icon-name: "edit-copy";
-                tooltip-text: _("Copy Full Long Format");
-                valign: center;
-                clicked => $on_signal_clicked_full_long_copy_button() swapped;
-
-                styles [
-                  "flat",
-                ]
-              }
+              styles [
+                "property",
+              ]
             }
           }
         };

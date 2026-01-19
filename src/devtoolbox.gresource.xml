@@ -13,6 +13,7 @@
 
     <!-- Widgets -->
     <file>core/widgets/text_area/text_area.ui</file>
+    <file>core/widgets/actionable_entryrow/actionable_entryrow.ui</file>
 
     <!-- Tools -->
     <file>tools/config_format/config_format.ui</file>

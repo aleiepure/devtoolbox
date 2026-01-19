@@ -1,0 +1,58 @@
+/*
+ * text_area.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $ActionableEntryRow: Adw.EntryRow {
+    [suffix]
+    Box {
+        orientation: horizontal;
+
+        styles ["linked"]
+
+        Button generate_button {
+            icon-name: "update";
+            tooltip-text: "Generate";
+            valign: center;
+            visible: bind template.generate-button-visible;
+            clicked => $on_signal_clicked_generate_button() swapped;
+
+            styles ["flat"]
+        }
+
+        Button copy_button {
+            icon-name: "edit-copy";
+            tooltip-text: "Copy to Clipboard";
+            valign: center;
+            visible: bind template.copy-button-visible;
+            clicked => $on_signal_clicked_copy_button() swapped;
+
+            styles ["flat"]
+        }
+
+        Button paste_button {
+            icon-name: "edit-paste";
+            tooltip-text: "Paste from Clipboard";
+            valign: center;
+            visible: bind template.paste-button-visible;
+            clicked => $on_signal_clicked_paste_button() swapped;
+
+            styles ["flat"]
+        }
+
+        Button clear_button {
+            icon-name: "edit-clear";
+            tooltip-text: "Clear Field";
+            valign: center;
+            visible: bind template.clear-button-visible;
+            clicked => $on_signal_clicked_clear_button() swapped;
+
+            styles ["flat"]
+        }
+    }
+
+}

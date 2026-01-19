@@ -59,7 +59,7 @@ define_tool!(
     description: pgettext("Tool Description", ""), // TODO: add description
     sidebar_title: None, // Some(pgettext("Tool Sidebar Title", "")),
     category: &ToolCategory::Converters, // TODO: Change as needed
-    keywords: [""], // TODO: add keywords
+    keywords: ["".to_string()], // TODO: add keywords
 );
 EOF
 echo "$TOOL_DIR/mod.rs: file created."

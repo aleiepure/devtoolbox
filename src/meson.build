@@ -54,6 +54,7 @@ blueprint_files = files(
   'core/ui/about-dialog.blp',
 
   'core/widgets/text_area/text_area.blp',
+  'core/widgets/actionable_entryrow/actionable_entryrow.blp',
 
   'tools/config_format/config_format.blp',
   'tools/timestamp/timestamp.blp',

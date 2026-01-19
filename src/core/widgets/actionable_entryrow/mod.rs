@@ -5,8 +5,5 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
-pub mod actionable_entryrow;
-pub mod text_area;
-
+mod actionable_entryrow;
 pub use actionable_entryrow::ActionableEntryRow;
-pub use text_area::TextArea;
