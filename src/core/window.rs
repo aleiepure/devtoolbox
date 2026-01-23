@@ -207,6 +207,10 @@ mod imp {
                     use crate::tools::number_bases::NumberBasesWidget;
                     NumberBasesWidget::new().upcast()
                 }
+                "cron_parser" => {
+                    use crate::tools::cron_parser::CronParserWidget;
+                    CronParserWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

@@ -1,0 +1,535 @@
+/*
+ * cron_parser.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $CronParserWidget: Adw.Bin {
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+          spacing: 24;
+          margin-bottom: 12;
+          margin-top: 12;
+          // MARK: - Tool Settings
+          Adw.PreferencesGroup {
+            title: _("Options");
+
+            Adw.SpinRow output_length_spinrow {
+              icon-name: "stacked-plates";
+              title: _("Output Length");
+              subtitle: _("How many lines generated in the output");
+
+              adjustment: Gtk.Adjustment {
+                lower: 1;
+                upper: 100;
+                step-increment: 1;
+                page-increment: 10;
+                value: 10;
+              };
+
+              notify::value => $on_signal_notify_value_spinrow() swapped;
+            }
+
+            $ActionableEntryRow output_format_entryrow {
+              title: _("Output Format");
+              paste-button-visible: true;
+              clear-button-visible: true;
+              text: "%c";
+              changed => $on_signal_notify_value_format_entryrow() swapped;
+
+              [prefix]
+              Image {
+                icon-name: "uppercase-symbolic";
+              }
+
+              [suffix]
+              MenuButton {
+                icon-name: "info-outline";
+                tooltip-text: _("Syntax help");
+                valign: center;
+
+                styles [
+                  "flat",
+                ]
+
+                popover: syntax_popover;
+              }
+            }
+          }
+
+          // MARK: - Tool Main Content
+          Box {
+            orientation: vertical;
+
+            Adw.PreferencesGroup {
+              $ActionableEntryRow expression_entryrow {
+                title: _("CRON Expression");
+                copy-button-visible: true;
+                paste-button-visible: true;
+                clear-button-visible: true;
+                text: "* * * * * *";
+                changed => $on_signal_changed_expression_entryrow() swapped;
+              }
+            }
+
+            $TextArea text_area {
+              title: _("Next Executions");
+              copy-button-visible: true;
+              editable: false;
+              monospace: true;
+            }
+          }
+        };
+      };
+    };
+  }
+}
+
+// MARK: - Syntax Popover
+Popover syntax_popover {
+  Adw.ToastOverlay popover_toast {
+    child: Box {
+      orientation: vertical;
+      margin-bottom: 12;
+      margin-top: 12;
+      margin-start: 12;
+      margin-end: 12;
+      spacing: 12;
+
+      Adw.ViewSwitcher {
+        stack: view_stack;
+        policy: wide;
+      }
+
+      Adw.ViewStack view_stack {
+        Adw.ViewStackPage {
+          name: "date";
+          title: _("Date");
+          icon-name: "month";
+
+          child: ScrolledWindow {
+            propagate-natural-width: true;
+            min-content-height: 400;
+            max-content-height: 400;
+
+            child: Box {
+              orientation: vertical;
+              spacing: 12;
+
+              Adw.PreferencesGroup {
+                title: _("Year Specifiers");
+
+                $SpecifierRow {
+                  specifier: "%Y";
+                  specifier-description: _("Year with century, padded to 4 digits");
+                  specifier-example: "2001";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%C";
+                  specifier-description: _("Year divided by 100, padded to 2 digits");
+                  specifier-example: "20";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%y";
+                  specifier-description: _("Year without century, padded to 2 digits");
+                  specifier-example: "01";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+              }
+
+              Adw.PreferencesGroup {
+                title: _("Month Specifiers");
+
+                $SpecifierRow {
+                  specifier: "%q";
+                  specifier-description: _("Quarter of the year (1-4)");
+                  specifier-example: "1";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%m";
+                  specifier-description: _("Month number (01-12), padded to 2 digits");
+                  specifier-example: "07";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%b";
+                  specifier-description: _("Abbreviated month name, always 3 letters");
+                  specifier-example: _("Jul");
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%B";
+                  specifier-description: _("Full month name");
+                  specifier-example: _("July");
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+              }
+
+              Adw.PreferencesGroup {
+                title: _("Day Specifiers");
+
+                $SpecifierRow {
+                  specifier: "%d";
+                  specifier-description: _("Day of the month (01-31), padded to 2 digits");
+                  specifier-example: "09";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%e";
+                  specifier-description: _("same as %d but padded with spaces");
+                  specifier-example: " 9";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+              }
+
+              Adw.PreferencesGroup {
+                title: _("Weekday Specifiers");
+
+                $SpecifierRow {
+                  specifier: "%a";
+                  specifier-description: _("Abbreviated weekday name, always 3 letters");
+                  specifier-example: _("Sun");
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%A";
+                  specifier-description: _("Full weekday name");
+                  specifier-example: _("Sunday");
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%w";
+                  specifier-description: _("Weekday as a decimal number (0-6), Sunday is 0");
+                  specifier-example: "0";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%u";
+                  specifier-description: _("Weekday as a decimal number (1-7), Monday is 1");
+                  specifier-example: "7";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+              }
+
+              Adw.PreferencesGroup {
+                title: _("Week Number Specifiers");
+
+                $SpecifierRow {
+                  specifier: "%U";
+                  specifier-description: _("Week number starting with Sunday (00-53), zero-padded");
+                  specifier-example: "28";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%W";
+                  specifier-description: _("Week number starting with Monday (00-53), zero-padded");
+                  specifier-example: "27";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+              }
+
+              Adw.PreferencesGroup {
+                title: _("Day of Year Specifiers");
+
+                $SpecifierRow {
+                  specifier: "%j";
+                  specifier-description: _("Day of the year (001-366), zero-padded");
+                  specifier-example: "189";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+              }
+
+              Adw.PreferencesGroup {
+                title: _("Full Date Specifiers");
+
+                $SpecifierRow {
+                  specifier: "%D";
+                  specifier-description: _("Date in MM/DD/YY format");
+                  specifier-example: "07/08/01";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%x";
+                  specifier-description: _("Locale's appropriate date representation");
+                  specifier-example: "07/08/01";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%F";
+                  specifier-description: _("ISO 8601 date format (YYYY-MM-DD)");
+                  specifier-example: "2001-07-08";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%v";
+                  specifier-description: _("Date in DD-Mon-YYYY format");
+                  specifier-example: _(" 8-Jul-2001");
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+              }
+            };
+          };
+        }
+
+        Adw.ViewStackPage {
+          name: "time";
+          title: _("Time");
+          icon-name: "clock-alt";
+
+          child: ScrolledWindow {
+            propagate-natural-width: true;
+            min-content-height: 400;
+            max-content-height: 400;
+
+            child: Box {
+              orientation: vertical;
+              spacing: 12;
+
+              Adw.PreferencesGroup {
+                title: _("Hour Specifiers");
+
+                $SpecifierRow {
+                  specifier: "%H";
+                  specifier-description: _("Hour (00-23), zero-padded");
+                  specifier-example: "00";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%k";
+                  specifier-description: _("Hour (0-23), space-padded");
+                  specifier-example: " 0";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%I";
+                  specifier-description: _("Hour (01-12), zero-padded");
+                  specifier-example: "12";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%l";
+                  specifier-description: _("Hour (1-12), space-padded");
+                  specifier-example: " 1";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%P";
+                  specifier-description: _("AM/PM indicator in lowercase");
+                  specifier-example: "am";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%p";
+                  specifier-description: _("AM/PM indicator in uppercase");
+                  specifier-example: "AM";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+              }
+
+              Adw.PreferencesGroup {
+                title: _("Minute Specifiers");
+
+                $SpecifierRow {
+                  specifier: "%M";
+                  specifier-description: _("Minute (00-59), zero-padded");
+                  specifier-example: "34";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+              }
+
+              Adw.PreferencesGroup {
+                title: _("Second Specifiers");
+
+                $SpecifierRow {
+                  specifier: "%S";
+                  specifier-description: _("Second (00-59), zero-padded");
+                  specifier-example: "34";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%f";
+                  specifier-description: _("Fractional seconds");
+                  specifier-example: "26490000";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%.f";
+                  specifier-description: _("Fractional seconds, with leading dot");
+                  specifier-example: ".026490";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+              }
+
+              Adw.PreferencesGroup {
+                title: _("Full Hour Specifiers");
+
+                $SpecifierRow {
+                  specifier: "%R";
+                  specifier-description: _("Hour:Minute in 24-hour format");
+                  specifier-example: "00:34";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%T";
+                  specifier-description: _("Hour:Minute:Second in 24-hour format");
+                  specifier-example: "00:34:26";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%X";
+                  specifier-description: _("Locale's appropriate time representation");
+                  specifier-example: "00:34:26";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%r";
+                  specifier-description: _("Locale's appropriate 12-hour representation");
+                  specifier-example: "12:34:26 AM";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+              }
+            };
+          };
+        }
+
+        Adw.ViewStackPage {
+          name: "date-time";
+          title: _("Date & Time");
+          icon-name: "clock-calendar";
+
+          child: ScrolledWindow {
+            propagate-natural-width: true;
+            min-content-height: 400;
+            max-content-height: 400;
+
+            child: Box {
+              orientation: vertical;
+              spacing: 12;
+
+              Adw.PreferencesGroup {
+                title: _("Date and Time Specifiers");
+
+                $SpecifierRow {
+                  specifier: "%c";
+                  specifier-description: _("Locale's date and time");
+                  specifier-example: _("Sun Jul  8 00:34:26 2001");
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%+";
+                  specifier-description: _("ISO 8601 / RFC 3339 date and time format");
+                  specifier-example: _("2001-07-08T00:34:26+09:30");
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+              }
+            };
+          };
+        }
+
+        Adw.ViewStackPage {
+          name: "other";
+          title: _("Other");
+          icon-name: "symbols";
+
+          child: ScrolledWindow {
+            propagate-natural-width: true;
+            min-content-height: 400;
+            max-content-height: 400;
+
+            child: Box {
+              orientation: vertical;
+              spacing: 12;
+
+              Adw.PreferencesGroup {
+                title: _("Timezone Specifiers");
+
+                $SpecifierRow {
+                  specifier: "%Z";
+                  specifier-description: _("Timezone name or abbreviation");
+                  specifier-example: "ACST";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%z";
+                  specifier-description: _("Offset from UTC");
+                  specifier-example: "+0930";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%z";
+                  specifier-description: _("Offset from UTC, with colon");
+                  specifier-example: "+09:30";
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+              }
+
+              Adw.PreferencesGroup {
+                title: _("Special Character Specifiers");
+
+                $SpecifierRow {
+                  specifier: "%t";
+                  specifier-description: _("Tab character (\\t)");
+                  hide-example: true;
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%n";
+                  specifier-description: _("Newline character (\\n)");
+                  hide-example: true;
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+
+                $SpecifierRow {
+                  specifier: "%%";
+                  specifier-description: _("Percent sign (%)");
+                  hide-example: true;
+                  copied => $on_signal_copied_specifier() swapped;
+                }
+              }
+            };
+          };
+        }
+      }
+    };
+  }
+}

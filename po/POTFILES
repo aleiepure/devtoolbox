@@ -13,6 +13,10 @@ src/core/widgets/text_area/text_area.rs
 src/core/window.rs
 src/tools/config_format/config_format.blp
 src/tools/config_format/mod.rs
+src/tools/cron_parser/cron_parser.blp
+src/tools/cron_parser/cron_parser.rs
+src/tools/cron_parser/mod.rs
+src/tools/cron_parser/specifier_row.rs
 src/tools/macros.rs
 src/tools/number_bases/mod.rs
 src/tools/number_bases/number_bases.blp

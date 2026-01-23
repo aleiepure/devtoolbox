@@ -1,0 +1,33 @@
+/*
+ * specifier_row.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $SpecifierRow: Adw.ActionRow {
+    activatable: true;
+    activatable-widget: button;
+    title: bind template.specifier-description;
+    subtitle: bind $build_example_closure(template.specifier-example, template.hide-example) as <string>;
+
+    [prefix]
+    Button button {
+        valign: center;
+        clicked => $on_signal_clicked_button() swapped;
+
+        Label {
+            label: bind template.specifier;
+
+            styles [
+                "monospace",
+            ]
+        }
+
+        styles [
+            "flat",
+        ]
+    }
+}

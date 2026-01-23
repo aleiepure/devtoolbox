@@ -56,9 +56,12 @@ blueprint_files = files(
   'core/widgets/text_area/text_area.blp',
   'core/widgets/actionable_entryrow/actionable_entryrow.blp',
 
+  'tools/cron_parser/specifier_row.blp',
+
   'tools/config_format/config_format.blp',
   'tools/timestamp/timestamp.blp',
   'tools/number_bases/number_bases.blp',
+  'tools/cron_parser/cron_parser.blp',
 )
 
 compile_blueprint = custom_target('blueprints',
