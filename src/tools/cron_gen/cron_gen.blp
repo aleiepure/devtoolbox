@@ -1,0 +1,823 @@
+/*
+ * cron_gen.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $CronGenWidget: Adw.Bin {
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+          spacing: 12;
+          margin-bottom: 12;
+          margin-top: 12;
+          // MARK: - Minutes Section
+          Adw.PreferencesGroup {
+            title: _("Minutes");
+
+            Adw.ComboRow minutes_mode_combo {
+              title: _("Mode");
+              icon-name: "list-large";
+
+              model: StringList {
+                strings [
+                  _("Every minute"),
+                  _("Repeated"),
+                  _("Choose from list"),
+                  _("Range"),
+                ]
+              };
+
+              notify::selected => $on_signal_notify_selected_minutes_mode() swapped;
+            }
+
+            Adw.ActionRow {
+              title: _("Repeated Every");
+              icon-name: "arrows-loop-tall";
+              visible: bind template.minutes-every-visible;
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                Adw.SpinRow minutes_interval_spinrow {
+                  title: _("Minutes interval");
+                  notify::value => $on_signal_notify_value_minutes_interval() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 1;
+                    upper: 60;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 1;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                  ]
+                }
+
+                Adw.SpinRow minutes_starting_at_spinrow {
+                  title: _("Starting at minute");
+                  notify::value => $on_signal_notify_value_minutes_starting_at() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 59;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 0;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+                }
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Specific minutes");
+              icon-name: "mouse-keys";
+              visible: bind template.minutes-list-visible;
+              activatable-widget: minutes_list_menubutton;
+
+              [suffix]
+              MenuButton minutes_list_menubutton {
+                label: _("Any minute");
+                popover: minutes_list_popover;
+                valign: center;
+
+                styles [
+                  "flat",
+                ]
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Range");
+              icon-name: "object-flip-horizontal";
+              visible: bind template.minutes-range-visible;
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                Adw.SpinRow minutes_range_start_spinrow {
+                  title: _("Start minute");
+                  notify::value => $on_signal_notify_value_minutes_range_start() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 59;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 0;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                  ]
+                }
+
+                Adw.SpinRow minutes_range_end_spinrow {
+                  title: _("End minute");
+                  notify::value => $on_signal_notify_value_minutes_range_end() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 59;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 0;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+                }
+              }
+            }
+          }
+
+          // MARK: - Hours Section
+          Adw.PreferencesGroup {
+            title: _("Hours");
+
+            Adw.ComboRow hours_mode_combo {
+              title: _("Mode");
+              icon-name: "list-large";
+
+              model: StringList {
+                strings [
+                  _("Every hour"),
+                  _("Repeated"),
+                  _("Choose from list"),
+                  _("Range"),
+                ]
+              };
+
+              notify::selected => $on_signal_notify_selected_hours_mode() swapped;
+            }
+
+            Adw.ActionRow {
+              title: _("Repeated Every");
+              icon-name: "arrows-loop-tall";
+              visible: bind template.hours-every-visible;
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                Adw.SpinRow hours_interval_spinrow {
+                  title: _("Hours interval");
+                  notify::value => $on_signal_notify_value_hours_interval() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 1;
+                    upper: 24;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 1;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                  ]
+                }
+
+                Adw.SpinRow hours_starting_at_spinrow {
+                  title: _("Starting at hour");
+                  notify::value => $on_signal_notify_value_hours_starting_at() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 23;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 0;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+                }
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Specific hours");
+              icon-name: "mouse-keys";
+              visible: bind template.hours-list-visible;
+              activatable-widget: hours_list_menubutton;
+
+              [suffix]
+              MenuButton hours_list_menubutton {
+                label: _("Any hour");
+                popover: hours_list_popover;
+                valign: center;
+
+                styles [
+                  "flat",
+                ]
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Range");
+              icon-name: "object-flip-horizontal";
+              visible: bind template.hours-range-visible;
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                Adw.SpinRow hours_range_start_spinrow {
+                  title: _("Start hour");
+                  notify::value => $on_signal_notify_value_hours_range_start() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 23;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 0;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                  ]
+                }
+
+                Adw.SpinRow hours_range_end_spinrow {
+                  title: _("End hour");
+                  notify::value => $on_signal_notify_value_hours_range_end() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 23;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 0;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+                }
+              }
+            }
+          }
+
+          // MARK: - Day Section
+          Adw.PreferencesGroup {
+            title: _("Day");
+
+            Adw.ComboRow day_mode_combo {
+              title: _("Mode");
+              icon-name: "list-large";
+
+              model: StringList {
+                strings [
+                  _("Every day"),
+                  _("Repeated"),
+                  _("Choose from list"),
+                  _("Range"),
+                ]
+              };
+
+              notify::selected => $on_signal_notify_selected_day_mode() swapped;
+            }
+
+            Adw.ActionRow {
+              title: _("Repeated Every");
+              icon-name: "arrows-loop-tall";
+              visible: bind template.day-every-visible;
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                Adw.SpinRow day_interval_spinrow {
+                  title: _("Days interval");
+                  notify::value => $on_signal_notify_value_day_interval() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 1;
+                    upper: 31;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 1;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                  ]
+                }
+
+                Adw.SpinRow day_starting_at_spinrow {
+                  title: _("Starting on day");
+                  notify::value => $on_signal_notify_value_day_starting_at() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 1;
+                    upper: 31;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 1;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+                }
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Specific Days");
+              icon-name: "mouse-keys";
+              visible: bind template.day-list-visible;
+              activatable-widget: day_list_menubutton;
+
+              [suffix]
+              MenuButton day_list_menubutton {
+                label: _("Any day");
+                popover: day_list_popover;
+                valign: center;
+
+                styles [
+                  "flat",
+                ]
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Range");
+              icon-name: "object-flip-horizontal";
+              visible: bind template.day-range-visible;
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                Adw.SpinRow day_range_start_spinrow {
+                  title: _("Start day");
+                  notify::value => $on_signal_notify_value_day_range_start() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 1;
+                    upper: 31;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 1;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                  ]
+                }
+
+                Adw.SpinRow day_range_end_spinrow {
+                  title: _("End day");
+                  notify::value => $on_signal_notify_value_day_range_end() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 1;
+                    upper: 31;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 1;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+                }
+              }
+            }
+          }
+
+          // MARK: - Month Section
+          Adw.PreferencesGroup {
+            title: _("Month");
+
+            Adw.ComboRow month_mode_combo {
+              title: _("Mode");
+              icon-name: "list-large";
+
+              model: StringList {
+                strings [
+                  _("Every month"),
+                  _("Repeated"),
+                  _("Choose from list"),
+                  _("Range"),
+                ]
+              };
+
+              notify::selected => $on_signal_notify_selected_month_mode() swapped;
+            }
+
+            Adw.ActionRow {
+              title: _("Repeated Every");
+              icon-name: "arrows-loop-tall";
+              visible: bind template.month-every-visible;
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                Adw.SpinRow month_interval_spinrow {
+                  title: _("Months interval");
+                  notify::value => $on_signal_notify_value_month_interval() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 1;
+                    upper: 12;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 1;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                  ]
+                }
+
+                Adw.SpinRow month_starting_at_spinrow {
+                  title: _("Starting in month");
+                  notify::value => $on_signal_notify_value_month_starting_at() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 1;
+                    upper: 12;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 1;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+                }
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Specific Months");
+              icon-name: "mouse-keys";
+              visible: bind template.month-list-visible;
+              activatable-widget: month_list_menubutton;
+
+              [suffix]
+              MenuButton month_list_menubutton {
+                label: _("Any month");
+                popover: month_list_popover;
+                valign: center;
+
+                styles [
+                  "flat",
+                ]
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Range");
+              icon-name: "object-flip-horizontal";
+              visible: bind template.month-range-visible;
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                Adw.SpinRow month_range_start_spinrow {
+                  title: _("Start month");
+                  notify::value => $on_signal_notify_value_month_range_start() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 1;
+                    upper: 12;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 1;
+
+                  styles [
+                    "property",
+                  ]
+                }
+
+                Adw.SpinRow month_range_end_spinrow {
+                  title: _("End month");
+                  notify::value => $on_signal_notify_value_month_range_end() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 1;
+                    upper: 12;
+                    step-increment: 1;
+                    page-increment: 10;
+                  };
+
+                  value: 1;
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+                }
+              }
+            }
+          }
+
+          // MARK: - Day of week Section
+          Adw.PreferencesGroup {
+            title: _("Day of Week");
+
+            [header-suffix]
+            Label {
+              label: _("0 = Sunday, 6 = Saturday");
+
+              styles [
+                "dimmed",
+              ]
+            }
+
+            Adw.ComboRow dayofweek_mode_combo {
+              title: _("Mode");
+              icon-name: "list-large";
+
+              model: StringList {
+                strings [
+                  _("Every day of week"),
+                  _("Repeated"),
+                  _("Choose from list"),
+                  _("Range"),
+                ]
+              };
+
+              notify::selected => $on_signal_notify_selected_dayofweek_mode() swapped;
+            }
+
+            Adw.ActionRow {
+              title: _("Repeated Every");
+              icon-name: "arrows-loop-tall";
+              visible: bind template.dayofweek-every-visible;
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                Adw.SpinRow dayofweek_interval_spinrow {
+                  title: _("Days interval");
+                  notify::value => $on_signal_notify_value_dayofweek_interval() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 6;
+                    step-increment: 1;
+                    page-increment: 7;
+                  };
+
+                  value: 0;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                  ]
+                }
+
+                Adw.SpinRow dayofweek_starting_at_spinrow {
+                  title: _("Starting on day");
+                  notify::value => $on_signal_notify_value_dayofweek_starting_at() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 6;
+                    step-increment: 1;
+                    page-increment: 7;
+                  };
+
+                  value: 0;
+                  numeric: true;
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+                }
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Specific Days of Week");
+              icon-name: "mouse-keys";
+              visible: bind template.dayofweek-list-visible;
+              activatable-widget: dayofweek_list_menubutton;
+
+              [suffix]
+              MenuButton dayofweek_list_menubutton {
+                label: _("Any day of week");
+                popover: dayofweek_list_popover;
+                valign: center;
+
+                styles [
+                  "flat",
+                ]
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Range");
+              icon-name: "object-flip-horizontal";
+              visible: bind template.dayofweek-range-visible;
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                Adw.SpinRow dayofweek_range_start_spinrow {
+                  title: _("Start day of week");
+                  notify::value => $on_signal_notify_value_dayofweek_range_start() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 6;
+                    step-increment: 1;
+                    page-increment: 7;
+                  };
+
+                  value: 0;
+
+                  styles [
+                    "property",
+                  ]
+                }
+
+                Adw.SpinRow dayofweek_range_end_spinrow {
+                  title: _("End day of week");
+                  notify::value => $on_signal_notify_value_dayofweek_range_end() swapped;
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 6;
+                    step-increment: 1;
+                    page-increment: 7;
+                  };
+
+                  value: 0;
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+                }
+              }
+            }
+          }
+
+          // MARK: - Command
+          Adw.PreferencesGroup {
+            margin-top: 12;
+
+            $ActionableEntryRow command_entryrow {
+              title: _("Command to execute");
+              text: "echo 'Hello, World!'";
+              changed => $on_signal_changed_command() swapped;
+              paste-button-visible: true;
+              clear-button-visible: true;
+
+              styles [
+                "monospaced",
+              ]
+            }
+          }
+
+          // MARK: - Output
+          Adw.PreferencesGroup {
+            margin-top: 12;
+
+            $ActionableEntryRow expression_entryrow {
+              title: _("CRON expression");
+              editable: false;
+              copy-button-visible: true;
+
+              styles [
+                "monospaced",
+              ]
+            }
+          }
+        };
+      };
+    };
+  }
+}
+
+Popover minutes_list_popover {
+  Grid minutes_list_grid {
+    row-spacing: 6;
+    column-spacing: 6;
+  }
+}
+
+Popover hours_list_popover {
+  Grid hours_list_grid {
+    row-spacing: 6;
+    column-spacing: 6;
+  }
+}
+
+Popover day_list_popover {
+  Grid day_list_grid {
+    row-spacing: 6;
+    column-spacing: 6;
+  }
+}
+
+Popover month_list_popover {
+  Grid month_list_grid {
+    row-spacing: 6;
+    column-spacing: 6;
+  }
+}
+
+Popover dayofweek_list_popover {
+  Grid dayofweek_list_grid {
+    row-spacing: 6;
+    column-spacing: 6;
+  }
+}

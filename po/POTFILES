@@ -13,6 +13,10 @@ src/core/widgets/text_area/text_area.rs
 src/core/window.rs
 src/tools/config_format/config_format.blp
 src/tools/config_format/mod.rs
+src/tools/cron_gen/cron_gen.blp
+src/tools/cron_gen/cron_gen.rs
+src/tools/cron_gen/cron.rs
+src/tools/cron_gen/mod.rs
 src/tools/cron_parser/cron_parser.blp
 src/tools/cron_parser/cron_parser.rs
 src/tools/cron_parser/mod.rs

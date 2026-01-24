@@ -6,6 +6,7 @@
 */
 
 pub mod config_format;
+pub mod cron_gen;
 pub mod cron_parser;
 pub mod macros;
 pub mod number_bases;
@@ -31,6 +32,7 @@ pub static ALL_TOOLS: Lazy<Vec<&'static ToolMetadata>> = Lazy::new(|| {
         &timestamp::TIMESTAMP_TOOL_METADATA,
         &number_bases::NUMBER_BASES_TOOL_METADATA,
         &cron_parser::CRON_PARSER_TOOL_METADATA,
+        &cron_gen::CRON_GEN_TOOL_METADATA,
     ] // TODO: add new tools here
 });
 

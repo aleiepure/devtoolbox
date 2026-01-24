@@ -23,6 +23,7 @@
     <file>tools/timestamp/timestamp.ui</file>
     <file>tools/number_bases/number_bases.ui</file>
     <file>tools/cron_parser/cron_parser.ui</file>
+    <file>tools/cron_gen/cron_gen.ui</file>
   </gresource>
   
   <!-- Icons -->
@@ -44,11 +45,16 @@
     <file compressed="true" alias="clock-alt-symbolic.svg">../data/icons/symbolic/clock-alt-symbolic.svg</file>
     <file compressed="true" alias="clock-calendar-symbolic.svg">../data/icons/symbolic/clock-calendar-symbolic.svg</file>
     <file compressed="true" alias="symbols-symbolic.svg">../data/icons/symbolic/symbols-symbolic.svg</file>
+    <file compressed="true" alias="list-large-symbolic.svg">../data/icons/symbolic/list-large-symbolic.svg</file>
+    <file compressed="true" alias="arrows-loop-tall-symbolic.svg">../data/icons/symbolic/arrows-loop-tall-symbolic.svg</file>
+    <file compressed="true" alias="mouse-keys-symbolic.svg">../data/icons/symbolic/mouse-keys-symbolic.svg</file>
+    <file compressed="true" alias="object-flip-horizontal-symbolic.svg">../data/icons/symbolic/object-flip-horizontal-symbolic.svg</file>
 
     <!-- Tool icons -->
     <file compressed="true" alias="config_format-symbolic.svg">../data/icons/symbolic/tools/config_format-symbolic.svg</file>
     <file compressed="true" alias="timestamp-symbolic.svg">../data/icons/symbolic/tools/timestamp-symbolic.svg</file>
     <file compressed="true" alias="number_bases-symbolic.svg">../data/icons/symbolic/tools/number_bases-symbolic.svg</file>
     <file compressed="true" alias="cron_parser-symbolic.svg">../data/icons/symbolic/tools/cron_parser-symbolic.svg</file>
+    <file compressed="true" alias="cron_gen-symbolic.svg">../data/icons/symbolic/tools/cron_gen-symbolic.svg</file>
   </gresource>
 </gresources>

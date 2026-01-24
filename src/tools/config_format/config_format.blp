@@ -17,14 +17,11 @@ template $ConfigFormatWidget: Adw.Bin {
 
         child: Box {
           orientation: vertical;
-          spacing: 24;
-          margin-bottom: 12;
+          spacing: 12;
           margin-top: 12;
-
           // MARK: - Tool Settings
           Adw.PreferencesGroup {
             title: _("Options");
-
             // Input Format
             Adw.ActionRow {
               title: _("Input Format");
@@ -90,6 +87,7 @@ template $ConfigFormatWidget: Adw.Bin {
             homogeneous: true;
             spacing: 12;
             margin-bottom: 12;
+
             // Input Text Area
             $TextArea input_area {
               title: _("Input");

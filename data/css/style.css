@@ -5,8 +5,8 @@
 
 /* Light mode CSS - Main style */
 
-.rounded-corner-12 {
-  border-radius: 12px;
+.rounded-corner {
+  border-radius: var(--window-radius);
 }
 
 *:drop(active) {
@@ -29,4 +29,12 @@
 
 row.last-in-row {
   margin-right: -12px;
+}
+
+menubutton > button.text-button.toggle {
+  font-weight: 400;
+}
+menubutton > button.text-button {
+  min-width: 140px;
+  max-width: 140px;
 }

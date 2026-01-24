@@ -181,7 +181,7 @@ template \$$TOOL_ID_WIDGET : Adw.Bin {
 
         child: Box {
           orientation: vertical;
-          spacing: 24;
+          spacing: 12;
           margin-bottom: 12;
           margin-top: 12;
 

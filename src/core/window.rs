@@ -211,6 +211,10 @@ mod imp {
                     use crate::tools::cron_parser::CronParserWidget;
                     CronParserWidget::new().upcast()
                 }
+                "cron_gen" => {
+                    use crate::tools::cron_gen::CronGenWidget;
+                    CronGenWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }
