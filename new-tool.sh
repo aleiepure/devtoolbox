@@ -218,7 +218,7 @@ fi
 # Add to ALL_TOOLS array
 if ! grep -q "${TOOL_ID}::${TOOL_ID_UPPER}_TOOL_METADATA" "$TOOLS_MOD"; then
     # Add before the comment line "// TODO: add new tools here"
-    sed -i "/\/\/ TODO: add new tools here/i\        \&${TOOL_ID}::${TOOL_ID_UPPER}_TOOL_METADATA," "$TOOLS_MOD"
+    sed -i "/\/\/ TODO: add new tools here/i\        \&*${TOOL_ID}::${TOOL_ID_UPPER}_TOOL_METADATA," "$TOOLS_MOD"
 fi
 echo "$TOOLS_MOD: file updated."
 
