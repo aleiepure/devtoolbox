@@ -92,7 +92,7 @@ mod imp {
         fn do_parsing(&self) {
             let format = self.output_format_entryrow.text();
             if format.is_empty() {
-                self.output_format_entryrow.add_css_class("error-highlight");
+                self.output_format_entryrow.add_css_class("error");
                 self.text_area.set_text(String::new());
                 return;
             }
@@ -106,11 +106,11 @@ mod imp {
 
             let schedule = match Schedule::from_str(&expression) {
                 Ok(s) => {
-                    self.expression_entryrow.remove_css_class("error-highlight");
+                    self.expression_entryrow.remove_css_class("error");
                     s
                 }
                 Err(_err) => {
-                    self.expression_entryrow.add_css_class("error-highlight");
+                    self.expression_entryrow.add_css_class("error");
                     self.text_area.set_text(String::new());
                     return;
                 }
@@ -139,11 +139,10 @@ mod imp {
             }
 
             if format_valid {
-                self.output_format_entryrow
-                    .remove_css_class("error-highlight");
+                self.output_format_entryrow.remove_css_class("error");
                 self.text_area.set_text(lines);
             } else {
-                self.output_format_entryrow.add_css_class("error-highlight");
+                self.output_format_entryrow.add_css_class("error");
                 self.text_area.set_text(String::new());
             }
         }

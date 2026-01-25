@@ -24,6 +24,7 @@
     <file>tools/number_bases/number_bases.ui</file>
     <file>tools/cron_parser/cron_parser.ui</file>
     <file>tools/cron_gen/cron_gen.ui</file>
+    <file>tools/linux_permissions/linux_permissions.ui</file>
   </gresource>
   
   <!-- Icons -->
@@ -49,6 +50,8 @@
     <file compressed="true" alias="arrows-loop-tall-symbolic.svg">../data/icons/symbolic/arrows-loop-tall-symbolic.svg</file>
     <file compressed="true" alias="mouse-keys-symbolic.svg">../data/icons/symbolic/mouse-keys-symbolic.svg</file>
     <file compressed="true" alias="object-flip-horizontal-symbolic.svg">../data/icons/symbolic/object-flip-horizontal-symbolic.svg</file>
+    <file compressed="true" alias="padlock2-symbolic.svg">../data/icons/symbolic/padlock2-symbolic.svg</file>
+    <file compressed="true" alias="ticket-special-symbolic.svg">../data/icons/symbolic/ticket-special-symbolic.svg</file>
 
     <!-- Tool icons -->
     <file compressed="true" alias="config_format-symbolic.svg">../data/icons/symbolic/tools/config_format-symbolic.svg</file>
@@ -56,5 +59,6 @@
     <file compressed="true" alias="number_bases-symbolic.svg">../data/icons/symbolic/tools/number_bases-symbolic.svg</file>
     <file compressed="true" alias="cron_parser-symbolic.svg">../data/icons/symbolic/tools/cron_parser-symbolic.svg</file>
     <file compressed="true" alias="cron_gen-symbolic.svg">../data/icons/symbolic/tools/cron_gen-symbolic.svg</file>
+    <file compressed="true" alias="linux_permissions-symbolic.svg">../data/icons/symbolic/tools/linux_permissions-symbolic.svg</file>
   </gresource>
 </gresources>

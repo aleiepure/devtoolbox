@@ -21,6 +21,8 @@ src/tools/cron_parser/cron_parser.blp
 src/tools/cron_parser/cron_parser.rs
 src/tools/cron_parser/mod.rs
 src/tools/cron_parser/specifier_row.rs
+src/tools/linux_permissions/linux_permissions.blp
+src/tools/linux_permissions/mod.rs
 src/tools/macros.rs
 src/tools/number_bases/mod.rs
 src/tools/number_bases/number_bases.blp

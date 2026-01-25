@@ -99,9 +99,9 @@ mod imp {
             };
 
             if is_error {
-                active_widget.add_css_class("error-highlight");
+                active_widget.add_css_class("error");
             } else {
-                active_widget.remove_css_class("error-highlight");
+                active_widget.remove_css_class("error");
             }
 
             self.block_signals();

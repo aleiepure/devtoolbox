@@ -63,6 +63,7 @@ blueprint_files = files(
   'tools/number_bases/number_bases.blp',
   'tools/cron_parser/cron_parser.blp',
   'tools/cron_gen/cron_gen.blp',
+  'tools/linux_permissions/linux_permissions.blp',
 )
 
 compile_blueprint = custom_target('blueprints',

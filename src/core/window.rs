@@ -215,6 +215,10 @@ mod imp {
                     use crate::tools::cron_gen::CronGenWidget;
                     CronGenWidget::new().upcast()
                 }
+                "linux_permissions" => {
+                    use crate::tools::linux_permissions::LinuxPermissionsWidget;
+                    LinuxPermissionsWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

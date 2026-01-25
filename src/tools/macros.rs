@@ -30,18 +30,6 @@ impl ToolCategory {
             ToolCategory::Certificates => pgettext("ToolCategory", "Certificates").to_string(),
         }
     }
-
-    pub const fn as_str(&self) -> &'static str {
-        match self {
-            ToolCategory::Converters => "converters",
-            ToolCategory::Encoders => "encoders",
-            ToolCategory::Formatters => "formatters",
-            ToolCategory::Generators => "generators",
-            ToolCategory::Text => "text",
-            ToolCategory::Graphics => "graphics",
-            ToolCategory::Certificates => "certificates",
-        }
-    }
 }
 
 #[macro_export]

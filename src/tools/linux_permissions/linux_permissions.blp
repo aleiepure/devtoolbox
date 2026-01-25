@@ -1,0 +1,305 @@
+/*
+ * linux_permissions.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $LinuxPermissionsWidget: Adw.Bin {
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+          spacing: 12;
+          margin-bottom: 12;
+          margin-top: 12;
+          
+          // MARK: - Tool Settings
+          Adw.PreferencesGroup {
+            title: _("Options");
+
+            Adw.ActionRow {
+              title: _("Permissions");
+              icon-name: "padlock2";
+
+              [suffix]
+              Grid {
+                column-homogeneous: true;
+                column-spacing: 12;
+                row-spacing: 12;
+                margin-top: 12;
+                margin-bottom: 12;
+
+                Label {
+                  label: _("Owner");
+
+                  styles [
+                    "heading",
+                  ]
+
+                  layout {
+                    column: 1;
+                    row: 0;
+                  }
+                }
+
+                Label {
+                  label: _("Group");
+
+                  styles [
+                    "heading",
+                  ]
+
+                  layout {
+                    column: 2;
+                    row: 0;
+                  }
+                }
+
+                Label {
+                  label: _("Others");
+
+                  styles [
+                    "heading",
+                  ]
+
+                  layout {
+                    column: 3;
+                    row: 0;
+                  }
+                }
+
+                Label {
+                  label: _("Read");
+                  halign: end;
+
+                  styles [
+                    "heading",
+                  ]
+
+                  layout {
+                    column: 0;
+                    row: 1;
+                  }
+                }
+
+                CheckButton read_owner_checkbutton {
+                  active: true;
+                  halign: center;
+                  toggled => $on_signal_toggled_read_owner_checkbutton() swapped;
+
+                  layout {
+                    column: 1;
+                    row: 1;
+                  }
+                }
+
+                CheckButton read_group_checkbutton {
+                  active: true;
+                  halign: center;
+                  toggled => $on_signal_toggled_read_group_checkbutton() swapped;
+
+                  layout {
+                    column: 2;
+                    row: 1;
+                  }
+                }
+
+                CheckButton read_others_checkbutton {
+                  active: true;
+                  halign: center;
+                  toggled => $on_signal_toggled_read_others_checkbutton() swapped;
+
+                  layout {
+                    column: 3;
+                    row: 1;
+                  }
+                }
+
+                Label {
+                  label: _("Write");
+                  halign: end;
+
+                  styles [
+                    "heading",
+                  ]
+
+                  layout {
+                    column: 0;
+                    row: 2;
+                  }
+                }
+
+                CheckButton write_owner_checkbutton {
+                  active: true;
+                  halign: center;
+                  toggled => $on_signal_toggled_write_owner_checkbutton() swapped;
+
+                  layout {
+                    column: 1;
+                    row: 2;
+                  }
+                }
+
+                CheckButton write_group_checkbutton {
+                  active: false;
+                  halign: center;
+                  toggled => $on_signal_toggled_write_group_checkbutton() swapped;
+
+                  layout {
+                    column: 2;
+                    row: 2;
+                  }
+                }
+
+                CheckButton write_others_checkbutton {
+                  active: false;
+                  halign: center;
+                  toggled => $on_signal_toggled_write_others_checkbutton() swapped;
+
+                  layout {
+                    column: 3;
+                    row: 2;
+                  }
+                }
+
+                Label {
+                  label: _("Execute");
+                  halign: end;
+
+                  styles [
+                    "heading",
+                  ]
+
+                  layout {
+                    column: 0;
+                    row: 3;
+                  }
+                }
+
+                CheckButton execute_owner_checkbutton {
+                  active: true;
+                  halign: center;
+                  toggled => $on_signal_toggled_execute_owner_checkbutton() swapped;
+
+                  layout {
+                    column: 1;
+                    row: 3;
+                  }
+                }
+
+                CheckButton execute_group_checkbutton {
+                  active: true;
+                  halign: center;
+                  toggled => $on_signal_toggled_execute_group_checkbutton() swapped;
+
+                  layout {
+                    column: 2;
+                    row: 3;
+                  }
+                }
+
+                CheckButton execute_others_checkbutton {
+                  active: true;
+                  halign: center;
+                  toggled => $on_signal_toggled_execute_others_checkbutton() swapped;
+
+                  layout {
+                    column: 3;
+                    row: 3;
+                  }
+                }
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Special Bits");
+              icon-name: "ticket-special";
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                spacing: 24;
+                
+                Box {
+                  orientation: horizontal;
+                  spacing: 6;
+
+                  Label {
+                    label: _("Set UID");
+                    styles ["heading"]
+                  }
+
+                  CheckButton set_uid_checkbutton {
+                    active: false;
+                    toggled => $on_signal_toggled_set_uid_checkbutton() swapped;
+                  }
+                }
+
+                Box {
+                  orientation: horizontal;
+                  spacing: 6;
+
+                  Label {
+                    label: _("Set GID");
+                    styles ["heading"]
+                  }
+
+                  CheckButton set_gid_checkbutton {
+                    active: false;
+                    toggled => $on_signal_toggled_set_gid_checkbutton() swapped;
+                  }
+                }
+
+                Box {
+                  orientation: horizontal;
+                  spacing: 6;
+
+                  Label {
+                    label: _("Sticky");
+                    styles ["heading"]
+                  }
+
+                  CheckButton sticky_checkbutton {
+                    active: false;
+                    toggled => $on_signal_toggled_sticky_checkbutton() swapped;
+                  }
+                }
+              }
+            }
+          }
+
+          // MARK: - Tool Main Content
+          Adw.PreferencesGroup {
+            title: _("Values");
+
+            $ActionableEntryRow numeric_entryrow {
+              title: _("Numeric Value");
+              copy-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+              styles ["monospace"]
+              changed => $on_signal_changed_numeric_entryrow() swapped;
+            }
+
+            $ActionableEntryRow symbolic_entryrow {
+              title: _("Symbolic Value");
+              copy-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+              styles ["monospace"]
+              changed => $on_signal_changed_symbolic_entryrow() swapped;
+            }
+          }
+        };
+      };
+    };
+  }
+}
