@@ -1,0 +1,1371 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the devtoolbox package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: devtoolbox\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-25 16:30+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. TRANSLATORS: do not translate
+#: data/me.iepure.Devtoolbox.desktop.in.in:6
+msgid "@app-name@"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.desktop.in.in:7
+#: data/me.iepure.Devtoolbox.metainfo.xml.in:15
+msgid "Dev tools at your fingertips"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.desktop.in.in:13
+msgid "JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;Validate;Validator;Converter;Convert;Timestamp;bmp;gif;icns;jpeg;png;tiff;webp;Image;Base;Parser;CRON;GZip;Compressor;Decompressor;Hash;Regex;Compare;URL;Minify;Generator;Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;Lorem;Ipsum;"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.gschema.xml:14
+msgid "Window width"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.gschema.xml:18
+msgid "Window height"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.gschema.xml:22
+msgid "Window maximized"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.gschema.xml:34
+msgid "Last used tool"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.gschema.xml:38
+msgid "Sidebar open"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.metainfo.xml.in:22
+msgid ""
+"If you're tired of endlessly looking online for the right tool, or to find "
+"again that website of which you don't recall the name just for a quick "
+"conversion, this is the right app for you."
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.metainfo.xml.in:26
+msgid ""
+"This is a collection of powerful yet simple-to-use tools to solve the most "
+"common daily development problems."
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.metainfo.xml.in:29
+msgid "Includes:"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.metainfo.xml.in:31
+msgid "JSON to YAML converter and vice-versa"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.metainfo.xml.in:32
+msgid "CRON expressions parser"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.metainfo.xml.in:33
+msgid "GZip compressor and decompressor"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.metainfo.xml.in:34
+msgid "Formatters for common programming languages"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.metainfo.xml.in:35
+msgid "Hash generators"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.metainfo.xml.in:36
+msgid "Regex tester"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.metainfo.xml.in:37
+msgid "Markdown Previewer"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.metainfo.xml.in:38
+msgid "Image converters"
+msgstr ""
+
+#: data/me.iepure.Devtoolbox.metainfo.xml.in:39
+msgid "Much more..."
+msgstr ""
+
+#: src/core/ui/about-dialog.blp:13
+msgid ""
+"Copyright © 2022 - 2025 Alessandro Iepure\n"
+"Some icons are copyright of the GNOME Project"
+msgstr ""
+
+#. TODO: change to actual artists
+#. TRANSLATORS: replace with your name (with optional email or website)
+#: src/core/ui/about-dialog.blp:22
+msgid "translator-credits"
+msgstr ""
+
+#: src/core/ui/shortcuts-dialog.blp:14
+msgctxt "Show Shortcuts"
+msgid "shortcut window"
+msgstr ""
+
+#: src/core/ui/shortcuts-dialog.blp:19
+msgctxt "Quit"
+msgid "shortcut window"
+msgstr ""
+
+#: src/core/ui/window.blp:55
+msgid "Show/Hide Searchbar"
+msgstr ""
+
+#: src/core/ui/window.blp:64 src/core/ui/window.blp:89
+msgid "Favorite Tools"
+msgstr ""
+
+#: src/core/ui/window.blp:74
+msgid "No Favorite Tools"
+msgstr ""
+
+#: src/core/ui/window.blp:75
+msgid ""
+"Add your favorite tools here by clicking the star button beside the title"
+msgstr ""
+
+#: src/core/ui/window.blp:116
+msgid "Open Menu"
+msgstr ""
+
+#: src/core/ui/window.blp:129
+msgid "Search Tools…"
+msgstr ""
+
+#: src/core/ui/window.blp:157
+msgid "Toggle Sidebar"
+msgstr ""
+
+#: src/core/ui/window.blp:164
+msgid "Open Sidebar"
+msgstr ""
+
+#: src/core/ui/window.blp:185
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#: src/core/ui/window.blp:190
+msgid "_About Dev Toolbox"
+msgstr ""
+
+#: src/core/widgets/actionable_entryrow/actionable_entryrow.blp:19
+msgid "Generate"
+msgstr ""
+
+#: src/core/widgets/actionable_entryrow/actionable_entryrow.blp:29
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: src/core/widgets/actionable_entryrow/actionable_entryrow.blp:39
+msgid "Paste from Clipboard"
+msgstr ""
+
+#: src/core/widgets/actionable_entryrow/actionable_entryrow.blp:49
+msgid "Clear Field"
+msgstr ""
+
+#: src/core/widgets/text_area/text_area.blp:38
+msgid "Errors present. Click for details."
+msgstr ""
+
+#: src/core/widgets/text_area/text_area.blp:116
+#: src/core/widgets/text_area/text_area.blp:255
+msgid "Open"
+msgstr ""
+
+#: src/core/widgets/text_area/text_area.blp:132
+msgid "Copy to clipboard"
+msgstr ""
+
+#: src/core/widgets/text_area/text_area.blp:146
+#: src/tools/timestamp/timestamp.blp:61
+msgid "Paste from clipboard"
+msgstr ""
+
+#: src/core/widgets/text_area/text_area.blp:160
+msgid "Clear text"
+msgstr ""
+
+#: src/core/widgets/text_area/text_area.blp:197
+msgid "Drop a text file here"
+msgstr ""
+
+#: src/core/widgets/text_area/text_area.blp:254
+msgid "Open File"
+msgstr ""
+
+#: src/core/widgets/text_area/text_area.rs:217
+msgctxt "File filter"
+msgid "Text Files"
+msgstr ""
+
+#: src/core/widgets/text_area/text_area.rs:225
+msgctxt "File filter"
+msgid "Supported File Types"
+msgstr ""
+
+#: src/core/widgets/text_area/text_area.rs:235
+msgctxt "File filter"
+msgid "All Files"
+msgstr ""
+
+#. Translator: {message} is replaced with the error message
+#: src/core/widgets/text_area/text_area.rs:256
+#, rust-format
+msgctxt "Error message"
+msgid "Unable to open file: {message}"
+msgstr ""
+
+#: src/core/widgets/text_area/text_area.rs:324
+msgctxt "Error message"
+msgid "The file does not contain plain text"
+msgstr ""
+
+#: src/core/widgets/text_area/text_area.rs:333
+msgctxt "Error message"
+msgid "The file is empty."
+msgstr ""
+
+#. Translator: {message} is replaced with the error message
+#: src/core/widgets/text_area/text_area.rs:339
+#, rust-format
+msgctxt "Error message"
+msgid "Unable to read file: {message}"
+msgstr ""
+
+#: src/core/widgets/text_area/text_area.rs:377
+#: src/core/widgets/text_area/text_area.rs:522
+msgid "Loading..."
+msgstr ""
+
+#: src/core/widgets/text_area/text_area.rs:469
+msgctxt "Error message"
+msgid "Only one file can be opened at a time."
+msgstr ""
+
+#: src/core/window.rs:129 src/core/window.rs:182
+msgid "Add to Favorites"
+msgstr ""
+
+#: src/core/window.rs:138 src/core/window.rs:178
+msgid "Remove from Favorites"
+msgstr ""
+
+#: src/tools/config_format/config_format.blp:25
+#: src/tools/cron_parser/cron_parser.blp:25 src/tools/html_enc/html_enc.blp:25
+#: src/tools/linux_permissions/linux_permissions.blp:26
+#: src/tools/timestamp/timestamp.blp:25
+msgid "Options"
+msgstr ""
+
+#: src/tools/config_format/config_format.blp:28
+msgid "Input Format"
+msgstr ""
+
+#: src/tools/config_format/config_format.blp:29
+msgid "Select the format of the input."
+msgstr ""
+
+#: src/tools/config_format/config_format.blp:57
+#: src/tools/cron_parser/cron_parser.blp:44
+msgid "Output Format"
+msgstr ""
+
+#: src/tools/config_format/config_format.blp:58
+msgid "Select the format of the output."
+msgstr ""
+
+#: src/tools/config_format/config_format.blp:94
+#: src/tools/html_enc/html_enc.blp:56
+msgid "Input"
+msgstr ""
+
+#: src/tools/config_format/config_format.blp:112
+#: src/tools/html_enc/html_enc.blp:75
+msgid "Output"
+msgstr ""
+
+#. Translators: The {error} placeholder is replaced with the specific error message.
+#: src/tools/config_format/config_format.rs:153
+#, rust-format
+msgctxt "Error message"
+msgid "Invalid JSON: {error}"
+msgstr ""
+
+#. Translators: The {error} placeholder is replaced with the specific error message.
+#: src/tools/config_format/config_format.rs:165
+#, rust-format
+msgctxt "Error message"
+msgid "Invalid YAML: {error}"
+msgstr ""
+
+#. Translators: The {error} placeholder is replaced with the specific error message.
+#: src/tools/config_format/config_format.rs:177
+#, rust-format
+msgctxt "Error message"
+msgid "Invalid TOML: {error}"
+msgstr ""
+
+#. Translators: The {error} placeholder is replaced with the specific error message.
+#. Translator: {error} is replaced with the error message
+#: src/tools/config_format/config_format.rs:197
+#: src/tools/config_format/config_format.rs:210
+#: src/tools/config_format/config_format.rs:223
+#: src/tools/config_format/config_format.rs:236
+#: src/tools/config_format/config_format.rs:249
+#: src/tools/config_format/config_format.rs:262
+#, rust-format
+msgctxt "Error message"
+msgid "Conversion Error: {error}"
+msgstr ""
+
+#: src/tools/config_format/mod.rs:20
+msgctxt "Tool Title"
+msgid "Configuration Format Converter"
+msgstr ""
+
+#: src/tools/config_format/mod.rs:21
+msgctxt "Tool Description"
+msgid "Convert configuration files between different formats"
+msgstr ""
+
+#: src/tools/config_format/mod.rs:22
+msgctxt "Tool Sidebar Title"
+msgid "Configuration Format"
+msgstr ""
+
+#: src/tools/config_format/mod.rs:25 src/tools/cron_gen/mod.rs:25
+#: src/tools/cron_parser/mod.rs:29
+msgctxt "Keyword"
+msgid "parser"
+msgstr ""
+
+#: src/tools/config_format/mod.rs:26
+msgctxt "Keyword"
+msgid "document"
+msgstr ""
+
+#: src/tools/config_format/mod.rs:27
+msgctxt "Keyword"
+msgid "development"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:25
+msgid "Minutes"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:28 src/tools/cron_gen/cron_gen.blp:173
+#: src/tools/cron_gen/cron_gen.blp:318 src/tools/cron_gen/cron_gen.blp:463
+#: src/tools/cron_gen/cron_gen.blp:615
+msgid "Mode"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:33
+msgid "Every minute"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:34 src/tools/cron_gen/cron_gen.blp:179
+#: src/tools/cron_gen/cron_gen.blp:324 src/tools/cron_gen/cron_gen.blp:469
+#: src/tools/cron_gen/cron_gen.blp:621
+msgid "Repeated"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:35 src/tools/cron_gen/cron_gen.blp:180
+#: src/tools/cron_gen/cron_gen.blp:325 src/tools/cron_gen/cron_gen.blp:470
+#: src/tools/cron_gen/cron_gen.blp:622
+msgid "Choose from list"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:36 src/tools/cron_gen/cron_gen.blp:115
+#: src/tools/cron_gen/cron_gen.blp:181 src/tools/cron_gen/cron_gen.blp:260
+#: src/tools/cron_gen/cron_gen.blp:326 src/tools/cron_gen/cron_gen.blp:405
+#: src/tools/cron_gen/cron_gen.blp:471 src/tools/cron_gen/cron_gen.blp:550
+#: src/tools/cron_gen/cron_gen.blp:623 src/tools/cron_gen/cron_gen.blp:702
+msgid "Range"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:44 src/tools/cron_gen/cron_gen.blp:189
+#: src/tools/cron_gen/cron_gen.blp:334 src/tools/cron_gen/cron_gen.blp:479
+#: src/tools/cron_gen/cron_gen.blp:631
+msgid "Repeated Every"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:56
+msgid "Minutes interval"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:75
+msgid "Starting at minute"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:97
+msgid "Specific minutes"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:104 src/tools/cron_gen/cron.rs:113
+msgid "Any minute"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:127
+msgid "Start minute"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:146
+msgid "End minute"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:170
+msgid "Hours"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:178
+msgid "Every hour"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:201
+msgid "Hours interval"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:220
+msgid "Starting at hour"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:242
+msgid "Specific hours"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:249 src/tools/cron_gen/cron.rs:114
+msgid "Any hour"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:272
+msgid "Start hour"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:291
+msgid "End hour"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:315 src/tools/timestamp/timestamp.blp:119
+msgid "Day"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:323
+msgid "Every day"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:346 src/tools/cron_gen/cron_gen.blp:643
+msgid "Days interval"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:365 src/tools/cron_gen/cron_gen.blp:662
+msgid "Starting on day"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:387
+msgid "Specific Days"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:394 src/tools/cron_gen/cron.rs:115
+msgid "Any day"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:417
+msgid "Start day"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:436
+msgid "End day"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:460 src/tools/timestamp/timestamp.blp:134
+msgid "Month"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:468
+msgid "Every month"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:491
+msgid "Months interval"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:510
+msgid "Starting in month"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:532
+msgid "Specific Months"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:539 src/tools/cron_gen/cron.rs:116
+msgid "Any month"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:562
+msgid "Start month"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:580
+msgid "End month"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:603
+msgid "Day of Week"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:607
+msgid "0 = Sunday, 6 = Saturday"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:620
+msgid "Every day of week"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:684
+msgid "Specific Days of Week"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:691 src/tools/cron_gen/cron.rs:117
+msgid "Any day of week"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:714
+msgid "Start day of week"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:732
+msgid "End day of week"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:758
+msgid "Command to execute"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.blp:775
+msgid "CRON expression"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:570
+msgid "Multiple selected"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:583
+msgid "January"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:584
+msgid "February"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:585
+msgid "March"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:586
+msgid "April"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:587
+msgid "May"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:588
+msgid "June"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:589 src/tools/cron_parser/cron_parser.blp:181
+msgid "July"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:590
+msgid "August"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:591
+msgid "September"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:592
+msgid "October"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:593
+msgid "November"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:594
+msgid "December"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:600 src/tools/cron_parser/cron_parser.blp:217
+msgid "Sunday"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:601
+msgid "Monday"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:602
+msgid "Tuesday"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:603
+msgid "Wednesday"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:604
+msgid "Thursday"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:605
+msgid "Friday"
+msgstr ""
+
+#: src/tools/cron_gen/cron_gen.rs:606
+msgid "Saturday"
+msgstr ""
+
+#: src/tools/cron_gen/cron.rs:123
+msgid "Select minutes"
+msgstr ""
+
+#: src/tools/cron_gen/cron.rs:124
+msgid "Select hours"
+msgstr ""
+
+#: src/tools/cron_gen/cron.rs:125
+msgid "Select days"
+msgstr ""
+
+#: src/tools/cron_gen/cron.rs:126
+msgid "Select months"
+msgstr ""
+
+#: src/tools/cron_gen/cron.rs:127
+msgid "Select days of week"
+msgstr ""
+
+#: src/tools/cron_gen/mod.rs:19
+msgctxt "Tool Title"
+msgid "CRON Expressions"
+msgstr ""
+
+#: src/tools/cron_gen/mod.rs:20
+msgctxt "Tool Description"
+msgid "Generate CRON expressions"
+msgstr ""
+
+#: src/tools/cron_gen/mod.rs:24 src/tools/cron_parser/mod.rs:28
+msgctxt "Keyword"
+msgid "schedule"
+msgstr ""
+
+#: src/tools/cron_gen/mod.rs:26
+msgctxt "Keyword"
+msgid "convert"
+msgstr ""
+
+#: src/tools/cron_gen/mod.rs:27 src/tools/cron_parser/mod.rs:30
+#: src/tools/timestamp/mod.rs:24
+msgctxt "Keyword"
+msgid "time"
+msgstr ""
+
+#: src/tools/cron_gen/mod.rs:28 src/tools/cron_parser/mod.rs:31
+#: src/tools/timestamp/mod.rs:30
+msgctxt "Keyword"
+msgid "date"
+msgstr ""
+
+#: src/tools/cron_gen/mod.rs:29 src/tools/cron_parser/mod.rs:32
+msgctxt "Keyword"
+msgid "job"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:29
+msgid "Output Length"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:30
+msgid "How many lines generated in the output"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:58
+msgid "Syntax help"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:76
+msgid "CRON Expression"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:86
+msgid "Next Executions"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:117
+#: src/tools/timestamp/timestamp.blp:111 src/tools/timestamp/timestamp.blp:253
+#: src/tools/timestamp/timestamp.blp:289
+msgid "Date"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:130
+msgid "Year Specifiers"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:134
+msgid "Year with century, padded to 4 digits"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:141
+msgid "Year divided by 100, padded to 2 digits"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:148
+msgid "Year without century, padded to 2 digits"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:155
+msgid "Month Specifiers"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:159
+msgid "Quarter of the year (1-4)"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:166
+msgid "Month number (01-12), padded to 2 digits"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:173
+msgid "Abbreviated month name, always 3 letters"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:174
+msgid "Jul"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:180
+msgid "Full month name"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:187
+msgid "Day Specifiers"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:191
+msgid "Day of the month (01-31), padded to 2 digits"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:198
+#, c-format
+msgid "same as %d but padded with spaces"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:205
+msgid "Weekday Specifiers"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:209
+msgid "Abbreviated weekday name, always 3 letters"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:210
+msgid "Sun"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:216
+msgid "Full weekday name"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:223
+msgid "Weekday as a decimal number (0-6), Sunday is 0"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:230
+msgid "Weekday as a decimal number (1-7), Monday is 1"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:237
+msgid "Week Number Specifiers"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:241
+msgid "Week number starting with Sunday (00-53), zero-padded"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:248
+msgid "Week number starting with Monday (00-53), zero-padded"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:255
+msgid "Day of Year Specifiers"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:259
+msgid "Day of the year (001-366), zero-padded"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:266
+msgid "Full Date Specifiers"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:270
+msgid "Date in MM/DD/YY format"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:277
+msgid "Locale's appropriate date representation"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:284
+msgid "ISO 8601 date format (YYYY-MM-DD)"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:291
+msgid "Date in DD-Mon-YYYY format"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:292
+msgid " 8-Jul-2001"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:302
+#: src/tools/timestamp/timestamp.blp:167 src/tools/timestamp/timestamp.blp:263
+#: src/tools/timestamp/timestamp.blp:299
+msgid "Time"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:315
+msgid "Hour Specifiers"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:319
+msgid "Hour (00-23), zero-padded"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:326
+msgid "Hour (0-23), space-padded"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:333
+msgid "Hour (01-12), zero-padded"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:340
+msgid "Hour (1-12), space-padded"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:347
+msgid "AM/PM indicator in lowercase"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:354
+msgid "AM/PM indicator in uppercase"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:361
+msgid "Minute Specifiers"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:365
+msgid "Minute (00-59), zero-padded"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:372
+msgid "Second Specifiers"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:376
+msgid "Second (00-59), zero-padded"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:383
+msgid "Fractional seconds"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:390
+msgid "Fractional seconds, with leading dot"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:397
+msgid "Full Hour Specifiers"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:401
+msgid "Hour:Minute in 24-hour format"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:408
+msgid "Hour:Minute:Second in 24-hour format"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:415
+msgid "Locale's appropriate time representation"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:422
+msgid "Locale's appropriate 12-hour representation"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:433
+msgid "Date & Time"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:446
+msgid "Date and Time Specifiers"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:450
+msgid "Locale's date and time"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:451
+msgid "Sun Jul  8 00:34:26 2001"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:457
+msgid "ISO 8601 / RFC 3339 date and time format"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:458
+msgid "2001-07-08T00:34:26+09:30"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:468
+msgid "Other"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:481
+msgid "Timezone Specifiers"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:485
+msgid "Timezone name or abbreviation"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:492
+msgid "Offset from UTC"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:499
+msgid "Offset from UTC, with colon"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:506
+msgid "Special Character Specifiers"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:510
+msgid "Tab character (\\t)"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:517
+msgid "Newline character (\\n)"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.blp:524
+msgid "Percent sign (%)"
+msgstr ""
+
+#: src/tools/cron_parser/cron_parser.rs:71
+msgid "Copied to Clipboard"
+msgstr ""
+
+#: src/tools/cron_parser/mod.rs:22
+msgctxt "Tool Title"
+msgid "CRON Parser"
+msgstr ""
+
+#: src/tools/cron_parser/mod.rs:23
+msgctxt "Tool Description"
+msgid "Convert CRON expressions to human-readable format"
+msgstr ""
+
+#: src/tools/cron_parser/specifier_row.rs:82
+msgid "Example"
+msgstr ""
+
+#: src/tools/html_enc/html_enc.blp:27
+msgid "Direction"
+msgstr ""
+
+#: src/tools/html_enc/html_enc.rs:109
+msgid "Invalid input. Check the syntax"
+msgstr ""
+
+#: src/tools/html_enc/mod.rs:18
+msgctxt "Tool Title"
+msgid "HTML Encoder & Decoder"
+msgstr ""
+
+#: src/tools/html_enc/mod.rs:19
+msgctxt "Tool Description"
+msgid "Encode and decode special characters in HTML"
+msgstr ""
+
+#: src/tools/html_enc/mod.rs:20
+msgctxt "Tool Sidebar Title"
+msgid "HTML"
+msgstr ""
+
+#: src/tools/html_enc/mod.rs:23
+msgctxt "Keyword"
+msgid "escape"
+msgstr ""
+
+#: src/tools/html_enc/mod.rs:24
+msgctxt "Keyword"
+msgid "markup"
+msgstr ""
+
+#: src/tools/html_enc/mod.rs:25
+msgctxt "Keyword"
+msgid "text"
+msgstr ""
+
+#: src/tools/html_enc/mod.rs:26
+msgctxt "Keyword"
+msgid "website"
+msgstr ""
+
+#: src/tools/linux_permissions/linux_permissions.blp:29
+msgid "Permissions"
+msgstr ""
+
+#: src/tools/linux_permissions/linux_permissions.blp:41
+msgid "Owner"
+msgstr ""
+
+#: src/tools/linux_permissions/linux_permissions.blp:54
+msgid "Group"
+msgstr ""
+
+#: src/tools/linux_permissions/linux_permissions.blp:67
+msgid "Others"
+msgstr ""
+
+#: src/tools/linux_permissions/linux_permissions.blp:80
+msgid "Read"
+msgstr ""
+
+#: src/tools/linux_permissions/linux_permissions.blp:127
+msgid "Write"
+msgstr ""
+
+#: src/tools/linux_permissions/linux_permissions.blp:174
+msgid "Execute"
+msgstr ""
+
+#: src/tools/linux_permissions/linux_permissions.blp:223
+msgid "Special Bits"
+msgstr ""
+
+#: src/tools/linux_permissions/linux_permissions.blp:236
+msgid "Set UID"
+msgstr ""
+
+#: src/tools/linux_permissions/linux_permissions.blp:251
+msgid "Set GID"
+msgstr ""
+
+#: src/tools/linux_permissions/linux_permissions.blp:266
+msgid "Sticky"
+msgstr ""
+
+#: src/tools/linux_permissions/linux_permissions.blp:281
+msgid "Values"
+msgstr ""
+
+#: src/tools/linux_permissions/linux_permissions.blp:284
+msgid "Numeric Value"
+msgstr ""
+
+#: src/tools/linux_permissions/linux_permissions.blp:293
+msgid "Symbolic Value"
+msgstr ""
+
+#: src/tools/linux_permissions/mod.rs:19
+msgctxt "Tool Title"
+msgid "Linux Permissions"
+msgstr ""
+
+#: src/tools/linux_permissions/mod.rs:20
+msgctxt "Tool Description"
+msgid "Calculate permissions values"
+msgstr ""
+
+#: src/tools/linux_permissions/mod.rs:24
+msgctxt "Keyword"
+msgid "file"
+msgstr ""
+
+#: src/tools/linux_permissions/mod.rs:27
+msgctxt "Keyword"
+msgid "mode"
+msgstr ""
+
+#: src/tools/linux_permissions/mod.rs:28
+msgctxt "Keyword"
+msgid "access"
+msgstr ""
+
+#: src/tools/macros.rs:24
+msgctxt "ToolCategory"
+msgid "Converters"
+msgstr ""
+
+#: src/tools/macros.rs:25
+msgctxt "ToolCategory"
+msgid "Encoders & Decoders"
+msgstr ""
+
+#: src/tools/macros.rs:26
+msgctxt "ToolCategory"
+msgid "Formatters"
+msgstr ""
+
+#: src/tools/macros.rs:27
+msgctxt "ToolCategory"
+msgid "Generators"
+msgstr ""
+
+#: src/tools/macros.rs:28
+msgctxt "ToolCategory"
+msgid "Text"
+msgstr ""
+
+#: src/tools/macros.rs:29
+msgctxt "ToolCategory"
+msgid "Graphics"
+msgstr ""
+
+#: src/tools/macros.rs:30
+msgctxt "ToolCategory"
+msgid "Certificates"
+msgstr ""
+
+#: src/tools/number_bases/mod.rs:20
+msgctxt "Tool Title"
+msgid "Number Bases"
+msgstr ""
+
+#: src/tools/number_bases/mod.rs:21
+msgctxt "Tool Description"
+msgid "Convert numbers across different bases."
+msgstr ""
+
+#: src/tools/number_bases/mod.rs:28
+msgctxt "Keyword"
+msgid "representation"
+msgstr ""
+
+#: src/tools/number_bases/mod.rs:29
+msgctxt "Keyword"
+msgid "binary"
+msgstr ""
+
+#: src/tools/number_bases/mod.rs:30
+msgctxt "Keyword"
+msgid "decimal"
+msgstr ""
+
+#: src/tools/number_bases/mod.rs:31
+msgctxt "Keyword"
+msgid "hexadecimal"
+msgstr ""
+
+#: src/tools/number_bases/mod.rs:32
+msgctxt "Keyword"
+msgid "octal"
+msgstr ""
+
+#: src/tools/number_bases/mod.rs:33
+msgctxt "Keyword"
+msgid "integer"
+msgstr ""
+
+#: src/tools/number_bases/number_bases.blp:27
+msgid "Decimal"
+msgstr ""
+
+#: src/tools/number_bases/number_bases.blp:35
+msgid "Binary"
+msgstr ""
+
+#: src/tools/number_bases/number_bases.blp:43
+msgid "Octal"
+msgstr ""
+
+#: src/tools/number_bases/number_bases.blp:51
+msgid "Hexadecimal"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:18
+msgctxt "Tool Title"
+msgid "Timestamp Converter"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:19
+msgctxt "Tool Description"
+msgid "Convert timestamps between different formats"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:20
+msgctxt "Tool Sidebar Title"
+msgid "Timestamp"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:23
+msgctxt "Keyword"
+msgid "epoch"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:25 src/tools/timestamp/mod.rs:31
+msgctxt "Keyword"
+msgid "format"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:26
+msgctxt "Keyword"
+msgid "parse"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:27
+msgctxt "Keyword"
+msgid "datetime"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:28
+msgctxt "Keyword"
+msgid "calendar"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:32
+msgctxt "Keyword"
+msgid "short"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:33
+msgctxt "Keyword"
+msgid "long"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:36
+msgctxt "Keyword"
+msgid "years"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:37
+msgctxt "Keyword"
+msgid "months"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:38
+msgctxt "Keyword"
+msgid "days"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:39
+msgctxt "Keyword"
+msgid "hours"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:40
+msgctxt "Keyword"
+msgid "minutes"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:41
+msgctxt "Keyword"
+msgid "seconds"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:42
+msgctxt "Keyword"
+msgid "timezone"
+msgstr ""
+
+#: src/tools/timestamp/mod.rs:43
+msgctxt "Keyword"
+msgid "now"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.blp:30 src/tools/timestamp/timestamp.blp:72
+msgid "Timestamp"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.blp:38 src/tools/timestamp/timestamp.blp:99
+msgid "Now"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.blp:39
+msgid "Set current timestamp"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.blp:50
+msgid "Copy current timestamp"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.blp:91
+msgid "Date &amp; Time"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.blp:100
+msgid "Set current date and time"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.blp:149
+msgid "Year"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.blp:175
+msgid "Hour"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.blp:190
+msgid "Minute"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.blp:205
+msgid "Second"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.blp:225
+msgid "Standard Formats"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.blp:240
+msgid "Short Format"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.blp:276
+msgid "Long Format"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.rs:220
+msgid "Timezone"
+msgstr ""
+
+#: src/tools/timestamp/timestamp.rs:221
+msgid "Select the timezone for conversion"
+msgstr ""

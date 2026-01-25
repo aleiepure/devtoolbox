@@ -22,7 +22,7 @@ impl ToolCategory {
     pub fn category_title(&self) -> String {
         match self {
             ToolCategory::Converters => pgettext("ToolCategory", "Converters").to_string(),
-            ToolCategory::Encoders => pgettext("ToolCategory", "Encoders").to_string(),
+            ToolCategory::Encoders => pgettext("ToolCategory", "Encoders & Decoders").to_string(),
             ToolCategory::Formatters => pgettext("ToolCategory", "Formatters").to_string(),
             ToolCategory::Generators => pgettext("ToolCategory", "Generators").to_string(),
             ToolCategory::Text => pgettext("ToolCategory", "Text").to_string(),

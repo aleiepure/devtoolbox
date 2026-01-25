@@ -52,3 +52,7 @@ find data -maxdepth 2 -type f -name "*.gschema.xml" 2>/dev/null >> "$TEMP_POTFIL
 rm "$TEMP_POTFILES"
 
 echo "Generated $POTFILES with $(wc -l < "$POTFILES") files"
+
+# Regenerate translation templates in flatpak build terminal
+flatpak build --with-appdir --allow=devel .flatpak/repo bash -lc "ninja -C _build devtoolbox-pot" 
+flatpak build --with-appdir --allow=devel .flatpak/repo bash -lc "ninja -C _build devtoolbox-update-po"

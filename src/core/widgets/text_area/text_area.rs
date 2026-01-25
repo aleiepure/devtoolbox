@@ -252,13 +252,10 @@ mod imp {
                     self.read_file_into_text_area(&file).await;
                 }
                 Err(err) => {
-                    self.obj().emit_by_name::<()>(
-                        "error",
-                        &[&pgettext(
-                            "Error message",
-                            format!("Unable to open file: {message}", message = err.message()),
-                        )],
-                    );
+                    // Translator: {message} is replaced with the error message
+                    let tmpl = pgettext("Error message", "Unable to open file: {message}");
+                    let msg = tmpl.replace("{message}", &err.message());
+                    self.obj().emit_by_name::<()>("error", &[&msg]);
                 }
             }
             self.open_button.set_sensitive(true);
@@ -338,13 +335,10 @@ mod imp {
                     }
                 }
                 Err(err) => {
-                    self.obj().emit_by_name::<()>(
-                        "error",
-                        &[&pgettext(
-                            "Error message",
-                            format!("Unable to read file: {message}", message = err.message()),
-                        )],
-                    );
+                    // Translator: {message} is replaced with the error message
+                    let tmpl = pgettext("Error message", "Unable to read file: {message}");
+                    let msg = tmpl.replace("{message}", &err.to_string());
+                    self.obj().emit_by_name::<()>("error", &[&msg]);
                 }
             }
             self.view_stack.set_visible_child_name("text-area");

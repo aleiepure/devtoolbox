@@ -7,7 +7,7 @@
 
 use adw::subclass::prelude::*;
 use gtk::prelude::*;
-use gtk::{glib, glib::Properties, CompositeTemplate};
+use gtk::{glib, CompositeTemplate};
 
 use std::cell::RefCell;
 

@@ -219,6 +219,10 @@ mod imp {
                     use crate::tools::linux_permissions::LinuxPermissionsWidget;
                     LinuxPermissionsWidget::new().upcast()
                 }
+                "html_enc" => {
+                    use crate::tools::html_enc::HtmlEncWidget;
+                    HtmlEncWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

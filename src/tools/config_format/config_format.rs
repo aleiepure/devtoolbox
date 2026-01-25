@@ -9,7 +9,9 @@ use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gdk, glib, glib::Properties, CompositeTemplate};
 
-use std::cell::RefCell;
+use std::cell::{Cell, RefCell};
+
+use gettextrs::pgettext;
 
 use crate::core::widgets::text_area::TextArea;
 use crate::tools::config_format::conversion::{
@@ -18,8 +20,6 @@ use crate::tools::config_format::conversion::{
 };
 
 mod imp {
-    use std::cell::Cell;
-
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate, Properties)]
@@ -43,15 +43,6 @@ mod imp {
         output_area: TemplateChild<TextArea>,
 
         // Properties
-        #[property(set, get, type = String)]
-        tool_id: RefCell<String>,
-
-        #[property(set, get, type = String)]
-        title: RefCell<String>,
-
-        #[property(set, get, type = String)]
-        description: RefCell<String>,
-
         #[property(set, get, type = bool, default = false)]
         dragging: RefCell<bool>,
 
@@ -158,8 +149,10 @@ mod imp {
                 ConfigFormat::Json => {
                     if let Err(e) = validate_json(&input_text) {
                         self.input_area.set_error(true);
-                        self.input_area
-                            .set_error_label(format!("Invalid JSON: {}", e));
+                        // Translators: The {error} placeholder is replaced with the specific error message.
+                        let tmpl = pgettext("Error message", "Invalid JSON: {error}");
+                        let msg = tmpl.replace("{error}", &e.to_string());
+                        self.output_area.set_error_label(msg);
                         return;
                     } else {
                         self.input_area.set_error(false);
@@ -168,8 +161,10 @@ mod imp {
                 ConfigFormat::Yaml => {
                     if let Err(e) = validate_yaml(&input_text) {
                         self.input_area.set_error(true);
-                        self.input_area
-                            .set_error_label(format!("Invalid YAML: {}", e));
+                        // Translators: The {error} placeholder is replaced with the specific error message.
+                        let tmpl = pgettext("Error message", "Invalid YAML: {error}");
+                        let msg = tmpl.replace("{error}", &e.to_string());
+                        self.output_area.set_error_label(msg);
                         return;
                     } else {
                         self.input_area.set_error(false);
@@ -178,8 +173,10 @@ mod imp {
                 ConfigFormat::Toml => {
                     if let Err(e) = validate_toml(&input_text) {
                         self.input_area.set_error(true);
-                        self.input_area
-                            .set_error_label(format!("Invalid TOML: {}", e));
+                        // Translators: The {error} placeholder is replaced with the specific error message.
+                        let tmpl = pgettext("Error message", "Invalid TOML: {error}");
+                        let msg = tmpl.replace("{error}", &e.to_string());
+                        self.output_area.set_error_label(msg);
                         return;
                     } else {
                         self.input_area.set_error(false);
@@ -196,8 +193,10 @@ mod imp {
                     }
                     Err(e) => {
                         self.output_area.set_error(true);
-                        self.output_area
-                            .set_error_label(format!("Conversion error: {}", e));
+                        // Translators: The {error} placeholder is replaced with the specific error message.
+                        let tmpl = pgettext("Error message", "Conversion Error: {error}");
+                        let msg = tmpl.replace("{error}", &e.to_string());
+                        self.output_area.set_error_label(msg);
                     }
                 },
                 (ConfigFormat::Json, ConfigFormat::Toml) => match json_to_toml(&input_text) {
@@ -207,8 +206,10 @@ mod imp {
                     }
                     Err(e) => {
                         self.output_area.set_error(true);
-                        self.output_area
-                            .set_error_label(format!("Conversion error: {}", e));
+                        // Translator: {error} is replaced with the error message
+                        let tmpl = pgettext("Error message", "Conversion Error: {error}");
+                        let msg = tmpl.replace("{error}", &e.to_string());
+                        self.output_area.set_error_label(msg);
                     }
                 },
                 (ConfigFormat::Yaml, ConfigFormat::Json) => match yaml_to_json(&input_text) {
@@ -218,8 +219,10 @@ mod imp {
                     }
                     Err(e) => {
                         self.output_area.set_error(true);
-                        self.output_area
-                            .set_error_label(format!("Conversion error: {}", e));
+                        // Translator: {error} is replaced with the error message
+                        let tmpl = pgettext("Error message", "Conversion Error: {error}");
+                        let msg = tmpl.replace("{error}", &e.to_string());
+                        self.output_area.set_error_label(msg);
                     }
                 },
                 (ConfigFormat::Yaml, ConfigFormat::Toml) => match yaml_to_toml(&input_text) {
@@ -229,8 +232,10 @@ mod imp {
                     }
                     Err(e) => {
                         self.output_area.set_error(true);
-                        self.output_area
-                            .set_error_label(format!("Conversion error: {}", e));
+                        // Translator: {error} is replaced with the error message
+                        let tmpl = pgettext("Error message", "Conversion Error: {error}");
+                        let msg = tmpl.replace("{error}", &e.to_string());
+                        self.output_area.set_error_label(msg);
                     }
                 },
                 (ConfigFormat::Toml, ConfigFormat::Json) => match toml_to_json(&input_text) {
@@ -240,8 +245,10 @@ mod imp {
                     }
                     Err(e) => {
                         self.output_area.set_error(true);
-                        self.output_area
-                            .set_error_label(format!("Conversion error: {}", e));
+                        // Translator: {error} is replaced with the error message
+                        let tmpl = pgettext("Error message", "Conversion Error: {error}");
+                        let msg = tmpl.replace("{error}", &e.to_string());
+                        self.output_area.set_error_label(msg);
                     }
                 },
                 (ConfigFormat::Toml, ConfigFormat::Yaml) => match toml_to_yaml(&input_text) {
@@ -251,8 +258,10 @@ mod imp {
                     }
                     Err(e) => {
                         self.output_area.set_error(true);
-                        self.output_area
-                            .set_error_label(format!("Conversion error: {}", e));
+                        // Translator: {error} is replaced with the error message
+                        let tmpl = pgettext("Error message", "Conversion Error: {error}");
+                        let msg = tmpl.replace("{error}", &e.to_string());
+                        self.output_area.set_error_label(msg);
                     }
                 },
                 _ => {}

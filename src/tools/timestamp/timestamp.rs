@@ -7,9 +7,9 @@
 
 use adw::subclass::prelude::*;
 use gtk::prelude::*;
-use gtk::{gdk, glib, glib::Properties, CompositeTemplate};
+use gtk::{gdk, glib, CompositeTemplate};
 
-use std::cell::{OnceCell, RefCell};
+use std::cell::OnceCell;
 
 use adw::prelude::PreferencesGroupExt;
 use chrono_tz::TZ_VARIANTS;
@@ -21,9 +21,8 @@ mod imp {
 
     use super::*;
 
-    #[derive(Debug, Default, CompositeTemplate, Properties)]
+    #[derive(Debug, Default, CompositeTemplate)]
     #[template(resource = "/me/iepure/Devtoolbox/tools/timestamp/timestamp.ui")]
-    #[properties(wrapper_type = super::TimestampWidget)]
     pub struct TimestampWidget {
         // Template widgets
         #[template_child]
@@ -73,16 +72,6 @@ mod imp {
 
         #[template_child]
         full_long_entryrow: TemplateChild<adw::EntryRow>,
-
-        // Properties
-        #[property(set, get, type = String)]
-        tool_id: RefCell<String>,
-
-        #[property(set, get, type = String)]
-        title: RefCell<String>,
-
-        #[property(set, get, type = String)]
-        description: RefCell<String>,
 
         // Other fields
         /// The timezone ComboRow built programmatically
@@ -287,7 +276,6 @@ mod imp {
         }
     }
 
-    #[glib::derived_properties]
     impl ObjectImpl for TimestampWidget {
         fn constructed(&self) {
             self.parent_constructed();
