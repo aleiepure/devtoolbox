@@ -26,6 +26,7 @@
     <file>tools/cron_gen/cron_gen.ui</file>
     <file>tools/linux_permissions/linux_permissions.ui</file>
     <file>tools/html_enc/html_enc.ui</file>
+    <file>tools/base64/base64.ui</file>
   </gresource>
   
   <!-- Icons -->
@@ -54,6 +55,7 @@
     <file compressed="true" alias="padlock2-symbolic.svg">../data/icons/symbolic/padlock2-symbolic.svg</file>
     <file compressed="true" alias="ticket-special-symbolic.svg">../data/icons/symbolic/ticket-special-symbolic.svg</file>
     <file compressed="true" alias="horizontal-arrows-long-none-symbolic.svg">../data/icons/symbolic/horizontal-arrows-long-none-symbolic.svg</file>
+    <file compressed="true" alias="chain-link-symbolic.svg">../data/icons/symbolic/chain-link-symbolic.svg</file>
 
     <!-- Tool icons -->
     <file compressed="true" alias="config_format-symbolic.svg">../data/icons/symbolic/tools/config_format-symbolic.svg</file>
@@ -63,5 +65,6 @@
     <file compressed="true" alias="cron_gen-symbolic.svg">../data/icons/symbolic/tools/cron_gen-symbolic.svg</file>
     <file compressed="true" alias="linux_permissions-symbolic.svg">../data/icons/symbolic/tools/linux_permissions-symbolic.svg</file>
     <file compressed="true" alias="html_enc-symbolic.svg">../data/icons/symbolic/tools/html_enc-symbolic.svg</file>
+    <file compressed="true" alias="base64-symbolic.svg">../data/icons/symbolic/tools/base64-symbolic.svg</file>
   </gresource>
 </gresources>

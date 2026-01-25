@@ -1,5 +1,5 @@
 /*
- * html_enc.rs
+ * base64.rs
  *
  * Copyright (C) 2025 Alessandro Iepure
  * SPDX-License-Identifier: GPL-3.0-or-later
@@ -9,24 +9,29 @@ use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{gdk, glib, glib::Properties, CompositeTemplate};
 
-use gettextrs::gettext;
 use std::cell::RefCell;
 
 use crate::core::widgets::TextArea;
+
+use base64::engine::general_purpose::URL_SAFE;
+use base64::prelude::*;
 
 mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate, Properties)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/html_enc/html_enc.ui")]
-    #[properties(wrapper_type = super::HtmlEncWidget)]
-    pub struct HtmlEncWidget {
+    #[template(resource = "/me/iepure/Devtoolbox/tools/base64/base64.ui")]
+    #[properties(wrapper_type = super::Base64Widget)]
+    pub struct Base64Widget {
         // Template widgets
         #[template_child]
         toast_overlay: TemplateChild<adw::ToastOverlay>,
 
         #[template_child]
         direction_toggle_group: TemplateChild<adw::ToggleGroup>,
+
+        #[template_child]
+        url_safe_switchrow: TemplateChild<adw::SwitchRow>,
 
         #[template_child]
         input_area: TemplateChild<TextArea>,
@@ -40,9 +45,9 @@ mod imp {
     }
 
     #[glib::object_subclass]
-    impl ObjectSubclass for HtmlEncWidget {
-        const NAME: &'static str = "HtmlEncWidget";
-        type Type = super::HtmlEncWidget;
+    impl ObjectSubclass for Base64Widget {
+        const NAME: &'static str = "Base64Widget";
+        type Type = super::Base64Widget;
         type ParentType = adw::Bin;
 
         fn class_init(klass: &mut Self::Class) {
@@ -56,10 +61,15 @@ mod imp {
     }
 
     #[gtk::template_callbacks]
-    impl HtmlEncWidget {
+    impl Base64Widget {
         // Template callbacks and closures
         #[template_callback]
         fn on_signal_notify_active_direction_toggle_group(&self) {
+            self.do_conversion();
+        }
+
+        #[template_callback]
+        fn on_signal_notify_active_url_safe_switchrow(&self) {
             self.do_conversion();
         }
 
@@ -88,23 +98,48 @@ mod imp {
 
         // Other methods
         fn encode(&self) {
-            let input_text = self.input_area.text();
-            let encoded_text = htmlescape::encode_minimal(&input_text);
-            self.output_area.set_text(encoded_text);
-            self.input_area.set_error(false);
+            if self.url_safe_switchrow.is_active() {
+                // URL Safe Base64 encoding
+                let input_text = self.input_area.text();
+                let encoded = URL_SAFE.encode(input_text);
+                self.output_area.set_text(encoded);
+            } else {
+                // Standard Base64 encoding
+                let input_text = self.input_area.text();
+                let encoded = BASE64_STANDARD.encode(input_text);
+                self.output_area.set_text(encoded);
+            }
         }
 
         fn decode(&self) {
-            let input_text = self.input_area.text();
-            match htmlescape::decode_html(&input_text) {
-                Ok(decoded_text) => {
-                    self.output_area.set_text(decoded_text);
-                    self.input_area.set_error(false);
+            if self.url_safe_switchrow.is_active() {
+                // URL Safe Base64 decoding
+                let input_text = self.input_area.text();
+                match URL_SAFE.decode(input_text) {
+                    Ok(decoded_bytes) => {
+                        let decoded_text = String::from_utf8_lossy(&decoded_bytes).to_string();
+                        self.output_area.set_text(decoded_text);
+                        self.input_area.set_error(false);
+                    }
+                    Err(_err) => {
+                        self.input_area.set_error(true);
+                        self.input_area
+                            .set_error_label("Invalid URL Safe Base64 input");
+                    }
                 }
-                Err(_err) => {
-                    self.input_area.set_error(true);
-                    self.input_area
-                        .set_error_label(gettext("Invalid input. Check the syntax"));
+            } else {
+                // Standard Base64 decoding
+                let input_text = self.input_area.text();
+                match BASE64_STANDARD.decode(input_text) {
+                    Ok(decoded_bytes) => {
+                        let decoded_text = String::from_utf8_lossy(&decoded_bytes).to_string();
+                        self.output_area.set_text(decoded_text);
+                        self.input_area.set_error(false);
+                    }
+                    Err(_err) => {
+                        self.input_area.set_error(true);
+                        self.input_area.set_error_label("Invalid Base64 input");
+                    }
                 }
             }
         }
@@ -119,7 +154,7 @@ mod imp {
     }
 
     #[glib::derived_properties]
-    impl ObjectImpl for HtmlEncWidget {
+    impl ObjectImpl for Base64Widget {
         fn constructed(&self) {
             self.parent_constructed();
 
@@ -142,17 +177,17 @@ mod imp {
         }
     }
 
-    impl WidgetImpl for HtmlEncWidget {}
-    impl BinImpl for HtmlEncWidget {}
+    impl WidgetImpl for Base64Widget {}
+    impl BinImpl for Base64Widget {}
 }
 
 glib::wrapper! {
-    pub struct HtmlEncWidget(ObjectSubclass<imp::HtmlEncWidget>)
+    pub struct Base64Widget(ObjectSubclass<imp::Base64Widget>)
         @extends gtk::Widget, adw::Bin,
         @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget, gtk::Orientable;
 }
 
-impl HtmlEncWidget {
+impl Base64Widget {
     pub fn new() -> Self {
         glib::Object::builder().build()
     }

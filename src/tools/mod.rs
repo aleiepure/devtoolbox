@@ -5,6 +5,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
+pub mod base64;
 pub mod config_format;
 pub mod cron_gen;
 pub mod cron_parser;
@@ -37,6 +38,7 @@ pub static ALL_TOOLS: Lazy<Vec<&'static ToolMetadata>> = Lazy::new(|| {
         &*cron_gen::CRON_GEN_TOOL_METADATA,
         &*linux_permissions::LINUX_PERMISSIONS_TOOL_METADATA,
         &*html_enc::HTML_ENC_TOOL_METADATA,
+        &*base64::BASE64_TOOL_METADATA,
     ]; // TODO: add new tools here
     tools.sort_by(|a, b| a.category.cmp(&b.category));
     tools

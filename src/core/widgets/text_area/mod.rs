@@ -6,4 +6,5 @@
 */
 
 mod text_area;
+mod wrap_mode;
 pub use text_area::TextArea;

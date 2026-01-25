@@ -65,6 +65,7 @@ blueprint_files = files(
   'tools/cron_gen/cron_gen.blp',
   'tools/linux_permissions/linux_permissions.blp',
   'tools/html_enc/html_enc.blp',
+  'tools/base64/base64.blp',
 )
 
 compile_blueprint = custom_target('blueprints',

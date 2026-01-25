@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-25 16:30+0100\n"
+"POT-Creation-Date: 2026-01-25 17:36+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,11 +43,11 @@ msgstr ""
 msgid "Window maximized"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:34
+#: data/me.iepure.Devtoolbox.gschema.xml:35
 msgid "Last used tool"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:38
+#: data/me.iepure.Devtoolbox.gschema.xml:39
 msgid "Sidebar open"
 msgstr ""
 
@@ -213,51 +213,51 @@ msgstr ""
 msgid "Open File"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:217
+#: src/core/widgets/text_area/text_area.rs:221
 msgctxt "File filter"
 msgid "Text Files"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:225
+#: src/core/widgets/text_area/text_area.rs:229
 msgctxt "File filter"
 msgid "Supported File Types"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:235
+#: src/core/widgets/text_area/text_area.rs:239
 msgctxt "File filter"
 msgid "All Files"
 msgstr ""
 
 #. Translator: {message} is replaced with the error message
-#: src/core/widgets/text_area/text_area.rs:256
+#: src/core/widgets/text_area/text_area.rs:260
 #, rust-format
 msgctxt "Error message"
 msgid "Unable to open file: {message}"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:324
+#: src/core/widgets/text_area/text_area.rs:328
 msgctxt "Error message"
 msgid "The file does not contain plain text"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:333
+#: src/core/widgets/text_area/text_area.rs:337
 msgctxt "Error message"
 msgid "The file is empty."
 msgstr ""
 
 #. Translator: {message} is replaced with the error message
-#: src/core/widgets/text_area/text_area.rs:339
+#: src/core/widgets/text_area/text_area.rs:343
 #, rust-format
 msgctxt "Error message"
 msgid "Unable to read file: {message}"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:377
-#: src/core/widgets/text_area/text_area.rs:522
+#: src/core/widgets/text_area/text_area.rs:381
+#: src/core/widgets/text_area/text_area.rs:535
 msgid "Loading..."
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:469
+#: src/core/widgets/text_area/text_area.rs:482
 msgctxt "Error message"
 msgid "Only one file can be opened at a time."
 msgstr ""
@@ -270,11 +270,63 @@ msgstr ""
 msgid "Remove from Favorites"
 msgstr ""
 
-#: src/tools/config_format/config_format.blp:25
-#: src/tools/cron_parser/cron_parser.blp:25 src/tools/html_enc/html_enc.blp:25
+#: src/tools/base64/base64.blp:26 src/tools/config_format/config_format.blp:25
+#: src/tools/cron_parser/cron_parser.blp:25 src/tools/html_enc/html_enc.blp:26
 #: src/tools/linux_permissions/linux_permissions.blp:26
 #: src/tools/timestamp/timestamp.blp:25
 msgid "Options"
+msgstr ""
+
+#: src/tools/base64/base64.blp:29 src/tools/html_enc/html_enc.blp:28
+msgid "Direction"
+msgstr ""
+
+#: src/tools/base64/base64.blp:49
+msgid "URL Safe"
+msgstr ""
+
+#: src/tools/base64/base64.blp:50
+msgid "Use URL and Filename safe alphabet"
+msgstr ""
+
+#: src/tools/base64/base64.blp:64 src/tools/config_format/config_format.blp:94
+#: src/tools/html_enc/html_enc.blp:57
+msgid "Input"
+msgstr ""
+
+#: src/tools/base64/base64.blp:81 src/tools/config_format/config_format.blp:112
+#: src/tools/html_enc/html_enc.blp:76
+msgid "Output"
+msgstr ""
+
+#: src/tools/base64/mod.rs:18
+msgctxt "Tool Title"
+msgid "Base64 Encoder & Decoder"
+msgstr ""
+
+#: src/tools/base64/mod.rs:19
+msgctxt "Tool Description"
+msgid "Encode and decode text in Base64 format"
+msgstr ""
+
+#: src/tools/base64/mod.rs:20
+msgctxt "Tool Sidebar Title"
+msgid "Base64"
+msgstr ""
+
+#: src/tools/base64/mod.rs:23
+msgctxt "Keyword"
+msgid "string"
+msgstr ""
+
+#: src/tools/base64/mod.rs:24 src/tools/html_enc/mod.rs:25
+msgctxt "Keyword"
+msgid "text"
+msgstr ""
+
+#: src/tools/base64/mod.rs:25
+msgctxt "Keyword"
+msgid "data"
 msgstr ""
 
 #: src/tools/config_format/config_format.blp:28
@@ -292,16 +344,6 @@ msgstr ""
 
 #: src/tools/config_format/config_format.blp:58
 msgid "Select the format of the output."
-msgstr ""
-
-#: src/tools/config_format/config_format.blp:94
-#: src/tools/html_enc/html_enc.blp:56
-msgid "Input"
-msgstr ""
-
-#: src/tools/config_format/config_format.blp:112
-#: src/tools/html_enc/html_enc.blp:75
-msgid "Output"
 msgstr ""
 
 #. Translators: The {error} placeholder is replaced with the specific error message.
@@ -1005,11 +1047,7 @@ msgstr ""
 msgid "Example"
 msgstr ""
 
-#: src/tools/html_enc/html_enc.blp:27
-msgid "Direction"
-msgstr ""
-
-#: src/tools/html_enc/html_enc.rs:109
+#: src/tools/html_enc/html_enc.rs:107
 msgid "Invalid input. Check the syntax"
 msgstr ""
 
@@ -1036,11 +1074,6 @@ msgstr ""
 #: src/tools/html_enc/mod.rs:24
 msgctxt "Keyword"
 msgid "markup"
-msgstr ""
-
-#: src/tools/html_enc/mod.rs:25
-msgctxt "Keyword"
-msgid "text"
 msgstr ""
 
 #: src/tools/html_enc/mod.rs:26

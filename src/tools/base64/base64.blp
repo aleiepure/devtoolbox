@@ -1,5 +1,5 @@
 /*
- * html_enc.blp
+ * base64.blp
  *
  * Copyright (C) 2025 Alessandro Iepure
  * SPDX-License-Identifier: GPL-3.0-or-later
@@ -7,7 +7,7 @@
 using Gtk 4.0;
 using Adw 1;
 
-template $HtmlEncWidget: Adw.Bin {
+template $Base64Widget: Adw.Bin {
   Adw.ToastOverlay toast_overlay {
     child: ScrolledWindow {
       child: Adw.Clamp {
@@ -24,6 +24,7 @@ template $HtmlEncWidget: Adw.Bin {
           // MARK: - Tool Settings
           Adw.PreferencesGroup {
             title: _("Options");
+
             Adw.ActionRow {
               title: _("Direction");
               icon-name: "horizontal-arrows-long-none";
@@ -43,6 +44,13 @@ template $HtmlEncWidget: Adw.Bin {
                 }
               }
             }
+
+            Adw.SwitchRow url_safe_switchrow {
+              title: _("URL Safe");
+              subtitle: _("Use URL and Filename safe alphabet");
+              icon-name: "chain-link";
+              notify::active => $on_signal_notify_active_url_safe_switchrow() swapped;
+            }
           }
 
           // MARK: - Tool Main Content
@@ -51,24 +59,21 @@ template $HtmlEncWidget: Adw.Bin {
             homogeneous: true;
             spacing: 12;
             margin-bottom: 12;
-
             // Input Text Area
             $TextArea input_area {
               title: _("Input");
               open-button-visible: true;
               paste-button-visible: true;
               clear-button-visible: true;
-              show-line-numbers: true;
-              highlight-syntax: true;
-              highlight-current-line: true;
-              language: "html";
               editable: true;
               allow-drag-and-drop: true;
               dragging: bind template.dragging;
               filter-text-files: true;
+              wrap-mode: "word-char";
               changed => $on_signal_changed_input_area() swapped;
               error => $on_signal_error_input_area() swapped;
               cleared => $on_signal_cleared_input_area() swapped;
+              monospace: true;
             }
 
             // Output Text Area
@@ -76,12 +81,10 @@ template $HtmlEncWidget: Adw.Bin {
               title: _("Output");
               copy-button-visible: true;
               editable: false;
+              wrap-mode: "char";
               allow-drag-and-drop: false;
-              show-line-numbers: true;
-              highlight-syntax: true;
-              highlight-current-line: false;
-              language: "html";
               error => $on_signal_error_output_area() swapped;
+              monospace: true;
             }
           }
         };

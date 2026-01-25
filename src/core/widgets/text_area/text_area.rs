@@ -8,17 +8,17 @@
 use adw::subclass::prelude::*;
 use gettextrs::{gettext, pgettext};
 use gtk::prelude::*;
-use gtk::{glib, glib::Properties, CompositeTemplate};
+use gtk::{gdk, gio, glib, glib::subclass::Signal, glib::Properties, CompositeTemplate};
 use sourceview::prelude::*;
 
 use std::cell::RefCell;
 
+use std::{fmt::Debug, sync::OnceLock};
+
+use crate::core::widgets::text_area::wrap_mode::WrapMode;
+
 // MARK: Implementation
 mod imp {
-    use std::{fmt::Debug, sync::OnceLock};
-
-    use gtk::{gdk, gio, glib::subclass::Signal};
-
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate, Properties)]
@@ -148,6 +148,10 @@ mod imp {
         /// Error label shown as tooltip when hovering over the error icon. Useful only if 'error' is true.
         #[property(set, get, type = String, default = "")]
         error_label: RefCell<String>,
+
+        /// Wrap mode of the text area. Accepts: "none", "char", "word", "word-char"
+        #[property(set, get, type = String, default = "none")]
+        wrap_mode: RefCell<String>,
 
         // MARK: Other fields
         text_changed_handler_id: RefCell<Option<glib::SignalHandlerId>>,
@@ -444,6 +448,15 @@ mod imp {
                         .source_view
                         .remove_css_class("error-highlight");
                 }
+            });
+
+            // Wrap mode
+            let obj = self.obj().clone();
+            obj.connect_notify_local(Some("wrap-mode"), move |text_area, _param_spec| {
+                let wrap_mode_str = text_area.wrap_mode();
+                let wrap_mode_enum = WrapMode::from(wrap_mode_str.as_str());
+                let gtk_wrap_mode = gtk::WrapMode::from(wrap_mode_enum);
+                text_area.imp().source_view.set_wrap_mode(gtk_wrap_mode);
             });
 
             // Drag and drop

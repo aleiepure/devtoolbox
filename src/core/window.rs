@@ -223,6 +223,10 @@ mod imp {
                     use crate::tools::html_enc::HtmlEncWidget;
                     HtmlEncWidget::new().upcast()
                 }
+                "base64" => {
+                    use crate::tools::base64::Base64Widget;
+                    Base64Widget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

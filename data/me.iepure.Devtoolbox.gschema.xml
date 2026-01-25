@@ -30,6 +30,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                 <choice value="cron_gen"/>
                 <choice value="linux_permissions"/>
                 <choice value="html_enc"/>
+                <choice value="base64"/>
 			</choices>
 			<summary>Last used tool</summary>
 			<default>"config_format"</default>
