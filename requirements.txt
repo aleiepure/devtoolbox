@@ -13,7 +13,7 @@ croniter==4.0.0
 pyjwt==2.10.1
 cryptography==45.0.4
 
-sqlparse==0.5.3
+sqlparse==0.5.4
 
 lxml==5.4.0
 
