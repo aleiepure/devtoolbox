@@ -35,3 +35,5 @@ src/tools/number_bases/number_bases.blp
 src/tools/timestamp/mod.rs
 src/tools/timestamp/timestamp.blp
 src/tools/timestamp/timestamp.rs
+src/tools/url_enc/mod.rs
+src/tools/url_enc/url_enc.blp

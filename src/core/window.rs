@@ -227,6 +227,10 @@ mod imp {
                     use crate::tools::base64::Base64Widget;
                     Base64Widget::new().upcast()
                 }
+                "url_enc" => {
+                    use crate::tools::url_enc::UrlEncWidget;
+                    UrlEncWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

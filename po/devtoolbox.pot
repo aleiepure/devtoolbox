@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-25 17:36+0100\n"
+"POT-Creation-Date: 2026-02-15 12:11+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,11 +43,11 @@ msgstr ""
 msgid "Window maximized"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:35
+#: data/me.iepure.Devtoolbox.gschema.xml:36
 msgid "Last used tool"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:39
+#: data/me.iepure.Devtoolbox.gschema.xml:40
 msgid "Sidebar open"
 msgstr ""
 
@@ -273,11 +273,12 @@ msgstr ""
 #: src/tools/base64/base64.blp:26 src/tools/config_format/config_format.blp:25
 #: src/tools/cron_parser/cron_parser.blp:25 src/tools/html_enc/html_enc.blp:26
 #: src/tools/linux_permissions/linux_permissions.blp:26
-#: src/tools/timestamp/timestamp.blp:25
+#: src/tools/timestamp/timestamp.blp:25 src/tools/url_enc/url_enc.blp:26
 msgid "Options"
 msgstr ""
 
 #: src/tools/base64/base64.blp:29 src/tools/html_enc/html_enc.blp:28
+#: src/tools/url_enc/url_enc.blp:29
 msgid "Direction"
 msgstr ""
 
@@ -290,12 +291,12 @@ msgid "Use URL and Filename safe alphabet"
 msgstr ""
 
 #: src/tools/base64/base64.blp:64 src/tools/config_format/config_format.blp:94
-#: src/tools/html_enc/html_enc.blp:57
+#: src/tools/html_enc/html_enc.blp:57 src/tools/url_enc/url_enc.blp:58
 msgid "Input"
 msgstr ""
 
 #: src/tools/base64/base64.blp:81 src/tools/config_format/config_format.blp:112
-#: src/tools/html_enc/html_enc.blp:76
+#: src/tools/html_enc/html_enc.blp:76 src/tools/url_enc/url_enc.blp:71
 msgid "Output"
 msgstr ""
 
@@ -1401,4 +1402,49 @@ msgstr ""
 
 #: src/tools/timestamp/timestamp.rs:221
 msgid "Select the timezone for conversion"
+msgstr ""
+
+#: src/tools/url_enc/mod.rs:18
+msgctxt "Tool Title"
+msgid "URL Encoder & Decoder"
+msgstr ""
+
+#: src/tools/url_enc/mod.rs:19
+msgctxt "Tool Description"
+msgid "Encode and decode special characters in URLs"
+msgstr ""
+
+#: src/tools/url_enc/mod.rs:20
+msgctxt "Tool Sidebar Title"
+msgid "URL"
+msgstr ""
+
+#: src/tools/url_enc/mod.rs:23
+msgctxt "Keyword"
+msgid "unescape"
+msgstr ""
+
+#: src/tools/url_enc/mod.rs:24
+msgctxt "Keyword"
+msgid "web"
+msgstr ""
+
+#: src/tools/url_enc/mod.rs:25
+msgctxt "Keyword"
+msgid "link"
+msgstr ""
+
+#: src/tools/url_enc/mod.rs:26
+msgctxt "Keyword"
+msgid "address"
+msgstr ""
+
+#: src/tools/url_enc/mod.rs:27
+msgctxt "Keyword"
+msgid "uri"
+msgstr ""
+
+#: src/tools/url_enc/mod.rs:28
+msgctxt "Keyword"
+msgid "query"
 msgstr ""

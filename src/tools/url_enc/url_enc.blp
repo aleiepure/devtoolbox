@@ -1,0 +1,82 @@
+/*
+ * url_enc.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $UrlEncWidget : Adw.Bin {
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+          spacing: 12;
+          margin-bottom: 12;
+          margin-top: 12;
+
+          // MARK: - Tool Settings
+          Adw.PreferencesGroup {
+            title: _("Options");
+
+            Adw.ActionRow {
+              title: _("Direction");
+              icon-name: "horizontal-arrows-long-none";
+
+              [suffix]
+              Adw.ToggleGroup direction_toggle_group {
+                valign: center;
+                active: 0;
+                notify::active => $on_signal_notify_active_direction_toggle_group() swapped;
+
+                Adw.Toggle {
+                  label: "Encode";
+                }
+
+                Adw.Toggle decode_toggle {
+                  label: "Decode";
+                }
+              }
+            }
+          }
+
+          // MARK: - Tool Main Content
+          Box {
+            orientation: horizontal;
+            homogeneous: true;
+            spacing: 12;
+            margin-bottom: 12;
+
+            // Input Text Area
+            $TextArea input_area {
+              title: _("Input");
+              open-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+              editable: true;
+              wrap-mode: "char";
+              changed => $on_signal_changed_input_area() swapped;
+              error => $on_signal_error_input_area() swapped;
+              cleared => $on_signal_cleared_input_area() swapped;
+            }
+
+            // Output Text Area
+            $TextArea output_area {
+              title: _("Output");
+              copy-button-visible: true;
+              editable: false;
+              wrap-mode: "char";
+              error => $on_signal_error_output_area() swapped;
+            }
+          }
+        };
+      };
+    };
+  }
+}
