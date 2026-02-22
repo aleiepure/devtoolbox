@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-15 15:52+0100\n"
+"POT-Creation-Date: 2026-02-22 17:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,11 +43,11 @@ msgstr ""
 msgid "Window maximized"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:36
+#: data/me.iepure.Devtoolbox.gschema.xml:37
 msgid "Last used tool"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:40
+#: data/me.iepure.Devtoolbox.gschema.xml:41
 msgid "Sidebar open"
 msgstr ""
 
@@ -273,7 +273,8 @@ msgstr ""
 #: src/tools/base64/base64.blp:26 src/tools/config_format/config_format.blp:25
 #: src/tools/cron_parser/cron_parser.blp:25 src/tools/html_enc/html_enc.blp:26
 #: src/tools/linux_permissions/linux_permissions.blp:26
-#: src/tools/timestamp/timestamp.blp:25 src/tools/url_enc/url_enc.blp:26
+#: src/tools/lipsum/lipsum.blp:26 src/tools/timestamp/timestamp.blp:25
+#: src/tools/url_enc/url_enc.blp:26
 msgid "Options"
 msgstr ""
 
@@ -1161,6 +1162,60 @@ msgstr ""
 #: src/tools/linux_permissions/mod.rs:28
 msgctxt "Keyword"
 msgid "access"
+msgstr ""
+
+#: src/tools/lipsum/lipsum.blp:29
+msgid "Begin with 'Lorem ipsum dolor sit amet...'"
+msgstr ""
+
+#: src/tools/lipsum/lipsum.blp:35
+msgid "Length"
+msgstr ""
+
+#: src/tools/lipsum/lipsum.blp:39
+msgid "Words"
+msgstr ""
+
+#: src/tools/lipsum/lipsum.blp:40
+msgid "Sentences"
+msgstr ""
+
+#: src/tools/lipsum/lipsum.blp:41
+msgid "Paragraphs"
+msgstr ""
+
+#: src/tools/lipsum/lipsum.blp:65
+msgid "Generated Text"
+msgstr ""
+
+#: src/tools/lipsum/mod.rs:19
+msgctxt "Tool Title"
+msgid "Lorem Ipsum"
+msgstr ""
+
+#: src/tools/lipsum/mod.rs:20
+msgctxt "Tool Description"
+msgid "Generate placeholder text"
+msgstr ""
+
+#: src/tools/lipsum/mod.rs:24
+msgctxt "Keyword"
+msgid "dummy"
+msgstr ""
+
+#: src/tools/lipsum/mod.rs:25
+msgctxt "Keyword"
+msgid "sample"
+msgstr ""
+
+#: src/tools/lipsum/mod.rs:26
+msgctxt "Keyword"
+msgid "filler"
+msgstr ""
+
+#: src/tools/lipsum/mod.rs:27
+msgctxt "Keyword"
+msgid "latin"
 msgstr ""
 
 #: src/tools/macros.rs:24

@@ -29,6 +29,8 @@ src/tools/html_enc/html_enc.rs
 src/tools/html_enc/mod.rs
 src/tools/linux_permissions/linux_permissions.blp
 src/tools/linux_permissions/mod.rs
+src/tools/lipsum/lipsum.blp
+src/tools/lipsum/mod.rs
 src/tools/macros.rs
 src/tools/number_bases/mod.rs
 src/tools/number_bases/number_bases.blp

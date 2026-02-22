@@ -231,6 +231,10 @@ mod imp {
                     use crate::tools::url_enc::UrlEncWidget;
                     UrlEncWidget::new().upcast()
                 }
+                "lipsum" => {
+                    use crate::tools::lipsum::LipsumWidget;
+                    LipsumWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

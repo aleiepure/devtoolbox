@@ -28,6 +28,7 @@
     <file>tools/html_enc/html_enc.ui</file>
     <file>tools/base64/base64.ui</file>
     <file>tools/url_enc/url_enc.ui</file>
+    <file>tools/lipsum/lipsum.ui</file>
   </gresource>
   
   <!-- Icons -->
@@ -69,5 +70,6 @@
     <file compressed="true" alias="html_enc-symbolic.svg">../data/icons/symbolic/tools/html_enc-symbolic.svg</file>
     <file compressed="true" alias="base64-symbolic.svg">../data/icons/symbolic/tools/base64-symbolic.svg</file>
     <file compressed="true" alias="url_enc-symbolic.svg">../data/icons/symbolic/tools/url_enc-symbolic.svg</file>
+    <file compressed="true" alias="lipsum-symbolic.svg">../data/icons/symbolic/tools/lipsum-symbolic.svg</file>
   </gresource>
 </gresources>

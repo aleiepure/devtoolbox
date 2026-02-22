@@ -6,9 +6,9 @@ license = "GPL-3.0-or-later"
 
 [dependencies]
 gettext-rs = { version = "0.7", features = ["gettext-system"] }
-gtk = { version = "0.10.3", package = "gtk4", features = ["gnome_49"] }
-adw = { version = "0.8.1", package = "libadwaita", features = ["v1_8"] }
-sourceview = { version = "0.10.0", package = "sourceview5" }
+gtk = { version = "0.11.0", package = "gtk4", features = ["gnome_49"] }
+adw = { version = "0.9.1", package = "libadwaita", features = ["v1_8"] }
+sourceview = { version = "0.11.0", package = "sourceview5" }
 pastey = "0.2.1"
 once_cell = "1.21.3"
 
@@ -27,3 +27,6 @@ htmlescape = "0.3.1"
 base64 = "0.22.1"
 
 pct-str = "3.0.1"
+
+lipsum = "0.9.1"
+rand = "0.8.5" # lipsum depends on rand == "0.8.5"

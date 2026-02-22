@@ -11,6 +11,7 @@ pub mod cron_gen;
 pub mod cron_parser;
 pub mod html_enc;
 pub mod linux_permissions;
+pub mod lipsum;
 pub mod macros;
 pub mod number_bases;
 pub mod timestamp;
@@ -41,6 +42,7 @@ pub static ALL_TOOLS: Lazy<Vec<&'static ToolMetadata>> = Lazy::new(|| {
         &*html_enc::HTML_ENC_TOOL_METADATA,
         &*base64::BASE64_TOOL_METADATA,
         &*url_enc::URL_ENC_TOOL_METADATA,
+        &*lipsum::LIPSUM_TOOL_METADATA,
     ]; // TODO: add new tools here
     tools.sort_by(|a, b| a.category.cmp(&b.category));
     tools
