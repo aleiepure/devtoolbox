@@ -29,5 +29,5 @@ define_tool!(
         pgettext("Keyword", "job"),
         "linux".to_string(),
         "unix".to_string(),
-    ], // TODO: add keywords
+    ],
 );

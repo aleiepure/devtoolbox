@@ -29,12 +29,6 @@ mod imp {
 
         #[template_child]
         output_area: TemplateChild<TextArea>,
-        // Properties (if not needed, remove Properties derive and this section)
-        // #[property(get, set, type = bool, default = false)]
-        // example_property: RefCell<bool>,
-
-        // Other fields
-        // example_variable: RefCell<bool>,
     }
 
     #[glib::object_subclass]
@@ -67,18 +61,30 @@ mod imp {
         }
 
         #[template_callback]
-        fn on_signal_error_input_area(&self) {}
+        fn on_signal_error_input_area(&self, error_message: String) {
+            self.input_area.set_error(true);
+            self.input_area.set_error_label(error_message);
+        }
 
         #[template_callback]
-        fn on_signal_cleared_input_area(&self) {}
+        fn on_signal_cleared_input_area(&self) {
+            self.output_area.clear();
+            self.input_area.set_error(false);
+            self.output_area.set_error(false);
+        }
 
         #[template_callback]
-        fn on_signal_error_output_area(&self) {}
+        fn on_signal_error_output_area(&self, error_message: String) {
+            self.output_area.set_error(true);
+            self.output_area.set_error_label(error_message);
+        }
 
         // Other methods
         fn encode(&self) {
             let pct_string = PctString::encode(self.input_area.text().chars(), UriReserved::Any);
             self.output_area.set_text(pct_string.to_string());
+            self.input_area.set_error(false);
+            self.output_area.set_error(false);
         }
 
         fn decode(&self) {
@@ -98,13 +104,7 @@ mod imp {
         }
     }
 
-    impl ObjectImpl for UrlEncWidget {
-        fn constructed(&self) {
-            self.parent_constructed();
-            // Initialization code here, delete whole function if not needed
-        }
-    }
-
+    impl ObjectImpl for UrlEncWidget {}
     impl WidgetImpl for UrlEncWidget {}
     impl BinImpl for UrlEncWidget {}
 }

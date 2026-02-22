@@ -71,19 +71,20 @@ mod imp {
         #[template_callback]
         fn on_signal_cleared_input_area(&self) {
             self.output_area.clear();
-            self.toast_overlay.dismiss_all();
+            self.input_area.set_error(false);
+            self.output_area.set_error(false);
         }
 
         #[template_callback]
         fn on_signal_error_input_area(&self, error_message: String) {
-            let toast = adw::Toast::builder().title(error_message).build();
-            self.toast_overlay.add_toast(toast);
+            self.input_area.set_error(true);
+            self.input_area.set_error_label(error_message);
         }
 
         #[template_callback]
         fn on_signal_error_output_area(&self, error_message: String) {
-            let toast = adw::Toast::builder().title(error_message).build();
-            self.toast_overlay.add_toast(toast);
+            self.output_area.set_error(true);
+            self.output_area.set_error_label(error_message);
         }
 
         // Other methods

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-15 12:11+0100\n"
+"POT-Creation-Date: 2026-02-15 15:52+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1048,7 +1048,7 @@ msgstr ""
 msgid "Example"
 msgstr ""
 
-#: src/tools/html_enc/html_enc.rs:107
+#: src/tools/html_enc/html_enc.rs:108
 msgid "Invalid input. Check the syntax"
 msgstr ""
 
