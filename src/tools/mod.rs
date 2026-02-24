@@ -16,6 +16,7 @@ pub mod macros;
 pub mod number_bases;
 pub mod timestamp;
 pub mod url_enc;
+pub mod uuid;
 
 use once_cell::sync::Lazy;
 
@@ -43,6 +44,7 @@ pub static ALL_TOOLS: Lazy<Vec<&'static ToolMetadata>> = Lazy::new(|| {
         &*base64::BASE64_TOOL_METADATA,
         &*url_enc::URL_ENC_TOOL_METADATA,
         &*lipsum::LIPSUM_TOOL_METADATA,
+        &*uuid::UUID_TOOL_METADATA,
     ]; // TODO: add new tools here
     tools.sort_by(|a, b| a.category.cmp(&b.category));
     tools

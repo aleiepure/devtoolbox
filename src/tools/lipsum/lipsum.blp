@@ -28,6 +28,7 @@ template $LipsumWidget: Adw.Bin {
             Adw.SwitchRow begin_with_lorem_switchrow {
               title: _("Begin with 'Lorem ipsum dolor sit amet...'");
               active: true;
+              icon-name: "headings";
               notify::active => $on_signal_notify_active_begin_with_lorem_switchrow() swapped;
             }
 

@@ -39,3 +39,5 @@ src/tools/timestamp/timestamp.blp
 src/tools/timestamp/timestamp.rs
 src/tools/url_enc/mod.rs
 src/tools/url_enc/url_enc.blp
+src/tools/uuid/mod.rs
+src/tools/uuid/uuid.blp

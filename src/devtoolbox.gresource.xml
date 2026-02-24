@@ -29,6 +29,7 @@
     <file>tools/base64/base64.ui</file>
     <file>tools/url_enc/url_enc.ui</file>
     <file>tools/lipsum/lipsum.ui</file>
+    <file>tools/uuid/uuid.ui</file>
   </gresource>
   
   <!-- Icons -->
@@ -59,6 +60,7 @@
     <file compressed="true" alias="horizontal-arrows-long-none-symbolic.svg">../data/icons/symbolic/horizontal-arrows-long-none-symbolic.svg</file>
     <file compressed="true" alias="chain-link-symbolic.svg">../data/icons/symbolic/chain-link-symbolic.svg</file>
     <file compressed="true" alias="keyboard-keys-symbolic.svg">../data/icons/symbolic/keyboard-keys-symbolic.svg</file>
+    <file compressed="true" alias="headings-symbolic.svg">../data/icons/symbolic/headings-symbolic.svg</file>
 
     <!-- Tool icons -->
     <file compressed="true" alias="config_format-symbolic.svg">../data/icons/symbolic/tools/config_format-symbolic.svg</file>
@@ -71,5 +73,6 @@
     <file compressed="true" alias="base64-symbolic.svg">../data/icons/symbolic/tools/base64-symbolic.svg</file>
     <file compressed="true" alias="url_enc-symbolic.svg">../data/icons/symbolic/tools/url_enc-symbolic.svg</file>
     <file compressed="true" alias="lipsum-symbolic.svg">../data/icons/symbolic/tools/lipsum-symbolic.svg</file>
+    <file compressed="true" alias="uuid-symbolic.svg">../data/icons/symbolic/tools/uuid-symbolic.svg</file>
   </gresource>
 </gresources>

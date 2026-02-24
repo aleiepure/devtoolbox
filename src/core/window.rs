@@ -235,6 +235,10 @@ mod imp {
                     use crate::tools::lipsum::LipsumWidget;
                     LipsumWidget::new().upcast()
                 }
+                "uuid" => {
+                    use crate::tools::uuid::UuidWidget;
+                    UuidWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

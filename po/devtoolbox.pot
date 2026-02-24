@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-22 17:05+0100\n"
+"POT-Creation-Date: 2026-02-24 11:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,11 +43,11 @@ msgstr ""
 msgid "Window maximized"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:37
+#: data/me.iepure.Devtoolbox.gschema.xml:38
 msgid "Last used tool"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:41
+#: data/me.iepure.Devtoolbox.gschema.xml:42
 msgid "Sidebar open"
 msgstr ""
 
@@ -274,7 +274,7 @@ msgstr ""
 #: src/tools/cron_parser/cron_parser.blp:25 src/tools/html_enc/html_enc.blp:26
 #: src/tools/linux_permissions/linux_permissions.blp:26
 #: src/tools/lipsum/lipsum.blp:26 src/tools/timestamp/timestamp.blp:25
-#: src/tools/url_enc/url_enc.blp:26
+#: src/tools/url_enc/url_enc.blp:26 src/tools/uuid/uuid.blp:26
 msgid "Options"
 msgstr ""
 
@@ -746,7 +746,7 @@ msgctxt "Keyword"
 msgid "job"
 msgstr ""
 
-#: src/tools/cron_parser/cron_parser.blp:29
+#: src/tools/cron_parser/cron_parser.blp:29 src/tools/uuid/uuid.blp:45
 msgid "Output Length"
 msgstr ""
 
@@ -1168,23 +1168,23 @@ msgstr ""
 msgid "Begin with 'Lorem ipsum dolor sit amet...'"
 msgstr ""
 
-#: src/tools/lipsum/lipsum.blp:35
+#: src/tools/lipsum/lipsum.blp:36
 msgid "Length"
 msgstr ""
 
-#: src/tools/lipsum/lipsum.blp:39
+#: src/tools/lipsum/lipsum.blp:40
 msgid "Words"
 msgstr ""
 
-#: src/tools/lipsum/lipsum.blp:40
+#: src/tools/lipsum/lipsum.blp:41
 msgid "Sentences"
 msgstr ""
 
-#: src/tools/lipsum/lipsum.blp:41
+#: src/tools/lipsum/lipsum.blp:42
 msgid "Paragraphs"
 msgstr ""
 
-#: src/tools/lipsum/lipsum.blp:65
+#: src/tools/lipsum/lipsum.blp:66
 msgid "Generated Text"
 msgstr ""
 
@@ -1502,4 +1502,56 @@ msgstr ""
 #: src/tools/url_enc/mod.rs:28
 msgctxt "Keyword"
 msgid "query"
+msgstr ""
+
+#: src/tools/uuid/mod.rs:18
+msgctxt "Tool Title"
+msgid "UUID Generator"
+msgstr ""
+
+#: src/tools/uuid/mod.rs:19
+msgctxt "Tool Description"
+msgid "Generate Universal Unique IDs"
+msgstr ""
+
+#: src/tools/uuid/mod.rs:23
+msgctxt "Keyword"
+msgid "identifier"
+msgstr ""
+
+#: src/tools/uuid/mod.rs:24
+msgctxt "Keyword"
+msgid "random"
+msgstr ""
+
+#: src/tools/uuid/uuid.blp:29
+msgid "Version"
+msgstr ""
+
+#: src/tools/uuid/uuid.blp:33
+msgid "Version 1 (MAC Address)"
+msgstr ""
+
+#: src/tools/uuid/uuid.blp:34
+msgid "Version 3"
+msgstr ""
+
+#: src/tools/uuid/uuid.blp:35
+msgid "Version 4 (Random)"
+msgstr ""
+
+#: src/tools/uuid/uuid.blp:36
+msgid "Version 5"
+msgstr ""
+
+#: src/tools/uuid/uuid.blp:37
+msgid "Version 6 (Time-based)"
+msgstr ""
+
+#: src/tools/uuid/uuid.blp:38
+msgid "Version 7 (Unix Epoch)"
+msgstr ""
+
+#: src/tools/uuid/uuid.blp:61
+msgid "Generated UUIDs"
 msgstr ""

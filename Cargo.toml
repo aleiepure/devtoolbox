@@ -29,4 +29,16 @@ base64 = "0.22.1"
 pct-str = "3.0.1"
 
 lipsum = "0.9.1"
-rand = "0.8.5" # lipsum depends on rand == "0.8.5"
+rand = "0.8.5"   # lipsum depends on rand == "0.8.5"
+
+uuid = { version = "1.21.0", features = [
+    "std",
+    "rng",
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7",
+] }
+mac_address = "1.1.8"
