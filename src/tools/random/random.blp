@@ -1,0 +1,321 @@
+/*
+ * random.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $RandomWidget: Adw.Bin {
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+          spacing: 12;
+          margin-bottom: 12;
+          margin-top: 12;
+          
+          // MARK: - Strings
+          Adw.PreferencesGroup {
+            title: _("Strings");
+            description: _("Generate a random string with the given options");
+
+            Adw.SpinRow string_length_spinrow {
+              title: _("Length");
+              icon-name: "size-horizontally";
+
+              adjustment: Adjustment {
+                lower: 1;
+                upper: 100;
+                step-increment: 1;
+                page-increment: 10;
+                value: 14;
+              };
+
+              notify::value => $on_signal_notify_value_string_length_spinrow() swapped;
+            }
+
+            Adw.ActionRow {
+              title: _("Character Sets");
+              icon-name: "uppercase";
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                spacing: 12;
+
+                styles [
+                  "last-in-row",
+                ]
+
+                CheckButton string_uppercase_checkbutton {
+                  label: _("A-Z");
+                  active: true;
+
+                  styles [
+                    "heading",
+                  ]
+
+                  toggled => $on_signal_toggled_string_uppercase_checkbutton() swapped;
+                }
+
+                CheckButton string_lowercase_checkbutton {
+                  label: _("a-z");
+                  active: true;
+
+                  styles [
+                    "heading",
+                  ]
+
+                  toggled => $on_signal_toggled_string_lowercase_checkbutton() swapped;
+                }
+
+                CheckButton string_numbers_checkbutton {
+                  label: _("0-9");
+                  active: true;
+
+                  styles [
+                    "heading",
+                  ]
+
+                  toggled => $on_signal_toggled_string_numbers_checkbutton() swapped;
+                }
+
+                CheckButton string_symbols_checkbutton {
+                  label: _("!@#$%^&*");
+
+                  styles [
+                    "heading",
+                  ]
+
+                  toggled => $on_signal_toggled_string_symbols_checkbutton() swapped;
+                }
+              }
+            }
+
+            Adw.ActionRow {
+              title: _("Minimums");
+              icon-name: "right";
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                spacing: 12;
+
+                Adw.SpinRow string_min_numbers_spinrow {
+                  title: _("Numbers");
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 100;
+                    step-increment: 1;
+                    page-increment: 10;
+                    value: 1;
+                  };
+
+                  styles [
+                    "property",
+                  ]
+
+                  notify::value => $on_signal_notify_value_string_min_numbers_spinrow() swapped;
+                }
+
+                Adw.SpinRow string_min_symbols_spinrow {
+                  title: _("Symbols");
+
+                  adjustment: Adjustment {
+                    lower: 0;
+                    upper: 100;
+                    step-increment: 1;
+                    page-increment: 10;
+                    value: 0;
+                  };
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+
+                  notify::value => $on_signal_notify_value_string_min_symbols_spinrow() swapped;
+                }
+              }
+            }
+
+            Adw.SwitchRow string_avoid_ambiguous_switchrow {
+              title: _("Avoid Ambiguous Characters");
+              icon-name: "symbols";
+              notify::active => $on_signal_notify_active_string_avoid_ambiguous_switchrow() swapped;
+            }
+          }
+
+          Adw.PreferencesGroup {
+            $ActionableEntryRow string_result_entryrow {
+              title: _("Generated String");
+              generate-button-visible: true;
+              copy-button-visible: true;
+              editable: false;
+
+              styles [
+                "monospace",
+              ]
+
+              generate => $on_signal_clicked_string_result_entryrow_generate_button() swapped;
+            }
+          }
+
+          Separator {}
+
+          // MARK: - Numbers
+          Adw.PreferencesGroup {
+            title: _("Numbers");
+            description: _("Generate a random number in the given range");
+
+            Adw.ActionRow {
+              title: _("Range");
+              icon-name: "size-horizontally";
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                spacing: 12;
+
+                Adw.SpinRow number_min_spinrow {
+                  title: _("Minimum");
+
+                  adjustment: Adjustment {
+                    lower: -2147483648;
+                    upper: 2147483647;
+                    step-increment: 1;
+                    page-increment: 10;
+                    value: 25;
+                  };
+
+                  styles [
+                    "property",
+                  ]
+
+                  notify::value => $on_signal_notify_value_number_min_spinrow() swapped;
+                }
+
+                Adw.SpinRow number_max_spinrow {
+                  title: _("Maximum");
+
+                  adjustment: Adjustment {
+                    lower: -2147483648;
+                    upper: 2147483647;
+                    step-increment: 1;
+                    page-increment: 10;
+                    value: 100;
+                  };
+
+                  styles [
+                    "property",
+                    "last-in-row",
+                  ]
+
+                  notify::value => $on_signal_notify_value_number_max_spinrow() swapped;
+                }
+              }
+            }
+          }
+
+          Adw.PreferencesGroup {
+            $ActionableEntryRow number_result_entryrow {
+              title: _("Generated Number");
+              generate-button-visible: true;
+              copy-button-visible: true;
+              editable: false;
+
+              styles [
+                "monospace",
+              ]
+
+              generate => $on_signal_clicked_number_result_entryrow_generate_button() swapped;
+            }
+          }
+
+          Separator {}
+
+          // MARK: - Passphrases
+          Adw.PreferencesGroup {
+            title: _("Passphrases");
+            description: _("Generate a random passphrase");
+
+            Adw.SpinRow passphrase_length_spinrow {
+              title: _("Number of Words");
+              icon-name: "size-horizontally";
+
+              adjustment: Adjustment {
+                lower: 3;
+                upper: 20;
+                step-increment: 1;
+                page-increment: 10;
+                value: 5;
+              };
+
+              notify::value => $on_signal_notify_value_passphrase_length_spinrow() swapped;
+            }
+
+            Adw.ActionRow {
+              title: _("Options");
+              icon-name: "wrench-wide";
+
+              [suffix]
+              Box {
+                orientation: horizontal;
+                spacing: 12;
+
+                Adw.EntryRow passphrase_separator_entryrow {
+                  title: _("Separator");
+                  text: "-";
+                  changed => $on_signal_changed_passphrase_separator_entryrow() swapped;
+                }
+
+                CheckButton passphrase_capitalize_checkbutton {
+                  label: _("Capitalize Words");
+
+                  styles [
+                    "heading",
+                  ]
+
+                  toggled => $on_signal_toggled_passphrase_capitalize_checkbutton() swapped;
+                }
+
+                CheckButton passphrase_include_number_checkbutton {
+                  label: _("Include Number");
+
+                  styles [
+                    "heading",
+                  ]
+
+                  toggled => $on_signal_toggled_passphrase_include_number_checkbutton() swapped;
+                }
+              }
+            }
+          }
+
+          Adw.PreferencesGroup {
+            $ActionableEntryRow passphrase_result_entryrow {
+              title: _("Generated Passphrase");
+              generate-button-visible: true;
+              copy-button-visible: true;
+              editable: false;
+
+              styles [
+                "monospace",
+              ]
+
+              generate => $on_signal_clicked_passphrase_result_entryrow_generate_button() swapped;
+            }
+          }
+        };
+      };
+    };
+  }
+}

@@ -239,6 +239,10 @@ mod imp {
                     use crate::tools::uuid::UuidWidget;
                     UuidWidget::new().upcast()
                 }
+                "random" => {
+                    use crate::tools::random::RandomWidget;
+                    RandomWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

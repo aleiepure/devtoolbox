@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-24 11:02+0100\n"
+"POT-Creation-Date: 2026-03-01 11:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,11 +43,11 @@ msgstr ""
 msgid "Window maximized"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:38
+#: data/me.iepure.Devtoolbox.gschema.xml:39
 msgid "Last used tool"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:42
+#: data/me.iepure.Devtoolbox.gschema.xml:43
 msgid "Sidebar open"
 msgstr ""
 
@@ -273,8 +273,9 @@ msgstr ""
 #: src/tools/base64/base64.blp:26 src/tools/config_format/config_format.blp:25
 #: src/tools/cron_parser/cron_parser.blp:25 src/tools/html_enc/html_enc.blp:26
 #: src/tools/linux_permissions/linux_permissions.blp:26
-#: src/tools/lipsum/lipsum.blp:26 src/tools/timestamp/timestamp.blp:25
-#: src/tools/url_enc/url_enc.blp:26 src/tools/uuid/uuid.blp:26
+#: src/tools/lipsum/lipsum.blp:26 src/tools/random/random.blp:266
+#: src/tools/timestamp/timestamp.blp:25 src/tools/url_enc/url_enc.blp:26
+#: src/tools/uuid/uuid.blp:26
 msgid "Options"
 msgstr ""
 
@@ -444,6 +445,7 @@ msgstr ""
 #: src/tools/cron_gen/cron_gen.blp:326 src/tools/cron_gen/cron_gen.blp:405
 #: src/tools/cron_gen/cron_gen.blp:471 src/tools/cron_gen/cron_gen.blp:550
 #: src/tools/cron_gen/cron_gen.blp:623 src/tools/cron_gen/cron_gen.blp:702
+#: src/tools/random/random.blp:180
 msgid "Range"
 msgstr ""
 
@@ -1168,7 +1170,7 @@ msgstr ""
 msgid "Begin with 'Lorem ipsum dolor sit amet...'"
 msgstr ""
 
-#: src/tools/lipsum/lipsum.blp:36
+#: src/tools/lipsum/lipsum.blp:36 src/tools/random/random.blp:30
 msgid "Length"
 msgstr ""
 
@@ -1307,6 +1309,133 @@ msgstr ""
 
 #: src/tools/number_bases/number_bases.blp:51
 msgid "Hexadecimal"
+msgstr ""
+
+#: src/tools/random/mod.rs:18
+msgctxt "Tool Title"
+msgid "Random Generator"
+msgstr ""
+
+#: src/tools/random/mod.rs:19
+msgctxt "Tool Description"
+msgid "Generate random numbers, strings, and passphrases"
+msgstr ""
+
+#: src/tools/random/mod.rs:20
+msgctxt "Tool Sidebar Title"
+msgid "Random"
+msgstr ""
+
+#: src/tools/random/mod.rs:23
+msgctxt "Keyword"
+msgid "password"
+msgstr ""
+
+#: src/tools/random/mod.rs:24
+msgctxt "Keyword"
+msgid "token"
+msgstr ""
+
+#: src/tools/random/mod.rs:25
+msgctxt "Keyword"
+msgid "entropy"
+msgstr ""
+
+#: src/tools/random/mod.rs:26
+msgctxt "Keyword"
+msgid "secure"
+msgstr ""
+
+#: src/tools/random/random.blp:26
+msgid "Strings"
+msgstr ""
+
+#: src/tools/random/random.blp:27
+msgid "Generate a random string with the given options"
+msgstr ""
+
+#: src/tools/random/random.blp:45
+msgid "Character Sets"
+msgstr ""
+
+#: src/tools/random/random.blp:58
+msgid "A-Z"
+msgstr ""
+
+#: src/tools/random/random.blp:69
+msgid "a-z"
+msgstr ""
+
+#: src/tools/random/random.blp:80
+msgid "0-9"
+msgstr ""
+
+#: src/tools/random/random.blp:91
+msgid "!@#$%^&*"
+msgstr ""
+
+#: src/tools/random/random.blp:103
+msgid "Minimums"
+msgstr ""
+
+#: src/tools/random/random.blp:112 src/tools/random/random.blp:176
+msgid "Numbers"
+msgstr ""
+
+#: src/tools/random/random.blp:130
+msgid "Symbols"
+msgstr ""
+
+#: src/tools/random/random.blp:151
+msgid "Avoid Ambiguous Characters"
+msgstr ""
+
+#: src/tools/random/random.blp:159
+msgid "Generated String"
+msgstr ""
+
+#: src/tools/random/random.blp:177
+msgid "Generate a random number in the given range"
+msgstr ""
+
+#: src/tools/random/random.blp:189
+msgid "Minimum"
+msgstr ""
+
+#: src/tools/random/random.blp:207
+msgid "Maximum"
+msgstr ""
+
+#: src/tools/random/random.blp:230
+msgid "Generated Number"
+msgstr ""
+
+#: src/tools/random/random.blp:247
+msgid "Passphrases"
+msgstr ""
+
+#: src/tools/random/random.blp:248
+msgid "Generate a random passphrase"
+msgstr ""
+
+#: src/tools/random/random.blp:251
+msgid "Number of Words"
+msgstr ""
+
+#: src/tools/random/random.blp:275
+msgid "Separator"
+msgstr ""
+
+#: src/tools/random/random.blp:281
+msgid "Capitalize Words"
+msgstr ""
+
+#: src/tools/random/random.blp:291
+msgid "Include Number"
+msgstr ""
+
+#: src/tools/random/random.blp:305
+msgid "Generated Passphrase"
 msgstr ""
 
 #: src/tools/timestamp/mod.rs:18

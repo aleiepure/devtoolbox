@@ -69,6 +69,7 @@ blueprint_files = files(
   'tools/url_enc/url_enc.blp',
   'tools/lipsum/lipsum.blp',
   'tools/uuid/uuid.blp',
+  'tools/random/random.blp',
 )
 
 compile_blueprint = custom_target('blueprints',

@@ -34,6 +34,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                 <choice value="url_enc"/>
                 <choice value="lipsum"/>
                 <choice value="uuid"/>
+                <choice value="random"/>
 			</choices>
 			<summary>Last used tool</summary>
 			<default>"config_format"</default>

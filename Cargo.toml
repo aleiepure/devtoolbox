@@ -42,3 +42,5 @@ uuid = { version = "1.21.0", features = [
     "v7",
 ] }
 mac_address = "1.1.8"
+
+eff-wordlist = "1.0.3"
