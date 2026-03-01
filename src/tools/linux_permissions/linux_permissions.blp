@@ -226,51 +226,37 @@ template $LinuxPermissionsWidget: Adw.Bin {
               [suffix]
               Box {
                 orientation: horizontal;
-                spacing: 24;
-                
-                Box {
-                  orientation: horizontal;
-                  spacing: 6;
+                spacing: 12;
 
-                  Label {
-                    label: _("Set UID");
-                    styles ["heading"]
-                  }
+                styles [
+                  "last-in-row",
+                ]
 
-                  CheckButton set_uid_checkbutton {
-                    active: false;
-                    toggled => $on_signal_toggled_set_uid_checkbutton() swapped;
-                  }
+                CheckButton set_uid_checkbutton {
+                  label: _("Set UID");
+                  toggled => $on_signal_toggled_set_uid_checkbutton() swapped;
+
+                  styles [
+                    "heading",
+                  ]
                 }
 
-                Box {
-                  orientation: horizontal;
-                  spacing: 6;
+                CheckButton set_gid_checkbutton {
+                  label: _("Set GID");
+                  toggled => $on_signal_toggled_set_gid_checkbutton() swapped;
 
-                  Label {
-                    label: _("Set GID");
-                    styles ["heading"]
-                  }
-
-                  CheckButton set_gid_checkbutton {
-                    active: false;
-                    toggled => $on_signal_toggled_set_gid_checkbutton() swapped;
-                  }
+                  styles [
+                    "heading",
+                  ]
                 }
 
-                Box {
-                  orientation: horizontal;
-                  spacing: 6;
+                CheckButton sticky_checkbutton {
+                  label: _("Sticky");
+                  toggled => $on_signal_toggled_sticky_checkbutton() swapped;
 
-                  Label {
-                    label: _("Sticky");
-                    styles ["heading"]
-                  }
-
-                  CheckButton sticky_checkbutton {
-                    active: false;
-                    toggled => $on_signal_toggled_sticky_checkbutton() swapped;
-                  }
+                  styles [
+                    "heading",
+                  ]
                 }
               }
             }
