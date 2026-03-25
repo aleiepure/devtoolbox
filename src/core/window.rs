@@ -243,6 +243,10 @@ mod imp {
                     use crate::tools::random::RandomWidget;
                     RandomWidget::new().upcast()
                 }
+                "text_inspector" => {
+                    use crate::tools::text_inspector::TextInspectorWidget;
+                    TextInspectorWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

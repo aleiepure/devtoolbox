@@ -70,6 +70,7 @@ blueprint_files = files(
   'tools/lipsum/lipsum.blp',
   'tools/uuid/uuid.blp',
   'tools/random/random.blp',
+  'tools/text_inspector/text_inspector.blp',
 )
 
 compile_blueprint = custom_target('blueprints',

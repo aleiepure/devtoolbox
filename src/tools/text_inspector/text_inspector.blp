@@ -1,0 +1,156 @@
+/*
+ * text_inspector.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $TextInspectorWidget: Adw.Bin {
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+          spacing: 12;
+          margin-bottom: 12;
+          margin-top: 12;
+          
+          // MARK: - Tool Settings
+          Adw.PreferencesGroup {
+            title: _("Options");
+
+            Adw.ComboRow case_comborow {
+              title: _("Change case");
+              icon-name: "uppercase";
+
+              model: StringList {
+                strings [
+                  // TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+                  _("Original"),
+                  _("Sentence case"),
+                  _("Lowercase"),
+                  _("UPPERCASE"),
+                  _("Title Case"),
+                  _("camelCase"),
+                  _("PascalCase"),
+                  _("snake_case"),
+                  _("CONSTANT_CASE"),
+                  _("kebab-case"),
+                  _("COBOL-CASE"),
+                  _("Train-Case"),
+                  _("dot.case"),
+                  _("aLtErNaTiNg cAsE"),
+                  _("ReVeRsE aLtErNaTiNg CaSe"),
+                ]
+              };
+
+              // notify::selected signal connected in code, need access to handler 
+              // to block it on case change
+            }
+          }
+
+          Adw.PreferencesGroup {
+            Adw.ActionRow {
+              title: _("Statistics");
+              icon-name: "text-insert";
+
+              Box {
+                orientation: horizontal;
+                spacing: 24;
+
+                Box {
+                  orientation: horizontal;
+                  spacing: 6;
+                  Label {
+                    label: _("Line: ");
+                    styles ["dimmed"]
+                  }
+
+                  Label line_label {
+                    label: "1";
+                  }
+                }
+
+                Box {
+                  orientation: horizontal;
+                  spacing: 6;
+
+                  Label {
+                    label: _("Column: ");
+                    styles ["dimmed"]
+                  }
+
+                  Label column_label {
+                    label: "1";
+                  }
+                }
+
+                Box {
+                  orientation: horizontal;
+                  spacing: 6;
+                  Label {
+                    label: _("Characters: ");
+                    styles ["dimmed"]
+                  }
+
+                  Label characters_label {
+                    label: "0";
+                  }
+                }
+
+                Box {
+                  orientation: horizontal;
+                  spacing: 6;
+                  Label {
+                    label: _("Words: ");
+                    styles ["dimmed"]
+                  }
+
+                  Label words_label {
+                    label: "0";
+                  }
+                }
+
+                Box {
+                  orientation: horizontal;
+                  spacing: 6;
+                  Label {
+                    label: _("Lines: ");
+                    styles ["dimmed"]
+                  }
+
+                  Label lines_label {
+                    label: "0";
+                  }
+
+                  styles ["last-in-row"]
+                }
+              }
+            }
+          }
+
+          // MARK: - Tool Main Content
+          $TextArea text_area {
+            title: _("Text");
+            open-button-visible: true;
+            copy-button-visible: true;
+            paste-button-visible: true;
+            clear-button-visible: true;
+            wrap-mode: "word";
+            editable: true;
+
+            // changed signal connected in code, need access to handler to block
+            // it on case change
+            cursor-moved => $on_signal_cursor_moved_text_area() swapped;
+          }
+        };
+      };
+    };
+  }
+}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-25 14:38+0100\n"
+"POT-Creation-Date: 2026-03-25 16:59+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,11 +43,11 @@ msgstr ""
 msgid "Window maximized"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:39
+#: data/me.iepure.devtoolbox.gschema.xml:40
 msgid "Last used tool"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:43
+#: data/me.iepure.devtoolbox.gschema.xml:44
 msgid "Sidebar open"
 msgstr ""
 
@@ -252,12 +252,12 @@ msgctxt "Error message"
 msgid "Unable to read file: {message}"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:381
-#: src/core/widgets/text_area/text_area.rs:535
+#: src/core/widgets/text_area/text_area.rs:385
+#: src/core/widgets/text_area/text_area.rs:548
 msgid "Loading..."
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:482
+#: src/core/widgets/text_area/text_area.rs:494
 msgctxt "Error message"
 msgid "Only one file can be opened at a time."
 msgstr ""
@@ -274,6 +274,7 @@ msgstr ""
 #: src/tools/cron_parser/cron_parser.blp:25 src/tools/html_enc/html_enc.blp:26
 #: src/tools/linux_permissions/linux_permissions.blp:26
 #: src/tools/lipsum/lipsum.blp:26 src/tools/random/random.blp:266
+#: src/tools/text_inspector/text_inspector.blp:26
 #: src/tools/timestamp/timestamp.blp:25 src/tools/url_enc/url_enc.blp:26
 #: src/tools/uuid/uuid.blp:26
 msgid "Options"
@@ -1436,6 +1437,149 @@ msgstr ""
 
 #: src/tools/random/random.blp:305
 msgid "Generated Passphrase"
+msgstr ""
+
+#: src/tools/text_inspector/mod.rs:19
+msgctxt "Tool Title"
+msgid "Text Inspector & Case Converter"
+msgstr ""
+
+#: src/tools/text_inspector/mod.rs:20
+msgctxt "Tool Description"
+msgid "View statistics and convert case of text"
+msgstr ""
+
+#: src/tools/text_inspector/mod.rs:24
+msgctxt "Keyword"
+msgid "analyze"
+msgstr ""
+
+#: src/tools/text_inspector/mod.rs:25
+msgctxt "Keyword"
+msgid "uppercase"
+msgstr ""
+
+#: src/tools/text_inspector/mod.rs:26
+msgctxt "Keyword"
+msgid "lowercase"
+msgstr ""
+
+#: src/tools/text_inspector/mod.rs:27
+msgctxt "Keyword"
+msgid "capitalize"
+msgstr ""
+
+#: src/tools/text_inspector/mod.rs:28
+msgctxt "Keyword"
+msgid "count"
+msgstr ""
+
+#: src/tools/text_inspector/mod.rs:29
+msgctxt "Keyword"
+msgid "words"
+msgstr ""
+
+#: src/tools/text_inspector/mod.rs:30
+msgctxt "Keyword"
+msgid "characters"
+msgstr ""
+
+#: src/tools/text_inspector/mod.rs:31
+msgctxt "Keyword"
+msgid "lines"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:29
+msgid "Change case"
+msgstr ""
+
+#. TRANSLATORS: if you can't translate while preserving a reference for the output, leave it in English
+#: src/tools/text_inspector/text_inspector.blp:35
+msgid "Original"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:36
+msgid "Sentence case"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:37
+msgid "Lowercase"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:38
+msgid "UPPERCASE"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:39
+msgid "Title Case"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:40
+msgid "camelCase"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:41
+msgid "PascalCase"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:42
+msgid "snake_case"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:43
+msgid "CONSTANT_CASE"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:44
+msgid "kebab-case"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:45
+msgid "COBOL-CASE"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:46
+msgid "Train-Case"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:47
+msgid "dot.case"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:48
+msgid "aLtErNaTiNg cAsE"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:49
+msgid "ReVeRsE aLtErNaTiNg CaSe"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:60
+msgid "Statistics"
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:71
+msgid "Line: "
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:85
+msgid "Column: "
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:98
+msgid "Characters: "
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:111
+msgid "Words: "
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:124
+msgid "Lines: "
+msgstr ""
+
+#: src/tools/text_inspector/text_inspector.blp:140
+msgid "Text"
 msgstr ""
 
 #: src/tools/timestamp/mod.rs:18

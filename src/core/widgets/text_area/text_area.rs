@@ -7,8 +7,8 @@
 
 use adw::subclass::prelude::*;
 use gettextrs::{gettext, pgettext};
-use gtk::prelude::*;
 use gtk::{gdk, gio, glib, glib::subclass::Signal, glib::Properties, CompositeTemplate};
+use gtk::{prelude::*, TextBuffer};
 use sourceview::prelude::*;
 
 use std::cell::RefCell;
@@ -368,6 +368,10 @@ mod imp {
                 source_buffer.set_text(&text);
             }
         }
+
+        pub fn buffer(&self) -> TextBuffer {
+            self.source_view.buffer()
+        }
     }
 
     #[glib::derived_properties]
@@ -425,6 +429,14 @@ mod imp {
                 Some(self.source_view.buffer().connect_changed(move |_buffer| {
                     obj.emit_by_name::<()>("changed", &[]);
                 }));
+
+            // Cursor moved
+            let obj = self.obj().clone();
+            self.source_view
+                .buffer()
+                .connect_cursor_position_notify(move |_| {
+                    obj.emit_by_name::<()>("cursor-moved", &[]);
+                });
 
             // Theme changed
             let obj = self.obj().clone();
@@ -511,6 +523,7 @@ mod imp {
                         .param_types([String::static_type()])
                         .build(),
                     Signal::builder("cleared").build(),
+                    Signal::builder("cursor-moved").build(),
                 ]
             })
         }
@@ -548,7 +561,7 @@ impl TextArea {
         self.imp().set_text(text);
     }
 
-    // pub fn set_error(&self, error: bool) {
-    //     self.imp().set_error(error);
-    // }
+    pub fn buffer(&self) -> TextBuffer {
+        self.imp().buffer()
+    }
 }

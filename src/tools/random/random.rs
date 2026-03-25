@@ -13,7 +13,6 @@ use crate::core::widgets::ActionableEntryRow;
 
 use rand::prelude::SliceRandom;
 use rand::Rng;
-use std::cell::RefCell;
 
 mod imp {
     use super::*;

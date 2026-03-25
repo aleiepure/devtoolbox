@@ -31,6 +31,7 @@
     <file>tools/lipsum/lipsum.ui</file>
     <file>tools/uuid/uuid.ui</file>
     <file>tools/random/random.ui</file>
+    <file>tools/text_inspector/text_inspector.ui</file>
   </gresource>
   
   <!-- Icons -->
@@ -64,6 +65,7 @@
     <file compressed="true" alias="headings-symbolic.svg">../data/icons/symbolic/headings-symbolic.svg</file>
     <file compressed="true" alias="size-horizontally-symbolic.svg">../data/icons/symbolic/size-horizontally-symbolic.svg</file>
     <file compressed="true" alias="wrench-wide-symbolic.svg">../data/icons/symbolic/wrench-wide-symbolic.svg</file>
+    <file compressed="true" alias="text-insert-symbolic.svg">../data/icons/symbolic/text-insert-symbolic.svg</file>
 
     <!-- Tool icons -->
     <file compressed="true" alias="config_format-symbolic.svg">../data/icons/symbolic/tools/config_format-symbolic.svg</file>
@@ -78,5 +80,6 @@
     <file compressed="true" alias="lipsum-symbolic.svg">../data/icons/symbolic/tools/lipsum-symbolic.svg</file>
     <file compressed="true" alias="uuid-symbolic.svg">../data/icons/symbolic/tools/uuid-symbolic.svg</file>
     <file compressed="true" alias="random-symbolic.svg">../data/icons/symbolic/tools/random-symbolic.svg</file>
+    <file compressed="true" alias="text_inspector-symbolic.svg">../data/icons/symbolic/tools/text_inspector-symbolic.svg</file>
   </gresource>
 </gresources>
