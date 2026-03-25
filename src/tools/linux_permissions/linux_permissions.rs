@@ -17,7 +17,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/linux_permissions/linux_permissions.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/tools/linux_permissions/linux_permissions.ui")]
     pub struct LinuxPermissionsWidget {
         // Template widgets
         #[template_child]

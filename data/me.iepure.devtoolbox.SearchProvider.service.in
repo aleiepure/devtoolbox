@@ -2,6 +2,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 [D-BUS Service]
-Name=me.iepure.Devtoolbox.SearchProvider
+Name=me.iepure.devtoolbox.SearchProvider
 Exec=@bindir@/devtoolbox --search-provider
 ObjectPath=/me/iepure/devtoolbox/SearchProvider

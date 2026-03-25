@@ -23,7 +23,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate, Properties)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/config_format/config_format.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/tools/config_format/config_format.ui")]
     #[properties(wrapper_type = super::ConfigFormatWidget)]
     pub struct ConfigFormatWidget {
         // Template widgets

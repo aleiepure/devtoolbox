@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-01 11:18+0100\n"
+"POT-Creation-Date: 2026-03-25 14:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,89 +18,89 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. TRANSLATORS: do not translate
-#: data/me.iepure.Devtoolbox.desktop.in.in:6
+#: data/me.iepure.devtoolbox.desktop.in.in:6
 msgid "@app-name@"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.desktop.in.in:7
-#: data/me.iepure.Devtoolbox.metainfo.xml.in:15
+#: data/me.iepure.devtoolbox.desktop.in.in:7
+#: data/me.iepure.devtoolbox.metainfo.xml.in:15
 msgid "Dev tools at your fingertips"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.desktop.in.in:13
+#: data/me.iepure.devtoolbox.desktop.in.in:13
 msgid "JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;Validate;Validator;Converter;Convert;Timestamp;bmp;gif;icns;jpeg;png;tiff;webp;Image;Base;Parser;CRON;GZip;Compressor;Decompressor;Hash;Regex;Compare;URL;Minify;Generator;Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;Lorem;Ipsum;"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:14
+#: data/me.iepure.devtoolbox.gschema.xml:14
 msgid "Window width"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:18
+#: data/me.iepure.devtoolbox.gschema.xml:18
 msgid "Window height"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:22
+#: data/me.iepure.devtoolbox.gschema.xml:22
 msgid "Window maximized"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:39
+#: data/me.iepure.devtoolbox.gschema.xml:39
 msgid "Last used tool"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.gschema.xml:43
+#: data/me.iepure.devtoolbox.gschema.xml:43
 msgid "Sidebar open"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.metainfo.xml.in:22
+#: data/me.iepure.devtoolbox.metainfo.xml.in:22
 msgid ""
 "If you're tired of endlessly looking online for the right tool, or to find "
 "again that website of which you don't recall the name just for a quick "
 "conversion, this is the right app for you."
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.metainfo.xml.in:26
+#: data/me.iepure.devtoolbox.metainfo.xml.in:26
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.metainfo.xml.in:29
+#: data/me.iepure.devtoolbox.metainfo.xml.in:29
 msgid "Includes:"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.metainfo.xml.in:31
+#: data/me.iepure.devtoolbox.metainfo.xml.in:31
 msgid "JSON to YAML converter and vice-versa"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.metainfo.xml.in:32
+#: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "CRON expressions parser"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.metainfo.xml.in:33
+#: data/me.iepure.devtoolbox.metainfo.xml.in:33
 msgid "GZip compressor and decompressor"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.metainfo.xml.in:34
+#: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "Formatters for common programming languages"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.metainfo.xml.in:35
+#: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Hash generators"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.metainfo.xml.in:36
+#: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Regex tester"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.metainfo.xml.in:37
+#: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Markdown Previewer"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.metainfo.xml.in:38
+#: data/me.iepure.devtoolbox.metainfo.xml.in:38
 msgid "Image converters"
 msgstr ""
 
-#: data/me.iepure.Devtoolbox.metainfo.xml.in:39
+#: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Much more..."
 msgstr ""
 
@@ -1121,23 +1121,23 @@ msgstr ""
 msgid "Set UID"
 msgstr ""
 
-#: src/tools/linux_permissions/linux_permissions.blp:251
+#: src/tools/linux_permissions/linux_permissions.blp:245
 msgid "Set GID"
 msgstr ""
 
-#: src/tools/linux_permissions/linux_permissions.blp:266
+#: src/tools/linux_permissions/linux_permissions.blp:254
 msgid "Sticky"
 msgstr ""
 
-#: src/tools/linux_permissions/linux_permissions.blp:281
+#: src/tools/linux_permissions/linux_permissions.blp:267
 msgid "Values"
 msgstr ""
 
-#: src/tools/linux_permissions/linux_permissions.blp:284
+#: src/tools/linux_permissions/linux_permissions.blp:270
 msgid "Numeric Value"
 msgstr ""
 
-#: src/tools/linux_permissions/linux_permissions.blp:293
+#: src/tools/linux_permissions/linux_permissions.blp:279
 msgid "Symbolic Value"
 msgstr ""
 

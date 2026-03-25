@@ -83,7 +83,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate, Properties)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/$TOOL_ID/$TOOL_ID.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/tools/$TOOL_ID/$TOOL_ID.ui")]
     #[properties(wrapper_type = super::$TOOL_ID_WIDGET)]
     pub struct $TOOL_ID_WIDGET {
         // Template widgets
@@ -253,7 +253,7 @@ fi
 echo "$MESON_BUILD: file updated."
 
 # MARK: Update gschema.xml
-GSETTINGS="data/me.iepure.Devtoolbox.gschema.xml"
+GSETTINGS="data/me.iepure.devtoolbox.gschema.xml"
 
 if ! grep -q "<choice value='${TOOL_ID}'/>" "$GSETTINGS"; then
     # Add before the </choices> tag for last-tool key

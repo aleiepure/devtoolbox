@@ -20,7 +20,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate, Properties)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/base64/base64.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/tools/base64/base64.ui")]
     #[properties(wrapper_type = super::Base64Widget)]
     pub struct Base64Widget {
         // Template widgets

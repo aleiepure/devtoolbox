@@ -17,7 +17,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-application_id = 'me.iepure.Devtoolbox'
+application_id = 'me.iepure.devtoolbox'
 scalable_dir = 'hicolor' / 'scalable' / 'apps'
 
 if get_option('debug') == true

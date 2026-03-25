@@ -5,7 +5,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
 <div align="center">
-  <h1><img src="./data/icons/hicolor/scalable/apps/me.iepure.Devtoolbox.svg" height="64" alt="Dev Toolbox Icon"/><br>Dev Toolbox</h1>
+  <h1><img src="./data/icons/hicolor/scalable/apps/me.iepure.devtoolbox.svg" height="64" alt="Dev Toolbox Icon"/><br>Dev Toolbox</h1>
   <h4>Development tools at your fingertips</h4>
 </div>
 

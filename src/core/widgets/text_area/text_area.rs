@@ -22,7 +22,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate, Properties)]
-    #[template(resource = "/me/iepure/Devtoolbox/core/widgets/text_area/text_area.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/core/widgets/text_area/text_area.ui")]
     #[properties(wrapper_type = super::TextArea, )]
     pub struct TextArea {
         // MARK: Template widgets

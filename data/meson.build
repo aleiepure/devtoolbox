@@ -12,14 +12,14 @@ else
 endif
 
 desktop_config = configure_file(
-  output: 'me.iepure.Devtoolbox.desktop.in',
-  input: 'me.iepure.Devtoolbox.desktop.in.in',
+  output: 'me.iepure.devtoolbox.desktop.in',
+  input: 'me.iepure.devtoolbox.desktop.in.in',
   configuration: conf,
 )
 
 desktop_file = i18n.merge_file(
   input: desktop_config,
-  output: 'me.iepure.Devtoolbox.desktop',
+  output: 'me.iepure.devtoolbox.desktop',
   type: 'desktop',
   po_dir: '../po',
   install: true,
@@ -33,8 +33,8 @@ endif
 
 # AppStream metainfo file
 appstream_file = i18n.merge_file(
-        input: 'me.iepure.Devtoolbox.metainfo.xml.in',
-       output: 'me.iepure.Devtoolbox.metainfo.xml',
+        input: 'me.iepure.devtoolbox.metainfo.xml.in',
+       output: 'me.iepure.devtoolbox.metainfo.xml',
        po_dir: '../po',
       install: true,
   install_dir: get_option('datadir') / 'metainfo'
@@ -45,8 +45,8 @@ test('Validate appstream file', appstreamcli,
      args: ['validate', '--no-net', '--explain', appstream_file])
 
 # GSchema
-install_data('me.iepure.Devtoolbox.gschema.xml',
-  rename: '@0@.gschema.xml'.format('me.iepure.Devtoolbox'),
+install_data('me.iepure.devtoolbox.gschema.xml',
+  rename: '@0@.gschema.xml'.format('me.iepure.devtoolbox'),
   install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
 )
 
@@ -57,8 +57,8 @@ test('Validate schema file',
 
 # Search provider (Service)
 # configure_file(
-#   input: 'me.iepure.Devtoolbox.SearchProvider.service.in',
-#   output: 'me.iepure.Devtoolbox.SearchProvider.service',
+#   input: 'me.iepure.devtoolbox.SearchProvider.service.in',
+#   output: 'me.iepure.devtoolbox.SearchProvider.service',
 #   configuration: configuration_data({
 #     'bindir': get_option('prefix') / get_option('bindir')
 #   }),
@@ -66,7 +66,7 @@ test('Validate schema file',
 #   install_dir: get_option('datadir') / 'dbus-1' / 'services'
 # )
 
-# install_data('me.iepure.Devtoolbox.SearchProvider.ini',
+# install_data('me.iepure.devtoolbox.SearchProvider.ini',
 #   install_dir: get_option('datadir') / 'gnome-shell' / 'search-providers'
 # )
 

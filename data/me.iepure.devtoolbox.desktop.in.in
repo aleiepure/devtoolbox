@@ -6,7 +6,7 @@
 Name=@app-name@
 Comment=Dev tools at your fingertips
 Exec=devtoolbox
-Icon=me.iepure.Devtoolbox
+Icon=me.iepure.devtoolbox
 Terminal=false
 Type=Application
 Categories=Development;GTK;

@@ -23,7 +23,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate, Properties)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/cron_gen/cron_gen.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/tools/cron_gen/cron_gen.ui")]
     #[properties(wrapper_type = super::CronGenWidget)]
     pub struct CronGenWidget {
         // Template widgets

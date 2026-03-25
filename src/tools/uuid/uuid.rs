@@ -42,7 +42,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/uuid/uuid.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/tools/uuid/uuid.ui")]
     pub struct UuidWidget {
         // Template widgets
         #[template_child]

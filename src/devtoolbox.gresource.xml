@@ -2,7 +2,7 @@
 <gresources>
 
   <!-- Core UI -->
-  <gresource prefix="/me/iepure/Devtoolbox/">
+  <gresource prefix="/me/iepure/devtoolbox/">
     <file>core/ui/window.ui</file>
     <file>core/ui/shortcuts-dialog.ui</file>
     <file>core/ui/about-dialog.ui</file>
@@ -34,7 +34,7 @@
   </gresource>
   
   <!-- Icons -->
-  <gresource prefix="/me/iepure/Devtoolbox/icons/scalable/actions/">
+  <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
     <!-- UI icons -->
     <file compressed="true" alias="loupe-symbolic.svg">../data/icons/symbolic/loupe-symbolic.svg</file>
     <file compressed="true" alias="sidebar-symbolic.svg">../data/icons/symbolic/sidebar-symbolic.svg</file>

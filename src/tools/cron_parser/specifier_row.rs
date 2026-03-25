@@ -18,7 +18,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate, Properties)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/cron_parser/specifier_row.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/tools/cron_parser/specifier_row.ui")]
     #[properties(wrapper_type = super::SpecifierRow, )]
     pub struct SpecifierRow {
         // MARK: Template widgets

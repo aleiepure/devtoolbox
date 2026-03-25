@@ -22,7 +22,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/timestamp/timestamp.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/tools/timestamp/timestamp.ui")]
     pub struct TimestampWidget {
         // Template widgets
         #[template_child]

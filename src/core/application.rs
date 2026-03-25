@@ -71,7 +71,7 @@ impl DevtoolboxApplication {
         glib::Object::builder()
             .property("application-id", application_id)
             .property("flags", flags)
-            .property("resource-base-path", "/me/iepure/Devtoolbox")
+            .property("resource-base-path", "/me/iepure/devtoolbox")
             .build()
     }
 
@@ -91,12 +91,12 @@ impl DevtoolboxApplication {
     fn show_about(&self) {
         let window = self.active_window().unwrap();
         let about_dialog =
-            gtk::Builder::from_resource("/me/iepure/Devtoolbox/core/ui/about-dialog.ui")
+            gtk::Builder::from_resource("/me/iepure/devtoolbox/core/ui/about-dialog.ui")
                 .object::<adw::AboutDialog>("about_dialog")
                 .unwrap();
 
         about_dialog.set_application_name(APP_NAME);
-        about_dialog.set_application_icon("me.iepure.Devtoolbox");
+        about_dialog.set_application_icon("me.iepure.devtoolbox");
         about_dialog.set_version(VERSION);
         about_dialog.present(Some(&window));
     }

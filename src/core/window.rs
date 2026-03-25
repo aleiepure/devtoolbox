@@ -20,7 +20,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/me/iepure/Devtoolbox/core/ui/window.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/core/ui/window.ui")]
     pub struct DevtoolboxWindow {
         // Template widgets
         #[template_child]

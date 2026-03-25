@@ -15,7 +15,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/url_enc/url_enc.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/tools/url_enc/url_enc.ui")]
     pub struct UrlEncWidget {
         // Template widgets
         #[template_child]

@@ -18,7 +18,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate, Properties)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/html_enc/html_enc.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/tools/html_enc/html_enc.ui")]
     #[properties(wrapper_type = super::HtmlEncWidget)]
     pub struct HtmlEncWidget {
         // Template widgets

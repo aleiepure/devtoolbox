@@ -18,7 +18,7 @@ mod imp {
 
     #[derive(Debug, Default, CompositeTemplate, Properties)]
     #[template(
-        resource = "/me/iepure/Devtoolbox/core/widgets/actionable_entryrow/actionable_entryrow.ui"
+        resource = "/me/iepure/devtoolbox/core/widgets/actionable_entryrow/actionable_entryrow.ui"
     )]
     #[properties(wrapper_type = super::ActionableEntryRow, )]
     pub struct ActionableEntryRow {

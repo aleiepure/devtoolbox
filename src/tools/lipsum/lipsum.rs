@@ -15,7 +15,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate, Properties)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/lipsum/lipsum.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/tools/lipsum/lipsum.ui")]
     #[properties(wrapper_type = super::LipsumWidget)]
     pub struct LipsumWidget {
         // Template widgets

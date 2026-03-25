@@ -23,7 +23,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/cron_parser/cron_parser.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/tools/cron_parser/cron_parser.ui")]
     pub struct CronParserWidget {
         // Template widgets
         #[template_child]

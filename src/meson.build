@@ -30,7 +30,7 @@ conf.set_quoted('GETTEXT_PACKAGE', 'devtoolbox')
 conf.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
 conf.set_quoted('PKGDATADIR', pkgdatadir)
 conf.set_quoted('APP_NAME', 'Dev Toolbox@0@'.format(name_suffix))
-conf.set_quoted('APP_ID', 'me.iepure.Devtoolbox')
+conf.set_quoted('APP_ID', 'me.iepure.devtoolbox')
 
 configure_file(
     input: 'config.rs.in',

@@ -19,7 +19,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/random/random.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/tools/random/random.ui")]
     pub struct RandomWidget {
         // Template widgets
         #[template_child]

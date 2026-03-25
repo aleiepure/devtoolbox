@@ -17,7 +17,7 @@ mod imp {
     use super::*;
 
     #[derive(Debug, Default, CompositeTemplate)]
-    #[template(resource = "/me/iepure/Devtoolbox/tools/number_bases/number_bases.ui")]
+    #[template(resource = "/me/iepure/devtoolbox/tools/number_bases/number_bases.ui")]
     pub struct NumberBasesWidget {
         // Template widgets
         #[template_child]
