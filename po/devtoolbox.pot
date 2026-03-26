@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-25 16:59+0100\n"
+"POT-Creation-Date: 2026-03-26 16:15+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,11 +43,11 @@ msgstr ""
 msgid "Window maximized"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:40
+#: data/me.iepure.devtoolbox.gschema.xml:41
 msgid "Last used tool"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:44
+#: data/me.iepure.devtoolbox.gschema.xml:45
 msgid "Sidebar open"
 msgstr ""
 
@@ -413,6 +413,72 @@ msgstr ""
 #: src/tools/config_format/mod.rs:27
 msgctxt "Keyword"
 msgid "development"
+msgstr ""
+
+#: src/tools/contrast_check/contrast_check.blp:26
+msgid "Colors"
+msgstr ""
+
+#: src/tools/contrast_check/contrast_check.blp:32
+msgid "Swap"
+msgstr ""
+
+#: src/tools/contrast_check/contrast_check.blp:39
+msgid "Foreground"
+msgstr ""
+
+#: src/tools/contrast_check/contrast_check.blp:40
+msgid "Text and other foreground elements"
+msgstr ""
+
+#: src/tools/contrast_check/contrast_check.blp:52
+msgid "Foreground Color"
+msgstr ""
+
+#: src/tools/contrast_check/contrast_check.blp:60
+msgid "Background"
+msgstr ""
+
+#: src/tools/contrast_check/contrast_check.blp:72
+msgid "Background Color"
+msgstr ""
+
+#: src/tools/contrast_check/contrast_check.blp:91
+msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
+msgstr ""
+
+#: src/tools/contrast_check/contrast_check.blp:99
+msgid "WCAG Compliance"
+msgstr ""
+
+#: src/tools/contrast_check/contrast_check.blp:117
+#: src/tools/contrast_check/contrast_check.blp:165
+msgid "Small"
+msgstr ""
+
+#: src/tools/contrast_check/contrast_check.blp:141
+#: src/tools/contrast_check/contrast_check.blp:189
+msgid "Large"
+msgstr ""
+
+#: src/tools/contrast_check/mod.rs:18
+msgctxt "Tool Title"
+msgid "Contrast Checker"
+msgstr ""
+
+#: src/tools/contrast_check/mod.rs:19
+msgctxt "Tool Description"
+msgid "Check color combinations for WCAG compliance"
+msgstr ""
+
+#: src/tools/contrast_check/mod.rs:23
+msgctxt "Keyword"
+msgid "accessibility"
+msgstr ""
+
+#: src/tools/contrast_check/mod.rs:24
+msgctxt "Keyword"
+msgid "ratio"
 msgstr ""
 
 #: src/tools/cron_gen/cron_gen.blp:25

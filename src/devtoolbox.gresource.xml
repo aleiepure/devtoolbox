@@ -9,8 +9,7 @@
 
     <!-- Style Sheets -->
     <file alias="style.css">../data/css/style.css</file>
-    <file alias="style-dark.css">../data/css/style-dark.css</file>
-
+    
     <!-- Widgets -->
     <file>core/widgets/text_area/text_area.ui</file>
     <file>core/widgets/actionable_entryrow/actionable_entryrow.ui</file>
@@ -32,6 +31,7 @@
     <file>tools/uuid/uuid.ui</file>
     <file>tools/random/random.ui</file>
     <file>tools/text_inspector/text_inspector.ui</file>
+    <file>tools/contrast_check/contrast_check.ui</file>
   </gresource>
   
   <!-- Icons -->
@@ -66,6 +66,10 @@
     <file compressed="true" alias="size-horizontally-symbolic.svg">../data/icons/symbolic/size-horizontally-symbolic.svg</file>
     <file compressed="true" alias="wrench-wide-symbolic.svg">../data/icons/symbolic/wrench-wide-symbolic.svg</file>
     <file compressed="true" alias="text-insert-symbolic.svg">../data/icons/symbolic/text-insert-symbolic.svg</file>
+    <file compressed="true" alias="checkerboard-symbolic.svg">../data/icons/symbolic/checkerboard-symbolic.svg</file>
+    <file compressed="true" alias="check-round-outline2-symbolic.svg">../data/icons/symbolic/check-round-outline2-symbolic.svg</file>
+    <file compressed="true" alias="minus-circle-outline-symbolic.svg">../data/icons/symbolic/minus-circle-outline-symbolic.svg</file>
+    <file compressed="true" alias="horizontal-arrows-symbolic.svg">../data/icons/symbolic/horizontal-arrows-symbolic.svg</file>
 
     <!-- Tool icons -->
     <file compressed="true" alias="config_format-symbolic.svg">../data/icons/symbolic/tools/config_format-symbolic.svg</file>
@@ -81,5 +85,6 @@
     <file compressed="true" alias="uuid-symbolic.svg">../data/icons/symbolic/tools/uuid-symbolic.svg</file>
     <file compressed="true" alias="random-symbolic.svg">../data/icons/symbolic/tools/random-symbolic.svg</file>
     <file compressed="true" alias="text_inspector-symbolic.svg">../data/icons/symbolic/tools/text_inspector-symbolic.svg</file>
+    <file compressed="true" alias="contrast_check-symbolic.svg">../data/icons/symbolic/tools/contrast_check-symbolic.svg</file>
   </gresource>
 </gresources>

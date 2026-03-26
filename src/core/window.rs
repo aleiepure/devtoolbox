@@ -247,6 +247,10 @@ mod imp {
                     use crate::tools::text_inspector::TextInspectorWidget;
                     TextInspectorWidget::new().upcast()
                 }
+                "contrast_check" => {
+                    use crate::tools::contrast_check::ContrastCheckWidget;
+                    ContrastCheckWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

@@ -7,6 +7,7 @@
 
 pub mod base64;
 pub mod config_format;
+pub mod contrast_check;
 pub mod cron_gen;
 pub mod cron_parser;
 pub mod html_enc;
@@ -49,6 +50,7 @@ pub static ALL_TOOLS: Lazy<Vec<&'static ToolMetadata>> = Lazy::new(|| {
         &*uuid::UUID_TOOL_METADATA,
         &*random::RANDOM_TOOL_METADATA,
         &*text_inspector::TEXT_INSPECTOR_TOOL_METADATA,
+        &*contrast_check::CONTRAST_CHECK_TOOL_METADATA,
     ]; // TODO: add new tools here
     tools.sort_by(|a, b| a.category.cmp(&b.category));
     tools

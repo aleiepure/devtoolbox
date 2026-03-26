@@ -16,6 +16,8 @@ src/tools/base64/mod.rs
 src/tools/config_format/config_format.blp
 src/tools/config_format/config_format.rs
 src/tools/config_format/mod.rs
+src/tools/contrast_check/contrast_check.blp
+src/tools/contrast_check/mod.rs
 src/tools/cron_gen/cron_gen.blp
 src/tools/cron_gen/cron_gen.rs
 src/tools/cron_gen/cron.rs

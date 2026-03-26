@@ -38,3 +38,7 @@ menubutton > button.text-button {
   min-width: 140px;
   max-width: 140px;
 }
+
+.padding-20 {
+  padding: 20px;
+}
