@@ -68,7 +68,7 @@ class TextArea(Adw.Bin):
     def __init__(self):
         super().__init__()
 
-        self.set_property("css-name", "textarea")
+        self.set_css_name("textarea")
 
         # Set theme
         language = GtkSource.LanguageManager.get_default(

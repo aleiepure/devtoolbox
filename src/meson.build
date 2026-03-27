@@ -83,7 +83,12 @@ else
 endif
 
 conf = configuration_data()
-conf.set('PYTHON', python.find_installation('python3').path())
+custom_python = find_program('/app/bin/python3.12', required: false)
+if custom_python.found()
+  conf.set('PYTHON', custom_python.full_path())
+else
+  conf.set('PYTHON', python.find_installation('python3').path())
+endif
 conf.set('VERSION', version_number)
 conf.set('localedir', join_paths(get_option('prefix'), get_option('localedir')))
 conf.set('pkgdatadir', pkgdatadir)

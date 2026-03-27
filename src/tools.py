@@ -175,34 +175,34 @@ TOOLS_METADATA = {
             C_("search keyword", "text"),
         ]
     },
-    "lzma-compressor": {
-        "title": "LZMA",
-        "category": _("Encoders & Decoders"),
-        "icon-name": "shoe-box-symbolic",
-        "tooltip": _("Compress and decompress files and texts using LZMA"),
-        "keywords": [
-            C_("search keyword", "lzma"),
-            C_("search keyword", "xz"),
-            C_("search keyword", "compression"),
-            C_("search keyword", "archive"),
-            C_("search keyword", "file"),
-            C_("search keyword", "text"),
-        ]
-    },
-    "bz2-compressor": {
-        "title": "Bzip2",
-        "category": _("Encoders & Decoders"),
-        "icon-name": "shoe-box-symbolic",
-        "tooltip": _("Compress and decompress files and texts using Bzip2"),
-        "keywords": [
-            C_("search keyword", "bzip2"),
-            C_("search keyword", "bz2"),
-            C_("search keyword", "compression"),
-            C_("search keyword", "archive"),
-            C_("search keyword", "file"),
-            C_("search keyword", "text"),
-        ]
-    },
+    # "lzma-compressor": {
+    #     "title": "LZMA",
+    #     "category": _("Encoders & Decoders"),
+    #     "icon-name": "shoe-box-symbolic",
+    #     "tooltip": _("Compress and decompress files and texts using LZMA"),
+    #     "keywords": [
+    #         C_("search keyword", "lzma"),
+    #         C_("search keyword", "xz"),
+    #         C_("search keyword", "compression"),
+    #         C_("search keyword", "archive"),
+    #         C_("search keyword", "file"),
+    #         C_("search keyword", "text"),
+    #     ]
+    # },
+    # "bz2-compressor": {
+    #     "title": "Bzip2",
+    #     "category": _("Encoders & Decoders"),
+    #     "icon-name": "shoe-box-symbolic",
+    #     "tooltip": _("Compress and decompress files and texts using Bzip2"),
+    #     "keywords": [
+    #         C_("search keyword", "bzip2"),
+    #         C_("search keyword", "bz2"),
+    #         C_("search keyword", "compression"),
+    #         C_("search keyword", "archive"),
+    #         C_("search keyword", "file"),
+    #         C_("search keyword", "text"),
+    #     ]
+    # },
     "jwt-decoder": {
         "title": "JWT",
         "category": _("Encoders & Decoders"),
@@ -472,17 +472,17 @@ TOOLS_METADATA = {
             C_("search keyword", "document"),
         ]
     },
-    "markdown-preview": {
-        "title": _("Markdown Previewer"),
-        "category": _("Text"),
-        "icon-name": "markdown-symbolic",
-        "tooltip": _("Preview markdown code as you type"),
-        "keywords": [
-            C_("search keyword", "render"),
-            C_("search keyword", "markup"),
-            C_("search keyword", "md"),
-        ]
-    },
+    # "markdown-preview": {
+    #     "title": _("Markdown Previewer"),
+    #     "category": _("Text"),
+    #     "icon-name": "markdown-symbolic",
+    #     "tooltip": _("Preview markdown code as you type"),
+    #     "keywords": [
+    #         C_("search keyword", "render"),
+    #         C_("search keyword", "markup"),
+    #         C_("search keyword", "md"),
+    #     ]
+    # },
 
     # Graphics
     "color-converter": {

@@ -79,7 +79,7 @@ class TextFileArea(Adw.Bin):
     def __init__(self):
         super().__init__()
 
-        self.set_property("css-name", "textfilearea")
+        self.set_css_name("textfilearea")
 
         # Set theme
         language = GtkSource.LanguageManager.get_default(

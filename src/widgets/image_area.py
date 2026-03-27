@@ -51,7 +51,7 @@ class ImageArea(Adw.Bin):
     def __init__(self):
         super().__init__()
 
-        self.set_property("css-name", "imagearea")
+        self.set_css_name("imagearea")
 
         # Drag and drop
         content = Gdk.ContentFormats.new_for_gtype(Gdk.FileList)

@@ -27,7 +27,7 @@ class WebviewArea(Adw.Bin):
     def __init__(self):
         super().__init__()
 
-        self.set_property("css-name", "webarea")
+        self.set_css_name("webarea")
 
         # Style and add webview
         self._webview.set_vexpand(True)

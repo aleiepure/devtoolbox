@@ -20,6 +20,7 @@ from .window import DevtoolboxWindow
 from .search_provider import DevToolboxSearchProvider
 from gi.repository import Gtk, Gio, Adw, GObject, GtkSource, GLib
 import sys
+import os
 from pathlib import Path
 
 
@@ -45,9 +46,13 @@ class DevtoolboxApplication(Adw.Application):
     ]
 
     def __init__(self, version, debug):
+        app_flags = Gio.ApplicationFlags.HANDLES_COMMAND_LINE
+        if os.environ.get("FLATPAK_ID"):
+            app_flags |= Gio.ApplicationFlags.NON_UNIQUE
+
         super().__init__(
             application_id="me.iepure.devtoolbox",
-            flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE
+            flags=app_flags
         )
 
         self._version = version

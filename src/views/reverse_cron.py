@@ -320,8 +320,8 @@ class ReverseCronView(Adw.Bin):
         if self._day_every_btn.get_active():
             self._day = "*"
         if self._day_every_x_btn.get_active():
-            starting_day = re.sub("\D", "", self._day_every_x_starting_dropdown.get_selected_item().get_string())
-            interval = re.sub("\D", "", self._day_every_x_dropdown.get_selected_item().get_string())
+            starting_day = re.sub(r"\D", "", self._day_every_x_starting_dropdown.get_selected_item().get_string())
+            interval = re.sub(r"\D", "", self._day_every_x_dropdown.get_selected_item().get_string())
             self._day = f"{starting_day}/{interval}"
         if self._day_specific_btn.get_active():
             self._day = ""
@@ -333,8 +333,8 @@ class ReverseCronView(Adw.Bin):
                     self._day += btn.get_label() + ","
                 self._day = self._day[:-1]
         if self._day_range_btn.get_active():
-            x = re.sub("\D", "", self._day_range_x_dropdown.get_selected_item().get_string())
-            y = re.sub("\D", "", self._day_range_y_dropdown.get_selected_item().get_string())
+            x = re.sub(r"\D", "", self._day_range_x_dropdown.get_selected_item().get_string())
+            y = re.sub(r"\D", "", self._day_range_y_dropdown.get_selected_item().get_string())
             self._day = f"{x}-{y}"
 
         # Month

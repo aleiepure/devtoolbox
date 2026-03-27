@@ -39,6 +39,9 @@ gettext.textdomain('devtoolbox')
 gettext.install('devtoolbox', localedir)
 
 if __name__ == '__main__':
+    import sys
+    print(sys.version_info)
+
     import gi
 
     gi.require_version("Gtk", "4.0")

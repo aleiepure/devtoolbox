@@ -77,6 +77,15 @@ SPDX-License-Identifier: CC0-1.0
   </screenshots>
 
   <releases>
+    <release version="1.3.1" date="2026-03-28">
+      <description translate="no">
+        <p>What's new:</p>
+        <ul>
+          <li>GNOME 50 platform support</li>
+          <li>Removed Markdown Previewer due to webkit issues</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.3.0" date="2025-07-06">
       <description translate="no">
         <p>What's new:</p>

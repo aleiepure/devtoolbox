@@ -3,5 +3,8 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-export TMPDIR="$XDG_RUNTIME_DIR/app/me.iepure.devtoolbox"
+if [ -n "$XDG_RUNTIME_DIR" ] && [ -d "$XDG_RUNTIME_DIR" ]; then
+	mkdir -p "$XDG_RUNTIME_DIR/app/me.iepure.devtoolbox"
+	export TMPDIR="$XDG_RUNTIME_DIR/app/me.iepure.devtoolbox"
+fi
 exec /app/bin/devtoolbox-bin "$@"
