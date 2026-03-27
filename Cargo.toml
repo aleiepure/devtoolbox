@@ -44,3 +44,6 @@ uuid = { version = "1.21.0", features = [
 mac_address = "1.1.8"
 
 eff-wordlist = "1.0.3"
+
+palette = "0.7.6"
+csscolorparser = "0.8.3"

@@ -251,6 +251,10 @@ mod imp {
                     use crate::tools::contrast_check::ContrastCheckWidget;
                     ContrastCheckWidget::new().upcast()
                 }
+                "color_spaces" => {
+                    use crate::tools::color_spaces::ColorSpacesWidget;
+                    ColorSpacesWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

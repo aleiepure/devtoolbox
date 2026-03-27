@@ -72,6 +72,7 @@ blueprint_files = files(
   'tools/random/random.blp',
   'tools/text_inspector/text_inspector.blp',
   'tools/contrast_check/contrast_check.blp',
+  'tools/color_spaces/color_spaces.blp',
 )
 
 compile_blueprint = custom_target('blueprints',

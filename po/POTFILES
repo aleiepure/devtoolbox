@@ -13,6 +13,8 @@ src/core/widgets/text_area/text_area.rs
 src/core/window.rs
 src/tools/base64/base64.blp
 src/tools/base64/mod.rs
+src/tools/color_spaces/color_spaces.blp
+src/tools/color_spaces/mod.rs
 src/tools/config_format/config_format.blp
 src/tools/config_format/config_format.rs
 src/tools/config_format/mod.rs

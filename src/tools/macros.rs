@@ -56,3 +56,28 @@ macro_rules! define_tool {
         }
     };
 }
+
+#[macro_export]
+macro_rules! connect_imp_signal {
+    ($self:ident, $handler_field:ident, $widget_field:ident, $signal:literal, $callback:ident) => {{
+        use gtk::prelude::ObjectExt as _;
+
+        let obj_weak = $self.obj().downgrade();
+        let handler_id = $self.$widget_field.connect_local($signal, true, move |_| {
+            if let Some(obj) = obj_weak.upgrade() {
+                obj.imp().$callback();
+            }
+            None
+        });
+        $self.$handler_field.replace(Some(handler_id));
+    }};
+}
+
+#[macro_export]
+macro_rules! connect_imp_signals {
+    ($self:ident; $( $handler_field:ident <= $widget_field:ident, $signal:literal => $callback:ident );+ $(;)?) => {
+        $(
+            connect_imp_signal!($self, $handler_field, $widget_field, $signal, $callback);
+        )+
+    };
+}

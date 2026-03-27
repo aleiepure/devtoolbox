@@ -6,6 +6,7 @@
 */
 
 pub mod base64;
+pub mod color_spaces;
 pub mod config_format;
 pub mod contrast_check;
 pub mod cron_gen;
@@ -51,6 +52,7 @@ pub static ALL_TOOLS: Lazy<Vec<&'static ToolMetadata>> = Lazy::new(|| {
         &*random::RANDOM_TOOL_METADATA,
         &*text_inspector::TEXT_INSPECTOR_TOOL_METADATA,
         &*contrast_check::CONTRAST_CHECK_TOOL_METADATA,
+        &*color_spaces::COLOR_SPACES_TOOL_METADATA,
     ]; // TODO: add new tools here
     tools.sort_by(|a, b| a.category.cmp(&b.category));
     tools

@@ -5,12 +5,12 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
+use crate::{connect_imp_signal, connect_imp_signals};
+use crate::{core::widgets::TextArea, tools::text_inspector::string_cases::StringCase};
 use adw::prelude::ComboRowExt;
 use adw::subclass::prelude::*;
 use gtk::prelude::*;
 use gtk::{glib, CompositeTemplate};
-
-use crate::{core::widgets::TextArea, tools::text_inspector::string_cases::StringCase};
 
 use std::cell::RefCell;
 
@@ -154,30 +154,10 @@ mod imp {
             self.parent_constructed();
 
             // Connect signals
-            // text_area signals
-            let obj_weak = self.obj().downgrade();
-            let handler_id = self.text_area.connect_local("changed", true, move |_| {
-                if let Some(obj) = obj_weak.upgrade() {
-                    obj.imp().on_signal_changed_text_area();
-                }
-                None
-            });
-
-            self.text_area_changed_signal_handler_id
-                .replace(Some(handler_id));
-
-            // case_comborow signals
-            let obj_weak = self.obj().downgrade();
-            let handler_id =
-                self.case_comborow
-                    .connect_local("notify::selected", true, move |_| {
-                        if let Some(obj) = obj_weak.upgrade() {
-                            obj.imp().on_signal_notify_selected_case_comborow();
-                        }
-                        None
-                    });
-            self.case_comborow_notify_selected_signal_handler_id
-                .replace(Some(handler_id));
+            connect_imp_signals!(self;
+                text_area_changed_signal_handler_id <= text_area, "changed" => on_signal_changed_text_area;
+                case_comborow_notify_selected_signal_handler_id <= case_comborow, "notify::selected" => on_signal_notify_selected_case_comborow
+            );
         }
     }
 

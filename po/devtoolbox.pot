@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-26 16:15+0100\n"
+"POT-Creation-Date: 2026-03-27 17:14+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,11 +43,11 @@ msgstr ""
 msgid "Window maximized"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:41
+#: data/me.iepure.devtoolbox.gschema.xml:42
 msgid "Last used tool"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:45
+#: data/me.iepure.devtoolbox.gschema.xml:46
 msgid "Sidebar open"
 msgstr ""
 
@@ -270,7 +270,8 @@ msgstr ""
 msgid "Remove from Favorites"
 msgstr ""
 
-#: src/tools/base64/base64.blp:26 src/tools/config_format/config_format.blp:25
+#: src/tools/base64/base64.blp:26 src/tools/color_spaces/color_spaces.blp:26
+#: src/tools/config_format/config_format.blp:25
 #: src/tools/cron_parser/cron_parser.blp:25 src/tools/html_enc/html_enc.blp:26
 #: src/tools/linux_permissions/linux_permissions.blp:26
 #: src/tools/lipsum/lipsum.blp:26 src/tools/random/random.blp:266
@@ -333,17 +334,135 @@ msgctxt "Keyword"
 msgid "data"
 msgstr ""
 
+#: src/tools/color_spaces/color_spaces.blp:29
+#: src/tools/config_format/config_format.blp:57
+#: src/tools/cron_parser/cron_parser.blp:44
+msgid "Output Format"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:34
+msgid "Web"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:35
+msgid "Percentages"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:36
+msgid "Normalized"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:37
+msgid "N-Bits"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:45
+msgid "Angle Unit"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:46
+msgid "Units for angle components (e.g., hue in HSL)."
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:51
+msgid "Degrees"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:52
+msgid "Radians"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:53
+msgid "Gradians"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:54
+msgid "Turns"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:55
+msgid "Follow output format"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:63
+msgid "Precision"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:64
+msgid "Bits precision for output values"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:80
+#: src/tools/color_spaces/color_spaces.blp:95
+msgid "Color"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:83
+msgid "Color Picker"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:152
+msgid "Red"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:161
+msgid "Green"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:170
+msgid "Blue"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:191
+#: src/tools/color_spaces/color_spaces.blp:230
+msgid "Hue"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:200
+#: src/tools/color_spaces/color_spaces.blp:239
+msgid "Saturation"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:209
+msgid "Value"
+msgstr ""
+
+#: src/tools/color_spaces/color_spaces.blp:248
+msgid "Lightness"
+msgstr ""
+
+#: src/tools/color_spaces/mod.rs:19
+msgctxt "Tool Title"
+msgid "Color Spaces"
+msgstr ""
+
+#: src/tools/color_spaces/mod.rs:20
+msgctxt "Tool Description"
+msgid "Convert colors between different color spaces"
+msgstr ""
+
+#: src/tools/color_spaces/mod.rs:30 src/tools/timestamp/mod.rs:25
+#: src/tools/timestamp/mod.rs:31
+msgctxt "Keyword"
+msgid "format"
+msgstr ""
+
+#: src/tools/color_spaces/mod.rs:31
+msgctxt "Keyword"
+msgid "conversion"
+msgstr ""
+
+#: src/tools/color_spaces/mod.rs:32
+msgctxt "Keyword"
+msgid "palette"
+msgstr ""
+
 #: src/tools/config_format/config_format.blp:28
 msgid "Input Format"
 msgstr ""
 
 #: src/tools/config_format/config_format.blp:29
 msgid "Select the format of the input."
-msgstr ""
-
-#: src/tools/config_format/config_format.blp:57
-#: src/tools/cron_parser/cron_parser.blp:44
-msgid "Output Format"
 msgstr ""
 
 #: src/tools/config_format/config_format.blp:58
@@ -1666,11 +1785,6 @@ msgstr ""
 #: src/tools/timestamp/mod.rs:23
 msgctxt "Keyword"
 msgid "epoch"
-msgstr ""
-
-#: src/tools/timestamp/mod.rs:25 src/tools/timestamp/mod.rs:31
-msgctxt "Keyword"
-msgid "format"
 msgstr ""
 
 #: src/tools/timestamp/mod.rs:26

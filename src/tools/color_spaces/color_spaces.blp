@@ -1,0 +1,272 @@
+/*
+ * color_spaces.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $ColorSpacesWidget: Adw.Bin {
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+          spacing: 12;
+          margin-bottom: 12;
+          margin-top: 12;
+
+          // MARK: - Tool Settings
+          Adw.PreferencesGroup {
+            title: _("Options");
+
+            Adw.ComboRow output_format_comborow {
+              title: _("Output Format");
+              icon-name: "list-large";
+
+              model: StringList {
+                strings [
+                  _("Web"),
+                  _("Percentages"),
+                  _("Normalized"),
+                  _("N-Bits"),
+                ]
+              };
+
+              notify::selected => $on_signal_notify_selected_output_format_comborow() swapped;
+            }
+
+            Adw.ComboRow angle_unit_comborow {
+              title: _("Angle Unit");
+              subtitle: _("Units for angle components (e.g., hue in HSL).");
+              icon-name: "ruler-angled";
+              visible: bind $is_web_format_not_selected_closure(output_format_comborow.selected) as <bool>;
+              model: StringList {
+                strings [
+                  _("Degrees"),
+                  _("Radians"),
+                  _("Gradians"),
+                  _("Turns"),
+                  _("Follow output format")
+                ]
+              };
+              selected: 4;
+              notify::selected => $on_signal_notify_selected_angle_unit_comborow() swapped;
+            }
+
+            Adw.SpinRow precision_bits_spinrow {
+              title: _("Precision");
+              subtitle: _("Bits precision for output values");
+              icon-name: "stacked-plates";
+              visible: bind $is_precision_bits_spinrow_visible_closure(output_format_comborow.selected) as <bool>;
+              adjustment: Gtk.Adjustment {
+                lower: 2;
+                upper: 32;
+                step-increment: 2;
+                page-increment: 8;
+                value: 8;
+              };
+              notify::value => $on_signal_notify_value_precision_bits_spinrow() swapped;
+            }
+          }
+
+          // MARK: - Tool Main Content
+          Adw.PreferencesGroup {
+            title: _("Color");
+
+            Adw.ActionRow {
+              title: _("Color Picker");
+              icon-name: "color-picker";
+              activatable-widget: color_button;
+
+              [suffix]
+              ColorDialogButton color_button {
+                valign: center;
+                width-request: 100;
+                rgba: "#1254a6";      
+
+                dialog: ColorDialog {
+                  modal: true;
+                  title: _("Color");
+                };
+
+                // notify::rgba connected in Rust to access signal handler
+              }
+            }
+
+            $ActionableEntryRow hex_entryrow {
+              title: "Hex";
+              copy-button-visible: true;
+              clear-button-visible: true;
+              // changed connected in Rust to access signal handler
+
+              styles ["monospace"]
+            }
+
+            $ActionableEntryRow rgb_entryrow {
+              title: "RGB";
+              copy-button-visible: true;
+              clear-button-visible: true;
+              visible: bind $is_web_format_selected_closure(output_format_comborow.selected) as <bool>;
+              // changed connected in Rust to access signal handler
+
+              styles ["monospace"]
+            }
+
+            $ActionableEntryRow hsl_entryrow {
+              title: "HSL";
+              copy-button-visible: true;
+              clear-button-visible: true;
+              visible: bind $is_web_format_selected_closure(output_format_comborow.selected) as <bool>;
+              // changed connected in Rust to access signal handler
+
+              styles ["monospace"]
+            }
+
+            $ActionableEntryRow hwb_entryrow {
+              title: "HWB";
+              copy-button-visible: true;
+              clear-button-visible: true;
+              visible: bind $is_web_format_selected_closure(output_format_comborow.selected) as <bool>;
+              // changed connected in Rust to access signal handler
+
+              styles ["monospace"]
+            }
+
+            Adw.ActionRow {
+              title: "RGB";
+              visible: bind $is_web_format_not_selected_closure(output_format_comborow.selected) as <bool>;
+              styles ["property"]
+
+              Box {
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                $ActionableEntryRow rgb_red_entryrow {
+                  title: _("Red");
+                  copy-button-visible: true;
+                  clear-button-visible: true;
+                  // changed connected in Rust to access signal handler
+
+                  styles ["property"]
+                }
+
+                $ActionableEntryRow rgb_green_entryrow {
+                  title: _("Green");
+                  copy-button-visible: true;
+                  clear-button-visible: true;
+                  // changed connected in Rust to access signal handler
+
+                  styles ["property"]
+                }
+
+                $ActionableEntryRow rgb_blue_entryrow {
+                  title: _("Blue");
+                  copy-button-visible: true;
+                  clear-button-visible: true;
+                  // changed connected in Rust to access signal handler
+
+                  styles ["property", "last-in-row"]
+                }
+              }
+            }
+
+            Adw.ActionRow {
+              title: "HSV";
+              visible: bind $is_web_format_not_selected_closure(output_format_comborow.selected) as <bool>;
+              styles ["property"]
+
+              Box {
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                $ActionableEntryRow hsv_hue_entryrow {
+                  title: _("Hue");
+                  copy-button-visible: true;
+                  clear-button-visible: true;
+                  // changed connected in Rust to access signal handler
+
+                  styles ["property"]
+                }
+
+                $ActionableEntryRow hsv_saturation_entryrow {
+                  title: _("Saturation");
+                  copy-button-visible: true;
+                  clear-button-visible: true;
+                  // changed connected in Rust to access signal handler
+
+                  styles ["property"]
+                }
+
+                $ActionableEntryRow hsv_value_entryrow {
+                  title: _("Value");
+                  copy-button-visible: true;
+                  clear-button-visible: true;
+                  // changed connected in Rust to access signal handler
+
+                  styles ["property", "last-in-row"]
+                }
+              }
+            }
+
+            Adw.ActionRow {
+              title: "HSL";
+              visible: bind $is_web_format_not_selected_closure(output_format_comborow.selected) as <bool>;
+              styles ["property"]
+
+              Box {
+                margin-start: 20;
+                homogeneous: true;
+                hexpand: true;
+
+                $ActionableEntryRow hsl_hue_entryrow {
+                  title: _("Hue");
+                  copy-button-visible: true;
+                  clear-button-visible: true;
+                  // changed connected in Rust to access signal handler
+
+                  styles ["property"]
+                }
+
+                $ActionableEntryRow hsl_saturation_entryrow {
+                  title: _("Saturation");
+                  copy-button-visible: true;
+                  clear-button-visible: true;
+                  // changed connected in Rust to access signal handler
+
+                  styles ["property"]
+                }
+
+                $ActionableEntryRow hsl_lightness_entryrow {
+                  title: _("Lightness");
+                  copy-button-visible: true;
+                  clear-button-visible: true;
+                  // changed connected in Rust to access signal handler
+
+                  styles ["property", "last-in-row"]
+                }
+              }
+            }
+
+            $ActionableEntryRow alpha_entryrow {
+              title: "Alpha";
+              copy-button-visible: true;
+              clear-button-visible: true;
+              visible: bind $is_web_format_not_selected_closure(output_format_comborow.selected) as <bool>;
+              // changed connected in Rust to access signal handler
+
+              styles ["property"]
+            }
+          }
+        };
+      };
+    };
+  }
+}

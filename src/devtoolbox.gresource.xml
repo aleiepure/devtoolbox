@@ -32,6 +32,7 @@
     <file>tools/random/random.ui</file>
     <file>tools/text_inspector/text_inspector.ui</file>
     <file>tools/contrast_check/contrast_check.ui</file>
+    <file>tools/color_spaces/color_spaces.ui</file>
   </gresource>
   
   <!-- Icons -->
@@ -70,6 +71,9 @@
     <file compressed="true" alias="check-round-outline2-symbolic.svg">../data/icons/symbolic/check-round-outline2-symbolic.svg</file>
     <file compressed="true" alias="minus-circle-outline-symbolic.svg">../data/icons/symbolic/minus-circle-outline-symbolic.svg</file>
     <file compressed="true" alias="horizontal-arrows-symbolic.svg">../data/icons/symbolic/horizontal-arrows-symbolic.svg</file>
+    <file compressed="true" alias="delay-long-symbolic.svg">../data/icons/symbolic/delay-long-symbolic.svg</file>
+    <file compressed="true" alias="ruler-angled-symbolic.svg">../data/icons/symbolic/ruler-angled-symbolic.svg</file>
+    <file compressed="true" alias="color-picker-symbolic.svg">../data/icons/symbolic/color-picker-symbolic.svg</file>
 
     <!-- Tool icons -->
     <file compressed="true" alias="config_format-symbolic.svg">../data/icons/symbolic/tools/config_format-symbolic.svg</file>
@@ -86,5 +90,6 @@
     <file compressed="true" alias="random-symbolic.svg">../data/icons/symbolic/tools/random-symbolic.svg</file>
     <file compressed="true" alias="text_inspector-symbolic.svg">../data/icons/symbolic/tools/text_inspector-symbolic.svg</file>
     <file compressed="true" alias="contrast_check-symbolic.svg">../data/icons/symbolic/tools/contrast_check-symbolic.svg</file>
+    <file compressed="true" alias="color_spaces-symbolic.svg">../data/icons/symbolic/tools/color_spaces-symbolic.svg</file>
   </gresource>
 </gresources>
