@@ -173,8 +173,9 @@ SPDX-License-Identifier: CC0-1.0
           <li>Timestamp: More timezones to choose from</li>
           <li>Timestamp: Time and date are now displayed in more formats</li>
           <li>Updated dependencies and platform version to GNOME 47</li>
-        </ul> Thank you for
-        the new and updated translations via weblate. </description>
+        </ul>
+        <p>Thank you for the new and updated translations via weblate.</p>
+      </description>
     </release>
     <release version="1.1.1" date="2023-06-18">
       <description translate="no">
