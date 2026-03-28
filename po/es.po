@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2024-11-29 03:41+0000\n"
-"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
+"PO-Revision-Date: 2025-11-05 18:51+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -276,10 +276,9 @@ msgid "Convert numbers between bases"
 msgstr "Convertir números entre bases"
 
 #: src/tools.py:71
-#, fuzzy
 msgctxt "search keyword"
 msgid "representation"
-msgstr "Indentaciones"
+msgstr "representación"
 
 #: src/tools.py:72
 msgctxt "search keyword"
@@ -503,10 +502,9 @@ msgid "signature"
 msgstr ""
 
 #: src/tools.py:190
-#, fuzzy
 msgctxt "search keyword"
 msgid "authentication"
-msgstr "Indentaciones"
+msgstr "autenticación"
 
 #: src/tools.py:191
 msgctxt "search keyword"
@@ -2213,7 +2211,7 @@ msgstr "Fechas"
 
 #: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:52
 msgid "Indentations"
-msgstr "Indentaciones"
+msgstr "Sangrías"
 
 #: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:53
 msgid "Number of spaces used for indentation"

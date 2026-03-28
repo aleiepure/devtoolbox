@@ -8,26 +8,27 @@ msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-12-16 22:00+0000\n"
-"Last-Translator: Oliver <oliver.puff@gmx.de>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/devtoolbox/"
-"devtoolbox/de/>\n"
-"Language: de\n"
+"PO-Revision-Date: 2025-11-13 16:51+0000\n"
+"Last-Translator: dukezas <dukezas@gmail.com>\n"
+"Language-Team: Lithuanian <https://hosted.weblate.org/projects/devtoolbox/"
+"devtoolbox/lt/>\n"
+"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1-dev\n"
+"Plural-Forms: nplurals=3; plural="
+"(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
 msgid "@app-name@"
-msgstr "@app-name@"
+msgstr "@programa@"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:9
 #: data/me.iepure.devtoolbox.metainfo.xml.in:16 src/ui/about_dialog.blp:11
 msgid "Dev tools at your fingertips"
-msgstr "Entwicklungswerkzeuge auf Knopfdruck"
+msgstr "Paruošti kūrimo įrankiai"
 
 #: data/me.iepure.devtoolbox.desktop.in.in:15
 msgid ""
@@ -37,6 +38,10 @@ msgid ""
 "Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;"
 "Lorem;Ipsum;"
 msgstr ""
+"JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;Patvirtinti;Validatorius;Konverteris;Konvertuoti"
+";Laiko-"
+"žyma;bmp;gif;icns;jpeg;png;tiff;webp;Atvaizdas;Pagrindas;Analizatorius;CRON;GZip;Suspaudėjass;Išskleidėjas;Hash'as;Regex;Palyginti;URL;Minimizuoti;Generatorius;Generuoti;UUID;Atsitiktinis;QR;chmod;Kontrastas;Spalva;Tekstas;Skirtumas;Case;Markdown;Peržiūra;Lorem;Ipsum;"
+""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -44,1110 +49,1052 @@ msgid ""
 "again that website of which you don't recall the name just for a quick "
 "conversion, this is the right app for you."
 msgstr ""
-"Wenn Sie es leid sind nach dem richtigen Werkzeug oder für eine schnelle "
-"Konvertierung nach der richtigen Webseite zu suchen, dann ist diese "
-"Anwendung genau richtig für Sie."
+"Jei jus užkniso nuolatinės tinkamo įrankio paieškos internete, ar negalit "
+"rast svetainės, kurios pavadinimo neatsimenat, kad atlikti greitą "
+"konversiją, tai ši programa (apsas) yra jums."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:27
 msgid ""
 "This is a collection of powerful yet simple-to-use tools to solve the most "
 "common daily development problems."
 msgstr ""
-"Dies ist eine Sammlung von leistungsstarken aber einfachen Werkzeugen zur "
-"Lösung täglicher Probleme bei der Entwicklung."
+"Tai galingų, bet parastų naudoti įrankių rinkinys padėsiantis išspręsti "
+"dažniausias kūrybos problemas."
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:30
 msgid "Includes:"
-msgstr "Enthält:"
+msgstr "Turi:"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:32
 msgid "JSON to YAML converter and vice-versa"
-msgstr "Konvertiere JSON zu YAML und umgekehrt"
+msgstr "JSON į YAML konverteris ir atvirkščiai"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:33
 msgid "CRON expressions parser"
-msgstr "Parser für CRON-Ausdrücke"
+msgstr "CRON užduočių analizatorius"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:34
 msgid "GZip compressor and decompressor"
-msgstr "GZIP Komprimierung und Dekomprimierung"
+msgstr "GZip suspaudėjas ir išskleidėjas"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:35
 msgid "Formatters for common programming languages"
-msgstr "Formatierer für gängige Programmiersprachen"
+msgstr "Populiarių programavimo kalbų formatuotojas"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:36
 msgid "Hash generators"
-msgstr "Hash-Generatoren"
+msgstr "Hash generatoriai"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:37
 msgid "Regex tester"
-msgstr "Regex-Tester"
+msgstr "Regex testeris"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:38 src/tools.py:450
 #: src/ui/views/markdown_preview.blp:19
 msgid "Markdown Previewer"
-msgstr "Markdown-Vorschau"
+msgstr "Markdown peržiūra"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Image converters"
-msgstr "Bildkonverter"
+msgstr "Paveikslėlių konvertavimas"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:40
 msgid "Much more..."
-msgstr "Weiteres..."
+msgstr "Ir dar daugiau..."
 
 #: src/tools.py:13 src/tools.py:32 src/tools.py:67 src/tools.py:88
 #: src/tools.py:106
 msgid "Converters"
-msgstr "Konverter"
+msgstr "Konverteriai"
 
 #: src/tools.py:15 src/ui/views/json_yaml.blp:20
 msgid "Convert JSON documents to YAML and vice-versa"
-msgstr "Konvertieren von JSON-Dokumente in YAML und umgekehrt"
+msgstr "Konvertuoti JSON dokumentus į YAML ir atvirkščiai"
 
 #: src/tools.py:20 src/tools.py:39 src/tools.py:206
 msgctxt "search keyword"
 msgid "parse"
-msgstr ""
+msgstr "analizuoti"
 
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
-#, fuzzy
 msgctxt "search keyword"
 msgid "converter"
-msgstr "Konverter"
+msgstr "konverteris"
 
 #: src/tools.py:22 src/tools.py:46 src/tools.py:74 src/tools.py:96
 #: src/tools.py:114 src/tools.py:394
-#, fuzzy
 msgctxt "search keyword"
 msgid "convert"
-msgstr "Konvertieren"
+msgstr "keisti (konvertuoti)"
 
 #: src/tools.py:23 src/tools.py:38 src/tools.py:47 src/tools.py:474
-#, fuzzy
 msgctxt "search keyword"
 msgid "format"
-msgstr "Format"
+msgstr "formatas"
 
 #: src/tools.py:24 src/tools.py:234 src/tools.py:250 src/tools.py:435
 #: src/tools.py:446
 msgctxt "search keyword"
 msgid "document"
-msgstr "Dokument"
+msgstr "dokumentas"
 
 #: src/tools.py:25
 msgctxt "search keyword"
 msgid "spaces"
-msgstr ""
+msgstr "tarpai"
 
 #: src/tools.py:26
-#, fuzzy
 msgctxt "search keyword"
 msgid "indentation"
-msgstr "Einzüge"
+msgstr "laisvas tarpas (pastraipa, įtrauka)"
 
 #: src/tools.py:27 src/tools.py:204 src/tools.py:217 src/tools.py:231
 #: src/tools.py:245 src/tools.py:261 src/tools.py:274
 msgctxt "search keyword"
 msgid "indent"
-msgstr ""
+msgstr "įtrauka"
 
 #: src/tools.py:31 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
-msgstr "Zeitstempel"
+msgstr "Laiko žymė"
 
 #: src/tools.py:34 src/ui/views/timestamp.blp:20
 msgid "Convert UNIX timestamps to and from plain dates"
-msgstr "Konvertieren von UNIX-Zeitstempel zu und von einfachem Datum"
+msgstr "Keisti UNIX laiko žymą į paprastą datą ir atvirkščiai"
 
 #: src/tools.py:36
 msgctxt "search keyword"
 msgid "epoch"
-msgstr ""
+msgstr "laikotarpis"
 
 #: src/tools.py:37 src/tools.py:97 src/tools.py:115
 msgctxt "search keyword"
 msgid "time"
-msgstr "Zeit"
+msgstr "laikas"
 
 #: src/tools.py:40
 msgctxt "search keyword"
 msgid "datetime"
-msgstr ""
+msgstr "data ir laikas"
 
 #: src/tools.py:41
 msgctxt "search keyword"
 msgid "calendar"
-msgstr "Kalender"
+msgstr "kalendorius"
 
 #: src/tools.py:42
-#, fuzzy
 msgctxt "search keyword"
 msgid "timestamp"
-msgstr "Zeitstempel"
+msgstr "laiko žyma"
 
 #: src/tools.py:44 src/tools.py:98 src/tools.py:116
 msgctxt "search keyword"
 msgid "date"
-msgstr ""
+msgstr "data"
 
 #: src/tools.py:48
 msgctxt "search keyword"
 msgid "short"
-msgstr "kurz"
+msgstr "trumpas"
 
 #: src/tools.py:49
 msgctxt "search keyword"
 msgid "long"
-msgstr "lang"
+msgstr "ilgas"
 
 #: src/tools.py:52
 msgctxt "search keyword"
 msgid "year"
-msgstr "Jahr"
+msgstr "metai"
 
 #: src/tools.py:53
-#, fuzzy
 msgctxt "search keyword"
 msgid "month"
-msgstr "Monat"
+msgstr "mėnuo"
 
 #: src/tools.py:54
 msgctxt "search keyword"
 msgid "day"
-msgstr "Tag"
+msgstr "diena"
 
 #: src/tools.py:55
 msgctxt "search keyword"
 msgid "hour"
-msgstr "Stunde"
+msgstr "valanda"
 
 #: src/tools.py:56
-#, fuzzy
 msgctxt "search keyword"
 msgid "hours"
-msgstr "Stunden"
+msgstr "valandos"
 
 #: src/tools.py:57
 msgctxt "search keyword"
 msgid "minute"
-msgstr "Minute"
+msgstr "minutė"
 
 #: src/tools.py:58
-#, fuzzy
 msgctxt "search keyword"
 msgid "minutes"
-msgstr "Minuten"
+msgstr "minutės"
 
 #: src/tools.py:59
 msgctxt "search keyword"
 msgid "second"
-msgstr "Sekunde"
+msgstr "seundė"
 
 #: src/tools.py:60
-#, fuzzy
 msgctxt "search keyword"
 msgid "seconds"
-msgstr "Sekunden"
+msgstr "sekundės"
 
 #: src/tools.py:61
-#, fuzzy
 msgctxt "search keyword"
 msgid "timezone"
-msgstr "Zeitzone"
+msgstr "laiko juosta"
 
 #: src/tools.py:62
-#, fuzzy
 msgctxt "search keyword"
 msgid "now"
-msgstr "Jetzt"
+msgstr "dabar"
 
 #: src/tools.py:66
 msgid "Number Bases"
-msgstr "Zahlenbasen"
+msgstr "Skaičiavimo sistemos"
 
 #: src/tools.py:69 src/ui/views/base_converter.blp:20
 msgid "Convert numbers between bases"
-msgstr "Zahlen zwischen Basen umrechnen"
+msgstr "Konvertuotis skaičius tarp sistemų"
 
 #: src/tools.py:71
-#, fuzzy
 msgctxt "search keyword"
 msgid "representation"
-msgstr "Einzüge"
+msgstr "pateikimas"
 
 #: src/tools.py:72
 msgctxt "search keyword"
 msgid "base"
-msgstr ""
+msgstr "sistema"
 
 #: src/tools.py:75
-#, fuzzy
 msgctxt "search keyword"
 msgid "number"
-msgstr "Zahl"
+msgstr "skaičius"
 
 #: src/tools.py:76
 msgctxt "search keyword"
 msgid "binary"
-msgstr "binär"
+msgstr "dvejetainė"
 
 #: src/tools.py:77
-#, fuzzy
 msgctxt "search keyword"
 msgid "octal"
-msgstr "Oktal"
+msgstr "aštuntainė"
 
 #: src/tools.py:78
-#, fuzzy
 msgctxt "search keyword"
 msgid "decimal"
-msgstr "Dezimal"
+msgstr "dešimtainė"
 
 #: src/tools.py:79
-#, fuzzy
 msgctxt "search keyword"
 msgid "hexadecimal"
-msgstr "Hexadezimal"
+msgstr "šešioliktainė"
 
 #: src/tools.py:80
 msgctxt "search keyword"
 msgid "integer"
-msgstr ""
+msgstr "sveikasis skaičius"
 
 #: src/tools.py:87 src/ui/views/cron_converter.blp:20
 msgid "CRON Parser"
-msgstr "CRON-Parser"
+msgstr "CRON analizatorius"
 
 #: src/tools.py:90 src/ui/views/cron_converter.blp:21
 msgid "Convert CRON expressions to time and date"
-msgstr "Konvertieren von CRON-Ausdrücken zu Zeit und Datum"
+msgstr "Konvertuoti CRON išraiškas į laiką ir datą"
 
 #: src/tools.py:93 src/tools.py:111
 msgctxt "search keyword"
 msgid "schedule"
-msgstr ""
+msgstr "planuoti"
 
 #: src/tools.py:94 src/tools.py:112
 msgctxt "search keyword"
 msgid "parser"
-msgstr ""
+msgstr "analizatorius"
 
 #: src/tools.py:95 src/tools.py:113 src/tools.py:410
-#, fuzzy
 msgctxt "search keyword"
 msgid "expression"
-msgstr "CRON-Ausdruck"
+msgstr "išraiška"
 
 #: src/tools.py:99 src/tools.py:117
 msgctxt "search keyword"
 msgid "job"
-msgstr ""
+msgstr "vykdyti"
 
 #: src/tools.py:105 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
-msgstr "CRON-Generator"
+msgstr "Atvirkštinis CRON"
 
 #: src/tools.py:108 src/ui/views/reverse_cron.blp:20
 msgid "Generate CRON expressions"
-msgstr "Generieren von CRON-Ausdrücke"
+msgstr "Generuoti CRON išraiškas"
 
 #: src/tools.py:126 src/tools.py:139 src/tools.py:151 src/tools.py:166
 #: src/tools.py:182
 msgid "Encoders & Decoders"
-msgstr "Kodierer & Dekodierer"
+msgstr "Koduotojai ir Dekoduotojai"
 
 #: src/tools.py:128 src/ui/views/html_encoder.blp:20
 msgid "Encode and decode special characters using the HTML format"
-msgstr "Kodieren und Dekodieren von HTML-Entitäten"
+msgstr "Koduoti ir dekoduoti specialius simbolius naudojant HTML formatą"
 
 #: src/tools.py:131
 msgctxt "search keyword"
 msgid "escape"
-msgstr ""
+msgstr "išeiti"
 
 #: src/tools.py:133 src/tools.py:233 src/tools.py:247 src/tools.py:434
 #: src/tools.py:456
 msgctxt "search keyword"
 msgid "markup"
-msgstr ""
+msgstr "markup'as"
 
 #: src/tools.py:134 src/tools.py:145 src/tools.py:172
 msgctxt "search keyword"
 msgid "text"
-msgstr "Text"
+msgstr "tekstas"
 
 #: src/tools.py:141
 msgid "Encode and decode base64 strings"
-msgstr "Kodieren und Dekodieren von Base64-Zeichenfolgen"
+msgstr "Koduoti ir dekoduoti base64 eiutes"
 
 #: src/tools.py:144 src/tools.py:173
-#, fuzzy
 msgctxt "search keyword"
 msgid "string"
-msgstr "Zeichenkette"
+msgstr "eilutė"
 
 #: src/tools.py:146 src/tools.py:207 src/tools.py:235 src/tools.py:445
 msgctxt "search keyword"
 msgid "data"
-msgstr ""
+msgstr "data"
 
 #: src/tools.py:153 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
-msgstr "Kodieren und Dekodieren von URLs"
+msgstr "Koduoti ir dekoduoti specialius simbolius URL adresuose"
 
 #: src/tools.py:155
 msgctxt "search keyword"
 msgid "url"
-msgstr "URL"
+msgstr "nuoroda"
 
 #: src/tools.py:156
 msgctxt "search keyword"
 msgid "unescape"
-msgstr ""
+msgstr "grįžti"
 
 #: src/tools.py:157 src/tools.py:249
 msgctxt "search keyword"
 msgid "web"
-msgstr ""
+msgstr "žiniatinklis"
 
 #: src/tools.py:158
 msgctxt "search keyword"
 msgid "link"
-msgstr "Link"
+msgstr "nuoroda"
 
 #: src/tools.py:159
-#, fuzzy
 msgctxt "search keyword"
 msgid "address"
-msgstr "Anschrift"
+msgstr "adresas"
 
 #: src/tools.py:160
 msgctxt "search keyword"
 msgid "uri"
-msgstr ""
+msgstr "uri"
 
 #: src/tools.py:161 src/tools.py:219
 msgctxt "search keyword"
 msgid "query"
-msgstr ""
+msgstr "užklausa"
 
 #: src/tools.py:168
 msgid "Compress and decompress files and texts using GZip"
-msgstr "Komprimieren und Dekomprimieren von Dateien und Texten mit GZip"
+msgstr "Suspausti ir išskleisti failus ir tekstus naudojant GZip"
 
 #: src/tools.py:170
 msgctxt "search keyword"
 msgid "unarchive"
-msgstr ""
+msgstr "išarchyvuoti"
 
 #: src/tools.py:171 src/tools.py:365
 msgctxt "search keyword"
 msgid "file"
-msgstr "Datei"
+msgstr "failas"
 
 #: src/tools.py:174
 msgctxt "search keyword"
 msgid "zip"
-msgstr ""
+msgstr "suspausti"
 
 #: src/tools.py:175
 msgctxt "search keyword"
 msgid "unzip"
-msgstr ""
+msgstr "išskleisti"
 
 #: src/tools.py:176
-#, fuzzy
 msgctxt "search keyword"
 msgid "decompression"
-msgstr "Dekomprimieren"
+msgstr "išskleidimas"
 
 #: src/tools.py:177
-#, fuzzy
 msgctxt "search keyword"
 msgid "decompressor"
-msgstr "Dekomprimieren"
+msgstr "išskleidėjas"
 
 #: src/tools.py:184 src/ui/views/jwt_decoder.blp:20
-#, fuzzy
 msgid "Decode and encode JWT tokens"
-msgstr "Kodieren und Dekodieren von Base64-Zeichenfolgen"
+msgstr "Dekoduoti ir koduoti JWT žetonus"
 
 #: src/tools.py:186
 msgctxt "search keyword"
 msgid "json web token"
-msgstr ""
+msgstr "json žiniatinklio žetonas"
 
 #: src/tools.py:187
-#, fuzzy
 msgctxt "search keyword"
 msgid "header"
-msgstr "Kopfzeile"
+msgstr "antraštė"
 
 #: src/tools.py:188
-#, fuzzy
 msgctxt "search keyword"
 msgid "payload"
-msgstr "Nutzlast"
+msgstr "naudingoji apkrova"
 
 #: src/tools.py:189
 msgctxt "search keyword"
 msgid "signature"
-msgstr ""
+msgstr "parašas"
 
 #: src/tools.py:190
-#, fuzzy
 msgctxt "search keyword"
 msgid "authentication"
-msgstr "Autentifikation"
+msgstr "autentikavimas"
 
 #: src/tools.py:191
 msgctxt "search keyword"
 msgid "authorization"
-msgstr ""
+msgstr "autorizavimas"
 
 #: src/tools.py:192 src/tools.py:320 src/tools.py:533 src/tools.py:550
-#, fuzzy
 msgctxt "search keyword"
 msgid "security"
-msgstr "Schweregrad"
+msgstr "apsauga"
 
 #: src/tools.py:199 src/tools.py:212 src/tools.py:226 src/tools.py:240
 #: src/tools.py:255 src/tools.py:269 src/tools.py:282 src/tools.py:296
 msgid "Formatters & Minifiers"
-msgstr "Formatierer & Minimierer"
+msgstr "Farmatuotojai ir minimizuotojai"
 
 #: src/tools.py:201 src/formatters/json.py:14
 msgid "Format JSON documents"
-msgstr "Formatieren von JSON-Dokumente"
+msgstr "Formatuoti JSON dokumentus"
 
 #: src/tools.py:203 src/tools.py:216 src/tools.py:230 src/tools.py:244
 #: src/tools.py:260 src/tools.py:273
 msgctxt "search keyword"
 msgid "pretty"
-msgstr ""
+msgstr "gražus"
 
 #: src/tools.py:205 src/tools.py:218 src/tools.py:232 src/tools.py:246
 #: src/tools.py:262 src/tools.py:275
 msgctxt "search keyword"
 msgid "beautify"
-msgstr ""
+msgstr "gražinti"
 
 #: src/tools.py:214 src/formatters/sql.py:14
 msgid "Format SQL documents"
-msgstr "Formatieren von SQL-Dokumente"
+msgstr "Formatuoti SQL dokumentus"
 
 #: src/tools.py:220
 msgctxt "search keyword"
 msgid "database"
-msgstr ""
+msgstr "duomenų bazė"
 
 #: src/tools.py:221
 msgctxt "search keyword"
 msgid "statement"
-msgstr ""
+msgstr "pareiškimas"
 
 #: src/tools.py:228 src/formatters/xml.py:16
 msgid "Format XML documents"
-msgstr "Formatieren von XML-Dokumente"
+msgstr "Formatuoti XML dokumentus"
 
 #: src/tools.py:242 src/formatters/html.py:15
 msgid "Format HTML documents"
-msgstr "Formatieren von HTML-Dokumente"
+msgstr "Formatuoti HTML dokumentus"
 
 #: src/tools.py:248 src/tools.py:263 src/tools.py:276 src/tools.py:286
 #: src/tools.py:301
 msgctxt "search keyword"
 msgid "minify"
-msgstr ""
+msgstr "minimizuoti"
 
 #: src/tools.py:257 src/formatters/js.py:15
 msgid "Format JavaScript documents"
-msgstr "Formatieren von JavaScript-Dokumente"
+msgstr "Formatuoti JavaScript dokumentus"
 
 #: src/tools.py:264 src/tools.py:306
-#, fuzzy
 msgctxt "search keyword"
 msgid "code"
-msgstr "Kodieren"
+msgstr "kodas"
 
 #: src/tools.py:271 src/formatters/css.py:14
 msgid "Format CSS documents"
-msgstr "Formatieren von CSS-Dokumente"
+msgstr "Foematuoti CSS dokumentus"
 
 #: src/tools.py:277 src/tools.py:289
 msgctxt "search keyword"
 msgid "stylesheet"
-msgstr ""
+msgstr "stylesheet'as"
 
 #: src/tools.py:281 src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
-msgstr ""
+msgstr "CSS minimizuotojas"
 
 #: src/tools.py:284 src/formatters/css_minifier.py:15
 msgid "Minify CSS documents"
-msgstr "Verkleinern von CSS-Dokumenten"
+msgstr "Minimizuoti CSS dokumentus"
 
 #: src/tools.py:287 src/tools.py:302
-#, fuzzy
 msgctxt "search keyword"
 msgid "compress"
-msgstr "Dekomprimieren"
+msgstr "suspausti"
 
 #: src/tools.py:288
-#, fuzzy
 msgctxt "search keyword"
 msgid "style"
-msgstr "Dunkler Stil"
+msgstr "stilius"
 
 #: src/tools.py:290 src/tools.py:303
 msgctxt "search keyword"
 msgid "reduce"
-msgstr ""
+msgstr "sumažinti"
 
 #: src/tools.py:291 src/tools.py:304
 msgctxt "search keyword"
 msgid "size"
-msgstr ""
+msgstr "dydis"
 
 #: src/tools.py:295 src/formatters/js_minifier.py:14
 msgid "JavaScript Minifier"
-msgstr ""
+msgstr "JavaScript'o minimizuotojas"
 
 #: src/tools.py:298
 msgid "Minify JavaScript documents"
-msgstr "Verkleinern von JavaScript-Dokumenten"
+msgstr "Minimizuoti JavaScript dokumentus"
 
 #: src/tools.py:305
 msgctxt "search keyword"
 msgid "script"
-msgstr ""
+msgstr "skriptas"
 
 #: src/tools.py:312
 msgid "Hash"
-msgstr ""
+msgstr "Hash'as"
 
 #: src/tools.py:313 src/tools.py:326 src/tools.py:338 src/tools.py:349
 #: src/tools.py:361 src/tools.py:375
 msgid "Generators"
-msgstr "Generatoren"
+msgstr "Generatoriai"
 
 #: src/tools.py:315
-#, fuzzy
 msgid "Calculate hashes and check for integrity"
-msgstr ""
-"Berechnung und Intigritätsprüfung von MD5, SHA1, SHA256 und SHA512 Hashes"
+msgstr "Skaičiuoti hash'us ir patikrinti vientisumą"
 
 #: src/tools.py:317
 msgctxt "search keyword"
 msgid "checksum"
-msgstr ""
+msgstr "kontrolinė suma"
 
 #: src/tools.py:318
 msgctxt "search keyword"
 msgid "digest"
-msgstr ""
+msgstr "įsisavinti"
 
 #: src/tools.py:319
-#, fuzzy
 msgctxt "search keyword"
 msgid "generate"
-msgstr "Generiere"
+msgstr "generuoti"
 
 #: src/tools.py:321 src/tools.py:535 src/tools.py:551
 msgctxt "search keyword"
 msgid "cryptography"
-msgstr ""
+msgstr "kriptografija"
 
 #: src/tools.py:328 src/ui/views/lorem_generator.blp:20
 msgid "Generate lorem ipsum placeholder text"
-msgstr "Generierung von Lorem Ipsum Platzhaltertexten"
+msgstr "Generuoti lorem ipsum užpildantį tekstą"
 
 #: src/tools.py:330
 msgctxt "search keyword"
 msgid "dummy"
-msgstr ""
+msgstr "fiktyvus"
 
 #: src/tools.py:331
-#, fuzzy
 msgctxt "search keyword"
 msgid "sample"
-msgstr "Beispiel"
+msgstr "pavyzdys"
 
 #: src/tools.py:332
 msgctxt "search keyword"
 msgid "filler"
-msgstr ""
+msgstr "užpildas"
 
 #: src/tools.py:333
 msgctxt "search keyword"
 msgid "latin"
-msgstr ""
+msgstr "lotynų"
 
 #: src/tools.py:340 src/ui/views/uuid_generator.blp:20
 msgid "Generate Universally Unique IDs (UUID)"
-msgstr "Generierung von Universal Unique IDs (UUID)"
+msgstr "Generuoti Universalius Unikalius ID (UUID)"
 
 #: src/tools.py:343
-#, fuzzy
 msgctxt "search keyword"
 msgid "identifier"
-msgstr "Schlüsselkennung"
+msgstr "identifikatorius"
 
 #: src/tools.py:344
-#, fuzzy
 msgctxt "search keyword"
 msgid "random"
-msgstr "Zufall"
+msgstr "atsitiktinis"
 
 #: src/tools.py:348
 msgid "Random"
-msgstr "Zufall"
+msgstr "Atsitiktinis"
 
 #: src/tools.py:351 src/ui/views/random_generator.blp:20
 msgid "Generate random numbers and strings"
-msgstr "Generierung von zufälligen Zahlen und Zeichenketten"
+msgstr "Generuoti atsitiktinius skaičius ir eilutes"
 
 #: src/tools.py:353
 msgctxt "search keyword"
 msgid "password"
-msgstr ""
+msgstr "slaptažodis"
 
 #: src/tools.py:354
-#, fuzzy
 msgctxt "search keyword"
 msgid "token"
-msgstr "Token"
+msgstr "žetonas"
 
 #: src/tools.py:355
 msgctxt "search keyword"
 msgid "entropy"
-msgstr ""
+msgstr "entropija"
 
 #: src/tools.py:356
 msgctxt "search keyword"
 msgid "secure"
-msgstr ""
+msgstr "sauga"
 
 #: src/tools.py:360 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
-msgstr "chmod-Notationen"
+msgstr "Chmod skaičiuoklė"
 
 #: src/tools.py:363 src/ui/views/chmod_calculator.blp:20
 msgid "Calculate values to modify permissions with chmod"
-msgstr "Berechnung von Notationen für die Verwendung mit chmod"
+msgstr "Apskaičiuokite reikšmes, kad pakeistumėte teises naudodami chmod"
 
 #: src/tools.py:366
 msgctxt "search keyword"
 msgid "unix"
-msgstr ""
+msgstr "unix"
 
 #: src/tools.py:367
 msgctxt "search keyword"
 msgid "linux"
-msgstr ""
+msgstr "linux"
 
 #: src/tools.py:368
-#, fuzzy
 msgctxt "search keyword"
 msgid "calculate"
-msgstr "Hash für die Berechnung"
+msgstr "skaičiuoti"
 
 #: src/tools.py:369
 msgctxt "search keyword"
 msgid "mode"
-msgstr ""
+msgstr "režimas"
 
 #: src/tools.py:370
 msgctxt "search keyword"
 msgid "access"
-msgstr ""
+msgstr "prieiga"
 
 #: src/tools.py:374
 msgid "QR Code"
-msgstr "QR-Code"
+msgstr "QR kodas"
 
 #: src/tools.py:377 src/ui/views/qrcode_generator.blp:20
 msgid "Create custom QR Codes"
-msgstr "Erstellen von benutzerdefinierten QR-Codes"
+msgstr "Kurti tinkintus QR kodus"
 
 #: src/tools.py:379
-#, fuzzy
 msgctxt "search keyword"
 msgid "qrcode"
-msgstr "qr-code.png"
+msgstr "qr kodas"
 
 #: src/tools.py:380
-#, fuzzy
 msgctxt "search keyword"
 msgid "barcode"
-msgstr "Kodieren"
+msgstr "barkodas"
 
 #: src/tools.py:381
-#, fuzzy
 msgctxt "search keyword"
 msgid "image"
-msgstr "Bild"
+msgstr "atvaizdas"
 
 #: src/tools.py:382
 msgctxt "search keyword"
 msgid "matrix"
-msgstr ""
+msgstr "matrica"
 
 #: src/tools.py:388 src/ui/views/text_inspector.blp:19
 msgid "Text Inspector & Case Converter"
-msgstr "Textkontrolleur & Fallkonvertierer"
+msgstr "Teksto tikrinimas, didžiųjų/mažųjų raidžių keitimas"
 
 #: src/tools.py:389 src/tools.py:406 src/tools.py:417 src/tools.py:429
 #: src/tools.py:440 src/tools.py:451 src/ui/views/regex_tester.blp:49
 #: src/ui/views/text_inspector.blp:107 src/ui/views/text_inspector.blp:164
 msgid "Text"
-msgstr "Text"
+msgstr "Tekstas"
 
 #: src/tools.py:391 src/ui/views/text_inspector.blp:20
 msgid "View statistics about text and change sentence cases"
-msgstr "Anzeigen von Textstatistiken und Satzfälle ändern"
+msgstr "Peržiūrėti teksto statistiką ir keisti raidžių lygį"
 
 #: src/tools.py:393
 msgctxt "search keyword"
 msgid "analyze"
-msgstr ""
+msgstr "analizuoti"
 
 #: src/tools.py:395
 msgctxt "search keyword"
 msgid "uppercase"
-msgstr ""
+msgstr "didžiosios"
 
 #: src/tools.py:396
 msgctxt "search keyword"
 msgid "lowercase"
-msgstr ""
+msgstr "mažosios"
 
 #: src/tools.py:397
 msgctxt "search keyword"
 msgid "capitalize"
-msgstr ""
+msgstr "rašyti didžiosiomis"
 
 #: src/tools.py:398
-#, fuzzy
 msgctxt "search keyword"
 msgid "count"
-msgstr "Anzahl"
+msgstr "suskaičiuoti"
 
 #: src/tools.py:399
-#, fuzzy
 msgctxt "search keyword"
 msgid "words"
-msgstr "Wörter"
+msgstr "žodžius"
 
 #: src/tools.py:400
-#, fuzzy
 msgctxt "search keyword"
 msgid "characters"
-msgstr "Zeichen:"
+msgstr "simboliai"
 
 #: src/tools.py:401
-#, fuzzy
 msgctxt "search keyword"
 msgid "lines"
-msgstr "Linien:"
+msgstr "eilutės"
 
 #: src/tools.py:405
 msgid "Regex Tester"
-msgstr "Regex-Tester"
+msgstr "Regex testuotojas"
 
 #: src/tools.py:408 src/ui/views/regex_tester.blp:20
 msgid "Find matching strings inside a text"
-msgstr "Suchen nach übereinstimmenden Zeichenfolgen innerhalb eines Textes"
+msgstr "Rasti tekste sutampančias eilutes"
 
 #: src/tools.py:411
 msgctxt "search keyword"
 msgid "pattern"
-msgstr ""
+msgstr "šablonas"
 
 #: src/tools.py:412
-#, fuzzy
 msgctxt "search keyword"
 msgid "search"
-msgstr "März"
+msgstr "ieškoti"
 
 #: src/tools.py:416 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
-msgstr "Textdifferenz"
+msgstr "Tekstų palyginimas"
 
 #: src/tools.py:419 src/ui/views/text_diff.blp:20
 msgid "Analyze two texts and find differences"
-msgstr "Analysieren zweier Texte und finden von Unterschieden"
+msgstr "Analizuoti abu tekstus ir rasti skirtumus"
 
 #: src/tools.py:421
-#, fuzzy
 msgctxt "search keyword"
 msgid "difference"
-msgstr "Unterschiede"
+msgstr "skirtumas"
 
 #: src/tools.py:422
-#, fuzzy
 msgctxt "search keyword"
 msgid "compare"
-msgstr "Dekomprimieren"
+msgstr "pallyginti"
 
 #: src/tools.py:423
 msgctxt "search keyword"
 msgid "changes"
-msgstr ""
+msgstr "pakeitimai"
 
 #: src/tools.py:424
 msgctxt "search keyword"
 msgid "modification"
-msgstr ""
+msgstr "modifikavimas"
 
 #: src/tools.py:428 src/ui/views/xml_validator.blp:19
 msgid "XML Scheme Validator"
-msgstr "XML-Schema-Validator"
+msgstr "XML schemų validatorius"
 
 #: src/tools.py:431 src/ui/views/xml_validator.blp:20
 msgid "Check an XML file against an XSD schema"
-msgstr "Pfüfung einer XML-Datei anhand eines XSD-Schemas"
+msgstr "XML failo patikrinimas pagal XSD schemą"
 
 #: src/tools.py:433 src/tools.py:444
-#, fuzzy
 msgctxt "search keyword"
 msgid "validate"
-msgstr "Ungültig!"
+msgstr "validuoti"
 
 #: src/tools.py:439 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
-msgstr "JSON-Schema-Validator"
+msgstr "JSON schemos validatorius"
 
 #: src/tools.py:442 src/ui/views/json_validator.blp:20
 msgid "Check a JSON file against a JSON schema"
-msgstr "Pfüfung einer JSON-Datei anhand eines JSON-Schemas"
+msgstr "JSON failo patikrinimas pagal JSON schemą"
 
 #: src/tools.py:453 src/ui/views/markdown_preview.blp:20
 msgid "Preview markdown code as you type"
-msgstr "Echtzeitvorschau für Markdown-Code"
+msgstr "\"Markdown\" kodo peržiūra rašant"
 
 #: src/tools.py:455
 msgctxt "search keyword"
 msgid "render"
-msgstr ""
+msgstr "atvaizdavimas"
 
 #: src/tools.py:457
 msgctxt "search keyword"
 msgid "md"
-msgstr ""
+msgstr "md"
 
 #: src/tools.py:463 src/ui/views/color_converter.blp:16
-#, fuzzy
 msgid "Color Converter"
-msgstr "Konverter"
+msgstr "Spalvų konverteris"
 
 #: src/tools.py:464 src/tools.py:481 src/tools.py:491 src/tools.py:505
 msgid "Graphics"
-msgstr "Grafiken"
+msgstr "Grafika"
 
 #: src/tools.py:466 src/ui/views/color_converter.blp:17
-#, fuzzy
 msgid "Convert colors between formats"
-msgstr "Zahlen zwischen Basen umrechnen"
+msgstr "Tarpformatinis spalvų konvertavimas"
 
 #: src/tools.py:468
 msgctxt "search keyword"
 msgid "rgb"
-msgstr ""
+msgstr "rgb"
 
 #: src/tools.py:469
 msgctxt "search keyword"
 msgid "rgba"
-msgstr ""
+msgstr "rgba"
 
 #: src/tools.py:470
 msgctxt "search keyword"
 msgid "hex"
-msgstr ""
+msgstr "hex"
 
 #: src/tools.py:471
 msgctxt "search keyword"
 msgid "hsl"
-msgstr ""
+msgstr "hsl"
 
 #: src/tools.py:472
 msgctxt "search keyword"
 msgid "hsv"
-msgstr ""
+msgstr "hsv"
 
 #: src/tools.py:473
 msgctxt "search keyword"
 msgid "cmyk"
-msgstr ""
+msgstr "cmyk"
 
 #: src/tools.py:475
-#, fuzzy
 msgctxt "search keyword"
 msgid "conversion"
-msgstr "Version"
+msgstr "konversija"
 
 #: src/tools.py:476
 msgctxt "search keyword"
 msgid "palette"
-msgstr ""
+msgstr "paletė"
 
 #: src/tools.py:480 src/ui/views/contrast_checker.blp:19
 msgid "Contrast Checker"
-msgstr "Kontrastprüfung"
+msgstr "Kontrasto tikrinimas"
 
 #: src/tools.py:483 src/ui/views/contrast_checker.blp:20
 msgid "Check a color combination for WCAG compliance"
-msgstr "Überprüfung von Farbkombinationen auf WCAG-Konformität"
+msgstr "Tikrinti spalvų kombinacijos atitikimą WCAG reikalavimams"
 
 #: src/tools.py:485
 msgctxt "search keyword"
 msgid "accessibility"
-msgstr ""
+msgstr "pasiekiamumas"
 
 #: src/tools.py:486
-#, fuzzy
 msgctxt "search keyword"
 msgid "ratio"
-msgstr "Information"
+msgstr "santykis"
 
 #: src/tools.py:490
 msgid "Color Blindness"
-msgstr "Farbenblindheit"
+msgstr "Aklumas spalvoms"
 
 #: src/tools.py:493 src/ui/views/colorblindness_simulator.blp:20
 msgid "Simulate color blindness in images"
-msgstr "Simulation von Farbenblindheit anhand eines Bildes"
+msgstr "Simuliuoti aklumą spalvoms paveikslėliuose"
 
 #: src/tools.py:495
-#, fuzzy
 msgctxt "search keyword"
 msgid "simulation"
-msgstr "Simulation laden..."
+msgstr "simuliacija"
 
 #: src/tools.py:496
 msgctxt "search keyword"
 msgid "daltonism"
-msgstr ""
+msgstr "daltonizmas"
 
 #: src/tools.py:497
-#, fuzzy
 msgctxt "search keyword"
 msgid "protanopia"
-msgstr "Protanopie"
+msgstr "protanopija"
 
 #: src/tools.py:498
-#, fuzzy
 msgctxt "search keyword"
 msgid "deuteranopia"
-msgstr "Deuteranopie"
+msgstr "deuteranopija"
 
 #: src/tools.py:499
-#, fuzzy
 msgctxt "search keyword"
 msgid "tritanopia"
-msgstr "Tritanopie"
+msgstr "tritanopija"
 
 #: src/tools.py:500
-#, fuzzy
 msgctxt "search keyword"
 msgid "vision"
-msgstr "Version"
+msgstr "regėjimas"
 
 #: src/tools.py:504 src/ui/views/image_converter.blp:19
 msgid "Image Format Converter"
-msgstr "Bildformat-Konverter"
+msgstr "Paveiksliukų formato keitiklis"
 
 #: src/tools.py:507 src/ui/views/image_converter.blp:20
 msgid "Convert images to different formats"
-msgstr "Konvertierung von Bildern zwischen verschiedenen Formaten"
+msgstr "Keisti paveiksliukų formatus"
 
 #: src/tools.py:510
 msgctxt "search keyword"
 msgid "jpg"
-msgstr ""
+msgstr "jpg"
 
 #: src/tools.py:511
 msgctxt "search keyword"
 msgid "jpeg"
-msgstr ""
+msgstr "jpeg"
 
 #: src/tools.py:512
 msgctxt "search keyword"
 msgid "png"
-msgstr ""
+msgstr "png"
 
 #: src/tools.py:513
 msgctxt "search keyword"
 msgid "bmp"
-msgstr ""
+msgstr "bmp"
 
 #: src/tools.py:514
 msgctxt "search keyword"
 msgid "gif"
-msgstr ""
+msgstr "gif"
 
 #: src/tools.py:515
 msgctxt "search keyword"
 msgid "webp"
-msgstr ""
+msgstr "webp"
 
 #: src/tools.py:516
 msgctxt "search keyword"
 msgid "picture"
-msgstr ""
+msgstr "paveiksliukas"
 
 #: src/tools.py:522 src/ui/views/certificate_parser.blp:19
 msgid "Certificate Parser"
-msgstr "Zertifikat-Parser"
+msgstr "Sertifikatų analizatorius"
 
 #: src/tools.py:523 src/tools.py:540 src/views/certificate_parser.py:90
 msgid "Certificates"
-msgstr "Zertifikate"
+msgstr "Sertifikatai"
 
 #: src/tools.py:525 src/ui/views/certificate_parser.blp:20
 msgid "View certificates contents"
-msgstr "Anzeigen von Zertifikatsinhalten"
+msgstr "Rodyti sertifikatų turinį"
 
 #: src/tools.py:532 src/tools.py:549
-#, fuzzy
 msgctxt "search keyword"
 msgid "key"
-msgstr "Schlüssel"
+msgstr "raktas"
 
 #: src/tools.py:534
 msgctxt "search keyword"
 msgid "public key"
-msgstr ""
+msgstr "viešas raktas"
 
 #: src/tools.py:539
 msgid "Certificate Signing Request"
-msgstr "Zertifikatssignierungsanfrage"
+msgstr "Prašymas pasirašyti sertifikatą"
 
 #: src/tools.py:542 src/ui/views/certificate_request_generator.blp:23
 msgid "Generate certificate signing requests"
-msgstr "Erstellen einer Zertifikatssignierungsanfrage"
+msgstr "Generuoti sertifikatų pasirašymo prašymus"
 
 #. change view and save previous
 #: src/widgets/image_area.py:34 src/widgets/text_area.py:54
 #: src/widgets/text_file_area.py:62 src/widgets/text_file_area.py:200
 msgid "Opening file..."
-msgstr "Öffne Datei..."
+msgstr "Atidaromas failas..."
 
 #: src/widgets/image_area.py:96 src/widgets/text_area.py:147
 #: src/widgets/text_file_area.py:162 src/views/certificate_parser.py:60
 msgid "Cannot open more than one file"
-msgstr "Es kann nicht mehr als eine Datei geöffnet werden"
+msgstr "Negalima atidaryti daugiau negu vieną failą"
 
 #: src/widgets/image_area.py:123
 msgid "Opening image..."
-msgstr "Öffne Bild..."
+msgstr "Paveikslėlio atidarymas..."
 
 #: src/widgets/image_area.py:130 src/widgets/text_area.py:184
 #: src/widgets/text_file_area.py:207 src/views/certificate_parser.py:81
 msgid "Open File"
-msgstr "Datei öffnen"
+msgstr "Atidaryti failą"
 
 #: src/widgets/image_area.py:131 src/widgets/text_area.py:185
 #: src/widgets/text_file_area.py:208 src/views/certificate_parser.py:82
@@ -1156,35 +1103,35 @@ msgstr "Datei öffnen"
 #: src/ui/widgets/text_file_area.blp:70 src/ui/views/certificate_parser.blp:51
 #: src/ui/views/certificate_request_generator.blp:117
 msgid "Open"
-msgstr "Öffnen"
+msgstr "Atidaryti"
 
 #: src/widgets/image_area.py:140
 msgid "Supported Image Formats"
-msgstr "Unterstützte Bildformate"
+msgstr "Palaikomi paveikslėlių formatai"
 
 #: src/widgets/image_area.py:173
 msgid "Saving image..."
-msgstr "Speichere Bild..."
+msgstr "Paveikslėlio išsaugojimas..."
 
 #: src/widgets/image_area.py:180 src/widgets/text_file_area.py:328
 #: src/views/image_converter.py:51 src/views/qrcode_generator.py:183
 msgid "Save file as"
-msgstr "Datei speichern unter"
+msgstr "Išsaugoti failą kaip"
 
 #: src/widgets/image_area.py:181 src/widgets/text_file_area.py:329
 #: src/views/certificate_request_generator.py:215
 #: src/views/image_converter.py:52 src/views/qrcode_generator.py:184
 #: src/ui/widgets/image_area.blp:72 src/ui/widgets/text_file_area.blp:83
 msgid "Save"
-msgstr "Speichern"
+msgstr "Išsaugoti"
 
 #: src/widgets/text_area.py:194 src/widgets/text_file_area.py:230
 msgid "Text files"
-msgstr "Textdateien"
+msgstr "Tekstiniai failai"
 
 #: src/widgets/text_area.py:201 src/widgets/text_file_area.py:243
 msgid "Accepted files"
-msgstr "Akzeptierte Dateien"
+msgstr "Priimtini failai"
 
 #: src/widgets/text_area.py:222
 #, python-brace-format
@@ -1192,38 +1139,38 @@ msgid ""
 "Loading a large file ({size})\n"
 "Might take a while, please wait..."
 msgstr ""
-"Lade eine große Datei ({size})\n"
-"Kann kurz dauert, bitte warten..."
+"Užkraunamas didelis failas ({size})\n"
+"Gali užtrukti, prašome palaukti..."
 
 #: src/widgets/text_area.py:230 src/widgets/text_file_area.py:280
 #, python-brace-format
 msgid "Unable to open {file_path}: {file_content}."
-msgstr "Kann {file_path} nicht öffnen: {file_content}."
+msgstr "Negaliu atidaryti {file_path}: {file_content}."
 
 #: src/widgets/text_area.py:246
 msgid "File is not UTF-8 encoded."
-msgstr "Datei ist nicht UTF-8 kodiert."
+msgstr "Failas nėra koduotas naudojant UTF-8."
 
 #: src/widgets/text_file_area.py:217
 msgid "All files"
-msgstr "Alle Datein"
+msgstr "Visi failai"
 
 #: src/widgets/text_file_area.py:224
 msgid "Text files and images"
-msgstr "Textdateien und Bilder"
+msgstr "Tekstiniai failai ir paveikslėliai"
 
 #: src/widgets/text_file_area.py:236
 msgid "Images"
-msgstr "Bilder"
+msgstr "Paveikslėliai"
 
 #: src/widgets/text_file_area.py:321
 msgid "Saving file..."
-msgstr "Datei wird gespeichert..."
+msgstr "Failas išsaugomas..."
 
 #: src/widgets/text_file_area.py:360
 #, python-brace-format
 msgid "Unable to save {path}"
-msgstr "Kann {path} nicht speichern"
+msgstr "Negaliu išsaugoti {path}"
 
 #: src/views/base64_encoder.py:51 src/views/certificate_parser.py:60
 #: src/views/certificate_parser.py:65
@@ -1233,182 +1180,182 @@ msgstr "Kann {path} nicht speichern"
 #: src/views/url_encoder.py:63
 #, python-brace-format
 msgid "Error: {error}"
-msgstr "Fehler: {error}"
+msgstr "Klaida: {error}"
 
 #: src/views/certificate_parser.py:65
 msgid "Unsupported file"
-msgstr "Datei nicht unterstützt"
+msgstr "Nepalaikomas failas"
 
 #: src/views/certificate_parser.py:102 src/views/reverse_cron.py:180
 #: src/ui/views/certificate_parser.blp:100 src/ui/views/reverse_cron.blp:39
 msgid "Expand All"
-msgstr "Alle erweitern"
+msgstr "Išskleisti viską"
 
 #: src/views/certificate_parser.py:106 src/views/reverse_cron.py:184
 msgid "Collapse All"
-msgstr "Alle einklappen"
+msgstr "Sutraukti viską"
 
 #: src/views/certificate_parser.py:145
 msgid "Error: Cannot open this file because it is not a valid certificate."
-msgstr "Fehler: Datei ist keine gültige Zertifikatsdatei."
+msgstr "Klaida: Negaliu atidaryti duoto failo dėl negaliojančio sertifikato."
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:153
 #, python-brace-format
 msgid "Identity: {identity}"
-msgstr "Identität: {identity}"
+msgstr "Tapatybė: {identity}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:155
 #, python-brace-format
 msgid "Verified by: {verified_by}"
-msgstr "Überprüft durch: {verified_by}"
+msgstr "Patikrinta: {verified_by}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:157
 #, python-brace-format
 msgid "Expires: {expiration_date}"
-msgstr "Läuft ab: {expiration_date}"
+msgstr "Galioja iki: {expiration_date}"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:163
 msgid "Basic Constraints"
-msgstr "Grundlegende Beschränkungen"
+msgstr "Pagrindiniai apribojimai"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:164
 msgid "Extended Key Usage"
-msgstr "Erweiterte Schlüsselverwendung"
+msgstr "Išplėstinis raktų panaudojimas"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:165 src/views/certificate_parser.py:210
 msgid "Subject Key Identifier"
-msgstr "Subjekt-Schlüsselkennung"
+msgstr "Temos rakto identifikavimas"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:166
 msgid "Key Usage"
-msgstr "Schlüsselverwendung"
+msgstr "Rakto panaudojimas"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:167
 msgid "Subject Alternative Names"
-msgstr "Alternative Subjektnamen"
+msgstr "Alternatyvūs temos pavadinimai"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:171
 msgid "Extension"
-msgstr "Erweiterung"
+msgstr "Plėtinys"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:211
 msgid "Certificate Fingerprints"
-msgstr "Zertifikatsfingerabdrücke"
+msgstr "Sertifikato būdingas bruožas"
 
 #. TRANSLATORS: MUST use the same translations from https://gitlab.gnome.org/GNOME/gcr/-/tree/4.1.0/po
 #: src/views/certificate_parser.py:214
 msgid "Key Identifier"
-msgstr "Schlüsselkennung"
+msgstr "Rakto identifikatorius"
 
 #: src/views/certificate_request_generator.py:40
 msgid "Open CSR"
-msgstr "CSR öffnen"
+msgstr "Atidaryti CSR"
 
 #: src/views/certificate_request_generator.py:81
 msgid "Open Key File"
-msgstr "Schlüsseldatei öffnen"
+msgstr "Atidaryti rakto failą"
 
 #: src/views/certificate_request_generator.py:88
 msgid "All Files"
-msgstr "Alle Dateien"
+msgstr "Visi failai"
 
 #: src/views/certificate_request_generator.py:145
 msgid "Select save location"
-msgstr "Speicherort wählen"
+msgstr "Pasirinkti vietą išsaugojimui"
 
 #: src/views/certificate_request_generator.py:146
 #: src/ui/views/certificate_request_generator.blp:163
 msgid "Choose"
-msgstr "Wählen"
+msgstr "Pasirinkti"
 
 #: src/views/certificate_request_generator.py:197
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:63
 #: src/views/image_converter.py:41 src/views/qrcode_generator.py:201
 msgid "Saved Successfully"
-msgstr "Speichern erfolgreich"
+msgstr "Sėkmingai išsaugota"
 
 #: src/views/certificate_request_generator.py:214
 msgid "Save key as"
-msgstr "Schlüssel speichern als"
+msgstr "Išsaugoti raktą kaip"
 
 #: src/views/chmod_calculator.py:33 src/views/color_converter.py:54
 #: src/views/jwt_decoder.py:35
 msgid "Invalid value. Please check again"
-msgstr "Ungültiger Wert. Bitte nochmals prüfen"
+msgstr "Neteisinga reikšmė. Prašom patikrinti dar kartą"
 
 #: src/views/colorblindness_simulator.py:26 src/views/image_converter.py:24
 #: src/views/qrcode_generator.py:43
 msgid "Open Image"
-msgstr "Bild öffnen"
+msgstr "Atidaryti paveikslėlį"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
 #: src/views/colorblindness_simulator.py:98
 msgid "Loading simulation..."
-msgstr "Simulation laden..."
+msgstr "Užkraunama simuliacija..."
 
 #: src/views/formatter.py:76
 msgid ""
 "Text is not in the correct format. Check if you misspelled something or if "
 "all parentheses are closed."
 msgstr ""
-"Text ist nicht korrekt formatiert. Prüfe die korrekte Schreibweise und ob "
-"alle Klammern geschlossen sind."
+"Neteisingas teksto formatas. Pasitikrinkite rašybą ir ar visi skliausteliai "
+"uždaryti."
 
 #: src/views/gzip_compressor.py:28
 msgid "Open image"
-msgstr "Öffne Bild"
+msgstr "Atidayti paveikslėlį"
 
 #: src/views/gzip_compressor.py:31
 msgid "Cannot decompress from an image or a file"
-msgstr "Dekomprimierung aus Bild oder Datei nicht möglich"
+msgstr "Neįmanoma išskleisti paveikslėlio arba failo"
 
 #: src/views/gzip_compressor.py:134
 msgid "Please save this file to view its contents"
-msgstr "Datei bitte speichern um ihre Inhalte anzuzeigen"
+msgstr "Prašome išsaugoti šį failą jei norite peržiūrėti jo turinį"
 
 #: src/views/hash_generator.py:165
 msgid "Hashes match!"
-msgstr "Die Hashes stimmen überein!"
+msgstr "Hash'ai sutampa!"
 
 #: src/views/hash_generator.py:167
 msgid "The integrity is verified."
-msgstr "Die Integrität ist geprüft."
+msgstr "Vientisumas patvirtintas."
 
 #: src/views/hash_generator.py:175
 msgid "Warning, integrity cannot be verified!"
-msgstr "Warnung, Integrität kann nicht geprüft werden!"
+msgstr "Perspėjimas - negalima patvirtinti vietisumo!"
 
 #: src/views/hash_generator.py:177
 msgid ""
 "The calculated hash and the provided one do not match. Check again and if "
 "this is a file you downloaded from the Internet re-download it."
 msgstr ""
-"Der berechnete und der angegebene Hash-Wert stimmen nicht überein. Überprüfe "
-"die Datei nochmals und laden sie gegebenenfalls erneut herunter."
+"Apskaičiuotas ir pateiktas hash'ai nesutampa. Prašome patikrinti dar kartą "
+"ir, jei failas atsisiųstas internetu, pakartokite atsisiuntimą."
 
 #: src/views/json_validator.py:77 src/views/xml_validator.py:76
 msgid "Valid!"
-msgstr "Gültig!"
+msgstr "Galiojantis!"
 
 #: src/views/json_validator.py:79
 msgid "JSON is compliant with the provided JSON schema."
-msgstr "JSON ist mit dem bereitgestellten JSON-Schema konform."
+msgstr "JSON failas atitinka pateiktą JSON schemą."
 
 #: src/views/json_validator.py:87 src/views/json_validator.py:97
 #: src/views/xml_validator.py:86
 msgid "Invalid!"
-msgstr "Ungültig!"
+msgstr "Neteisingas!"
 
 #: src/views/json_validator.py:89
 #, python-brace-format
@@ -1416,7 +1363,7 @@ msgid ""
 "JSON is not compliant with the provided JSON scheme:\n"
 "{validation_error}"
 msgstr ""
-"JSON ist nicht mit dem angegebenen JSON-Schema konform:\n"
+"JSON failas neatitinka pateiktos JSON schemos:\n"
 "{validation_error}"
 
 #: src/views/json_validator.py:99
@@ -1425,178 +1372,179 @@ msgid ""
 "Error in JSON schema:\n"
 "{schema_error}"
 msgstr ""
-"Fehler in JSON Schema:\n"
+"Klaida JSON schemoje:\n"
 "{schema_error}"
 
 #: src/views/jwt_decoder.py:173
 msgid "Signature is Valid!"
-msgstr ""
+msgstr "Parašas galioja!"
 
 #: src/views/jwt_decoder.py:175
 msgid "The JWT signature was verified successfully."
-msgstr ""
+msgstr "JWT parašas sėkmingai patvirtintas."
 
 #: src/views/jwt_decoder.py:183
 msgid "Warning, Signature is Invalid!"
-msgstr ""
+msgstr "Dėmesio - negaliojantis parašas!"
 
 #: src/views/jwt_decoder.py:186
 msgid ""
 "The JWT signature doesn't match the provided key. Please verify the key "
 "encoding or ensure the token was signed correctly."
 msgstr ""
+"JWT parašas neatitinka pateikto rakto. Patikrinkite rakto koduotę arba "
+"įsitikinkite, kad prieigos raktas (žetonas) buvo teisingai pasirašytas."
 
 #: src/views/qrcode_generator.py:71 src/ui/views/qrcode_generator.blp:113
 #: src/ui/views/qrcode_generator.blp:122
 msgid "Not Set"
-msgstr "Nicht eingestellt"
+msgstr "Nenurodytas"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:207
 msgid "st"
-msgstr ""
+msgstr "as"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:210
 msgid "nd"
-msgstr ""
+msgstr "as"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:213
 msgid "rd"
-msgstr ""
+msgstr "as"
 
 #. TRANSLATORS: cardinal suffix for numbers
 #: src/views/reverse_cron.py:216
 msgid "th"
-msgstr ""
+msgstr "as"
 
 #: src/views/reverse_cron.py:240 src/views/reverse_cron.py:354
 #: src/ui/views/reverse_cron.blp:410 src/ui/views/reverse_cron.blp:467
 #: src/ui/views/reverse_cron.blp:495
 msgid "January"
-msgstr "Januar"
+msgstr "Sausis"
 
 #: src/views/reverse_cron.py:241 src/views/reverse_cron.py:355
 #: src/ui/views/reverse_cron.blp:411 src/ui/views/reverse_cron.blp:468
 #: src/ui/views/reverse_cron.blp:496
 msgid "February"
-msgstr "Februar"
+msgstr "Vasaris"
 
 #: src/views/reverse_cron.py:242 src/views/reverse_cron.py:356
 #: src/ui/views/reverse_cron.blp:412 src/ui/views/reverse_cron.blp:469
 #: src/ui/views/reverse_cron.blp:497
 msgid "March"
-msgstr "März"
+msgstr "Kovas"
 
 #: src/views/reverse_cron.py:243 src/views/reverse_cron.py:357
 #: src/ui/views/reverse_cron.blp:413 src/ui/views/reverse_cron.blp:470
 #: src/ui/views/reverse_cron.blp:498
 msgid "April"
-msgstr "April"
+msgstr "Balandis"
 
 #: src/views/reverse_cron.py:244 src/views/reverse_cron.py:358
 #: src/ui/views/reverse_cron.blp:414 src/ui/views/reverse_cron.blp:471
 #: src/ui/views/reverse_cron.blp:499
 msgid "May"
-msgstr "Mai"
+msgstr "Gegužė"
 
 #: src/views/reverse_cron.py:245 src/views/reverse_cron.py:359
 #: src/ui/views/reverse_cron.blp:415 src/ui/views/reverse_cron.blp:472
 #: src/ui/views/reverse_cron.blp:500
 msgid "June"
-msgstr "Juni"
+msgstr "Birželis"
 
 #: src/views/reverse_cron.py:246 src/views/reverse_cron.py:360
 #: src/ui/views/reverse_cron.blp:416 src/ui/views/reverse_cron.blp:473
 #: src/ui/views/reverse_cron.blp:501
 msgid "July"
-msgstr "Juli"
+msgstr "Liepa"
 
 #: src/views/reverse_cron.py:247 src/views/reverse_cron.py:361
 #: src/ui/views/reverse_cron.blp:417 src/ui/views/reverse_cron.blp:474
 #: src/ui/views/reverse_cron.blp:502
 msgid "August"
-msgstr "August"
+msgstr "Rugpjūtis"
 
 #: src/views/reverse_cron.py:248 src/views/reverse_cron.py:362
 #: src/ui/views/reverse_cron.blp:418 src/ui/views/reverse_cron.blp:475
 #: src/ui/views/reverse_cron.blp:503
 msgid "September"
-msgstr "September"
+msgstr "Rugsėjis"
 
 #: src/views/reverse_cron.py:249 src/views/reverse_cron.py:363
 #: src/ui/views/reverse_cron.blp:419 src/ui/views/reverse_cron.blp:476
 #: src/ui/views/reverse_cron.blp:504
 msgid "October"
-msgstr "Oktober"
+msgstr "Spalis"
 
 #: src/views/reverse_cron.py:250 src/views/reverse_cron.py:364
 #: src/ui/views/reverse_cron.blp:420 src/ui/views/reverse_cron.blp:477
 #: src/ui/views/reverse_cron.blp:505
 msgid "November"
-msgstr "November"
+msgstr "Lapkritis"
 
 #: src/views/reverse_cron.py:251 src/views/reverse_cron.py:365
 #: src/ui/views/reverse_cron.blp:421 src/ui/views/reverse_cron.blp:478
 #: src/ui/views/reverse_cron.blp:506
 msgid "December"
-msgstr "Dezember"
+msgstr "Gruodis"
 
 #: src/views/reverse_cron.py:376 src/ui/views/reverse_cron.blp:570
 #: src/ui/views/reverse_cron.blp:649 src/ui/views/reverse_cron.blp:685
 #: src/ui/views/reverse_cron.blp:708
 msgid "Sunday"
-msgstr "Sonntag"
+msgstr "Sekmadienis"
 
 #: src/views/reverse_cron.py:377 src/ui/views/reverse_cron.blp:564
 #: src/ui/views/reverse_cron.blp:595 src/ui/views/reverse_cron.blp:679
 #: src/ui/views/reverse_cron.blp:702
 msgid "Monday"
-msgstr "Montag"
+msgstr "Pirmadienis"
 
 #: src/views/reverse_cron.py:378 src/ui/views/reverse_cron.blp:565
 #: src/ui/views/reverse_cron.blp:604 src/ui/views/reverse_cron.blp:680
 #: src/ui/views/reverse_cron.blp:703
 msgid "Tuesday"
-msgstr "Dienstag"
+msgstr "Antradienis"
 
 #: src/views/reverse_cron.py:379 src/ui/views/reverse_cron.blp:566
 #: src/ui/views/reverse_cron.blp:613 src/ui/views/reverse_cron.blp:681
 #: src/ui/views/reverse_cron.blp:704
 msgid "Wednesday"
-msgstr "Mittwoch"
+msgstr "Trečiadienis"
 
 #: src/views/reverse_cron.py:380 src/ui/views/reverse_cron.blp:567
 #: src/ui/views/reverse_cron.blp:622 src/ui/views/reverse_cron.blp:682
 #: src/ui/views/reverse_cron.blp:705
 msgid "Thursday"
-msgstr "Donnerstag"
+msgstr "Ketvirtadienis"
 
 #: src/views/reverse_cron.py:381 src/ui/views/reverse_cron.blp:568
 #: src/ui/views/reverse_cron.blp:631 src/ui/views/reverse_cron.blp:683
 #: src/ui/views/reverse_cron.blp:706
 msgid "Friday"
-msgstr "Freitag"
+msgstr "Penktadienis"
 
 #: src/views/reverse_cron.py:382 src/ui/views/reverse_cron.blp:569
 #: src/ui/views/reverse_cron.blp:640 src/ui/views/reverse_cron.blp:684
 #: src/ui/views/reverse_cron.blp:707
 msgid "Saturday"
-msgstr "Samstag"
+msgstr "Šeštadienis"
 
 #: src/views/timestamp.py:76
 msgid "Timezone"
-msgstr ""
+msgstr "Laiko juosta"
 
 #: src/views/timestamp.py:77
-#, fuzzy
 msgid "Select the desired timezone"
-msgstr "Gewünschte Operation wählen"
+msgstr "Pasirinkite norimą laiko juostą"
 
 #: src/views/xml_validator.py:78
 msgid "XML is compliant with the provided XSD schema."
-msgstr "XML ist mit dem bereitgestellten XSD-Schema komform."
+msgstr "XML failas atitinka pateiktą XSD schemą."
 
 #: src/views/xml_validator.py:88
 #, python-brace-format
@@ -1604,183 +1552,179 @@ msgid ""
 "XML is not compliant with the provided XSD scheme:\n"
 "{xsd_error}"
 msgstr ""
-"XML ist mit dem bereitgestellten XSD-Schema nicht komform:\n"
+"XML failas neatitinka pateiktos XSD schemos:\n"
 "{xsd_error}"
 
 #: src/ui/window.blp:56
 msgid "Show/hide searchbar"
-msgstr "Suchleiste Ein-/Ausblenden"
+msgstr "Rodyti/Slėpti paieškos lauką"
 
 #: src/ui/window.blp:62
 msgid "Favorite Tools"
-msgstr "Favorisierte Werkzeuge"
+msgstr "Mėgstamiausi įrankiai"
 
 #: src/ui/window.blp:72
 msgid "No Favorites"
-msgstr "Keine Favoriten"
+msgstr "Mėgstamiausių nerasta"
 
 #: src/ui/window.blp:73
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
 msgstr ""
-"Favorisierte Werkzeuge können durch Klick auf den Stern neben dem Titel "
-"hinzugefügt werden"
+"Pridėkite prie mėgstamiausių įrankius paspausdami žvaigždutę šalia pavadinimo"
 
 #: src/ui/window.blp:92
 msgid "Favorites"
-msgstr "Favoriten"
+msgstr "Mėgstamiausi"
 
 #: src/ui/window.blp:121
 msgid "Search Tools…"
-msgstr "Werkzeuge durchsuchen…"
+msgstr "Paieškos įrankiai…"
 
 #: src/ui/window.blp:150 src/ui/window.blp:157
 msgid "Show/hide sidebar"
-msgstr "Seitenleiste Ein-/Ausblenden"
+msgstr "Rodyti/Slėpti šoninė juostą"
 
 #: src/ui/window.blp:186
 msgid "_Keyboard Shortcuts"
-msgstr "_Tastenkombinationen"
+msgstr "_Klavišų kombinacijos"
 
 #: src/ui/window.blp:191
 msgid "_About Dev Toolbox"
-msgstr "_Über Dev Toolbox"
+msgstr "_Apie Dev Toolbox"
 
 #: src/ui/about_dialog.blp:10
-#, fuzzy
 msgid ""
 "Copyright © 2022 - 2025 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
-"Urheberrecht © 2022 - 2024 Alessandro Iepure\n"
-"Einige Icons sind urheberrechtlich geschützt durch das GNOME-Projekt"
+"Autorinės teisės © 2022 - 2025 Alessandro Iepure\n"
+"Kai kurių piktogramų autorių teisės priklauso GNOME projektui"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
 #: src/ui/about_dialog.blp:18
 msgid "translator-credits"
-msgstr "Sebastian Kraft"
+msgstr "BelzeBubas (bubasbelze@gmail.com)"
 
 #: src/ui/widgets/date_area.blp:39 src/ui/views/timestamp.blp:42
 msgid "Now"
-msgstr "Jetzt"
+msgstr "Dabar"
 
 #: src/ui/widgets/date_area.blp:40
 msgid "Sets the current system date and time"
-msgstr "Stellt das aktuelle Systemdatum und die Uhrzeit ein"
+msgstr "Nustato esamą sistemos datą ir laiką"
 
 #: src/ui/widgets/date_area.blp:55 src/ui/widgets/entry_row.blp:30
 #: src/ui/widgets/spin_area.blp:68 src/ui/widgets/text_area.blp:66
 #: src/ui/widgets/text_file_area.blp:106
 msgid "Copy to clipboard"
-msgstr "In die Zwischenablage kopieren"
+msgstr "Kopijuoti į clipboard'ą"
 
 #: src/ui/widgets/date_area.blp:79
 msgid "Year"
-msgstr "Jahr"
+msgstr "Metai"
 
 #: src/ui/widgets/date_area.blp:110 src/ui/views/reverse_cron.blp:362
 msgid "Month"
-msgstr "Monat"
+msgstr "Mėnuo"
 
 #: src/ui/widgets/date_area.blp:140 src/ui/views/reverse_cron.blp:250
 msgid "Day"
-msgstr "Tag"
+msgstr "Diena"
 
 #: src/ui/widgets/date_area.blp:176 src/ui/views/reverse_cron.blp:147
 msgid "Hours"
-msgstr "Stunden"
+msgstr "Valandos"
 
 #: src/ui/widgets/date_area.blp:207 src/ui/views/reverse_cron.blp:44
 msgid "Minutes"
-msgstr "Minuten"
+msgstr "Minutės"
 
 #: src/ui/widgets/date_area.blp:237
 msgid "Seconds"
-msgstr "Sekunden"
+msgstr "Sekundės"
 
 #: src/ui/widgets/entry_row.blp:20
 msgid "Generate again"
-msgstr "Erneut erzeugen"
+msgstr "Generuoti vėl"
 
 #: src/ui/widgets/entry_row.blp:40 src/ui/widgets/spin_area.blp:79
 #: src/ui/widgets/text_area.blp:73 src/ui/widgets/text_file_area.blp:117
 msgid "Paste clipboard"
-msgstr "Zwischenablage einfügen"
+msgstr "Įklijuoti iš clipboard'o"
 
 #: src/ui/widgets/entry_row.blp:51 src/ui/widgets/image_area.blp:95
 #: src/ui/widgets/text_area.blp:80 src/ui/widgets/text_file_area.blp:128
 msgid "Clear input"
-msgstr "Eingabe löschen"
+msgstr "Išvalyti įvadą"
 
 #: src/ui/widgets/image_area.blp:84 src/ui/widgets/text_file_area.blp:95
 msgid "Open image in another program"
-msgstr "Bild in anderer Anwendung öffnen"
+msgstr "Atidaryti paveikslėlį kita programa"
 
 #: src/ui/widgets/theme_switcher.blp:29
 msgid "Follow system style"
-msgstr "Systemstil folgen"
+msgstr "Laikytis sistemos stiliaus"
 
 #: src/ui/widgets/theme_switcher.blp:43
 msgid "Light style"
-msgstr "Heller Stil"
+msgstr "Šviesus stilius"
 
 #: src/ui/widgets/theme_switcher.blp:57
 msgid "Dark style"
-msgstr "Dunkler Stil"
+msgstr "Tamsus stilius"
 
 #: src/ui/widgets/webview_area.blp:51
 msgid "Open web page in another browser"
-msgstr "Webseite in anderem Browser öffnen"
+msgstr "Atidaryti internetinį puslapį naudojant kitą naršyklę"
 
 #: src/ui/views/base_converter.blp:19
 msgid "Number Bases Converter"
-msgstr "Zahlen-Basen-Konverter"
+msgstr "Skaičių sistemų koverteris"
 
 #: src/ui/views/base_converter.blp:30
 msgid "Input numbers"
-msgstr "Eingabezahlen"
+msgstr "Įkelti skaičius"
 
 #: src/ui/views/base_converter.blp:33
 msgid "Decimal"
-msgstr "Dezimal"
+msgstr "Dešimtainė"
 
 #: src/ui/views/base_converter.blp:41
 msgid "Binary"
-msgstr "Binär"
+msgstr "Dvejetainė"
 
 #: src/ui/views/base_converter.blp:49
 msgid "Octal"
-msgstr "Oktal"
+msgstr "Aštuntainė"
 
 #: src/ui/views/base_converter.blp:57
 msgid "Hexadecimal"
-msgstr "Hexadezimal"
+msgstr "Šešioiktainė"
 
 #: src/ui/views/base_converter.blp:65
 msgid "ASCII"
-msgstr ""
+msgstr "ASCII"
 
 #: src/ui/views/base_converter.blp:73
 msgid "UTF-8"
-msgstr ""
+msgstr "UTF-8"
 
 #: src/ui/views/base_converter.blp:98
 msgid ""
 "Typing an unaccepted character (i.e. 'A' in the decimal field) will cause "
 "all the fields to reset to 0."
 msgstr ""
-"Die Eingabe eines nicht akzeptierten Zeichens (z. B. 'A' im Dezimalfeld) "
-"führt dazu, dass alle Felder auf 0 zurückgesetzt werden."
+"Įvedus netinkamą simbolį (pvz., „A“ dešimtainio skaičiaus lauke), visi "
+"laukai bus nustatyti į 0."
 
 #: src/ui/views/base64_encoder.blp:19
-#, fuzzy
 msgid "Base64 Encoder & Decoder"
-msgstr "Kodierer & Dekodierer"
+msgstr "Base64 koduotojas ir dekoderis"
 
 #: src/ui/views/base64_encoder.blp:20
-#, fuzzy
 msgid "Encode and decode strings using the Base64 format"
-msgstr "Kodieren und Dekodieren von HTML-Entitäten"
+msgstr "Koduoti ir dekoduoti eilutes naudojant Base64 formatą"
 
 #: src/ui/views/base64_encoder.blp:30 src/ui/views/certificate_parser.blp:30
 #: src/ui/views/colorblindness_simulator.blp:31
@@ -1793,372 +1737,362 @@ msgstr "Kodieren und Dekodieren von HTML-Entitäten"
 #: src/ui/views/text_inspector.blp:31 src/ui/views/timestamp.blp:30
 #: src/ui/views/url_encoder.blp:30 src/ui/views/uuid_generator.blp:31
 msgid "Tool options"
-msgstr "Werkzeugoptionen"
+msgstr "Įrankio parinktys"
 
 #: src/ui/views/base64_encoder.blp:33 src/ui/views/gzip_compressor.blp:33
 #: src/ui/views/html_encoder.blp:33 src/ui/views/json_yaml.blp:33
 #: src/ui/views/url_encoder.blp:33
 msgid "Direction"
-msgstr "Richtung"
+msgstr "Kryptis"
 
 #: src/ui/views/base64_encoder.blp:34 src/ui/views/html_encoder.blp:34
 #: src/ui/views/url_encoder.blp:34
 msgid "Select the desired encoding direction"
-msgstr "Gewünschte Kodierungsrichtung wählen"
+msgstr "Pasirinkite norimą kodavimo kryptį"
 
 #: src/ui/views/base64_encoder.blp:41 src/ui/views/html_encoder.blp:43
 #: src/ui/views/url_encoder.blp:43
 msgid "Encode"
-msgstr "Kodieren"
+msgstr "Koduoti"
 
 #: src/ui/views/base64_encoder.blp:45 src/ui/views/html_encoder.blp:47
 #: src/ui/views/url_encoder.blp:47
 msgid "Decode"
-msgstr "Dekodieren"
+msgstr "Dekoduoti"
 
 #: src/ui/views/base64_encoder.blp:51
 msgid "URL Safe"
-msgstr ""
+msgstr "Saugus URL"
 
 #: src/ui/views/base64_encoder.blp:52
 msgid "Use URL safe Base64 processing"
-msgstr ""
+msgstr "Naudoti saugaus URL Base64 apdorojimą"
 
 #: src/ui/views/base64_encoder.blp:68 src/ui/views/gzip_compressor.blp:63
 #: src/ui/views/hash_generator.blp:83 src/ui/views/html_encoder.blp:64
 #: src/ui/views/json_yaml.blp:76 src/ui/views/url_encoder.blp:84
 msgid "Input"
-msgstr "Eingabe"
+msgstr "Įkelti"
 
 #: src/ui/views/base64_encoder.blp:80 src/ui/views/gzip_compressor.blp:73
 #: src/ui/views/hash_generator.blp:92 src/ui/views/html_encoder.blp:77
 #: src/ui/views/json_yaml.blp:88 src/ui/views/url_encoder.blp:95
 msgid "Output"
-msgstr "Ausgabe"
+msgstr "Išvestis"
 
 #: src/ui/views/certificate_parser.blp:33
 msgid "Certificate"
-msgstr "Zertifikat"
+msgstr "Sertifikatas"
 
 #: src/ui/views/certificate_parser.blp:34
 msgid "Open a certificate file (pem, der, cer extensions)"
-msgstr "Zertifikatdatei öffnen (pem, der, cer Erweiterungen)"
+msgstr "Atidaryti sertifikato failą (pem, der, cer plėtiniai)"
 
 #: src/ui/views/certificate_parser.blp:79
 msgid "Open a certificate file to view its contents."
-msgstr "Zertifikatdatei öffnen um Inhalt anzuzeigen."
+msgstr "Atidaryti sertifikato failą turinio peržiūrai."
 
 #: src/ui/views/certificate_request_generator.blp:22
 msgid "Certificate Signing Request Generator"
-msgstr "Generator für Zertifikatssignierungsanfragen"
+msgstr "Sertifikato pasirašymo užklausos generatorius"
 
 #: src/ui/views/certificate_request_generator.blp:34
 msgid "Fill the information below"
-msgstr "Fülle die folgenden Informationen aus"
+msgstr "Pateikite žemiau prašomą informaciją"
 
 #: src/ui/views/certificate_request_generator.blp:35
 msgid ""
 "Fill at least the required fields then press the 'Create CSR' button. An "
 "empty passphrase will generate an unecrypted CSR."
 msgstr ""
-"Fülle mindestens die erforderlichen Felder aus und klicke dann auf die "
-"Schaltfläche „CSR erstellen“. Eine leere Passphrase erzeugt eine "
-"unverschlüsselte CSR."
+"Užpildykite bent privalomus laukus ir nuspauskite \"Sukurti CSR\" mygtuką. "
+"Tuščia slapta frazė sugeneruos neužkoduotą CSR."
 
 #: src/ui/views/certificate_request_generator.blp:46
 msgid "Create CSR"
-msgstr "CSR erstellen"
+msgstr "Sukurti CSR"
 
 #: src/ui/views/certificate_request_generator.blp:52
 msgid "Common Name (CN) *"
-msgstr "Allgemeiner Name (CN) *"
+msgstr "Vardas (V)*"
 
 #: src/ui/views/certificate_request_generator.blp:56
 msgid "Country Name (C)"
-msgstr "Name des Landes (C)"
+msgstr "Šalis (Š)"
 
 #: src/ui/views/certificate_request_generator.blp:60
 msgid "State or Province Name (ST)"
-msgstr "Name des Staates oder der Provinz (ST)"
+msgstr "Valstijos arba provincijos pavadinimas (ST)"
 
 #: src/ui/views/certificate_request_generator.blp:64
 msgid "Locality Name (L)"
-msgstr "Name der Örtlichkeit (L)"
+msgstr "Vietovės pavadinimas (L)"
 
 #: src/ui/views/certificate_request_generator.blp:68
 msgid "Organization Name (O)"
-msgstr "Name der Organisation (O)"
+msgstr "Organizacijos pavadinimas (O)"
 
 #: src/ui/views/certificate_request_generator.blp:72
 msgid "Organization Unit Name (OU)"
-msgstr "Name der Organisationseinheit (OE)"
+msgstr "Organizacijos padalinio pavadinimas (OU)"
 
 #: src/ui/views/certificate_request_generator.blp:76
 msgid "Passphrase"
-msgstr "Passphrase"
+msgstr "Slapta frazė"
 
 #: src/ui/views/certificate_request_generator.blp:80
 #: src/ui/views/jwt_decoder.blp:78
 msgid "Key"
-msgstr "Schlüssel"
+msgstr "Raktas"
 
 #: src/ui/views/certificate_request_generator.blp:81
 msgid "Generate a new key or use and existing one"
-msgstr "Neuen Schlüssel erzeugen oder vorhandenen Schlüssel verwenden"
+msgstr "Generuoti naują raktą arba naudoti esamą"
 
 #: src/ui/views/certificate_request_generator.blp:88
 msgid "New"
-msgstr "Neu"
+msgstr "Naujas"
 
 #: src/ui/views/certificate_request_generator.blp:92
-#, fuzzy
 msgid "Existing"
-msgstr "Vorhanden"
+msgstr "Esamas"
 
 #: src/ui/views/certificate_request_generator.blp:98
 msgid "Key File *"
-msgstr "Schlüsseldatei *"
+msgstr "Rakto failas *"
 
 #: src/ui/views/certificate_request_generator.blp:99
 msgid "Open the file containing the key you want to use"
-msgstr "Öffnen der Datei, die den gewünschten Schlüssel enthält"
+msgstr "Atidaryti norimo naudoti rakto failą"
 
 #: src/ui/views/certificate_request_generator.blp:124
 msgid "Key Size"
-msgstr "Schlüsselgröße"
+msgstr "Rakto dydis"
 
 #: src/ui/views/certificate_request_generator.blp:125
 msgid "Size of the new key. It will be saved on the same path as the CSR."
-msgstr ""
-"Größe des neuen Schlüssels. Er wird unter demselben Pfad wie der CSR "
-"gespeichert."
+msgstr "Naujo rakto dydis. Bus išsaugotas ten kur ir CSR."
 
 #: src/ui/views/certificate_request_generator.blp:134
 msgid "2048 bits"
-msgstr "2048 Bit"
+msgstr "2048 bitai"
 
 #: src/ui/views/certificate_request_generator.blp:138
 msgid "4096 bits"
-msgstr "4096 Bit"
+msgstr "4096 bitai"
 
 #: src/ui/views/certificate_request_generator.blp:144
 msgid "Key Save Location *"
-msgstr "Speicherort der Schlüsseldatei *"
+msgstr "Rakto išsaugojimo vieta *"
 
 #: src/ui/views/certificate_request_generator.blp:145
 msgid "Save location for the generated key file"
-msgstr "Speicherort für die erzeugte Schlüsseldatei"
+msgstr "Sugeneruoto rakto failo išsaugojimo vieta"
 
 #: src/ui/views/chmod_calculator.blp:33
 msgid "Permissions"
-msgstr "Berechtigungen"
+msgstr "Leidimai"
 
 #: src/ui/views/chmod_calculator.blp:45
 msgid "Special"
-msgstr ""
+msgstr "Specialus"
 
 #: src/ui/views/chmod_calculator.blp:145
 msgid "Owner"
-msgstr "Besitzer"
+msgstr "Savininkas"
 
 #: src/ui/views/chmod_calculator.blp:158
 msgid "Group"
-msgstr "Gruppe"
+msgstr "Grupė"
 
 #: src/ui/views/chmod_calculator.blp:171
 msgid "Others"
-msgstr "Andere"
+msgstr "Kiti"
 
 #: src/ui/views/chmod_calculator.blp:184
 msgid "Read"
-msgstr "Lesen"
+msgstr "Skaityti"
 
 #: src/ui/views/chmod_calculator.blp:197
 msgid "Write"
-msgstr "Schreiben"
+msgstr "Rašyti"
 
 #: src/ui/views/chmod_calculator.blp:210
 msgid "Execute"
-msgstr "Ausführen"
+msgstr "Vykdyti"
 
 #: src/ui/views/chmod_calculator.blp:351
 msgid "Numeric value"
-msgstr "Numerische Notation"
+msgstr "Skaitinė reikšmė"
 
 #: src/ui/views/chmod_calculator.blp:363
 msgid "Symbolic value"
-msgstr "Symbolische Notation"
+msgstr "Raidinė vertė"
 
 #: src/ui/views/colorblindness_simulator.blp:19
 msgid "Color Blindness Simulator"
-msgstr "Simulator für Farbenblindheit"
+msgstr "Spalvinio aklumo simuliatorius"
 
 #: src/ui/views/colorblindness_simulator.blp:34
 msgid "Severity"
-msgstr "Schweregrad"
+msgstr "Sunkumas"
 
 #: src/ui/views/colorblindness_simulator.blp:35
 msgid "Severity of the anomaly"
-msgstr "Schwere der Anomalie"
+msgstr "Anomalijos sunkumas"
 
 #: src/ui/views/colorblindness_simulator.blp:72
 #: src/ui/views/text_inspector.blp:41
 msgid "Original"
-msgstr "Original"
+msgstr "Originalas"
 
 #: src/ui/views/colorblindness_simulator.blp:79
 msgid "Protanopia"
-msgstr "Protanopie"
+msgstr "Protanopija"
 
 #: src/ui/views/colorblindness_simulator.blp:90
 msgid "Deuteranopia"
-msgstr "Deuteranopie"
+msgstr "Deuteranopija"
 
 #: src/ui/views/colorblindness_simulator.blp:95
 msgid "Tritanopia"
-msgstr "Tritanopie"
+msgstr "Tritanopija"
 
 #: src/ui/views/color_converter.blp:30
-#, fuzzy
 msgid "Format"
-msgstr "Format"
+msgstr "Formatas"
 
 #: src/ui/views/color_converter.blp:31
-#, fuzzy
 msgid "Output format for color values"
-msgstr "Ausgabeformat"
+msgstr "Spalvų reikšmių išvesties formatas"
 
 #: src/ui/views/color_converter.blp:36
 msgid "Web"
-msgstr ""
+msgstr "Tinklas"
 
 #: src/ui/views/color_converter.blp:37
 msgid "Web (Legacy)"
-msgstr ""
+msgstr "Tinklas (Paveldas)"
 
 #: src/ui/views/color_converter.blp:38
 msgid "Percent"
-msgstr ""
+msgstr "Procentas"
 
 #: src/ui/views/color_converter.blp:39
 msgid "Normalized"
-msgstr ""
+msgstr "Normalizuotas"
 
 #: src/ui/views/color_converter.blp:46
 msgid "Angle Unit"
-msgstr ""
+msgstr "Kampo vienetas"
 
 #: src/ui/views/color_converter.blp:47
 msgid "Unit used for angle component"
-msgstr ""
+msgstr "Kampo komponentui naudojamas vienetas"
 
 #: src/ui/views/color_converter.blp:52
 msgid "Degrees"
-msgstr ""
+msgstr "Laipsnis"
 
 #: src/ui/views/color_converter.blp:53
 msgid "Radians"
-msgstr ""
+msgstr "Radianas"
 
 #: src/ui/views/color_converter.blp:54
 msgid "Gradians"
-msgstr ""
+msgstr "Gradientas"
 
 #: src/ui/views/color_converter.blp:55
 msgid "Turns"
-msgstr ""
+msgstr "Posūkis"
 
 #: src/ui/views/color_converter.blp:56
-#, fuzzy
 msgid "Follow Format"
-msgstr "Format"
+msgstr "Laikytis formato"
 
 #: src/ui/views/color_converter.blp:62
 msgid "Bits"
-msgstr ""
+msgstr "Bitai"
 
 #: src/ui/views/color_converter.blp:63
 msgid "Bits precision for color values"
-msgstr ""
+msgstr "Bitų tikslumas spalvų reikšmėms"
 
 #: src/ui/views/color_converter.blp:82
 msgid "Values"
-msgstr ""
+msgstr "Reikšmės"
 
 #: src/ui/views/color_converter.blp:85 src/ui/views/color_converter.blp:97
 msgid "Color"
-msgstr ""
+msgstr "Spalva"
 
 #: src/ui/views/color_converter.blp:103
 msgid "Hex"
-msgstr ""
+msgstr "Hex"
 
 #: src/ui/views/color_converter.blp:128
-#, fuzzy
 msgid "Red"
-msgstr "Lesen"
+msgstr "Raudona"
 
 #: src/ui/views/color_converter.blp:136
 msgid "Green"
-msgstr ""
+msgstr "Žalia"
 
 #: src/ui/views/color_converter.blp:144
 msgid "Blue"
-msgstr ""
+msgstr "Mėlyna"
 
 #: src/ui/views/color_converter.blp:168 src/ui/views/color_converter.blp:208
 msgid "Hue"
-msgstr ""
+msgstr "Atspalvis"
 
 #: src/ui/views/color_converter.blp:176 src/ui/views/color_converter.blp:216
-#, fuzzy
 msgid "Saturation"
-msgstr "Samstag"
+msgstr "Saturacija"
 
 #: src/ui/views/color_converter.blp:184
 msgid "Value"
-msgstr ""
+msgstr "Reikšmė"
 
 #: src/ui/views/color_converter.blp:224
-#, fuzzy
 msgid "Lightness"
-msgstr "Heller Stil"
+msgstr "Šviesumas"
 
 #: src/ui/views/color_converter.blp:234
 msgid "Alpha"
-msgstr ""
+msgstr "Alfa"
 
 #: src/ui/views/color_converter.blp:265
 msgid "HWB"
-msgstr ""
+msgstr "HWB"
 
 #: src/ui/views/contrast_checker.blp:33 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
-msgstr "Textfarbe"
+msgstr "Teksto spalva"
 
 #: src/ui/views/contrast_checker.blp:34
 msgid "Color used for the text"
-msgstr "Farbe des Textes"
+msgstr "Tekstui naudojama spalva"
 
 #: src/ui/views/contrast_checker.blp:52 src/ui/views/contrast_checker.blp:65
 msgid "Background color"
-msgstr "Hintergrundfarbe"
+msgstr "Pagrindo spalva"
 
 #: src/ui/views/contrast_checker.blp:53
 msgid "Color used for the background"
-msgstr "Farbe des Hintergrundes"
+msgstr "Pagrindui naudojama spalva"
 
 #: src/ui/views/contrast_checker.blp:77
 msgid "Example"
-msgstr "Beispiel"
+msgstr "Pavyzdys"
 
 #: src/ui/views/contrast_checker.blp:89
 msgid "Lorem ipsum dolor sit amet"
-msgstr "Lorem ipsum dolor sit amet"
+msgstr "Lorem ipsum dolor color sit amet"
 
 #: src/ui/views/contrast_checker.blp:97
 msgid "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
-msgstr "velit laboris excepteur aliqua nostrud dolore anim ad qui esse"
+msgstr "velit laboris excepteur aliqua nostrud dolore colore anim ad qui esse"
 
 #: src/ui/views/contrast_checker.blp:118 src/ui/views/contrast_checker.blp:149
 msgid "AA"
@@ -2166,11 +2100,11 @@ msgstr "AA"
 
 #: src/ui/views/contrast_checker.blp:126 src/ui/views/contrast_checker.blp:188
 msgid "small"
-msgstr "klein"
+msgstr "mažas"
 
 #: src/ui/views/contrast_checker.blp:157 src/ui/views/contrast_checker.blp:219
 msgid "large"
-msgstr "groß"
+msgstr "didelis"
 
 #: src/ui/views/contrast_checker.blp:180 src/ui/views/contrast_checker.blp:211
 msgid "AAA"
@@ -2178,434 +2112,430 @@ msgstr "AAA"
 
 #: src/ui/views/cron_converter.blp:34
 msgid "Number of dates"
-msgstr "Anzahl der Daten"
+msgstr "Datų kiekis"
 
 #: src/ui/views/cron_converter.blp:35
 msgid "Number of dates to be generated (up to 20)"
-msgstr "Anzahl der zu generierenden Daten (bis zu 20)"
+msgstr "Generuojamų datų kiekis (iki 20)"
 
 #: src/ui/views/cron_converter.blp:47
 msgid "Output format"
-msgstr "Ausgabeformat"
+msgstr "Išvesties formatas"
 
 #: src/ui/views/cron_converter.blp:48
 msgid ""
 "Format used to display generated dates (<a href=\"https://strftime.org/"
 "\">python syntax</a>)"
 msgstr ""
-"Anzeigeformat der generierten Daten (<a href=\"https://strftime.org/"
-"\">python syntax</a>)"
+"Formatas naudojamas rodyti generuojamas datas "
+"(<a href=\"https://strftime.org/\">python sintaksė</a>)"
 
 #: src/ui/views/cron_converter.blp:76
 msgid "CRON expression"
-msgstr "CRON-Ausdruck"
+msgstr "CRON išraiška"
 
 #: src/ui/views/cron_converter.blp:89
 msgid "Dates"
-msgstr "Daten"
+msgstr "Datos"
 
 #: src/ui/views/formatter.blp:29 src/ui/views/json_yaml.blp:52
 msgid "Indentations"
-msgstr "Einzüge"
+msgstr "Įtraukos"
 
 #: src/ui/views/formatter.blp:30 src/ui/views/json_yaml.blp:53
 msgid "Number of spaces used for indentation"
-msgstr "Anzahl der Leerzeichen für die Einzüge"
+msgstr "Tarpų kiekis naudojamas įtraukai"
 
 #: src/ui/views/gzip_compressor.blp:19
 msgid "GZip Compress & Decompress"
-msgstr "GZip Komprimieren & Dekompriemieren"
+msgstr "GZip suspaudimas ir išskleidimas"
 
 #: src/ui/views/gzip_compressor.blp:20
 msgid "Compress and decompress texts and images using GZip"
-msgstr "Bilder und Texte mit GZip komprimieren und dekomprimieren"
+msgstr "Suspausti ir išskleisti tekstus ir paveiksliukus naudojant GZip"
 
 #: src/ui/views/gzip_compressor.blp:34
 msgid "Select the desired operation"
-msgstr "Gewünschte Operation wählen"
+msgstr "Pasirinkti norimą veiksmą"
 
 #: src/ui/views/gzip_compressor.blp:43
 msgid "Compress"
-msgstr "Komprimieren"
+msgstr "Suspausti"
 
 #: src/ui/views/gzip_compressor.blp:47
 msgid "Decompress"
-msgstr "Dekomprimieren"
+msgstr "Išskleisti"
 
 #: src/ui/views/gzip_compressor.blp:105
 msgid ""
 "The compression result and the expected decompression input are base64 "
 "encoded."
 msgstr ""
-"Das Komprimierungsergebnis und die erwartete Dekomprimierungseingabe sind "
-"base64-kodiert."
+"Suspaudimo rezultatas ir laukiama išskleidimo įvestis užkoduoti naudojant "
+"base64."
 
 #: src/ui/views/gzip_compressor.blp:110
 msgid "May hang the app for large files, please wait."
-msgstr "Bei großen Dateien kann die Anwendung hängen bleiben, bitte warten."
+msgstr "Prašome palaukti, programa gali \"pakibti\" apdorodama didelius failus."
 
 #: src/ui/views/hash_generator.blp:19
 msgid "Hash Generator & Checker"
-msgstr "Hash Generierung & Prüfung"
+msgstr "Hash generatorius ir tikrintojas"
 
 #: src/ui/views/hash_generator.blp:20
 msgid "Calculate MD5, SHA1, SHA256, and SHA512 hashes and check for integrity"
 msgstr ""
-"Berechnung und Intigritätsprüfung von MD5, SHA1, SHA256 und SHA512 Hashes"
+"Apskaičiuoti MD5, SHA1, SHA256, and SHA512 hash'us ir patikrinti vientisumą"
 
 #: src/ui/views/hash_generator.blp:34
 msgid "Hash to calculate"
-msgstr "Hash für die Berechnung"
+msgstr "Apskaičiuoti hash'ą"
 
 #: src/ui/views/hash_generator.blp:35
 msgid "Choose the hash type to calculate"
-msgstr "Hash-Typ für die Berechnung wählen"
+msgstr "Apskaičiavimui pasirinkite hash'o tipą"
 
 #: src/ui/views/hash_generator.blp:53
 msgid "Check for integrity"
-msgstr "Prüfung auf Integrität"
+msgstr "Tikrinti vientisumą"
 
 #: src/ui/views/hash_generator.blp:54
 msgid ""
 "If enabled the calculated hash will be checked against another provided hash "
 "to verify integrity"
 msgstr ""
-"Wenn diese Option aktiviert ist, wird der berechnete Hash-Wert mit einem "
-"anderen angegebenen Hash-Wert verglichen, um die Integrität zu überprüfen"
+"Jei įgalinta, vientisumo patikrinimui apskaičiuotas hash'as bus palygintas "
+"su kitu pateiktu hash'u"
 
 #: src/ui/views/hash_generator.blp:60
 msgid "Type the hash to check against"
-msgstr "Zu prüfenden Hash eingeben"
+msgstr "Įrašykite hashą su kuriuo norite palyginti"
 
 #: src/ui/views/html_encoder.blp:19
 msgid "HTML Encoder & Decoder"
-msgstr "HTML Kodieren & Dekodieren"
+msgstr "HTML koduotojas ir dekoderis"
 
 #: src/ui/views/image_converter.blp:34
 msgctxt "noun"
 msgid "Format"
-msgstr "Format"
+msgstr "Formatas"
 
 #: src/ui/views/image_converter.blp:35
 msgid "Select the desired output format"
-msgstr "Gewünschtes Ausgabeformat wählen"
+msgstr "Pasirinkite norimą išvesties formatą"
 
 #: src/ui/views/image_converter.blp:58
 msgid "Image"
-msgstr "Bild"
+msgstr "Paveikslėlis"
 
 #: src/ui/views/image_converter.blp:60
 msgid "Convert"
-msgstr "Konvertieren"
+msgstr "Konvertuoti"
 
 #: src/ui/views/image_converter.blp:64
 msgid "converted-image"
-msgstr "Konvertiertes Bild"
+msgstr "kovertuotas paveiklėlis"
 
 #: src/ui/views/json_validator.blp:49
-#, fuzzy
 msgid "JSON Schema"
-msgstr "JSON-Schema-Validator"
+msgstr "JSON schema"
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
-msgstr "JSON - YAML Konverter"
+msgstr "JSON - YAML koverteris"
 
 #: src/ui/views/json_yaml.blp:34
 msgid "Specify what format is the input and the desired output"
-msgstr "Format für Eingabe und die gewünschte Ausgabe angeben"
+msgstr "Nurodykite įvesties formatą ir norimą išvesties formatą"
 
 #: src/ui/views/json_yaml.blp:42
 msgid "JSON → YAML"
-msgstr ""
+msgstr "JSON → YAML"
 
 #: src/ui/views/json_yaml.blp:46
 msgid "YAML → JSON"
-msgstr ""
+msgstr "YAML → JSON"
 
 #: src/ui/views/jwt_decoder.blp:19
-#, fuzzy
 msgid "JWT Decode & Encode"
-msgstr "HTML Kodieren & Dekodieren"
+msgstr "JWT koduotojas ir dekoderis"
 
 #: src/ui/views/jwt_decoder.blp:32
 msgid "Verify Signature"
-msgstr ""
+msgstr "Patvirtinti parašą"
 
 #: src/ui/views/jwt_decoder.blp:33
 msgid "Verify signature or sign JWT"
-msgstr ""
+msgstr "Patvirtinti parašą arba pasirašyti JWT"
 
 #: src/ui/views/jwt_decoder.blp:41
 msgid "Off"
-msgstr ""
+msgstr "Išjungta"
 
 #: src/ui/views/jwt_decoder.blp:46
 msgid "Symmetric"
-msgstr ""
+msgstr "Simetriškas"
 
 #: src/ui/views/jwt_decoder.blp:51
 msgid "Asymmetric"
-msgstr ""
+msgstr "Asimetriškas"
 
 #: src/ui/views/jwt_decoder.blp:57
 msgid "Key Encoding"
-msgstr ""
+msgstr "Rakto kodavimas"
 
 #: src/ui/views/jwt_decoder.blp:58
-#, fuzzy
 msgid "Select the encoding of the key"
-msgstr "Gewünschte Kodierungsrichtung wählen"
+msgstr "Pasirinkite rakto kodavimą"
 
 #: src/ui/views/jwt_decoder.blp:99
 msgid "Public Key (PEM)"
-msgstr ""
+msgstr "Viešas raktas (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:107
 msgid "Private Key (PEM)"
-msgstr ""
+msgstr "Privatus raktas (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:120
 msgid "Token"
-msgstr "Token"
+msgstr "Žetonas"
 
 #: src/ui/views/jwt_decoder.blp:139
 msgid "Header"
-msgstr "Kopfzeile"
+msgstr "Antraštė"
 
 #: src/ui/views/jwt_decoder.blp:147
 msgid "Payload"
-msgstr "Nutzlast"
+msgstr "Naudingi duomenys"
 
 #: src/ui/views/lorem_generator.blp:19
 msgid "Lorem Ipsum Generator"
-msgstr "Lorem Ipsum Generator"
+msgstr "Lorem ipsum generatorius"
 
 #: src/ui/views/lorem_generator.blp:34
 msgid "Begin with \"Lorem ipsum dolor sit amet\""
-msgstr "Beginne mit \"Lorem ipsum dolor sit amet\""
+msgstr "Pradėti naudojant \"Lorem ipsum dolor sit amet\""
 
 #: src/ui/views/lorem_generator.blp:40 src/ui/views/uuid_generator.blp:53
 msgid "Amount"
-msgstr "Anzahl"
+msgstr "Kiekis"
 
 #: src/ui/views/lorem_generator.blp:54
 msgid "Words"
-msgstr "Wörter"
+msgstr "Žodžiai"
 
 #: src/ui/views/lorem_generator.blp:55
 msgid "Sentences"
-msgstr "Sätze"
+msgstr "Sakiniai"
 
 #: src/ui/views/lorem_generator.blp:56
 msgid "Paragraphs"
-msgstr "Absätze"
+msgstr "Pastraipos"
 
 #: src/ui/views/lorem_generator.blp:69
 msgid "Generated text"
-msgstr "Generierter Text"
+msgstr "Sugeneruotas tekstas"
 
 #: src/ui/views/markdown_preview.blp:35
 msgid "Markdown"
-msgstr "Markdown"
+msgstr "Ženklinimas (markdown)"
 
 #: src/ui/views/markdown_preview.blp:49
 msgid "Preview"
-msgstr "Vorschau"
+msgstr "Peržiūra"
 
 #: src/ui/views/qrcode_generator.blp:19
 msgid "QR Code Generator"
-msgstr "QR-Code-Generator"
+msgstr "QR kodo generatorius"
 
 #: src/ui/views/qrcode_generator.blp:31 src/ui/views/reverse_cron.blp:31
 msgid "Tool Options"
-msgstr "Werkzeugoptionen"
+msgstr "Įrankio parinktys"
 
 #: src/ui/views/qrcode_generator.blp:32
 msgid "Fill the required information and press 'generate'"
-msgstr "Erforderliche Informationen ausfüllen und „Erzeugen“ drücken"
+msgstr "Užpildykite būtiną informaciją ir spauskite 'generuoti'"
 
 #: src/ui/views/qrcode_generator.blp:35
 msgid "Content type"
-msgstr "Art des Inhalts"
+msgstr "Turinio tipas"
 
 #: src/ui/views/qrcode_generator.blp:36
 msgid "Choose the content of the QR Code"
-msgstr "Art des Inhalts für den QR-Code wählen"
+msgstr "Pasirinkite QR kodo turinį"
 
 #: src/ui/views/qrcode_generator.blp:41 src/ui/views/qrcode_generator.blp:49
 msgid "Text/URL"
-msgstr "Text/URL"
+msgstr "Tekstas/URL nuoroda"
 
 #: src/ui/views/qrcode_generator.blp:42
 msgid "WiFi Network"
-msgstr "WiFi-Netzwerk"
+msgstr "WiFi tinklas"
 
 #: src/ui/views/qrcode_generator.blp:43
 msgid "Contact"
-msgstr "Kontakt"
+msgstr "Kontaktas"
 
 #: src/ui/views/qrcode_generator.blp:56
 msgid "Network Name (SSID)"
-msgstr "Netzwerkname (SSID)"
+msgstr "Tinklo vardas (SSID)"
 
 #: src/ui/views/qrcode_generator.blp:63
 msgid "Network Encryption"
-msgstr "Netzwerk-Verschlüsselung"
+msgstr "Tinklo šifravimas"
 
 #: src/ui/views/qrcode_generator.blp:70
 msgid "None"
-msgstr "Keine"
+msgstr "Nė vienas"
 
 #: src/ui/views/qrcode_generator.blp:76
 msgid "Network Password"
-msgstr "Netzwerkpasswort"
+msgstr "Tinklo slaptažodis"
 
 #: src/ui/views/qrcode_generator.blp:80
 msgid "First Name *"
-msgstr "Vorname *"
+msgstr "Vardas *"
 
 #: src/ui/views/qrcode_generator.blp:87
 msgid "Last Name *"
-msgstr "Nachname *"
+msgstr "Pavardė *"
 
 #: src/ui/views/qrcode_generator.blp:94
 msgid "Phone Number"
-msgstr "Telefonnummer"
+msgstr "Telefono Numeris"
 
 #: src/ui/views/qrcode_generator.blp:101
 msgid "Email"
-msgstr "E-Mail"
+msgstr "E-paštas"
 
 #: src/ui/views/qrcode_generator.blp:108
 msgid "Birthday"
-msgstr "Geburtstag"
+msgstr "Gimimo diena"
 
 #: src/ui/views/qrcode_generator.blp:127
 msgid "Select from calendar:"
-msgstr "Aus Kalender wählen:"
+msgstr "Pasirinkti kalendoriuje:"
 
 #: src/ui/views/qrcode_generator.blp:138
 msgid "URL"
-msgstr "URL"
+msgstr "URL nuoroda"
 
 #: src/ui/views/qrcode_generator.blp:145
 msgid "Address"
-msgstr "Anschrift"
+msgstr "Adresas"
 
 #: src/ui/views/qrcode_generator.blp:148
 msgid "Street"
-msgstr "Straße"
+msgstr "Gatvė"
 
 #: src/ui/views/qrcode_generator.blp:155
 msgid "City"
-msgstr "Stadt"
+msgstr "Miestas"
 
 #: src/ui/views/qrcode_generator.blp:162
 msgid "State"
-msgstr "Bundesland"
+msgstr "Valstija"
 
 #: src/ui/views/qrcode_generator.blp:169
 msgid "ZIP Code"
-msgstr "Postleitzahl"
+msgstr "Pašto kodas"
 
 #: src/ui/views/qrcode_generator.blp:176
 msgid "Country"
-msgstr "Land"
+msgstr "Šalis"
 
 #: src/ui/views/qrcode_generator.blp:186
 msgid "Generated QR Code"
-msgstr "Generierter QR-Code"
+msgstr "Sugeneruotas QR kodas"
 
 #: src/ui/views/qrcode_generator.blp:193
 msgid "qr-code.png"
-msgstr "qr-code.png"
+msgstr "qr-kodas.png"
 
 #: src/ui/views/qrcode_generator.blp:195
 msgid "Generate"
-msgstr "Generiere"
+msgstr "Generuoti"
 
 #: src/ui/views/random_generator.blp:19
 msgid "Random Generator"
-msgstr "Zufallsgenerator"
+msgstr "Atsitiktinis generatorius"
 
 #: src/ui/views/random_generator.blp:30
 msgid "String"
-msgstr "Zeichenkette"
+msgstr "Eilutė"
 
 #: src/ui/views/random_generator.blp:31
 msgid "Generate a random string with the given options. ASCII characters only."
 msgstr ""
-"Zeichenkette mit den gewählten Optionen generieren. Ausschließlich ASCII-"
-"Zeichen."
+"Generuoti atsitiktinę eilutę su nurodytais parametrais. Tik ASCII simboliai."
 
 #: src/ui/views/random_generator.blp:34
 msgid "Length"
-msgstr "Länge"
+msgstr "Ilgumas"
 
 #: src/ui/views/random_generator.blp:35
 msgid "Length of the generated string"
-msgstr "Länge der generierten Zeichenkette"
+msgstr "Sugeneruotos eilutės ilgumas"
 
 #: src/ui/views/random_generator.blp:47
 msgid "Uppercase letters (A-Z)"
-msgstr "Großbuchstaben (A-Z)"
+msgstr "Didžiosios raidės (A-Z)"
 
 #: src/ui/views/random_generator.blp:53
 msgid "Lowercase letters (a-z)"
-msgstr "Kleinbuchstaben (a-z)"
+msgstr "Mažosios raidės (a-z)"
 
 #: src/ui/views/random_generator.blp:59
 msgid "Numbers (0-9)"
-msgstr "Zahlen (0-9)"
+msgstr "Skaičiai (0-9)"
 
 #: src/ui/views/random_generator.blp:65
 msgid "Special characters (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
-msgstr "Sonderzeichen (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
+msgstr "Spec simboliai (!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\]^_`{|}~)"
 
 #: src/ui/views/random_generator.blp:75
 msgid "Generated string"
-msgstr "Generierte Zeichenkette"
+msgstr "Sugeneruota eilutė"
 
 #: src/ui/views/random_generator.blp:92
 msgid "Number"
-msgstr "Zahl"
+msgstr "Skaičius"
 
 #: src/ui/views/random_generator.blp:93
 msgid "Generate a random number in the given range"
-msgstr "Generiere eine Zufallszahl in der angegebenen Länge"
+msgstr "Generuoti atsitiktinį skaičių iš duoto intervalo"
 
 #: src/ui/views/random_generator.blp:96
 msgid "Minimum"
-msgstr "Minimum"
+msgstr "Minimumas"
 
 #: src/ui/views/random_generator.blp:97
 msgid "Minimum value of the generated number"
-msgstr "Mindestwert der generierten Zahl"
+msgstr "Mažiausia sugeneruoto skaičiaus reikšmė"
 
 #: src/ui/views/random_generator.blp:109
 msgid "Maximum"
-msgstr "Maximum"
+msgstr "Maksimumas"
 
 #: src/ui/views/random_generator.blp:110
 msgid "Maximum value of the generated number"
-msgstr "Maximalwert der generierten Zahl"
+msgstr "Didžiausia sugeneruoto skaičiaus reikšmė"
 
 #: src/ui/views/random_generator.blp:159
 msgid "Generated number"
-msgstr "Generierte Zahl"
+msgstr "Sugeneruotas skaičius"
 
 #: src/ui/views/regex_tester.blp:19
 msgid "Regular Expression Tester"
-msgstr "Tester für reguläre Ausdrücke"
+msgstr "Reguliariųjų išraiškų tikrinimas"
 
 #: src/ui/views/regex_tester.blp:37
 msgid "Regex to test"
-msgstr "Regex für die Prüfung"
+msgstr "Regiuliarioji išraiška tikrinimui"
 
 #: src/ui/views/reverse_cron.blp:58
 msgid "Every minute"
-msgstr "Jede Minute"
+msgstr "Kas minutę"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
@@ -2616,442 +2546,421 @@ msgstr "Jede Minute"
 #: src/ui/views/reverse_cron.blp:277 src/ui/views/reverse_cron.blp:389
 #: src/ui/views/reverse_cron.blp:543
 msgid "Every"
-msgstr "Alle"
+msgstr "Kas"
 
 #. TRANSLATORS: part of "Every x minute(s) starting at minute y"
 #: src/ui/views/reverse_cron.blp:82
 msgid "minute(s) starting at minute"
-msgstr "Minute(en) beginnend mit Minute"
+msgstr "minutę(es) pradedent minute"
 
 #: src/ui/views/reverse_cron.blp:101
 msgid "Specific minute (choose one or many, no selection means every minute)"
 msgstr ""
-"Bestimmte Minute (eine oder mehrere, keine Auswahl bedeutet jede Minute)"
+"Pasirinktą minutę (pasirinkite vieną ar kelias, nepasirinkus bus kas minutę)"
 
 #. TRANSLATORS: part of "Every minute between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:122
 msgid "Every minute between minute"
-msgstr "Jede Minute zwischen Minute und Minute"
+msgstr "Kiekvieną minutę tarp minučių"
 
 #. TRANSLATORS: part of "Every second between minute x and minute y"
 #: src/ui/views/reverse_cron.blp:133
 msgid "and minute"
-msgstr "und Minute"
+msgstr "ir minučių"
 
 #: src/ui/views/reverse_cron.blp:161
 msgid "Every hour"
-msgstr "Alle Stunde"
+msgstr "Kas valandą"
 
 #. TRANSLATORS: part of "Every x hour(s) starting at hour y"
 #: src/ui/views/reverse_cron.blp:185
 msgid "hour(s) starting at hour"
-msgstr "Stunde(n) startet bei Stunde"
+msgstr "valandą(as) pradedant valandą"
 
 #: src/ui/views/reverse_cron.blp:204
 msgid "Specific hour (choose one or many, no selection means every hour)"
 msgstr ""
-"Bestimmte Stunde(Wähle eine oder mehrere, keine Auswahl meint alle Stunden)"
+"Pasirinktą valandą "
+"(pasirinkite vieną ar kelias, nepasirinkus bus kas valandą)"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:225
-#, fuzzy
 msgid "Every hour between hour"
-msgstr "Jede Stunde zwischen Stunde"
+msgstr "Kiekvieną valandą tarp valandos"
 
 #. TRANSLATORS: part of "Every hour between hour x and hour y"
 #: src/ui/views/reverse_cron.blp:236
 msgid "and hour"
-msgstr "und Stunde"
+msgstr "ir valandos"
 
 #: src/ui/views/reverse_cron.blp:264
 msgid "Every day"
-msgstr "Jeden Tag"
+msgstr "Kiekvieną dieną"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:288
 msgid "day(s) starting on the"
-msgstr ""
+msgstr "dieną(as) pradedant nuo"
 
 #. TRANSLATORS: part of "Every x day(s) starting on the y on the month" with y day-number (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:299
 msgid "of the month"
-msgstr ""
+msgstr "mėnesio dienos"
 
 #: src/ui/views/reverse_cron.blp:316
 msgid ""
 "Specific day of month (choose one or many, no selection means every day)"
 msgstr ""
+"Pasirinktą mėnesio dieną "
+"(pasirinkite vieną ar daugiau, nepasirinkus bus kiekvieną dieną)"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:337
 msgid "Every day between the"
-msgstr ""
+msgstr "Kiekvieną dieną tarp"
 
 #. TRANSLATORS: part of "Every day between the x and the y" with x and y day-numbers (1st, 2nd, ...)
 #: src/ui/views/reverse_cron.blp:348
 msgid "and the"
-msgstr ""
+msgstr "ir"
 
 #: src/ui/views/reverse_cron.blp:376
 msgid "Every month"
-msgstr ""
+msgstr "Kiekvieną mėnesį"
 
 #. TRANSLATORS: part of "Every x month(s) starting in y" with y list of months
 #: src/ui/views/reverse_cron.blp:400
 msgid "month(s) starting in"
-msgstr ""
+msgstr "Kas mėnesį(ius) pradedant"
 
 #: src/ui/views/reverse_cron.blp:436
 msgid "Specific month (choose one or many, no selection means every month)"
 msgstr ""
+"Pasirinktą mėnesį "
+"(pasirinkite vieną ar kelis, nepasirinkus bus kiekvieną mėnesį)"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #: src/ui/views/reverse_cron.blp:457
 msgid "Every month between"
-msgstr ""
+msgstr "Kiekvieną mėnesį tarp"
 
 #. TRANSLATORS: part of "Every month between x and y" with x and y list of months
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:485 src/ui/views/reverse_cron.blp:692
 msgid "and"
-msgstr "und"
+msgstr "ir"
 
 #: src/ui/views/reverse_cron.blp:516
 msgid "Weekday"
-msgstr "Wochentag"
+msgstr "Darbo diena"
 
 #: src/ui/views/reverse_cron.blp:530
 msgid "Every weekday"
-msgstr "Jeder Wochentag"
+msgstr "Kiekvieną darbo dieną"
 
 #. TRANSLATORS: part of "Every x weekday(s) starting on y" with y list of weekdays
 #: src/ui/views/reverse_cron.blp:554
 msgid "weekday(s) starting on"
-msgstr ""
+msgstr "darbo dieną(as) pradedant nuo"
 
 #: src/ui/views/reverse_cron.blp:585
 msgid "Specific weekday (choose one or many, no selection means every weekday)"
 msgstr ""
+"Pasirinktą darbo dieną "
+"(pasirinkite vieną ar kelias, nepasirinkus bus kiekvieną darbo dieną)"
 
 #. TRANSLATORS: part of "Every weekday between x and y" with x and y list of weekdays
 #: src/ui/views/reverse_cron.blp:669
 msgid "Every weekday between"
-msgstr ""
+msgstr "Kiekvieną darbo dieną tarp"
 
 #: src/ui/views/reverse_cron.blp:718
 msgid "Command to execute"
-msgstr ""
+msgstr "Vykdyti komandą"
 
 #: src/ui/views/reverse_cron.blp:737
 msgid "CRON Expression"
-msgstr ""
+msgstr "CRON išraiška"
 
 #: src/ui/views/text_diff.blp:33
 msgid "Old Text"
-msgstr "Alter Text"
+msgstr "Senas tekstas"
 
 #: src/ui/views/text_diff.blp:45
 msgid "New Text"
-msgstr "Neuer Text"
+msgstr "Naujas tekstas"
 
 #: src/ui/views/text_diff.blp:58
 msgid "Differences"
-msgstr "Unterschiede"
+msgstr "Skirtumai"
 
 #: src/ui/views/text_inspector.blp:34
 msgid "Change case"
-msgstr ""
+msgstr "Keisti raidžių registrą"
 
 #: src/ui/views/text_inspector.blp:35
 msgid "Choose a case to apply to the text"
-msgstr ""
+msgstr "Pasirinkite teksto raidžių registrą"
 
 #: src/ui/views/text_inspector.blp:42
 msgid "Sentence case"
-msgstr ""
+msgstr "Pirma didžioji"
 
 #: src/ui/views/text_inspector.blp:43
 msgid "lower case"
-msgstr ""
+msgstr "mažosios"
 
 #: src/ui/views/text_inspector.blp:44
 msgid "UPPERCASE"
-msgstr ""
+msgstr "DIDŽIOSIOS"
 
 #: src/ui/views/text_inspector.blp:45
 msgid "Title Case"
-msgstr ""
+msgstr "Kiekvienas Žodis Didžiąja"
 
 #: src/ui/views/text_inspector.blp:46
 msgid "camelCase"
-msgstr ""
+msgstr "camelTipas"
 
 #: src/ui/views/text_inspector.blp:47
 msgid "PascalCase"
-msgstr ""
+msgstr "PascalTipas"
 
 #: src/ui/views/text_inspector.blp:48
 msgid "snake_case"
-msgstr ""
+msgstr "snake_tipas"
 
 #: src/ui/views/text_inspector.blp:49
 msgid "CONSTANT_CASE"
-msgstr ""
+msgstr "CONSTANT_TIPAS"
 
 #: src/ui/views/text_inspector.blp:50
 msgid "kebab-case"
-msgstr ""
+msgstr "kebab-tipas"
 
 #: src/ui/views/text_inspector.blp:51
 msgid "COBOL-CASE"
-msgstr ""
+msgstr "COBOL-TIPAS"
 
 #: src/ui/views/text_inspector.blp:52
 msgid "Train-Case"
-msgstr ""
+msgstr "Train-Tipas"
 
 #: src/ui/views/text_inspector.blp:53
 msgid "aLtErNaTiNg CaSe"
-msgstr ""
+msgstr "aLtErNaTiNg TiPas"
 
 #: src/ui/views/text_inspector.blp:54
 msgid "ReVeRsE aLtErNaTiNg CaSe"
-msgstr ""
+msgstr "ReVeRsE aLtErNaTiNg TiPas"
 
 #: src/ui/views/text_inspector.blp:66
 msgid "Information"
-msgstr "Information"
+msgstr "Informacija"
 
 #: src/ui/views/text_inspector.blp:69
-#, fuzzy
 msgid "Cursor"
-msgstr "Cursor"
+msgstr "Kursorius"
 
 #: src/ui/views/text_inspector.blp:83
 msgid "Line:"
-msgstr "Linie:"
+msgstr "Eilutė:"
 
 #: src/ui/views/text_inspector.blp:96
 msgid "Column:"
-msgstr "Spalte:"
+msgstr "Stulpelis:"
 
 #: src/ui/views/text_inspector.blp:121
 msgid "Characters:"
-msgstr "Zeichen:"
+msgstr "Ženklai:"
 
 #: src/ui/views/text_inspector.blp:134
 msgid "Words:"
-msgstr "Wörter:"
+msgstr "Žodžiai:"
 
 #: src/ui/views/text_inspector.blp:147
 msgid "Lines:"
-msgstr "Linien:"
+msgstr "Eilutės:"
 
 #: src/ui/views/timestamp.blp:19
 msgid "Timestamp Converter"
-msgstr "Zeitstempelumwandler"
+msgstr "Laiko žymos konverteris"
 
 #: src/ui/views/timestamp.blp:43
 msgid "Sets the current system timestamp"
-msgstr "Setzt den aktuellen Systemzeitstempel"
+msgstr "Nustato dabartinę sistemos laiko žymą"
 
 #: src/ui/views/timestamp.blp:47
 msgid "Date"
-msgstr "Datum"
+msgstr "Data"
 
 #: src/ui/views/timestamp.blp:57
 msgid "ISO Date (ISO 8601/RFC 3339)"
-msgstr "ISO Datum(ISO 8601/RFC 3339)"
+msgstr "ISO data (ISO 8601/RFC 3339)"
 
 #: src/ui/views/timestamp.blp:63
 msgid "RFC 2822 Date"
-msgstr "RFC 2822 Datum"
+msgstr "RFC 2822 data"
 
 #: src/ui/views/timestamp.blp:69
 msgid "Short Date"
-msgstr "Kurzes Datum"
+msgstr "Trumpas datos formatas"
 
 #: src/ui/views/timestamp.blp:75
 msgid "Short Time"
-msgstr "Kurze Zeit"
+msgstr "Trumpas laiko formatas"
 
 #: src/ui/views/timestamp.blp:81
 msgid "Long Date"
-msgstr "Langes Datum"
+msgstr "Ilgas datos formatas"
 
 #: src/ui/views/timestamp.blp:87
 msgid "Long Time"
-msgstr "Lange Zeit"
+msgstr "Ilgas laiko formatas"
 
 #: src/ui/views/timestamp.blp:93
 msgid "Full Long Date"
-msgstr "Ganzes langes Datum"
+msgstr "Pilna ilga data"
 
 #: src/ui/views/url_encoder.blp:19
 msgid "URL Encoder & Decoder"
-msgstr ""
+msgstr "URL koduotojas ir dekoderis"
 
 #: src/ui/views/url_encoder.blp:53
 msgid "Space encoding"
-msgstr ""
+msgstr "Tarpo kodavimas"
 
 #: src/ui/views/url_encoder.blp:54
 msgid "Select the desired encoding for the space character"
-msgstr ""
+msgstr "Pasirinkite norimą tarpo kodavimą"
 
 #: src/ui/views/uuid_generator.blp:19
 msgid "UUID Generator"
-msgstr "UUID Generator"
+msgstr "UUID generatorius"
 
 #: src/ui/views/uuid_generator.blp:34
 msgid "Version"
-msgstr "Version"
+msgstr "Versija"
 
 #: src/ui/views/uuid_generator.blp:35
 msgid "Choose the UUID version to generate"
-msgstr ""
+msgstr "Pasirinkite UUID generavimo versiją"
 
 #: src/ui/views/uuid_generator.blp:40
 msgid "Version 1 (MAC address)"
-msgstr ""
+msgstr "Versija 1 (MAC adresas)"
 
 #: src/ui/views/uuid_generator.blp:41
 msgid "Version 3"
-msgstr ""
+msgstr "Versija 3"
 
 #: src/ui/views/uuid_generator.blp:42
 msgid "Version 4 (Random)"
-msgstr ""
+msgstr "Versija 4 (atsitiktinė)"
 
 #: src/ui/views/uuid_generator.blp:43
 msgid "Version 5"
-msgstr ""
+msgstr "Versija 5"
 
 #: src/ui/views/uuid_generator.blp:44
 msgid "Version 6 (Gregorian Time)"
-msgstr ""
+msgstr "Versija 6 (Grigališkas)"
 
 #: src/ui/views/uuid_generator.blp:45
 msgid "Version 7 (UNIX Epoch)"
-msgstr ""
+msgstr "Versija 7 (UNIX epocha)"
 
 #: src/ui/views/uuid_generator.blp:54
 msgid "Number of UUIDs to be generated (up to 50)"
-msgstr ""
+msgstr "Generuojamų UUID kiekis (iki 50)"
 
 #: src/ui/views/uuid_generator.blp:72
 msgid "Generated UUIDs"
-msgstr ""
+msgstr "Sugeneruoti UUID"
 
 #: src/ui/gtk/help-overlay.blp:15
 msgctxt "shortcut window"
 msgid "General"
-msgstr ""
+msgstr "Bendras(i)"
 
 #: src/ui/gtk/help-overlay.blp:18
 msgctxt "shortcut window"
 msgid "Search Tools"
-msgstr ""
+msgstr "Paieškos įrankiai"
 
 #: src/ui/gtk/help-overlay.blp:23
 msgctxt "shortcut window"
 msgid "Show Shortcuts"
-msgstr ""
+msgstr "Rodyti trumpinius"
 
 #: src/ui/gtk/help-overlay.blp:28
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr ""
+msgstr "Išeiti"
 
 #: src/formatters/html.py:14
 msgid "HTML Formatter"
-msgstr ""
+msgstr "HTML formatuotojas"
 
 #: src/formatters/html.py:17
 msgid "Type HTML code here"
-msgstr ""
+msgstr "Rašykite HTML kodą čia"
 
 #: src/formatters/html.py:20 src/formatters/js.py:20 src/formatters/json.py:19
 #: src/formatters/sql.py:19 src/formatters/xml.py:21 src/formatters/css.py:19
 msgctxt "verb/action"
 msgid "Format"
-msgstr ""
+msgstr "Formatuoti"
 
 #: src/formatters/js.py:14
 msgid "JavaScript Formatter"
-msgstr ""
+msgstr "JavaScript formatuotojas"
 
 #: src/formatters/js.py:17
 msgid "Type JavaScript code here"
-msgstr ""
+msgstr "Rašykite JavaScript čia"
 
 #: src/formatters/json.py:13
 msgid "JSON Formatter"
-msgstr ""
+msgstr "JSON formatuotojas"
 
 #: src/formatters/json.py:16
 msgid "Type JSON code here"
-msgstr ""
+msgstr "Rašykite JSON kodą čia"
 
 #: src/formatters/sql.py:13
 msgid "SQL Formatter"
-msgstr ""
+msgstr "SQL formatuotojas"
 
 #: src/formatters/sql.py:16
 msgid "Type SQL code here"
-msgstr ""
+msgstr "Rašykite SQL kodą čia"
 
 #: src/formatters/xml.py:15
 msgid "XML Formatter"
-msgstr ""
+msgstr "XML formatuotojas"
 
 #: src/formatters/xml.py:18
 msgid "Type XML code here"
-msgstr ""
+msgstr "Rašykite XML kodą čia"
 
 #: src/formatters/css.py:13
 msgid "CSS Formatter"
-msgstr ""
+msgstr "CSS formatuotojas"
 
 #: src/formatters/css.py:16 src/formatters/css_minifier.py:17
 msgid "Type CSS here"
-msgstr ""
+msgstr "Rašykite CSS čia"
 
 #: src/formatters/css_minifier.py:20 src/formatters/js_minifier.py:20
 msgctxt "verb/action"
 msgid "Minify"
-msgstr ""
+msgstr "Sumažinti"
 
 #: src/formatters/js_minifier.py:15
 msgid "Minify JS code"
-msgstr ""
+msgstr "Sumažinti JS kodą"
 
 #: src/formatters/js_minifier.py:17
 msgid "Type JS code here"
-msgstr ""
-
-#~ msgid ""
-#~ "JSON;YAML;YML;Converter;CRON;Parser;GZip;Compressor;Decompressor;Hash;"
-#~ "Regex;Markdown;Image;"
-#~ msgstr ""
-#~ "JSON;YAML;YML;Umwandler;CRON;Parser;GZip;Komprimierer;Dekomprimierer;Hash;"
-#~ "Regex;Markdown;Bild;"
-
-#~ msgid "Decode JWT tokens to header and payload"
-#~ msgstr "Dekodieren von JWT-Tokens in Kopfzeile und Nutzlast"
-
-#~ msgid "JWT tokens decoder"
-#~ msgstr "JWT-Token-Dekoder"
-
-#~ msgid "Cancel"
-#~ msgstr "Abbrechen"
-
-#~ msgid "Unable to save image."
-#~ msgstr "Bild konnte nicht gespeichert werden."
-
-#~ msgid "Open folder"
-#~ msgstr "Ordner öffnen"
-
-#, python-brace-format
-#~ msgid "Successfully saved as {save_path}"
-#~ msgstr "Erfolgreich gespeichert als {save_path}"
+msgstr "Rašykite JS kodą čia"

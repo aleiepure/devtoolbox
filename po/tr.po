@@ -7,9 +7,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: me.iepure.devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2024-11-03 14:00+0000\n"
+"PO-Revision-Date: 2025-10-20 04:51+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/devtoolbox/"
 "devtoolbox/tr/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8.2\n"
+"X-Generator: Weblate 5.14-dev\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
 #. TRANSLATORS: do not translate
@@ -39,6 +39,10 @@ msgid ""
 "Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;"
 "Lorem;Ipsum;"
 msgstr ""
+"JSON;YAML;YML;XML;HTML;CSS;SQL;JavaScript;Validate;Validator;Converter;Convert;Timestamp;bmp;gif;icns;jpeg;png;tiff;webp;Image;Base;Parser;CRON;GZip;Compressor;Decompressor;Hash;Regex;Compare;URL;Minify;Generator;Generate;UUID;Random;QR;chmod;Contrast;Color;Text;Diff;Case;Markdown;Preview;Lorem;Ipsum;Doğrula;Doğrulayıcı;Dönüştür;"
+"Zaman "
+"damgası;Görüntü;Temel;Ayrıştırıcı;Sıkıştırıcı;Sağlama;Karşılaştır;Küçült;Oluştur;Rastgele;Karşıtlık;Renk;Metin;Fark;Harf;"
+"Ön İzleme;"
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:23
 msgid ""
@@ -111,49 +115,45 @@ msgstr "JSON belgelerini YAML biçimine, veya tam tersine dönüştür"
 #: src/tools.py:20 src/tools.py:39 src/tools.py:206
 msgctxt "search keyword"
 msgid "parse"
-msgstr ""
+msgstr "ayrıştır"
 
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
-#, fuzzy
 msgctxt "search keyword"
 msgid "converter"
-msgstr "Dönüştürücüler"
+msgstr "dönüştürücü"
 
 #: src/tools.py:22 src/tools.py:46 src/tools.py:74 src/tools.py:96
 #: src/tools.py:114 src/tools.py:394
-#, fuzzy
 msgctxt "search keyword"
 msgid "convert"
-msgstr "Dönüştür"
+msgstr "dönüştür"
 
 #: src/tools.py:23 src/tools.py:38 src/tools.py:47 src/tools.py:474
-#, fuzzy
 msgctxt "search keyword"
 msgid "format"
-msgstr "Biçim"
+msgstr "biçim"
 
 #: src/tools.py:24 src/tools.py:234 src/tools.py:250 src/tools.py:435
 #: src/tools.py:446
 msgctxt "search keyword"
 msgid "document"
-msgstr ""
+msgstr "belge"
 
 #: src/tools.py:25
 msgctxt "search keyword"
 msgid "spaces"
-msgstr ""
+msgstr "boşluk"
 
 #: src/tools.py:26
-#, fuzzy
 msgctxt "search keyword"
 msgid "indentation"
-msgstr "Girintileme"
+msgstr "girintileme"
 
 #: src/tools.py:27 src/tools.py:204 src/tools.py:217 src/tools.py:231
 #: src/tools.py:245 src/tools.py:261 src/tools.py:274
 msgctxt "search keyword"
 msgid "indent"
-msgstr ""
+msgstr "girinti"
 
 #: src/tools.py:31 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
@@ -166,108 +166,97 @@ msgstr "UNIX zaman damgalarını düz tarihlere, veya tam tersine dönüştür"
 #: src/tools.py:36
 msgctxt "search keyword"
 msgid "epoch"
-msgstr ""
+msgstr "çağ"
 
 #: src/tools.py:37 src/tools.py:97 src/tools.py:115
 msgctxt "search keyword"
 msgid "time"
-msgstr ""
+msgstr "saat"
 
 #: src/tools.py:40
 msgctxt "search keyword"
 msgid "datetime"
-msgstr ""
+msgstr "tarih ve saat"
 
 #: src/tools.py:41
 msgctxt "search keyword"
 msgid "calendar"
-msgstr ""
+msgstr "takvim"
 
 #: src/tools.py:42
-#, fuzzy
 msgctxt "search keyword"
 msgid "timestamp"
-msgstr "Zaman Damgası"
+msgstr "zaman damgası"
 
 #: src/tools.py:44 src/tools.py:98 src/tools.py:116
 msgctxt "search keyword"
 msgid "date"
-msgstr ""
+msgstr "tarih"
 
 #: src/tools.py:48
 msgctxt "search keyword"
 msgid "short"
-msgstr ""
+msgstr "kısa"
 
 #: src/tools.py:49
 msgctxt "search keyword"
 msgid "long"
-msgstr ""
+msgstr "uzun"
 
 #: src/tools.py:52
 msgctxt "search keyword"
 msgid "year"
-msgstr ""
+msgstr "yıl"
 
 #: src/tools.py:53
-#, fuzzy
 msgctxt "search keyword"
 msgid "month"
-msgstr "Ay"
+msgstr "ay"
 
 #: src/tools.py:54
-#, fuzzy
 msgctxt "search keyword"
 msgid "day"
-msgstr "Mayıs"
+msgstr "gün"
 
 #: src/tools.py:55
-#, fuzzy
 msgctxt "search keyword"
 msgid "hour"
-msgstr "ve"
+msgstr "saat"
 
 #: src/tools.py:56
-#, fuzzy
 msgctxt "search keyword"
 msgid "hours"
-msgstr "Saat"
+msgstr "saat"
 
 #: src/tools.py:57
-#, fuzzy
 msgctxt "search keyword"
 msgid "minute"
-msgstr "Dakika"
+msgstr "dakika"
 
 #: src/tools.py:58
-#, fuzzy
 msgctxt "search keyword"
 msgid "minutes"
-msgstr "Dakika"
+msgstr "dakika"
 
 #: src/tools.py:59
-#, fuzzy
 msgctxt "search keyword"
 msgid "second"
-msgstr "Saniye"
+msgstr "saniye"
 
 #: src/tools.py:60
-#, fuzzy
 msgctxt "search keyword"
 msgid "seconds"
-msgstr "Saniye"
+msgstr "saniye"
 
 #: src/tools.py:61
-#, fuzzy
 msgctxt "search keyword"
 msgid "timezone"
-msgstr "Zaman dilimi"
+msgstr "zzaman dilimi"
 
 #: src/tools.py:62
-#, fuzzy
 msgctxt "search keyword"
 msgid "now"
-msgstr "Şimdi"
+msgstr "şimdi"
 
 #: src/tools.py:66
 msgid "Number Bases"
@@ -278,50 +267,44 @@ msgid "Convert numbers between bases"
 msgstr "Sayıları tabanlar arasında dönüştür"
 
 #: src/tools.py:71
-#, fuzzy
 msgctxt "search keyword"
 msgid "representation"
-msgstr "Girintileme"
+msgstr "gösterim"
 
 #: src/tools.py:72
 msgctxt "search keyword"
 msgid "base"
-msgstr ""
+msgstr "temel"
 
 #: src/tools.py:75
-#, fuzzy
 msgctxt "search keyword"
 msgid "number"
-msgstr "Sayı"
+msgstr "sayı"
 
 #: src/tools.py:76
-#, fuzzy
 msgctxt "search keyword"
 msgid "binary"
-msgstr "İkilik"
+msgstr "ikilik"
 
 #: src/tools.py:77
-#, fuzzy
 msgctxt "search keyword"
 msgid "octal"
-msgstr "Sekizlik"
+msgstr "sekizlik"
 
 #: src/tools.py:78
-#, fuzzy
 msgctxt "search keyword"
 msgid "decimal"
-msgstr "Ondalık"
+msgstr "ondalık"
 
 #: src/tools.py:79
-#, fuzzy
 msgctxt "search keyword"
 msgid "hexadecimal"
-msgstr "Onaltılık"
+msgstr "onaltılık"
 
 #: src/tools.py:80
 msgctxt "search keyword"
 msgid "integer"
-msgstr ""
+msgstr "tamsayı"
 
 #: src/tools.py:87 src/ui/views/cron_converter.blp:20
 msgid "CRON Parser"
@@ -334,23 +317,22 @@ msgstr "CRON ifadelerini saat ve tarihe dönüştür"
 #: src/tools.py:93 src/tools.py:111
 msgctxt "search keyword"
 msgid "schedule"
-msgstr ""
+msgstr "zamanla"
 
 #: src/tools.py:94 src/tools.py:112
 msgctxt "search keyword"
 msgid "parser"
-msgstr ""
+msgstr "ayrıştırıcı"
 
 #: src/tools.py:95 src/tools.py:113 src/tools.py:410
-#, fuzzy
 msgctxt "search keyword"
 msgid "expression"
-msgstr "CRON ifadesi"
+msgstr "İfade"
 
 #: src/tools.py:99 src/tools.py:117
 msgctxt "search keyword"
 msgid "job"
-msgstr ""
+msgstr "görev"
 
 #: src/tools.py:105 src/ui/views/reverse_cron.blp:19
 msgid "Reverse CRON"
@@ -367,78 +349,76 @@ msgstr "Kodlayıcılar ve Kod Çözücüler"
 
 #: src/tools.py:128 src/ui/views/html_encoder.blp:20
 msgid "Encode and decode special characters using the HTML format"
-msgstr "HTML biçimini kullanarak özel karakterleri kodlayın ve kodunu çözün"
+msgstr "HTML biçimini kullanarak özel karakterleri kodla ve kodunu çöz"
 
 #: src/tools.py:131
 msgctxt "search keyword"
 msgid "escape"
-msgstr ""
+msgstr "kaçış"
 
 #: src/tools.py:133 src/tools.py:233 src/tools.py:247 src/tools.py:434
 #: src/tools.py:456
 msgctxt "search keyword"
 msgid "markup"
-msgstr ""
+msgstr "işaretleme"
 
 #: src/tools.py:134 src/tools.py:145 src/tools.py:172
 msgctxt "search keyword"
 msgid "text"
-msgstr ""
+msgstr "metin"
 
 #: src/tools.py:141
 msgid "Encode and decode base64 strings"
 msgstr "Base64 dizgelerini kodla ve kodunu çöz"
 
 #: src/tools.py:144 src/tools.py:173
-#, fuzzy
 msgctxt "search keyword"
 msgid "string"
-msgstr "Dizge"
+msgstr "dizge"
 
 #: src/tools.py:146 src/tools.py:207 src/tools.py:235 src/tools.py:445
 msgctxt "search keyword"
 msgid "data"
-msgstr ""
+msgstr "veri"
 
 #: src/tools.py:153 src/ui/views/url_encoder.blp:20
 msgid "Encode and decode special characters inside URLs"
-msgstr "URLʼlerin içindeki özel karakterleri kodlayın ve kodunu çözün"
+msgstr "URLʼlerin içindeki özel karakterleri kodla ve kodunu çöz"
 
 #: src/tools.py:155
 msgctxt "search keyword"
 msgid "url"
-msgstr ""
+msgstr "url"
 
 #: src/tools.py:156
 msgctxt "search keyword"
 msgid "unescape"
-msgstr ""
+msgstr "kaçışı kaldır"
 
 #: src/tools.py:157 src/tools.py:249
 msgctxt "search keyword"
 msgid "web"
-msgstr ""
+msgstr "web"
 
 #: src/tools.py:158
 msgctxt "search keyword"
 msgid "link"
-msgstr ""
+msgstr "bağlantı"
 
 #: src/tools.py:159
-#, fuzzy
 msgctxt "search keyword"
 msgid "address"
-msgstr "Adres"
+msgstr "adres"
 
 #: src/tools.py:160
 msgctxt "search keyword"
 msgid "uri"
-msgstr ""
+msgstr "uri"
 
 #: src/tools.py:161 src/tools.py:219
 msgctxt "search keyword"
 msgid "query"
-msgstr ""
+msgstr "sorgu"
 
 #: src/tools.py:168
 msgid "Compress and decompress files and texts using GZip"
@@ -447,79 +427,71 @@ msgstr "GZip kullanarak dosyaları ve metinleri sıkıştırın ve açın"
 #: src/tools.py:170
 msgctxt "search keyword"
 msgid "unarchive"
-msgstr ""
+msgstr "arşivden çıkar"
 
 #: src/tools.py:171 src/tools.py:365
-#, fuzzy
 msgctxt "search keyword"
 msgid "file"
-msgstr "Tüm dosyalar"
+msgstr "dosya"
 
 #: src/tools.py:174
 msgctxt "search keyword"
 msgid "zip"
-msgstr ""
+msgstr "zip"
 
 #: src/tools.py:175
 msgctxt "search keyword"
 msgid "unzip"
-msgstr ""
+msgstr "zipten çıkar"
 
 #: src/tools.py:176
-#, fuzzy
 msgctxt "search keyword"
 msgid "decompression"
-msgstr "Aç"
+msgstr "sıkıştırmış dosyayı açma"
 
 #: src/tools.py:177
-#, fuzzy
 msgctxt "search keyword"
 msgid "decompressor"
-msgstr "Aç"
+msgstr "sıkıştırılmış dosyayı açıcı"
 
 #: src/tools.py:184 src/ui/views/jwt_decoder.blp:20
-#, fuzzy
 msgid "Decode and encode JWT tokens"
-msgstr "Base64 dizgelerini kodla ve kodunu çöz"
+msgstr "JWT jetonlarını kodla ve kodunu çöz"
 
 #: src/tools.py:186
 msgctxt "search keyword"
 msgid "json web token"
-msgstr ""
+msgstr "json web jetonları"
 
 #: src/tools.py:187
-#, fuzzy
 msgctxt "search keyword"
 msgid "header"
-msgstr "Başlık"
+msgstr "başlık"
 
 #: src/tools.py:188
-#, fuzzy
 msgctxt "search keyword"
 msgid "payload"
-msgstr "Yük"
+msgstr "yük"
 
 #: src/tools.py:189
 msgctxt "search keyword"
 msgid "signature"
-msgstr ""
+msgstr "imza"
 
 #: src/tools.py:190
-#, fuzzy
 msgctxt "search keyword"
 msgid "authentication"
-msgstr "Girintileme"
+msgstr "kimlik doğrulama"
 
 #: src/tools.py:191
 msgctxt "search keyword"
 msgid "authorization"
-msgstr ""
+msgstr "yetkilendirme"
 
 #: src/tools.py:192 src/tools.py:320 src/tools.py:533 src/tools.py:550
-#, fuzzy
 msgctxt "search keyword"
 msgid "security"
-msgstr "Önem"
+msgstr "güvenlik"
 
 #: src/tools.py:199 src/tools.py:212 src/tools.py:226 src/tools.py:240
 #: src/tools.py:255 src/tools.py:269 src/tools.py:282 src/tools.py:296
@@ -534,13 +506,13 @@ msgstr "JSON belgelerini biçimlendir"
 #: src/tools.py:260 src/tools.py:273
 msgctxt "search keyword"
 msgid "pretty"
-msgstr ""
+msgstr "güzel"
 
 #: src/tools.py:205 src/tools.py:218 src/tools.py:232 src/tools.py:246
 #: src/tools.py:262 src/tools.py:275
 msgctxt "search keyword"
 msgid "beautify"
-msgstr ""
+msgstr "güzelleştirmek"
 
 #: src/tools.py:214 src/formatters/sql.py:14
 msgid "Format SQL documents"
@@ -549,12 +521,12 @@ msgstr "SQL belgelerini biçimlendir"
 #: src/tools.py:220
 msgctxt "search keyword"
 msgid "database"
-msgstr ""
+msgstr "veri tabanı"
 
 #: src/tools.py:221
 msgctxt "search keyword"
 msgid "statement"
-msgstr ""
+msgstr "ifade"
 
 #: src/tools.py:228 src/formatters/xml.py:16
 msgid "Format XML documents"
@@ -566,20 +538,18 @@ msgstr "HTML belgelerini biçimlendir"
 
 #: src/tools.py:248 src/tools.py:263 src/tools.py:276 src/tools.py:286
 #: src/tools.py:301
-#, fuzzy
 msgctxt "search keyword"
 msgid "minify"
-msgstr "Küçült"
+msgstr "küçült"
 
 #: src/tools.py:257 src/formatters/js.py:15
 msgid "Format JavaScript documents"
 msgstr "JavaScript belgelerini biçimlendir"
 
 #: src/tools.py:264 src/tools.py:306
-#, fuzzy
 msgctxt "search keyword"
 msgid "code"
-msgstr "Kodla"
+msgstr "kod"
 
 #: src/tools.py:271 src/formatters/css.py:14
 msgid "Format CSS documents"
@@ -588,7 +558,7 @@ msgstr "CSS belgelerini biçimlendir"
 #: src/tools.py:277 src/tools.py:289
 msgctxt "search keyword"
 msgid "stylesheet"
-msgstr ""
+msgstr "biçem sayfası"
 
 #: src/tools.py:281 src/formatters/css_minifier.py:14
 msgid "CSS Minifier"
@@ -599,26 +569,24 @@ msgid "Minify CSS documents"
 msgstr "CSS belgelerini küçült"
 
 #: src/tools.py:287 src/tools.py:302
-#, fuzzy
 msgctxt "search keyword"
 msgid "compress"
-msgstr "Aç"
+msgstr "sıkıştır"
 
 #: src/tools.py:288
-#, fuzzy
 msgctxt "search keyword"
 msgid "style"
-msgstr "Koyu biçem"
+msgstr "biçem"
 
 #: src/tools.py:290 src/tools.py:303
 msgctxt "search keyword"
 msgid "reduce"
-msgstr ""
+msgstr "azalt"
 
 #: src/tools.py:291 src/tools.py:304
 msgctxt "search keyword"
 msgid "size"
-msgstr ""
+msgstr "boyut"
 
 #: src/tools.py:295 src/formatters/js_minifier.py:14
 msgid "JavaScript Minifier"
@@ -631,11 +599,11 @@ msgstr "JavaScript belgelerini küçült"
 #: src/tools.py:305
 msgctxt "search keyword"
 msgid "script"
-msgstr ""
+msgstr "betik"
 
 #: src/tools.py:312
 msgid "Hash"
-msgstr ""
+msgstr "Özet"
 
 #: src/tools.py:313 src/tools.py:326 src/tools.py:338 src/tools.py:349
 #: src/tools.py:361 src/tools.py:375
@@ -643,31 +611,28 @@ msgid "Generators"
 msgstr "Oluşturucular"
 
 #: src/tools.py:315
-#, fuzzy
 msgid "Calculate hashes and check for integrity"
-msgstr ""
-"MD5, SHA1, SHA256 ve SHA512 özetlerini hesaplayın ve bütünlüğü denetleyin"
+msgstr "Özetleri hesaplayın ve bütünlüğü denetleyin"
 
 #: src/tools.py:317
 msgctxt "search keyword"
 msgid "checksum"
-msgstr ""
+msgstr "sağlama toplamı"
 
 #: src/tools.py:318
 msgctxt "search keyword"
 msgid "digest"
-msgstr ""
+msgstr "özet"
 
 #: src/tools.py:319
-#, fuzzy
 msgctxt "search keyword"
 msgid "generate"
-msgstr "Oluştur"
+msgstr "oluştur"
 
 #: src/tools.py:321 src/tools.py:535 src/tools.py:551
 msgctxt "search keyword"
 msgid "cryptography"
-msgstr ""
+msgstr "şifreleme"
 
 #: src/tools.py:328 src/ui/views/lorem_generator.blp:20
 msgid "Generate lorem ipsum placeholder text"
@@ -676,39 +641,36 @@ msgstr "Lorem ipsum yer tutucu metin oluştur"
 #: src/tools.py:330
 msgctxt "search keyword"
 msgid "dummy"
-msgstr ""
+msgstr "temsili"
 
 #: src/tools.py:331
-#, fuzzy
 msgctxt "search keyword"
 msgid "sample"
-msgstr "Örnek"
+msgstr "örnek"
 
 #: src/tools.py:332
 msgctxt "search keyword"
 msgid "filler"
-msgstr ""
+msgstr "doldurucu"
 
 #: src/tools.py:333
 msgctxt "search keyword"
 msgid "latin"
-msgstr ""
+msgstr "latin"
 
 #: src/tools.py:340 src/ui/views/uuid_generator.blp:20
 msgid "Generate Universally Unique IDs (UUID)"
 msgstr "Evrensel Benzersiz Kimlik Oluştur (UUID)"
 
 #: src/tools.py:343
-#, fuzzy
 msgctxt "search keyword"
 msgid "identifier"
-msgstr "Anahtar Tanımlayıcı"
+msgstr "tanımlayıcı"
 
 #: src/tools.py:344
-#, fuzzy
 msgctxt "search keyword"
 msgid "random"
-msgstr "Rastgele"
+msgstr "rastgele"
 
 #: src/tools.py:348
 msgid "Random"
@@ -721,23 +683,22 @@ msgstr "Rastgele sayılar ve dizgeler oluştur"
 #: src/tools.py:353
 msgctxt "search keyword"
 msgid "password"
-msgstr ""
+msgstr "parola"
 
 #: src/tools.py:354
-#, fuzzy
 msgctxt "search keyword"
 msgid "token"
-msgstr "Jeton"
+msgstr "jeton"
 
 #: src/tools.py:355
 msgctxt "search keyword"
 msgid "entropy"
-msgstr ""
+msgstr "entropi"
 
 #: src/tools.py:356
 msgctxt "search keyword"
 msgid "secure"
-msgstr ""
+msgstr "güvenli"
 
 #: src/tools.py:360 src/ui/views/chmod_calculator.blp:19
 msgid "Chmod Calculator"
@@ -750,28 +711,27 @@ msgstr "Chmod ile izinleri değiştirmek için değerleri hesapla"
 #: src/tools.py:366
 msgctxt "search keyword"
 msgid "unix"
-msgstr ""
+msgstr "unix"
 
 #: src/tools.py:367
 msgctxt "search keyword"
 msgid "linux"
-msgstr ""
+msgstr "linux"
 
 #: src/tools.py:368
-#, fuzzy
 msgctxt "search keyword"
 msgid "calculate"
-msgstr "Hesaplanacak özet"
+msgstr "Hesapla"
 
 #: src/tools.py:369
 msgctxt "search keyword"
 msgid "mode"
-msgstr ""
+msgstr "kip"
 
 #: src/tools.py:370
 msgctxt "search keyword"
 msgid "access"
-msgstr ""
+msgstr "erişim"
 
 #: src/tools.py:374
 msgid "QR Code"
@@ -782,27 +742,24 @@ msgid "Create custom QR Codes"
 msgstr "Özel QR Kodları oluştur"
 
 #: src/tools.py:379
-#, fuzzy
 msgctxt "search keyword"
 msgid "qrcode"
-msgstr "Kodla"
+msgstr "qr kod"
 
 #: src/tools.py:380
-#, fuzzy
 msgctxt "search keyword"
 msgid "barcode"
-msgstr "Kodla"
+msgstr "barkod"
 
 #: src/tools.py:381
-#, fuzzy
 msgctxt "search keyword"
 msgid "image"
-msgstr "Resim"
+msgstr "görüntü"
 
 #: src/tools.py:382
 msgctxt "search keyword"
 msgid "matrix"
-msgstr ""
+msgstr "matris"
 
 #: src/tools.py:388 src/ui/views/text_inspector.blp:19
 msgid "Text Inspector & Case Converter"
@@ -822,16 +779,14 @@ msgstr ""
 #: src/tools.py:393
 msgctxt "search keyword"
 msgid "analyze"
-msgstr ""
+msgstr "incele"
 
 #: src/tools.py:395
-#, fuzzy
 msgctxt "search keyword"
 msgid "uppercase"
-msgstr "küçük harf"
+msgstr "büyük harf"
 
 #: src/tools.py:396
-#, fuzzy
 msgctxt "search keyword"
 msgid "lowercase"
 msgstr "küçük harf"
@@ -839,31 +794,27 @@ msgstr "küçük harf"
 #: src/tools.py:397
 msgctxt "search keyword"
 msgid "capitalize"
-msgstr ""
+msgstr "büyük harflerle"
 
 #: src/tools.py:398
-#, fuzzy
 msgctxt "search keyword"
 msgid "count"
-msgstr "Miktar"
+msgstr "miktar"
 
 #: src/tools.py:399
-#, fuzzy
 msgctxt "search keyword"
 msgid "words"
-msgstr "Sözcük"
+msgstr "sözcük"
 
 #: src/tools.py:400
-#, fuzzy
 msgctxt "search keyword"
 msgid "characters"
-msgstr "Karakter:"
+msgstr "karakter"
 
 #: src/tools.py:401
-#, fuzzy
 msgctxt "search keyword"
 msgid "lines"
-msgstr "Satır:"
+msgstr "satır"
 
 #: src/tools.py:405
 msgid "Regex Tester"
@@ -876,13 +827,12 @@ msgstr "Metin içinde eşleşen dizgeleri bulun"
 #: src/tools.py:411
 msgctxt "search keyword"
 msgid "pattern"
-msgstr ""
+msgstr "örüntü"
 
 #: src/tools.py:412
-#, fuzzy
 msgctxt "search keyword"
 msgid "search"
-msgstr "Mart"
+msgstr "ara"
 
 #: src/tools.py:416 src/ui/views/text_diff.blp:19
 msgid "Text Diff"
@@ -893,27 +843,24 @@ msgid "Analyze two texts and find differences"
 msgstr "İki metni inceleyip farkları bulun"
 
 #: src/tools.py:421
-#, fuzzy
 msgctxt "search keyword"
 msgid "difference"
-msgstr "Farklar"
+msgstr "fark"
 
 #: src/tools.py:422
-#, fuzzy
 msgctxt "search keyword"
 msgid "compare"
-msgstr "Aç"
+msgstr "karşılaştır"
 
 #: src/tools.py:423
-#, fuzzy
 msgctxt "search keyword"
 msgid "changes"
-msgstr "Durum değiştir"
+msgstr "değişiklik"
 
 #: src/tools.py:424
 msgctxt "search keyword"
 msgid "modification"
-msgstr ""
+msgstr "düzenleme"
 
 #: src/tools.py:428 src/ui/views/xml_validator.blp:19
 msgid "XML Scheme Validator"
@@ -924,10 +871,9 @@ msgid "Check an XML file against an XSD schema"
 msgstr "XML dosyasını XSD şemasına göre denetle"
 
 #: src/tools.py:433 src/tools.py:444
-#, fuzzy
 msgctxt "search keyword"
 msgid "validate"
-msgstr "Geçersiz!"
+msgstr "doğrula"
 
 #: src/tools.py:439 src/ui/views/json_validator.blp:19
 msgid "JSON Schema Validator"
@@ -944,67 +890,64 @@ msgstr "Yazarken markdown kodunu ön izle"
 #: src/tools.py:455
 msgctxt "search keyword"
 msgid "render"
-msgstr ""
+msgstr "görselleştir"
 
 #: src/tools.py:457
 msgctxt "search keyword"
 msgid "md"
-msgstr ""
+msgstr "md"
 
 #: src/tools.py:463 src/ui/views/color_converter.blp:16
-#, fuzzy
 msgid "Color Converter"
-msgstr "Dönüştürücüler"
+msgstr "Renk Dönüştürücü"
 
 #: src/tools.py:464 src/tools.py:481 src/tools.py:491 src/tools.py:505
 msgid "Graphics"
 msgstr "Grafik"
 
 #: src/tools.py:466 src/ui/views/color_converter.blp:17
-#, fuzzy
 msgid "Convert colors between formats"
-msgstr "Sayıları tabanlar arasında dönüştür"
+msgstr "Renkleri biçimler arasında dönüştür"
 
 #: src/tools.py:468
 msgctxt "search keyword"
 msgid "rgb"
-msgstr ""
+msgstr "rgb"
 
 #: src/tools.py:469
 msgctxt "search keyword"
 msgid "rgba"
-msgstr ""
+msgstr "rgba"
 
 #: src/tools.py:470
 msgctxt "search keyword"
 msgid "hex"
-msgstr ""
+msgstr "hex"
 
 #: src/tools.py:471
 msgctxt "search keyword"
 msgid "hsl"
-msgstr ""
+msgstr "hsl"
 
 #: src/tools.py:472
 msgctxt "search keyword"
 msgid "hsv"
-msgstr ""
+msgstr "hsv"
 
 #: src/tools.py:473
 msgctxt "search keyword"
 msgid "cmyk"
-msgstr ""
+msgstr "cmyk"
 
 #: src/tools.py:475
-#, fuzzy
 msgctxt "search keyword"
 msgid "conversion"
-msgstr "Sürüm"
+msgstr "dönüşüm"
 
 #: src/tools.py:476
 msgctxt "search keyword"
 msgid "palette"
-msgstr ""
+msgstr "palet"
 
 #: src/tools.py:480 src/ui/views/contrast_checker.blp:19
 msgid "Contrast Checker"
@@ -1017,13 +960,12 @@ msgstr "WCAG uyumluluğu için renk kombinasyonunu denetle"
 #: src/tools.py:485
 msgctxt "search keyword"
 msgid "accessibility"
-msgstr ""
+msgstr "erişilebilirlik"
 
 #: src/tools.py:486
-#, fuzzy
 msgctxt "search keyword"
 msgid "ratio"
-msgstr "Bilgi"
+msgstr "oran"
 
 #: src/tools.py:490
 msgid "Color Blindness"
@@ -1034,39 +976,34 @@ msgid "Simulate color blindness in images"
 msgstr "Resimde renk körlüğünü simüle et"
 
 #: src/tools.py:495
-#, fuzzy
 msgctxt "search keyword"
 msgid "simulation"
-msgstr "Simülasyon yükleniyor..."
+msgstr "simülasyon"
 
 #: src/tools.py:496
 msgctxt "search keyword"
 msgid "daltonism"
-msgstr ""
+msgstr "daltonizm (kırmızı-yeşil görememe)"
 
 #: src/tools.py:497
-#, fuzzy
 msgctxt "search keyword"
 msgid "protanopia"
-msgstr "Protanopi (Kırmızıyı görememe)"
+msgstr "protanopi (kırmızıyı görememe)"
 
 #: src/tools.py:498
-#, fuzzy
 msgctxt "search keyword"
 msgid "deuteranopia"
-msgstr "Döteranopi (Yeşili görememe)"
+msgstr "döteranopi (yeşili görememe)"
 
 #: src/tools.py:499
-#, fuzzy
 msgctxt "search keyword"
 msgid "tritanopia"
-msgstr "Tritanopi (Maviyi görememe)"
+msgstr "tritanopi (maviyi görememe)"
 
 #: src/tools.py:500
-#, fuzzy
 msgctxt "search keyword"
 msgid "vision"
-msgstr "Sürüm"
+msgstr "fjrmi"
 
 #: src/tools.py:504 src/ui/views/image_converter.blp:19
 msgid "Image Format Converter"
@@ -1079,37 +1016,37 @@ msgstr "Resimleri farklı biçimlere dönüştür"
 #: src/tools.py:510
 msgctxt "search keyword"
 msgid "jpg"
-msgstr ""
+msgstr "jpg"
 
 #: src/tools.py:511
 msgctxt "search keyword"
 msgid "jpeg"
-msgstr ""
+msgstr "jpeg"
 
 #: src/tools.py:512
 msgctxt "search keyword"
 msgid "png"
-msgstr ""
+msgstr "png"
 
 #: src/tools.py:513
 msgctxt "search keyword"
 msgid "bmp"
-msgstr ""
+msgstr "bmp"
 
 #: src/tools.py:514
 msgctxt "search keyword"
 msgid "gif"
-msgstr ""
+msgstr "gif"
 
 #: src/tools.py:515
 msgctxt "search keyword"
 msgid "webp"
-msgstr ""
+msgstr "webp"
 
 #: src/tools.py:516
 msgctxt "search keyword"
 msgid "picture"
-msgstr ""
+msgstr "resim"
 
 #: src/tools.py:522 src/ui/views/certificate_parser.blp:19
 msgid "Certificate Parser"
@@ -1124,15 +1061,14 @@ msgid "View certificates contents"
 msgstr "Sertifika içeriklerini görüntüle"
 
 #: src/tools.py:532 src/tools.py:549
-#, fuzzy
 msgctxt "search keyword"
 msgid "key"
-msgstr "Anahtar"
+msgstr "anahtar"
 
 #: src/tools.py:534
 msgctxt "search keyword"
 msgid "public key"
-msgstr ""
+msgstr "genel anahtar"
 
 #: src/tools.py:539
 msgid "Certificate Signing Request"
@@ -1324,9 +1260,8 @@ msgid "Key Identifier"
 msgstr "Anahtar Tanımlayıcı"
 
 #: src/views/certificate_request_generator.py:40
-#, fuzzy
 msgid "Open CSR"
-msgstr "Aç"
+msgstr "CSR Aç"
 
 #: src/views/certificate_request_generator.py:81
 msgid "Open Key File"
@@ -1337,20 +1272,19 @@ msgid "All Files"
 msgstr "Tüm Dosyalar"
 
 #: src/views/certificate_request_generator.py:145
-#, fuzzy
 msgid "Select save location"
-msgstr "İşlemi seçin"
+msgstr "Kaydetme konumu seç"
 
 #: src/views/certificate_request_generator.py:146
 #: src/ui/views/certificate_request_generator.blp:163
 msgid "Choose"
-msgstr ""
+msgstr "Seç"
 
 #: src/views/certificate_request_generator.py:197
 #: src/views/colorblindness_simulator.py:67 src/views/gzip_compressor.py:63
 #: src/views/image_converter.py:41 src/views/qrcode_generator.py:201
 msgid "Saved Successfully"
-msgstr ""
+msgstr "Başarıyla kaydedildi"
 
 #: src/views/certificate_request_generator.py:214
 msgid "Save key as"
@@ -1363,9 +1297,8 @@ msgstr "Geçersiz değer. Lütfen yeniden denetleyin"
 
 #: src/views/colorblindness_simulator.py:26 src/views/image_converter.py:24
 #: src/views/qrcode_generator.py:43
-#, fuzzy
 msgid "Open Image"
-msgstr "Resim açılıyor..."
+msgstr "Görüntü Aç"
 
 #: src/views/colorblindness_simulator.py:94
 #: src/views/colorblindness_simulator.py:96
@@ -1382,9 +1315,8 @@ msgstr ""
 "parantezlerin kapalı olup olmadığını denetleyin."
 
 #: src/views/gzip_compressor.py:28
-#, fuzzy
 msgid "Open image"
-msgstr "Resim açılıyor..."
+msgstr "Görüntü aç"
 
 #: src/views/gzip_compressor.py:31
 msgid "Cannot decompress from an image or a file"
@@ -1447,21 +1379,23 @@ msgstr ""
 
 #: src/views/jwt_decoder.py:173
 msgid "Signature is Valid!"
-msgstr ""
+msgstr "İmza geçerli."
 
 #: src/views/jwt_decoder.py:175
 msgid "The JWT signature was verified successfully."
-msgstr ""
+msgstr "JWT imzası doğrulandı."
 
 #: src/views/jwt_decoder.py:183
 msgid "Warning, Signature is Invalid!"
-msgstr ""
+msgstr "Uyarı, İmza Geçersiz!"
 
 #: src/views/jwt_decoder.py:186
 msgid ""
 "The JWT signature doesn't match the provided key. Please verify the key "
 "encoding or ensure the token was signed correctly."
 msgstr ""
+"JWT imzası sağlanan anahtarla eşleşmiyor. Lütfen anahtar kodlamasını "
+"doğrulayın ya da jetonun doğru imzalandığından emin olun."
 
 #: src/views/qrcode_generator.py:71 src/ui/views/qrcode_generator.blp:113
 #: src/ui/views/qrcode_generator.blp:122
@@ -1663,12 +1597,11 @@ msgid "_About Dev Toolbox"
 msgstr "Dev Toolbox _Hakkında"
 
 #: src/ui/about_dialog.blp:10
-#, fuzzy
 msgid ""
 "Copyright © 2022 - 2025 Alessandro Iepure\n"
 "Some icons are copyright of the GNOME Project"
 msgstr ""
-"Telif Hakkı © 2022 - 2024 Alessandro Iepure\n"
+"Copyright © 2022 - 2025 Alessandro Iepure\n"
 "Kimi simgelerin telif hakkı GNOME Projesi'ne aittir"
 
 #. TRANSLATORS: replace with your name (with optional email or website)
@@ -1681,9 +1614,8 @@ msgid "Now"
 msgstr "Şimdi"
 
 #: src/ui/widgets/date_area.blp:40
-#, fuzzy
 msgid "Sets the current system date and time"
-msgstr "Geçerli sistem tarihini ve saatini ayarlar (yerel saat dilimi)"
+msgstr "Geçerli sistem tarih ve saatini ayarlar"
 
 #: src/ui/widgets/date_area.blp:55 src/ui/widgets/entry_row.blp:30
 #: src/ui/widgets/spin_area.blp:68 src/ui/widgets/text_area.blp:66
@@ -1775,11 +1707,11 @@ msgstr "Onaltılık"
 
 #: src/ui/views/base_converter.blp:65
 msgid "ASCII"
-msgstr ""
+msgstr "ASCII"
 
 #: src/ui/views/base_converter.blp:73
 msgid "UTF-8"
-msgstr ""
+msgstr "UTF-8"
 
 #: src/ui/views/base_converter.blp:98
 msgid ""
@@ -1790,14 +1722,12 @@ msgstr ""
 "alanların 0 olarak sıfırlanmasını neden olur."
 
 #: src/ui/views/base64_encoder.blp:19
-#, fuzzy
 msgid "Base64 Encoder & Decoder"
-msgstr "URL Kodlayıcı ve Kod Çözücü"
+msgstr "Base64 Kodlayıcı ve Kod Çözücü"
 
 #: src/ui/views/base64_encoder.blp:20
-#, fuzzy
 msgid "Encode and decode strings using the Base64 format"
-msgstr "HTML biçimini kullanarak özel karakterleri kodlayın ve kodunu çözün"
+msgstr "Base64 biçimini kullanarak dizgeleri kodla ve kodunu çöz"
 
 #: src/ui/views/base64_encoder.blp:30 src/ui/views/certificate_parser.blp:30
 #: src/ui/views/colorblindness_simulator.blp:31
@@ -1835,11 +1765,11 @@ msgstr "Kod Çözümle"
 
 #: src/ui/views/base64_encoder.blp:51
 msgid "URL Safe"
-msgstr ""
+msgstr "URL Güvenli"
 
 #: src/ui/views/base64_encoder.blp:52
 msgid "Use URL safe Base64 processing"
-msgstr ""
+msgstr "URL güvenli Base64 işlemeyi kullan"
 
 #: src/ui/views/base64_encoder.blp:68 src/ui/views/gzip_compressor.blp:63
 #: src/ui/views/hash_generator.blp:83 src/ui/views/html_encoder.blp:64
@@ -1927,9 +1857,8 @@ msgid "New"
 msgstr "Yeni"
 
 #: src/ui/views/certificate_request_generator.blp:92
-#, fuzzy
 msgid "Existing"
-msgstr "Var olanlar"
+msgstr "Var olan"
 
 #: src/ui/views/certificate_request_generator.blp:98
 msgid "Key File *"
@@ -1969,7 +1898,7 @@ msgstr "İzinler"
 
 #: src/ui/views/chmod_calculator.blp:45
 msgid "Special"
-msgstr ""
+msgstr "Özel"
 
 #: src/ui/views/chmod_calculator.blp:145
 msgid "Owner"
@@ -2033,118 +1962,112 @@ msgid "Tritanopia"
 msgstr "Tritanopi (Maviyi görememe)"
 
 #: src/ui/views/color_converter.blp:30
-#, fuzzy
 msgid "Format"
 msgstr "Biçim"
 
 #: src/ui/views/color_converter.blp:31
-#, fuzzy
 msgid "Output format for color values"
-msgstr "Çıktı biçimi"
+msgstr "Renk değerleri için çıktı biçimi"
 
 #: src/ui/views/color_converter.blp:36
 msgid "Web"
-msgstr ""
+msgstr "Web"
 
 #: src/ui/views/color_converter.blp:37
 msgid "Web (Legacy)"
-msgstr ""
+msgstr "Web (Eski)"
 
 #: src/ui/views/color_converter.blp:38
 msgid "Percent"
-msgstr ""
+msgstr "Yüzde"
 
 #: src/ui/views/color_converter.blp:39
 msgid "Normalized"
-msgstr ""
+msgstr "Normalleştirilmiş"
 
 #: src/ui/views/color_converter.blp:46
 msgid "Angle Unit"
-msgstr ""
+msgstr "Açı Birimi"
 
 #: src/ui/views/color_converter.blp:47
 msgid "Unit used for angle component"
-msgstr ""
+msgstr "Açı bileşeni için kullanılan birim"
 
 #: src/ui/views/color_converter.blp:52
 msgid "Degrees"
-msgstr ""
+msgstr "Derece"
 
 #: src/ui/views/color_converter.blp:53
 msgid "Radians"
-msgstr ""
+msgstr "Radyan"
 
 #: src/ui/views/color_converter.blp:54
 msgid "Gradians"
-msgstr ""
+msgstr "Renk Geçişleri"
 
 #: src/ui/views/color_converter.blp:55
 msgid "Turns"
-msgstr ""
+msgstr "Dönüşler"
 
 #: src/ui/views/color_converter.blp:56
-#, fuzzy
 msgid "Follow Format"
-msgstr "Biçim"
+msgstr "Biçim İzle"
 
 #: src/ui/views/color_converter.blp:62
 msgid "Bits"
-msgstr ""
+msgstr "Bit"
 
 #: src/ui/views/color_converter.blp:63
 msgid "Bits precision for color values"
-msgstr ""
+msgstr "Renk değerleri için bit hassasiyeti"
 
 #: src/ui/views/color_converter.blp:82
 msgid "Values"
-msgstr ""
+msgstr "Değerler"
 
 #: src/ui/views/color_converter.blp:85 src/ui/views/color_converter.blp:97
 msgid "Color"
-msgstr ""
+msgstr "Renk"
 
 #: src/ui/views/color_converter.blp:103
 msgid "Hex"
-msgstr ""
+msgstr "Onaltılık"
 
 #: src/ui/views/color_converter.blp:128
-#, fuzzy
 msgid "Red"
-msgstr "Oku"
+msgstr "Kırmızı"
 
 #: src/ui/views/color_converter.blp:136
 msgid "Green"
-msgstr ""
+msgstr "Yeşil"
 
 #: src/ui/views/color_converter.blp:144
 msgid "Blue"
-msgstr ""
+msgstr "Mavi"
 
 #: src/ui/views/color_converter.blp:168 src/ui/views/color_converter.blp:208
 msgid "Hue"
-msgstr ""
+msgstr "Renk tonu"
 
 #: src/ui/views/color_converter.blp:176 src/ui/views/color_converter.blp:216
-#, fuzzy
 msgid "Saturation"
-msgstr "Cumartesi"
+msgstr "Doygunluk"
 
 #: src/ui/views/color_converter.blp:184
 msgid "Value"
-msgstr ""
+msgstr "Değer"
 
 #: src/ui/views/color_converter.blp:224
-#, fuzzy
 msgid "Lightness"
-msgstr "Açık biçem"
+msgstr "Aydınlık"
 
 #: src/ui/views/color_converter.blp:234
 msgid "Alpha"
-msgstr ""
+msgstr "Alfa"
 
 #: src/ui/views/color_converter.blp:265
 msgid "HWB"
-msgstr ""
+msgstr "HWB"
 
 #: src/ui/views/contrast_checker.blp:33 src/ui/views/contrast_checker.blp:46
 msgid "Text color"
@@ -2231,9 +2154,8 @@ msgid "GZip Compress & Decompress"
 msgstr "GZip Sıkıştır ve Aç"
 
 #: src/ui/views/gzip_compressor.blp:20
-#, fuzzy
 msgid "Compress and decompress texts and images using GZip"
-msgstr "GZip kullanarak dosyaları ve metinleri sıkıştırın ve açın"
+msgstr "GZip kullanarak metinleri ve görüntüleri sıkıştırın ve açın"
 
 #: src/ui/views/gzip_compressor.blp:34
 msgid "Select the desired operation"
@@ -2255,7 +2177,7 @@ msgstr "Sıkıştırma sonucu ve beklenen açma girdisi base64 kodludur."
 
 #: src/ui/views/gzip_compressor.blp:110
 msgid "May hang the app for large files, please wait."
-msgstr ""
+msgstr "Büyük dosyalarda uygulama kilitlenebilir, lütfen bekleyin."
 
 #: src/ui/views/hash_generator.blp:19
 msgid "Hash Generator & Checker"
@@ -2313,12 +2235,11 @@ msgstr "Dönüştür"
 
 #: src/ui/views/image_converter.blp:64
 msgid "converted-image"
-msgstr ""
+msgstr "donusturulmus-goruntu"
 
 #: src/ui/views/json_validator.blp:49
-#, fuzzy
 msgid "JSON Schema"
-msgstr "JSON Şema Doğrulayıcı"
+msgstr "JSON Şema"
 
 #: src/ui/views/json_yaml.blp:19
 msgid "JSON - YAML Converter"
@@ -2330,54 +2251,51 @@ msgstr "Girdi biçimini ve istenen çıktı biçimini seçin"
 
 #: src/ui/views/json_yaml.blp:42
 msgid "JSON → YAML"
-msgstr ""
+msgstr "JSON → YAML"
 
 #: src/ui/views/json_yaml.blp:46
 msgid "YAML → JSON"
-msgstr ""
+msgstr "YAML → JSON"
 
 #: src/ui/views/jwt_decoder.blp:19
-#, fuzzy
 msgid "JWT Decode & Encode"
-msgstr "HTML Kodlayıcı ve Kod Çözücü"
+msgstr "JWT Kodlayıcı ve Kod Çözücü"
 
 #: src/ui/views/jwt_decoder.blp:32
 msgid "Verify Signature"
-msgstr ""
+msgstr "İmzayı Doğrula"
 
 #: src/ui/views/jwt_decoder.blp:33
 msgid "Verify signature or sign JWT"
-msgstr ""
+msgstr "JWT imzasını doğrula"
 
 #: src/ui/views/jwt_decoder.blp:41
 msgid "Off"
-msgstr ""
+msgstr "Kapalı"
 
 #: src/ui/views/jwt_decoder.blp:46
 msgid "Symmetric"
-msgstr ""
+msgstr "Simetrik"
 
 #: src/ui/views/jwt_decoder.blp:51
 msgid "Asymmetric"
-msgstr ""
+msgstr "Asimetrik"
 
 #: src/ui/views/jwt_decoder.blp:57
-#, fuzzy
 msgid "Key Encoding"
-msgstr "Boşluk kodlama"
+msgstr "Anahtar Kodlama"
 
 #: src/ui/views/jwt_decoder.blp:58
-#, fuzzy
 msgid "Select the encoding of the key"
-msgstr "Boşluk karakteri için istenen kodlamayı seçin"
+msgstr "Anahtarın kodlamasını seçin"
 
 #: src/ui/views/jwt_decoder.blp:99
 msgid "Public Key (PEM)"
-msgstr ""
+msgstr "Genel Anahtar (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:107
 msgid "Private Key (PEM)"
-msgstr ""
+msgstr "Özel Anahtar (PEM)"
 
 #: src/ui/views/jwt_decoder.blp:120
 msgid "Token"
@@ -2533,7 +2451,7 @@ msgstr "Oluşturulan QR Kodu"
 
 #: src/ui/views/qrcode_generator.blp:193
 msgid "qr-code.png"
-msgstr ""
+msgstr "qr-code.png"
 
 #: src/ui/views/qrcode_generator.blp:195
 msgid "Generate"
@@ -2589,21 +2507,20 @@ msgid "Generate a random number in the given range"
 msgstr "Belirtilen aralıkta rastgele sayı oluştur"
 
 #: src/ui/views/random_generator.blp:96
-#, fuzzy
 msgid "Minimum"
-msgstr "Küçült"
+msgstr "En küçük"
 
 #: src/ui/views/random_generator.blp:97
 msgid "Minimum value of the generated number"
-msgstr ""
+msgstr "Oluşturulan sayının en küçük değeri"
 
 #: src/ui/views/random_generator.blp:109
 msgid "Maximum"
-msgstr ""
+msgstr "En yüksek"
 
 #: src/ui/views/random_generator.blp:110
 msgid "Maximum value of the generated number"
-msgstr ""
+msgstr "Oluşturulan sayının en yüksek değeri"
 
 #: src/ui/views/random_generator.blp:159
 msgid "Generated number"

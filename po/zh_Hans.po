@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: alessandro@iepure.me\n"
 "POT-Creation-Date: 2025-07-05 17:17+0200\n"
-"PO-Revision-Date: 2025-02-17 16:38+0000\n"
-"Last-Translator: 复予 <clonewith@qq.com>\n"
+"PO-Revision-Date: 2025-11-22 12:51+0000\n"
+"Last-Translator: Alan Best Hacker <AlanBestHacker@outlook.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/devtoolbox/devtoolbox/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.10.1-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #. TRANSLATORS: do not translate
 #: data/me.iepure.devtoolbox.desktop.in.in:8
@@ -106,7 +106,7 @@ msgstr "JSON和YAML文档互相转换"
 #: src/tools.py:20 src/tools.py:39 src/tools.py:206
 msgctxt "search keyword"
 msgid "parse"
-msgstr ""
+msgstr "解析"
 
 #: src/tools.py:21 src/tools.py:45 src/tools.py:73
 #, fuzzy
@@ -131,12 +131,12 @@ msgstr "格式"
 #: src/tools.py:446
 msgctxt "search keyword"
 msgid "document"
-msgstr ""
+msgstr "文档"
 
 #: src/tools.py:25
 msgctxt "search keyword"
 msgid "spaces"
-msgstr ""
+msgstr "空格"
 
 #: src/tools.py:26
 #, fuzzy
@@ -148,7 +148,7 @@ msgstr "缩进"
 #: src/tools.py:245 src/tools.py:261 src/tools.py:274
 msgctxt "search keyword"
 msgid "indent"
-msgstr ""
+msgstr "缩进"
 
 #: src/tools.py:31 src/ui/views/timestamp.blp:38
 msgid "Timestamp"
