@@ -30,6 +30,9 @@ mod imp {
         view_stack: TemplateChild<adw::ViewStack>,
 
         #[template_child]
+        source_scrolled_window: TemplateChild<gtk::ScrolledWindow>,
+
+        #[template_child]
         drop_revealer: TemplateChild<gtk::Revealer>,
 
         #[template_child]
@@ -176,6 +179,12 @@ mod imp {
 
     #[gtk::template_callbacks]
     impl TextArea {
+        fn update_vertical_expand(&self) {
+            let should_expand = self.obj().valign() == gtk::Align::Fill;
+            self.view_stack.set_vexpand(should_expand);
+            self.source_scrolled_window.set_vexpand(should_expand);
+        }
+
         // MARK: Signal handlers
         /// Action button clicked. Emits the "action-clicked" signal.
         #[template_callback]
@@ -205,6 +214,7 @@ mod imp {
         #[template_callback]
         fn on_signal_clicked_clear_button(&self, _button: &gtk::Button) {
             self.clear();
+            self.obj().set_error(false);
             self.obj().emit_by_name::<()>("cleared", &[]);
         }
 
@@ -256,10 +266,15 @@ mod imp {
                     self.read_file_into_text_area(&file).await;
                 }
                 Err(err) => {
-                    // Translator: {message} is replaced with the error message
-                    let tmpl = pgettext("Error message", "Unable to open file: {message}");
-                    let msg = tmpl.replace("{message}", &err.message());
-                    self.obj().emit_by_name::<()>("error", &[&msg]);
+                    // Ignore user dismissals: canceling the dialog is an expected interaction.
+                    let dismissed =
+                        err.kind::<gtk::DialogError>() == Some(gtk::DialogError::Dismissed);
+                    if !dismissed {
+                        // Translator: {message} is replaced with the error message
+                        let tmpl = pgettext("Error message", "Unable to open file: {message}");
+                        let msg = tmpl.replace("{message}", &err.message());
+                        self.obj().emit_by_name::<()>("error", &[&msg]);
+                    }
                 }
             }
             self.open_button.set_sensitive(true);
@@ -379,6 +394,13 @@ mod imp {
         // MARK: Construction
         fn constructed(&self) {
             self.parent_constructed();
+
+            self.update_vertical_expand();
+
+            let obj = self.obj().clone();
+            obj.connect_notify_local(Some("valign"), move |text_area, _param_spec| {
+                text_area.imp().update_vertical_expand();
+            });
 
             // Set default loading label
             if self.loading_label.borrow().is_empty() {

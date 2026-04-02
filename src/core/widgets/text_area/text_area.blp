@@ -174,7 +174,9 @@ template $TextArea: Adw.Bin {
             Adw.ViewStackPage {
                 name: "text-area";
 
-                child: ScrolledWindow {
+                child: ScrolledWindow source_scrolled_window {
+                    height-request: bind template.height;
+
                     child: Overlay {
                         [overlay]
                         Revealer drop_revealer {
@@ -204,6 +206,7 @@ template $TextArea: Adw.Bin {
                             tab-width: 4;
                             smart-backspace: true;
                             insert-spaces-instead-of-tabs: true;
+                            vexpand: true;
                             top-margin: 12;
                             bottom-margin: 12;
                             left-margin: 12;
@@ -212,7 +215,6 @@ template $TextArea: Adw.Bin {
                             editable: bind template.editable;
                             show-line-numbers: bind template.show-line-numbers;
                             highlight-current-line: bind template.highlight-current-line;
-                            height-request: bind template.height;
 
                             styles [
                                 "rounded-corner",

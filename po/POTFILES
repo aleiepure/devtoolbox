@@ -40,6 +40,8 @@ src/tools/number_bases/mod.rs
 src/tools/number_bases/number_bases.blp
 src/tools/random/mod.rs
 src/tools/random/random.blp
+src/tools/regex/mod.rs
+src/tools/regex/regex.blp
 src/tools/text_inspector/mod.rs
 src/tools/text_inspector/text_inspector.blp
 src/tools/timestamp/mod.rs

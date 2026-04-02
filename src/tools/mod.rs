@@ -17,6 +17,7 @@ pub mod lipsum;
 pub mod macros;
 pub mod number_bases;
 pub mod random;
+pub mod regex;
 pub mod text_inspector;
 pub mod timestamp;
 pub mod url_enc;
@@ -53,6 +54,7 @@ pub static ALL_TOOLS: Lazy<Vec<&'static ToolMetadata>> = Lazy::new(|| {
         &*text_inspector::TEXT_INSPECTOR_TOOL_METADATA,
         &*contrast_check::CONTRAST_CHECK_TOOL_METADATA,
         &*color_spaces::COLOR_SPACES_TOOL_METADATA,
+        &*regex::REGEX_TOOL_METADATA,
     ]; // TODO: add new tools here
     tools.sort_by(|a, b| a.category.cmp(&b.category));
     tools

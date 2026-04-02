@@ -255,6 +255,10 @@ mod imp {
                     use crate::tools::color_spaces::ColorSpacesWidget;
                     ColorSpacesWidget::new().upcast()
                 }
+                "regex" => {
+                    use crate::tools::regex::RegexWidget;
+                    RegexWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

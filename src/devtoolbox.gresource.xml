@@ -33,6 +33,7 @@
     <file>tools/text_inspector/text_inspector.ui</file>
     <file>tools/contrast_check/contrast_check.ui</file>
     <file>tools/color_spaces/color_spaces.ui</file>
+    <file>tools/regex/regex.ui</file>
   </gresource>
   
   <!-- Icons -->
@@ -91,5 +92,6 @@
     <file compressed="true" alias="text_inspector-symbolic.svg">../data/icons/symbolic/tools/text_inspector-symbolic.svg</file>
     <file compressed="true" alias="contrast_check-symbolic.svg">../data/icons/symbolic/tools/contrast_check-symbolic.svg</file>
     <file compressed="true" alias="color_spaces-symbolic.svg">../data/icons/symbolic/tools/color_spaces-symbolic.svg</file>
+    <file compressed="true" alias="regex-symbolic.svg">../data/icons/symbolic/tools/regex-symbolic.svg</file>
   </gresource>
 </gresources>

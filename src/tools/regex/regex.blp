@@ -1,0 +1,69 @@
+/*
+ * regex.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $RegexWidget : Adw.Bin {
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+          spacing: 12;
+          margin-bottom: 12;
+          margin-top: 12;
+
+          // MARK: - Tool Settings
+          // Adw.PreferencesGroup {
+          //   $ActionableEntryRow regex_entryrow {
+          //     title: _("Regular Expression");
+          //     copy-button-visible: true;
+          //     paste-button-visible: true;
+          //     clear-button-visible: true;
+          //   }
+          // }
+
+          $TextArea regex_textarea {
+            title: _("Regular Expression");
+            copy-button-visible: true;
+            paste-button-visible: true;
+            clear-button-visible: true;
+            editable: true;
+            vexpand: false;
+            height: 110;
+
+            changed => $on_signal_changed_regex_textarea() swapped;
+            error => $on_signal_error_regex_textarea() swapped;
+            cleared => $on_signal_cleared_regex_textarea() swapped;
+          }
+
+          // MARK: - Tool Main Content
+          $TextArea textarea {
+            title: _("Text");
+            open-button-visible: true;
+            copy-button-visible: true;
+            paste-button-visible: true;
+            clear-button-visible: true;
+            allow-drag-and-drop: true;
+            editable: true;
+            wrap-mode: "word-char";
+            filter_text_files: true;
+            dragging: bind template.dragging;
+            working: bind template.working;
+
+            changed => $on_signal_changed_textarea() swapped;
+            error => $on_signal_error_textarea() swapped;
+          }
+        };
+      };
+    };
+  }
+}

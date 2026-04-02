@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-27 17:14+0100\n"
+"POT-Creation-Date: 2026-04-02 12:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,11 +43,11 @@ msgstr ""
 msgid "Window maximized"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:42
+#: data/me.iepure.devtoolbox.gschema.xml:43
 msgid "Last used tool"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:46
+#: data/me.iepure.devtoolbox.gschema.xml:47
 msgid "Sidebar open"
 msgstr ""
 
@@ -188,7 +188,7 @@ msgid "Errors present. Click for details."
 msgstr ""
 
 #: src/core/widgets/text_area/text_area.blp:116
-#: src/core/widgets/text_area/text_area.blp:255
+#: src/core/widgets/text_area/text_area.blp:257
 msgid "Open"
 msgstr ""
 
@@ -205,59 +205,59 @@ msgstr ""
 msgid "Clear text"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.blp:197
+#: src/core/widgets/text_area/text_area.blp:199
 msgid "Drop a text file here"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.blp:254
+#: src/core/widgets/text_area/text_area.blp:256
 msgid "Open File"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:221
+#: src/core/widgets/text_area/text_area.rs:231
 msgctxt "File filter"
 msgid "Text Files"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:229
+#: src/core/widgets/text_area/text_area.rs:239
 msgctxt "File filter"
 msgid "Supported File Types"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:239
+#: src/core/widgets/text_area/text_area.rs:249
 msgctxt "File filter"
 msgid "All Files"
 msgstr ""
 
 #. Translator: {message} is replaced with the error message
-#: src/core/widgets/text_area/text_area.rs:260
+#: src/core/widgets/text_area/text_area.rs:274
 #, rust-format
 msgctxt "Error message"
 msgid "Unable to open file: {message}"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:328
+#: src/core/widgets/text_area/text_area.rs:343
 msgctxt "Error message"
 msgid "The file does not contain plain text"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:337
+#: src/core/widgets/text_area/text_area.rs:352
 msgctxt "Error message"
 msgid "The file is empty."
 msgstr ""
 
 #. Translator: {message} is replaced with the error message
-#: src/core/widgets/text_area/text_area.rs:343
+#: src/core/widgets/text_area/text_area.rs:358
 #, rust-format
 msgctxt "Error message"
 msgid "Unable to read file: {message}"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:385
-#: src/core/widgets/text_area/text_area.rs:548
+#: src/core/widgets/text_area/text_area.rs:407
+#: src/core/widgets/text_area/text_area.rs:570
 msgid "Loading..."
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:494
+#: src/core/widgets/text_area/text_area.rs:516
 msgctxt "Error message"
 msgid "Only one file can be opened at a time."
 msgstr ""
@@ -1624,6 +1624,49 @@ msgstr ""
 msgid "Generated Passphrase"
 msgstr ""
 
+#: src/tools/regex/mod.rs:18
+msgctxt "Tool Title"
+msgid "Regular Expression Tester"
+msgstr ""
+
+#: src/tools/regex/mod.rs:19
+msgctxt "Tool Description"
+msgid "Test your regular expressions in text"
+msgstr ""
+
+#: src/tools/regex/mod.rs:20
+msgctxt "Tool Sidebar Title"
+msgid "Regex Tester"
+msgstr ""
+
+#: src/tools/regex/mod.rs:23
+msgctxt "Keyword"
+msgid "find"
+msgstr ""
+
+#: src/tools/regex/mod.rs:24
+msgctxt "Keyword"
+msgid "search"
+msgstr ""
+
+#: src/tools/regex/mod.rs:25
+msgctxt "Keyword"
+msgid "match"
+msgstr ""
+
+#: src/tools/regex/mod.rs:26
+msgctxt "Keyword"
+msgid "pattern"
+msgstr ""
+
+#: src/tools/regex/regex.blp:35
+msgid "Regular Expression"
+msgstr ""
+
+#: src/tools/regex/regex.blp:50 src/tools/text_inspector/text_inspector.blp:140
+msgid "Text"
+msgstr ""
+
 #: src/tools/text_inspector/mod.rs:19
 msgctxt "Tool Title"
 msgid "Text Inspector & Case Converter"
@@ -1761,10 +1804,6 @@ msgstr ""
 
 #: src/tools/text_inspector/text_inspector.blp:124
 msgid "Lines: "
-msgstr ""
-
-#: src/tools/text_inspector/text_inspector.blp:140
-msgid "Text"
 msgstr ""
 
 #: src/tools/timestamp/mod.rs:18
