@@ -8,6 +8,8 @@ src/core/ui/about-dialog.blp
 src/core/ui/shortcuts-dialog.blp
 src/core/ui/window.blp
 src/core/widgets/actionable_entryrow/actionable_entryrow.blp
+src/core/widgets/image_area/image_area.blp
+src/core/widgets/image_area/image_area.rs
 src/core/widgets/text_area/text_area.blp
 src/core/widgets/text_area/text_area.rs
 src/core/window.rs
@@ -38,6 +40,9 @@ src/tools/lipsum/mod.rs
 src/tools/macros.rs
 src/tools/number_bases/mod.rs
 src/tools/number_bases/number_bases.blp
+src/tools/qrcode/mod.rs
+src/tools/qrcode/qrcode.blp
+src/tools/qrcode/qrcode.rs
 src/tools/random/mod.rs
 src/tools/random/random.blp
 src/tools/regex/mod.rs

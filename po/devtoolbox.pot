@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-02 12:40+0200\n"
+"POT-Creation-Date: 2026-04-05 12:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,11 +43,11 @@ msgstr ""
 msgid "Window maximized"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:43
+#: data/me.iepure.devtoolbox.gschema.xml:44
 msgid "Last used tool"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:47
+#: data/me.iepure.devtoolbox.gschema.xml:48
 msgid "Sidebar open"
 msgstr ""
 
@@ -183,13 +183,126 @@ msgstr ""
 msgid "Clear Field"
 msgstr ""
 
+#: src/core/widgets/image_area/image_area.blp:39
 #: src/core/widgets/text_area/text_area.blp:38
 msgid "Errors present. Click for details."
 msgstr ""
 
+#: src/core/widgets/image_area/image_area.blp:119
+#: src/core/widgets/image_area/image_area.blp:251
 #: src/core/widgets/text_area/text_area.blp:116
 #: src/core/widgets/text_area/text_area.blp:257
 msgid "Open"
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.blp:137
+#: src/core/widgets/image_area/image_area.blp:257
+msgid "Save"
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.blp:153
+msgid "View in another application"
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.blp:167
+msgid "Clear image"
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.blp:206
+msgid "Drop an image file here"
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.blp:250
+#: src/core/widgets/text_area/text_area.blp:256
+msgid "Open File"
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.blp:256
+msgid "Save File"
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.rs:194
+msgctxt "File filter"
+msgid "Image Files"
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.rs:206
+#: src/core/widgets/text_area/text_area.rs:239
+msgctxt "File filter"
+msgid "Supported File Types"
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.rs:218
+#: src/core/widgets/text_area/text_area.rs:251
+msgctxt "File filter"
+msgid "All Files"
+msgstr ""
+
+#. Translator: {message} is replaced with the error message
+#: src/core/widgets/image_area/image_area.rs:243
+#: src/core/widgets/image_area/image_area.rs:373
+#: src/core/widgets/text_area/text_area.rs:276
+#, rust-format
+msgctxt "Error message"
+msgid "Unable to open file: {message}"
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.rs:263
+msgctxt "Error message"
+msgid "There is no image to save."
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.rs:276
+msgctxt "Error message"
+msgid "Unable to export the current image."
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.rs:305
+msgctxt "Error message"
+msgid "Saving to non-local locations is not supported."
+msgstr ""
+
+#. Translator: {message} is replaced with the error message
+#: src/core/widgets/image_area/image_area.rs:315
+#: src/core/widgets/image_area/image_area.rs:332
+#, rust-format
+msgctxt "Error message"
+msgid "Unable to save file: {message}"
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.rs:349
+msgctxt "Error message"
+msgid "There is no image to show in another program."
+msgstr ""
+
+#. Translator: {message} is replaced with the error message
+#: src/core/widgets/image_area/image_area.rs:408
+#, rust-format
+msgctxt "Error message"
+msgid "Unable to load image: {message}"
+msgstr ""
+
+#. Translator: {message} is replaced with the error message
+#: src/core/widgets/image_area/image_area.rs:417
+#, rust-format
+msgctxt "Error message"
+msgid "Unable to load file: {message}"
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.rs:443
+msgid "Untitled Image"
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.rs:448
+#: src/core/widgets/text_area/text_area.rs:409
+#: src/core/widgets/text_area/text_area.rs:572
+msgid "Loading..."
+msgstr ""
+
+#: src/core/widgets/image_area/image_area.rs:501
+#: src/core/widgets/text_area/text_area.rs:518
+msgctxt "Error message"
+msgid "Only one file can be opened at a time."
 msgstr ""
 
 #: src/core/widgets/text_area/text_area.blp:132
@@ -209,57 +322,26 @@ msgstr ""
 msgid "Drop a text file here"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.blp:256
-msgid "Open File"
-msgstr ""
-
 #: src/core/widgets/text_area/text_area.rs:231
 msgctxt "File filter"
 msgid "Text Files"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:239
-msgctxt "File filter"
-msgid "Supported File Types"
-msgstr ""
-
-#: src/core/widgets/text_area/text_area.rs:249
-msgctxt "File filter"
-msgid "All Files"
-msgstr ""
-
-#. Translator: {message} is replaced with the error message
-#: src/core/widgets/text_area/text_area.rs:274
-#, rust-format
-msgctxt "Error message"
-msgid "Unable to open file: {message}"
-msgstr ""
-
-#: src/core/widgets/text_area/text_area.rs:343
+#: src/core/widgets/text_area/text_area.rs:345
 msgctxt "Error message"
 msgid "The file does not contain plain text"
 msgstr ""
 
-#: src/core/widgets/text_area/text_area.rs:352
+#: src/core/widgets/text_area/text_area.rs:354
 msgctxt "Error message"
 msgid "The file is empty."
 msgstr ""
 
 #. Translator: {message} is replaced with the error message
-#: src/core/widgets/text_area/text_area.rs:358
+#: src/core/widgets/text_area/text_area.rs:360
 #, rust-format
 msgctxt "Error message"
 msgid "Unable to read file: {message}"
-msgstr ""
-
-#: src/core/widgets/text_area/text_area.rs:407
-#: src/core/widgets/text_area/text_area.rs:570
-msgid "Loading..."
-msgstr ""
-
-#: src/core/widgets/text_area/text_area.rs:516
-msgctxt "Error message"
-msgid "Only one file can be opened at a time."
 msgstr ""
 
 #: src/core/window.rs:129 src/core/window.rs:182
@@ -299,7 +381,7 @@ msgstr ""
 msgid "Input"
 msgstr ""
 
-#: src/tools/base64/base64.blp:81 src/tools/config_format/config_format.blp:112
+#: src/tools/base64/base64.blp:81 src/tools/config_format/config_format.blp:114
 #: src/tools/html_enc/html_enc.blp:76 src/tools/url_enc/url_enc.blp:71
 msgid "Output"
 msgstr ""
@@ -1497,6 +1579,157 @@ msgstr ""
 msgid "Hexadecimal"
 msgstr ""
 
+#: src/tools/qrcode/mod.rs:19
+msgctxt "Tool Title"
+msgid "QR Code"
+msgstr ""
+
+#: src/tools/qrcode/mod.rs:20
+msgctxt "Tool Description"
+msgid "Generate QR codes with various content"
+msgstr ""
+
+#: src/tools/qrcode/mod.rs:24
+msgctxt "Keyword"
+msgid "barcode"
+msgstr ""
+
+#: src/tools/qrcode/mod.rs:25
+msgctxt "Keyword"
+msgid "matrix"
+msgstr ""
+
+#: src/tools/qrcode/mod.rs:26
+msgctxt "Keyword"
+msgid "image"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:26
+msgid "Embedded Content"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:29
+msgid "Content Type"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:34 src/tools/qrcode/qrcode.blp:46
+msgid "Text/URL"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:35
+msgid "Geo Location"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:36
+msgid "Wi-Fi Network"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:37
+msgid "Contact"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:57
+msgid "Latitude (+/- degrees)"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:67
+msgid "Longitude (+/- degrees)"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:78
+msgid "Network Name (SSID)"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:88
+msgid "Security Type"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:94
+msgid "None"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:105
+msgid "Password"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:113
+msgid "Hidden Network"
+msgstr ""
+
+#. Translator: The asterisk (*) indicates that this field is required. LEave it at the end of the translated string.
+#: src/tools/qrcode/qrcode.blp:123
+msgid "First Name *"
+msgstr ""
+
+#. Translator: The asterisk (*) indicates that this field is required. LEave it at the end of the translated string.
+#: src/tools/qrcode/qrcode.blp:134
+msgid "Last Name *"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:144
+msgid "Phone Number"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:154
+msgid "Email Address"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:164
+msgid "Birthdate"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:171
+msgid "Not set"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:180 src/tools/qrcode/qrcode.rs:208
+msgid "Not Set"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:186
+msgid "Choose from calendar"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:201
+msgid "Website URL"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:211
+msgid "Address"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:215
+msgid "Street"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:225
+msgid "City"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:235
+msgid "State/Province"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:245
+msgid "Postal Code"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:255
+msgid "Country"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.blp:269
+msgid "QR Code Preview"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.rs:240
+msgid "Image saved"
+msgstr ""
+
+#: src/tools/qrcode/qrcode.rs:349 src/tools/qrcode/qrcode.rs:371
+msgid "Showing QR code with previous valid data"
+msgstr ""
+
 #: src/tools/random/mod.rs:18
 msgctxt "Tool Title"
 msgid "Random Generator"
@@ -1659,11 +1892,11 @@ msgctxt "Keyword"
 msgid "pattern"
 msgstr ""
 
-#: src/tools/regex/regex.blp:35
+#: src/tools/regex/regex.blp:26
 msgid "Regular Expression"
 msgstr ""
 
-#: src/tools/regex/regex.blp:50 src/tools/text_inspector/text_inspector.blp:140
+#: src/tools/regex/regex.blp:41 src/tools/text_inspector/text_inspector.blp:140
 msgid "Text"
 msgstr ""
 

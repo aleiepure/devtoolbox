@@ -15,7 +15,7 @@ use std::cell::RefCell;
 
 use std::{fmt::Debug, sync::OnceLock};
 
-use crate::core::widgets::text_area::wrap_mode::WrapMode;
+use crate::core::widgets::text_area::WrapMode;
 
 // MARK: Implementation
 mod imp {
@@ -237,9 +237,11 @@ mod imp {
             if self.obj().filter_custom_files() {
                 let custom_filter = gtk::FileFilter::new();
                 custom_filter.set_name(Some(&pgettext("File filter", "Supported File Types")));
-                for ext in self.obj().filter_custom_file_extensions() {
-                    let suffix = format!("*.{}", ext.trim().trim_start_matches('.'));
-                    custom_filter.add_suffix(&suffix);
+
+                for ext_list in self.obj().filter_custom_file_extensions() {
+                    for ext in ext_list.split(',') {
+                        custom_filter.add_suffix(&ext.trim().trim_start_matches('.'));
+                    }
                 }
                 filter_store.append(&custom_filter);
             }

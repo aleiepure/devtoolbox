@@ -9,7 +9,7 @@ mod core;
 mod tools;
 
 use core::application::DevtoolboxApplication;
-use core::widgets::{ActionableEntryRow, TextArea};
+use core::widgets::{ActionableEntryRow, ImageArea, TextArea};
 use core::window::DevtoolboxWindow;
 
 use config::{GETTEXT_PACKAGE, LOCALEDIR, PKGDATADIR};
@@ -32,6 +32,7 @@ fn main() -> glib::ExitCode {
     // Register custom widgets
     TextArea::ensure_type();
     ActionableEntryRow::ensure_type();
+    ImageArea::ensure_type();
 
     // Create a new GtkApplication. The application manages our main loop,
     // application windows, integration with the window manager/compositor, and

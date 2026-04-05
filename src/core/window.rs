@@ -259,6 +259,10 @@ mod imp {
                     use crate::tools::regex::RegexWidget;
                     RegexWidget::new().upcast()
                 }
+                "qrcode" => {
+                    use crate::tools::qrcode::QrcodeWidget;
+                    QrcodeWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

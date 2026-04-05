@@ -13,6 +13,7 @@
     <!-- Widgets -->
     <file>core/widgets/text_area/text_area.ui</file>
     <file>core/widgets/actionable_entryrow/actionable_entryrow.ui</file>
+    <file>core/widgets/image_area/image_area.ui</file>
 
     <!-- Tool specific widgets -->
     <file>tools/cron_parser/specifier_row.ui</file>
@@ -34,10 +35,12 @@
     <file>tools/contrast_check/contrast_check.ui</file>
     <file>tools/color_spaces/color_spaces.ui</file>
     <file>tools/regex/regex.ui</file>
+    <file>tools/qrcode/qrcode.ui</file>
   </gresource>
   
   <!-- Icons -->
   <gresource prefix="/me/iepure/devtoolbox/icons/scalable/actions/">
+
     <!-- UI icons -->
     <file compressed="true" alias="loupe-symbolic.svg">../data/icons/symbolic/loupe-symbolic.svg</file>
     <file compressed="true" alias="sidebar-symbolic.svg">../data/icons/symbolic/sidebar-symbolic.svg</file>
@@ -75,6 +78,8 @@
     <file compressed="true" alias="delay-long-symbolic.svg">../data/icons/symbolic/delay-long-symbolic.svg</file>
     <file compressed="true" alias="ruler-angled-symbolic.svg">../data/icons/symbolic/ruler-angled-symbolic.svg</file>
     <file compressed="true" alias="color-picker-symbolic.svg">../data/icons/symbolic/color-picker-symbolic.svg</file>
+    <file compressed="true" alias="floppy-symbolic.svg">../data/icons/symbolic/floppy-symbolic.svg</file>
+    <file compressed="true" alias="external-link-symbolic.svg">../data/icons/symbolic/external-link-symbolic.svg</file>
 
     <!-- Tool icons -->
     <file compressed="true" alias="config_format-symbolic.svg">../data/icons/symbolic/tools/config_format-symbolic.svg</file>
@@ -93,5 +98,6 @@
     <file compressed="true" alias="contrast_check-symbolic.svg">../data/icons/symbolic/tools/contrast_check-symbolic.svg</file>
     <file compressed="true" alias="color_spaces-symbolic.svg">../data/icons/symbolic/tools/color_spaces-symbolic.svg</file>
     <file compressed="true" alias="regex-symbolic.svg">../data/icons/symbolic/tools/regex-symbolic.svg</file>
+    <file compressed="true" alias="qrcode-symbolic.svg">../data/icons/symbolic/tools/qrcode-symbolic.svg</file>
   </gresource>
 </gresources>

@@ -21,12 +21,6 @@
   box-shadow: none;
 }
 
-.error-highlight {
-  border: 2px solid var(--error-color);
-  outline: none;
-  box-shadow: none;
-}
-
 row.last-in-row {
   margin-right: -12px;
 }

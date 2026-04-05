@@ -99,8 +99,10 @@ template $ConfigFormatWidget: Adw.Bin {
               highlight-syntax: true;
               highlight-current-line: true;
               editable: true;
+              
               allow-drag-and-drop: true;
               dragging: bind template.dragging;
+              
               filter-text-files: true;
               changed => $on_signal_input_area_changed() swapped;
               error => $on_signal_input_area_error() swapped;

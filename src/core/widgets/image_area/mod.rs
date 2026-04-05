@@ -5,7 +5,5 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
-mod text_area;
-mod wrap_mode;
-pub use text_area::TextArea;
-pub use wrap_mode::WrapMode;
+mod image_area;
+pub use image_area::ImageArea;

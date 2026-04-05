@@ -55,6 +55,7 @@ blueprint_files = files(
 
   'core/widgets/text_area/text_area.blp',
   'core/widgets/actionable_entryrow/actionable_entryrow.blp',
+  'core/widgets/image_area/image_area.blp',
 
   'tools/cron_parser/specifier_row.blp',
 
@@ -74,6 +75,7 @@ blueprint_files = files(
   'tools/contrast_check/contrast_check.blp',
   'tools/color_spaces/color_spaces.blp',
   'tools/regex/regex.blp',
+  'tools/qrcode/qrcode.blp',
 )
 
 compile_blueprint = custom_target('blueprints',

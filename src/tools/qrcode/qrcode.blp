@@ -1,0 +1,283 @@
+/*
+ * qrcode.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+using Gtk 4.0;
+using Adw 1;
+
+template $QrcodeWidget : Adw.Bin {
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+          spacing: 12;
+          margin-bottom: 12;
+          margin-top: 12;
+
+          // MARK: - Tool Settings
+          Adw.PreferencesGroup {
+            title: _("Embedded Content");
+            
+            Adw.ComboRow type_comborow {
+              title: _("Content Type");
+              icon-name: "list-large";
+
+              model: StringList {
+                strings [
+                  _("Text/URL"),
+                  _("Geo Location"),
+                  _("Wi-Fi Network"),
+                  _("Contact"),
+                ]
+              };
+
+              notify::selected => $on_signal_notify_selected_type_comborow() swapped;
+            }
+
+            // Text/URL
+            $ActionableEntryRow text_entryrow {
+              title: _("Text/URL");
+              visible: bind $is_text_url_closure(type_comborow.selected) as <bool>;
+              copy-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+
+              changed => $on_signal_changed_entryrow() swapped;
+            }
+
+            // Geo Location
+            $ActionableEntryRow geo_lat_entryrow {
+              title: _("Latitude (+/- degrees)");
+              visible: bind $is_geo_location_closure(type_comborow.selected) as <bool>;
+              copy-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+
+              changed => $on_signal_changed_entryrow() swapped;
+            }
+
+            $ActionableEntryRow geo_lon_entryrow {
+              title: _("Longitude (+/- degrees)");
+              visible: bind $is_geo_location_closure(type_comborow.selected) as <bool>;
+              copy-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+
+              changed => $on_signal_changed_entryrow() swapped;
+            }
+
+            // Wi-Fi Network
+            $ActionableEntryRow wifi_ssid_entryrow {
+              title: _("Network Name (SSID)");
+              visible: bind $is_wifi_closure(type_comborow.selected) as <bool>;
+              copy-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+
+              changed => $on_signal_changed_entryrow() swapped;
+            }
+
+            Adw.ComboRow wifi_security_comborow {
+              title: _("Security Type");
+              icon-name: "padlock2";
+              visible: bind $is_wifi_closure(type_comborow.selected) as <bool>;
+
+              model: StringList {
+                strings [
+                  _("None"),
+                  "WEP",
+                  "WPA/WPA2",
+                  "WPA3 Personal",
+                ]
+              };
+
+              notify::selected => $on_signal_notify_selected_wifi_security_comborow() swapped;
+            }
+
+            Adw.PasswordEntryRow wifi_password_entryrow {
+              title: _("Password");
+              visible: bind $is_wifi_needs_password_closure(type_comborow.selected, wifi_security_comborow.selected) as <bool>;
+              input-purpose: password;
+
+              changed => $on_signal_changed_entryrow() swapped;
+            }
+
+            Adw.SwitchRow wifi_hidden_switchrow {
+              title: _("Hidden Network");
+              visible: bind $is_wifi_closure(type_comborow.selected) as <bool>;
+              active: false;
+
+              notify::active => $on_signal_notify_active_wifi_hidden_switchrow() swapped;
+            }
+
+            // Contact
+            $ActionableEntryRow contact_first_name_entryrow {
+              // Translator: The asterisk (*) indicates that this field is required. LEave it at the end of the translated string.
+              title: _("First Name *");
+              visible: bind $is_contact_closure(type_comborow.selected) as <bool>;
+              copy-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+
+              changed => $on_signal_changed_entryrow() swapped;
+            }
+
+            $ActionableEntryRow contact_last_name_entryrow {
+              // Translator: The asterisk (*) indicates that this field is required. LEave it at the end of the translated string.
+              title: _("Last Name *");
+              visible: bind $is_contact_closure(type_comborow.selected) as <bool>;
+              copy-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+
+              changed => $on_signal_changed_entryrow() swapped;
+            }
+
+            $ActionableEntryRow contact_phone_entryrow {
+              title: _("Phone Number");
+              visible: bind $is_contact_closure(type_comborow.selected) as <bool>;
+              copy-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+
+              changed => $on_signal_changed_entryrow() swapped;
+            }
+
+            $ActionableEntryRow contact_email_entryrow {
+              title: _("Email Address");
+              visible: bind $is_contact_closure(type_comborow.selected) as <bool>;
+              copy-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+
+              changed => $on_signal_changed_entryrow() swapped;
+            }
+
+            Adw.ActionRow {
+              title: _("Birthdate");
+              activatable-widget: contact_birthdate_menubutton;
+              visible: bind $is_contact_closure(type_comborow.selected) as <bool>;
+
+              [suffix]
+              MenuButton contact_birthdate_menubutton {
+                valign: center;
+                label: _("Not set");
+                has-frame: false;
+
+                popover: Popover {
+                  Box {
+                    orientation: vertical;
+                    spacing: 2;
+
+                    CheckButton contact_birthdate_not_set_checkbutton {
+                      label: _("Not Set");
+                      active: true;
+                      toggled => $on_signal_toggled_contact_birthdate_not_set_checkbutton() swapped;
+                    }
+
+                    CheckButton contact_birthdate_calendar_checkbutton {
+                      label: _("Choose from calendar");
+                      active: false;
+                      group: contact_birthdate_not_set_checkbutton;
+                    }
+
+                    Calendar contact_birthdate_calendar {
+                      sensitive: bind contact_birthdate_calendar_checkbutton.active;
+                      day-selected => $on_signal_day_selected_contact_birthdate_calendar() swapped;
+                    }
+                  }
+                };
+              }
+            }
+
+            $ActionableEntryRow contact_url_entryrow {
+              title: _("Website URL");
+              visible: bind $is_contact_closure(type_comborow.selected) as <bool>;
+              copy-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+
+              changed => $on_signal_changed_entryrow() swapped;
+            }
+
+            Adw.ExpanderRow {
+              title: _("Address");
+              visible: bind $is_contact_closure(type_comborow.selected) as <bool>;
+
+              $ActionableEntryRow contact_address_street_entryrow {
+                title: _("Street");
+                visible: bind $is_contact_closure(type_comborow.selected) as <bool>;
+                copy-button-visible: true;
+                paste-button-visible: true;
+                clear-button-visible: true;
+
+                changed => $on_signal_changed_entryrow() swapped;
+              }
+
+              $ActionableEntryRow contact_address_city_entryrow {
+                title: _("City");
+                visible: bind $is_contact_closure(type_comborow.selected) as <bool>;
+                copy-button-visible: true;
+                paste-button-visible: true;
+                clear-button-visible: true;
+
+                changed => $on_signal_changed_entryrow() swapped;
+              }
+
+              $ActionableEntryRow contact_address_state_entryrow {
+                title: _("State/Province");
+                visible: bind $is_contact_closure(type_comborow.selected) as <bool>;
+                copy-button-visible: true;
+                paste-button-visible: true;
+                clear-button-visible: true;
+
+                changed => $on_signal_changed_entryrow() swapped;
+              }
+
+              $ActionableEntryRow contact_address_postal_code_entryrow {
+                title: _("Postal Code");
+                visible: bind $is_contact_closure(type_comborow.selected) as <bool>;
+                copy-button-visible: true;
+                paste-button-visible: true;
+                clear-button-visible: true;
+
+                changed => $on_signal_changed_entryrow() swapped;
+              }
+
+              $ActionableEntryRow contact_address_country_entryrow {
+                title: _("Country");
+                visible: bind $is_contact_closure(type_comborow.selected) as <bool>;
+                copy-button-visible: true;
+                paste-button-visible: true;
+                clear-button-visible: true;
+
+                changed => $on_signal_changed_entryrow() swapped;
+              }
+            }
+
+          }
+
+          // MARK: - Tool Main Content
+          $ImageArea imagearea {
+              title: _("QR Code Preview");
+              height:  420;
+              
+              error => $on_signal_error_imagearea() swapped;
+              image-saved => $on_signal_image_saved_imagearea() swapped;
+
+              default_save_filename: "qrcode.png";
+              save-button-visible: true;
+              view-button-visible: true;
+          }
+        };
+      };
+    };
+  }
+}

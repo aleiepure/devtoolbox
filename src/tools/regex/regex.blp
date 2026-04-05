@@ -21,16 +21,7 @@ template $RegexWidget : Adw.Bin {
           margin-bottom: 12;
           margin-top: 12;
 
-          // MARK: - Tool Settings
-          // Adw.PreferencesGroup {
-          //   $ActionableEntryRow regex_entryrow {
-          //     title: _("Regular Expression");
-          //     copy-button-visible: true;
-          //     paste-button-visible: true;
-          //     clear-button-visible: true;
-          //   }
-          // }
-
+          // MARK: - Regex Input
           $TextArea regex_textarea {
             title: _("Regular Expression");
             copy-button-visible: true;
@@ -45,7 +36,7 @@ template $RegexWidget : Adw.Bin {
             cleared => $on_signal_cleared_regex_textarea() swapped;
           }
 
-          // MARK: - Tool Main Content
+          // MARK: - Text Input
           $TextArea textarea {
             title: _("Text");
             open-button-visible: true;
