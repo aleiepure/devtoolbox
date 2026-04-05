@@ -10,7 +10,7 @@ humanize==4.12.3
 python-crontab==3.2.0
 croniter==4.0.0
 
-pyjwt==2.10.1
+pyjwt==2.12.0
 cryptography==45.0.4
 
 sqlparse==0.5.3
