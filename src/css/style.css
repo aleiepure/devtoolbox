@@ -98,3 +98,27 @@ dropdown, dropdown box, dropdown > entry, dropdown > button {
   background-color: @theme_selected_bg_color;
   color: @theme_selected_fg_color;
 }
+
+/* Light High contrast CSS overrides */
+@media (prefers-contrast: more) {
+  textarea textview, textarea box.view,
+  textfilearea textview, textfilearea box.view, textfilearea picture, textfilearea fileview,
+  imagearea picture, imagearea box.view,
+  webarea webkitwebview,
+  row text.view
+  {
+    border: 1px solid #919191;
+  }
+}
+
+/* Dark High contrast CSS overrides */
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  textarea textview, textarea box.view,
+  textfilearea textview, textfilearea box.view, textfilearea picture, textfilearea fileview,
+  imagearea picture, imagearea box.view,
+  webarea webkitwebview,
+  row text.view
+  {
+    border: 1px solid #9a9a9a;
+  }
+}
