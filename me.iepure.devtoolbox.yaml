@@ -12,6 +12,8 @@ finish-args:
   - "--socket=fallback-x11"
   - "--device=dri"
   - "--socket=wayland"
+  - "--talk-name=org.gtk.vfs.*"
+  - "--filesystem=xdg-run/gvfsd"
 separate-locales: false
 
 build-options:

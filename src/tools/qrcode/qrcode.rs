@@ -263,9 +263,7 @@ mod imp {
                 Some(QrcodeType::GeoLocation) => self.do_geo_location_generation(),
                 Some(QrcodeType::Wifi) => self.do_wifi_generation(),
                 Some(QrcodeType::Contact) => self.do_contact_generation(),
-                _ => {
-                    unreachable!()
-                }
+                _ => unreachable!("Invalid QR code type index"),
             }
         }
 

@@ -40,6 +40,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                 <choice value="color_spaces"/>
                 <choice value="regex"/>
                 <choice value="qrcode"/>
+                <choice value="color_blindness"/>
 			</choices>
 			<summary>Last used tool</summary>
 			<default>"config_format"</default>

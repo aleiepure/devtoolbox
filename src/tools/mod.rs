@@ -6,6 +6,7 @@
 */
 
 pub mod base64;
+pub mod color_blindness;
 pub mod color_spaces;
 pub mod config_format;
 pub mod contrast_check;
@@ -57,6 +58,7 @@ pub static ALL_TOOLS: Lazy<Vec<&'static ToolMetadata>> = Lazy::new(|| {
         &*color_spaces::COLOR_SPACES_TOOL_METADATA,
         &*regex::REGEX_TOOL_METADATA,
         &*qrcode::QRCODE_TOOL_METADATA,
+        &*color_blindness::COLOR_BLINDNESS_TOOL_METADATA,
     ]; // TODO: add new tools here
     tools.sort_by(|a, b| a.category.cmp(&b.category));
     tools

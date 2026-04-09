@@ -76,6 +76,7 @@ blueprint_files = files(
   'tools/color_spaces/color_spaces.blp',
   'tools/regex/regex.blp',
   'tools/qrcode/qrcode.blp',
+  'tools/color_blindness/color_blindness.blp',
 )
 
 compile_blueprint = custom_target('blueprints',

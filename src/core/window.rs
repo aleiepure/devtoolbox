@@ -263,6 +263,10 @@ mod imp {
                     use crate::tools::qrcode::QrcodeWidget;
                     QrcodeWidget::new().upcast()
                 }
+                "color_blindness" => {
+                    use crate::tools::color_blindness::ColorBlindnessWidget;
+                    ColorBlindnessWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

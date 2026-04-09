@@ -36,6 +36,7 @@
     <file>tools/color_spaces/color_spaces.ui</file>
     <file>tools/regex/regex.ui</file>
     <file>tools/qrcode/qrcode.ui</file>
+    <file>tools/color_blindness/color_blindness.ui</file>
   </gresource>
   
   <!-- Icons -->
@@ -99,5 +100,6 @@
     <file compressed="true" alias="color_spaces-symbolic.svg">../data/icons/symbolic/tools/color_spaces-symbolic.svg</file>
     <file compressed="true" alias="regex-symbolic.svg">../data/icons/symbolic/tools/regex-symbolic.svg</file>
     <file compressed="true" alias="qrcode-symbolic.svg">../data/icons/symbolic/tools/qrcode-symbolic.svg</file>
+    <file compressed="true" alias="color_blindness-symbolic.svg">../data/icons/symbolic/tools/color_blindness-symbolic.svg</file>
   </gresource>
 </gresources>

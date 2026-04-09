@@ -100,7 +100,7 @@ mod imp {
                     14 => self
                         .text_area
                         .set_text(original_text.to_reverse_alternating_case()),
-                    _ => unreachable!(),
+                    _ => unreachable!("invalid case index: {selected}"),
                 }
 
                 self.text_area.unblock_signal(handler_id);

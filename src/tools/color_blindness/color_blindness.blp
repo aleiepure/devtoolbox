@@ -1,0 +1,74 @@
+/*
+ * color_blindness.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $ColorBlindnessWidget : Adw.Bin {
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+          spacing: 12;
+          margin-bottom: 12;
+          margin-top: 12;
+
+          // MARK: - Tool Settings
+          Adw.PreferencesGroup {
+            title: _("Options");
+
+            Adw.ComboRow filter_comborow {
+              title: _("Filter");
+              subtitle: _("Choose a filter to simulate different types of color blindness.");
+              icon-name: "list-large";
+              model: StringList {
+                strings [
+                  _("Achromatomaly"),
+                  _("Achromatopsia"),
+                  _("Deuteranopia"),
+                  _("Protanopia"),
+                  _("Tritanopia")
+                ]
+              };
+
+              notify::selected => $on_signal_notify_selected_filter_comborow() swapped;
+            }
+          }
+
+          Box {
+            orientation: horizontal;
+            spacing: 12;
+
+            // MARK: - Original Image
+            $ImageArea original_imagearea {
+              title: _("Original Image");
+              vexpand: true;
+              open-button-visible: true;
+              clear-button-visible: true;
+              image-loaded => $on_signal_image_loaded_original_imagearea() swapped;
+              cleared => $on_signal_cleared_original_imagearea() swapped;
+            }
+
+            // MARK: - Filtered Image
+            $ImageArea filtered_imagearea {
+              title: _("Filtered Image");
+              vexpand: true;
+              save-button-visible: true;
+              view-button-visible: true;
+              default-save-filename: _("simulated_image.png");
+              error => $on_signal_error_filtered_imagearea() swapped;
+            }
+          }
+        };
+      };
+    };
+  }
+}

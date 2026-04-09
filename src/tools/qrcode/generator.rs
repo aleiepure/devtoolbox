@@ -32,7 +32,7 @@ impl QrcodeTypeImpl for QrcodeType {
             1 => Some(QrcodeType::GeoLocation),
             2 => Some(QrcodeType::Wifi),
             3 => Some(QrcodeType::Contact),
-            _ => unreachable!(),
+            _ => unreachable!("Invalid type index: {index}"),
         }
     }
 }
@@ -59,7 +59,7 @@ impl WifiSecurityImpl for WifiSecurity {
             1 => Some(WifiSecurity::WEP),
             2 => Some(WifiSecurity::WpaWpa2),
             3 => Some(WifiSecurity::Wpa3Personal),
-            _ => unreachable!(),
+            _ => unreachable!("Invalid security type index: {index}"),
         }
     }
 }

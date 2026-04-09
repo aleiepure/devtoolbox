@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-05 12:44+0200\n"
+"POT-Creation-Date: 2026-04-09 17:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,11 +43,11 @@ msgstr ""
 msgid "Window maximized"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:44
+#: data/me.iepure.devtoolbox.gschema.xml:45
 msgid "Last used tool"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:48
+#: data/me.iepure.devtoolbox.gschema.xml:49
 msgid "Sidebar open"
 msgstr ""
 
@@ -221,85 +221,85 @@ msgstr ""
 msgid "Save File"
 msgstr ""
 
-#: src/core/widgets/image_area/image_area.rs:194
+#: src/core/widgets/image_area/image_area.rs:193
 msgctxt "File filter"
 msgid "Image Files"
 msgstr ""
 
-#: src/core/widgets/image_area/image_area.rs:206
+#: src/core/widgets/image_area/image_area.rs:205
 #: src/core/widgets/text_area/text_area.rs:239
 msgctxt "File filter"
 msgid "Supported File Types"
 msgstr ""
 
-#: src/core/widgets/image_area/image_area.rs:218
+#: src/core/widgets/image_area/image_area.rs:217
 #: src/core/widgets/text_area/text_area.rs:251
 msgctxt "File filter"
 msgid "All Files"
 msgstr ""
 
 #. Translator: {message} is replaced with the error message
-#: src/core/widgets/image_area/image_area.rs:243
-#: src/core/widgets/image_area/image_area.rs:373
+#: src/core/widgets/image_area/image_area.rs:242
+#: src/core/widgets/image_area/image_area.rs:369
 #: src/core/widgets/text_area/text_area.rs:276
 #, rust-format
 msgctxt "Error message"
 msgid "Unable to open file: {message}"
 msgstr ""
 
-#: src/core/widgets/image_area/image_area.rs:263
+#: src/core/widgets/image_area/image_area.rs:260
 msgctxt "Error message"
 msgid "There is no image to save."
 msgstr ""
 
-#: src/core/widgets/image_area/image_area.rs:276
+#: src/core/widgets/image_area/image_area.rs:272
 msgctxt "Error message"
 msgid "Unable to export the current image."
 msgstr ""
 
-#: src/core/widgets/image_area/image_area.rs:305
+#: src/core/widgets/image_area/image_area.rs:301
 msgctxt "Error message"
 msgid "Saving to non-local locations is not supported."
 msgstr ""
 
 #. Translator: {message} is replaced with the error message
-#: src/core/widgets/image_area/image_area.rs:315
-#: src/core/widgets/image_area/image_area.rs:332
+#: src/core/widgets/image_area/image_area.rs:311
+#: src/core/widgets/image_area/image_area.rs:328
 #, rust-format
 msgctxt "Error message"
 msgid "Unable to save file: {message}"
 msgstr ""
 
-#: src/core/widgets/image_area/image_area.rs:349
+#: src/core/widgets/image_area/image_area.rs:345
 msgctxt "Error message"
 msgid "There is no image to show in another program."
 msgstr ""
 
 #. Translator: {message} is replaced with the error message
-#: src/core/widgets/image_area/image_area.rs:408
+#: src/core/widgets/image_area/image_area.rs:404
 #, rust-format
 msgctxt "Error message"
 msgid "Unable to load image: {message}"
 msgstr ""
 
 #. Translator: {message} is replaced with the error message
-#: src/core/widgets/image_area/image_area.rs:417
+#: src/core/widgets/image_area/image_area.rs:413
 #, rust-format
 msgctxt "Error message"
 msgid "Unable to load file: {message}"
 msgstr ""
 
-#: src/core/widgets/image_area/image_area.rs:443
+#: src/core/widgets/image_area/image_area.rs:440
 msgid "Untitled Image"
 msgstr ""
 
-#: src/core/widgets/image_area/image_area.rs:448
+#: src/core/widgets/image_area/image_area.rs:445
 #: src/core/widgets/text_area/text_area.rs:409
 #: src/core/widgets/text_area/text_area.rs:572
 msgid "Loading..."
 msgstr ""
 
-#: src/core/widgets/image_area/image_area.rs:501
+#: src/core/widgets/image_area/image_area.rs:495
 #: src/core/widgets/text_area/text_area.rs:518
 msgctxt "Error message"
 msgid "Only one file can be opened at a time."
@@ -352,7 +352,9 @@ msgstr ""
 msgid "Remove from Favorites"
 msgstr ""
 
-#: src/tools/base64/base64.blp:26 src/tools/color_spaces/color_spaces.blp:26
+#: src/tools/base64/base64.blp:26
+#: src/tools/color_blindness/color_blindness.blp:26
+#: src/tools/color_spaces/color_spaces.blp:26
 #: src/tools/config_format/config_format.blp:25
 #: src/tools/cron_parser/cron_parser.blp:25 src/tools/html_enc/html_enc.blp:26
 #: src/tools/linux_permissions/linux_permissions.blp:26
@@ -414,6 +416,101 @@ msgstr ""
 #: src/tools/base64/mod.rs:25
 msgctxt "Keyword"
 msgid "data"
+msgstr ""
+
+#: src/tools/color_blindness/color_blindness.blp:29
+msgid "Filter"
+msgstr ""
+
+#: src/tools/color_blindness/color_blindness.blp:30
+msgid "Choose a filter to simulate different types of color blindness."
+msgstr ""
+
+#: src/tools/color_blindness/color_blindness.blp:34
+msgid "Achromatomaly"
+msgstr ""
+
+#: src/tools/color_blindness/color_blindness.blp:35
+msgid "Achromatopsia"
+msgstr ""
+
+#: src/tools/color_blindness/color_blindness.blp:36
+msgid "Deuteranopia"
+msgstr ""
+
+#: src/tools/color_blindness/color_blindness.blp:37
+msgid "Protanopia"
+msgstr ""
+
+#: src/tools/color_blindness/color_blindness.blp:38
+msgid "Tritanopia"
+msgstr ""
+
+#: src/tools/color_blindness/color_blindness.blp:52
+msgid "Original Image"
+msgstr ""
+
+#: src/tools/color_blindness/color_blindness.blp:62
+msgid "Filtered Image"
+msgstr ""
+
+#: src/tools/color_blindness/color_blindness.blp:66
+msgid "simulated_image.png"
+msgstr ""
+
+#: src/tools/color_blindness/color_blindness.rs:97
+#: src/tools/qrcode/qrcode.rs:240
+msgid "Image saved"
+msgstr ""
+
+#: src/tools/color_blindness/mod.rs:18
+msgctxt "Tool Title"
+msgid "Color Blindness Simulation"
+msgstr ""
+
+#: src/tools/color_blindness/mod.rs:19
+msgctxt "Tool Description"
+msgid "Simulate color blindness effects on images"
+msgstr ""
+
+#: src/tools/color_blindness/mod.rs:20
+msgctxt "Tool Sidebar Title"
+msgid "Color Blindness"
+msgstr ""
+
+#: src/tools/color_blindness/mod.rs:23
+msgctxt "Keyword"
+msgid "simulation"
+msgstr ""
+
+#: src/tools/color_blindness/mod.rs:24
+msgctxt "Keyword"
+msgid "daltonism"
+msgstr ""
+
+#: src/tools/color_blindness/mod.rs:25
+msgctxt "Keyword"
+msgid "deficiency"
+msgstr ""
+
+#: src/tools/color_blindness/mod.rs:26
+msgctxt "Keyword"
+msgid "vision"
+msgstr ""
+
+#: src/tools/color_blindness/mod.rs:27
+msgctxt "Keyword"
+msgid "protanopia"
+msgstr ""
+
+#: src/tools/color_blindness/mod.rs:28
+msgctxt "Keyword"
+msgid "deuteranopia"
+msgstr ""
+
+#: src/tools/color_blindness/mod.rs:29
+msgctxt "Keyword"
+msgid "tritanopia"
 msgstr ""
 
 #: src/tools/color_spaces/color_spaces.blp:29
@@ -1722,11 +1819,7 @@ msgstr ""
 msgid "QR Code Preview"
 msgstr ""
 
-#: src/tools/qrcode/qrcode.rs:240
-msgid "Image saved"
-msgstr ""
-
-#: src/tools/qrcode/qrcode.rs:349 src/tools/qrcode/qrcode.rs:371
+#: src/tools/qrcode/qrcode.rs:347 src/tools/qrcode/qrcode.rs:369
 msgid "Showing QR code with previous valid data"
 msgstr ""
 
