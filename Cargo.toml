@@ -54,3 +54,5 @@ qrcode = "0.14.1"
 image = "0.25.10"
 
 color_blinder = "1.0.2"
+
+similar = "3.0.0"

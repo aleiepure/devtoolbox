@@ -20,6 +20,7 @@ pub mod number_bases;
 pub mod qrcode;
 pub mod random;
 pub mod regex;
+pub mod text_diff;
 pub mod text_inspector;
 pub mod timestamp;
 pub mod url_enc;
@@ -59,6 +60,7 @@ pub static ALL_TOOLS: Lazy<Vec<&'static ToolMetadata>> = Lazy::new(|| {
         &*regex::REGEX_TOOL_METADATA,
         &*qrcode::QRCODE_TOOL_METADATA,
         &*color_blindness::COLOR_BLINDNESS_TOOL_METADATA,
+        &*text_diff::TEXT_DIFF_TOOL_METADATA,
     ]; // TODO: add new tools here
     tools.sort_by(|a, b| a.category.cmp(&b.category));
     tools

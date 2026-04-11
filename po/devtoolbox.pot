@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-09 17:06+0200\n"
+"POT-Creation-Date: 2026-04-11 13:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,11 +43,11 @@ msgstr ""
 msgid "Window maximized"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:45
+#: data/me.iepure.devtoolbox.gschema.xml:46
 msgid "Last used tool"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:49
+#: data/me.iepure.devtoolbox.gschema.xml:50
 msgid "Sidebar open"
 msgstr ""
 
@@ -1991,6 +1991,38 @@ msgstr ""
 
 #: src/tools/regex/regex.blp:41 src/tools/text_inspector/text_inspector.blp:140
 msgid "Text"
+msgstr ""
+
+#: src/tools/text_diff/mod.rs:19
+msgctxt "Tool Title"
+msgid "Text Diff"
+msgstr ""
+
+#: src/tools/text_diff/mod.rs:20
+msgctxt "Tool Description"
+msgid "Compare two text inputs and highlight the differences."
+msgstr ""
+
+#: src/tools/text_diff/mod.rs:24
+msgctxt "Keyword"
+msgid "changes"
+msgstr ""
+
+#: src/tools/text_diff/mod.rs:25
+msgctxt "Keyword"
+msgid "modifications"
+msgstr ""
+
+#: src/tools/text_diff/text_diff.blp:29
+msgid "Old Text"
+msgstr ""
+
+#: src/tools/text_diff/text_diff.blp:44
+msgid "New Text"
+msgstr ""
+
+#: src/tools/text_diff/text_diff.blp:61
+msgid "Differences"
 msgstr ""
 
 #: src/tools/text_inspector/mod.rs:19

@@ -37,6 +37,7 @@
     <file>tools/regex/regex.ui</file>
     <file>tools/qrcode/qrcode.ui</file>
     <file>tools/color_blindness/color_blindness.ui</file>
+    <file>tools/text_diff/text_diff.ui</file>
   </gresource>
   
   <!-- Icons -->
@@ -101,5 +102,6 @@
     <file compressed="true" alias="regex-symbolic.svg">../data/icons/symbolic/tools/regex-symbolic.svg</file>
     <file compressed="true" alias="qrcode-symbolic.svg">../data/icons/symbolic/tools/qrcode-symbolic.svg</file>
     <file compressed="true" alias="color_blindness-symbolic.svg">../data/icons/symbolic/tools/color_blindness-symbolic.svg</file>
+    <file compressed="true" alias="text_diff-symbolic.svg">../data/icons/symbolic/tools/text_diff-symbolic.svg</file>
   </gresource>
 </gresources>

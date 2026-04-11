@@ -1,0 +1,71 @@
+/*
+ * text_diff.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $TextDiffWidget : Adw.Bin {
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+          margin-bottom: 12;
+          margin-top: 12;
+
+          // MARK: - Input
+          Box {
+            orientation: horizontal;
+            spacing: 12;
+
+            $TextArea old_textarea {
+              title: _("Old Text");
+              open-button-visible: true;
+              copy-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+              editable: true;
+              show-line-numbers: true;
+              highlight-current-line: true;
+              monospace: true;
+
+              changed => $on_signal_changed_old_textarea() swapped;
+              error => $on_signal_error_old_textarea() swapped;
+            }
+
+            $TextArea new_textarea {
+              title: _("New Text");
+              open-button-visible: true;
+              copy-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+              editable: true;
+              show-line-numbers: true;
+              highlight-current-line: true;
+              monospace: true;
+
+              changed => $on_signal_changed_new_textarea() swapped;
+              error => $on_signal_error_new_textarea() swapped;
+            }
+          }
+
+          // MARK: - Output
+          $TextArea diff_textarea {
+            title: _("Differences");
+            copy-button-visible: true;
+            editable: false;
+            show-line-numbers: true;
+            monospace: true;
+          }
+        };
+      };
+    };
+  }
+}

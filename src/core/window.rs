@@ -267,6 +267,10 @@ mod imp {
                     use crate::tools::color_blindness::ColorBlindnessWidget;
                     ColorBlindnessWidget::new().upcast()
                 }
+                "text_diff" => {
+                    use crate::tools::text_diff::TextDiffWidget;
+                    TextDiffWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }
