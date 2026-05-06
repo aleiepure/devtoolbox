@@ -949,7 +949,7 @@ msgstr "palette"
 
 #: src/tools.py:480 src/ui/views/contrast_checker.blp:19
 msgid "Contrast Checker"
-msgstr "Vérificateur de constrastes"
+msgstr "Vérificateur de contrastes"
 
 #: src/tools.py:483 src/ui/views/contrast_checker.blp:20
 msgid "Check a color combination for WCAG compliance"
