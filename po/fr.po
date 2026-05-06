@@ -2281,7 +2281,7 @@ msgstr "Off"
 
 #: src/ui/views/jwt_decoder.blp:46
 msgid "Symmetric"
-msgstr "Symmétrique"
+msgstr "Symétrique"
 
 #: src/ui/views/jwt_decoder.blp:51
 msgid "Asymmetric"
