@@ -6,7 +6,7 @@ license = "GPL-3.0-or-later"
 
 [dependencies]
 gettext-rs = { version = "0.7", features = ["gettext-system"] }
-gtk = { version = "0.11.1", package = "gtk4", features = ["gnome_49"] }
+gtk = { version = "0.11.1", package = "gtk4", features = ["gnome_50"] }
 adw = { version = "0.9.1", package = "libadwaita", features = ["v1_8"] }
 sourceview = { version = "0.11.0", package = "sourceview5" }
 pastey = "0.2.1"
@@ -56,3 +56,8 @@ image = "0.25.10"
 color_blinder = "1.0.2"
 
 similar = "3.0.0"
+
+x509-parser = "0.18.1"
+sha1 = "0.11.0"
+md-5 = "0.11.0"
+asn1-rs = "0.7"

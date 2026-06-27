@@ -78,6 +78,7 @@ blueprint_files = files(
   'tools/qrcode/qrcode.blp',
   'tools/color_blindness/color_blindness.blp',
   'tools/text_diff/text_diff.blp',
+  'tools/cert_parse/cert_parse.blp',
 )
 
 compile_blueprint = custom_target('blueprints',

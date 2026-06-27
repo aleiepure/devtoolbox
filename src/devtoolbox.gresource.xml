@@ -38,6 +38,7 @@
     <file>tools/qrcode/qrcode.ui</file>
     <file>tools/color_blindness/color_blindness.ui</file>
     <file>tools/text_diff/text_diff.ui</file>
+    <file>tools/cert_parse/cert_parse.ui</file>
   </gresource>
   
   <!-- Icons -->
@@ -82,6 +83,10 @@
     <file compressed="true" alias="color-picker-symbolic.svg">../data/icons/symbolic/color-picker-symbolic.svg</file>
     <file compressed="true" alias="floppy-symbolic.svg">../data/icons/symbolic/floppy-symbolic.svg</file>
     <file compressed="true" alias="external-link-symbolic.svg">../data/icons/symbolic/external-link-symbolic.svg</file>
+    <file compressed="true" alias="document-open-symbolic.svg">../data/icons/symbolic/document-open-symbolic.svg</file>
+    <file compressed="true" alias="application-certificate-symbolic.svg">../data/icons/symbolic/application-certificate-symbolic.svg</file>
+    <file compressed="true" alias="up-symbolic.svg">../data/icons/symbolic/up-symbolic.svg</file>
+    <file compressed="true" alias="down-symbolic.svg">../data/icons/symbolic/down-symbolic.svg</file>
 
     <!-- Tool icons -->
     <file compressed="true" alias="config_format-symbolic.svg">../data/icons/symbolic/tools/config_format-symbolic.svg</file>
@@ -103,5 +108,6 @@
     <file compressed="true" alias="qrcode-symbolic.svg">../data/icons/symbolic/tools/qrcode-symbolic.svg</file>
     <file compressed="true" alias="color_blindness-symbolic.svg">../data/icons/symbolic/tools/color_blindness-symbolic.svg</file>
     <file compressed="true" alias="text_diff-symbolic.svg">../data/icons/symbolic/tools/text_diff-symbolic.svg</file>
+    <file compressed="true" alias="cert_parse-symbolic.svg">../data/icons/symbolic/tools/cert_parse-symbolic.svg</file>
   </gresource>
 </gresources>

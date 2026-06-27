@@ -271,6 +271,10 @@ mod imp {
                     use crate::tools::text_diff::TextDiffWidget;
                     TextDiffWidget::new().upcast()
                 }
+                "cert_parse" => {
+                    use crate::tools::cert_parse::CertParseWidget;
+                    CertParseWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

@@ -1,0 +1,165 @@
+/*
+ * cert_parse.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $CertParseWidget: Adw.Bin {
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+          spacing: 12;
+          margin-bottom: 12;
+          margin-top: 12;
+          // MARK: - Tool Settings
+          Adw.PreferencesGroup {
+            Adw.ActionRow open_row {
+              title: _("Certificate File");
+              subtitle: _("Open a certificate file to parse");
+              icon-name: "application-certificate-symbolic";
+              activatable-widget: open_button;
+
+              [suffix]
+              Label file_path_label {
+                halign: start;
+                margin-end: 12;
+              }
+
+              [suffix]
+              Button open_button {
+                accessibility {
+                  label: C_("a11y", "open button");
+                }
+
+                valign: center;
+
+                child: Adw.ButtonContent {
+                  label: _("Open");
+                  icon-name: "document-open";
+                };
+
+                clicked => $on_signal_clicked_open_button() swapped;
+              }
+            }
+          }
+
+          // MARK: - Tool Main Content
+          Adw.ViewStack view_stack {
+            Adw.ViewStackPage {
+              name: "empty";
+
+              child: Box {
+                valign: center;
+                vexpand: true;
+                orientation: vertical;
+                spacing: 6;
+
+                Image {
+                  accessibility {
+                    labelled-by: no_certificate_label;
+                  }
+
+                  icon-name: "application-certificate-symbolic";
+                  pixel-size: 64;
+                }
+
+                Label no_certificate_label {
+                  label: _("Open a certificate file to see its details here.");
+
+                  styles [
+                    "title-3",
+                  ]
+                }
+              };
+            }
+
+            Adw.ViewStackPage {
+              name: "certificate";
+
+              child: Adw.PreferencesGroup certificate_group {
+                margin-bottom: 12;
+
+                [header-suffix]
+                Button expand_button {
+                  accessibility {
+                    labelled-by: button_content;
+                  }
+
+                  valign: center;
+
+                  child: Adw.ButtonContent button_content {
+                    label: _("Expand All");
+                    icon-name: "down";
+                  };
+
+                  clicked => $on_signal_clicked_expand_button() swapped;
+                }
+
+                Label identity_label {
+                  halign: start;
+                  margin-start: 12;
+                }
+
+                Label version_label {
+                  halign: start;
+                  margin-start: 12;
+                }
+
+                Label verifier_label {
+                  halign: start;
+                  margin-start: 12;
+                }
+
+                Label not_before_label {
+                  halign: start;
+                  margin-start: 12;
+                }
+
+                Label not_after_label {
+                  halign: start;
+                  margin-start: 12;
+                }
+
+                Label serial_label {
+                  halign: start;
+                  margin-start: 12;
+                }
+
+                Adw.PreferencesGroup general_group {
+                  margin-top: 10;
+                  hexpand: true;
+                }
+
+                Adw.PreferencesGroup named_extensions_group {
+                  margin-top: 10;
+                  hexpand: true;
+                }
+
+                Adw.PreferencesGroup extensions_group {
+                  margin-top: 10;
+                  margin-bottom: 10;
+                  hexpand: true;
+                }
+              };
+            }
+          }
+        };
+      };
+    };
+  }
+}
+
+FileDialog open_file_dialog {
+    modal: true;
+    title: _("Open File");
+    accept-label: _("Open");
+}

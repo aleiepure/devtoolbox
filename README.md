@@ -45,10 +45,10 @@ This is a collection of powerful yet simple-to-use tools and utilities to solve 
 
 > [!IMPORTANT]
 > **Now with 100% more iron!**
-> 
+>
 > This branch contains a complete Rust rewrite from scratch. I apologize for the long gaps between updates. Compatibility
 > issues with very old third-party Python libraries finally forced my hand. The latest platform update broke most dependencies,
-> making Python 3.14 support impossible. I'm betting on Rust's robust ecosystem and strong typing to eliminate long-standing 
+> making Python 3.14 support impossible. I'm betting on Rust's robust ecosystem and strong typing to eliminate long-standing
 > performance issues and a more stable foundation for the future. 
 > This rewrite means a fresh start. See [#123](https://github.com/aleiepure/devtoolbox/issues/123) for more information.
 

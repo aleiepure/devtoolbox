@@ -15,6 +15,10 @@ src/core/widgets/text_area/text_area.rs
 src/core/window.rs
 src/tools/base64/base64.blp
 src/tools/base64/mod.rs
+src/tools/cert_parse/cert_parse.blp
+src/tools/cert_parse/cert_parse.rs
+src/tools/cert_parse/mod.rs
+src/tools/cert_parse/parser.rs
 src/tools/color_blindness/color_blindness.blp
 src/tools/color_blindness/color_blindness.rs
 src/tools/color_blindness/mod.rs

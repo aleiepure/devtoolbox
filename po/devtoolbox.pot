@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-11 13:07+0200\n"
+"POT-Creation-Date: 2026-06-27 10:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,11 +43,11 @@ msgstr ""
 msgid "Window maximized"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:46
+#: data/me.iepure.devtoolbox.gschema.xml:47
 msgid "Last used tool"
 msgstr ""
 
-#: data/me.iepure.devtoolbox.gschema.xml:50
+#: data/me.iepure.devtoolbox.gschema.xml:51
 msgid "Sidebar open"
 msgstr ""
 
@@ -192,6 +192,8 @@ msgstr ""
 #: src/core/widgets/image_area/image_area.blp:251
 #: src/core/widgets/text_area/text_area.blp:116
 #: src/core/widgets/text_area/text_area.blp:257
+#: src/tools/cert_parse/cert_parse.blp:46
+#: src/tools/cert_parse/cert_parse.blp:164
 msgid "Open"
 msgstr ""
 
@@ -214,6 +216,7 @@ msgstr ""
 
 #: src/core/widgets/image_area/image_area.blp:250
 #: src/core/widgets/text_area/text_area.blp:256
+#: src/tools/cert_parse/cert_parse.blp:163
 msgid "Open File"
 msgstr ""
 
@@ -234,6 +237,7 @@ msgstr ""
 
 #: src/core/widgets/image_area/image_area.rs:217
 #: src/core/widgets/text_area/text_area.rs:251
+#: src/tools/cert_parse/cert_parse.rs:128
 msgctxt "File filter"
 msgid "All Files"
 msgstr ""
@@ -242,6 +246,7 @@ msgstr ""
 #: src/core/widgets/image_area/image_area.rs:242
 #: src/core/widgets/image_area/image_area.rs:369
 #: src/core/widgets/text_area/text_area.rs:276
+#: src/tools/cert_parse/cert_parse.rs:150
 #, rust-format
 msgctxt "Error message"
 msgid "Unable to open file: {message}"
@@ -416,6 +421,330 @@ msgstr ""
 #: src/tools/base64/mod.rs:25
 msgctxt "Keyword"
 msgid "data"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.blp:26
+msgid "Certificate File"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.blp:27
+msgid "Open a certificate file to parse"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.blp:40
+msgctxt "a11y"
+msgid "open button"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.blp:76
+msgid "Open a certificate file to see its details here."
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.blp:100
+#: src/tools/cert_parse/cert_parse.rs:168
+msgid "Expand All"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.rs:120
+msgctxt "File filter"
+msgid "Certificate Files"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.rs:165
+msgid "Collapse All"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.rs:188
+msgctxt "Error message"
+msgid "Cannot open file"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.rs:202
+#, rust-format
+msgctxt "Error message"
+msgid "Failed to read file: {message}"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.rs:221
+msgctxt "Error message"
+msgid "Failed to read file: unknown error"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.rs:248
+msgctxt "Error message"
+msgid "Certificate parsing failed unexpectedly"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.rs:290
+#, rust-format
+msgctxt "Certificate info"
+msgid "Version: {version}"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.rs:294
+#, rust-format
+msgctxt "Certificate info"
+msgid "Identity: {identity}"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.rs:298
+#, rust-format
+msgctxt "Certificate info"
+msgid "Verified by: {verifier}"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.rs:302
+#, rust-format
+msgctxt "Certificate info"
+msgid "Not before: {not_before_date}"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.rs:306
+#, rust-format
+msgctxt "Certificate info"
+msgid "Not after: {not_after_date}"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.rs:310
+#, rust-format
+msgctxt "Certificate info"
+msgid "Serial: {serial}"
+msgstr ""
+
+#: src/tools/cert_parse/cert_parse.rs:349
+msgid "Certificate Fingerprints"
+msgstr ""
+
+#: src/tools/cert_parse/mod.rs:19
+msgctxt "Tool Title"
+msgid "Certificate Parser"
+msgstr ""
+
+#: src/tools/cert_parse/mod.rs:20
+msgctxt "Tool Description"
+msgid "Parse and display information from X.509 certificates"
+msgstr ""
+
+#: src/tools/cert_parse/mod.rs:29
+msgctxt "Keyword"
+msgid "security"
+msgstr ""
+
+#: src/tools/cert_parse/mod.rs:30
+msgctxt "Keyword"
+msgid "public key"
+msgstr ""
+
+#: src/tools/cert_parse/mod.rs:31
+msgctxt "Keyword"
+msgid "private key"
+msgstr ""
+
+#: src/tools/cert_parse/mod.rs:32
+msgctxt "Keyword"
+msgid "cryptography"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:87
+#, rust-format
+msgctxt "Error"
+msgid "Failed to parse PEM: {e}"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:94
+msgid "Could not parse certificate as DER or PEM"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:213 src/tools/cert_parse/parser.rs:341
+msgid "Algorithm"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:219 src/tools/cert_parse/parser.rs:225
+#: src/tools/cert_parse/parser.rs:235 src/tools/cert_parse/parser.rs:393
+msgid "Parameters"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:241
+msgid "Public Key Algorithm"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:249
+#, rust-format
+msgid "RSA public key ({n_bits} bit)"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:253
+msgid "Modulus"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:257
+msgid "Exponent"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:268
+#, rust-format
+msgid "EC public key ({n_bits} bit)"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:271 src/tools/cert_parse/parser.rs:279
+#: src/tools/cert_parse/parser.rs:288 src/tools/cert_parse/parser.rs:298
+#: src/tools/cert_parse/parser.rs:314
+msgid "Public Key"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:276
+#, rust-format
+msgid "DSA public key ({n_bits} bit)"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:285
+#, rust-format
+msgid "GOST R 34.10-94 Public Key ({n_bits} bit)"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:295
+#, rust-format
+msgid "GOST R 34.10-2012 Public Key ({n_bits} bit)"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:305
+msgid "Unknown Public Key"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:307
+msgid "Raw Data"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:316
+msgid "Status"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:317
+msgid "Could not parse public key"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:347 src/tools/cert_parse/parser.rs:366
+msgid "Hash Algorithm"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:352 src/tools/cert_parse/parser.rs:371
+msgid "Mask Generation Function"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:361
+msgid "Salt Length"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:380
+msgid "PSourceFunc"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:387
+msgid "Algorithm OID"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:402
+msgid "Signature Algorithm"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:409
+msgid "Signature Value"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:411
+#: src/tools/color_spaces/color_spaces.blp:209
+msgid "Value"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:429
+msgid "True"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:431
+msgid "False"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:436
+msgid "Basic Constraints"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:447
+msgid "Key Usage"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:449
+msgid "Usage"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:483
+msgid "Extended Key Usage"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:485
+msgid "Usages"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:496 src/tools/cert_parse/parser.rs:521
+msgid "Key Identifier"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:507
+msgid "Subject Alternative Names"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:509 src/tools/cert_parse/parser.rs:611
+msgid "Names"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:528
+msgid "Certificate Issuer"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:534
+msgid "Certificate Serial"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:541
+msgid "Authority Key Identifier"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:550
+#, rust-format
+msgid "Distribution Point {num}"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:552
+msgid "Distribution Point"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:566
+#, rust-format
+msgid "Full Name: {name}"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:575
+#, rust-format
+msgid "Reasons: {reasons}"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:598
+msgid "CRL Distribution Points"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:609
+msgid "Issuer Alternative Name"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:625
+msgid "Certificate Policies"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:627
+msgid "Policies"
+msgstr ""
+
+#: src/tools/cert_parse/parser.rs:640
+msgid "Extension"
 msgstr ""
 
 #: src/tools/color_blindness/color_blindness.blp:29
@@ -600,10 +929,6 @@ msgstr ""
 #: src/tools/color_spaces/color_spaces.blp:200
 #: src/tools/color_spaces/color_spaces.blp:239
 msgid "Saturation"
-msgstr ""
-
-#: src/tools/color_spaces/color_spaces.blp:209
-msgid "Value"
 msgstr ""
 
 #: src/tools/color_spaces/color_spaces.blp:248
