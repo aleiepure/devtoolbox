@@ -36,6 +36,15 @@ mod imp {
         menu_button: TemplateChild<gtk::MenuButton>,
 
         #[template_child]
+        favorite_popover: TemplateChild<gtk::Popover>,
+
+        #[template_child]
+        favorite_view_stack: TemplateChild<adw::ViewStack>,
+
+        #[template_child]
+        favorite_listbox: TemplateChild<gtk::ListBox>,
+
+        #[template_child]
         sidebar_listbox: TemplateChild<gtk::ListBox>,
 
         #[template_child]
@@ -76,8 +85,10 @@ mod imp {
         }
 
         #[template_callback]
-        fn on_signal_row_activated_favorite_listbox(&self, _row: &gtk::ListBoxRow) {
-            // TODO: implement favorite tool activation
+        fn on_signal_row_activated_favorite_listbox(&self, row: &gtk::ListBoxRow) {
+            let tool_id = row.widget_name().to_string();
+            self.load_and_show_tool(&tool_id);
+            self.favorite_popover.popdown();
         }
 
         #[template_callback]
@@ -137,9 +148,11 @@ mod imp {
                 self.mark_favorite_button
                     .set_tooltip_text(Some(&gettext("Remove from Favorites")));
             }
+
+            self.refresh_favorite_menu();
         }
 
-        fn load_and_show_tool(&self, tool_id: &str) {
+        pub fn load_and_show_tool(&self, tool_id: &str) {
             let mut loaded_tools = self.loaded_tools.borrow_mut();
 
             // Check if the tool was already loaded
@@ -283,33 +296,38 @@ mod imp {
             tool
         }
 
+        fn create_tool_row(&self, tool: &'static ToolMetadata) -> gtk::ListBoxRow {
+            let row_box = gtk::Box::new(gtk::Orientation::Horizontal, 4);
+            row_box.set_margin_start(12);
+            row_box.set_margin_end(12);
+            row_box.set_margin_top(6);
+            row_box.set_margin_bottom(6);
+            row_box.set_spacing(12);
+
+            let icon = gtk::Image::from_icon_name(tool.id);
+            row_box.append(&icon);
+
+            let title = gtk::Label::new(None);
+            if let Some(sidebar_title) = &tool.sidebar_title {
+                title.set_label(sidebar_title);
+            } else {
+                title.set_label(&tool.title);
+            }
+            title.set_halign(gtk::Align::Start);
+            title.add_css_class("body");
+            row_box.append(&title);
+
+            let row = gtk::ListBoxRow::new();
+            row.set_widget_name(tool.id);
+            row.set_child(Some(&row_box));
+            row.set_tooltip_text(Some(&tool.description));
+
+            row
+        }
+
         fn populate_sidebar(&self) {
             for tool in all_tools() {
-                let row_box = gtk::Box::new(gtk::Orientation::Horizontal, 4);
-                row_box.set_margin_start(12);
-                row_box.set_margin_end(12);
-                row_box.set_margin_top(6);
-                row_box.set_margin_bottom(6);
-                row_box.set_spacing(12);
-
-                let icon = gtk::Image::from_icon_name(tool.id);
-                row_box.append(&icon);
-
-                let title = gtk::Label::new(None);
-                if let Some(sidebar_title) = &tool.sidebar_title {
-                    title.set_label(sidebar_title);
-                } else {
-                    title.set_label(&tool.title);
-                }
-                title.set_halign(gtk::Align::Start);
-                title.add_css_class("body");
-                row_box.append(&title);
-
-                let row = gtk::ListBoxRow::new();
-                row.set_widget_name(tool.id);
-                row.set_child(Some(&row_box));
-                row.set_tooltip_text(Some(&tool.description));
-                self.sidebar_listbox.append(&row);
+                self.sidebar_listbox.append(&self.create_tool_row(tool));
             }
 
             self.sidebar_listbox.set_header_func(|row, before| {
@@ -340,14 +358,34 @@ mod imp {
                 }
             });
         }
+
+        fn refresh_favorite_menu(&self) {
+            self.favorite_listbox.remove_all();
+
+            let settings = Settings::new(APP_ID);
+            let favorite_tools = settings.strv("favorite-tools");
+
+            if favorite_tools.is_empty() {
+                self.favorite_view_stack.set_visible_child_name("empty");
+            } else {
+                for tool_id in favorite_tools {
+                    if let Some(metadata) = all_tools().find(|t| t.id == tool_id) {
+                        self.favorite_listbox
+                            .append(&self.create_tool_row(metadata));
+                    }
+                }
+                self.favorite_view_stack.set_visible_child_name("favorites");
+            }
+        }
     }
 
     impl ObjectImpl for DevtoolboxWindow {
         fn constructed(&self) {
             self.parent_constructed();
 
-            // Populate sidebar
+            // Populate content
             self.populate_sidebar();
+            self.refresh_favorite_menu();
 
             // Show last used tool
             let settings = Settings::new(APP_ID);
@@ -411,5 +449,9 @@ impl DevtoolboxWindow {
         glib::Object::builder()
             .property("application", application)
             .build()
+    }
+
+    pub fn show_tool(&self, tool_id: &str) {
+        self.imp().load_and_show_tool(tool_id);
     }
 }

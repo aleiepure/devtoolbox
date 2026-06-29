@@ -87,6 +87,7 @@
     <file compressed="true" alias="application-certificate-symbolic.svg">../data/icons/symbolic/application-certificate-symbolic.svg</file>
     <file compressed="true" alias="up-symbolic.svg">../data/icons/symbolic/up-symbolic.svg</file>
     <file compressed="true" alias="down-symbolic.svg">../data/icons/symbolic/down-symbolic.svg</file>
+    <file compressed="true" alias="star-large-symbolic.svg">../data/icons/symbolic/star-large-symbolic.svg</file>
 
     <!-- Tool icons -->
     <file compressed="true" alias="config_format-symbolic.svg">../data/icons/symbolic/tools/config_format-symbolic.svg</file>

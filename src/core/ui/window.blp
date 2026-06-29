@@ -63,7 +63,7 @@ Adw.ToolbarView sidebar_content {
         icon-name: "starred";
         tooltip-text: _("Favorite Tools");
 
-        popover: Popover {
+        popover: Popover favorite_popover {
           child: Adw.ViewStack favorite_view_stack {
             width-request: 300;
 
@@ -73,7 +73,7 @@ Adw.ToolbarView sidebar_content {
               child: Adw.StatusPage {
                 title: _("No Favorite Tools");
                 description: _("Add your favorite tools here by clicking the star button beside the title");
-                icon-name: "star-filled-rounded";
+                icon-name: "star-large";
               };
             }
 
@@ -102,7 +102,7 @@ Adw.ToolbarView sidebar_content {
                     ]
 
                     selection-mode: single;
-                    row-activated => $on_signal_row_activated_favorite_listbox();
+                    row-activated => $on_signal_row_activated_favorite_listbox() swapped;
                   };
                 }
               };

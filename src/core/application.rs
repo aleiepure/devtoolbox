@@ -82,10 +82,30 @@ impl DevtoolboxApplication {
                 app.quit()
             })
             .build();
+
         let about_action = gio::ActionEntry::builder("about")
             .activate(move |app: &Self, _, _| app.show_about())
             .build();
-        self.add_action_entries([quit_action, about_action]);
+
+        let show_tool_action = gio::ActionEntry::builder("show-tool")
+            .parameter_type(Some(&str::static_variant_type()))
+            .activate(move |app: &Self, _, parameter| {
+                if let Some(tool_id) = parameter {
+                    if let Some(window) = app.active_window() {
+                        println!(
+                            "Activating tool: {}",
+                            tool_id.get::<String>().unwrap_or_default()
+                        );
+                        window
+                            .downcast_ref::<DevtoolboxWindow>()
+                            .unwrap()
+                            .show_tool(&tool_id.get::<String>().unwrap_or_default());
+                    }
+                }
+            })
+            .build();
+
+        self.add_action_entries([quit_action, about_action, show_tool_action]);
     }
 
     fn show_about(&self) {

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-27 10:23+0200\n"
+"POT-Creation-Date: 2026-06-29 17:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -349,11 +349,11 @@ msgctxt "Error message"
 msgid "Unable to read file: {message}"
 msgstr ""
 
-#: src/core/window.rs:129 src/core/window.rs:182
+#: src/core/window.rs:140 src/core/window.rs:195
 msgid "Add to Favorites"
 msgstr ""
 
-#: src/core/window.rs:138 src/core/window.rs:178
+#: src/core/window.rs:149 src/core/window.rs:191
 msgid "Remove from Favorites"
 msgstr ""
 
