@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-29 17:14+0200\n"
+"POT-Creation-Date: 2026-06-30 12:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -116,54 +116,92 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 
-#: src/core/ui/shortcuts-dialog.blp:14
-msgctxt "Show Shortcuts"
-msgid "shortcut window"
+#: src/core/ui/shortcuts-dialog.blp:13
+msgctxt "shortcut window"
+msgid "Search"
 msgstr ""
 
-#: src/core/ui/shortcuts-dialog.blp:19
-msgctxt "Quit"
-msgid "shortcut window"
+#: src/core/ui/shortcuts-dialog.blp:16
+msgctxt "shortcut window"
+msgid "Toggle Search"
 msgstr ""
 
-#: src/core/ui/window.blp:55
+#: src/core/ui/shortcuts-dialog.blp:22
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr ""
+
+#: src/core/ui/shortcuts-dialog.blp:25
+msgctxt "shortcut window"
+msgid "Toggle Sidebar"
+msgstr ""
+
+#: src/core/ui/shortcuts-dialog.blp:30
+msgctxt "shortcut window"
+msgid "Open Menu"
+msgstr ""
+
+#: src/core/ui/shortcuts-dialog.blp:36
+msgctxt "shortcut window"
+msgid "Application"
+msgstr ""
+
+#: src/core/ui/shortcuts-dialog.blp:39
+msgctxt "shortcut window"
+msgid "Show Shortcuts"
+msgstr ""
+
+#: src/core/ui/shortcuts-dialog.blp:44
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
+
+#: src/core/ui/window.blp:56
 msgid "Show/Hide Searchbar"
 msgstr ""
 
-#: src/core/ui/window.blp:64 src/core/ui/window.blp:89
+#: src/core/ui/window.blp:65 src/core/ui/window.blp:90
 msgid "Favorite Tools"
 msgstr ""
 
-#: src/core/ui/window.blp:74
+#: src/core/ui/window.blp:75
 msgid "No Favorite Tools"
 msgstr ""
 
-#: src/core/ui/window.blp:75
+#: src/core/ui/window.blp:76
 msgid ""
 "Add your favorite tools here by clicking the star button beside the title"
 msgstr ""
 
-#: src/core/ui/window.blp:116
+#: src/core/ui/window.blp:117
 msgid "Open Menu"
 msgstr ""
 
-#: src/core/ui/window.blp:129
+#: src/core/ui/window.blp:128
 msgid "Search Tools…"
 msgstr ""
 
 #: src/core/ui/window.blp:157
+msgid "No Results Found"
+msgstr ""
+
+#: src/core/ui/window.blp:158
+msgid "Try a different search term"
+msgstr ""
+
+#: src/core/ui/window.blp:172
 msgid "Toggle Sidebar"
 msgstr ""
 
-#: src/core/ui/window.blp:164
+#: src/core/ui/window.blp:179
 msgid "Open Sidebar"
 msgstr ""
 
-#: src/core/ui/window.blp:185
+#: src/core/ui/window.blp:200
 msgid "_Keyboard Shortcuts"
 msgstr ""
 
-#: src/core/ui/window.blp:190
+#: src/core/ui/window.blp:205
 msgid "_About Dev Toolbox"
 msgstr ""
 
@@ -349,11 +387,11 @@ msgctxt "Error message"
 msgid "Unable to read file: {message}"
 msgstr ""
 
-#: src/core/window.rs:140 src/core/window.rs:195
+#: src/core/window.rs:154 src/core/window.rs:209
 msgid "Add to Favorites"
 msgstr ""
 
-#: src/core/window.rs:149 src/core/window.rs:191
+#: src/core/window.rs:163 src/core/window.rs:205
 msgid "Remove from Favorites"
 msgstr ""
 

@@ -92,10 +92,6 @@ impl DevtoolboxApplication {
             .activate(move |app: &Self, _, parameter| {
                 if let Some(tool_id) = parameter {
                     if let Some(window) = app.active_window() {
-                        println!(
-                            "Activating tool: {}",
-                            tool_id.get::<String>().unwrap_or_default()
-                        );
                         window
                             .downcast_ref::<DevtoolboxWindow>()
                             .unwrap()
@@ -105,7 +101,21 @@ impl DevtoolboxApplication {
             })
             .build();
 
-        self.add_action_entries([quit_action, about_action, show_tool_action]);
+        let search_action = gio::ActionEntry::builder("search")
+            .parameter_type(Some(&str::static_variant_type()))
+            .activate(move |app: &Self, _, parameter| {
+                if let Some(query) = parameter {
+                    if let Some(window) = app.active_window() {
+                        window
+                            .downcast_ref::<DevtoolboxWindow>()
+                            .unwrap()
+                            .search_tools(&query.get::<String>().unwrap_or_default());
+                    }
+                }
+            })
+            .build();
+
+        self.add_action_entries([quit_action, about_action, show_tool_action, search_action]);
     }
 
     fn show_about(&self) {

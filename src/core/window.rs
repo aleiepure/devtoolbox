@@ -9,6 +9,7 @@ use gtk::prelude::*;
 use gtk::{gio, glib, CompositeTemplate};
 
 mod imp {
+    use adw::prelude::AdwDialogExt;
     use gettextrs::gettext;
     use gtk::gio::Settings;
     use std::cell::RefCell;
@@ -53,8 +54,21 @@ mod imp {
         #[template_child]
         content_view_stack: TemplateChild<adw::ViewStack>,
 
+        #[template_child]
+        show_search_button: TemplateChild<gtk::ToggleButton>,
+
+        #[template_child]
+        search_bar: TemplateChild<gtk::SearchBar>,
+
+        #[template_child]
+        search_entry: TemplateChild<gtk::SearchEntry>,
+
+        #[template_child]
+        sidebar_view_stack: TemplateChild<adw::ViewStack>,
+
         // Other fields
         loaded_tools: RefCell<HashMap<String, gtk::Widget>>,
+        updating_search_mode: RefCell<bool>,
     }
 
     #[glib::object_subclass]
@@ -75,6 +89,7 @@ mod imp {
 
     #[gtk::template_callbacks]
     impl DevtoolboxWindow {
+        /// Callback for when the window is mapped (shown) on the screen.
         #[template_callback]
         fn on_signal_map(&self) {
             self.sidebar_listbox.grab_focus();
@@ -84,6 +99,7 @@ mod imp {
                 .grab_focus();
         }
 
+        /// Callback for when a tool is activated from the favorites menu.
         #[template_callback]
         fn on_signal_row_activated_favorite_listbox(&self, row: &gtk::ListBoxRow) {
             let tool_id = row.widget_name().to_string();
@@ -91,11 +107,13 @@ mod imp {
             self.favorite_popover.popdown();
         }
 
+        /// Callback for when the search entry text changes.
         #[template_callback]
-        fn on_signal_search_changed_search_entry(_entry: &gtk::SearchEntry) {
-            // TODO: implement tool search filtering
+        fn on_signal_search_changed_search_entry(&self, _entry: &gtk::SearchEntry) {
+            self.filter_tools();
         }
 
+        /// Callback for when a tool is activated from the sidebar.
         #[template_callback]
         fn on_signal_row_activated_sidebar_listbox(&self, row: &gtk::ListBoxRow) {
             let tool_id = row.widget_name().to_string();
@@ -107,6 +125,7 @@ mod imp {
             }
         }
 
+        /// Callback for when the "Toggle Sidebar" button is clicked.
         #[template_callback]
         fn on_signal_clicked_show_sidebar_button(button: &gtk::Button) {
             let window = button
@@ -117,6 +136,7 @@ mod imp {
             window.imp().overlay_split_view.set_show_sidebar(true);
         }
 
+        /// Callback for when the "Mark Favorite" button is clicked.
         #[template_callback]
         fn on_signal_clicked_mark_favorite_button(&self) {
             let settings = Settings::new(APP_ID);
@@ -152,6 +172,7 @@ mod imp {
             self.refresh_favorite_menu();
         }
 
+        /// Loads and displays the tool with the given ID in the content view stack.
         pub fn load_and_show_tool(&self, tool_id: &str) {
             let mut loaded_tools = self.loaded_tools.borrow_mut();
 
@@ -198,14 +219,18 @@ mod imp {
             // Show the tool
             self.content_view_stack.set_visible_child_name(tool_id);
 
-            // Select the corresponding row in the sidebar
-            if let Some(index) = all_tools().position(|tool_metadata| tool_metadata.id == tool_id) {
-                if let Some(row) = self.sidebar_listbox.row_at_index(index as i32) {
+            // Select the corresponding row in the sidebar by name
+            let mut i = 0;
+            while let Some(row) = self.sidebar_listbox.row_at_index(i) {
+                if row.widget_name() == tool_id {
                     self.sidebar_listbox.select_row(Some(&row));
+                    break;
                 }
+                i += 1;
             }
         }
 
+        /// Creates a new tool view widget based on the provided metadata.
         fn create_tool_view(&self, metadata: &'static ToolMetadata) -> gtk::Widget {
             let tool = match metadata.id {
                 "config_format" => {
@@ -296,6 +321,8 @@ mod imp {
             tool
         }
 
+        /// Creates a new ListBoxRow for the given tool metadata to be displayed
+        /// in the sidebar or favorites list.
         fn create_tool_row(&self, tool: &'static ToolMetadata) -> gtk::ListBoxRow {
             let row_box = gtk::Box::new(gtk::Orientation::Horizontal, 4);
             row_box.set_margin_start(12);
@@ -325,6 +352,7 @@ mod imp {
             row
         }
 
+        /// Populates the sidebar with all available tools, grouped by category.
         fn populate_sidebar(&self) {
             for tool in all_tools() {
                 self.sidebar_listbox.append(&self.create_tool_row(tool));
@@ -359,6 +387,8 @@ mod imp {
             });
         }
 
+        /// Refreshes the favorites menu based on the current list of favorite
+        /// tools
         fn refresh_favorite_menu(&self) {
             self.favorite_listbox.remove_all();
 
@@ -377,11 +407,163 @@ mod imp {
                 self.favorite_view_stack.set_visible_child_name("favorites");
             }
         }
+
+        /// Sets up the GActions for the window
+        fn setup_gactions(&self) {
+            let obj = self.obj();
+
+            let toggle_search = gio::ActionEntry::builder("toggle-search")
+                .activate(|window: &super::DevtoolboxWindow, _, _| {
+                    window.imp().toggle_search_action();
+                })
+                .build();
+
+            let toggle_sidebar = gio::ActionEntry::builder("toggle-sidebar")
+                .activate(|window: &super::DevtoolboxWindow, _, _| {
+                    window.imp().toggle_sidebar_action();
+                })
+                .build();
+
+            let shortcuts = gio::ActionEntry::builder("shortcuts")
+                .activate(|window: &super::DevtoolboxWindow, _, _| {
+                    window.imp().show_shortcuts_action();
+                })
+                .build();
+
+            let open_menu = gio::ActionEntry::builder("open-menu")
+                .activate(|window: &super::DevtoolboxWindow, _, _| {
+                    window.imp().open_menu_action();
+                })
+                .build();
+
+            obj.add_action_entries([toggle_search, toggle_sidebar, shortcuts, open_menu]);
+        }
+
+        /// Callback for the win.toggle-search action. Toggles the visibility of
+        /// the search bar and focuses the search entry if activated.
+        fn toggle_search_action(&self) {
+            let is_active = !self.search_bar.is_search_mode();
+            self.search_bar.set_search_mode(is_active);
+            if is_active {
+                self.search_entry.grab_focus();
+                self.search_entry.select_region(0, -1);
+            }
+            self.show_search_button.set_active(is_active);
+        }
+
+        /// Callback for the win.toggle-sidebar action. Toggles the visibility of
+        /// the sidebar and updates the toggle button state.
+        fn toggle_sidebar_action(&self) {
+            let is_open = !self.overlay_split_view.shows_sidebar();
+            self.overlay_split_view.set_show_sidebar(is_open);
+            self.toggle_sidebar_button.set_active(is_open);
+        }
+
+        /// Callback for the win.shortcuts action. Displays the shortcuts dialog.
+        fn show_shortcuts_action(&self) {
+            let shortcuts_dialog =
+                gtk::Builder::from_resource("/me/iepure/devtoolbox/core/ui/shortcuts-dialog.ui")
+                    .object::<adw::ShortcutsDialog>("shortcuts_dialog")
+                    .unwrap();
+            shortcuts_dialog.present(Some(&self.obj().clone().upcast::<gtk::Window>()));
+        }
+
+        /// Callback for the win.open-menu action. Opens the menu popover.
+        fn open_menu_action(&self) {
+            self.menu_button.popup();
+        }
+
+        /// Shows the search bar and sets the query in the search entry.
+        pub fn show_search_with_query(&self, query: &str) {
+            self.search_entry.set_text(query);
+            self.search_bar.set_search_mode(true);
+            self.search_entry.grab_focus();
+        }
+
+        /// Filters the tools in the sidebar based on the current text in the
+        /// search entry.
+        fn filter_tools(&self) {
+            let search_text = self.search_entry.text().to_lowercase();
+
+            // Restore sidebar if search text is empty
+            if search_text.is_empty() {
+                self.restore_sidebar();
+                self.sidebar_view_stack.set_visible_child_name("all");
+                return;
+            }
+
+            // Clear sidebar and rebuild with matching tools
+            self.sidebar_listbox.remove_all();
+
+            let matching_tools: Vec<_> = all_tools()
+                .filter(|tool| {
+                    tool.title.to_lowercase().contains(&search_text)
+                        || tool.description.to_lowercase().contains(&search_text)
+                        || tool.id.contains(&search_text)
+                        || tool
+                            .sidebar_title
+                            .as_ref()
+                            .map_or(false, |title| title.to_lowercase().contains(&search_text))
+                        || tool
+                            .keywords
+                            .iter()
+                            .any(|keyword| keyword.to_lowercase().contains(&search_text))
+                })
+                .collect();
+
+            if matching_tools.is_empty() {
+                self.sidebar_view_stack.set_visible_child_name("no-results");
+                return;
+            }
+
+            for tool in &matching_tools {
+                self.sidebar_listbox.append(&self.create_tool_row(tool));
+            }
+
+            // Select the currently visible tool in the sidebar
+            if let Some(current_tool_id) = self.content_view_stack.visible_child_name() {
+                let mut i = 0;
+                while let Some(row) = self.sidebar_listbox.row_at_index(i) {
+                    if row.widget_name() == current_tool_id {
+                        self.sidebar_listbox.select_row(Some(&row));
+                        break;
+                    }
+                    i += 1;
+                }
+            }
+
+            self.sidebar_view_stack.set_visible_child_name("all");
+        }
+
+        /// Restores the sidebar to show all tools, grouped by category.
+        fn restore_sidebar(&self) {
+            self.sidebar_listbox.remove_all();
+            for tool in all_tools() {
+                self.sidebar_listbox.append(&self.create_tool_row(tool));
+            }
+
+            // Select the currently visible tool in the sidebar
+            if let Some(current_tool_id) = self.content_view_stack.visible_child_name() {
+                let mut i = 0;
+                while let Some(row) = self.sidebar_listbox.row_at_index(i) {
+                    if row.widget_name() == current_tool_id {
+                        self.sidebar_listbox.select_row(Some(&row));
+                        break;
+                    }
+                    i += 1;
+                }
+            }
+        }
     }
 
     impl ObjectImpl for DevtoolboxWindow {
         fn constructed(&self) {
             self.parent_constructed();
+
+            // Remove 'devel' CSS style if not in debug mode
+            if !cfg!(debug_assertions) {
+                self.obj().remove_css_class("devel");
+            }
 
             // Populate content
             self.populate_sidebar();
@@ -392,11 +574,72 @@ mod imp {
             let last_tool_id = settings.string("last-tool");
             self.load_and_show_tool(&last_tool_id);
 
-            // TODO: remove 'devel' css class if not in debug mode
-            // TODO: figure out why shortcut dialog is disabled
+            // Search
+            self.search_bar
+                .set_key_capture_widget(Some(&self.obj().clone().upcast::<gtk::Widget>()));
+
+            // Connect search button toggle to search bar visibility
+            let obj_weak = self.obj().downgrade();
+            self.show_search_button.connect_toggled(move |button| {
+                let Some(obj) = obj_weak.upgrade() else {
+                    return;
+                };
+                let imp = obj.imp();
+                if *imp.updating_search_mode.borrow() {
+                    return;
+                }
+                *imp.updating_search_mode.borrow_mut() = true;
+
+                imp.search_bar.set_search_mode(button.is_active());
+                if button.is_active() {
+                    imp.search_entry.grab_focus();
+                    imp.search_entry.select_region(0, -1);
+                }
+
+                *imp.updating_search_mode.borrow_mut() = false;
+            });
+
+            // Sync search bar mode to toggle button
+            let obj_weak = self.obj().downgrade();
+            self.search_bar
+                .connect_search_mode_enabled_notify(move |_| {
+                    let Some(obj) = obj_weak.upgrade() else {
+                        return;
+                    };
+                    let imp = obj.imp();
+                    if *imp.updating_search_mode.borrow() {
+                        return;
+                    }
+                    *imp.updating_search_mode.borrow_mut() = true;
+                    imp.show_search_button
+                        .set_active(imp.search_bar.is_search_mode());
+                    *imp.updating_search_mode.borrow_mut() = false;
+                });
+
+            // Register actions
+            self.setup_gactions();
+
+            // Set accelerators for actions
+            let shortcut_controller = gtk::ShortcutController::new();
+            shortcut_controller.set_scope(gtk::ShortcutScope::Managed);
+
+            let accels: [(&str, &str); 4] = [
+                ("<control>f", "win.toggle-search"),
+                ("F9", "win.toggle-sidebar"),
+                ("<control>question", "win.shortcuts"),
+                ("F10", "win.open-menu"),
+            ];
+
+            for (accel, action_name) in accels {
+                if let Some(trigger) = gtk::ShortcutTrigger::parse_string(accel) {
+                    let action = gtk::NamedAction::new(action_name);
+                    let shortcut = gtk::Shortcut::new(Some(trigger), Some(action));
+                    shortcut_controller.add_shortcut(shortcut);
+                }
+            }
+            self.obj().add_controller(shortcut_controller);
 
             // Bind settings
-            let settings = Settings::new(APP_ID);
             settings
                 .bind(
                     "window-width",
@@ -453,5 +696,9 @@ impl DevtoolboxWindow {
 
     pub fn show_tool(&self, tool_id: &str) {
         self.imp().load_and_show_tool(tool_id);
+    }
+
+    pub fn search_tools(&self, query: &str) {
+        self.imp().show_search_with_query(query);
     }
 }

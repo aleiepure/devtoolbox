@@ -6,6 +6,7 @@
  */
 using Gtk 4.0;
 using Adw 1;
+
 // MARK: Template
 template $DevtoolboxWindow: Adw.ApplicationWindow {
   styles [
@@ -121,29 +122,43 @@ Adw.ToolbarView sidebar_content {
 
   [top]
   SearchBar search_bar {
-    search-mode-enabled: bind show_search_button.active;
-
     child: SearchEntry search_entry {
       halign: center;
       activates-default: true;
       placeholder-text: _("Search Tools…");
       search-delay: 500;
-      search-changed => $on_signal_search_changed_search_entry();
+      search-changed => $on_signal_search_changed_search_entry() swapped;
     };
   }
 
-  content: ScrolledWindow {
-    child: ListBox sidebar_listbox {
-      selection-mode: single;
-      vexpand: true;
-      width-request: 256;
+  content: Adw.ViewStack sidebar_view_stack {
+    Adw.ViewStackPage {
+      name: "all";
 
-      styles [
-        "navigation-sidebar",
-      ]
+      child: ScrolledWindow {
+        child: ListBox sidebar_listbox {
+          selection-mode: single;
+          vexpand: true;
+          width-request: 256;
 
-      row-activated => $on_signal_row_activated_sidebar_listbox() swapped;
-    };
+          styles [
+            "navigation-sidebar",
+          ]
+
+          row-activated => $on_signal_row_activated_sidebar_listbox() swapped;
+        };
+      };
+    }
+
+    Adw.ViewStackPage {
+      name: "no-results";
+
+      child: Adw.StatusPage {
+        title: _("No Results Found");
+        description: _("Try a different search term");
+        icon-name: "loupe";
+      };
+    }
   };
 }
 
