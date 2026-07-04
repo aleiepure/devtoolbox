@@ -137,6 +137,7 @@ mod imp {
                 let dt = DateTime::from_timestamp(timestamp, 0)
                     .unwrap()
                     .with_timezone(tz);
+                // todo: add error checking. Invalid timestamps (overflow, underflow) cause panic
 
                 self.day_spinrow.set_value(dt.day() as f64);
                 self.month_spinrow.set_value(dt.month() as f64);

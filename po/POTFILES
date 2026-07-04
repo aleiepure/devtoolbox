@@ -4,6 +4,7 @@
 data/me.iepure.devtoolbox.desktop.in.in
 data/me.iepure.devtoolbox.gschema.xml
 data/me.iepure.devtoolbox.metainfo.xml.in
+src/core/application.rs
 src/core/ui/about-dialog.blp
 src/core/ui/shortcuts-dialog.blp
 src/core/ui/window.blp

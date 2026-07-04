@@ -1,7 +1,7 @@
 /*
  * macros.rs
  *
- * Copyright (C) 2025 Alessandro Iepure
+ * Copyright (C) 2025-2026 Alessandro Iepure
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
@@ -51,6 +51,7 @@ macro_rules! define_tool {
                     description: $description,
                     sidebar_title: $sidebar_title,
                     category: $category,
+                    icon_name: concat!($id, "-symbolic"),
                     keywords: Box::leak(Box::new([$($kw),*])),
                 });
         }

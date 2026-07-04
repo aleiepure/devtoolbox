@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: devtoolbox\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-30 12:03+0200\n"
+"POT-Creation-Date: 2026-07-04 11:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -102,6 +102,21 @@ msgstr ""
 
 #: data/me.iepure.devtoolbox.metainfo.xml.in:39
 msgid "Much more..."
+msgstr ""
+
+#: src/core/application.rs:42
+msgctxt "command line argument"
+msgid "List all available tools"
+msgstr ""
+
+#: src/core/application.rs:50
+msgctxt "command line argument"
+msgid "Open a specific tool"
+msgstr ""
+
+#: src/core/application.rs:58
+msgctxt "command line argument"
+msgid "Search in-app for tools"
 msgstr ""
 
 #: src/core/ui/about-dialog.blp:13
@@ -387,11 +402,11 @@ msgctxt "Error message"
 msgid "Unable to read file: {message}"
 msgstr ""
 
-#: src/core/window.rs:154 src/core/window.rs:209
+#: src/core/window.rs:160 src/core/window.rs:216
 msgid "Add to Favorites"
 msgstr ""
 
-#: src/core/window.rs:163 src/core/window.rs:205
+#: src/core/window.rs:169 src/core/window.rs:212
 msgid "Remove from Favorites"
 msgstr ""
 
@@ -2664,11 +2679,11 @@ msgstr ""
 msgid "Long Format"
 msgstr ""
 
-#: src/tools/timestamp/timestamp.rs:220
+#: src/tools/timestamp/timestamp.rs:221
 msgid "Timezone"
 msgstr ""
 
-#: src/tools/timestamp/timestamp.rs:221
+#: src/tools/timestamp/timestamp.rs:222
 msgid "Select the timezone for conversion"
 msgstr ""
 

@@ -1,7 +1,7 @@
 /*
  * mod.rs
  *
- * Copyright (C) 2025 Alessandro Iepure
+ * Copyright (C) 2025-2026 Alessandro Iepure
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
@@ -37,6 +37,7 @@ pub struct ToolMetadata {
     pub title: String,
     pub description: String,
     pub sidebar_title: Option<String>,
+    pub icon_name: &'static str,
     pub category: &'static ToolCategory,
     pub keywords: &'static [String],
 }
@@ -70,4 +71,35 @@ pub static ALL_TOOLS: Lazy<Vec<&'static ToolMetadata>> = Lazy::new(|| {
 
 pub fn all_tools() -> impl Iterator<Item = &'static ToolMetadata> {
     ALL_TOOLS.iter().copied()
+}
+
+/// Returns tools matching the given search terms. Capped at 8 results.
+/// Used by the GNOME search provider
+pub fn search_tools(terms: &[&str]) -> Vec<&'static ToolMetadata> {
+    if terms.is_empty() {
+        return Vec::new();
+    }
+
+    let lower_terms: Vec<String> = terms.iter().map(|t| t.to_lowercase()).collect();
+
+    ALL_TOOLS
+        .iter()
+        .copied()
+        .filter(|tool| {
+            lower_terms.iter().all(|term| {
+                tool.title.to_lowercase().contains(term)
+                    || tool.description.to_lowercase().contains(term)
+                    || tool.id.contains(term)
+                    || tool
+                        .sidebar_title
+                        .as_ref()
+                        .map_or(false, |title| title.to_lowercase().contains(term))
+                    || tool
+                        .keywords
+                        .iter()
+                        .any(|kw| kw.to_lowercase().contains(term))
+            })
+        })
+        .take(8)
+        .collect()
 }

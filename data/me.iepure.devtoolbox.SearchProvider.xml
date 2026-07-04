@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Copyright (C) 2026 Alessandro Iepure
+SPDX-License-Identifier: GPL-3.0-or-later
+
+GNOME shell SearchProvider2 D-Bus interface
+-->
+
+<node>
+    <interface name="org.gnome.Shell.SearchProvider2">
+
+        <method name="GetInitialResultSet">
+            <arg type="as" name="terms" direction="in" />
+            <arg type="as" name="results" direction="out" />
+        </method>
+
+        <method name="GetSubsearchResultSet">
+            <arg type="as" name="previous_results" direction="in" />
+            <arg type="as" name="terms" direction="in" />
+            <arg type="as" name="results" direction="out" />
+        </method>
+
+        <method name="GetResultMetas">
+            <arg type="as" name="identifiers" direction="in" />
+            <!-- <annotation name="org.gtk.GDBus.C.ForceGVariant" value="true" /> -->
+            <arg type="aa{sv}" name="metas" direction="out" />
+        </method>
+
+        <method name="ActivateResult">
+            <arg type="s" name="identifier" direction="in" />
+            <arg type="as" name="terms" direction="in" />
+            <arg type="u" name="timestamp" direction="in" />
+        </method>
+
+        <method name="LaunchSearch">
+            <arg type="as" name="terms" direction="in" />
+            <arg type="u" name="timestamp" direction="in" />
+        </method>
+
+    </interface>
+</node>

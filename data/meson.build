@@ -1,6 +1,6 @@
 # meson.build
 #
-# Copyright (C) 2022-2025 Alessandro Iepure
+# Copyright (C) 2022-2026 Alessandro Iepure
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # Desktop file
@@ -56,19 +56,19 @@ test('Validate schema file',
      args: ['--strict', '--dry-run', meson.current_source_dir()])
 
 # Search provider (Service)
-# configure_file(
-#   input: 'me.iepure.devtoolbox.SearchProvider.service.in',
-#   output: 'me.iepure.devtoolbox.SearchProvider.service',
-#   configuration: configuration_data({
-#     'bindir': get_option('prefix') / get_option('bindir')
-#   }),
-#   install: true,
-#   install_dir: get_option('datadir') / 'dbus-1' / 'services'
-# )
+configure_file(
+  input: 'me.iepure.devtoolbox.SearchProvider.service.in',
+  output: 'me.iepure.devtoolbox.SearchProvider.service',
+  configuration: configuration_data({
+    'bindir': get_option('prefix') / get_option('bindir')
+  }),
+  install: true,
+  install_dir: get_option('datadir') / 'dbus-1' / 'services'
+)
 
-# install_data('me.iepure.devtoolbox.SearchProvider.ini',
-#   install_dir: get_option('datadir') / 'gnome-shell' / 'search-providers'
-# )
+install_data('me.iepure.devtoolbox.SearchProvider.ini',
+  install_dir: get_option('datadir') / 'gnome-shell' / 'search-providers'
+)
 
 # Subdirectories
 subdir('icons')

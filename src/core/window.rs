@@ -1,6 +1,6 @@
 /* window.rs
  *
- * Copyright (C) 2025 Alessandro Iepure
+ * Copyright (C) 2025-2026 Alessandro Iepure
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -331,7 +331,7 @@ mod imp {
             row_box.set_margin_bottom(6);
             row_box.set_spacing(12);
 
-            let icon = gtk::Image::from_icon_name(tool.id);
+            let icon = gtk::Image::from_icon_name(tool.icon_name);
             row_box.append(&icon);
 
             let title = gtk::Label::new(None);

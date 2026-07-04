@@ -1,9 +1,10 @@
 /* application.rs
  *
- * Copyright (C) 2025 Alessandro Iepure
+ * Copyright (C) 2025-2026 Alessandro Iepure
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+use adw::prelude::ApplicationExt;
 use adw::prelude::*;
 use adw::subclass::prelude::*;
 use gtk::{gio, glib};
@@ -12,6 +13,8 @@ use crate::config::{APP_NAME, VERSION};
 use crate::DevtoolboxWindow;
 
 mod imp {
+    use gettextrs::pgettext;
+
     use super::*;
 
     #[derive(Debug, Default)]
@@ -30,6 +33,31 @@ mod imp {
             let obj = self.obj();
             obj.setup_gactions();
             obj.set_accels_for_action("app.quit", &["<control>q"]);
+
+            obj.add_main_option(
+                "list",
+                glib::Char::from(b'l'),
+                glib::OptionFlags::NONE,
+                glib::OptionArg::None,
+                &pgettext("command line argument", "List all available tools"),
+                None,
+            );
+            obj.add_main_option(
+                "tool",
+                glib::Char::from(b't'),
+                glib::OptionFlags::NONE,
+                glib::OptionArg::String,
+                &pgettext("command line argument", "Open a specific tool"),
+                Some("TOOL_ID"),
+            );
+            obj.add_main_option(
+                "search",
+                glib::Char::from(b's'),
+                glib::OptionFlags::NONE,
+                glib::OptionArg::String,
+                &pgettext("command line argument", "Search in-app for tools"),
+                Some("QUERY"),
+            );
         }
     }
 
@@ -39,10 +67,6 @@ mod imp {
             sourceview::init();
         }
 
-        // We connect to the activate callback to create a window when the application
-        // has been launched. Additionally, this callback notifies us when the user
-        // tries to launch a "second instance" of the application. When they try
-        // to do that, we'll just present any existing window.
         fn activate(&self) {
             let application = self.obj();
             // Get the current window or create one if necessary
@@ -53,6 +77,37 @@ mod imp {
 
             // Ask the window manager/compositor to present the window
             window.present();
+        }
+
+        fn command_line(&self, command_line: &gio::ApplicationCommandLine) -> glib::ExitCode {
+            let app = self.obj();
+            let options = command_line.options_dict();
+
+            if options.contains("list") {
+                let tools: Vec<_> = crate::tools::all_tools().collect();
+                println!("format: \"<tool_id>: <tool_title> - <tool_description>\"");
+                println!("----------------------------------------------------");
+                for tool in &tools {
+                    println!("  {}: {} - {}", tool.id, tool.title, tool.description);
+                }
+                app.quit();
+                return 0.into();
+            }
+
+            if let Some(value) = options.lookup_value("tool", Some(glib::VariantTy::STRING)) {
+                self.activate();
+                let _ = app.activate_action("show-tool", Some(&value));
+                return 0.into();
+            }
+
+            if let Some(value) = options.lookup_value("search", Some(glib::VariantTy::STRING)) {
+                self.activate();
+                let _ = app.activate_action("search", Some(&value));
+                return 0.into();
+            }
+
+            self.activate();
+            0.into()
         }
     }
 

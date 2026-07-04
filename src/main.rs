@@ -17,7 +17,15 @@ use gettextrs::{bind_textdomain_codeset, bindtextdomain, textdomain};
 use gtk::prelude::*;
 use gtk::{gio, glib};
 
+use crate::core::search_provider::SearchProviderApp;
+
 fn main() -> glib::ExitCode {
+    // -- Search Provider mode (headless) --
+    if std::env::args().any(|arg| arg == "--search-provider") {
+        return run_search_provider();
+    }
+
+    // -- GUI mode --
     // Set up gettext translations
     bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR).expect("Unable to bind the text domain");
     bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8")
@@ -34,14 +42,21 @@ fn main() -> glib::ExitCode {
     ActionableEntryRow::ensure_type();
     ImageArea::ensure_type();
 
-    // Create a new GtkApplication. The application manages our main loop,
-    // application windows, integration with the window manager/compositor, and
-    // desktop features such as file opening and single-instance applications.
-    let app = DevtoolboxApplication::new("me.iepure.devtoolbox", &gio::ApplicationFlags::empty());
+    let app = DevtoolboxApplication::new(
+        "me.iepure.devtoolbox",
+        &gio::ApplicationFlags::HANDLES_COMMAND_LINE,
+    );
 
-    // Run the application. This function will block until the application
-    // exits. Upon return, we have our exit code to return to the shell. (This
-    // is the code you see when you do `echo $?` after running a command in a
-    // terminal.
+    app.run()
+}
+
+/// Run the search provider in headless mode
+fn run_search_provider() -> glib::ExitCode {
+    let resources = gio::Resource::load(PKGDATADIR.to_owned() + "/devtoolbox.gresource")
+        .expect("Could not load resources");
+    gio::resources_register(&resources);
+
+    let app = SearchProviderApp::new();
+    let _guard = app.hold();
     app.run()
 }
