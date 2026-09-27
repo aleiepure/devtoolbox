@@ -412,6 +412,7 @@ mod imp {
                 label.set_halign(gtk::Align::Start);
                 label.set_selectable(true);
                 label.add_css_class("monospace");
+                label.set_wrap(true);
                 box_.append(&label);
             }
 
