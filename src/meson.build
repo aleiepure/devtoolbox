@@ -79,6 +79,7 @@ blueprint_files = files(
   'tools/color_blindness/color_blindness.blp',
   'tools/text_diff/text_diff.blp',
   'tools/cert_parse/cert_parse.blp',
+  'tools/hash/hash.blp',
 )
 
 compile_blueprint = custom_target('blueprints',

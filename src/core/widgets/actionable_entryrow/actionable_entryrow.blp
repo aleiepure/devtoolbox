@@ -8,6 +8,13 @@ using Gtk 4.0;
 using Adw 1;
 
 template $ActionableEntryRow: Adw.EntryRow {
+    [prefix]
+    Spinner working_spinner {
+        visible: bind template.working;
+        spinning: bind template.working;
+        valign: center;
+    }
+
     [suffix]
     Box {
         orientation: horizontal;

@@ -51,6 +51,10 @@ mod imp {
         /// Clear button visibility
         #[property(set, get, type = bool, default = false)]
         clear_button_visible: RefCell<bool>,
+
+        /// Busy indicator
+        #[property(set, get, type = bool, default = false)]
+        working: RefCell<bool>,
     }
 
     #[glib::object_subclass]

@@ -313,6 +313,10 @@ mod imp {
                     use crate::tools::cert_parse::CertParseWidget;
                     CertParseWidget::new().upcast()
                 }
+                "hash" => {
+                    use crate::tools::hash::HashWidget;
+                    HashWidget::new().upcast()
+                }
                 _ => {
                     panic!("Unknown tool ID: {}", metadata.id);
                 }

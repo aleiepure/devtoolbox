@@ -39,6 +39,7 @@
     <file>tools/color_blindness/color_blindness.ui</file>
     <file>tools/text_diff/text_diff.ui</file>
     <file>tools/cert_parse/cert_parse.ui</file>
+    <file>tools/hash/hash.ui</file>
   </gresource>
   
   <!-- Icons -->
@@ -88,6 +89,8 @@
     <file compressed="true" alias="up-symbolic.svg">../data/icons/symbolic/up-symbolic.svg</file>
     <file compressed="true" alias="down-symbolic.svg">../data/icons/symbolic/down-symbolic.svg</file>
     <file compressed="true" alias="star-large-symbolic.svg">../data/icons/symbolic/star-large-symbolic.svg</file>
+    <file compressed="true" alias="paper-sheet-symbolic.svg">../data/icons/symbolic/paper-sheet-symbolic.svg</file>
+    <file compressed="true" alias="shield-check-symbolic.svg">../data/icons/symbolic/shield-check-symbolic.svg</file>
 
     <!-- Tool icons -->
     <file compressed="true" alias="config_format-symbolic.svg">../data/icons/symbolic/tools/config_format-symbolic.svg</file>
@@ -110,5 +113,6 @@
     <file compressed="true" alias="color_blindness-symbolic.svg">../data/icons/symbolic/tools/color_blindness-symbolic.svg</file>
     <file compressed="true" alias="text_diff-symbolic.svg">../data/icons/symbolic/tools/text_diff-symbolic.svg</file>
     <file compressed="true" alias="cert_parse-symbolic.svg">../data/icons/symbolic/tools/cert_parse-symbolic.svg</file>
+    <file compressed="true" alias="hash-symbolic.svg">../data/icons/symbolic/tools/hash-symbolic.svg</file>
   </gresource>
 </gresources>

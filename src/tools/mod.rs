@@ -13,6 +13,7 @@ pub mod config_format;
 pub mod contrast_check;
 pub mod cron_gen;
 pub mod cron_parser;
+pub mod hash;
 pub mod html_enc;
 pub mod linux_permissions;
 pub mod lipsum;
@@ -64,6 +65,7 @@ pub static ALL_TOOLS: Lazy<Vec<&'static ToolMetadata>> = Lazy::new(|| {
         &*color_blindness::COLOR_BLINDNESS_TOOL_METADATA,
         &*text_diff::TEXT_DIFF_TOOL_METADATA,
         &*cert_parse::CERT_PARSE_TOOL_METADATA,
+        &*hash::HASH_TOOL_METADATA,
     ]; // TODO: add new tools here
     tools.sort_by(|a, b| a.category.cmp(&b.category));
     tools

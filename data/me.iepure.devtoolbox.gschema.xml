@@ -43,6 +43,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                 <choice value="color_blindness"/>
                 <choice value="text_diff"/>
                 <choice value="cert_parse"/>
+                <choice value="hash"/>
 			</choices>
 			<summary>Last used tool</summary>
 			<default>"config_format"</default>

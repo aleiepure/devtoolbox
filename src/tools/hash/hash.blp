@@ -1,0 +1,218 @@
+/*
+ * hash.blp
+ *
+ * Copyright (C) 2025 Alessandro Iepure
+ * SPDX-License-Identifier: GPL-3.0-or-later
+*/
+using Gtk 4.0;
+using Adw 1;
+
+template $HashWidget : Adw.Bin {
+  Adw.ToastOverlay toast_overlay {
+    child: ScrolledWindow {
+      child: Adw.Clamp {
+        vexpand: true;
+        maximum-size: 1200;
+        tightening-threshold: 600;
+
+        child: Box {
+          orientation: vertical;
+          spacing: 12;
+          margin-bottom: 12;
+          margin-top: 12;
+
+          // MARK: - Input
+          Adw.PreferencesGroup {
+            title: _("Input");
+            
+            Adw.ActionRow open_row {
+              title: _("File");
+              subtitle: _("Open a file to hash");
+              icon-name: "paper-sheet";
+              activatable-widget: open_button;
+
+              [suffix]
+              Button open_button {
+                accessibility {
+                  labelled-by: btn_content;
+                }
+
+                valign: center;
+
+                child: Adw.ButtonContent btn_content {
+                  label: _("Open");
+                  icon-name: "document-open";
+                };
+
+                clicked => $on_signal_clicked_open_button() swapped;
+              }
+            }
+          }
+
+          // MARK: - Hashes
+          Adw.PreferencesGroup {
+            title: _("Hashes");
+            margin-top: 12;
+
+            $ActionableEntryRow md5_row {
+              title: "MD5";
+              editable: false;
+              copy-button-visible: true;
+            }
+
+            $ActionableEntryRow sha1_row {
+              title: "SHA-1";
+              editable: false;
+              copy-button-visible: true;
+            }
+
+            $ActionableEntryRow sha256_row {
+              title: "SHA-256";
+              editable: false;
+              copy-button-visible: true;
+            }
+
+            $ActionableEntryRow sha512_row {
+              title: "SHA-512";
+              editable: false;
+              copy-button-visible: true;
+            }
+
+            $ActionableEntryRow sha3_256_row {
+              title: "SHA3-256";
+              editable: false;
+              copy-button-visible: true;
+            }
+
+            $ActionableEntryRow sha3_512_row {
+              title: "SHA3-512";
+              editable: false;
+              copy-button-visible: true;
+            }
+
+            $ActionableEntryRow blake3_row {
+              title: "BLAKE3";
+              editable: false;
+              copy-button-visible: true;
+            }
+          }
+
+          // MARK: - Validation
+          Adw.PreferencesGroup validation_group {
+            title: _("Validation");
+            margin-top: 12;
+            margin-bottom: 12;
+            visible: false;
+
+            [header-suffix]
+            Box {
+              orientation: horizontal;
+              spacing: 6;
+              
+              // Positive state
+              Box {
+                orientation: horizontal;
+                spacing: 6;
+                valign: center;
+                styles ["success"]
+                tooltip-text: _("The calculated hash matches the known hash");
+                visible: bind template.validation-valid;
+
+                Image {
+                  icon-name: "check-round-outline2";
+                  accessibility {
+                    labelled-by: valid_label;
+                  }
+                }
+
+                Label valid_label {
+                  label: _("Valid");
+                  styles ["heading"]
+                }
+              }
+
+              // Negative state
+              Box {
+                orientation: horizontal;
+                spacing: 6;
+                valign: center;
+                styles ["error"]
+                tooltip-text: _("The calculated hash does not match the known hash");
+                visible: bind template.validation-invalid;
+
+                Image {
+                  icon-name: "warning-outline";
+                  accessibility {
+                    labelled-by: invalid_label;
+                  }
+                }
+
+                Label invalid_label {
+                  label: _("Invalid");
+                  styles ["heading"]
+                }
+              }
+
+              // Neutral/pending state
+              Box {
+                orientation: horizontal;
+                spacing: 6;
+                valign: center;
+                tooltip-text: _("Waiting for the hash calculation to complete");
+                visible: bind template.validation-pending;
+
+                Spinner {
+                  valign: center;
+                  spinning: true;
+                }
+
+                Label {
+                  label: _("Waiting");
+                  styles ["heading"]
+                }
+              }
+            }
+
+            Adw.SwitchRow validation_switch_row {
+              title: _("Validate Hash");
+              subtitle: _("Enable validation of the file against a known hash");
+              icon-name: "shield-check";
+            }
+
+            Adw.ComboRow validation_algorithm_row {
+              title: _("Algorithm");
+              icon-name: "security-high";
+              visible: bind validation_switch_row.active;
+              model: StringList {
+                strings [
+                    "MD5",
+                    "SHA-1",
+                    "SHA-256",
+                    "SHA-512",
+                    "SHA3-256",
+                    "SHA3-512",
+                    "BLAKE3"
+                ]
+              };
+            }
+
+            $ActionableEntryRow validation_hash_row {
+              title: _("Known Hash");
+              copy-button-visible: true;
+              paste-button-visible: true;
+              clear-button-visible: true;
+              visible: bind validation_switch_row.active;
+            } 
+          }
+
+        };
+      };
+    };
+  }
+}
+
+FileDialog open_file_dialog {
+    modal: true;
+    title: _("Open File");
+    accept-label: _("Open");
+}

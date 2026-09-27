@@ -38,6 +38,9 @@ src/tools/cron_parser/cron_parser.blp
 src/tools/cron_parser/cron_parser.rs
 src/tools/cron_parser/mod.rs
 src/tools/cron_parser/specifier_row.rs
+src/tools/hash/hash.blp
+src/tools/hash/hash.rs
+src/tools/hash/mod.rs
 src/tools/html_enc/html_enc.blp
 src/tools/html_enc/html_enc.rs
 src/tools/html_enc/mod.rs
