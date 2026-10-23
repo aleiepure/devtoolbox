@@ -15,7 +15,7 @@ class JsonFormatter(Formatter):
     _utility_name = "json-formatter"
     _textarea_name = _("Type JSON code here")
     _language = "json"
-    _extensions = ["json"]
+    _extensions = ["json", "jsonc"]
     _action_btn_name = C_("verb/action", "Format")
     _show_options = True
 
